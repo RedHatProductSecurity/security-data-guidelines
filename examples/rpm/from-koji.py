@@ -8,7 +8,7 @@ import sys
 from tempfile import TemporaryDirectory
 
 source_re = re.compile(r"^(Source\d+):\s*((.*/)?(.*))$")
-tarball_re = re.compile(r"^([^0-9]*)-([0-9\.-]*)\.[a-z]")  # Obviously not universal
+tarball_re = re.compile(r"^([^0-9]*)-([0-9\.-]*)[\.-][a-z]")  # Obviously not universal
 koji_profile = sys.argv[1]
 build_id = sys.argv[2]
 profile = koji.get_profile_module(koji_profile)
@@ -26,10 +26,8 @@ with TemporaryDirectory() as tmpdir:
         filename = f"{tmpdir}/{name}-{version}-{release}.{arch}.rpm"
         if arch == 'src':
             spdxid = "SPDXRef-SRPM"
-            versionInfo = f"{version}-{release}"
         else:
             spdxid = f"SPDXRef-{arch}-{name}"
-            versionInfo = f"{version}-{release}.{arch}"
 
         sha256 = hashlib.sha256()
         with open(filename, "rb") as rf:
@@ -42,7 +40,7 @@ with TemporaryDirectory() as tmpdir:
         package = {
             "SPDXID": spdxid,
             "name": name,
-            "versionInfo": versionInfo,
+            "versionInfo": f"{version}-{release}.{arch}",
             "downloadLocation": "NOASSERTION",
             "packageFileName": f"{nvr}.{arch}.rpm",
             "externalRefs": [
