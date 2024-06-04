@@ -35,6 +35,7 @@
       "name": "poppler",
       "versionInfo": "21.01.0",
       "downloadLocation": "http://poppler.freedesktop.org/poppler-21.01.0.tar.xz",
+      "packageFileName": "poppler-21.01.0.tar.xz",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -47,6 +48,7 @@
       "name": "poppler-test",
       "versionInfo": "2021-06-14",
       "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-test-2021-06-14.tar.xz",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -975,6 +977,7 @@
       ]
     }
   ],
+  "files": [],
   "relationships": [
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
