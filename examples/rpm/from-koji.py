@@ -115,7 +115,12 @@ def handle_srpm(filename, name):
                 (sourceN, url, _, sfn) = m.groups()
 
                 # Parse filename
-                (sname, sver) = tarball_re.match(sfn).groups()
+                tarball_match = tarball_re.match(sfn)
+                if tarball_match:
+                    (sname, sver) = tarball_re.match(sfn).groups()
+                else:
+                    sname = sfn
+                    sver = None
 
                 # Calculate checksum
                 sha256 = hashlib.sha256()
@@ -143,6 +148,8 @@ def handle_srpm(filename, name):
                     },
                 ],
             }
+            if not sver:
+                del spackage['versionInfo']
             pkgs_by_arch.setdefault(arch, []).append(spackage)
 
             relationships.append(
