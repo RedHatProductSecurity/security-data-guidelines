@@ -111,29 +111,31 @@ def handle_srpm(filename, name):
         )
         for line in spectool.stdout.decode("utf-8").splitlines():
             m = source_re.match(line)
-            if m:
-                (sourceN, url, _, sfn) = m.groups()
+            if not m:
+                continue
 
-                # Parse filename
-                tarball_match = tarball_re.match(sfn)
-                if not tarball_match:
-                    continue
+            (sourceN, url, _, sfn) = m.groups()
 
-                (sname, sver) = tarball_re.match(sfn).groups()
+            # Parse filename
+            tarball_match = tarball_re.match(sfn)
+            if not tarball_match:
+                continue
 
-                # Special case to fix up example for openssl
-                if sname == "openssl":
-                    ext = re.sub(r".*-hobbled\.", "", sfn)
-                    url = f"https://openssl.org/source/{sname}-{sver}.{ext}"
+            (sname, sver) = tarball_re.match(sfn).groups()
 
-                # Calculate checksum
-                sha256 = hashlib.sha256()
-                with open(os.path.join(srcdir, "SOURCES", sfn), "rb") as sfp:
-                    while True:
-                        data = sfp.read()
-                        if not data:
-                            break
-                        sha256.update(data)
+            # Special case to fix up example for openssl
+            if sname == "openssl":
+                ext = re.sub(r".*-hobbled\.", "", sfn)
+                url = f"https://openssl.org/source/{sname}-{sver}.{ext}"
+
+            # Calculate checksum
+            sha256 = hashlib.sha256()
+            with open(os.path.join(srcdir, "SOURCES", sfn), "rb") as sfp:
+                while True:
+                    data = sfp.read()
+                    if not data:
+                        break
+                    sha256.update(data)
 
             if url is None or ":" not in url:
                 url = "NOASSERTION"
@@ -153,7 +155,7 @@ def handle_srpm(filename, name):
                 ],
             }
             if not sver:
-                del spackage['versionInfo']
+                del spackage["versioninfo"]
             pkgs_by_arch.setdefault(arch, []).append(spackage)
 
             relationships.append(
