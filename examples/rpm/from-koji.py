@@ -121,6 +121,11 @@ def handle_srpm(filename, name):
 
                 (sname, sver) = tarball_re.match(sfn).groups()
 
+                # Special case to fix up example for openssl
+                if sname == "openssl":
+                    ext = re.sub(r".*-hobbled\.", "", sfn)
+                    url = f"https://openssl.org/source/{sname}-{sver}.{ext}"
+
                 # Calculate checksum
                 sha256 = hashlib.sha256()
                 with open(os.path.join(srcdir, "SOURCES", sfn), "rb") as sfp:

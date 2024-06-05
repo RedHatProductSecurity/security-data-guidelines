@@ -34,7 +34,7 @@
       "SPDXID": "SPDXRef-Source0",
       "name": "openssl",
       "versionInfo": "3.0.7",
-      "downloadLocation": "NOASSERTION",
+      "downloadLocation": "https://openssl.org/source/openssl-3.0.7.tar.gz",
       "packageFileName": "openssl-3.0.7-hobbled.tar.gz",
       "checksums": [
         {
