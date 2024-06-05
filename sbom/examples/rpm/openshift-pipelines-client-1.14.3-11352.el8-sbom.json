@@ -28562,6 +28562,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.src.rpm",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -28622,6 +28623,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.x86_64.rpm",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -28643,6 +28645,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-redistributable-1.14.3-11352.el8.x86_64.rpm",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -28664,6 +28667,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.s390x.rpm",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -28685,6 +28689,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-redistributable-1.14.3-11352.el8.s390x.rpm",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -28706,6 +28711,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.ppc64le.rpm",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -28727,6 +28733,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-redistributable-1.14.3-11352.el8.ppc64le.rpm",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -28748,6 +28755,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.aarch64.rpm",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -28769,6 +28777,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-redistributable-1.14.3-11352.el8.aarch64.rpm",
+      "licenseConcluded": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",

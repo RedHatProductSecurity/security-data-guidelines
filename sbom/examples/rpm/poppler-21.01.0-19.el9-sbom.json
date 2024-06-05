@@ -17,6 +17,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-21.01.0-19.el9.src.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -64,6 +65,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-qt5-devel-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -85,6 +87,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-cpp-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -106,6 +109,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-cpp-devel-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -127,6 +131,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-devel-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -148,6 +153,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-qt5-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -169,6 +175,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-devel-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -190,6 +197,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -211,6 +219,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -232,6 +241,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-utils-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -253,6 +263,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-doc-21.01.0-19.el9.noarch.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -274,6 +285,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-cpp-devel-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -295,6 +307,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-devel-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -316,6 +329,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-qt5-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -337,6 +351,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -358,6 +373,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -379,6 +395,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-utils-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -400,6 +417,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-qt5-devel-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -421,6 +439,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-cpp-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -442,6 +461,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-devel-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -463,6 +483,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -484,6 +505,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-devel-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -505,6 +527,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-devel-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -526,6 +549,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-utils-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -547,6 +571,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-qt5-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -568,6 +593,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -589,6 +615,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-qt5-devel-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -610,6 +637,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-cpp-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -631,6 +659,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-cpp-devel-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -652,6 +681,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-qt5-devel-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -673,6 +703,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-qt5-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -694,6 +725,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-utils-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -715,6 +747,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-devel-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -736,6 +769,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-cpp-devel-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -757,6 +791,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-cpp-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -778,6 +813,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -799,6 +835,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -820,6 +857,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-devel-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -841,6 +879,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-devel-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -862,6 +901,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-qt5-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -883,6 +923,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -904,6 +945,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-qt5-devel-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -925,6 +967,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-utils-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -946,6 +989,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-cpp-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -967,6 +1011,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-cpp-devel-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -988,6 +1033,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-devel-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1009,6 +1055,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "poppler-glib-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",

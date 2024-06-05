@@ -20,6 +20,26 @@ rpms = session.listBuildRPMs(build_id)
 packages = []
 relationships = []
 files = []
+license_replacements = {
+    " and ": " AND ",
+    " or ": " OR ",
+    "ASL 2.0": "Apache-2.0",
+}
+
+
+def get_license(filename):
+    licensep = subprocess.run(stdout=subprocess.PIPE, args=[
+        "rpm",
+        "-qp",
+        "--qf",
+        "%{LICENSE}",
+        filename,
+    ])
+    license = licensep.stdout.decode("utf-8")
+    for orig, repl in license_replacements.items():
+        license = re.sub(orig, repl, license)
+
+    return license
 
 
 def run_syft(builddir):
@@ -198,6 +218,7 @@ with TemporaryDirectory() as tmpdir:
                     break
                 sha256.update(data)
 
+        license = get_license(filename)
         package = {
             "SPDXID": spdxid,
             "name": name,
@@ -205,6 +226,7 @@ with TemporaryDirectory() as tmpdir:
             "supplier": "Organization: Red Hat",
             "downloadLocation": "NOASSERTION",
             "packageFileName": f"{nvr}.{arch}.rpm",
+            "licenseConcluded": license,
             "externalRefs": [
                 {
                     "referenceCategory": "PACKAGE-MANAGER",
