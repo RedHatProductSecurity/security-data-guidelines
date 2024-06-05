@@ -201,7 +201,8 @@ with TemporaryDirectory() as tmpdir:
         package = {
             "SPDXID": spdxid,
             "name": name,
-            "versionInfo": f"{version}-{release}.{arch}",
+            "versionInfo": f"{version}-{release}",
+            "supplier": "Organization: Red Hat",
             "downloadLocation": "NOASSERTION",
             "packageFileName": f"{nvr}.{arch}.rpm",
             "externalRefs": [
@@ -220,15 +221,16 @@ with TemporaryDirectory() as tmpdir:
         }
         pkgs_by_arch.setdefault(arch, []).append(package)
 
-        relationships.append(
-            {
-                "spdxElementId": "SPDXRef-DOCUMENT",
-                "relationshipType": "DESCRIBES",
-                "relatedSpdxElement": spdxid,
-            }
-        )
-
-        if arch != "src":
+        if arch == "src":
+            relationships.append(
+                {
+                    "spdxElementId": "SPDXRef-DOCUMENT",
+                    "relationshipType": "DESCRIBES",
+                    "relatedSpdxElement": spdxid,
+                }
+            )
+            handle_srpm(filename, name)
+        else:
             relationships.append(
                 {
                     "spdxElementId": spdxid,
@@ -236,8 +238,6 @@ with TemporaryDirectory() as tmpdir:
                     "relatedSpdxElement": "SPDXRef-SRPM",
                 }
             )
-        else:
-            handle_srpm(filename, name)
 
 packages.extend([package for package in pkgs_by_arch["src"]])
 del pkgs_by_arch["src"]

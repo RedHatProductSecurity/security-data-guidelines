@@ -28558,7 +28558,8 @@
     {
       "SPDXID": "SPDXRef-SRPM",
       "name": "openshift-pipelines-client",
-      "versionInfo": "1.14.3-11352.el8.src",
+      "versionInfo": "1.14.3-11352.el8",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.src.rpm",
       "externalRefs": [
@@ -28617,7 +28618,8 @@
     {
       "SPDXID": "SPDXRef-x86_64-openshift-pipelines-client",
       "name": "openshift-pipelines-client",
-      "versionInfo": "1.14.3-11352.el8.x86_64",
+      "versionInfo": "1.14.3-11352.el8",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.x86_64.rpm",
       "externalRefs": [
@@ -28637,7 +28639,8 @@
     {
       "SPDXID": "SPDXRef-x86_64-openshift-pipelines-client-redistributable",
       "name": "openshift-pipelines-client-redistributable",
-      "versionInfo": "1.14.3-11352.el8.x86_64",
+      "versionInfo": "1.14.3-11352.el8",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-redistributable-1.14.3-11352.el8.x86_64.rpm",
       "externalRefs": [
@@ -28657,7 +28660,8 @@
     {
       "SPDXID": "SPDXRef-s390x-openshift-pipelines-client",
       "name": "openshift-pipelines-client",
-      "versionInfo": "1.14.3-11352.el8.s390x",
+      "versionInfo": "1.14.3-11352.el8",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.s390x.rpm",
       "externalRefs": [
@@ -28677,7 +28681,8 @@
     {
       "SPDXID": "SPDXRef-s390x-openshift-pipelines-client-redistributable",
       "name": "openshift-pipelines-client-redistributable",
-      "versionInfo": "1.14.3-11352.el8.s390x",
+      "versionInfo": "1.14.3-11352.el8",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-redistributable-1.14.3-11352.el8.s390x.rpm",
       "externalRefs": [
@@ -28697,7 +28702,8 @@
     {
       "SPDXID": "SPDXRef-ppc64le-openshift-pipelines-client",
       "name": "openshift-pipelines-client",
-      "versionInfo": "1.14.3-11352.el8.ppc64le",
+      "versionInfo": "1.14.3-11352.el8",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.ppc64le.rpm",
       "externalRefs": [
@@ -28717,7 +28723,8 @@
     {
       "SPDXID": "SPDXRef-ppc64le-openshift-pipelines-client-redistributable",
       "name": "openshift-pipelines-client-redistributable",
-      "versionInfo": "1.14.3-11352.el8.ppc64le",
+      "versionInfo": "1.14.3-11352.el8",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-redistributable-1.14.3-11352.el8.ppc64le.rpm",
       "externalRefs": [
@@ -28737,7 +28744,8 @@
     {
       "SPDXID": "SPDXRef-aarch64-openshift-pipelines-client",
       "name": "openshift-pipelines-client",
-      "versionInfo": "1.14.3-11352.el8.aarch64",
+      "versionInfo": "1.14.3-11352.el8",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.aarch64.rpm",
       "externalRefs": [
@@ -28757,7 +28765,8 @@
     {
       "SPDXID": "SPDXRef-aarch64-openshift-pipelines-client-redistributable",
       "name": "openshift-pipelines-client-redistributable",
-      "versionInfo": "1.14.3-11352.el8.aarch64",
+      "versionInfo": "1.14.3-11352.el8",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openshift-pipelines-client-redistributable-1.14.3-11352.el8.aarch64.rpm",
       "externalRefs": [
@@ -40289,19 +40298,9 @@
       "relatedSpdxElement": "SPDXRef-Source2"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-x86_64-openshift-pipelines-client"
-    },
-    {
       "spdxElementId": "SPDXRef-x86_64-openshift-pipelines-client",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-x86_64-openshift-pipelines-client-redistributable"
     },
     {
       "spdxElementId": "SPDXRef-x86_64-openshift-pipelines-client-redistributable",
@@ -40309,19 +40308,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-s390x-openshift-pipelines-client"
-    },
-    {
       "spdxElementId": "SPDXRef-s390x-openshift-pipelines-client",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-s390x-openshift-pipelines-client-redistributable"
     },
     {
       "spdxElementId": "SPDXRef-s390x-openshift-pipelines-client-redistributable",
@@ -40329,19 +40318,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-ppc64le-openshift-pipelines-client"
-    },
-    {
       "spdxElementId": "SPDXRef-ppc64le-openshift-pipelines-client",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-ppc64le-openshift-pipelines-client-redistributable"
     },
     {
       "spdxElementId": "SPDXRef-ppc64le-openshift-pipelines-client-redistributable",
@@ -40349,19 +40328,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-aarch64-openshift-pipelines-client"
-    },
-    {
       "spdxElementId": "SPDXRef-aarch64-openshift-pipelines-client",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-aarch64-openshift-pipelines-client-redistributable"
     },
     {
       "spdxElementId": "SPDXRef-aarch64-openshift-pipelines-client-redistributable",

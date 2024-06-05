@@ -13,7 +13,8 @@
     {
       "SPDXID": "SPDXRef-SRPM",
       "name": "openssl",
-      "versionInfo": "3.0.7-18.el9_2.src",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-3.0.7-18.el9_2.src.rpm",
       "externalRefs": [
@@ -46,7 +47,8 @@
     {
       "SPDXID": "SPDXRef-aarch64-openssl-perl",
       "name": "openssl-perl",
-      "versionInfo": "3.0.7-18.el9_2.aarch64",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-perl-3.0.7-18.el9_2.aarch64.rpm",
       "externalRefs": [
@@ -66,7 +68,8 @@
     {
       "SPDXID": "SPDXRef-aarch64-openssl-libs",
       "name": "openssl-libs",
-      "versionInfo": "3.0.7-18.el9_2.aarch64",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-libs-3.0.7-18.el9_2.aarch64.rpm",
       "externalRefs": [
@@ -86,7 +89,8 @@
     {
       "SPDXID": "SPDXRef-aarch64-openssl",
       "name": "openssl",
-      "versionInfo": "3.0.7-18.el9_2.aarch64",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-3.0.7-18.el9_2.aarch64.rpm",
       "externalRefs": [
@@ -106,7 +110,8 @@
     {
       "SPDXID": "SPDXRef-aarch64-openssl-devel",
       "name": "openssl-devel",
-      "versionInfo": "3.0.7-18.el9_2.aarch64",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-devel-3.0.7-18.el9_2.aarch64.rpm",
       "externalRefs": [
@@ -126,7 +131,8 @@
     {
       "SPDXID": "SPDXRef-ppc64le-openssl-perl",
       "name": "openssl-perl",
-      "versionInfo": "3.0.7-18.el9_2.ppc64le",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-perl-3.0.7-18.el9_2.ppc64le.rpm",
       "externalRefs": [
@@ -146,7 +152,8 @@
     {
       "SPDXID": "SPDXRef-ppc64le-openssl-libs",
       "name": "openssl-libs",
-      "versionInfo": "3.0.7-18.el9_2.ppc64le",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-libs-3.0.7-18.el9_2.ppc64le.rpm",
       "externalRefs": [
@@ -166,7 +173,8 @@
     {
       "SPDXID": "SPDXRef-ppc64le-openssl-devel",
       "name": "openssl-devel",
-      "versionInfo": "3.0.7-18.el9_2.ppc64le",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-devel-3.0.7-18.el9_2.ppc64le.rpm",
       "externalRefs": [
@@ -186,7 +194,8 @@
     {
       "SPDXID": "SPDXRef-ppc64le-openssl",
       "name": "openssl",
-      "versionInfo": "3.0.7-18.el9_2.ppc64le",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-3.0.7-18.el9_2.ppc64le.rpm",
       "externalRefs": [
@@ -206,7 +215,8 @@
     {
       "SPDXID": "SPDXRef-i686-openssl-libs",
       "name": "openssl-libs",
-      "versionInfo": "3.0.7-18.el9_2.i686",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-libs-3.0.7-18.el9_2.i686.rpm",
       "externalRefs": [
@@ -226,7 +236,8 @@
     {
       "SPDXID": "SPDXRef-i686-openssl-devel",
       "name": "openssl-devel",
-      "versionInfo": "3.0.7-18.el9_2.i686",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-devel-3.0.7-18.el9_2.i686.rpm",
       "externalRefs": [
@@ -246,7 +257,8 @@
     {
       "SPDXID": "SPDXRef-i686-openssl",
       "name": "openssl",
-      "versionInfo": "3.0.7-18.el9_2.i686",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-3.0.7-18.el9_2.i686.rpm",
       "externalRefs": [
@@ -266,7 +278,8 @@
     {
       "SPDXID": "SPDXRef-i686-openssl-perl",
       "name": "openssl-perl",
-      "versionInfo": "3.0.7-18.el9_2.i686",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-perl-3.0.7-18.el9_2.i686.rpm",
       "externalRefs": [
@@ -286,7 +299,8 @@
     {
       "SPDXID": "SPDXRef-x86_64-openssl-perl",
       "name": "openssl-perl",
-      "versionInfo": "3.0.7-18.el9_2.x86_64",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-perl-3.0.7-18.el9_2.x86_64.rpm",
       "externalRefs": [
@@ -306,7 +320,8 @@
     {
       "SPDXID": "SPDXRef-x86_64-openssl-libs",
       "name": "openssl-libs",
-      "versionInfo": "3.0.7-18.el9_2.x86_64",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-libs-3.0.7-18.el9_2.x86_64.rpm",
       "externalRefs": [
@@ -326,7 +341,8 @@
     {
       "SPDXID": "SPDXRef-x86_64-openssl",
       "name": "openssl",
-      "versionInfo": "3.0.7-18.el9_2.x86_64",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-3.0.7-18.el9_2.x86_64.rpm",
       "externalRefs": [
@@ -346,7 +362,8 @@
     {
       "SPDXID": "SPDXRef-x86_64-openssl-devel",
       "name": "openssl-devel",
-      "versionInfo": "3.0.7-18.el9_2.x86_64",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-devel-3.0.7-18.el9_2.x86_64.rpm",
       "externalRefs": [
@@ -366,7 +383,8 @@
     {
       "SPDXID": "SPDXRef-s390x-openssl-libs",
       "name": "openssl-libs",
-      "versionInfo": "3.0.7-18.el9_2.s390x",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-libs-3.0.7-18.el9_2.s390x.rpm",
       "externalRefs": [
@@ -386,7 +404,8 @@
     {
       "SPDXID": "SPDXRef-s390x-openssl-devel",
       "name": "openssl-devel",
-      "versionInfo": "3.0.7-18.el9_2.s390x",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-devel-3.0.7-18.el9_2.s390x.rpm",
       "externalRefs": [
@@ -406,7 +425,8 @@
     {
       "SPDXID": "SPDXRef-s390x-openssl",
       "name": "openssl",
-      "versionInfo": "3.0.7-18.el9_2.s390x",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-3.0.7-18.el9_2.s390x.rpm",
       "externalRefs": [
@@ -426,7 +446,8 @@
     {
       "SPDXID": "SPDXRef-s390x-openssl-perl",
       "name": "openssl-perl",
-      "versionInfo": "3.0.7-18.el9_2.s390x",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "openssl-perl-3.0.7-18.el9_2.s390x.rpm",
       "externalRefs": [
@@ -457,19 +478,9 @@
       "relatedSpdxElement": "SPDXRef-Source0"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-aarch64-openssl-perl"
-    },
-    {
       "spdxElementId": "SPDXRef-aarch64-openssl-perl",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-aarch64-openssl-libs"
     },
     {
       "spdxElementId": "SPDXRef-aarch64-openssl-libs",
@@ -477,19 +488,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-aarch64-openssl"
-    },
-    {
       "spdxElementId": "SPDXRef-aarch64-openssl",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-aarch64-openssl-devel"
     },
     {
       "spdxElementId": "SPDXRef-aarch64-openssl-devel",
@@ -497,19 +498,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-ppc64le-openssl-perl"
-    },
-    {
       "spdxElementId": "SPDXRef-ppc64le-openssl-perl",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-ppc64le-openssl-libs"
     },
     {
       "spdxElementId": "SPDXRef-ppc64le-openssl-libs",
@@ -517,19 +508,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-ppc64le-openssl-devel"
-    },
-    {
       "spdxElementId": "SPDXRef-ppc64le-openssl-devel",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-ppc64le-openssl"
     },
     {
       "spdxElementId": "SPDXRef-ppc64le-openssl",
@@ -537,19 +518,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-i686-openssl-libs"
-    },
-    {
       "spdxElementId": "SPDXRef-i686-openssl-libs",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-i686-openssl-devel"
     },
     {
       "spdxElementId": "SPDXRef-i686-openssl-devel",
@@ -557,19 +528,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-i686-openssl"
-    },
-    {
       "spdxElementId": "SPDXRef-i686-openssl",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-i686-openssl-perl"
     },
     {
       "spdxElementId": "SPDXRef-i686-openssl-perl",
@@ -577,19 +538,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-x86_64-openssl-perl"
-    },
-    {
       "spdxElementId": "SPDXRef-x86_64-openssl-perl",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-x86_64-openssl-libs"
     },
     {
       "spdxElementId": "SPDXRef-x86_64-openssl-libs",
@@ -597,19 +548,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-x86_64-openssl"
-    },
-    {
       "spdxElementId": "SPDXRef-x86_64-openssl",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-x86_64-openssl-devel"
     },
     {
       "spdxElementId": "SPDXRef-x86_64-openssl-devel",
@@ -617,19 +558,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-s390x-openssl-libs"
-    },
-    {
       "spdxElementId": "SPDXRef-s390x-openssl-libs",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-s390x-openssl-devel"
     },
     {
       "spdxElementId": "SPDXRef-s390x-openssl-devel",
@@ -637,19 +568,9 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-s390x-openssl"
-    },
-    {
       "spdxElementId": "SPDXRef-s390x-openssl",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-s390x-openssl-perl"
     },
     {
       "spdxElementId": "SPDXRef-s390x-openssl-perl",
