@@ -116,11 +116,10 @@ def handle_srpm(filename, name):
 
                 # Parse filename
                 tarball_match = tarball_re.match(sfn)
-                if tarball_match:
-                    (sname, sver) = tarball_re.match(sfn).groups()
-                else:
-                    sname = sfn
-                    sver = None
+                if not tarball_match:
+                    continue
+
+                (sname, sver) = tarball_re.match(sfn).groups()
 
                 # Calculate checksum
                 sha256 = hashlib.sha256()
