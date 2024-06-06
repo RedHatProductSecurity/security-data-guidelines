@@ -1,0 +1,57 @@
+site_name: Red Hat Security Data Guidelines
+site_url: https://redhatproductsecurity.github.io/security-data-guidelines/
+edit_uri: "https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/docs"
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.action.view
+  language: en
+  favicon: images/favicon.png
+  logo: images/logo.png
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: black
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: black
+
+nav:
+  - Home: "index.md"
+  - purl: "purl.md"
+
+plugins:
+  - social
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/RedHatProductSecurity
+    - icon: fontawesome/regular/envelope
+      link: "mailto:secalert@redhat.com"
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+  - pymdownx.inlinehilite  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=snippets#inlinehilite
+  - pymdownx.snippets  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=snippets#snippets
+  - admonition  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=#admonition
+  - footnotes  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=#footnotes
+  - toc:
+      permalink: 🔗  # Add anchor to each title element
