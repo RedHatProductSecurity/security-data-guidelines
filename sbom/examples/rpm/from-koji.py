@@ -180,6 +180,7 @@ def handle_srpm(filename, name):
                 url = "NOASSERTION"
 
             sref = f"SPDXRef-{sourceN}"
+            digest = sha256.hexdigest()
             spackage = {
                 "SPDXID": sref,
                 "name": sname,
@@ -189,12 +190,21 @@ def handle_srpm(filename, name):
                 "checksums": [
                     {
                         "algorithm": "SHA256",
-                        "checksumValue": sha256.hexdigest(),
+                        "checksumValue": digest,
                     },
                 ],
             }
             if not sver:
                 del spackage["versioninfo"]
+            if url != "NOASSERTION":
+                purl = f"pkg:generic/{name}@{version}?download_url={url}&checksum=sha256:{digest}"
+                spackage["externalRefs"] = [
+                    {
+                        "referenceCategory": "PACKAGE-MANAGER",
+                        "referenceType": "purl",
+                        "referenceLocator": purl,
+                    }
+                ]
             pkgs_by_arch.setdefault(arch, []).append(spackage)
 
             relationships.append(

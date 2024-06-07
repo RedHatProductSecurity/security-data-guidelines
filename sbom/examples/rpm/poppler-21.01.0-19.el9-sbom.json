@@ -43,6 +43,13 @@
           "algorithm": "SHA256",
           "checksumValue": "016dde34e5f868ea98a32ca99b643325a9682281500942b7113f4ec88d20e2f3"
         }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/poppler@21.01.0?download_url=http://poppler.freedesktop.org/poppler-21.01.0.tar.xz&checksum=sha256:016dde34e5f868ea98a32ca99b643325a9682281500942b7113f4ec88d20e2f3"
+        }
       ]
     },
     {

@@ -43,6 +43,13 @@
           "algorithm": "SHA256",
           "checksumValue": "4105046836812ed422922f851a57500118a99cc0f009b7eff2b3436110393377"
         }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz&checksum=sha256:4105046836812ed422922f851a57500118a99cc0f009b7eff2b3436110393377"
+        }
       ]
     },
     {
