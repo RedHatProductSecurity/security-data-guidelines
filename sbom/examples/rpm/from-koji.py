@@ -51,6 +51,9 @@ def run_syft(builddir):
             "syft",
             "-o",
             "spdx-json",
+            # Ignore GitHub actions, which are more like build-time dependencies
+            "--select-catalogers",
+            "-github-actions-usage-cataloger,-github-action-workflow-usage-cataloger",
             os.path.basename(builddir),
         ],
     )
@@ -58,6 +61,18 @@ def run_syft(builddir):
     syft_pkgs = result.get("packages", [])
     if len(syft_pkgs) < 2:
         return
+
+    for pkg in syft_pkgs:
+        if "externalRefs" not in pkg:
+            continue
+
+        # For the example data we only care about purl references
+        refs = [ref for ref in pkg["externalRefs"]
+                if ref["referenceCategory"] == "PACKAGE-MANAGER"]
+        if refs:
+            pkg["externalRefs"] = refs
+        else:
+            del pkg["externalRefs"]
 
     packages.extend(syft_pkgs)
     files.extend(result.get("files", []))
