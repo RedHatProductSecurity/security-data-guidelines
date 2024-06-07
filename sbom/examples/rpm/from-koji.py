@@ -28,7 +28,7 @@ license_replacements = {
 
 
 def get_license(filename):
-    licensep = subprocess.run(stdout=subprocess.PIPE, args=[
+    licensep = subprocess.run(stdout=subprocess.PIPE, check=True, args=[
         "rpm",
         "-qp",
         "--qf",
@@ -45,6 +45,7 @@ def get_license(filename):
 def run_syft(builddir):
     syft = subprocess.run(
         cwd=os.path.dirname(builddir),
+        check=True,
         stdout=subprocess.PIPE,
         args=[
             "syft",
@@ -78,7 +79,7 @@ def run_syft(builddir):
 def handle_srpm(filename, name):
     with TemporaryDirectory(dir=os.getcwd()) as srcdir:
         subprocess.run(
-            cwd=srcdir,
+            check=True,
             args=[
                 "rpm",
                 "-D",
@@ -90,6 +91,7 @@ def handle_srpm(filename, name):
         # Fix openshift spec file
         subprocess.run(
             cwd=srcdir,
+            check=True,
             args=[
                 "sed",
                 "-i",
@@ -102,6 +104,7 @@ def handle_srpm(filename, name):
         )
         subprocess.run(
             cwd=srcdir,
+            check=True,
             args=[
                 "rpmbuild",
                 "-D",
@@ -122,6 +125,7 @@ def handle_srpm(filename, name):
         # Add sources as SPDX packages
         spectool = subprocess.run(
             cwd=srcdir,
+            check=True,
             stdout=subprocess.PIPE,
             args=[
                 "rpmdev-spectool",
@@ -187,79 +191,85 @@ def handle_srpm(filename, name):
             )
 
 
-with TemporaryDirectory() as tmpdir:
+downloaddir = str(build_id)
+try:
+    os.mkdir(downloaddir)
     subprocess.run(
-        cwd=tmpdir,
+        cwd=str(downloaddir),
+        check=True,
         stdout=None,
         args=["koji", "-p", koji_profile, "download-build", build_id],
     )
-    pkgs_by_arch = {}
-    for rpm in rpms:
-        (name, version, release, nvr, arch) = (
-            rpm["name"],
-            rpm["version"],
-            rpm["release"],
-            rpm["nvr"],
-            rpm["arch"],
+except FileExistsError:
+    pass
+
+pkgs_by_arch = {}
+for rpm in rpms:
+    (name, version, release, nvr, arch) = (
+        rpm["name"],
+        rpm["version"],
+        rpm["release"],
+        rpm["nvr"],
+        rpm["arch"],
+    )
+    if name.endswith("-debuginfo") or name.endswith("-debugsource"):
+        continue
+    filename = f"{downloaddir}/{name}-{version}-{release}.{arch}.rpm"
+    if arch == "src":
+        spdxid = "SPDXRef-SRPM"
+    else:
+        spdxid = f"SPDXRef-{arch}-{name}"
+
+    sha256 = hashlib.sha256()
+    with open(filename, "rb") as rf:
+        while True:
+            data = rf.read()
+            if not data:
+                break
+            sha256.update(data)
+
+    license = get_license(filename)
+    package = {
+        "SPDXID": spdxid,
+        "name": name,
+        "versionInfo": f"{version}-{release}",
+        "supplier": "Organization: Red Hat",
+        "downloadLocation": "NOASSERTION",
+        "packageFileName": f"{nvr}.{arch}.rpm",
+        "licenseConcluded": license,
+        "externalRefs": [
+            {
+                "referenceCategory": "PACKAGE-MANAGER",
+                "referenceType": "purl",
+                "referenceLocator": f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}",
+            }
+        ],
+        "checksums": [
+            {
+                "algorithm": "SHA256",
+                "checksumValue": sha256.hexdigest(),
+            },
+        ],
+    }
+    pkgs_by_arch.setdefault(arch, []).append(package)
+
+    if arch == "src":
+        relationships.append(
+            {
+                "spdxElementId": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBES",
+                "relatedSpdxElement": spdxid,
+            }
         )
-        if name.endswith("-debuginfo") or name.endswith("-debugsource"):
-            continue
-        filename = f"{tmpdir}/{name}-{version}-{release}.{arch}.rpm"
-        if arch == "src":
-            spdxid = "SPDXRef-SRPM"
-        else:
-            spdxid = f"SPDXRef-{arch}-{name}"
-
-        sha256 = hashlib.sha256()
-        with open(filename, "rb") as rf:
-            while True:
-                data = rf.read()
-                if not data:
-                    break
-                sha256.update(data)
-
-        license = get_license(filename)
-        package = {
-            "SPDXID": spdxid,
-            "name": name,
-            "versionInfo": f"{version}-{release}",
-            "supplier": "Organization: Red Hat",
-            "downloadLocation": "NOASSERTION",
-            "packageFileName": f"{nvr}.{arch}.rpm",
-            "licenseConcluded": license,
-            "externalRefs": [
-                {
-                    "referenceCategory": "PACKAGE-MANAGER",
-                    "referenceType": "purl",
-                    "referenceLocator": f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}",
-                }
-            ],
-            "checksums": [
-                {
-                    "algorithm": "SHA256",
-                    "checksumValue": sha256.hexdigest(),
-                },
-            ],
-        }
-        pkgs_by_arch.setdefault(arch, []).append(package)
-
-        if arch == "src":
-            relationships.append(
-                {
-                    "spdxElementId": "SPDXRef-DOCUMENT",
-                    "relationshipType": "DESCRIBES",
-                    "relatedSpdxElement": spdxid,
-                }
-            )
-            handle_srpm(filename, name)
-        else:
-            relationships.append(
-                {
-                    "spdxElementId": spdxid,
-                    "relationshipType": "GENERATED_FROM",
-                    "relatedSpdxElement": "SPDXRef-SRPM",
-                }
-            )
+        handle_srpm(filename, name)
+    else:
+        relationships.append(
+            {
+                "spdxElementId": spdxid,
+                "relationshipType": "GENERATED_FROM",
+                "relatedSpdxElement": "SPDXRef-SRPM",
+            }
+        )
 
 packages.extend([package for package in pkgs_by_arch["src"]])
 del pkgs_by_arch["src"]
