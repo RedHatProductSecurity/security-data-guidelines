@@ -28,13 +28,17 @@ license_replacements = {
 
 
 def get_license(filename):
-    licensep = subprocess.run(stdout=subprocess.PIPE, check=True, args=[
-        "rpm",
-        "-qp",
-        "--qf",
-        "%{LICENSE}",
-        filename,
-    ])
+    licensep = subprocess.run(
+        stdout=subprocess.PIPE,
+        check=True,
+        args=[
+            "rpm",
+            "-qp",
+            "--qf",
+            "%{LICENSE}",
+            filename,
+        ],
+    )
     license = licensep.stdout.decode("utf-8")
     for orig, repl in license_replacements.items():
         license = re.sub(orig, repl, license)
@@ -67,8 +71,11 @@ def run_syft(builddir):
             continue
 
         # For the example data we only care about purl references
-        refs = [ref for ref in pkg["externalRefs"]
-                if ref["referenceCategory"] == "PACKAGE-MANAGER"]
+        refs = [
+            ref
+            for ref in pkg["externalRefs"]
+            if ref["referenceCategory"] == "PACKAGE-MANAGER"
+        ]
         if refs:
             pkg["externalRefs"] = refs
         else:
