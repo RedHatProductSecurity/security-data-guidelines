@@ -51,13 +51,17 @@ The namespace value of `redhat` signifies this as an RPM package produced and di
 The `rpm` purl type suggests the use of the `repository_url` qualifier to point to the base URL of the RPM
 repository from where the RPM can be downloaded. We are purposefully not using the `repository_url` qualifier in Red
 Hat purls because the base URL can vary depending on whether packages are sourced from Red Hat-hosted repositories
-(at cdn.redhat.com), local Red Hat Satellite-mirrored repositories, or Cloud provider-hosted repositories. Instead,
+(at _cdn.redhat.com_), local Red Hat Satellite-mirrored repositories, or Cloud provider-hosted repositories. Instead,
 Red Hat purls use a `repository_id` qualifier that identifies the repository from which the package can be
-downloaded using YUM or DNF.
+downloaded using YUM or DNF. 
 
-The repository ID is a unique value that ... TODO: how to resolve the ID to a URL??? If the ID of the repository is
-the same and the other attributes of the RPM match, such packages even though sourced from varying URLs can be
-considered the same for the purposes of simple identification.
+The repository ID is a unique value that identifies an RPM repository from where RPM packages can be fetched. If the
+ID of the repository is the same and the other attributes of the RPM match, such packages even though sourced from
+varying URLs can be considered the same for the purposes of simple identification. Given a repository ID, you can
+resolve it to a URL using your chosen base URL and a relative path of that repository that exists in the
+[repository-to-cpe.json mapping file](https://access.redhat.com/security/data/meta/v1/repository-to-cpe.json). This
+file maps repository IDs to both relative URL paths and CPE IDs that represent product versions in all of Red Hat's
+security data files.
 
 Another qualifier defined for the `rpm` purl type is `distro`, which is an arbitrary value that describes the Linux
 distribution that the package is included in. The `distro` qualifier is not recommended to be used for Red Hat RPMs
@@ -89,7 +93,7 @@ RPM modules follow a slightly different naming convention than regular RPMs. Eac
 The purl for the `squid:4` module available for RHEL 8.6 EUS would be the following:
 
 ```
-pkg:rpmmod/redhat/squid@4%3A8040020210420090912%3A522a0ee4?arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms
+pkg:rpmmod/redhat/squid@4%3A8040020210420090912%3A522a0ee4?arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
 ```
 
 The version string is a percent-encoded value that contains the Stream, Version, and Context:
@@ -151,6 +155,7 @@ that we want to achieve in the long term. In some cases, purl identifiers may be
 presented here or not specify it. Please
 [contact Red Hat Product Security](https://access.redhat.com/security/team/contact/) or file a Jira issue in the
 [SECDATA project](https://issues.redhat.com/projects/SECDATA) if you find any discrepancies in Red Hat's security data.
+Feedback on our usage of purl is always welcome and appreciated.
 
 Also of note is the purpose of using purls as identifiers versus locators. Some purls may include certain qualifiers
 that make it easier to identify them but are redundant for the purposes of locating a package. Alternatively, purls
