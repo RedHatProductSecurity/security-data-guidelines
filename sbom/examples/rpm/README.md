@@ -1,8 +1,11 @@
 Example SBOMs for RPMs
 ======================
 
-Here are some examples of SBOMs for released RPMs. They are intended to show
-what such SBOMs would look like with perfect knowledge.
+Here are some examples of SBOMs for RPMs, based on some real existing
+RPMs. They are intended to show what such SBOMs should look like at build
+time with perfect knowledge. The build system which produced these RPMs
+(Koji) did not have this knowledge, but a future one may have enough to
+produce SBOMs like this.
 
 Signing
 -------
@@ -19,9 +22,14 @@ qualifier. The reasoning for this is that the repository ID is a release
 destination not necessarily known at build time when these SBOMs are to
 be produced.
 
+When comparing two `pkg:rpm` purls, identical except that one has a
+`repository_id` qualifier and the other does not, many systems may treat
+these as distinct.
+
 When a container image is built including RPMs, the SBOM for the container
-image should refer to the RPMs using external references with and without the
-`repository_id` qualifier, like this:
+image should refer to the RPMs using external references both with and without
+the `repository_id` qualifier, to ensure purl matching to the original RPM
+SBOM can succeed. An example:
 
 ```json
   "packages": {
@@ -43,5 +51,3 @@ image should refer to the RPMs using external references with and without the
     ]
   }
 ```
-
-This will allow matching by purl between the container SBOM and the RPM SBOM.
