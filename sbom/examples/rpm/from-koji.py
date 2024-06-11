@@ -172,7 +172,7 @@ def handle_srpm(filename, name):
             # Special case to fix up example for openssl
             if sname == "openssl":
                 ext = re.sub(r".*-hobbled\.", "", sfn)
-                url = f"https://openssl.org/source/{sname}-{sver}.{ext}"
+                url = f"https://github.com/(RH openssl midstream repo)/archive/refs/tags/{sver}.{ext}"
 
             # Calculate checksum
             sha256 = hashlib.sha256()
