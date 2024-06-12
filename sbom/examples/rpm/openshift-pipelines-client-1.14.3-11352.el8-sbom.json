@@ -5,10 +5,11 @@
   "creationInfo": {
     "created": "2006-08-14T02:34:56-06:00",
     "creators": [
-      "example SPDX document only"
+      "Tool: example SPDX document only"
     ]
   },
   "name": "openshift-pipelines-client-1.14.3-11352.el8",
+  "documentNamespace": "https://access.redhat.com/security/data/sbom/beta/spdx/openshift-pipelines-client-1.14.3-11352.el8.json",
   "packages": [
     {
       "name": "4d63.com/gocheckcompilerdirectives",

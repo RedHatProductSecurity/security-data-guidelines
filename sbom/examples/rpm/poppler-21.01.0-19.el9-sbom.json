@@ -5,10 +5,11 @@
   "creationInfo": {
     "created": "2006-08-14T02:34:56-06:00",
     "creators": [
-      "example SPDX document only"
+      "Tool: example SPDX document only"
     ]
   },
   "name": "poppler-21.01.0-19.el9",
+  "documentNamespace": "https://access.redhat.com/security/data/sbom/beta/spdx/poppler-21.01.0-19.el9.json",
   "packages": [
     {
       "SPDXID": "SPDXRef-SRPM",

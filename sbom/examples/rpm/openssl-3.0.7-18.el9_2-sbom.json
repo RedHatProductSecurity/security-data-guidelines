@@ -5,10 +5,11 @@
   "creationInfo": {
     "created": "2006-08-14T02:34:56-06:00",
     "creators": [
-      "example SPDX document only"
+      "Tool: example SPDX document only"
     ]
   },
   "name": "openssl-3.0.7-18.el9_2",
+  "documentNamespace": "https://access.redhat.com/security/data/sbom/beta/spdx/openssl-3.0.7-18.el9_2.json",
   "packages": [
     {
       "SPDXID": "SPDXRef-SRPM",

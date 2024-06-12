@@ -314,10 +314,11 @@ spdx = {
     "creationInfo": {
         "created": "2006-08-14T02:34:56-06:00",
         "creators": [
-            "example SPDX document only",
+            "Tool: example SPDX document only",
         ],
     },
     "name": build["nvr"],
+    "documentNamespace": f"https://access.redhat.com/security/data/sbom/beta/spdx/{build['nvr']}.json",
     "packages": packages,
     "files": files,
     "relationships": relationships,
