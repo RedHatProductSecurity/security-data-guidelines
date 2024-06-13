@@ -26,6 +26,6 @@ jobs:
       - name: check schema
         run: |
           sudo apt-get install -y python3-jsonschema
-          for example in $GITHUB_WORKSPACE/sbom/examples/rpm/*.json; do
+          for example in $GITHUB_WORKSPACE/sbom/examples/*/*.json; do
             jsonschema $GITHUB_WORKSPACE/sbom/spdx-2.3-schema.json -i $example
           done
