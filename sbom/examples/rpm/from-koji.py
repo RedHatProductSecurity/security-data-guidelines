@@ -98,6 +98,47 @@ def run_syft(builddir):
     relationships.extend(syft_rels)
 
 
+def mock_openssl_midstream(sfn, sourceN, sname, sver):
+    # Model a midstream repository for this.
+    ext = re.sub(r".*-hobbled\.", "", sfn)
+    url = f"https://openssl.org/source/openssl-{sver}.{ext}"
+    # Hard-code example value for 3.0.7
+    digest = "83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e"
+    upackage = {
+        "SPDXID": f"SPDXRef-{sourceN}-origin",
+        "name": sname,
+        "versionInfo": sver,
+        "downloadLocation": url,
+        "packageFileName": f"{sname}-{sver}.{ext}",
+        "checksums": [
+            {
+                "algorithm": "SHA256",
+                "checksumValue": digest,
+            },
+        ],
+        "externalRefs": [
+            {
+                "referenceCategory": "PACKAGE-MANAGER",
+                "referenceType": "purl",
+                "referenceLocator": f"pkg:generic/{sname}@{sver}?download_url={url}&checksum=sha256:{digest}",
+            }
+        ],
+    }
+
+    pkgs_by_arch.setdefault(arch, []).append(upackage)
+    relationships.append(
+        {
+            "spdxElementId": f"SPDXRef-{sourceN}",
+            "relationshipType": "GENERATED_FROM",
+            "relatedSpdxElement": f"SPDXRef-{sourceN}-origin",
+        }
+    )
+
+    # Construct the URL for the sourceN package
+    url = f"https://github.com/(RH openssl midstream repo)/archive/refs/tags/{sver}.{ext}"
+    return url
+
+
 def handle_srpm(filename, name):
     with TemporaryDirectory(dir=os.getcwd()) as srcdir:
         subprocess.run(
@@ -171,32 +212,7 @@ def handle_srpm(filename, name):
 
             # Special case to fix up example for openssl
             if sname == "openssl":
-                # Model a midstream repository for this.
-                ext = re.sub(r".*-hobbled\.", "", sfn)
-                upackage = {
-                    "SPDXID": f"SPDXRef-{sourceN}-origin",
-                    "name": sname,
-                    "versionInfo": sver,
-                    "downloadLocation": f"https://openssl.org/source/old/3.0/openssl-{sver}.{ext}",
-                    "packageFileName": f"{sname}-{sver}.{ext}",
-                    "checksums": [
-                        {
-                            "algorithm": "SHA256",
-                            # Hard-code example value for 3.0.7
-                            "checksumValue": "83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e",
-                        },
-                    ],
-                }
-
-                pkgs_by_arch.setdefault(arch, []).append(upackage)
-                relationships.append(
-                    {
-                        "spdxElementId": f"SPDXRef-{sourceN}",
-                        "relationshipType": "GENERATED_FROM",
-                        "relatedSpdxElement": f"SPDXRef-{sourceN}-origin",
-                    }
-                )
-                url = f"https://github.com/(RH openssl midstream repo)/archive/refs/tags/{sver}.{ext}"
+                url = mock_openssl_midstream(sfn, sourceN, sname, sver)
 
             # Calculate checksum
             sha256 = hashlib.sha256()
