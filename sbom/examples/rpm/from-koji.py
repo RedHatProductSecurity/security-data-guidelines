@@ -171,7 +171,31 @@ def handle_srpm(filename, name):
 
             # Special case to fix up example for openssl
             if sname == "openssl":
+                # Model a midstream repository for this.
                 ext = re.sub(r".*-hobbled\.", "", sfn)
+                upackage = {
+                    "SPDXID": f"SPDXRef-{sourceN}-origin",
+                    "name": sname,
+                    "versionInfo": sver,
+                    "downloadLocation": f"https://openssl.org/source/old/3.0/openssl-{sver}.{ext}",
+                    "packageFileName": f"{sname}-{sver}.{ext}",
+                    "checksums": [
+                        {
+                            "algorithm": "SHA256",
+                            # Hard-code example value for 3.0.7
+                            "checksumValue": "83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e",
+                        },
+                    ],
+                }
+
+                pkgs_by_arch.setdefault(arch, []).append(upackage)
+                relationships.append(
+                    {
+                        "spdxElementId": f"SPDXRef-{sourceN}",
+                        "relationshipType": "GENERATED_FROM",
+                        "relatedSpdxElement": f"SPDXRef-{sourceN}-origin",
+                    }
+                )
                 url = f"https://github.com/(RH openssl midstream repo)/archive/refs/tags/{sver}.{ext}"
 
             # Calculate checksum

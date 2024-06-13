@@ -34,6 +34,19 @@
       ]
     },
     {
+      "SPDXID": "SPDXRef-Source0-origin",
+      "name": "openssl",
+      "versionInfo": "3.0.7",
+      "downloadLocation": "https://openssl.org/source/old/3.0/openssl-3.0.7.tar.gz",
+      "packageFileName": "openssl-3.0.7.tar.gz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e"
+        }
+      ]
+    },
+    {
       "SPDXID": "SPDXRef-Source0",
       "name": "openssl",
       "versionInfo": "3.0.7",
@@ -500,6 +513,11 @@
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-Source0",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source0-origin"
     },
     {
       "spdxElementId": "SPDXRef-SRPM",
