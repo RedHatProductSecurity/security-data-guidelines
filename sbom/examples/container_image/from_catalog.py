@@ -206,7 +206,7 @@ def generate_sbom_for_image(image_nvr):
         "creationInfo": {
             "created": "2006-08-14T02:34:56-06:00",
             "creators": [
-                "example SPDX document only",
+                "Tool: example SPDX document only",
             ],
         },
         "name": image_nvr,
