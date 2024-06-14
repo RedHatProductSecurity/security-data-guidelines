@@ -5,7 +5,7 @@
   "creationInfo": {
     "created": "2006-08-14T02:34:56-06:00",
     "creators": [
-      "example SPDX document only"
+      "Tool: example SPDX document only"
     ]
   },
   "name": "ubi9-micro-container-9.4-6.1716471860",
@@ -74,7 +74,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -95,7 +95,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a?arch=noarch&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -116,7 +116,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -137,7 +137,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7?arch=noarch&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -158,7 +158,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -179,7 +179,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/basesystem@11?arch=noarch&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/basesystem@11?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -200,7 +200,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40?arch=noarch&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -221,7 +221,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2?arch=noarch&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -242,7 +242,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -263,7 +263,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -284,7 +284,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -305,7 +305,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -326,7 +326,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc@2.34?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc@2.34?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -347,7 +347,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -368,7 +368,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -389,7 +389,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libcap@2.48?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libcap@2.48?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -410,7 +410,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -431,7 +431,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -452,7 +452,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -473,7 +473,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32?arch=s390x&repository_url=rhel-9-for-s390x-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -520,7 +520,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -541,7 +541,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40?arch=noarch&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -562,7 +562,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a?arch=noarch&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -583,7 +583,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -604,7 +604,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7?arch=noarch&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -625,7 +625,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -646,7 +646,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/basesystem@11?arch=noarch&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/basesystem@11?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -667,7 +667,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2?arch=noarch&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -688,7 +688,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -709,7 +709,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -730,7 +730,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -751,7 +751,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -772,7 +772,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc@2.34?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc@2.34?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -793,7 +793,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -814,7 +814,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -835,7 +835,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libcap@2.48?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libcap@2.48?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -856,7 +856,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -877,7 +877,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -898,7 +898,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -919,7 +919,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32?arch=ppc64le&repository_url=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -966,7 +966,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -987,7 +987,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40?arch=noarch&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1008,7 +1008,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a?arch=noarch&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1029,7 +1029,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1050,7 +1050,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7?arch=noarch&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1071,7 +1071,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1092,7 +1092,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/basesystem@11?arch=noarch&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/basesystem@11?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1113,7 +1113,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2?arch=noarch&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1134,7 +1134,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1155,7 +1155,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1176,7 +1176,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1197,7 +1197,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1218,7 +1218,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc@2.34?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc@2.34?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1239,7 +1239,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1260,7 +1260,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1281,7 +1281,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libcap@2.48?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libcap@2.48?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1302,7 +1302,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1323,7 +1323,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1344,7 +1344,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1365,7 +1365,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32?arch=aarch64&repository_url=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1412,7 +1412,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1433,7 +1433,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1454,7 +1454,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7?arch=noarch&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1475,7 +1475,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1496,7 +1496,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/basesystem@11?arch=noarch&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/basesystem@11?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1517,7 +1517,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40?arch=noarch&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1538,7 +1538,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a?arch=noarch&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1559,7 +1559,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2?arch=noarch&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1580,7 +1580,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1601,7 +1601,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1622,7 +1622,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1643,7 +1643,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1664,7 +1664,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc@2.34?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/glibc@2.34?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1685,7 +1685,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1706,7 +1706,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1727,7 +1727,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libcap@2.48?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libcap@2.48?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1748,7 +1748,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1769,7 +1769,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1790,7 +1790,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1811,7 +1811,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32?arch=x86_64&repository_url=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
