@@ -5,7 +5,11 @@ import requests
 
 # These container images (identified by their NVR) are known to contain only RPM packages and no
 # other content type.
-RPM_CONTAINER_IMAGES = ["ubi9-micro-container-9.4-6.1716471860"]
+RPM_CONTAINER_IMAGES = [
+    "ubi9-micro-container-9.4-6.1716471860",
+    "podman-container-9.4-8",
+    "kernel-module-management-operator-container-1.1.2-25",
+]
 
 catalog_url = "https://catalog.redhat.com/api/containers/v1/"
 nvr_api = catalog_url + "images/nvr/"
@@ -72,6 +76,14 @@ def generate_sbom_for_image(image_nvr):
             print("ERROR: No repos or image index digest found for image ID: {catalog_image_id}")
             sys.exit(1)
 
+        # Get license information from labels if it is set
+        # TODO: is this a license statement in SPDX licence format? Does it apply to the image
+        #  itself rather than its content (which is individually-licensed components?)
+        image_license = "NOASSERTION"
+        for label in image["parsed_data"]["labels"]:
+            if label["name"].lower() == "license":
+                image_license = label["value"]
+
         # Create an index image object, but since all arch-specific images are descendents of one
         # and the same index image, we only have to create it once.
         if not image_index_pkg_created:
@@ -80,10 +92,8 @@ def generate_sbom_for_image(image_nvr):
                 "name": image_nvr_name,
                 "versionInfo": image_nvr_version,
                 "supplier": "Organization: Red Hat",
-                "downloadLocation": "NOASSERTION",
-                # Should this be NONE? Are container images themselves ever licensed differently
-                # from the content they include?
-                "licenseConcluded": "NOASSERTION",
+                "downloadLocation": "NOASSERTION",  # TODO: should this be set to the registry+repo?
+                "licenseDeclared": image_license,
                 "externalRefs": [],
                 "checksums": [
                     {
@@ -114,17 +124,14 @@ def generate_sbom_for_image(image_nvr):
             )
             image_index_pkg_created = True
 
-        # TODO: create arch-specific image element, but it needs to point to two repos?
         spdx_image_id = f"SPDXRef-{image_nvr_name}-{image['architecture']}"
         image_pkg = {
             "SPDXID": spdx_image_id,
             "name": f"{image_nvr_name}_{image['architecture']}",
             "versionInfo": image_nvr_version,
             "supplier": "Organization: Red Hat",
-            "downloadLocation": "NOASSERTION",
-            # Should this be NONE? Are container images themselves ever licensed differently
-            # from the content they include?
-            "licenseConcluded": "NOASSERTION",
+            "downloadLocation": "NOASSERTION",  # TODO: should this be set to the registry+repo?
+            "licenseDeclared": image_license,
             "externalRefs": [],
             "checksums": [
                 {
@@ -169,9 +176,9 @@ def generate_sbom_for_image(image_nvr):
                 "name": rpm["name"],
                 "versionInfo": rpm["version"],
                 "supplier": "Organization: Red Hat",
-                "downloadLocation": "NOASSERTION",
+                "downloadLocation": "NOASSERTION",  # Unset on purpose; refer to RPM SBOM
                 "packageFileName": rpm["nvra"] + ".rpm",
-                "licenseConcluded": "NOASSERTION",
+                "licenseDeclared": "NOASSERTION",  # Unset on purpose; refer to RPM SBOM
                 "externalRefs": [
                     {
                         "referenceCategory": "PACKAGE-MANAGER",

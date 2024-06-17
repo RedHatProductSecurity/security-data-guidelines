@@ -16,7 +16,7 @@
       "versionInfo": "9.4-6.1716471860",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -42,7 +42,7 @@
       "versionInfo": "9.4-6.1716471860",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -69,7 +69,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libgcc-11.4.1-3.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -90,7 +90,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -111,7 +111,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "redhat-release-9.4-0.4.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -132,7 +132,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "setup-2.13.7-10.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -153,7 +153,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "filesystem-3.16-2.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -174,7 +174,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "basesystem-11-13.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -195,7 +195,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -216,7 +216,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -237,7 +237,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "ncurses-libs-6.2-10.20210508.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -258,7 +258,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "bash-5.1.8-9.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -279,7 +279,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-common-2.34-100.el9_4.2.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -300,7 +300,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-minimal-langpack-2.34-100.el9_4.2.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -321,7 +321,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-2.34-100.el9_4.2.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -342,7 +342,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libattr-2.5.1-3.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -363,7 +363,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libacl-2.3.1-4.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -384,7 +384,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libcap-2.48-9.el9_2.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -405,7 +405,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libsepol-3.6-1.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -426,7 +426,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "pcre2-10.40-5.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -447,7 +447,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libselinux-3.6-1.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -468,7 +468,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "coreutils-single-8.32-35.el9.s390x.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -488,7 +488,7 @@
       "versionInfo": "9.4-6.1716471860",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -515,7 +515,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libgcc-11.4.1-3.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -536,7 +536,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -557,7 +557,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -578,7 +578,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "redhat-release-9.4-0.4.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -599,7 +599,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "setup-2.13.7-10.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -620,7 +620,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "filesystem-3.16-2.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -641,7 +641,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "basesystem-11-13.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -662,7 +662,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -683,7 +683,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "ncurses-libs-6.2-10.20210508.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -704,7 +704,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "bash-5.1.8-9.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -725,7 +725,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-common-2.34-100.el9_4.2.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -746,7 +746,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-minimal-langpack-2.34-100.el9_4.2.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -767,7 +767,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-2.34-100.el9_4.2.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -788,7 +788,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libattr-2.5.1-3.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -809,7 +809,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libacl-2.3.1-4.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -830,7 +830,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libcap-2.48-9.el9_2.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -851,7 +851,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libsepol-3.6-1.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -872,7 +872,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "pcre2-10.40-5.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -893,7 +893,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libselinux-3.6-1.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -914,7 +914,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "coreutils-single-8.32-35.el9.ppc64le.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -934,7 +934,7 @@
       "versionInfo": "9.4-6.1716471860",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -961,7 +961,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libgcc-11.4.1-3.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -982,7 +982,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1003,7 +1003,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1024,7 +1024,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "redhat-release-9.4-0.4.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1045,7 +1045,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "setup-2.13.7-10.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1066,7 +1066,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "filesystem-3.16-2.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1087,7 +1087,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "basesystem-11-13.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1108,7 +1108,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1129,7 +1129,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "ncurses-libs-6.2-10.20210508.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1150,7 +1150,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "bash-5.1.8-9.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1171,7 +1171,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-common-2.34-100.el9_4.2.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1192,7 +1192,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-minimal-langpack-2.34-100.el9_4.2.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1213,7 +1213,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-2.34-100.el9_4.2.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1234,7 +1234,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libattr-2.5.1-3.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1255,7 +1255,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libacl-2.3.1-4.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1276,7 +1276,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libcap-2.48-9.el9_2.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1297,7 +1297,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libsepol-3.6-1.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1318,7 +1318,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "pcre2-10.40-5.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1339,7 +1339,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libselinux-3.6-1.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1360,7 +1360,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "coreutils-single-8.32-35.el9.aarch64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1380,7 +1380,7 @@
       "versionInfo": "9.4-6.1716471860",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1407,7 +1407,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libgcc-11.4.1-3.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1428,7 +1428,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "redhat-release-9.4-0.4.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1449,7 +1449,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "setup-2.13.7-10.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1470,7 +1470,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "filesystem-3.16-2.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1491,7 +1491,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "basesystem-11-13.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1512,7 +1512,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1533,7 +1533,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1554,7 +1554,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1575,7 +1575,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "ncurses-libs-6.2-10.20210508.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1596,7 +1596,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "bash-5.1.8-9.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1617,7 +1617,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-common-2.34-100.el9_4.2.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1638,7 +1638,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-minimal-langpack-2.34-100.el9_4.2.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1659,7 +1659,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "glibc-2.34-100.el9_4.2.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1680,7 +1680,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libattr-2.5.1-3.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1701,7 +1701,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libacl-2.3.1-4.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1722,7 +1722,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libcap-2.48-9.el9_2.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1743,7 +1743,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libsepol-3.6-1.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1764,7 +1764,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "pcre2-10.40-5.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1785,7 +1785,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "libselinux-3.6-1.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -1806,7 +1806,7 @@
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "packageFileName": "coreutils-single-8.32-35.el9.x86_64.rpm",
-      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
