@@ -27,5 +27,5 @@ jobs:
         run: |
           sudo apt-get install -y python3-jsonschema
           for example in $GITHUB_WORKSPACE/sbom/examples/rpm/*.json; do
-            jsonschema $GITHUB_WORKSPACE/sbom/spdx-schema.json -i $example
+            jsonschema $GITHUB_WORKSPACE/sbom/spdx-2.3-schema.json -i $example
           done
