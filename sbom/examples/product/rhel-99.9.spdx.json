@@ -1,0 +1,120 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT-4d3d9002-fd75-4329-92f2-4271e186e32c",
+  "creationInfo": {
+    "created": "2006-08-14T02:34:56-06:00",
+    "creators": [
+      "Tool: example SPDX document only"
+    ]
+  },
+  "name": "RHEL 99.9",
+  "documentNamespace": "https://access.redhat.com/security/data/sbom/beta/spdx/rhel-99.9-6a659023-7a52-4792-a66c-a7f19ec14ba8.json",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-RHEL-99.9",
+      "name": "Red Hat Enterprise Linux",
+      "versionInfo": "99.9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://developers.redhat.com/products/rhel/download",
+      "licenseConcluded": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/o:redhat:enterprise_linux:10::baseos",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:10::appstream",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:10::buildroot",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:10::crb",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:10::highavailability",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:10::nfv",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:10::realtime",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:10::resilientstorage",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:10::sap",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:10::sap_hana",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:10::supplementary",
+          "referenceType": "cpe22Type"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-SRPM-1",
+      "name": "openssl",
+      "versionInfo": "100.0.0-10.el99_9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "openssl-100.0.0-10.el99_9.src.rpm",
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@100.0.0-10.el99_9?arch=src"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/openssl-0:100.0.0-10.el99_9.spdx.json.bz2"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9215c64e7289a058248728089e4d98ed1cc392bb5eb9b8fcbe661d57e8145bbd"
+        }
+      ]
+    }
+  ],
+  "files": [],  // Should we list individual ISOs here?
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-RHEL-99.9"
+    },
+    {
+      "spdxElementId": "SPDXRef-SRPM-1",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-RHEL-99.9"
+    }
+  ]
+}
