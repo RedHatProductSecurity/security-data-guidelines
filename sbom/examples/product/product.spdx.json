@@ -1,0 +1,117 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "creationInfo": {
+    "created": "2006-08-14T02:34:56-06:00",
+    "creators": [
+      "Tool: example SPDX document only"
+    ]
+  },
+  "name": "example-product",
+  "documentNamespace": "https://access.redhat.com/security/data/sbom/beta/spdx/example-product-1.0.1.json",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-product",
+      "name": "example-product",
+      "versionInfo": "1.0.1",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://developers.redhat.com/products/rhel/download",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:example_linux:9::appstream"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-component-0",
+      "name": "openshift-pipelines-client",
+      "versionInfo": "1.14.3-11352.el8",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://developers.redhat.com/products/rhel/download#or_exact_URL",
+      "packageFileName": "openshift-pipelines-client-1.14.3-11352.el8.src.rpm",
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f260ee743e4d1e3a989657c6c5ad854affa200fb91b0cca3594160a17b4fe384"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-component-1",
+      "name": "openssl",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://developers.redhat.com/products/rhel/download#or_exact_URL",
+      "packageFileName": "openssl-3.0.7-18.el9_2.src.rpm",
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9215c64e7289a058248728089e4d98ed1cc392bb5eb9b8fcbe661d57e8145bbd"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-component-2",
+      "name": "poppler",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://developers.redhat.com/products/rhel/download#or_exact_URL",
+      "packageFileName": "poppler-21.01.0-19.el9.src.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "801331801a5d8209b5aaf0cc28f8cdc1f94a4bb349ef2f9a4300c4889bb06e3a"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDX-Document",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-product"
+    },
+    {
+      "spdxElementId": "SPDXRef-product",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-component-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-product",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-component-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-product",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-component-2"
+    }
+  ]
+}
