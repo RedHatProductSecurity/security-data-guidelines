@@ -163,7 +163,7 @@ def generate_sbom_for_image(image_nvr):
 
         for rpm in get_rpms(catalog_image_id):
             purl = (
-                f"pkg:rpm/redhat/{rpm['name']}@{rpm['version']}?"
+                f"pkg:rpm/redhat/{rpm['name']}@{rpm['version']}-{rpm['release']}?"
                 # We don't have a way to find out which content set (RPM repo) an RPM came from,
                 # so we arbitrarily choose one here (assuming we have this mapping via RPM
                 # lockfiles or other means eventually).
