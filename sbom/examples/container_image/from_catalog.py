@@ -52,10 +52,8 @@ def generate_sbom_for_image(image_nvr):
         image_index_digest = ""
         for repo in image["repositories"]:
             registry = repo["registry"]
-            repo_name = repo["repository"]
-            repo_namespace, _, repo_name = repo_name.rpartition("/")
-            if repo_namespace:
-                registry = f"{registry}/{repo_namespace}"
+            repo_namespace, _, repo_name = repo["repository"].rpartition("/")
+            repo_url = f"{registry}/{repo_namespace}/{repo_name}"
             tags = list(
                 sorted(
                     [t for t in repo["tags"] if t["name"] != "latest"],
@@ -69,7 +67,7 @@ def generate_sbom_for_image(image_nvr):
             if not tags:
                 print(f"ERROR: no usable tag found for image ID: {catalog_image_id}")
                 sys.exit(1)
-            repos.add((repo_name, registry, tags[0]["name"]))
+            repos.add((repo_name, repo_url, tags[0]["name"]))
             image_index_digest = repo["manifest_list_digest"].lstrip("sha256:")
 
         if not repos or not image_index_digest:
@@ -102,10 +100,10 @@ def generate_sbom_for_image(image_nvr):
                     }
                 ],
             }
-            for name, registry, tag in sorted(repos):
+            for name, repo_url, tag in sorted(repos):
                 purl = (
                     f"pkg:oci/{name}@sha256%3A{image_index_digest}?"
-                    f"repository_url={registry}&tag={tag}"
+                    f"repository_url={repo_url}&tag={tag}"
                 )
                 ref = {
                     "referenceCategory": "PACKAGE-MANAGER",
@@ -140,10 +138,10 @@ def generate_sbom_for_image(image_nvr):
                 }
             ],
         }
-        for name, registry, tag in sorted(repos):
+        for name, repo_url, tag in sorted(repos):
             purl = (
                 f"pkg:oci/{name}@sha256%3A{image_index_digest}?"
-                f"arch={image['architecture']}&repository_url={registry}&tag={tag}"
+                f"arch={image['architecture']}&repository_url={repo_url}&tag={tag}"
             )
             ref = {
                 "referenceCategory": "PACKAGE-MANAGER",
