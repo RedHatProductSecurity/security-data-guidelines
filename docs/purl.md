@@ -116,11 +116,11 @@ its digest value for the amd64 architecture is:
 `sha256:8bca3b1be5750aeb94ef1351aa22636a54112f595d11a4d5c777890b80dfd387`. In purl, this information is represented as:
 
 ```
-pkg:oci/ubi@sha256%3A8bca3b1be5750aeb94ef1351aa22636a54112f595d11a4d5c777890b80dfd387?arch=amd64&repository_url=registry.redhat.io/ubi9&tag=9.3-1610
+pkg:oci/ubi@sha256%3A8bca3b1be5750aeb94ef1351aa22636a54112f595d11a4d5c777890b80dfd387?arch=amd64&repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
 ```
 
 Note that an image with a particular digest value may appear in multiple repositories, so the purl would only differ
-in the value of the `repository_url` qualifier, while representing the same image.
+in the value of the repo namespace in the `repository_url` qualifier, while representing the same image.
 
 Only tags that are unique to a particular container image should be specified in the purl; tags such as latest or
 9.3 should not be included because they represent an ever-changing piece of information that may be outdated at the
@@ -130,7 +130,7 @@ A purl may also refer to the [Image Index](https://github.com/opencontainers/ima
 which is a higher-level representation of a set of image manifests. An image index has its own unique digest value:
 
 ```
-pkg:oci/ubi@sha256%3A66233eebd72bb5baa25190d4f55e1dc3fff3a9b77186c1f91a0abdb274452072?repository_url=registry.redhat.io/ubi9&tag=9.3-1610
+pkg:oci/ubi@sha256%3A66233eebd72bb5baa25190d4f55e1dc3fff3a9b77186c1f91a0abdb274452072?repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
 ```
 
 The `arch` qualifier is simply omitted in this purl.
