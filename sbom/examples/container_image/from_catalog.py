@@ -7,8 +7,7 @@ import requests
 # other content type.
 RPM_CONTAINER_IMAGES = [
     "ubi9-micro-container-9.4-6.1716471860",
-    "podman-container-9.4-8",
-    "kernel-module-management-operator-container-1.1.2-25",
+    "kernel-module-management-operator-container-1.1.2-25",  # Contains openssl-3.0.7-18.el9_2
 ]
 
 catalog_url = "https://catalog.redhat.com/api/containers/v1/"
@@ -23,13 +22,13 @@ def get_image_data(image_nvr):
     response.raise_for_status()
     # This is a paged response, but we're assuming there are not 100+ images for a single
     # container image NVR.
-    yield from response.json()["data"]
+    return sorted(response.json()["data"], key=lambda image: image["_id"])
 
 
 def get_rpms(image_id):
     response = requests.get(rpm_manifest_api.format(catalog_image_id=image_id))
     response.raise_for_status()
-    yield from response.json()["rpms"]
+    return sorted(response.json()["rpms"], key=lambda rpm: rpm["nvra"])
 
 
 def generate_sbom_for_image(image_nvr):
@@ -51,9 +50,7 @@ def generate_sbom_for_image(image_nvr):
         repos = set()
         image_index_digest = ""
         for repo in image["repositories"]:
-            registry = repo["registry"]
-            repo_namespace, _, repo_name = repo["repository"].rpartition("/")
-            repo_url = f"{registry}/{repo_namespace}/{repo_name}"
+            repo_url = f"{repo['registry']}/{repo['repository']}"
             tags = list(
                 sorted(
                     [t for t in repo["tags"] if t["name"] != "latest"],
@@ -67,6 +64,7 @@ def generate_sbom_for_image(image_nvr):
             if not tags:
                 print(f"ERROR: no usable tag found for image ID: {catalog_image_id}")
                 sys.exit(1)
+            repo_name = repo["repository"].split("/")[-1]
             repos.add((repo_name, repo_url, tags[0]["name"]))
             image_index_digest = repo["manifest_list_digest"].lstrip("sha256:")
 
@@ -81,6 +79,8 @@ def generate_sbom_for_image(image_nvr):
         for label in image["parsed_data"]["labels"]:
             if label["name"].lower() == "license":
                 image_license = label["value"]
+
+        # TODO: split image index into its own SBOM and produce per-arch image SBOM
 
         # Create an index image object, but since all arch-specific images are descendents of one
         # and the same index image, we only have to create it once.
@@ -160,14 +160,23 @@ def generate_sbom_for_image(image_nvr):
         )
 
         for rpm in get_rpms(catalog_image_id):
-            purl = (
+            rpm_purl = (
                 f"pkg:rpm/redhat/{rpm['name']}@{rpm['version']}-{rpm['release']}?"
                 # We don't have a way to find out which content set (RPM repo) an RPM came from,
                 # so we arbitrarily choose one here (assuming we have this mapping via RPM
                 # lockfiles or other means eventually).
                 f"arch={rpm['architecture']}&repository_id={content_sets[0]}"
             )
-            srpm = rpm["srpm_nevra"].rstrip(".src")
+
+            srpm_nevr = rpm["srpm_nevra"].rstrip(".src")
+            n, ev, r = srpm_nevr.rsplit("-", maxsplit=2)
+            srpm_purl = (
+                f"pkg:rpm/redhat/{n}@{ev}-{r}?arch=src"
+                # Same note applies as above; also, we're assuming the SRPM for a given binary
+                # RPM is hosted in the same repo.
+                f"&repository_id={content_sets[0]}"
+            )
+
             spdx_rpm_id = f"SPDXRef-{rpm['architecture']}-{rpm['name']}"
             rpm_pkg = {
                 "SPDXID": spdx_rpm_id,
@@ -181,16 +190,12 @@ def generate_sbom_for_image(image_nvr):
                     {
                         "referenceCategory": "PACKAGE-MANAGER",
                         "referenceType": "purl",
-                        "referenceLocator": purl,
+                        "referenceLocator": rpm_purl,
                     },
                     {
-                        "referenceCategory": "OTHER",
-                        "referenceType": "sbom_ref",
-                        # Or wherever else we host per-RPM SBOMs.
-                        "referenceLocator": (
-                            f"https://access.redhat.com/security/data/sbom/v1/rpm/"
-                            f"{srpm}.spdx.json.bz2"
-                        ),
+                        "referenceCategory": "PACKAGE-MANAGER",
+                        "referenceType": "purl",
+                        "referenceLocator": srpm_purl,
                     },
                 ],
                 # We don't have data on a checksum for binary RPMs included in images; should we?

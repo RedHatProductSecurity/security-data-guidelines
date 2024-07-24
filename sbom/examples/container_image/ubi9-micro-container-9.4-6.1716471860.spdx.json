@@ -26,459 +26,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?repository_url=registry.access.redhat.com//ubi9-micro&tag=9.4-6.1716471860"
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?repository_url=registry.access.redhat.com/ubi9-micro&tag=9.4-6.1716471860"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-ubi9-micro-container-s390x",
-      "name": "ubi9-micro-container_s390x",
-      "versionInfo": "9.4-6.1716471860",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=s390x&repository_url=registry.access.redhat.com/ubi9/ubi-micro&tag=9.4-6.1716471860"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=s390x&repository_url=registry.access.redhat.com//ubi9-micro&tag=9.4-6.1716471860"
-        }
-      ],
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "sha256:2c9e70f4174747c6b53d253e879177c52731cc4bdc5fe9c6a2555412d849a952"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-libgcc",
-      "name": "libgcc",
-      "versionInfo": "11.4.1",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libgcc-11.4.1-3.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1-3.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/gcc-0:11.4.1-3.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-noarch-tzdata",
-      "name": "tzdata",
-      "versionInfo": "2024a",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a-1.el9?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/tzdata-0:2024a-1.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-redhat-release",
-      "name": "redhat-release",
-      "versionInfo": "9.4",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "redhat-release-9.4-0.4.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4-0.4.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/redhat-release-0:9.4-0.4.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-noarch-setup",
-      "name": "setup",
-      "versionInfo": "2.13.7",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "setup-2.13.7-10.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7-10.el9?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/setup-0:2.13.7-10.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-filesystem",
-      "name": "filesystem",
-      "versionInfo": "3.16",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "filesystem-3.16-2.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16-2.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/filesystem-0:3.16-2.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-noarch-basesystem",
-      "name": "basesystem",
-      "versionInfo": "11",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "basesystem-11-13.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/basesystem@11-13.el9?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/basesystem-0:11-13.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-noarch-pcre2-syntax",
-      "name": "pcre2-syntax",
-      "versionInfo": "10.40",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40-5.el9?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-noarch-ncurses-base",
-      "name": "ncurses-base",
-      "versionInfo": "6.2",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2-10.20210508.el9?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-ncurses-libs",
-      "name": "ncurses-libs",
-      "versionInfo": "6.2",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "ncurses-libs-6.2-10.20210508.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2-10.20210508.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-bash",
-      "name": "bash",
-      "versionInfo": "5.1.8",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "bash-5.1.8-9.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8-9.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/bash-0:5.1.8-9.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-glibc-common",
-      "name": "glibc-common",
-      "versionInfo": "2.34",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "glibc-common-2.34-100.el9_4.2.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34-100.el9_4.2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-glibc-minimal-langpack",
-      "name": "glibc-minimal-langpack",
-      "versionInfo": "2.34",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "glibc-minimal-langpack-2.34-100.el9_4.2.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34-100.el9_4.2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-glibc",
-      "name": "glibc",
-      "versionInfo": "2.34",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "glibc-2.34-100.el9_4.2.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc@2.34-100.el9_4.2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-libattr",
-      "name": "libattr",
-      "versionInfo": "2.5.1",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libattr-2.5.1-3.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1-3.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/attr-0:2.5.1-3.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-libacl",
-      "name": "libacl",
-      "versionInfo": "2.3.1",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libacl-2.3.1-4.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1-4.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/acl-0:2.3.1-4.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-libcap",
-      "name": "libcap",
-      "versionInfo": "2.48",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libcap-2.48-9.el9_2.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libcap@2.48-9.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libcap-0:2.48-9.el9_2.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-libsepol",
-      "name": "libsepol",
-      "versionInfo": "3.6",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libsepol-3.6-1.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6-1.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libsepol-0:3.6-1.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-pcre2",
-      "name": "pcre2",
-      "versionInfo": "10.40",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "pcre2-10.40-5.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40-5.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-libselinux",
-      "name": "libselinux",
-      "versionInfo": "3.6",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libselinux-3.6-1.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6-1.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libselinux-0:3.6-1.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-s390x-coreutils-single",
-      "name": "coreutils-single",
-      "versionInfo": "8.32",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "coreutils-single-8.32-35.el9.s390x.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32-35.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/coreutils-0:8.32-35.el9.spdx.json.bz2"
         }
       ]
     },
@@ -498,139 +52,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=ppc64le&repository_url=registry.access.redhat.com//ubi9-micro&tag=9.4-6.1716471860"
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=ppc64le&repository_url=registry.access.redhat.com/ubi9-micro&tag=9.4-6.1716471860"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "sha256:26f08722139c4da653b870272a192fac700960a3315baa1f79f83a4712a436d4"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-ppc64le-libgcc",
-      "name": "libgcc",
-      "versionInfo": "11.4.1",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libgcc-11.4.1-3.el9.ppc64le.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/gcc-0:11.4.1-3.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-noarch-pcre2-syntax",
-      "name": "pcre2-syntax",
-      "versionInfo": "10.40",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40-5.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-noarch-tzdata",
-      "name": "tzdata",
-      "versionInfo": "2024a",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a-1.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/tzdata-0:2024a-1.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-ppc64le-redhat-release",
-      "name": "redhat-release",
-      "versionInfo": "9.4",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "redhat-release-9.4-0.4.el9.ppc64le.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4-0.4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/redhat-release-0:9.4-0.4.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-noarch-setup",
-      "name": "setup",
-      "versionInfo": "2.13.7",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "setup-2.13.7-10.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7-10.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/setup-0:2.13.7-10.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-ppc64le-filesystem",
-      "name": "filesystem",
-      "versionInfo": "3.16",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "filesystem-3.16-2.el9.ppc64le.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/filesystem-0:3.16-2.el9.spdx.json.bz2"
         }
       ]
     },
@@ -656,48 +84,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-noarch-ncurses-base",
-      "name": "ncurses-base",
-      "versionInfo": "6.2",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2-10.20210508.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-ppc64le-ncurses-libs",
-      "name": "ncurses-libs",
-      "versionInfo": "6.2",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "ncurses-libs-6.2-10.20210508.el9.ppc64le.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2-10.20210508.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-ppc64le-bash",
       "name": "bash",
       "versionInfo": "5.1.8",
@@ -715,6 +101,69 @@
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
           "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/bash-0:5.1.8-9.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-coreutils-single",
+      "name": "coreutils-single",
+      "versionInfo": "8.32",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "coreutils-single-8.32-35.el9.ppc64le.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32-35.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/coreutils-0:8.32-35.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-filesystem",
+      "name": "filesystem",
+      "versionInfo": "3.16",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "filesystem-3.16-2.el9.ppc64le.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/filesystem-0:3.16-2.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-glibc",
+      "name": "glibc",
+      "versionInfo": "2.34",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "glibc-2.34-100.el9_4.2.ppc64le.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/glibc@2.34-100.el9_4.2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
         }
       ]
     },
@@ -761,23 +210,23 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-ppc64le-glibc",
-      "name": "glibc",
-      "versionInfo": "2.34",
+      "SPDXID": "SPDXRef-ppc64le-libacl",
+      "name": "libacl",
+      "versionInfo": "2.3.1",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "glibc-2.34-100.el9_4.2.ppc64le.rpm",
+      "packageFileName": "libacl-2.3.1-4.el9.ppc64le.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc@2.34-100.el9_4.2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1-4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/acl-0:2.3.1-4.el9.spdx.json.bz2"
         }
       ]
     },
@@ -803,27 +252,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-ppc64le-libacl",
-      "name": "libacl",
-      "versionInfo": "2.3.1",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libacl-2.3.1-4.el9.ppc64le.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1-4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/acl-0:2.3.1-4.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-ppc64le-libcap",
       "name": "libcap",
       "versionInfo": "2.48",
@@ -845,44 +273,23 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-ppc64le-libsepol",
-      "name": "libsepol",
-      "versionInfo": "3.6",
+      "SPDXID": "SPDXRef-ppc64le-libgcc",
+      "name": "libgcc",
+      "versionInfo": "11.4.1",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "libsepol-3.6-1.el9.ppc64le.rpm",
+      "packageFileName": "libgcc-11.4.1-3.el9.ppc64le.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libsepol-0:3.6-1.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-ppc64le-pcre2",
-      "name": "pcre2",
-      "versionInfo": "10.40",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "pcre2-10.40-5.el9.ppc64le.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40-5.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/gcc-0:11.4.1-3.el9.spdx.json.bz2"
         }
       ]
     },
@@ -908,70 +315,86 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-ppc64le-coreutils-single",
-      "name": "coreutils-single",
-      "versionInfo": "8.32",
+      "SPDXID": "SPDXRef-ppc64le-libsepol",
+      "name": "libsepol",
+      "versionInfo": "3.6",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "coreutils-single-8.32-35.el9.ppc64le.rpm",
+      "packageFileName": "libsepol-3.6-1.el9.ppc64le.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32-35.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/coreutils-0:8.32-35.el9.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libsepol-0:3.6-1.el9.spdx.json.bz2"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-ubi9-micro-container-arm64",
-      "name": "ubi9-micro-container_arm64",
-      "versionInfo": "9.4-6.1716471860",
+      "SPDXID": "SPDXRef-noarch-ncurses-base",
+      "name": "ncurses-base",
+      "versionInfo": "6.2",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
+      "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=arm64&repository_url=registry.access.redhat.com/ubi9/ubi-micro&tag=9.4-6.1716471860"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=arm64&repository_url=registry.access.redhat.com//ubi9-micro&tag=9.4-6.1716471860"
-        }
-      ],
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "sha256:c72c705fe4e9de2e065a817be2fbf1b6406010610532243727fdc3042227c71b"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-aarch64-libgcc",
-      "name": "libgcc",
-      "versionInfo": "11.4.1",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libgcc-11.4.1-3.el9.aarch64.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1-3.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2-10.20210508.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/gcc-0:11.4.1-3.el9.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-ncurses-libs",
+      "name": "ncurses-libs",
+      "versionInfo": "6.2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "ncurses-libs-6.2-10.20210508.el9.ppc64le.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2-10.20210508.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-pcre2",
+      "name": "pcre2",
+      "versionInfo": "10.40",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "pcre2-10.40-5.el9.ppc64le.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40-5.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
         }
       ]
     },
@@ -987,7 +410,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40-5.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40-5.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -997,39 +420,18 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-noarch-tzdata",
-      "name": "tzdata",
-      "versionInfo": "2024a",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a-1.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/tzdata-0:2024a-1.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-aarch64-redhat-release",
+      "SPDXID": "SPDXRef-ppc64le-redhat-release",
       "name": "redhat-release",
       "versionInfo": "9.4",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "redhat-release-9.4-0.4.el9.aarch64.rpm",
+      "packageFileName": "redhat-release-9.4-0.4.el9.ppc64le.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4-0.4.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4-0.4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1050,7 +452,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7-10.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7-10.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1060,23 +462,495 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-aarch64-filesystem",
-      "name": "filesystem",
-      "versionInfo": "3.16",
+      "SPDXID": "SPDXRef-noarch-tzdata",
+      "name": "tzdata",
+      "versionInfo": "2024a",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "filesystem-3.16-2.el9.aarch64.rpm",
+      "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16-2.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a-1.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/tzdata-0:2024a-1.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ubi9-micro-container-s390x",
+      "name": "ubi9-micro-container_s390x",
+      "versionInfo": "9.4-6.1716471860",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=s390x&repository_url=registry.access.redhat.com/ubi9/ubi-micro&tag=9.4-6.1716471860"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=s390x&repository_url=registry.access.redhat.com/ubi9-micro&tag=9.4-6.1716471860"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "sha256:2c9e70f4174747c6b53d253e879177c52731cc4bdc5fe9c6a2555412d849a952"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-basesystem",
+      "name": "basesystem",
+      "versionInfo": "11",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "basesystem-11-13.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/basesystem@11-13.el9?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/basesystem-0:11-13.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-bash",
+      "name": "bash",
+      "versionInfo": "5.1.8",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "bash-5.1.8-9.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8-9.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/bash-0:5.1.8-9.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-coreutils-single",
+      "name": "coreutils-single",
+      "versionInfo": "8.32",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "coreutils-single-8.32-35.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32-35.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/coreutils-0:8.32-35.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-filesystem",
+      "name": "filesystem",
+      "versionInfo": "3.16",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "filesystem-3.16-2.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16-2.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
           "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/filesystem-0:3.16-2.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-glibc",
+      "name": "glibc",
+      "versionInfo": "2.34",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "glibc-2.34-100.el9_4.2.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/glibc@2.34-100.el9_4.2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-glibc-common",
+      "name": "glibc-common",
+      "versionInfo": "2.34",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "glibc-common-2.34-100.el9_4.2.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34-100.el9_4.2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-glibc-minimal-langpack",
+      "name": "glibc-minimal-langpack",
+      "versionInfo": "2.34",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "glibc-minimal-langpack-2.34-100.el9_4.2.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34-100.el9_4.2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-libacl",
+      "name": "libacl",
+      "versionInfo": "2.3.1",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libacl-2.3.1-4.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1-4.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/acl-0:2.3.1-4.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-libattr",
+      "name": "libattr",
+      "versionInfo": "2.5.1",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libattr-2.5.1-3.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1-3.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/attr-0:2.5.1-3.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-libcap",
+      "name": "libcap",
+      "versionInfo": "2.48",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libcap-2.48-9.el9_2.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libcap@2.48-9.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libcap-0:2.48-9.el9_2.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-libgcc",
+      "name": "libgcc",
+      "versionInfo": "11.4.1",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libgcc-11.4.1-3.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1-3.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/gcc-0:11.4.1-3.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-libselinux",
+      "name": "libselinux",
+      "versionInfo": "3.6",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libselinux-3.6-1.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6-1.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libselinux-0:3.6-1.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-libsepol",
+      "name": "libsepol",
+      "versionInfo": "3.6",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libsepol-3.6-1.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6-1.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libsepol-0:3.6-1.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-ncurses-base",
+      "name": "ncurses-base",
+      "versionInfo": "6.2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2-10.20210508.el9?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-ncurses-libs",
+      "name": "ncurses-libs",
+      "versionInfo": "6.2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "ncurses-libs-6.2-10.20210508.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2-10.20210508.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-pcre2",
+      "name": "pcre2",
+      "versionInfo": "10.40",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "pcre2-10.40-5.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40-5.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-pcre2-syntax",
+      "name": "pcre2-syntax",
+      "versionInfo": "10.40",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40-5.el9?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-redhat-release",
+      "name": "redhat-release",
+      "versionInfo": "9.4",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "redhat-release-9.4-0.4.el9.s390x.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4-0.4.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/redhat-release-0:9.4-0.4.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-setup",
+      "name": "setup",
+      "versionInfo": "2.13.7",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "setup-2.13.7-10.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7-10.el9?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/setup-0:2.13.7-10.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-tzdata",
+      "name": "tzdata",
+      "versionInfo": "2024a",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a-1.el9?arch=noarch&repository_id=rhel-9-for-s390x-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/tzdata-0:2024a-1.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ubi9-micro-container-arm64",
+      "name": "ubi9-micro-container_arm64",
+      "versionInfo": "9.4-6.1716471860",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=arm64&repository_url=registry.access.redhat.com/ubi9/ubi-micro&tag=9.4-6.1716471860"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=arm64&repository_url=registry.access.redhat.com/ubi9-micro&tag=9.4-6.1716471860"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "sha256:c72c705fe4e9de2e065a817be2fbf1b6406010610532243727fdc3042227c71b"
         }
       ]
     },
@@ -1102,48 +976,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-noarch-ncurses-base",
-      "name": "ncurses-base",
-      "versionInfo": "6.2",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2-10.20210508.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-aarch64-ncurses-libs",
-      "name": "ncurses-libs",
-      "versionInfo": "6.2",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "ncurses-libs-6.2-10.20210508.el9.aarch64.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2-10.20210508.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-aarch64-bash",
       "name": "bash",
       "versionInfo": "5.1.8",
@@ -1161,6 +993,69 @@
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
           "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/bash-0:5.1.8-9.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-coreutils-single",
+      "name": "coreutils-single",
+      "versionInfo": "8.32",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "coreutils-single-8.32-35.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32-35.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/coreutils-0:8.32-35.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-filesystem",
+      "name": "filesystem",
+      "versionInfo": "3.16",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "filesystem-3.16-2.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16-2.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/filesystem-0:3.16-2.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-glibc",
+      "name": "glibc",
+      "versionInfo": "2.34",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "glibc-2.34-100.el9_4.2.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/glibc@2.34-100.el9_4.2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
         }
       ]
     },
@@ -1207,23 +1102,23 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-aarch64-glibc",
-      "name": "glibc",
-      "versionInfo": "2.34",
+      "SPDXID": "SPDXRef-aarch64-libacl",
+      "name": "libacl",
+      "versionInfo": "2.3.1",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "glibc-2.34-100.el9_4.2.aarch64.rpm",
+      "packageFileName": "libacl-2.3.1-4.el9.aarch64.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc@2.34-100.el9_4.2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1-4.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/acl-0:2.3.1-4.el9.spdx.json.bz2"
         }
       ]
     },
@@ -1249,27 +1144,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-aarch64-libacl",
-      "name": "libacl",
-      "versionInfo": "2.3.1",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libacl-2.3.1-4.el9.aarch64.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1-4.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/acl-0:2.3.1-4.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-aarch64-libcap",
       "name": "libcap",
       "versionInfo": "2.48",
@@ -1291,44 +1165,23 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-aarch64-libsepol",
-      "name": "libsepol",
-      "versionInfo": "3.6",
+      "SPDXID": "SPDXRef-aarch64-libgcc",
+      "name": "libgcc",
+      "versionInfo": "11.4.1",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "libsepol-3.6-1.el9.aarch64.rpm",
+      "packageFileName": "libgcc-11.4.1-3.el9.aarch64.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6-1.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1-3.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libsepol-0:3.6-1.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-aarch64-pcre2",
-      "name": "pcre2",
-      "versionInfo": "10.40",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "pcre2-10.40-5.el9.aarch64.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40-5.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/gcc-0:11.4.1-3.el9.spdx.json.bz2"
         }
       ]
     },
@@ -1354,86 +1207,123 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-aarch64-coreutils-single",
-      "name": "coreutils-single",
-      "versionInfo": "8.32",
+      "SPDXID": "SPDXRef-aarch64-libsepol",
+      "name": "libsepol",
+      "versionInfo": "3.6",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "coreutils-single-8.32-35.el9.aarch64.rpm",
+      "packageFileName": "libsepol-3.6-1.el9.aarch64.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32-35.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6-1.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/coreutils-0:8.32-35.el9.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libsepol-0:3.6-1.el9.spdx.json.bz2"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-ubi9-micro-container-amd64",
-      "name": "ubi9-micro-container_amd64",
-      "versionInfo": "9.4-6.1716471860",
+      "SPDXID": "SPDXRef-noarch-ncurses-base",
+      "name": "ncurses-base",
+      "versionInfo": "6.2",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
+      "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=amd64&repository_url=registry.access.redhat.com/ubi9/ubi-micro&tag=9.4-6.1716471860"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=amd64&repository_url=registry.access.redhat.com//ubi9-micro&tag=9.4-6.1716471860"
-        }
-      ],
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "sha256:213fd2a0116a76eaa274fee20c86eef4dfba9f311784e8fb7d7f5fc38b32f3ef"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-x86_64-libgcc",
-      "name": "libgcc",
-      "versionInfo": "11.4.1",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libgcc-11.4.1-3.el9.x86_64.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1-3.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2-10.20210508.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/gcc-0:11.4.1-3.el9.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-redhat-release",
+      "SPDXID": "SPDXRef-aarch64-ncurses-libs",
+      "name": "ncurses-libs",
+      "versionInfo": "6.2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "ncurses-libs-6.2-10.20210508.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2-10.20210508.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-pcre2",
+      "name": "pcre2",
+      "versionInfo": "10.40",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "pcre2-10.40-5.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40-5.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-pcre2-syntax",
+      "name": "pcre2-syntax",
+      "versionInfo": "10.40",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40-5.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-redhat-release",
       "name": "redhat-release",
       "versionInfo": "9.4",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "redhat-release-9.4-0.4.el9.x86_64.rpm",
+      "packageFileName": "redhat-release-9.4-0.4.el9.aarch64.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4-0.4.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4-0.4.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1454,7 +1344,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7-10.el9?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7-10.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
@@ -1464,23 +1354,49 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-filesystem",
-      "name": "filesystem",
-      "versionInfo": "3.16",
+      "SPDXID": "SPDXRef-noarch-tzdata",
+      "name": "tzdata",
+      "versionInfo": "2024a",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "filesystem-3.16-2.el9.x86_64.rpm",
+      "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16-2.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a-1.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/filesystem-0:3.16-2.el9.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/tzdata-0:2024a-1.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ubi9-micro-container-amd64",
+      "name": "ubi9-micro-container_amd64",
+      "versionInfo": "9.4-6.1716471860",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=amd64&repository_url=registry.access.redhat.com/ubi9/ubi-micro&tag=9.4-6.1716471860"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=amd64&repository_url=registry.access.redhat.com/ubi9-micro&tag=9.4-6.1716471860"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "sha256:213fd2a0116a76eaa274fee20c86eef4dfba9f311784e8fb7d7f5fc38b32f3ef"
         }
       ]
     },
@@ -1506,90 +1422,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-noarch-pcre2-syntax",
-      "name": "pcre2-syntax",
-      "versionInfo": "10.40",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40-5.el9?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-noarch-tzdata",
-      "name": "tzdata",
-      "versionInfo": "2024a",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a-1.el9?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/tzdata-0:2024a-1.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-noarch-ncurses-base",
-      "name": "ncurses-base",
-      "versionInfo": "6.2",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2-10.20210508.el9?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-x86_64-ncurses-libs",
-      "name": "ncurses-libs",
-      "versionInfo": "6.2",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "ncurses-libs-6.2-10.20210508.el9.x86_64.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2-10.20210508.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-x86_64-bash",
       "name": "bash",
       "versionInfo": "5.1.8",
@@ -1607,6 +1439,69 @@
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
           "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/bash-0:5.1.8-9.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-coreutils-single",
+      "name": "coreutils-single",
+      "versionInfo": "8.32",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "coreutils-single-8.32-35.el9.x86_64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32-35.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/coreutils-0:8.32-35.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-filesystem",
+      "name": "filesystem",
+      "versionInfo": "3.16",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "filesystem-3.16-2.el9.x86_64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16-2.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/filesystem-0:3.16-2.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-glibc",
+      "name": "glibc",
+      "versionInfo": "2.34",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "glibc-2.34-100.el9_4.2.x86_64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/glibc@2.34-100.el9_4.2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
         }
       ]
     },
@@ -1653,23 +1548,23 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-glibc",
-      "name": "glibc",
-      "versionInfo": "2.34",
+      "SPDXID": "SPDXRef-x86_64-libacl",
+      "name": "libacl",
+      "versionInfo": "2.3.1",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "glibc-2.34-100.el9_4.2.x86_64.rpm",
+      "packageFileName": "libacl-2.3.1-4.el9.x86_64.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/glibc@2.34-100.el9_4.2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1-4.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/glibc-0:2.34-100.el9_4.2.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/acl-0:2.3.1-4.el9.spdx.json.bz2"
         }
       ]
     },
@@ -1695,27 +1590,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libacl",
-      "name": "libacl",
-      "versionInfo": "2.3.1",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "libacl-2.3.1-4.el9.x86_64.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1-4.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/acl-0:2.3.1-4.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-x86_64-libcap",
       "name": "libcap",
       "versionInfo": "2.48",
@@ -1737,44 +1611,23 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libsepol",
-      "name": "libsepol",
-      "versionInfo": "3.6",
+      "SPDXID": "SPDXRef-x86_64-libgcc",
+      "name": "libgcc",
+      "versionInfo": "11.4.1",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "libsepol-3.6-1.el9.x86_64.rpm",
+      "packageFileName": "libgcc-11.4.1-3.el9.x86_64.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6-1.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1-3.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libsepol-0:3.6-1.el9.spdx.json.bz2"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-x86_64-pcre2",
-      "name": "pcre2",
-      "versionInfo": "10.40",
-      "supplier": "Organization: Red Hat",
-      "downloadLocation": "NOASSERTION",
-      "packageFileName": "pcre2-10.40-5.el9.x86_64.rpm",
-      "licenseDeclared": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40-5.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
-        },
-        {
-          "referenceCategory": "OTHER",
-          "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/gcc-0:11.4.1-3.el9.spdx.json.bz2"
         }
       ]
     },
@@ -1800,23 +1653,170 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-coreutils-single",
-      "name": "coreutils-single",
-      "versionInfo": "8.32",
+      "SPDXID": "SPDXRef-x86_64-libsepol",
+      "name": "libsepol",
+      "versionInfo": "3.6",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "packageFileName": "coreutils-single-8.32-35.el9.x86_64.rpm",
+      "packageFileName": "libsepol-3.6-1.el9.x86_64.rpm",
       "licenseDeclared": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32-35.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6-1.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
         },
         {
           "referenceCategory": "OTHER",
           "referenceType": "sbom_ref",
-          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/coreutils-0:8.32-35.el9.spdx.json.bz2"
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/libsepol-0:3.6-1.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-ncurses-base",
+      "name": "ncurses-base",
+      "versionInfo": "6.2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2-10.20210508.el9?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-ncurses-libs",
+      "name": "ncurses-libs",
+      "versionInfo": "6.2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "ncurses-libs-6.2-10.20210508.el9.x86_64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2-10.20210508.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/ncurses-0:6.2-10.20210508.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-pcre2",
+      "name": "pcre2",
+      "versionInfo": "10.40",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "pcre2-10.40-5.el9.x86_64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40-5.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-pcre2-syntax",
+      "name": "pcre2-syntax",
+      "versionInfo": "10.40",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40-5.el9?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/pcre2-0:10.40-5.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-redhat-release",
+      "name": "redhat-release",
+      "versionInfo": "9.4",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "redhat-release-9.4-0.4.el9.x86_64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4-0.4.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/redhat-release-0:9.4-0.4.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-setup",
+      "name": "setup",
+      "versionInfo": "2.13.7",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "setup-2.13.7-10.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7-10.el9?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/setup-0:2.13.7-10.el9.spdx.json.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-tzdata",
+      "name": "tzdata",
+      "versionInfo": "2024a",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a-1.el9?arch=noarch&repository_id=rhel-9-for-x86_64-baseos-rpms"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "sbom_ref",
+          "referenceLocator": "https://access.redhat.com/security/data/sbom/v1/rpm/tzdata-0:2024a-1.el9.spdx.json.bz2"
         }
       ]
     }
@@ -1830,137 +1830,22 @@
     {
       "spdxElementId": "SPDXRef-image-index",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-s390x"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-libgcc"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-tzdata"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-redhat-release"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-setup"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-filesystem"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-basesystem"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-pcre2-syntax"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-ncurses-base"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-ncurses-libs"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-bash"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-glibc-common"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-glibc-minimal-langpack"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-glibc"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-libattr"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-libacl"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-libcap"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-libsepol"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-pcre2"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-libselinux"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-s390x-coreutils-single"
-    },
-    {
-      "spdxElementId": "SPDXRef-image-index",
-      "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-ppc64le"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-ppc64le-libgcc"
+      "relatedSpdxElement": "SPDXRef-noarch-basesystem"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-pcre2-syntax"
+      "relatedSpdxElement": "SPDXRef-ppc64le-bash"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-tzdata"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-ppc64le-redhat-release"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-setup"
+      "relatedSpdxElement": "SPDXRef-ppc64le-coreutils-single"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
@@ -1970,22 +1855,7 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-basesystem"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-ncurses-base"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-ppc64le-ncurses-libs"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-ppc64le-bash"
+      "relatedSpdxElement": "SPDXRef-ppc64le-glibc"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
@@ -2000,7 +1870,7 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-ppc64le-glibc"
+      "relatedSpdxElement": "SPDXRef-ppc64le-libacl"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
@@ -2010,22 +1880,12 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-ppc64le-libacl"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
-      "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-ppc64le-libcap"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-ppc64le-libsepol"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-ppc64le-pcre2"
+      "relatedSpdxElement": "SPDXRef-ppc64le-libgcc"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
@@ -2035,7 +1895,147 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-ppc64le-coreutils-single"
+      "relatedSpdxElement": "SPDXRef-ppc64le-libsepol"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-ncurses-base"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-ppc64le-ncurses-libs"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-ppc64le-pcre2"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-pcre2-syntax"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-ppc64le-redhat-release"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-setup"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-tzdata"
+    },
+    {
+      "spdxElementId": "SPDXRef-image-index",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-s390x"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-basesystem"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-bash"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-coreutils-single"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-filesystem"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-glibc"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-glibc-common"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-glibc-minimal-langpack"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-libacl"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-libattr"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-libcap"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-libgcc"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-libselinux"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-libsepol"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-ncurses-base"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-ncurses-libs"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-pcre2"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-pcre2-syntax"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-s390x-redhat-release"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-setup"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-tzdata"
     },
     {
       "spdxElementId": "SPDXRef-image-index",
@@ -2045,27 +2045,17 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-libgcc"
+      "relatedSpdxElement": "SPDXRef-noarch-basesystem"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-pcre2-syntax"
+      "relatedSpdxElement": "SPDXRef-aarch64-bash"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-tzdata"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-redhat-release"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-setup"
+      "relatedSpdxElement": "SPDXRef-aarch64-coreutils-single"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
@@ -2075,22 +2065,7 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-basesystem"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-ncurses-base"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-ncurses-libs"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-bash"
+      "relatedSpdxElement": "SPDXRef-aarch64-glibc"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
@@ -2105,7 +2080,7 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-glibc"
+      "relatedSpdxElement": "SPDXRef-aarch64-libacl"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
@@ -2115,22 +2090,12 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-libacl"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
-      "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-aarch64-libcap"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-libsepol"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-pcre2"
+      "relatedSpdxElement": "SPDXRef-aarch64-libgcc"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
@@ -2140,7 +2105,42 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-coreutils-single"
+      "relatedSpdxElement": "SPDXRef-aarch64-libsepol"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-ncurses-base"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-ncurses-libs"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-pcre2"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-pcre2-syntax"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-redhat-release"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-setup"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-tzdata"
     },
     {
       "spdxElementId": "SPDXRef-image-index",
@@ -2150,17 +2150,17 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libgcc"
+      "relatedSpdxElement": "SPDXRef-noarch-basesystem"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-redhat-release"
+      "relatedSpdxElement": "SPDXRef-x86_64-bash"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-setup"
+      "relatedSpdxElement": "SPDXRef-x86_64-coreutils-single"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
@@ -2170,32 +2170,7 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-basesystem"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-pcre2-syntax"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-tzdata"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-noarch-ncurses-base"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-ncurses-libs"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-bash"
+      "relatedSpdxElement": "SPDXRef-x86_64-glibc"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
@@ -2210,7 +2185,7 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-glibc"
+      "relatedSpdxElement": "SPDXRef-x86_64-libacl"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
@@ -2220,22 +2195,12 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libacl"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
-      "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-x86_64-libcap"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libsepol"
-    },
-    {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-pcre2"
+      "relatedSpdxElement": "SPDXRef-x86_64-libgcc"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
@@ -2245,7 +2210,42 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-coreutils-single"
+      "relatedSpdxElement": "SPDXRef-x86_64-libsepol"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-ncurses-base"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-x86_64-ncurses-libs"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-x86_64-pcre2"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-pcre2-syntax"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-x86_64-redhat-release"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-setup"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-tzdata"
     }
   ]
 }
