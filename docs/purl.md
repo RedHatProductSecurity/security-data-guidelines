@@ -145,7 +145,8 @@ pkg:maven/io.vertx/vertx-web@4.4.8.redhat-00001?type=jar&repository_url=https://
 ```
 
 The version string will contain a `redhat-NNNNN` suffix to indicate that the component was built from source by
-Red Hat. If the type qualifier is not set, it is assumed to be `jar`. The value in the `repository_url` defaults to Red
+Red Hat. If the type qualifier is not set, it is assumed to be `jar` (as described in the
+[POM documentation](https://maven.apache.org/pom.html)). The value in the `repository_url` should be Red
 Hat's Maven repository at [https://maven.repository.redhat.com/ga/](https://maven.repository.redhat.com/ga/).
 
 ## Additional Notes
