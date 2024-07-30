@@ -1,4 +1,5 @@
 import json
+import itertools
 import sys
 
 import requests
@@ -31,16 +32,54 @@ def get_rpms(image_id):
     return sorted(response.json()["rpms"], key=lambda rpm: rpm["nvra"])
 
 
-def generate_sbom_for_image(image_nvr):
+def create_sbom(doc_id, image_id, root_package, packages, rel_type):
+    relationships = [
+        {
+            "spdxElementId": f"SPDXRef-DOCUMENT-{doc_id}",
+            "relationshipType": "DESCRIBES",
+            "relatedSpdxElement": root_package["SPDXID"],
+        }
+    ]
+    for pkg in packages:
+        relationships.append(
+            {
+                "spdxElementId": root_package["SPDXID"],
+                "relationshipType": rel_type,
+                "relatedSpdxElement": pkg["SPDXID"],
+            }
+        )
+
+    spdx = {
+        "spdxVersion": "SPDX-2.3",
+        "dataLicense": "CC0-1.0",
+        "SPDXID": f"SPDXRef-DOCUMENT-{doc_id}",
+        "creationInfo": {
+            "created": "2006-08-14T02:34:56-06:00",
+            "creators": [
+                "Tool: example SPDX document only",
+            ],
+        },
+        "name": image_id,
+        "packages": [root_package] + packages,
+        "relationships": relationships,
+    }
+
+    with open(f"{image_id}.spdx.json", "w") as fp:
+        json.dump(spdx, fp, indent=2)
+
+
+def generate_sboms_for_image(image_nvr):
     # Split to e.g. "ubi9-micro-container" and "9.4-6.1716471860"
     image_nvr_name, *image_nvr_version = image_nvr.rsplit("-", maxsplit=2)
     image_nvr_version = "-".join(image_nvr_version)
 
-    packages = []
-    relationships = []
-    image_index_pkg_created = False
+    image_index_pkg = None
+    per_arch_images = []
+    doc_id_generator = itertools.count(1)  # Reserve 0 for the image list SBOM.
 
     for image in get_image_data(image_nvr):
+        packages = []
+
         catalog_image_id = image["_id"]
         image_digest = image["image_id"]
         content_sets = image["content_sets"]
@@ -73,24 +112,21 @@ def generate_sbom_for_image(image_nvr):
             sys.exit(1)
 
         # Get license information from labels if it is set
-        # TODO: is this a license statement in SPDX licence format? Does it apply to the image
-        #  itself rather than its content (which is individually-licensed components?)
         image_license = "NOASSERTION"
         for label in image["parsed_data"]["labels"]:
             if label["name"].lower() == "license":
                 image_license = label["value"]
 
-        # TODO: split image index into its own SBOM and produce per-arch image SBOM
-
         # Create an index image object, but since all arch-specific images are descendents of one
-        # and the same index image, we only have to create it once.
-        if not image_index_pkg_created:
+        # and the same index image, we only have to create it once. Its SBOM is created at the
+        # end after we collect information about all arch-specific images.
+        if not image_index_pkg:
             image_index_pkg = {
                 "SPDXID": "SPDXRef-image-index",
                 "name": image_nvr_name,
                 "versionInfo": image_nvr_version,
                 "supplier": "Organization: Red Hat",
-                "downloadLocation": "NOASSERTION",  # TODO: should this be set to the registry+repo?
+                "downloadLocation": "NOASSERTION",
                 "licenseDeclared": image_license,
                 "externalRefs": [],
                 "checksums": [
@@ -112,23 +148,13 @@ def generate_sbom_for_image(image_nvr):
                 }
                 image_index_pkg["externalRefs"].append(ref)
 
-            packages.append(image_index_pkg)
-            relationships.append(
-                {
-                    "spdxElementId": "SPDXRef-DOCUMENT",
-                    "relationshipType": "DESCRIBES",
-                    "relatedSpdxElement": "SPDXRef-image-index",
-                }
-            )
-            image_index_pkg_created = True
-
         spdx_image_id = f"SPDXRef-{image_nvr_name}-{image['architecture']}"
         image_pkg = {
             "SPDXID": spdx_image_id,
             "name": f"{image_nvr_name}_{image['architecture']}",
             "versionInfo": image_nvr_version,
             "supplier": "Organization: Red Hat",
-            "downloadLocation": "NOASSERTION",  # TODO: should this be set to the registry+repo?
+            "downloadLocation": "NOASSERTION",
             "licenseDeclared": image_license,
             "externalRefs": [],
             "checksums": [
@@ -149,15 +175,7 @@ def generate_sbom_for_image(image_nvr):
                 "referenceLocator": purl,
             }
             image_pkg["externalRefs"].append(ref)
-
-        packages.append(image_pkg)
-        relationships.append(
-            {
-                "spdxElementId": "SPDXRef-image-index",
-                "relationshipType": "CONTAINS",
-                "relatedSpdxElement": spdx_image_id,
-            }
-        )
+        per_arch_images.append(image_pkg)
 
         for rpm in get_rpms(catalog_image_id):
             rpm_purl = (
@@ -167,16 +185,6 @@ def generate_sbom_for_image(image_nvr):
                 # lockfiles or other means eventually).
                 f"arch={rpm['architecture']}&repository_id={content_sets[0]}"
             )
-
-            srpm_nevr = rpm["srpm_nevra"].rstrip(".src")
-            n, ev, r = srpm_nevr.rsplit("-", maxsplit=2)
-            srpm_purl = (
-                f"pkg:rpm/redhat/{n}@{ev}-{r}?arch=src"
-                # Same note applies as above; also, we're assuming the SRPM for a given binary
-                # RPM is hosted in the same repo.
-                f"&repository_id={content_sets[0]}"
-            )
-
             spdx_rpm_id = f"SPDXRef-{rpm['architecture']}-{rpm['name']}"
             rpm_pkg = {
                 "SPDXID": spdx_rpm_id,
@@ -192,41 +200,27 @@ def generate_sbom_for_image(image_nvr):
                         "referenceType": "purl",
                         "referenceLocator": rpm_purl,
                     },
-                    {
-                        "referenceCategory": "PACKAGE-MANAGER",
-                        "referenceType": "purl",
-                        "referenceLocator": srpm_purl,
-                    },
                 ],
                 # We don't have data on a checksum for binary RPMs included in images; should we?
             }
             packages.append(rpm_pkg)
-            relationships.append(
-                {
-                    "spdxElementId": spdx_image_id,
-                    "relationshipType": "CONTAINS",
-                    "relatedSpdxElement": spdx_rpm_id,
-                }
-            )
 
-    spdx = {
-        "spdxVersion": "SPDX-2.3",
-        "dataLicense": "CC0-1.0",
-        "SPDXID": "SPDXRef-DOCUMENT",
-        "creationInfo": {
-            "created": "2006-08-14T02:34:56-06:00",
-            "creators": [
-                "Tool: example SPDX document only",
-            ],
-        },
-        "name": image_nvr,
-        "packages": packages,
-        "relationships": relationships,
-    }
+        create_sbom(
+            doc_id=next(doc_id_generator),
+            image_id=f"{image_nvr}_" f"{image['architecture']}",
+            root_package=image_pkg,
+            packages=packages,
+            rel_type="CONTAINS",
+        )
 
-    with open(f"{image_nvr}.spdx.json", "w") as fp:
-        json.dump(spdx, fp, indent=2)
+    create_sbom(
+        doc_id=0,
+        image_id=image_nvr,
+        root_package=image_index_pkg,
+        packages=per_arch_images,
+        rel_type="DESCENDANT_OF",
+    )
 
 
 for rpm_image in RPM_CONTAINER_IMAGES:
-    generate_sbom_for_image(rpm_image)
+    generate_sboms_for_image(rpm_image)
