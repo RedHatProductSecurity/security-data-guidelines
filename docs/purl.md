@@ -32,11 +32,8 @@ to refer to the same concept.
 The [`rpm` purl type](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#rpm) identifies,
 unsurprisingly, an RPM package. When it comes to the naming conventions of a single RPM file, Red Hat uses the NEVRA
 convention that follows the `<name>-<epoch>:<version>-<release>.<architecture>.rpm` file name pattern, for example
-`emacs-27.2-9.el9.x86_64.rpm`. The version part may optionally include an epoch number that is added before the
-version and followed by a colon, for example `1:27.2`; if not present, it is assumed to be `0`. If the RPM contains
-source files, src is used in place of the architecture specifier. These types of RPMs are commonly referred to as
-Source RPMs (SRPMs) or Source Packages. For more information about RPM packaging conventions, see the
-[RPM Packaging Guide](https://rpm-packaging-guide.github.io/).
+`emacs-27.2-9.el9.x86_64.rpm`. For more information about RPM packaging conventions, see the
+[RPM Packaging Guide](https://rpm-packaging-guide.github.io/)
 
 Representing this information in a purl presents a few challenges because the purpose of the purl specification is
 to not only identify a particular package (the file name already does that) but also the location from where the
@@ -47,6 +44,19 @@ pkg:rpm/redhat/emacs@27.2-9.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-apps
 ```
 
 The namespace value of `redhat` signifies this as an RPM package produced and distributed by Red Hat.
+
+If a purl identifies a Source RPM (SRPM, a package containing source code files that are used to build one or more
+RPMs containing binary artifacts), the `arch` qualifier must use the special value `src`. In the NEVRA file name
+pattern, SRPM packages use a `.src.rpm` suffix. Packages that are not architecture
+specific must use the special `noarch` value in the arch qualifier.
+
+An RPM package may also include an epoch number; if not present, it is assumed to be `0`. In a purl, epoch is
+not part of the version field, but instead is specified using the `epoch` qualifier (e.g. `epoch=1`).
+If the package version includes a non-zero epoch value, it must be specified using its own epoch qualifier:
+
+```
+pkg:rpm/redhat/emacs@27.2-9.el9?epoch=1&arch=src&repository_id=rhel-9-for-x86_64-appstream-rpms
+```
 
 The `rpm` purl type suggests the use of the `repository_url` qualifier to point to the base URL of the RPM
 repository from where the RPM can be downloaded. We are purposefully not using the `repository_url` qualifier in Red
@@ -68,16 +78,6 @@ distribution that the package is included in. The `distro` qualifier is not reco
 because its values are not standardized and may, depending on how the value is interpreted, inaccurately identify a
 package as being specific to a particular version of a distribution even though it may be available in multiple
 distribution versions.
-
-If a purl identifies a source package, the `arch` qualifier must use the special value `src`, which is also used in the
-suffix instead of the architecture when identifying RPMs with the NEVRA format. Packages that are not architecture
-specific must use the special `noarch` value in the arch qualifier.
-
-If the package version includes a non-zero epoch value, it must be specified using its own epoch qualifier:
-
-```
-pkg:rpm/redhat/emacs@27.2-9.el9?epoch=1&arch=src&repository_id=rhel-9-for-x86_64-appstream-rpms
-```
 
 ## Identifying RPM modules
 
