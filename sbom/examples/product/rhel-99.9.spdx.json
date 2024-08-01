@@ -1,0 +1,75 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT-4d3d9002-fd75-4329-92f2-4271e186e32c",
+  "creationInfo": {
+    "created": "2006-08-14T02:34:56-06:00",
+    "creators": [
+      "Tool: example SPDX document only"
+    ]
+  },
+  "name": "RHEL 9.2 EUS",
+  "documentNamespace": "https://www.redhat.com/rhel-9.2-eus-6a659023-7a52-4792-a66c-a7f19ec14ba8.json",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-RHEL-9.2-EUS",
+      "name": "Red Hat Enterprise Linux",
+      "versionInfo": "9.2 EUS",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://developers.redhat.com/products/rhel/download",
+      "licenseConcluded": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:rhel_eus:9.2::baseos",
+          "referenceType": "cpe22Type"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-SRPM-1",
+      "name": "openssl",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "openssl-3.0.7-18.el9_2.src.rpm",
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9215c64e7289a058248728089e4d98ed1cc392bb5eb9b8fcbe661d57e8145bbd"
+        }
+      ]
+    }
+  ],
+  "files": [],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-RHEL-9.2-EUS"
+    },
+    {
+      "spdxElementId": "SPDXRef-SRPM-1",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-RHEL-9.2-EUS"
+    }
+  ]
+}
