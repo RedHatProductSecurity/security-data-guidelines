@@ -9,7 +9,7 @@
     ]
   },
   "name": "RHEL 9.2 EUS",
-  "documentNamespace": "https://access.redhat.com/security/data/sbom/beta/spdx/rhel-9.2-eus-6a659023-7a52-4792-a66c-a7f19ec14ba8.json",
+  "documentNamespace": "https://www.redhat.com/rhel-9.2-eus-6a659023-7a52-4792-a66c-a7f19ec14ba8.json",
   "packages": [
     {
       "SPDXID": "SPDXRef-RHEL-9.2-EUS",
@@ -39,6 +39,16 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
         }
       ],
       "checksums": [
