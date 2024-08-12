@@ -7,10 +7,11 @@ import subprocess
 import sys
 from tempfile import TemporaryDirectory
 
+# Script requires these RPMs: brewkoji, rpmdevtools, rpm-build
+# Run with: ./from-koji.py brew <NVR>
+
 source_re = re.compile(r"^(Source\d+):\s*((.*/)?(.*))$")
-tarball_re = re.compile(
-    r"^([^0-9]*)-([0-9a-f\.-]*)[\.-][a-z]"
-)  # Obviously not universal
+tarball_re = re.compile(r"^([^0-9]*)-([0-9a-f\.-]*)[\.-][a-z]")  # Obviously not universal
 koji_profile = sys.argv[1]
 build_id = sys.argv[2]
 profile = koji.get_profile_module(koji_profile)
@@ -71,11 +72,7 @@ def run_syft(builddir):
             continue
 
         # For the example data we only care about purl references
-        refs = [
-            ref
-            for ref in pkg["externalRefs"]
-            if ref["referenceCategory"] == "PACKAGE-MANAGER"
-        ]
+        refs = [ref for ref in pkg["externalRefs"] if ref["referenceCategory"] == "PACKAGE-MANAGER"]
         if refs:
             pkg["externalRefs"] = refs
         else:
