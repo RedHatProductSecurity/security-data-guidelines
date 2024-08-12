@@ -296,6 +296,7 @@ for rpm in rpms:
             if not data:
                 break
             sha256.update(data)
+    digest = sha256.hexdigest()
 
     license = get_license(filename)
     package = {
@@ -310,13 +311,13 @@ for rpm in rpms:
             {
                 "referenceCategory": "PACKAGE-MANAGER",
                 "referenceType": "purl",
-                "referenceLocator": f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}",
+                "referenceLocator": f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}&checksum={digest}",
             }
         ],
         "checksums": [
             {
                 "algorithm": "SHA256",
-                "checksumValue": sha256.hexdigest(),
+                "checksumValue": digest,
             },
         ],
     }
