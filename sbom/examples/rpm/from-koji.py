@@ -361,5 +361,5 @@ spdx = {
     "relationships": relationships,
 }
 
-with open(f"{build_id}-sbom.json", "w") as fp:
+with open(f"{build_id}.spdx.json", "w") as fp:
     json.dump(spdx, fp, indent=2)
