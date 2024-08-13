@@ -311,7 +311,7 @@ for rpm in rpms:
             {
                 "referenceCategory": "PACKAGE-MANAGER",
                 "referenceType": "purl",
-                "referenceLocator": f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}&checksum={digest}",
+                "referenceLocator": f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}&checksum=sha256:{digest}",
             }
         ],
         "checksums": [
