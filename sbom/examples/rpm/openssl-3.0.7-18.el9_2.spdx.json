@@ -23,7 +23,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src"
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&checksum=9215c64e7289a058248728089e4d98ed1cc392bb5eb9b8fcbe661d57e8145bbd"
         }
       ],
       "checksums": [
@@ -85,7 +85,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64"
+          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64&checksum=fbdd94bb6ce796441e4d4b9b04a960b41f6f7577e51c764e2befe9226e71da4b"
         }
       ],
       "checksums": [
@@ -107,7 +107,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64"
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&checksum=832757f9bcb231e954fb390b835fb833b9046594aa3c6387eeaadd9af592f40f"
         }
       ],
       "checksums": [
@@ -129,7 +129,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64"
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64&checksum=9538011195d4997d7be4bba8cd01473abbf50e397dea06b6545d1d5fbd04817d"
         }
       ],
       "checksums": [
@@ -151,7 +151,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64"
+          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64&checksum=af7342cf0b04d24e8055f364d67afd705fbb94c7ec2460999a59cacfdf554920"
         }
       ],
       "checksums": [
@@ -173,7 +173,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le"
+          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le&checksum=bf63da42704f9da1e9eeefab808900f521a357b9a07433c0973965a02a2bb915"
         }
       ],
       "checksums": [
@@ -195,7 +195,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le"
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le&checksum=71cb34e11fa6bda16512f0dbb314ac761348cf907b3e49fa54c7576305ed6afb"
         }
       ],
       "checksums": [
@@ -217,7 +217,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le"
+          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le&checksum=36d11f2f192aef3abf391e4cf6699a24a303f09d68b2477595bb12af82b26e48"
         }
       ],
       "checksums": [
@@ -239,7 +239,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le"
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le&checksum=c96d6029cfa0e6a01c4419c154cbf98c08ab9bb69cc756d81350ab77b4d1f44c"
         }
       ],
       "checksums": [
@@ -261,7 +261,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686"
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686&checksum=69e098aceca261b8cdd127b78c90868d40d39c3cb94e37b07703b3f7a85f832f"
         }
       ],
       "checksums": [
@@ -283,7 +283,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686"
+          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686&checksum=689777a4cc483b0cbb3757da0e3274b49d6e697f8174405df415e0018cef7646"
         }
       ],
       "checksums": [
@@ -305,7 +305,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686"
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686&checksum=9b529f697702037b712e81778fa4e222d385568e4b3be167e6e42431a3270bfd"
         }
       ],
       "checksums": [
@@ -327,7 +327,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686"
+          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686&checksum=0bc733036256ec160b8ca5ed6bc1082e4d4c15f84cf6ff141f02d8e45d73b4b8"
         }
       ],
       "checksums": [
@@ -349,7 +349,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64"
+          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64&checksum=b2fe5b3a9230446e6e8119cd24eef1bee107b8d5ac37d2c5442d524bf5745a4e"
         }
       ],
       "checksums": [
@@ -371,7 +371,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64"
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64&checksum=0cb4cd2487dcbc2c0d97ded42f7998ff5f27c6e38ad40b204cce1e22c9966148"
         }
       ],
       "checksums": [
@@ -393,7 +393,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64"
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64&checksum=82b40f3403399fc808bd26f1a91edb7855e8f10087b925651001c17cb17a38ed"
         }
       ],
       "checksums": [
@@ -415,7 +415,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64"
+          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64&checksum=0af316c88f24a4a3df742376b8875c89137acec5df2b40717dcc3d81789f52f0"
         }
       ],
       "checksums": [
@@ -437,7 +437,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x"
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x&checksum=3a92cded871cffdb2290d078fe4cf300bc9d74fd0af612a607898d9b6c7967fd"
         }
       ],
       "checksums": [
@@ -459,7 +459,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x"
+          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x&checksum=1c4e7f767b47e9dd36f00c1c213328ab84f0c1516d17b17f068eadefd5cc706d"
         }
       ],
       "checksums": [
@@ -481,7 +481,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x"
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x&checksum=c99bf4a5bf29434baca2e30e40fc9f6c7152ec9c372a48b79dbc9294d08a7774"
         }
       ],
       "checksums": [
@@ -503,7 +503,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x"
+          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x&checksum=fe1ef3b6550b1f4153ac2d280f84d46bb36bb63a11ddaec7f76ff7fc0770d2db"
         }
       ],
       "checksums": [

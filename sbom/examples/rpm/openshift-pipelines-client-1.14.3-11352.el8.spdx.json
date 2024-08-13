@@ -18692,7 +18692,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&checksum=f260ee743e4d1e3a989657c6c5ad854affa200fb91b0cca3594160a17b4fe384"
         }
       ],
       "checksums": [
@@ -18753,7 +18753,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=x86_64"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=x86_64&checksum=baa0c6523d91d99dbab8043f97790c1393b73fbbc711e9b07bd83f49ad91a800"
         }
       ],
       "checksums": [
@@ -18775,7 +18775,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=x86_64"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=x86_64&checksum=e7f74f4ced31a2bd3e329e64f9c3d0a09eef34c32d44799086443f7a56e8029e"
         }
       ],
       "checksums": [
@@ -18797,7 +18797,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=s390x"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=s390x&checksum=c401f381568196437007f5b7ad4c28c1926954c3331f51e944f46857e46d262c"
         }
       ],
       "checksums": [
@@ -18819,7 +18819,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=s390x"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=s390x&checksum=e9d93086f6388d46323996c5ae312c579e333e4bc7b6749d1a67ac052a274052"
         }
       ],
       "checksums": [
@@ -18841,7 +18841,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=ppc64le"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=ppc64le&checksum=3fd37914601456f58e41482489e3a78d895b005b761f9f6ec90253c4f734bc12"
         }
       ],
       "checksums": [
@@ -18863,7 +18863,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=ppc64le"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=ppc64le&checksum=816732946439dc442cdfb846be1b807b90dac7bd5c2384b1f1b825240150ed5d"
         }
       ],
       "checksums": [
@@ -18885,7 +18885,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=aarch64"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=aarch64&checksum=18281527bfcdc8b81153062bcece92f4ba293d343af07ff0b8dc11a3a8584d02"
         }
       ],
       "checksums": [
@@ -18907,7 +18907,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=aarch64"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=aarch64&checksum=2c0043a7de4302e7406cdea88e7c3289c188babd1dc2742e57109d282b0f08a6"
         }
       ],
       "checksums": [
