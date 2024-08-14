@@ -218,7 +218,7 @@ def generate_sboms_for_image(image_nvr):
         image_id=image_nvr,
         root_package=image_index_pkg,
         packages=per_arch_images,
-        rel_type="DESCENDANT_OF",
+        rel_type="VARIANT_OF",
     )
 
 

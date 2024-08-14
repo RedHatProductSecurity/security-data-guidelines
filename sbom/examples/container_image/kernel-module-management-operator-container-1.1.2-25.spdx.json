@@ -103,17 +103,17 @@
     },
     {
       "spdxElementId": "SPDXRef-image-index",
-      "relationshipType": "DESCENDANT_OF",
+      "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-amd64"
     },
     {
       "spdxElementId": "SPDXRef-image-index",
-      "relationshipType": "DESCENDANT_OF",
+      "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-arm64"
     },
     {
       "spdxElementId": "SPDXRef-image-index",
-      "relationshipType": "DESCENDANT_OF",
+      "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-ppc64le"
     }
   ]

@@ -149,22 +149,22 @@
     },
     {
       "spdxElementId": "SPDXRef-image-index",
-      "relationshipType": "DESCENDANT_OF",
+      "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-ppc64le"
     },
     {
       "spdxElementId": "SPDXRef-image-index",
-      "relationshipType": "DESCENDANT_OF",
+      "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-s390x"
     },
     {
       "spdxElementId": "SPDXRef-image-index",
-      "relationshipType": "DESCENDANT_OF",
+      "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-arm64"
     },
     {
       "spdxElementId": "SPDXRef-image-index",
-      "relationshipType": "DESCENDANT_OF",
+      "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-amd64"
     }
   ]
