@@ -23,7 +23,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&checksum=801331801a5d8209b5aaf0cc28f8cdc1f94a4bb349ef2f9a4300c4889bb06e3a"
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&checksum=sha256:801331801a5d8209b5aaf0cc28f8cdc1f94a4bb349ef2f9a4300c4889bb06e3a"
         }
       ],
       "checksums": [
@@ -67,6 +67,50 @@
       ]
     },
     {
+      "SPDXID": "SPDXRef-aarch64-poppler-debuginfo",
+      "name": "poppler-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-debuginfo-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64&checksum=sha256:9d95ae9a07d38d6e03ea146e141a99d0d0e9caa57569107f39a59ac7fc224bfd"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9d95ae9a07d38d6e03ea146e141a99d0d0e9caa57569107f39a59ac7fc224bfd"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-poppler-qt5-debuginfo",
+      "name": "poppler-qt5-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-qt5-debuginfo-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64&checksum=sha256:0a303accb3d2604c05e1ddf9b49a8eb90f33b56e9f6182a1392cc09034675b4a"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0a303accb3d2604c05e1ddf9b49a8eb90f33b56e9f6182a1392cc09034675b4a"
+        }
+      ]
+    },
+    {
       "SPDXID": "SPDXRef-aarch64-poppler-qt5-devel",
       "name": "poppler-qt5-devel",
       "versionInfo": "21.01.0-19.el9",
@@ -78,7 +122,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64&checksum=3b7a10adf732d18370dc83c19c451e2e27243bed232284640debbf0f488345dc"
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64&checksum=sha256:3b7a10adf732d18370dc83c19c451e2e27243bed232284640debbf0f488345dc"
         }
       ],
       "checksums": [
@@ -100,7 +144,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64&checksum=bdf34012ab575b7a1fb63e158e3257250db952b9f47f275b550992eb7d72ed78"
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64&checksum=sha256:bdf34012ab575b7a1fb63e158e3257250db952b9f47f275b550992eb7d72ed78"
         }
       ],
       "checksums": [
@@ -122,13 +166,35 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64&checksum=5022c7069d1996090689e47b8dd2615b5b653db852ba073ca0a94347c293d241"
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64&checksum=sha256:5022c7069d1996090689e47b8dd2615b5b653db852ba073ca0a94347c293d241"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "5022c7069d1996090689e47b8dd2615b5b653db852ba073ca0a94347c293d241"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-poppler-cpp-debuginfo",
+      "name": "poppler-cpp-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-cpp-debuginfo-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64&checksum=sha256:aa76d7044b111f6dc560250ffa3419de5faecdcf3ba4543675db8cf4a8f810a7"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "aa76d7044b111f6dc560250ffa3419de5faecdcf3ba4543675db8cf4a8f810a7"
         }
       ]
     },
@@ -144,13 +210,35 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64&checksum=ffc8ac32d519b8a55c5fdaf2bcf185eb52e73790844abd4abc8b5aeb8eb99631"
+          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64&checksum=sha256:ffc8ac32d519b8a55c5fdaf2bcf185eb52e73790844abd4abc8b5aeb8eb99631"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "ffc8ac32d519b8a55c5fdaf2bcf185eb52e73790844abd4abc8b5aeb8eb99631"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-poppler-glib-debuginfo",
+      "name": "poppler-glib-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-glib-debuginfo-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64&checksum=sha256:31b3d3359d6ac481e7e189a82c3b6bc598f3b51937e9fce76bfb0ab561cbd4fb"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "31b3d3359d6ac481e7e189a82c3b6bc598f3b51937e9fce76bfb0ab561cbd4fb"
         }
       ]
     },
@@ -166,7 +254,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64&checksum=8e787b3f263cde1a7ef453a87c1f96041387f522f7bc4baae9a383d769881842"
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64&checksum=sha256:8e787b3f263cde1a7ef453a87c1f96041387f522f7bc4baae9a383d769881842"
         }
       ],
       "checksums": [
@@ -188,13 +276,57 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64&checksum=9acc25304d5302ba68b3b0a401c651ce0e08454f26def121a8cfec3f593631e0"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64&checksum=sha256:9acc25304d5302ba68b3b0a401c651ce0e08454f26def121a8cfec3f593631e0"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "9acc25304d5302ba68b3b0a401c651ce0e08454f26def121a8cfec3f593631e0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-poppler-debugsource",
+      "name": "poppler-debugsource",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-debugsource-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64&checksum=sha256:d146292ffd4defb00379787510a5d4566613de6b87340454b583c57e06cddd4a"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d146292ffd4defb00379787510a5d4566613de6b87340454b583c57e06cddd4a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-poppler-utils-debuginfo",
+      "name": "poppler-utils-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-utils-debuginfo-21.01.0-19.el9.aarch64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64&checksum=sha256:e2cd901d2dc6961400ba2b26f3d3a4cded4bb0b21708d1e91ea844c251722ffb"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e2cd901d2dc6961400ba2b26f3d3a4cded4bb0b21708d1e91ea844c251722ffb"
         }
       ]
     },
@@ -210,7 +342,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64&checksum=648122fa2138386263db7b0440eeb61c832bbfd4c75ca913c33a76428d182025"
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64&checksum=sha256:648122fa2138386263db7b0440eeb61c832bbfd4c75ca913c33a76428d182025"
         }
       ],
       "checksums": [
@@ -232,7 +364,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64&checksum=8ec63f76dc5fd358056ed3365760eaa90daf91189d5c5be5fecbf7415605808e"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64&checksum=sha256:8ec63f76dc5fd358056ed3365760eaa90daf91189d5c5be5fecbf7415605808e"
         }
       ],
       "checksums": [
@@ -254,7 +386,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64&checksum=0663fcd9ecd6c11e560337ca2b5401e1a39dbd5a56a519f835b0f67d123425f5"
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64&checksum=sha256:0663fcd9ecd6c11e560337ca2b5401e1a39dbd5a56a519f835b0f67d123425f5"
         }
       ],
       "checksums": [
@@ -276,7 +408,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch&checksum=2b0955db79eac3277a675a162484cb3b019d507aff292a8e85d9492b01d14d6d"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch&checksum=sha256:2b0955db79eac3277a675a162484cb3b019d507aff292a8e85d9492b01d14d6d"
         }
       ],
       "checksums": [
@@ -298,7 +430,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le&checksum=6a968f10b19e150d3501447bc498bc1c59c7560e5372ab40018b0fe3a047c62f"
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le&checksum=sha256:6a968f10b19e150d3501447bc498bc1c59c7560e5372ab40018b0fe3a047c62f"
         }
       ],
       "checksums": [
@@ -320,13 +452,35 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le&checksum=6966f07bc7d6f3080d50f1a8ecb371451c33c075a103b301fb5e0bf1b27b9bb1"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le&checksum=sha256:6966f07bc7d6f3080d50f1a8ecb371451c33c075a103b301fb5e0bf1b27b9bb1"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "6966f07bc7d6f3080d50f1a8ecb371451c33c075a103b301fb5e0bf1b27b9bb1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-poppler-cpp-debuginfo",
+      "name": "poppler-cpp-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-cpp-debuginfo-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le&checksum=sha256:e9455309fcdcaa0588aae4c0280ef347b79eac7af5f2bafacb11cf715e9c18f5"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e9455309fcdcaa0588aae4c0280ef347b79eac7af5f2bafacb11cf715e9c18f5"
         }
       ]
     },
@@ -342,13 +496,57 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le&checksum=574c219d781b8b3fc9f4f2b688d70e020d7fd2079532fc6c5935f63487c1451e"
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le&checksum=sha256:574c219d781b8b3fc9f4f2b688d70e020d7fd2079532fc6c5935f63487c1451e"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "574c219d781b8b3fc9f4f2b688d70e020d7fd2079532fc6c5935f63487c1451e"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-poppler-qt5-debuginfo",
+      "name": "poppler-qt5-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-qt5-debuginfo-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le&checksum=sha256:de7db082e0df2ee7f87e9126b282af6efd74303572f0cd113abff6b32397b6f8"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "de7db082e0df2ee7f87e9126b282af6efd74303572f0cd113abff6b32397b6f8"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-poppler-debuginfo",
+      "name": "poppler-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-debuginfo-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le&checksum=sha256:092a3afe2eb1367fa42e4b49fba72dff4f3b963a369c05767af3a72a700ad33e"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "092a3afe2eb1367fa42e4b49fba72dff4f3b963a369c05767af3a72a700ad33e"
         }
       ]
     },
@@ -364,7 +562,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le&checksum=96b3d4cd21e6f1f6f11866e66753c53aea716d14dea5f3d6b04b34fdf3a31001"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le&checksum=sha256:96b3d4cd21e6f1f6f11866e66753c53aea716d14dea5f3d6b04b34fdf3a31001"
         }
       ],
       "checksums": [
@@ -386,7 +584,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le&checksum=c0ed7c54f998e1636d40535b352a917884989b1468d2897ed4dd9770e03d17c6"
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le&checksum=sha256:c0ed7c54f998e1636d40535b352a917884989b1468d2897ed4dd9770e03d17c6"
         }
       ],
       "checksums": [
@@ -408,13 +606,57 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le&checksum=555b12c027ddf3d2dca2e0ec788c5500d5bbf10036c910eeb1c115822327f264"
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le&checksum=sha256:555b12c027ddf3d2dca2e0ec788c5500d5bbf10036c910eeb1c115822327f264"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "555b12c027ddf3d2dca2e0ec788c5500d5bbf10036c910eeb1c115822327f264"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-poppler-utils-debuginfo",
+      "name": "poppler-utils-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-utils-debuginfo-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le&checksum=sha256:1917813f2260ec9c76d99d46863e09a607c806b18bd541ca20c18a1c581e990e"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1917813f2260ec9c76d99d46863e09a607c806b18bd541ca20c18a1c581e990e"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-poppler-glib-debuginfo",
+      "name": "poppler-glib-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-glib-debuginfo-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le&checksum=sha256:e20322ea7928cfd5519c9d6d19694fadf9e1365976b74539199ff41a4d19d402"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e20322ea7928cfd5519c9d6d19694fadf9e1365976b74539199ff41a4d19d402"
         }
       ]
     },
@@ -430,13 +672,35 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le&checksum=fdd49706864108a96ece4761f3975bc1de0b2bc424c85efb07d76f912885d968"
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le&checksum=sha256:fdd49706864108a96ece4761f3975bc1de0b2bc424c85efb07d76f912885d968"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "fdd49706864108a96ece4761f3975bc1de0b2bc424c85efb07d76f912885d968"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-poppler-debugsource",
+      "name": "poppler-debugsource",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-debugsource-21.01.0-19.el9.ppc64le.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le&checksum=sha256:55efb935bf1824f3e6d901cd8ba4c49a62dc159dbf73cc667bcc3000ea709b6c"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "55efb935bf1824f3e6d901cd8ba4c49a62dc159dbf73cc667bcc3000ea709b6c"
         }
       ]
     },
@@ -452,7 +716,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le&checksum=dc47734f0ff549c164a86bf990948f872c320e0ceee7d90f030dea8f02ce1c71"
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le&checksum=sha256:dc47734f0ff549c164a86bf990948f872c320e0ceee7d90f030dea8f02ce1c71"
         }
       ],
       "checksums": [
@@ -474,13 +738,101 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le&checksum=a0889808f54eb83c5decf2abc0e21fe8b2d5b1e038e4e6c1d2876eeb31b015be"
+          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le&checksum=sha256:a0889808f54eb83c5decf2abc0e21fe8b2d5b1e038e4e6c1d2876eeb31b015be"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "a0889808f54eb83c5decf2abc0e21fe8b2d5b1e038e4e6c1d2876eeb31b015be"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-i686-poppler-debuginfo",
+      "name": "poppler-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-debuginfo-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686&checksum=sha256:2a76e648ba3522ca23ba329ea017325b0360761739f415d9f6246bda1fedf595"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2a76e648ba3522ca23ba329ea017325b0360761739f415d9f6246bda1fedf595"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-i686-poppler-qt5-debuginfo",
+      "name": "poppler-qt5-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-qt5-debuginfo-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686&checksum=sha256:25a4ecccce6d059d9f3a9724886a94b8f41d171bda96f908757c54fd037bbc24"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "25a4ecccce6d059d9f3a9724886a94b8f41d171bda96f908757c54fd037bbc24"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-i686-poppler-utils-debuginfo",
+      "name": "poppler-utils-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-utils-debuginfo-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686&checksum=sha256:67948ca67ecea36a60e43d86ba8944202ea78421dfb6f1beb26c3dd871cc7adf"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "67948ca67ecea36a60e43d86ba8944202ea78421dfb6f1beb26c3dd871cc7adf"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-i686-poppler-debugsource",
+      "name": "poppler-debugsource",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-debugsource-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686&checksum=sha256:b9d069c4e1c2912c0df635094cb73643a13b3227a8d77a0505e2c90abb25dbc7"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b9d069c4e1c2912c0df635094cb73643a13b3227a8d77a0505e2c90abb25dbc7"
         }
       ]
     },
@@ -496,13 +848,57 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686&checksum=a09da9e825f9ae9201c3db560675f0f86bbf537418e95f149b7fbac25c5e0cf4"
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686&checksum=sha256:a09da9e825f9ae9201c3db560675f0f86bbf537418e95f149b7fbac25c5e0cf4"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "a09da9e825f9ae9201c3db560675f0f86bbf537418e95f149b7fbac25c5e0cf4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-i686-poppler-glib-debuginfo",
+      "name": "poppler-glib-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-glib-debuginfo-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686&checksum=sha256:0cd59642fd34fa7e9c82307865c1b04e61e268493690a5d2ee0faeb091f61032"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0cd59642fd34fa7e9c82307865c1b04e61e268493690a5d2ee0faeb091f61032"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-i686-poppler-cpp-debuginfo",
+      "name": "poppler-cpp-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-cpp-debuginfo-21.01.0-19.el9.i686.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686&checksum=sha256:2f5969dc6cc8280c37aa18d153d6f9d7ca31d6b32aace8c782e13776c375135a"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2f5969dc6cc8280c37aa18d153d6f9d7ca31d6b32aace8c782e13776c375135a"
         }
       ]
     },
@@ -518,7 +914,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686&checksum=2466cb8912235bd5c1ca5adc79e14d1f226856b275909f0353e785b9b1b624a4"
+          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686&checksum=sha256:2466cb8912235bd5c1ca5adc79e14d1f226856b275909f0353e785b9b1b624a4"
         }
       ],
       "checksums": [
@@ -540,7 +936,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686&checksum=08763a255485c842609b9fa821ba3bba84f476176b4f56d68d7f5d78cf81261e"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686&checksum=sha256:08763a255485c842609b9fa821ba3bba84f476176b4f56d68d7f5d78cf81261e"
         }
       ],
       "checksums": [
@@ -562,7 +958,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686&checksum=8f68cb95de70c97f305ccdd79ea856f36821761eba73a7ae31843b48695fd01f"
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686&checksum=sha256:8f68cb95de70c97f305ccdd79ea856f36821761eba73a7ae31843b48695fd01f"
         }
       ],
       "checksums": [
@@ -584,7 +980,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686&checksum=104fd60de9602d01c564be1d5d22eca4264567d78fd9d51824e6592bb1490b30"
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686&checksum=sha256:104fd60de9602d01c564be1d5d22eca4264567d78fd9d51824e6592bb1490b30"
         }
       ],
       "checksums": [
@@ -606,7 +1002,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686&checksum=a69f97a3e7f863ee930c8a25e8d7747c17e70d4baa1273e91ec1faa182804491"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686&checksum=sha256:a69f97a3e7f863ee930c8a25e8d7747c17e70d4baa1273e91ec1faa182804491"
         }
       ],
       "checksums": [
@@ -628,7 +1024,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686&checksum=9e11de701852f4ef57c62503b003730a58bb189fd819f810fc772aa9088b7a47"
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686&checksum=sha256:9e11de701852f4ef57c62503b003730a58bb189fd819f810fc772aa9088b7a47"
         }
       ],
       "checksums": [
@@ -650,7 +1046,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686&checksum=c054d46477a7d7c05ebb3cfa3cf1583f75c01d2cfb1296883a1b995e8191dc7b"
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686&checksum=sha256:c054d46477a7d7c05ebb3cfa3cf1583f75c01d2cfb1296883a1b995e8191dc7b"
         }
       ],
       "checksums": [
@@ -672,13 +1068,101 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686&checksum=b90ea4034966737d915a71d2b57f6e6010f306ea3ab749aeac0976913c5df40f"
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686&checksum=sha256:b90ea4034966737d915a71d2b57f6e6010f306ea3ab749aeac0976913c5df40f"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "b90ea4034966737d915a71d2b57f6e6010f306ea3ab749aeac0976913c5df40f"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-poppler-debuginfo",
+      "name": "poppler-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-debuginfo-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64&checksum=sha256:af28ac3903e3a9c5b18035dc119940bc20434bc27334658818477b20e0e78441"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "af28ac3903e3a9c5b18035dc119940bc20434bc27334658818477b20e0e78441"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-poppler-glib-debuginfo",
+      "name": "poppler-glib-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-glib-debuginfo-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64&checksum=sha256:0c5d7b40344e4006a2606bfe7580498724071a1168b646c52c4763300bbf5721"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0c5d7b40344e4006a2606bfe7580498724071a1168b646c52c4763300bbf5721"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-poppler-utils-debuginfo",
+      "name": "poppler-utils-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-utils-debuginfo-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64&checksum=sha256:1ead3d93eda812f39b10ccf96d1a25d694f2b907d153820739744f0f96d833b5"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1ead3d93eda812f39b10ccf96d1a25d694f2b907d153820739744f0f96d833b5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-poppler-qt5-debuginfo",
+      "name": "poppler-qt5-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-qt5-debuginfo-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64&checksum=sha256:ec702533bdef62f63530e2c2ec700667b33e1451f837d13ed8709ebfcd59665a"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ec702533bdef62f63530e2c2ec700667b33e1451f837d13ed8709ebfcd59665a"
         }
       ]
     },
@@ -694,7 +1178,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64&checksum=794688b5bd303e888a95154ea081b8025ff774702115f52a17061658f41696fa"
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64&checksum=sha256:794688b5bd303e888a95154ea081b8025ff774702115f52a17061658f41696fa"
         }
       ],
       "checksums": [
@@ -716,13 +1200,35 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64&checksum=26c91ac5f1eaf247d93dc1740dcbef7b00a7c7f7bbea95bc3dbe62eb183bd719"
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64&checksum=sha256:26c91ac5f1eaf247d93dc1740dcbef7b00a7c7f7bbea95bc3dbe62eb183bd719"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "26c91ac5f1eaf247d93dc1740dcbef7b00a7c7f7bbea95bc3dbe62eb183bd719"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-poppler-cpp-debuginfo",
+      "name": "poppler-cpp-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-cpp-debuginfo-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64&checksum=sha256:d6c8be898bf036638462335e9c4f691cf350372a4b4e9ac14d218f151cdba644"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d6c8be898bf036638462335e9c4f691cf350372a4b4e9ac14d218f151cdba644"
         }
       ]
     },
@@ -738,7 +1244,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64&checksum=c52a3281e5b80e2a6a7ad0c8c60ba28d975a5c8f36851e760628c2ec2ba55e86"
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64&checksum=sha256:c52a3281e5b80e2a6a7ad0c8c60ba28d975a5c8f36851e760628c2ec2ba55e86"
         }
       ],
       "checksums": [
@@ -760,7 +1266,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64&checksum=24ef4d20be39234724d5e40e4e144db983a859612be85929619626988094386a"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64&checksum=sha256:24ef4d20be39234724d5e40e4e144db983a859612be85929619626988094386a"
         }
       ],
       "checksums": [
@@ -782,7 +1288,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64&checksum=bb17518c4144c176de3f7980a14b25db1d62b04cdd1ffba658272f0112ebfd63"
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64&checksum=sha256:bb17518c4144c176de3f7980a14b25db1d62b04cdd1ffba658272f0112ebfd63"
         }
       ],
       "checksums": [
@@ -804,7 +1310,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64&checksum=98694a86fdb3d06fab8e2d1ab60040449e1a5c3b625a49a9e4f0a02d84a4f717"
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64&checksum=sha256:98694a86fdb3d06fab8e2d1ab60040449e1a5c3b625a49a9e4f0a02d84a4f717"
         }
       ],
       "checksums": [
@@ -826,7 +1332,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64&checksum=0769a5a3e63056a99292539ed87f5eaa70038ddfa44a37a3e042232c0dbce1e6"
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64&checksum=sha256:0769a5a3e63056a99292539ed87f5eaa70038ddfa44a37a3e042232c0dbce1e6"
         }
       ],
       "checksums": [
@@ -848,7 +1354,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64&checksum=4d1a54b08657b2f0d9f35277101cc8f2fe8a721593117048ac391d1a83679b66"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64&checksum=sha256:4d1a54b08657b2f0d9f35277101cc8f2fe8a721593117048ac391d1a83679b66"
         }
       ],
       "checksums": [
@@ -870,13 +1376,35 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64&checksum=729ce4a72b9b9ff7dbf0782a9ea7cf991cbd015a0c8ab01d0ef3184735bac0dd"
+          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64&checksum=sha256:729ce4a72b9b9ff7dbf0782a9ea7cf991cbd015a0c8ab01d0ef3184735bac0dd"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "729ce4a72b9b9ff7dbf0782a9ea7cf991cbd015a0c8ab01d0ef3184735bac0dd"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86_64-poppler-debugsource",
+      "name": "poppler-debugsource",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-debugsource-21.01.0-19.el9.x86_64.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64&checksum=sha256:c611f6e164a0a4c33afb6eff30e910821f796f54cd482b925dd679730e79c586"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c611f6e164a0a4c33afb6eff30e910821f796f54cd482b925dd679730e79c586"
         }
       ]
     },
@@ -892,13 +1420,35 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x&checksum=550ad08d5448627cd06b653aaabd59cf0811a0f1fc6af64526388d47a74e750a"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x&checksum=sha256:550ad08d5448627cd06b653aaabd59cf0811a0f1fc6af64526388d47a74e750a"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "550ad08d5448627cd06b653aaabd59cf0811a0f1fc6af64526388d47a74e750a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-poppler-debugsource",
+      "name": "poppler-debugsource",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-debugsource-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x&checksum=sha256:9450341465086db088342b8751a796ee10c8659c256ac15ba41dda0bf8cc94e1"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9450341465086db088342b8751a796ee10c8659c256ac15ba41dda0bf8cc94e1"
         }
       ]
     },
@@ -914,7 +1464,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x&checksum=3c503e85c0a789673c40794dd6000628ad11b3dd4656c686095a4b33f26799a1"
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x&checksum=sha256:3c503e85c0a789673c40794dd6000628ad11b3dd4656c686095a4b33f26799a1"
         }
       ],
       "checksums": [
@@ -936,7 +1486,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x&checksum=57b9e7cd8552dc0329da54c06a77844c16f42a906ce6675f085ab44d9e03630b"
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x&checksum=sha256:57b9e7cd8552dc0329da54c06a77844c16f42a906ce6675f085ab44d9e03630b"
         }
       ],
       "checksums": [
@@ -958,13 +1508,35 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x&checksum=b0f9f9787f20e88876b4f69b9b39807142ca5188c950643c0580ff8192e055a6"
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x&checksum=sha256:b0f9f9787f20e88876b4f69b9b39807142ca5188c950643c0580ff8192e055a6"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "b0f9f9787f20e88876b4f69b9b39807142ca5188c950643c0580ff8192e055a6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-poppler-qt5-debuginfo",
+      "name": "poppler-qt5-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-qt5-debuginfo-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x&checksum=sha256:d346d138c4b516808b4dc3c75ba76fdf52b0f4c856485ab7b21f1a044567048b"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d346d138c4b516808b4dc3c75ba76fdf52b0f4c856485ab7b21f1a044567048b"
         }
       ]
     },
@@ -980,7 +1552,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x&checksum=437d4867510988184567cc3f6e751b752efc209c9d2fe21670da4d827e16da1f"
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x&checksum=sha256:437d4867510988184567cc3f6e751b752efc209c9d2fe21670da4d827e16da1f"
         }
       ],
       "checksums": [
@@ -1002,13 +1574,57 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x&checksum=ba8bde6851373a8fe0e8a5622063b17f494c99a5d9e2a0738fdce98d99068756"
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x&checksum=sha256:ba8bde6851373a8fe0e8a5622063b17f494c99a5d9e2a0738fdce98d99068756"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "ba8bde6851373a8fe0e8a5622063b17f494c99a5d9e2a0738fdce98d99068756"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-poppler-utils-debuginfo",
+      "name": "poppler-utils-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-utils-debuginfo-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x&checksum=sha256:a35fd2ef9270ed7b6d590bb02e66b67daae0ada4b7a585f5a67b7ab0319e205f"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a35fd2ef9270ed7b6d590bb02e66b67daae0ada4b7a585f5a67b7ab0319e205f"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-poppler-cpp-debuginfo",
+      "name": "poppler-cpp-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-cpp-debuginfo-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x&checksum=sha256:ed21c637800deee3e3e1fe6252c95d41c39dfdd741140aec8437bbf1d93b64f2"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ed21c637800deee3e3e1fe6252c95d41c39dfdd741140aec8437bbf1d93b64f2"
         }
       ]
     },
@@ -1024,7 +1640,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x&checksum=d5db40831cef871b3214b21b4cdb612ea5e6230054ba7f033cbec478763b7e68"
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x&checksum=sha256:d5db40831cef871b3214b21b4cdb612ea5e6230054ba7f033cbec478763b7e68"
         }
       ],
       "checksums": [
@@ -1046,13 +1662,57 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x&checksum=5fcd5d62a6d8f638e74e1d464d4f01efc0f9d0dd538fa7115d7ab8ccf98f565f"
+          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x&checksum=sha256:5fcd5d62a6d8f638e74e1d464d4f01efc0f9d0dd538fa7115d7ab8ccf98f565f"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "5fcd5d62a6d8f638e74e1d464d4f01efc0f9d0dd538fa7115d7ab8ccf98f565f"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-poppler-debuginfo",
+      "name": "poppler-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-debuginfo-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x&checksum=sha256:4322a4e0f86fada6c10c2dffca1d1aeaeccd786edbe24802a525ba9525aba1de"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4322a4e0f86fada6c10c2dffca1d1aeaeccd786edbe24802a525ba9525aba1de"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-poppler-glib-debuginfo",
+      "name": "poppler-glib-debuginfo",
+      "versionInfo": "21.01.0-19.el9",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "poppler-glib-debuginfo-21.01.0-19.el9.s390x.rpm",
+      "licenseConcluded": "(GPLv2 OR GPLv3) AND GPLv2+ AND LGPLv2+ AND MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x&checksum=sha256:54cbe1c3088b70f07427587f14c3207aed520684ba09185da408dd28d5b90066"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "54cbe1c3088b70f07427587f14c3207aed520684ba09185da408dd28d5b90066"
         }
       ]
     },
@@ -1068,7 +1728,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x&checksum=ecb5f1187773e3e0501a62715f6e7244a21164c1318ae95bc0aa8a6a0712b868"
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x&checksum=sha256:ecb5f1187773e3e0501a62715f6e7244a21164c1318ae95bc0aa8a6a0712b868"
         }
       ],
       "checksums": [
@@ -1097,6 +1757,16 @@
       "relatedSpdxElement": "SPDXRef-Source1"
     },
     {
+      "spdxElementId": "SPDXRef-aarch64-poppler-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-poppler-qt5-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
       "spdxElementId": "SPDXRef-aarch64-poppler-qt5-devel",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
@@ -1112,7 +1782,17 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
+      "spdxElementId": "SPDXRef-aarch64-poppler-cpp-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
       "spdxElementId": "SPDXRef-aarch64-poppler-devel",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-poppler-glib-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
@@ -1123,6 +1803,16 @@
     },
     {
       "spdxElementId": "SPDXRef-aarch64-poppler-glib-devel",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-poppler-debugsource",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-poppler-utils-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
@@ -1157,7 +1847,22 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
+      "spdxElementId": "SPDXRef-ppc64le-poppler-cpp-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
       "spdxElementId": "SPDXRef-ppc64le-poppler-qt5",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-poppler-qt5-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-poppler-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
@@ -1177,7 +1882,22 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
+      "spdxElementId": "SPDXRef-ppc64le-poppler-utils-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-poppler-glib-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
       "spdxElementId": "SPDXRef-ppc64le-poppler-qt5-devel",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-poppler-debugsource",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
@@ -1192,7 +1912,37 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
+      "spdxElementId": "SPDXRef-i686-poppler-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-i686-poppler-qt5-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-i686-poppler-utils-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-i686-poppler-debugsource",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
       "spdxElementId": "SPDXRef-i686-poppler",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-i686-poppler-glib-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-i686-poppler-cpp-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
@@ -1237,12 +1987,37 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
+      "spdxElementId": "SPDXRef-x86_64-poppler-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86_64-poppler-glib-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86_64-poppler-utils-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86_64-poppler-qt5-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
       "spdxElementId": "SPDXRef-x86_64-poppler-qt5-devel",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
       "spdxElementId": "SPDXRef-x86_64-poppler-qt5",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86_64-poppler-cpp-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
@@ -1282,7 +2057,17 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
+      "spdxElementId": "SPDXRef-x86_64-poppler-debugsource",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
       "spdxElementId": "SPDXRef-s390x-poppler-glib-devel",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-poppler-debugsource",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
@@ -1302,6 +2087,11 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
+      "spdxElementId": "SPDXRef-s390x-poppler-qt5-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
       "spdxElementId": "SPDXRef-s390x-poppler-utils",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
@@ -1312,12 +2102,32 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
+      "spdxElementId": "SPDXRef-s390x-poppler-utils-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-poppler-cpp-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
       "spdxElementId": "SPDXRef-s390x-poppler-cpp-devel",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
       "spdxElementId": "SPDXRef-s390x-poppler-devel",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-poppler-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-poppler-glib-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
