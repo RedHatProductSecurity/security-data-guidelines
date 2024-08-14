@@ -267,7 +267,7 @@ try:
         cwd=str(downloaddir),
         check=True,
         stdout=None,
-        args=["koji", "-p", koji_profile, "download-build", build_id],
+        args=["koji", "-p", koji_profile, "download-build", "--debuginfo", build_id],
     )
 except FileExistsError:
     pass
@@ -281,8 +281,6 @@ for rpm in rpms:
         rpm["nvr"],
         rpm["arch"],
     )
-    if name.endswith("-debuginfo") or name.endswith("-debugsource"):
-        continue
     filename = f"{downloaddir}/{name}-{version}-{release}.{arch}.rpm"
     if arch == "src":
         spdxid = "SPDXRef-SRPM"
