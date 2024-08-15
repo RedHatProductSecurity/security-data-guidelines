@@ -166,10 +166,12 @@ that present different sets of qualifiers may still point to the same object. A 
 understanding this concept that is worth quoting here can be found in
 [issue #242](https://github.com/package-url/purl-spec/issues/242) in the purl-spec:
 
-> Each package type is like a country or state and defines how you can identify and locate a place reasonably
-> uniquely. Uniquely enough that the post can deliver the mail. In a city with well[-]defined streets and street
-> numbers, you get a precise location with the street name and number and may be an apartment number. In some cases
-> you may want the address for a single person with its name, or the whole household. If someone is off the grid in
-> the bayou or some isolated mountain, crafting a proper address may be more hairy and fuzzy. Worst case I may need
-> GPS coordinates for these edge cases. I may also have many different ways to write an address or a name. Heck,
-> some folks also live in orbit on the ISS and GPS will not work there!
+!!! quote
+
+    _Each package type is like a country or state and defines how you can identify and locate a place reasonably
+    uniquely. Uniquely enough that the post can deliver the mail. In a city with well-defined streets and street
+    numbers, you get a precise location with the street name and number and may be an apartment number. In some cases
+    you may want the address for a single person with its name, or the whole household. If someone is off the grid in
+    the bayou or some isolated mountain, crafting a proper address may be more hairy and fuzzy. Worst case I may need
+    GPS coordinates for these edge cases. I may also have many different ways to write an address or a name. Heck,
+    some folks also live in orbit on the ISS and GPS will not work there!_
