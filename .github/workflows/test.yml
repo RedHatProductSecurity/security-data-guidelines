@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  tox:
+    name: Run Tox
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run all envs
+      uses: fedora-python/tox-github-action@main
+      with:
+        tox_env: ${{ matrix.tox_env }}
+    strategy:
+      matrix:
+        tox_env: [black, ruff, schema]
+    runs-on: ubuntu-latest
