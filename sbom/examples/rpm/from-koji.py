@@ -47,6 +47,21 @@ def get_license(filename):
     return license
 
 
+def get_rpm_sha256header(filename):
+    sha256 = subprocess.run(
+        stdout=subprocess.PIPE,
+        check=True,
+        args=[
+            "rpm",
+            "-qp",
+            "--qf",
+            "%{SHA256HEADER}",
+            filename,
+        ],
+    )
+    return sha256.stdout.decode("utf-8")
+
+
 def run_syft(builddir):
     syft = subprocess.run(
         cwd=os.path.dirname(builddir),
@@ -287,16 +302,8 @@ for rpm in rpms:
     else:
         spdxid = f"SPDXRef-{arch}-{name}"
 
-    sha256 = hashlib.sha256()
-    with open(filename, "rb") as rf:
-        while True:
-            data = rf.read()
-            if not data:
-                break
-            sha256.update(data)
-    digest = sha256.hexdigest()
-
     license = get_license(filename)
+    digest = get_rpm_sha256header(filename)
     package = {
         "SPDXID": spdxid,
         "name": name,
