@@ -60,6 +60,7 @@ def create_sbom(doc_id, image_id, root_package, packages, rel_type):
             ],
         },
         "name": image_id,
+        "documentNamespace": f"https://www.redhat.com/{image_id}.spdx.json",
         "packages": [root_package] + packages,
         "relationships": relationships,
     }
@@ -113,9 +114,13 @@ def generate_sboms_for_image(image_nvr):
 
         # Get license information from labels if it is set
         image_license = "NOASSERTION"
+        spdx_license_ids = {
+            "Apache License 2.0": "Apache-2.0",
+        }
         for label in image["parsed_data"]["labels"]:
             if label["name"].lower() == "license":
                 image_license = label["value"]
+                image_license = spdx_license_ids.get(image_license, image_license)
 
         # Create an index image object, but since all arch-specific images are descendents of one
         # and the same index image, we only have to create it once. Its SBOM is created at the
