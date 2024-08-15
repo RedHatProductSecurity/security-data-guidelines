@@ -9,7 +9,7 @@
     ]
   },
   "name": "openshift-pipelines-client-1.14.3-11352.el8",
-  "documentNamespace": "https://access.redhat.com/security/data/sbom/beta/spdx/openshift-pipelines-client-1.14.3-11352.el8.json",
+  "documentNamespace": "https://www.redhat.com/openshift-pipelines-client-1.14.3-11352.el8.spdx.json",
   "packages": [
     {
       "name": "4d63.com/gocheckcompilerdirectives",

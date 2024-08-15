@@ -9,7 +9,7 @@
     ]
   },
   "name": "poppler-21.01.0-19.el9",
-  "documentNamespace": "https://access.redhat.com/security/data/sbom/beta/spdx/poppler-21.01.0-19.el9.json",
+  "documentNamespace": "https://www.redhat.com/poppler-21.01.0-19.el9.spdx.json",
   "packages": [
     {
       "SPDXID": "SPDXRef-SRPM",
