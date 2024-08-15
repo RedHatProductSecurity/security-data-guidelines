@@ -354,7 +354,7 @@ spdx = {
         ],
     },
     "name": build["nvr"],
-    "documentNamespace": f"https://access.redhat.com/security/data/sbom/beta/spdx/{build['nvr']}.json",
+    "documentNamespace": f"https://www.redhat.com/{build['nvr']}.spdx.json",
     "packages": packages,
     "files": files,
     "relationships": relationships,

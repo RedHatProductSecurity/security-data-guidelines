@@ -9,7 +9,7 @@
     ]
   },
   "name": "openssl-3.0.7-18.el9_2",
-  "documentNamespace": "https://access.redhat.com/security/data/sbom/beta/spdx/openssl-3.0.7-18.el9_2.json",
+  "documentNamespace": "https://www.redhat.com/openssl-3.0.7-18.el9_2.spdx.json",
   "packages": [
     {
       "SPDXID": "SPDXRef-SRPM",

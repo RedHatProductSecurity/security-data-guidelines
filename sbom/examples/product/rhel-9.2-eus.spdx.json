@@ -9,7 +9,7 @@
     ]
   },
   "name": "RHEL 9.2 EUS",
-  "documentNamespace": "https://www.redhat.com/rhel-9.2-eus-6a659023-7a52-4792-a66c-a7f19ec14ba8.json",
+  "documentNamespace": "https://www.redhat.com/rhel-9.2-eus-6a659023-7a52-4792-a66c-a7f19ec14ba8.spdx.json",
   "packages": [
     {
       "SPDXID": "SPDXRef-RHEL-9.2-EUS",
