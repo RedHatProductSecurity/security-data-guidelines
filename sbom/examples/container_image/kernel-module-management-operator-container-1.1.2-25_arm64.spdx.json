@@ -9,6 +9,7 @@
     ]
   },
   "name": "kernel-module-management-operator-container-1.1.2-25_arm64",
+  "documentNamespace": "https://www.redhat.com/kernel-module-management-operator-container-1.1.2-25_arm64.spdx.json",
   "packages": [
     {
       "SPDXID": "SPDXRef-kernel-module-management-operator-container-arm64",
@@ -16,7 +17,7 @@
       "versionInfo": "1.1.2-25",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
-      "licenseDeclared": "Apache License 2.0",
+      "licenseDeclared": "Apache-2.0",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",

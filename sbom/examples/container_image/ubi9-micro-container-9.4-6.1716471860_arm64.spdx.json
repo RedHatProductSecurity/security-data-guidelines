@@ -9,6 +9,7 @@
     ]
   },
   "name": "ubi9-micro-container-9.4-6.1716471860_arm64",
+  "documentNamespace": "https://www.redhat.com/ubi9-micro-container-9.4-6.1716471860_arm64.spdx.json",
   "packages": [
     {
       "SPDXID": "SPDXRef-ubi9-micro-container-arm64",
