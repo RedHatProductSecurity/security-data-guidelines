@@ -241,7 +241,7 @@ def handle_srpm(filename, name):
             if not sver:
                 del spackage["versioninfo"]
             if url != "NOASSERTION":
-                purl = f"pkg:generic/{name}@{version}?download_url={url}&checksum=sha256:{digest}"
+                purl = f"pkg:generic/{name}@{version}?download_url={url}"
                 spackage["externalRefs"] = [
                     {
                         "referenceCategory": "PACKAGE-MANAGER",
@@ -309,7 +309,7 @@ for rpm in rpms:
             {
                 "referenceCategory": "PACKAGE-MANAGER",
                 "referenceType": "purl",
-                "referenceLocator": f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}&checksum=sha256:{digest}",
+                "referenceLocator": f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}",
             }
         ],
         "checksums": [

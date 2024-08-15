@@ -40,25 +40,24 @@ to not only identify a particular package (the file name already does that) but 
 package can be accessed. The emacs package example above can be represented using the following purl:
 
 ```
-pkg:rpm/redhat/emacs@27.2-9.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms&checksum=sha256:abcd1234
+pkg:rpm/redhat/emacs@27.2-9.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms
 ```
 
-The namespace value of `redhat` signifies this as an RPM package produced and distributed by Red Hat.
+The namespace value of `redhat` signifies this as an RPM package produced and distributed by Red Hat. This value
+also differentiates packages available in Red Hat repositories from those that could potentially share the same name,
+version, and repository name but were provided by a different vendor.
 
 If a purl identifies a Source RPM (SRPM, a package containing source code files that are used to build one or more
 RPMs containing binary artifacts), the `arch` qualifier must use the special value `src`. In the NEVRA file name
 pattern, SRPM packages use a `.src.rpm` suffix. Packages that are not architecture-specific must use the special
 `noarch` value in the arch qualifier.
 
-The value in the `checksum` qualifier represents the checksum digest of a given RPM file identified by the purl
-string. Note that unsigned and signed versions of these files will have different checksum values.
-
 An RPM package may also include an epoch number; if not present, it is assumed to be `0`. In a purl, epoch is
 not part of the version field, but instead is specified using the `epoch` qualifier (e.g. `epoch=1`).
 If the package version includes a non-zero epoch value, it must be specified using its own epoch qualifier:
 
 ```
-pkg:rpm/redhat/emacs@27.2-9.el9?epoch=1&arch=src&repository_id=rhel-9-for-x86_64-appstream-rpms&checksum=sha256:abcd1234
+pkg:rpm/redhat/emacs@27.2-9.el9?epoch=1&arch=src&repository_id=rhel-9-for-x86_64-appstream-rpms
 ```
 
 The `rpm` purl type suggests the use of the `repository_url` qualifier to point to the base URL of the RPM
