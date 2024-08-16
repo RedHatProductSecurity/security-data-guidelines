@@ -1,6 +1,7 @@
 site_name: Red Hat Security Data Guidelines
 site_url: https://redhatproductsecurity.github.io/security-data-guidelines/
 edit_uri: "https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/docs"
+copyright: Copyright &copy; Red Hat, Inc. &nbsp;&centerdot;&nbsp; <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
 
 theme:
   name: material
@@ -12,7 +13,7 @@ theme:
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - content.code.annotation
+    - content.code.annotate
     - content.code.copy
     - content.action.view
   language: en
@@ -46,12 +47,16 @@ extra:
       link: "mailto:secalert@redhat.com"
 
 markdown_extensions:
-  - pymdownx.highlight:
-      linenums: true
-      anchor_linenums: true
+  - pymdownx.highlight
   - pymdownx.inlinehilite  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=snippets#inlinehilite
   - pymdownx.snippets  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=snippets#snippets
   - admonition  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=#admonition
   - footnotes  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=#footnotes
+  - attr_list
+  - abbr  # https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: 🔗  # Add anchor to each title element

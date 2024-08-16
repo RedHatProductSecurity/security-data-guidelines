@@ -1,11 +1,12 @@
 import hashlib
 import json
-import koji
 import os
 import re
 import subprocess
 import sys
 from tempfile import TemporaryDirectory
+
+import koji
 
 # Script requires these RPMs: brewkoji, rpmdevtools, rpm-build
 # Run with: ./from-koji.py brew <NVR>
@@ -110,14 +111,14 @@ def run_syft(builddir):
     relationships.extend(syft_rels)
 
 
-def mock_openssl_midstream(sfn, sourceN, sname, sver):
+def mock_openssl_midstream(sfn, source, sname, sver):
     # Model a midstream repository for this.
     ext = re.sub(r".*-hobbled\.", "", sfn)
     url = f"https://openssl.org/source/openssl-{sver}.{ext}"
     # Hard-code example value for 3.0.7
     digest = "83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e"
     upackage = {
-        "SPDXID": f"SPDXRef-{sourceN}-origin",
+        "SPDXID": f"SPDXRef-{source}-origin",
         "name": sname,
         "versionInfo": sver,
         "downloadLocation": url,
@@ -132,7 +133,9 @@ def mock_openssl_midstream(sfn, sourceN, sname, sver):
             {
                 "referenceCategory": "PACKAGE-MANAGER",
                 "referenceType": "purl",
-                "referenceLocator": f"pkg:generic/{sname}@{sver}?download_url={url}&checksum=sha256:{digest}",
+                "referenceLocator": (
+                    f"pkg:generic/{sname}@{sver}?download_url={url}&checksum=sha256:{digest}",
+                ),
             }
         ],
     }
@@ -140,9 +143,9 @@ def mock_openssl_midstream(sfn, sourceN, sname, sver):
     pkgs_by_arch.setdefault(arch, []).append(upackage)
     relationships.append(
         {
-            "spdxElementId": f"SPDXRef-{sourceN}",
+            "spdxElementId": f"SPDXRef-{source}",
             "relationshipType": "GENERATED_FROM",
-            "relatedSpdxElement": f"SPDXRef-{sourceN}-origin",
+            "relatedSpdxElement": f"SPDXRef-{source}-origin",
         }
     )
 
@@ -213,7 +216,7 @@ def handle_srpm(filename, name):
             if not m:
                 continue
 
-            (sourceN, url, _, sfn) = m.groups()
+            (source, url, _, sfn) = m.groups()
 
             # Parse filename
             tarball_match = tarball_re.match(sfn)
@@ -224,7 +227,7 @@ def handle_srpm(filename, name):
 
             # Special case to fix up example for openssl
             if sname == "openssl":
-                url = mock_openssl_midstream(sfn, sourceN, sname, sver)
+                url = mock_openssl_midstream(sfn, source, sname, sver)
 
             # Calculate checksum
             sha256 = hashlib.sha256()
@@ -238,7 +241,7 @@ def handle_srpm(filename, name):
             if url is None or ":" not in url:
                 url = "NOASSERTION"
 
-            sref = f"SPDXRef-{sourceN}"
+            sref = f"SPDXRef-{source}"
             digest = sha256.hexdigest()
             spackage = {
                 "SPDXID": sref,
