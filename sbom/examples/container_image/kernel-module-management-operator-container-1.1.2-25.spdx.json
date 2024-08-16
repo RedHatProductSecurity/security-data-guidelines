@@ -49,7 +49,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "sha256:ed976a0ba418a498b05a56cb05afa0cb36a65e750771f3840b12e9bae3afb22d"
+          "checksumValue": "ed976a0ba418a498b05a56cb05afa0cb36a65e750771f3840b12e9bae3afb22d"
         }
       ]
     },
@@ -70,7 +70,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "sha256:9e74a91f532b7550ee909c6ce1636122982a5c5e32859c40c3bfe68231d31100"
+          "checksumValue": "9e74a91f532b7550ee909c6ce1636122982a5c5e32859c40c3bfe68231d31100"
         }
       ]
     },
@@ -91,7 +91,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "sha256:32a9929e6f11dfefb7a339d6767d1050cec2b24d397856cbd9b46a1bbc3f8827"
+          "checksumValue": "32a9929e6f11dfefb7a339d6767d1050cec2b24d397856cbd9b46a1bbc3f8827"
         }
       ]
     }
