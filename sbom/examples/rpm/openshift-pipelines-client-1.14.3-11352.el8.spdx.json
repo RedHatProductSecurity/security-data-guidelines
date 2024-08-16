@@ -18692,13 +18692,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&checksum=sha256:f260ee743e4d1e3a989657c6c5ad854affa200fb91b0cca3594160a17b4fe384"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f260ee743e4d1e3a989657c6c5ad854affa200fb91b0cca3594160a17b4fe384"
+          "checksumValue": "2fecb85cb8651285f78a438cae8198fb3b5287e82f373ee0cad3f214223ffbff"
         }
       ]
     },
@@ -18753,13 +18753,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=x86_64&checksum=sha256:baa0c6523d91d99dbab8043f97790c1393b73fbbc711e9b07bd83f49ad91a800"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=x86_64"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "baa0c6523d91d99dbab8043f97790c1393b73fbbc711e9b07bd83f49ad91a800"
+          "checksumValue": "c78df02e9ccadb4967787584ae67b3ae1956996d8d022364d520918b6c25e1cc"
         }
       ]
     },
@@ -18775,13 +18775,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=x86_64&checksum=sha256:e7f74f4ced31a2bd3e329e64f9c3d0a09eef34c32d44799086443f7a56e8029e"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=x86_64"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e7f74f4ced31a2bd3e329e64f9c3d0a09eef34c32d44799086443f7a56e8029e"
+          "checksumValue": "5f72374ddca9bea8fcfc652048cf56315f0f679b2dddc33378b7496195a920d6"
         }
       ]
     },
@@ -18797,13 +18797,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=s390x&checksum=sha256:c401f381568196437007f5b7ad4c28c1926954c3331f51e944f46857e46d262c"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=s390x"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c401f381568196437007f5b7ad4c28c1926954c3331f51e944f46857e46d262c"
+          "checksumValue": "07bbcfbd50a60e19baa6fc2d86dc964d260ee9b87372656f93a386c2c482b810"
         }
       ]
     },
@@ -18819,13 +18819,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=s390x&checksum=sha256:e9d93086f6388d46323996c5ae312c579e333e4bc7b6749d1a67ac052a274052"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=s390x"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e9d93086f6388d46323996c5ae312c579e333e4bc7b6749d1a67ac052a274052"
+          "checksumValue": "f6ae9fbce0566e240a6816409b8033befe09cf17df1ef4d2d99354a35790ea5c"
         }
       ]
     },
@@ -18841,13 +18841,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=ppc64le&checksum=sha256:3fd37914601456f58e41482489e3a78d895b005b761f9f6ec90253c4f734bc12"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=ppc64le"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "3fd37914601456f58e41482489e3a78d895b005b761f9f6ec90253c4f734bc12"
+          "checksumValue": "3c23d6adb0f82d907be321b6abce3aa2f98d030bf39c49acd5d4f563fba38343"
         }
       ]
     },
@@ -18863,13 +18863,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=ppc64le&checksum=sha256:816732946439dc442cdfb846be1b807b90dac7bd5c2384b1f1b825240150ed5d"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=ppc64le"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "816732946439dc442cdfb846be1b807b90dac7bd5c2384b1f1b825240150ed5d"
+          "checksumValue": "0b8b11f1bcfa9f1ded14cbca116f87b675af59e2fab40c016d28ca66b09875b1"
         }
       ]
     },
@@ -18885,13 +18885,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=aarch64&checksum=sha256:18281527bfcdc8b81153062bcece92f4ba293d343af07ff0b8dc11a3a8584d02"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=aarch64"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "18281527bfcdc8b81153062bcece92f4ba293d343af07ff0b8dc11a3a8584d02"
+          "checksumValue": "5f9c7c7248fea69a29a27a60c3347fe9ac9d4fd44b18ff97d1cfb0b5014ff789"
         }
       ]
     },
@@ -18907,13 +18907,13 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=aarch64&checksum=sha256:2c0043a7de4302e7406cdea88e7c3289c188babd1dc2742e57109d282b0f08a6"
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=aarch64"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2c0043a7de4302e7406cdea88e7c3289c188babd1dc2742e57109d282b0f08a6"
+          "checksumValue": "04abe4f02babfbb80626436b66b3b2354d22d0a2f1634d1b96337810ffb37536"
         }
       ]
     }

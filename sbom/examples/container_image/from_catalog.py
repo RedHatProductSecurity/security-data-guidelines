@@ -1,5 +1,6 @@
 import json
 import itertools
+import secrets
 import sys
 
 import requests
@@ -165,7 +166,7 @@ def generate_sboms_for_image(image_nvr):
             "checksums": [
                 {
                     "algorithm": "SHA256",
-                    "checksumValue": image_digest,
+                    "checksumValue": image_digest.lstrip("sha256:"),
                 }
             ],
         }
@@ -206,7 +207,14 @@ def generate_sboms_for_image(image_nvr):
                         "referenceLocator": rpm_purl,
                     },
                 ],
-                # We don't have data on a checksum for binary RPMs included in images; should we?
+                # We don't have checksums available from Pyxis, but they should be available
+                # during the build process. For example purposes, we'll use a mock value.
+                "checksums": [
+                    {
+                        "algorithm": "SHA256",
+                        "checksumValue": f"abcd1234{secrets.token_hex(28)}",
+                    }
+                ],
             }
             packages.append(rpm_pkg)
 

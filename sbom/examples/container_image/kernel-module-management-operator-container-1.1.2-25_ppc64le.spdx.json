@@ -28,7 +28,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "sha256:32a9929e6f11dfefb7a339d6767d1050cec2b24d397856cbd9b46a1bbc3f8827"
+          "checksumValue": "32a9929e6f11dfefb7a339d6767d1050cec2b24d397856cbd9b46a1bbc3f8827"
         }
       ]
     },
@@ -46,6 +46,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/acl@2.3.1-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234152c114c90b9d4fe27a4262f5589e224ae226b8b89f5c33953a10e2a"
+        }
       ]
     },
     {
@@ -61,6 +67,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/alternatives@1.20-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123454755319c8ff50558dd7b7d98e5b65825e09b74fdfc742cead8dbe27"
         }
       ]
     },
@@ -78,6 +90,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/audit-libs@3.0.7-103.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12342f99c214286eb685e982a0000063fcc768dd87d805568b04d9150fca"
+        }
       ]
     },
     {
@@ -93,6 +111,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/basesystem@11-13.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12340a34731c67683739a62c3a7bd66d5a3c22e61cf5b85b0ff88c566c9f"
         }
       ]
     },
@@ -110,6 +134,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/bash@5.1.8-6.el9_1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12345c76c61c5479deaaee39985654955c43f17fbd9506e2643d51bfd596"
+        }
       ]
     },
     {
@@ -125,6 +155,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/bzip2-libs@1.0.8-8.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12341300e27340280d43aab6f82c7c3f6a28b132c3bc2f4da2ec5f39153f"
         }
       ]
     },
@@ -142,6 +178,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/ca-certificates@2023.2.60_v7.0.306-90.1.el9_2?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123456780d903ff1218810aa1e60f42fec87db41871e16435e6d70b60b0f"
+        }
       ]
     },
     {
@@ -157,6 +199,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32-34.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12340a079f62c8a7ca0b4e140808fca65359a2b59d25566b48310ad21600"
         }
       ]
     },
@@ -174,6 +222,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/cracklib@2.9.6-27.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12342bf31686d1b172f9340e3c2b62a90a281175da22c9936d3e66b77f66"
+        }
       ]
     },
     {
@@ -189,6 +243,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/cracklib-dicts@2.9.6-27.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234c68a5b106b24ef5ce930d1936e372372490bcb2cd46ea39d3e1acc67"
         }
       ]
     },
@@ -206,6 +266,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/crypto-policies@20221215-1.git9a18988.el9_2.2?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12340a48529d2919e1ed7172dedf5abfe4d516242a91c2a4f3bd81654662"
+        }
       ]
     },
     {
@@ -221,6 +287,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/crypto-policies-scripts@20221215-1.git9a18988.el9_2.2?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123425c428d1cf7edc74a71599b5db5e6a85c6de69622c756869a4007dfc"
         }
       ]
     },
@@ -238,6 +310,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/curl-minimal@7.76.1-23.el9_2.6?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123464de8028fd0f4220e577a660fc5eccc6267ba2445ba7ead3821c370e"
+        }
       ]
     },
     {
@@ -253,6 +331,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/cyrus-sasl-lib@2.1.27-21.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123427b9126124f7efbe3cf37854538eccd8ba472edaffe2ac6a9ce3cbca"
         }
       ]
     },
@@ -270,6 +354,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/dbus@1.12.20-7.el9_2.1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123495ba47df55269f8686747446de5c7f1c5f81a5194f28edae60a3ae8f"
+        }
       ]
     },
     {
@@ -285,6 +375,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/dbus-broker@28-7.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12344f2bd32819bdbabc220babe052049f7a3138bf759199f06bf8fd6d02"
         }
       ]
     },
@@ -302,6 +398,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/dbus-common@1.12.20-7.el9_2.1?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12340e70067a03d3a8564609567a4d75fd0f8d92bb986e1cbe6e5cdc9ed5"
+        }
       ]
     },
     {
@@ -317,6 +419,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/dbus-libs@1.12.20-7.el9_2.1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234385266829ecb70b3ceb0008e6f145d53ac6e00d958a5214b47cd6742"
         }
       ]
     },
@@ -334,6 +442,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/dejavu-sans-fonts@2.37-18.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12347d5b3aa1520a704227587362af51e21d665f5f789eed905abdbf9848"
+        }
       ]
     },
     {
@@ -349,6 +463,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/dnf@4.14.0-5.el9_2?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234f77fc9a4c66c1f2ce2f17489c8bad3fc3d1434951a9f7442c1b8405b"
         }
       ]
     },
@@ -366,6 +486,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/dnf-data@4.14.0-5.el9_2?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12342159e725ca59ccc3ff8def578410e9085a1f01603199dcc53680b01a"
+        }
       ]
     },
     {
@@ -381,6 +507,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/elfutils-default-yama-scope@0.188-3.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123470d0f756d689fa6ab44ac905d8901b140ce9054d4066276fd8aa167c"
         }
       ]
     },
@@ -398,6 +530,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/elfutils-libelf@0.188-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234b40bb538a9ea89f4f1a5f7dc74e5164447c8b7d98bc4ff2ff9302a12"
+        }
       ]
     },
     {
@@ -413,6 +551,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/elfutils-libs@0.188-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12342fa66c17c5c0fe54b06e67bb97e75fac0825213142542366fdf0ab0f"
         }
       ]
     },
@@ -430,6 +574,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/expat@2.5.0-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234f3bd6e278854d99f9932c3619d8038329b98152a2b1f867ccd586872"
+        }
       ]
     },
     {
@@ -445,6 +595,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/file-libs@5.39-12.1.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234160a210a2d2aa52edc78dd067eb5b6bd207ac678d12e36c1f14e7991"
         }
       ]
     },
@@ -462,6 +618,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/filesystem@3.16-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234ebedde9b642749d4170ec681820d5bab58992cc7a0d7c71683e059c0"
+        }
       ]
     },
     {
@@ -477,6 +639,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/findutils@4.8.0-5.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12347958f88041cbe76b9b335b0d5be42efbd0b5ccd2cf0820ea41f7a4d7"
         }
       ]
     },
@@ -494,6 +662,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/fonts-filesystem@2.0.5-7.el9.1?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234b70a16a74544e9cec551c1fef380192de07279fbd9ac60da77ded4c0"
+        }
       ]
     },
     {
@@ -509,6 +683,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/gawk@5.1.0-6.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234d2048c8254de5c44645d3db74ec5a5f6deb524c937eb512fced1e658"
         }
       ]
     },
@@ -526,6 +706,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/gdb-gdbserver@10.2-10.1.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12342d36054ad04a27fb067571bf81eef9f31951a06216b5949f428e3ac7"
+        }
       ]
     },
     {
@@ -541,6 +727,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/gdbm-libs@1.19-4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234f0ca27cc32035399e4ea93e4160ed30574134de9308b4d4ed7597eff"
         }
       ]
     },
@@ -558,6 +750,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/glib2@2.68.4-6.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234e38fb61b62f45cb4a18e1a99bed81d42b855cd7865f692e221af39f4"
+        }
       ]
     },
     {
@@ -573,6 +771,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/glibc@2.34-60.el9_2.12?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12345f85b5a03b05b27a8cf2a21de354070961358f3d8e8180134063e20f"
         }
       ]
     },
@@ -590,6 +794,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34-60.el9_2.12?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12348fb69b7ce1db002540f3cee69b85ea091f67f53b6ed87b13cad9b027"
+        }
       ]
     },
     {
@@ -605,6 +815,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34-60.el9_2.12?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234bb24c0d177ed30501a803d88d44827854abc7ada73d9064c228c93da"
         }
       ]
     },
@@ -622,6 +838,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/gmp@6.2.0-10.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123436aae0e2f95a996c24f17421290ecfc6ee2f16f607bf09ce2e1a7360"
+        }
       ]
     },
     {
@@ -637,6 +859,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/gnupg2@2.3.3-2.el9_0?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234e0e72ff79d26733c6f0c472b7739772702677f098a530ae542bb7231"
         }
       ]
     },
@@ -654,6 +882,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/gnutls@3.7.6-21.el9_2.2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234d07d40e0e2bcad87314e6a30cf22d0b2db7db1044615a595b2708bde"
+        }
       ]
     },
     {
@@ -669,6 +903,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/gobject-introspection@1.68.0-11.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234b71cd041fd9dfa56774c521f8590f3ca335e43d6ad92700c124ad57d"
         }
       ]
     },
@@ -686,6 +926,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/gpgme@1.15.1-6.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234764c7f98bbfbeed51c21a27dfe7366137a33f23c2e40a15d6fddefb5"
+        }
       ]
     },
     {
@@ -701,6 +947,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/grep@3.6-5.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234bf4e9e23f29b2b21fad0bf1abad76c30f9574990b8dec0e1450cedfe"
         }
       ]
     },
@@ -718,6 +970,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/gzip@1.12-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12342b64f0c46a8d6fe7d8fbb523ac546d613c759be024457d731fa68f23"
+        }
       ]
     },
     {
@@ -733,6 +991,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/ima-evm-utils@1.4-4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12340fcc47636386dee755f68ee0e3b22b61bb559e289362bc8bf76ef463"
         }
       ]
     },
@@ -750,6 +1014,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/json-c@0.14-11.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12347c73a78d972dc6d4a4e9818650087dfbe86eb24e19737ae7dd2094f0"
+        }
       ]
     },
     {
@@ -765,6 +1035,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/json-glib@1.6.6-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234bb6d0bbd48d1cb92d59bba62841da63a2220f6d06a66a92ee1de1be5"
         }
       ]
     },
@@ -782,6 +1058,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/keyutils-libs@1.6.3-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234240bc2b6293a3900f5ecf5311f5a5f4303bd9db2862780a3fb11e1b6"
+        }
       ]
     },
     {
@@ -797,6 +1079,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/kmod-libs@28-7.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12345948456973819023554db49e9f6349cfc16f4b910c5a9150d4ca2d06"
         }
       ]
     },
@@ -814,6 +1102,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/krb5-libs@1.20.1-9.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234b3b8be4124c10f61cea6f04346ac1d065f5e9ef4fb32f9863025a9e8"
+        }
       ]
     },
     {
@@ -829,6 +1123,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/langpacks-core-en@3.0-16.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234df6a789a5f17608cfad13ca93638acb24986ade81a387e0a11d4c2da"
         }
       ]
     },
@@ -846,6 +1146,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/langpacks-core-font-en@3.0-16.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234aef31c173b80b5cb0e221d31c5717d947cfd6d69152cdbfe1470aae2"
+        }
       ]
     },
     {
@@ -861,6 +1167,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/langpacks-en@3.0-16.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234f4503d98604574be7bd5eac740da8626261d0b20f0eb7366313e96b1"
         }
       ]
     },
@@ -878,6 +1190,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12344d8db1fdee576ef74bc761fc5cd1e3b4d1ad142ad0c75252016ad016"
+        }
       ]
     },
     {
@@ -893,6 +1211,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libarchive@3.5.3-4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123455434bbe4c20522c0a16480b3a2624d19339fb68e474574c79d3ff0d"
         }
       ]
     },
@@ -910,6 +1234,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libassuan@2.5.5-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123420684c65ce84b3c96f40f12ef3cf867ba6ad1ddd11bbeab42593afaa"
+        }
       ]
     },
     {
@@ -925,6 +1255,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234106b00c50e0100826a763cdd9b21029d6a6029afcb197371b2284ba5"
         }
       ]
     },
@@ -942,6 +1278,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libblkid@2.37.4-11.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12346172e0c4410250fab77c9c0d3b1b3e6b3dc3efd3eca3ab73837a2602"
+        }
       ]
     },
     {
@@ -957,6 +1299,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libcap@2.48-9.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234f0c883e0fbae74d9668d2da69750d08efe347fad2740334ee08c6ded"
         }
       ]
     },
@@ -974,6 +1322,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libcap-ng@0.8.2-7.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234ec3f1b05c090303851667048928f899b4c0b7987bd4b28d432550510"
+        }
       ]
     },
     {
@@ -989,6 +1343,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libcom_err@1.46.5-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123405a40af79e0e70838a2ef8acbfea8de818a3d1c7d008b8a1df8b2168"
         }
       ]
     },
@@ -1006,6 +1366,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libcomps@0.1.18-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12349f0892bc3cb73a6316dae1cc2999b0dae9162e75359ddd4b4b73b5d0"
+        }
       ]
     },
     {
@@ -1021,6 +1387,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libcurl-minimal@7.76.1-23.el9_2.6?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123412162196aa4eab1598b7f4632d1b1979a676ea0b5e0993bc6eb6124f"
         }
       ]
     },
@@ -1038,6 +1410,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libdb@5.3.28-53.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234c7fedba2db2f501f472dcfd8cb280fd2c86414b28a168739b8c4b972"
+        }
       ]
     },
     {
@@ -1053,6 +1431,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libdnf@0.69.0-3.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12341c23ce571e96bb3ff96e930f1d6ccad47007d77224a0ee166cf24ac8"
         }
       ]
     },
@@ -1070,6 +1454,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libdnf-plugin-subscription-manager@1.29.33.2-1.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12345b8da339153943513f91e276e428bfca120ae31e6ec6f5c0a07ab0b1"
+        }
       ]
     },
     {
@@ -1085,6 +1475,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libeconf@0.4.1-3.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234df74e23c7cb20f8ad64870ec951fc276b8b9755bf3f3f7192c4b1a80"
         }
       ]
     },
@@ -1102,6 +1498,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libevent@2.1.12-6.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234c2ccf45cce161513364aab145cb9b6c832db9bae97b1d74e7f6a7b73"
+        }
       ]
     },
     {
@@ -1117,6 +1519,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libfdisk@2.37.4-11.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234e8b66b50b0e9f79e39f743f7da8073ef9f9a5753cb986f33651b2c4f"
         }
       ]
     },
@@ -1134,6 +1542,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libffi@3.4.2-7.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12348d634ddc1ec954c6858c12e235b707e7e4582b995c580cd6dab95f32"
+        }
       ]
     },
     {
@@ -1149,6 +1563,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libgcc@11.3.1-4.3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234de7f8fc50646de7b692fb1d3ab2ffa742a279b1379ed57f7864ba8b0"
         }
       ]
     },
@@ -1166,6 +1586,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libgcrypt@1.10.0-10.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123490bce49efb24b89c04537a57781ce98f52441e917ed076f337719936"
+        }
       ]
     },
     {
@@ -1181,6 +1607,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libgomp@11.3.1-4.3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234015ea07b6703b4a05803ee3dcf26578c347bf4d10236cf68bd78f896"
         }
       ]
     },
@@ -1198,6 +1630,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libgpg-error@1.42-5.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12349e969a6a239906938db1ff12935a9d8de4b6a518ed981a298df9d1a6"
+        }
       ]
     },
     {
@@ -1213,6 +1651,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libidn2@2.3.0-7.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234ca7bf3ac2bc9be9b931ce6cd8cc91de191f538836e45a986d5d794cd"
         }
       ]
     },
@@ -1230,6 +1674,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libksba@1.5.1-6.el9_1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12348ed56d00ac5d5eae30762061a3c2a0f55e412c279620de4d49ea3e0d"
+        }
       ]
     },
     {
@@ -1245,6 +1695,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libmodulemd@2.13.0-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234d1a35d83724bdbb8471aa241cf8c660c199eae8e076a773458ef9497"
         }
       ]
     },
@@ -1262,6 +1718,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libmount@2.37.4-11.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12341c23500a60998eecebd42bcb1e11cbd912d12b2b34e859ef12ed0b3d"
+        }
       ]
     },
     {
@@ -1277,6 +1739,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libnghttp2@1.43.0-5.el9_2.1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234f7d909d167b889d976a0762e66aee35a5b712f249d06f8f7b3d18e2a"
         }
       ]
     },
@@ -1294,6 +1762,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libnl3@3.7.0-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234c36b1cdbded05ec157c0c0afe2ab4082455555a0872a89ad1e9ec73c"
+        }
       ]
     },
     {
@@ -1309,6 +1783,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libpwquality@1.4.4-8.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12349983ff93fffb778304f68bbf8eca4e5e3197207c57a520c3f178b224"
         }
       ]
     },
@@ -1326,6 +1806,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/librepo@1.14.5-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234ad1de339bf7e48bc8d7e939a9a21cc907ce40f354cc17d356b239103"
+        }
       ]
     },
     {
@@ -1341,6 +1827,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libreport-filesystem@2.15.2-6.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234319bdd6b6b4651e07194612749cbb0d53a5b3083456197ce0c3d8423"
         }
       ]
     },
@@ -1358,6 +1850,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/librhsm@0.0.3-7.el9_2.1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12349541d84609ff49144fa6df5142e20d3567140933debfb25347feba15"
+        }
       ]
     },
     {
@@ -1373,6 +1871,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/librtas@2.0.2-14.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234736e43ef1777880ff11f9cf7fe64c7cc2313ba3fa86a56503e42097c"
         }
       ]
     },
@@ -1390,6 +1894,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libseccomp@2.5.2-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123449e3fe741490a15d3fcf8eabd577debbca6d6e64d01cdf4505c305c9"
+        }
       ]
     },
     {
@@ -1405,6 +1915,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libselinux@3.5-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123474f61ecbb1ed8a56f79dbbaf5f41d0bb2d2e52eb5739b9ec07a45a20"
         }
       ]
     },
@@ -1422,6 +1938,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libsemanage@3.5-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12345c14374eb31720d4d5599b437340fe4a3b8bc00359964b7ff22dfe6c"
+        }
       ]
     },
     {
@@ -1437,6 +1959,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libsepol@3.5-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234416448e4a9d75c56332b51d6b37d37c2c7f22fb306d6191a829f8910"
         }
       ]
     },
@@ -1454,6 +1982,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libsigsegv@2.13-4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123416f8bb8b54f0ebb8e69b779ad58f204631d82d0b98ad7da64d156d98"
+        }
       ]
     },
     {
@@ -1469,6 +2003,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libsmartcols@2.37.4-11.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234f160a0e2b27b8105235b33c02e9edfaf377f8f7479c466b814d4d178"
         }
       ]
     },
@@ -1486,6 +2026,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libsolv@0.7.22-4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12342f6a0e20f48774b793acac5357af74de328fbbfe08f07e9a0c66c15f"
+        }
       ]
     },
     {
@@ -1501,6 +2047,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libstdc++@11.3.1-4.3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234401f34b991f0f4c681eb764bdac6156ed6af21c9482e20fa96126a08"
         }
       ]
     },
@@ -1518,6 +2070,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libtasn1@4.16.0-8.el9_1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234f4577bb40d85943d990fcbab080487e2e201ce30e9718667fde9e700"
+        }
       ]
     },
     {
@@ -1533,6 +2091,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libunistring@0.9.10-15.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12348870a3511c989f6c7c85aa113185c9709f9d2a2b0feb687ee270a5d3"
         }
       ]
     },
@@ -1550,6 +2114,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libuser@0.63-12.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12347a053afb76901bb2e216967ac2b88b153af60c2b4d774968feee4a3e"
+        }
       ]
     },
     {
@@ -1565,6 +2135,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libutempter@1.2.1-6.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12344feecb04dad6db2facd0800c4847b1cbf916b5082a80b388d18c679a"
         }
       ]
     },
@@ -1582,6 +2158,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libuuid@2.37.4-11.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234911c7f4a02d4a8e6bbf986e9645a91805c13a3741088b5681e9574c8"
+        }
       ]
     },
     {
@@ -1597,6 +2179,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libverto@0.3.2-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123492be4998f8bf8e4da7f06f697a6ede4a127d41823580ca92a29798f7"
         }
       ]
     },
@@ -1614,6 +2202,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libxcrypt@4.4.18-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234730270f7abdc548be46f657ca0e26c058a6a05095cf62e3889f4aa0c"
+        }
       ]
     },
     {
@@ -1629,6 +2223,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libxml2@2.9.13-3.el9_2.1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234a93437e5f61aa7bfedea5023b4fbccbc8d4e2aebf915dafbd73ff9a0"
         }
       ]
     },
@@ -1646,6 +2246,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libyaml@0.2.5-7.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12341b42bf05a8400c4166c28f5fb97eaf6524c519326798e6069d589436"
+        }
       ]
     },
     {
@@ -1661,6 +2267,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/libzstd@1.5.1-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234b2f91bebb64de930ee67cc99defc2ca75e889312104822dd06af8436"
         }
       ]
     },
@@ -1678,6 +2290,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/lua-libs@5.4.4-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12348894db5aff14429ab34e19c8399b1f724b9691b7d5c6b6934dd8dfda"
+        }
       ]
     },
     {
@@ -1693,6 +2311,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/lz4-libs@1.9.3-5.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12344efbd3e794fa67f6fe5cf2f125699d0521c1c623159998a353aa26be"
         }
       ]
     },
@@ -1710,6 +2334,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/mpfr@4.1.0-7.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234c8f168e3a9689db383522f65bec639735543f71a01c9bd12d2d10cfa"
+        }
       ]
     },
     {
@@ -1725,6 +2355,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2-8.20210508.el9_2.1?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234347316e9dee70c12c55c389277a14b494afab0628afc7f4f97c06cae"
         }
       ]
     },
@@ -1742,6 +2378,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2-8.20210508.el9_2.1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234c28f17e0e00d19c6dda9bb5be9b86f01eb120c1a7f748b89472db0b6"
+        }
       ]
     },
     {
@@ -1757,6 +2399,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/nettle@3.8-3.el9_0?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234a7e024ffab01cf5555459109b8b4bcb4f24a6ff73c89653aa7d7c0a4"
         }
       ]
     },
@@ -1774,6 +2422,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/npth@1.6-8.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123438176b1945e842617d5616b63521d899da86d37a2c788a87b674992c"
+        }
       ]
     },
     {
@@ -1789,6 +2443,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openldap@2.6.2-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234ae571114a8ba8221b40a45e211a8537172eda0b52ef78ebe69b84aab"
         }
       ]
     },
@@ -1806,6 +2466,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openldap-compat@2.6.2-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123454f1851d3d1bccf2c386605a151157b4e75ae44fafc08a9f8b4cf3f1"
+        }
       ]
     },
     {
@@ -1821,6 +2487,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234a3549c1083e403d26f531d91152a9711541f9bf8324dd48cfffe4651"
         }
       ]
     },
@@ -1838,6 +2510,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123450843b36b1405217aebf3a01043fc65d0a24eab1606b949f08c76967"
+        }
       ]
     },
     {
@@ -1853,6 +2531,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/p11-kit@0.24.1-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234fda6667c6b139922bf642ed6416a9bbfd7b3ec9eaef2c0996e1967f9"
         }
       ]
     },
@@ -1870,6 +2554,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/p11-kit-trust@0.24.1-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234afa752900725c222c89dc4e3949e59e15ab517e27b03bf81f0f8b60f"
+        }
       ]
     },
     {
@@ -1885,6 +2575,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/pam@1.5.1-14.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12347c68c50d6f3a2949ec3b4ffe24766fb4365fd4a2c786d91f1d4acac3"
         }
       ]
     },
@@ -1902,6 +2598,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/passwd@0.80-12.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123425064b3f85fb37005adebda39f9e9d9efba48d9308dc8830fe07fe87"
+        }
       ]
     },
     {
@@ -1917,6 +2619,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/pcre@8.44-3.el9.3?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234002b37a9de8fdfeff443955b773737e781bf269fbe6de5043d6f01b5"
         }
       ]
     },
@@ -1934,6 +2642,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/pcre2@10.40-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234930e649b5a11ec44aa91116af2e61939019a62d12404cff7693dcfb3"
+        }
       ]
     },
     {
@@ -1949,6 +2663,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40-2.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234fd536acbd774b51d0371a4a05451c003059922e7b95684dba27a80fa"
         }
       ]
     },
@@ -1966,6 +2686,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/popt@1.18-8.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234df2428ee2a43699bbf4aa142678a32bf42145e54aeb35946d7aa6959"
+        }
       ]
     },
     {
@@ -1981,6 +2707,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3@3.9.16-1.el9_2.3?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12344112a7f61025223c6cd6eaa230db157805d9355fe1e7fe6fa46ab398"
         }
       ]
     },
@@ -1998,6 +2730,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-chardet@4.0.0-5.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123408d1c7df0f0de8feb222d50fa8cd96e243cdfb44bedbb960e3a9ade7"
+        }
       ]
     },
     {
@@ -2013,6 +2751,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-cloud-what@1.29.33.2-1.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12347a175d266182c4ae619777b12ec0815c283679847616dfccdb3955a5"
         }
       ]
     },
@@ -2030,6 +2774,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-dateutil@2.8.1-6.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234f3cc7da1bef2f35aef7261c0ecd4cc2750d60dd262cfadc374462c49"
+        }
       ]
     },
     {
@@ -2045,6 +2795,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-dbus@1.2.18-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123495cf51dfc1b666fdbf6abfd0855574ca5e838633536aac89c9a3cb32"
         }
       ]
     },
@@ -2062,6 +2818,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-decorator@4.4.2-6.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234dd4f696b95a9b8322ae1c31628cb238e777ebd2b4c7e1eaf58858e4d"
+        }
       ]
     },
     {
@@ -2077,6 +2839,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-dnf@4.14.0-5.el9_2?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234c472a4456d5f9491d15adadc0a25db48e021f8876460701b8879d164"
         }
       ]
     },
@@ -2094,6 +2862,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-dnf-plugins-core@4.3.0-5.el9_2?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12348f57258929af71d0377a4267fd06d3330d35273126f0d14b6c0cdc0b"
+        }
       ]
     },
     {
@@ -2109,6 +2883,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-ethtool@0.15-2.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234314c13baf2c9b626646a86b74903f746e837359c442c4c194d5361aa"
         }
       ]
     },
@@ -2126,6 +2906,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-gobject-base@3.40.1-6.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12344bb18d387719732329ac013de9582ede4a5accbc7959b45bcaa43db3"
+        }
       ]
     },
     {
@@ -2141,6 +2927,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-gobject-base-noarch@3.40.1-6.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12345ff1d7b107119d65eb8d869a211b76ca01ec7529e0df00a536a48322"
         }
       ]
     },
@@ -2158,6 +2950,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-gpg@1.15.1-6.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234afcf8e63481ecf3651e2eb8d7eae26f98d82e7586d1d8550e6998449"
+        }
       ]
     },
     {
@@ -2173,6 +2971,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-hawkey@0.69.0-3.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12349f0d0cbb62f65b4b131e182e65a4082110d42a5c2aa95c193e327917"
         }
       ]
     },
@@ -2190,6 +2994,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-idna@2.10-7.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234b6499b488dbe298c1970a2437777028bf08e196236ce7a43c3cc6b07"
+        }
       ]
     },
     {
@@ -2205,6 +3015,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-iniparse@0.4-45.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12344e7e4629695eed074d46fffad25d7b6e94ef3f2aeb4d9ed46c7367f9"
         }
       ]
     },
@@ -2222,6 +3038,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-inotify@0.9.6-25.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12342ce09d2c1815a277742eaeab0a2f7ab89d69963b048268df216fb39f"
+        }
       ]
     },
     {
@@ -2237,6 +3059,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-libcomps@0.1.18-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12343cc64f754a1be08ba336b164ca50941b246bee55268ca27e0b594e78"
         }
       ]
     },
@@ -2254,6 +3082,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-libdnf@0.69.0-3.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234efec7b578530af40cd404d64790b822cf2561a7acdd4602a37db113e"
+        }
       ]
     },
     {
@@ -2269,6 +3103,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-librepo@1.14.5-1.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12341bc56af5460e2415b3561a443ec3d214cb94fbc300c64bb0a26a95e2"
         }
       ]
     },
@@ -2286,6 +3126,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-libs@3.9.16-1.el9_2.3?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12348d50e67bd9608afe3de97839fc5398c33887a0a612c921ff351126fa"
+        }
       ]
     },
     {
@@ -2301,6 +3147,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-pip-wheel@21.2.3-6.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234235dee2c00d35e9ab06f74cc7eb1b98b1da91b66716821631a29427a"
         }
       ]
     },
@@ -2318,6 +3170,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-pysocks@1.7.1-12.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12347ca0568762bc2cdca2b51e4a25c68c7d3c101b50810526b8a7d9e0aa"
+        }
       ]
     },
     {
@@ -2333,6 +3191,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-requests@2.25.1-7.el9_2?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12347064071d06dd7489408faa864b160e4ba649efbc695d164d6cc1b7ae"
         }
       ]
     },
@@ -2350,6 +3214,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-rpm@4.16.1.3-24.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123441f394363cd68a5ff00f388538d70397af41cb3f733210e0faac4249"
+        }
       ]
     },
     {
@@ -2365,6 +3235,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-setuptools@53.0.0-12.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12349cfb58c62d3e8ed0314aaadfcd148ecfd69b330c3ef9e874688cd7c6"
         }
       ]
     },
@@ -2382,6 +3258,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-setuptools-wheel@53.0.0-12.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123480f2296b33462b587d70217007f520dc33e664a016372d5fa9aa216d"
+        }
       ]
     },
     {
@@ -2397,6 +3279,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-six@1.15.0-9.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234248a2772eee33f76e31a64214102d7a98e4fa45871cd7d77a5868c96"
         }
       ]
     },
@@ -2414,6 +3302,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-subscription-manager-rhsm@1.29.33.2-1.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123467ec5e160cfd76aaf8fdc9d16e938cf79dfb995aeac1320be38fb078"
+        }
       ]
     },
     {
@@ -2429,6 +3323,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-systemd@234-18.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12347b71e90701a516f59d0bee633e65dc8910ae88d8b3ed5671e51f20d1"
         }
       ]
     },
@@ -2446,6 +3346,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/python3-urllib3@1.26.5-3.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234e5b20092958dc36a19cd3a923884837fe8237608fad12d9f0e7af53f"
+        }
       ]
     },
     {
@@ -2461,6 +3367,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/readline@8.1-4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234221b6e4fa45e9067ad1c1c0de436150dfc93972c46d3ac9d124aecb8"
         }
       ]
     },
@@ -2478,6 +3390,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/redhat-release@9.2-0.13.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123488c0e44b5d3a046b5992d3cac7df9804b3b97b45752422e81b1698a8"
+        }
       ]
     },
     {
@@ -2493,6 +3411,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/rootfiles@8.1-31.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123409a33572e92dae4dd1557585fc7e6edb28866585c8a788267952d401"
         }
       ]
     },
@@ -2510,6 +3434,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/rpm@4.16.1.3-24.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234578d93e4160dd289e74e8e654a3b7f3ccc55e6d069eb4b45f2b74eb4"
+        }
       ]
     },
     {
@@ -2525,6 +3455,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/rpm-build-libs@4.16.1.3-24.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234c21879cc18cb5b0eb0ca97ff9487ecdc5af722a285d5ae652f73fdac"
         }
       ]
     },
@@ -2542,6 +3478,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/rpm-libs@4.16.1.3-24.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234d91717fe26ccc28f61288f7018ba64bb54d058780290f4bc28e3054b"
+        }
       ]
     },
     {
@@ -2557,6 +3499,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/rpm-sign-libs@4.16.1.3-24.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234323aa7abadf468e70f21197e9d937231fc2a4ab6f899df44479ddd53"
         }
       ]
     },
@@ -2574,6 +3522,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/sed@4.8-9.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234a53350e56feff1083505f645af72dbae517f51e593180155528a6427"
+        }
       ]
     },
     {
@@ -2589,6 +3543,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/setup@2.13.7-9.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234bce26b3278569edd55417f4c913d59ff1bd2ffd1a526f60ecc2b7591"
         }
       ]
     },
@@ -2606,6 +3566,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/shadow-utils@4.9-6.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123482347c1d4f76ea094ca0c9b684c8da29a8bbe7e7830d79d3d239bbad"
+        }
       ]
     },
     {
@@ -2621,6 +3587,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/sqlite-libs@3.34.1-6.el9_2.1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234e49a69e40c7ad967196452b0f9d1d2b22b35e940d8a18468df0b9dda"
         }
       ]
     },
@@ -2638,6 +3610,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/subscription-manager@1.29.33.2-1.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234fea3ee1a5fdc3f5a51e1f96229adaa017b0e02d1d122c4403444fe2f"
+        }
       ]
     },
     {
@@ -2653,6 +3631,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/subscription-manager-rhsm-certificates@20220623-1.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234868ed32af6cef663e6e45192fd70418cc64096bf8c24f56c64654d2a"
         }
       ]
     },
@@ -2670,6 +3654,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/systemd@252-14.el9_2.5?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12349af8b1a35beb35feb1c662bb60af09aecc400a7d6d568cd3e5966e5c"
+        }
       ]
     },
     {
@@ -2685,6 +3675,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/systemd-libs@252-14.el9_2.5?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234d24a14f2cc712d55ed26f944d45ee920cb0de0113ae5ba9502504736"
         }
       ]
     },
@@ -2702,6 +3698,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/systemd-pam@252-14.el9_2.5?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12341ead477c87e3a753b55fd26d47cdc3772375804c1082b9fcee8d6f4d"
+        }
       ]
     },
     {
@@ -2717,6 +3719,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/systemd-rpm-macros@252-14.el9_2.5?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234a74d82c2e290e8ce24044d736eac74e78011d2174440e45e9db6e270"
         }
       ]
     },
@@ -2734,6 +3742,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/tar@1.34-6.el9_1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12348ca16f7df2e382dc819ad66cbb8899641d183721a1f0a6981390dde2"
+        }
       ]
     },
     {
@@ -2749,6 +3763,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/tpm2-tss@3.0.3-8.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12349b61c60c25b494301bd5755bb2272a006c0a2aa2fb2c809da114c667"
         }
       ]
     },
@@ -2766,6 +3786,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/tzdata@2023d-1.el9?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12349dd4f1f388cdcff14fac277797c0cdcf87fed494f0e2059732d8957e"
+        }
       ]
     },
     {
@@ -2781,6 +3807,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/usermode@1.114-4.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123474f5cf8c2de31cb70abb134e37af359288c9ab555e8178a3c6e356dc"
         }
       ]
     },
@@ -2798,6 +3830,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/util-linux@2.37.4-11.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234db6cf9c4145537661c61906f26c437206f07211bf204fb60202bf502"
+        }
       ]
     },
     {
@@ -2813,6 +3851,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/util-linux-core@2.37.4-11.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12348eff4ba4a20a6754ce8834ff494752d3710e5f1801012f6f92ab5492"
         }
       ]
     },
@@ -2830,6 +3874,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/vim-minimal@8.2.2637-20.el9_1?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123491a931b20f93858315ae0449ae1e44bce75f2eeb68325ad02bc972a6"
+        }
       ]
     },
     {
@@ -2845,6 +3895,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/virt-what@1.25-3.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234f8b714189372efe0fac8699bc327720cdfb9b969370262da7c6668c1"
         }
       ]
     },
@@ -2862,6 +3918,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/which@2.21-28.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12341114ed94fc8fc37f16fec2f34d09639188b5f2a91d7e6775da4e76dc"
+        }
       ]
     },
     {
@@ -2877,6 +3939,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/xz-libs@5.2.5-8.el9_0?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234529956615529bd948d90301a8ac850a11a50a601f557b51cd82e1a6a"
         }
       ]
     },
@@ -2894,6 +3962,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/yum@4.14.0-5.el9_2?arch=noarch&repository_id=rhel-9-for-ppc64le-baseos-rpms"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234a673cab4cc4fce124c97b618755754e3ae18d682967ab3987ffe4fc9"
+        }
       ]
     },
     {
@@ -2909,6 +3983,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/zlib@1.2.11-39.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234967e67d309887d10503c1727f0efe6bc1cab9522e8e5a73b720a146d"
         }
       ]
     }

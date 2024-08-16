@@ -47,6 +47,21 @@ def get_license(filename):
     return license
 
 
+def get_rpm_sha256header(filename):
+    sha256 = subprocess.run(
+        stdout=subprocess.PIPE,
+        check=True,
+        args=[
+            "rpm",
+            "-qp",
+            "--qf",
+            "%{SHA256HEADER}",
+            filename,
+        ],
+    )
+    return sha256.stdout.decode("utf-8")
+
+
 def run_syft(builddir):
     syft = subprocess.run(
         cwd=os.path.dirname(builddir),
@@ -241,7 +256,7 @@ def handle_srpm(filename, name):
             if not sver:
                 del spackage["versioninfo"]
             if url != "NOASSERTION":
-                purl = f"pkg:generic/{name}@{version}?download_url={url}&checksum=sha256:{digest}"
+                purl = f"pkg:generic/{name}@{version}?download_url={url}"
                 spackage["externalRefs"] = [
                     {
                         "referenceCategory": "PACKAGE-MANAGER",
@@ -287,16 +302,8 @@ for rpm in rpms:
     else:
         spdxid = f"SPDXRef-{arch}-{name}"
 
-    sha256 = hashlib.sha256()
-    with open(filename, "rb") as rf:
-        while True:
-            data = rf.read()
-            if not data:
-                break
-            sha256.update(data)
-    digest = sha256.hexdigest()
-
     license = get_license(filename)
+    digest = get_rpm_sha256header(filename)
     package = {
         "SPDXID": spdxid,
         "name": name,
@@ -309,7 +316,7 @@ for rpm in rpms:
             {
                 "referenceCategory": "PACKAGE-MANAGER",
                 "referenceType": "purl",
-                "referenceLocator": f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}&checksum=sha256:{digest}",
+                "referenceLocator": f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}",
             }
         ],
         "checksums": [
