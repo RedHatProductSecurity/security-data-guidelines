@@ -1,0 +1,588 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT-3",
+  "creationInfo": {
+    "created": "2006-08-14T02:34:56-06:00",
+    "creators": [
+      "Tool: example SPDX document only"
+    ]
+  },
+  "name": "ubi9-micro-container-9.4-6.1716471860_arm64",
+  "documentNamespace": "https://www.redhat.com/ubi9-micro-container-9.4-6.1716471860_arm64.spdx.json",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-ubi9-micro-container-arm64",
+      "name": "ubi9-micro-container_arm64",
+      "versionInfo": "9.4-6.1716471860",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi-micro@sha256:1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=arm64"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256:1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=arm64"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c72c705fe4e9de2e065a817be2fbf1b6406010610532243727fdc3042227c71b"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-basesystem",
+      "name": "basesystem",
+      "versionInfo": "11",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "basesystem-11-13.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/basesystem@11-13.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234961ac3aea11852c518e100f66a873532976c9f4d7d48c8a16bd287a6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-bash",
+      "name": "bash",
+      "versionInfo": "5.1.8",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "bash-5.1.8-9.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/bash@5.1.8-9.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123441e067982c774584ab2c0bd67e3629073d4b759da342ec7ac9e0f84e"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-coreutils-single",
+      "name": "coreutils-single",
+      "versionInfo": "8.32",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "coreutils-single-8.32-35.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/coreutils-single@8.32-35.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12343d223f7cc9a0b6ec2519e1cb1697ca52e9841c40061bd8376b0e09ad"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-filesystem",
+      "name": "filesystem",
+      "versionInfo": "3.16",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "filesystem-3.16-2.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/filesystem@3.16-2.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234642695e6a99eb8a216abfcff26022656e0cc1047ee6ada12429445a2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-glibc",
+      "name": "glibc",
+      "versionInfo": "2.34",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "glibc-2.34-100.el9_4.2.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/glibc@2.34-100.el9_4.2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234e60aa77bf4dd3adef55b447946450180753cf4541c481c16e2e08ed3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-glibc-common",
+      "name": "glibc-common",
+      "versionInfo": "2.34",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "glibc-common-2.34-100.el9_4.2.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/glibc-common@2.34-100.el9_4.2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123401cca90994bd58d92ba3c21d75a5278df55080266d79d5a989dd0641"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-glibc-minimal-langpack",
+      "name": "glibc-minimal-langpack",
+      "versionInfo": "2.34",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "glibc-minimal-langpack-2.34-100.el9_4.2.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/glibc-minimal-langpack@2.34-100.el9_4.2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234ff979c56ac259e816afb28ca9687186053895ff22d7f21ee845c36d9"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-libacl",
+      "name": "libacl",
+      "versionInfo": "2.3.1",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libacl-2.3.1-4.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libacl@2.3.1-4.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234cb349e9b2cdcf75e85f7725a7c568e76a65e9938e41ad488750da5b6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-libattr",
+      "name": "libattr",
+      "versionInfo": "2.5.1",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libattr-2.5.1-3.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libattr@2.5.1-3.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123403984e547281fbac3b9e0b9a994803df1e0715a7adc4d60c8a112337"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-libcap",
+      "name": "libcap",
+      "versionInfo": "2.48",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libcap-2.48-9.el9_2.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libcap@2.48-9.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234757883a58385774428c799408924004a27ab0e62435b466762a0c917"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-libgcc",
+      "name": "libgcc",
+      "versionInfo": "11.4.1",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libgcc-11.4.1-3.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libgcc@11.4.1-3.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234bf8cb06a292f939fc5e1460db337ee2f52f6922255aba32b09da1df6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-libselinux",
+      "name": "libselinux",
+      "versionInfo": "3.6",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libselinux-3.6-1.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libselinux@3.6-1.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234231afdfe9f3ffd1eedfd704839bf729190555a8fc3288079bd13f841"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-libsepol",
+      "name": "libsepol",
+      "versionInfo": "3.6",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "libsepol-3.6-1.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/libsepol@3.6-1.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234670c36de2c86b68a7d6a86f9fafa9c2eedfac9cb939fc6e3d9f4e9ac"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-ncurses-base",
+      "name": "ncurses-base",
+      "versionInfo": "6.2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "ncurses-base-6.2-10.20210508.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/ncurses-base@6.2-10.20210508.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234890611286006ea9a02e1ff73daa317fdc7d504fba2f9a9045ff4b4df"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-ncurses-libs",
+      "name": "ncurses-libs",
+      "versionInfo": "6.2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "ncurses-libs-6.2-10.20210508.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/ncurses-libs@6.2-10.20210508.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12348badc4943e4f7af4d45ab2f6f2262b11a6b018ccf7b27d10152c346c"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-pcre2",
+      "name": "pcre2",
+      "versionInfo": "10.40",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "pcre2-10.40-5.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/pcre2@10.40-5.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd123413c6afc29a680cb9ba9858e7c948dc76cdc089bbf13b140164d89505"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-pcre2-syntax",
+      "name": "pcre2-syntax",
+      "versionInfo": "10.40",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "pcre2-syntax-10.40-5.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/pcre2-syntax@10.40-5.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234d9a3245426447c7e59c5a5ecc8a85b873ed03b9cf163ba2d5602a257"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-redhat-release",
+      "name": "redhat-release",
+      "versionInfo": "9.4",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "redhat-release-9.4-0.4.el9.aarch64.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/redhat-release@9.4-0.4.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12349ceed03b796b1066cbb8f9b4400734bd3ffb09a05cd064a46e4dc121"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-setup",
+      "name": "setup",
+      "versionInfo": "2.13.7",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "setup-2.13.7-10.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/setup@2.13.7-10.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd1234981e2d3aceaf431c2190c45f1d04542d399098ee4ce328e1140d6a63"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-tzdata",
+      "name": "tzdata",
+      "versionInfo": "2024a",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "tzdata-2024a-1.el9.noarch.rpm",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/tzdata@2024a-1.el9?arch=noarch&repository_id=rhel-9-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "abcd12342278cd67e87e85dd59bcc38bbbedf5ce8cbe9495e252469626976e50"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT-3",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-basesystem"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-bash"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-coreutils-single"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-filesystem"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-glibc"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-glibc-common"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-glibc-minimal-langpack"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-libacl"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-libattr"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-libcap"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-libgcc"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-libselinux"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-libsepol"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-ncurses-base"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-ncurses-libs"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-pcre2"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-pcre2-syntax"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-aarch64-redhat-release"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-setup"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-noarch-tzdata"
+    }
+  ]
+}
