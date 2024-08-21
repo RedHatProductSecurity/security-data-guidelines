@@ -1,7 +1,7 @@
 {
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
-  "SPDXID": "SPDXRef-DOCUMENT-1",
+  "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
     "created": "2006-08-14T02:34:56-06:00",
     "creators": [
@@ -480,7 +480,7 @@
   ],
   "relationships": [
     {
-      "spdxElementId": "SPDXRef-DOCUMENT-1",
+      "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-ppc64le"
     },
