@@ -1,4 +1,3 @@
-import itertools
 import json
 import secrets
 import sys
@@ -33,10 +32,10 @@ def get_rpms(image_id):
     return sorted(response.json()["rpms"], key=lambda rpm: rpm["nvra"])
 
 
-def create_sbom(doc_id, image_id, root_package, packages, rel_type):
+def create_sbom(image_id, root_package, packages, rel_type):
     relationships = [
         {
-            "spdxElementId": f"SPDXRef-DOCUMENT-{doc_id}",
+            "spdxElementId": "SPDXRef-DOCUMENT",
             "relationshipType": "DESCRIBES",
             "relatedSpdxElement": root_package["SPDXID"],
         }
@@ -53,7 +52,7 @@ def create_sbom(doc_id, image_id, root_package, packages, rel_type):
     spdx = {
         "spdxVersion": "SPDX-2.3",
         "dataLicense": "CC0-1.0",
-        "SPDXID": f"SPDXRef-DOCUMENT-{doc_id}",
+        "SPDXID": "SPDXRef-DOCUMENT",
         "creationInfo": {
             "created": "2006-08-14T02:34:56-06:00",
             "creators": [
@@ -77,7 +76,6 @@ def generate_sboms_for_image(image_nvr):
 
     image_index_pkg = None
     per_arch_images = []
-    doc_id_generator = itertools.count(1)  # Reserve 0 for the image list SBOM.
 
     for image in get_image_data(image_nvr):
         packages = []
@@ -219,7 +217,6 @@ def generate_sboms_for_image(image_nvr):
             packages.append(rpm_pkg)
 
         create_sbom(
-            doc_id=next(doc_id_generator),
             image_id=f"{image_nvr}_" f"{image['architecture']}",
             root_package=image_pkg,
             packages=packages,
@@ -227,7 +224,6 @@ def generate_sboms_for_image(image_nvr):
         )
 
     create_sbom(
-        doc_id=0,
         image_id=image_nvr,
         root_package=image_index_pkg,
         packages=per_arch_images,

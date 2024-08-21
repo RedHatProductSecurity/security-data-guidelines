@@ -1,7 +1,7 @@
 {
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
-  "SPDXID": "SPDXRef-DOCUMENT-3",
+  "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
     "created": "2006-08-14T02:34:56-06:00",
     "creators": [
@@ -3995,7 +3995,7 @@
   ],
   "relationships": [
     {
-      "spdxElementId": "SPDXRef-DOCUMENT-3",
+      "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-ppc64le"
     },
