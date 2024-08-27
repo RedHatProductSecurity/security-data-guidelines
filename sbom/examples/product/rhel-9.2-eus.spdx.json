@@ -1,22 +1,22 @@
 {
   "spdxVersion": "SPDX-2.3",
-  "dataLicense": "CC0-1.0",
+  "dataLicense": "CC-BY-4.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
-    "created": "2006-08-14T02:34:56-06:00",
+    "created": "2006-08-14T02:34:56Z",
     "creators": [
       "Tool: example SPDX document only"
     ]
   },
   "name": "RHEL 9.2 EUS",
-  "documentNamespace": "https://www.redhat.com/rhel-9.2-eus-6a659023-7a52-4792-a66c-a7f19ec14ba8.spdx.json",
+  "documentNamespace": "https://www.redhat.com/rhel-9.2-eus.spdx.json",
   "packages": [
     {
       "SPDXID": "SPDXRef-RHEL-9.2-EUS",
       "name": "Red Hat Enterprise Linux",
       "versionInfo": "9.2 EUS",
       "supplier": "Organization: Red Hat",
-      "downloadLocation": "https://developers.redhat.com/products/rhel/download",
+      "downloadLocation": "NOASSERTION",
       "licenseConcluded": "NOASSERTION",
       "externalRefs": [
         {

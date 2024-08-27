@@ -83,4 +83,6 @@ for pkg in sbom["packages"]:
     pkg["externalRefs"] = sorted(new_refs, key=lambda ref: ref["referenceLocator"])
 
 with open(f"{sbom_name}.spdx.json", "w") as fp:
-    json.dump(sbom, fp, indent=2)
+    # Add an extra newline at the end since a lot of editors add one when you save a file,
+    # and these files get opened and read in editors a lot.
+    fp.write(json.dumps(sbom, indent=2) + "\n")

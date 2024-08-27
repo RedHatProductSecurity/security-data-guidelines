@@ -381,10 +381,10 @@ packages.extend([package for arch in pkgs_by_arch for package in pkgs_by_arch[ar
 
 spdx = {
     "spdxVersion": "SPDX-2.3",
-    "dataLicense": "CC0-1.0",
+    "dataLicense": "CC-BY-4.0",
     "SPDXID": "SPDXRef-DOCUMENT",
     "creationInfo": {
-        "created": "2006-08-14T02:34:56-06:00",
+        "created": "2006-08-14T02:34:56Z",
         "creators": [
             "Tool: example SPDX document only",
         ],
@@ -397,4 +397,6 @@ spdx = {
 }
 
 with open(f"{build_id}.spdx.json", "w") as fp:
-    json.dump(spdx, fp, indent=2)
+    # Add an extra newline at the end since a lot of editors add one when you save a file,
+    # and these files get opened and read in editors a lot.
+    fp.write(json.dumps(spdx, indent=2) + "\n")
