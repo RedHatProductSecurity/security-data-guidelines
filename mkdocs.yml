@@ -36,6 +36,7 @@ theme:
 
 nav:
   - Home: "index.md"
+  - SBOM: "sbom.md"
   - purl: "purl.md"
 
 plugins:

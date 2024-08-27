@@ -14,8 +14,6 @@ catalog_url = "https://catalog.redhat.com/api/containers/v1/"
 nvr_api = catalog_url + "images/nvr/"
 rpm_manifest_api = catalog_url + "images/id/{catalog_image_id}/rpm-manifest"
 
-rpm_sbom_url = "https://access.redhat.com/security/data/sbom/v1/rpm/"
-
 
 def get_image_data(image_nvr):
     response = requests.get(nvr_api + image_nvr)
