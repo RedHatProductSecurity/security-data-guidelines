@@ -7,7 +7,7 @@ different contexts and ecosystems.
 
 Red Hat uses purl to identify software components in our
 [CSAF](https://www.redhat.com/en/blog/csaf-vex-documents-now-generally-available) advisory and
-[VEX](https://www.redhat.com/en/blog/vulnerability-exploitability-exchange-vex-beta-files-now-available) files as
+[VEX](https://www.redhat.com/en/blog/red-hat-vex-files-cves-are-now-generally-available) files as
 well as our
 [SBOM](https://www.redhat.com/en/blog/future-red-hat-security-data?channel=/en/blog/channel/security) files. We will
 continue expanding our use of purl across additional security-related metadata files and software solutions in the
