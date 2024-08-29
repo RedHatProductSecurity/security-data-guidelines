@@ -71,7 +71,7 @@ The repository ID is a unique value that identifies an RPM repository from where
 ID of the repository is the same and the other attributes of the RPM match, such packages even though sourced from
 varying URLs can be considered the same for the purposes of simple identification. Given a repository ID, you can
 resolve it to a URL using your chosen base URL and a relative path of that repository that exists in the
-[repository-to-cpe.json mapping file](https://access.redhat.com/security/data/meta/v1/repository-to-cpe.json). This
+[repository-to-cpe.json mapping file](https://security.access.redhat.com/data/meta/v1/repository-to-cpe.json). This
 file maps repository IDs to both relative URL paths and CPE IDs that represent product versions in all of Red Hat's
 security data files.
 
