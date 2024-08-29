@@ -7,7 +7,7 @@ different contexts and ecosystems.
 
 Red Hat uses purl to identify software components in our
 [CSAF](https://www.redhat.com/en/blog/csaf-vex-documents-now-generally-available) advisory and
-[VEX](https://www.redhat.com/en/blog/vulnerability-exploitability-exchange-vex-beta-files-now-available) files as
+[VEX](https://www.redhat.com/en/blog/red-hat-vex-files-cves-are-now-generally-available) files as
 well as our
 [SBOM](https://www.redhat.com/en/blog/future-red-hat-security-data?channel=/en/blog/channel/security) files. We will
 continue expanding our use of purl across additional security-related metadata files and software solutions in the
@@ -71,7 +71,7 @@ The repository ID is a unique value that identifies an RPM repository from where
 ID of the repository is the same and the other attributes of the RPM match, such packages even though sourced from
 varying URLs can be considered the same for the purposes of simple identification. Given a repository ID, you can
 resolve it to a URL using your chosen base URL and a relative path of that repository that exists in the
-[repository-to-cpe.json mapping file](https://access.redhat.com/security/data/meta/v1/repository-to-cpe.json). This
+[repository-to-cpe.json mapping file](https://security.access.redhat.com/data/meta/v1/repository-to-cpe.json). This
 file maps repository IDs to both relative URL paths and CPE IDs that represent product versions in all of Red Hat's
 security data files.
 
