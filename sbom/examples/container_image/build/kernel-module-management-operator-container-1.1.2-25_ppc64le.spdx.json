@@ -3991,6 +3991,24 @@
           "checksumValue": "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-0-ppc64le",
+      "name": "rhel9-go-toolset:1.19.4-18_ppc64le",
+      "versionInfo": "NOASSERTION",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": []
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-1-ppc64le",
+      "name": "rhel:9.2-1191_ppc64le",
+      "versionInfo": "NOASSERTION",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": []
     }
   ],
   "relationships": [
@@ -3998,6 +4016,16 @@
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-ppc64le"
+    },
+    {
+      "spdxElementId": "SPDXRef-parent-image-0-ppc64le",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-ppc64le"
+    },
+    {
+      "spdxElementId": "SPDXRef-kernel-module-management-operator-container-ppc64le",
+      "relationshipType": "DESCENDANT_OF",
+      "relatedSpdxElement": "SPDXRef-parent-image-1-ppc64le"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-ppc64le",

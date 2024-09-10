@@ -476,6 +476,15 @@
           "checksumValue": "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-0-s390x",
+      "name": "ubi9:9.4-947_s390x",
+      "versionInfo": "NOASSERTION",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": []
     }
   ],
   "relationships": [
@@ -483,6 +492,11 @@
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-s390x"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
+      "relationshipType": "DESCENDANT_OF",
+      "relatedSpdxElement": "SPDXRef-parent-image-0-s390x"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",

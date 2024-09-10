@@ -476,6 +476,15 @@
           "checksumValue": "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-0-arm64",
+      "name": "ubi9:9.4-947_arm64",
+      "versionInfo": "NOASSERTION",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": []
     }
   ],
   "relationships": [
@@ -483,6 +492,11 @@
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
+      "relationshipType": "DESCENDANT_OF",
+      "relatedSpdxElement": "SPDXRef-parent-image-0-arm64"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",

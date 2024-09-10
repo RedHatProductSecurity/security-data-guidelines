@@ -1,6 +1,7 @@
 import json
 import sys
 
+import koji
 import requests
 
 # These container images (identified by their NVR) are known to contain only RPM packages and no
@@ -14,6 +15,8 @@ catalog_url = "https://catalog.redhat.com/api/containers/v1/"
 nvr_api = catalog_url + "images/nvr/"
 rpm_manifest_api = catalog_url + "images/id/{catalog_image_id}/rpm-manifest"
 
+profile = koji.get_profile_module("brew")
+koji_session = koji.ClientSession(profile.config.server)
 
 def get_image_data(image_nvr):
     response = requests.get(nvr_api + image_nvr)
@@ -29,14 +32,16 @@ def get_rpms(image_id):
     return sorted(response.json()["rpms"], key=lambda rpm: rpm["nvra"])
 
 
-def create_sbom(image_id, root_package, packages, rel_type):
-    relationships = [
+def create_sbom(image_id, root_package, packages, rel_type, other_pkgs=[], other_rels=[]):
+    relationships = list(other_rels)
+    relationships.insert(
+        0,
         {
             "spdxElementId": "SPDXRef-DOCUMENT",
             "relationshipType": "DESCRIBES",
             "relatedSpdxElement": root_package["SPDXID"],
-        }
-    ]
+        },
+    )
     for pkg in packages:
         lhs = root_package["SPDXID"]
         rhs = pkg["SPDXID"]
@@ -63,7 +68,7 @@ def create_sbom(image_id, root_package, packages, rel_type):
         },
         "name": image_id,
         "documentNamespace": f"https://www.redhat.com/{image_id}.spdx.json",
-        "packages": [root_package] + packages,
+        "packages": [root_package] + packages + other_pkgs,
         "relationships": relationships,
     }
 
@@ -83,6 +88,8 @@ def generate_sboms_for_image(image_nvr):
 
     for image in get_image_data(image_nvr):
         packages = []
+        other_pkgs = []
+        other_rels = []
 
         catalog_image_id = image["_id"]
         image_digest = image["image_id"]
@@ -185,6 +192,43 @@ def generate_sboms_for_image(image_nvr):
             image_pkg["externalRefs"].append(ref)
         per_arch_images.append(image_pkg)
 
+        # Add in parent images
+        parent_images = koji_session.getBuild(image_nvr)
+        for key in ("extra", "typeinfo", "image", "parent_images"):
+            parent_images = parent_images.get(key, {})
+
+        parent_images = [img.rsplit("/")[-1] for img in parent_images if img != "scratch"]
+        direct_parent_index = len(parent_images) - 1
+        for index, parent_image in enumerate(parent_images):
+            parent_spdx_id = f"SPDXRef-parent-image-{index}-{image['architecture']}"
+            parent_pkg = {
+                "SPDXID": parent_spdx_id,
+                "name": f"{parent_image}_{image['architecture']}",
+                "versionInfo": "NOASSERTION",
+                "supplier": "Organization: Red Hat",
+                "downloadLocation": "NOASSERTION",
+                "licenseDeclared": "NOASSERTION",
+                "externalRefs": [],
+            }
+            other_pkgs.append(parent_pkg)
+
+            if index == direct_parent_index:
+                other_rels.append(
+                    {
+                        "spdxElementId": spdx_image_id,
+                        "relationshipType": "DESCENDANT_OF",
+                        "relatedSpdxElement": parent_spdx_id,
+                    }
+                )
+            else:
+                other_rels.append(
+                    {
+                        "spdxElementId": parent_spdx_id,
+                        "relationshipType": "BUILD_TOOL_OF",
+                        "relatedSpdxElement": spdx_image_id,
+                    }
+                )
+
         for rpm in get_rpms(catalog_image_id):
             rpm_purl = (
                 f"pkg:rpm/redhat/{rpm['name']}@{rpm['version']}-{rpm['release']}?"
@@ -225,6 +269,8 @@ def generate_sboms_for_image(image_nvr):
             root_package=image_pkg,
             packages=packages,
             rel_type="CONTAINS",
+            other_pkgs=other_pkgs,
+            other_rels=other_rels,
         )
 
     create_sbom(

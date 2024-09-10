@@ -3991,6 +3991,24 @@
           "checksumValue": "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-0-arm64",
+      "name": "rhel9-go-toolset:1.19.4-18_arm64",
+      "versionInfo": "NOASSERTION",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": []
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-1-arm64",
+      "name": "rhel:9.2-1191_arm64",
+      "versionInfo": "NOASSERTION",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": []
     }
   ],
   "relationships": [
@@ -3998,6 +4016,16 @@
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-parent-image-0-arm64",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",
+      "relationshipType": "DESCENDANT_OF",
+      "relatedSpdxElement": "SPDXRef-parent-image-1-arm64"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",
