@@ -41,11 +41,16 @@ def create_sbom(image_id, root_package, packages, rel_type):
         }
     ]
     for pkg in packages:
+        lhs = root_package["SPDXID"]
+        rhs = pkg["SPDXID"]
+        if rel_type.endswith("_OF"):
+            # .._OF relationships go the other way
+            lhs, rhs = rhs, lhs
         relationships.append(
             {
-                "spdxElementId": root_package["SPDXID"],
+                "spdxElementId": lhs,
                 "relationshipType": rel_type,
-                "relatedSpdxElement": pkg["SPDXID"],
+                "relatedSpdxElement": rhs,
             }
         )
 

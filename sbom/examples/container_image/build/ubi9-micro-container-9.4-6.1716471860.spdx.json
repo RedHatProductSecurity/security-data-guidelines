@@ -149,24 +149,24 @@
       "relatedSpdxElement": "SPDXRef-image-index"
     },
     {
-      "spdxElementId": "SPDXRef-image-index",
+      "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
       "relationshipType": "VARIANT_OF",
-      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-ppc64le"
+      "relatedSpdxElement": "SPDXRef-image-index"
     },
     {
-      "spdxElementId": "SPDXRef-image-index",
+      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
       "relationshipType": "VARIANT_OF",
-      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-s390x"
+      "relatedSpdxElement": "SPDXRef-image-index"
     },
     {
-      "spdxElementId": "SPDXRef-image-index",
+      "spdxElementId": "SPDXRef-ubi9-micro-container-arm64",
       "relationshipType": "VARIANT_OF",
-      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-arm64"
+      "relatedSpdxElement": "SPDXRef-image-index"
     },
     {
-      "spdxElementId": "SPDXRef-image-index",
+      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "VARIANT_OF",
-      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-amd64"
+      "relatedSpdxElement": "SPDXRef-image-index"
     }
   ]
 }
