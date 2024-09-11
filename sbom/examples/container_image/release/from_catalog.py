@@ -32,8 +32,8 @@ def get_rpms(image_id):
     return sorted(response.json()["rpms"], key=lambda rpm: rpm["nvra"])
 
 
-def create_sbom(image_id, root_package, packages, rel_type, other_pkgs=[], other_rels=[]):
-    relationships = list(other_rels)
+def create_sbom(image_id, root_package, packages, rel_type, other_pkgs=None, other_rels=None):
+    relationships = list(other_rels or [])
     relationships.insert(
         0,
         {
@@ -68,7 +68,7 @@ def create_sbom(image_id, root_package, packages, rel_type, other_pkgs=[], other
         },
         "name": image_id,
         "documentNamespace": f"https://www.redhat.com/{image_id}.spdx.json",
-        "packages": [root_package] + packages + other_pkgs,
+        "packages": [root_package] + packages + (other_pkgs or []),
         "relationships": relationships,
     }
 
