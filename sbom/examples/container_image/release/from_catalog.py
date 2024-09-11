@@ -163,10 +163,11 @@ def generate_sboms_for_image(image_nvr):
                 }
                 image_index_pkg["externalRefs"].append(ref)
 
-        spdx_image_id = f"SPDXRef-{image_nvr_name}-{image['architecture']}"
+        arch = image["architecture"]
+        spdx_image_id = f"SPDXRef-{image_nvr_name}-{arch}"
         image_pkg = {
             "SPDXID": spdx_image_id,
-            "name": f"{image_nvr_name}_{image['architecture']}",
+            "name": f"{image_nvr_name}_{arch}",
             "versionInfo": image_nvr_version,
             "supplier": "Organization: Red Hat",
             "downloadLocation": "NOASSERTION",
@@ -182,7 +183,7 @@ def generate_sboms_for_image(image_nvr):
         for name, repo_url, tag in sorted(repos):
             purl = (
                 f"pkg:oci/{name}@sha256%3A{image_index_digest}?"
-                f"arch={image['architecture']}&repository_url={repo_url}&tag={tag}"
+                f"arch={arch}&repository_url={repo_url}&tag={tag}"
             )
             ref = {
                 "referenceCategory": "PACKAGE-MANAGER",
@@ -193,22 +194,56 @@ def generate_sboms_for_image(image_nvr):
         per_arch_images.append(image_pkg)
 
         # Add in parent images
-        parent_images = koji_session.getBuild(image_nvr)
-        for key in ("extra", "typeinfo", "image", "parent_images"):
-            parent_images = parent_images.get(key, {})
+        image_data = koji_session.getBuild(image_nvr)
+        for key in ("extra", "typeinfo", "image"):
+            image_data = image_data.get(key, {})
 
-        parent_images = [img.rsplit("/")[-1] for img in parent_images if img != "scratch"]
+        parent_image_builds = image_data.get("parent_image_builds", {})
+        parent_images = image_data.get("parent_images", [])
         direct_parent_index = len(parent_images) - 1
         for index, parent_image in enumerate(parent_images):
-            parent_spdx_id = f"SPDXRef-parent-image-{index}-{image['architecture']}"
+            try:
+                parent_image_build_id = parent_image_builds[parent_image]["id"]
+            except KeyError:
+                # Skip scratch builds
+                continue
+
+            parent_archives = koji_session.listArchives(parent_image_build_id)
+            parent_digests = [
+                list(a["extra"]["docker"]["digests"].values())[0]
+                for a in parent_archives
+                if a["btype"] == "image" and a["extra"]["docker"]["config"]["architecture"] == arch
+            ]
+            if parent_digests:
+                version = f"@{parent_digests[0]}"
+            else:
+                version = ""
+
+            registry, rest = parent_image.split("/", maxsplit=1)
+            use_registry = registry in ("registry.redhat.io", "registry.access.redhat.com")
+            name, tag = rest.rsplit(":", maxsplit=1)
+            if "/" in name:
+                namespace, name = name.rsplit("/", maxsplit=1)
+                registry += "/" + namespace
+
+            registry_q = f"&repository_url={registry}" if use_registry else ""
+            parent_spdx_id = f"SPDXRef-parent-image-{index}-{arch}"
+            purl = f"pkg:oci/{name}{version}?tag={tag}{registry_q}"
+
             parent_pkg = {
                 "SPDXID": parent_spdx_id,
-                "name": f"{parent_image}_{image['architecture']}",
-                "versionInfo": "NOASSERTION",
+                "name": f"{name}_{arch}",
+                "versionInfo": f"{tag}",
                 "supplier": "Organization: Red Hat",
                 "downloadLocation": "NOASSERTION",
                 "licenseDeclared": "NOASSERTION",
-                "externalRefs": [],
+                "externalRefs": [
+                    {
+                        "referenceCategory": "PACKAGE-MANAGER",
+                        "referenceType": "purl",
+                        "referenceLocator": purl,
+                    },
+                ],
             }
             other_pkgs.append(parent_pkg)
 
@@ -265,7 +300,7 @@ def generate_sboms_for_image(image_nvr):
             packages.append(rpm_pkg)
 
         create_sbom(
-            image_id=f"{image_nvr}_" f"{image['architecture']}",
+            image_id=f"{image_nvr}_" f"{arch}",
             root_package=image_pkg,
             packages=packages,
             rel_type="CONTAINS",

@@ -3994,21 +3994,33 @@
     },
     {
       "SPDXID": "SPDXRef-parent-image-0-arm64",
-      "name": "rhel9-go-toolset:1.19.4-18_arm64",
-      "versionInfo": "NOASSERTION",
+      "name": "rhel9-go-toolset_arm64",
+      "versionInfo": "1.19.4-18",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
-      "externalRefs": []
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/rhel9-go-toolset@sha256:355b1d0a6e12250247d157949dcdc68d8a9508fc027223515a6d4662f4ec03f6?tag=1.19.4-18"
+        }
+      ]
     },
     {
       "SPDXID": "SPDXRef-parent-image-1-arm64",
-      "name": "rhel:9.2-1191_arm64",
-      "versionInfo": "NOASSERTION",
+      "name": "rhel_arm64",
+      "versionInfo": "9.2-1191",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
-      "externalRefs": []
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/rhel@sha256:8d79ed0aaf36d7bf914411aab26e3a78308fe6217ca865ad7cc107c9078bfb12?tag=9.2-1191&repository_url=registry.redhat.io/rhel9-2-els"
+        }
+      ]
     }
   ],
   "relationships": [

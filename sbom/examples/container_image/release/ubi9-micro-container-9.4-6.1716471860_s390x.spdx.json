@@ -479,12 +479,18 @@
     },
     {
       "SPDXID": "SPDXRef-parent-image-0-s390x",
-      "name": "ubi9:9.4-947_s390x",
-      "versionInfo": "NOASSERTION",
+      "name": "ubi9_s390x",
+      "versionInfo": "9.4-947",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
-      "externalRefs": []
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi9@sha256:dee3c77221eab321e79ad2b0277b91856879a8f5b675a48ad83af26c7a774fb3?tag=9.4-947"
+        }
+      ]
     }
   ],
   "relationships": [
@@ -494,9 +500,9 @@
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-s390x"
     },
     {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",
-      "relationshipType": "DESCENDANT_OF",
-      "relatedSpdxElement": "SPDXRef-parent-image-0-s390x"
+      "spdxElementId": "SPDXRef-parent-image-0-s390x",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-s390x"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-s390x",

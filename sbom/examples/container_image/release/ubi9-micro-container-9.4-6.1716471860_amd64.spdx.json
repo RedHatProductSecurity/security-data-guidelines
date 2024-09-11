@@ -479,12 +479,18 @@
     },
     {
       "SPDXID": "SPDXRef-parent-image-0-amd64",
-      "name": "ubi9:9.4-947_amd64",
-      "versionInfo": "NOASSERTION",
+      "name": "ubi9_amd64",
+      "versionInfo": "9.4-947",
       "supplier": "Organization: Red Hat",
       "downloadLocation": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
-      "externalRefs": []
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi9@sha256:11d5b4a77bfc15341d4b6dffa3d6ed510189fec9583db77cfc107067b5f906c5?tag=9.4-947"
+        }
+      ]
     }
   ],
   "relationships": [
@@ -494,9 +500,9 @@
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-amd64"
     },
     {
-      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
-      "relationshipType": "DESCENDANT_OF",
-      "relatedSpdxElement": "SPDXRef-parent-image-0-amd64"
+      "spdxElementId": "SPDXRef-parent-image-0-amd64",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-amd64"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
