@@ -14,7 +14,6 @@ for pkg in sbom["packages"]:
     for purl_ref in [ref for ref in pkg.get("externalRefs", []) if ref["referenceType"] == "purl"]:
         purl = PackageURL.from_string(purl_ref["referenceLocator"])
         if purl.type == "oci":
-            purl.qualifiers.pop("tag", None)
             purl.qualifiers.pop("repository_url", None)
             purl_ref["referenceLocator"] = purl.to_string()
 
