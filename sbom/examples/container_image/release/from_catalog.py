@@ -1,5 +1,4 @@
 import json
-import secrets
 import sys
 
 import requests
@@ -215,7 +214,7 @@ def generate_sboms_for_image(image_nvr):
                 "checksums": [
                     {
                         "algorithm": "SHA256",
-                        "checksumValue": f"abcd1234{secrets.token_hex(28)}",
+                        "checksumValue": "abcd1234" * 8,
                     }
                 ],
             }
