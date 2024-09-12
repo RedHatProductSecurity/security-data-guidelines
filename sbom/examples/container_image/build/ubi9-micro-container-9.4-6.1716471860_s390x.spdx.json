@@ -490,6 +490,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:oci/ubi9@sha256:dee3c77221eab321e79ad2b0277b91856879a8f5b675a48ad83af26c7a774fb3"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dee3c77221eab321e79ad2b0277b91856879a8f5b675a48ad83af26c7a774fb3"
+        }
       ]
     }
   ],

@@ -4005,6 +4005,12 @@
           "referenceType": "purl",
           "referenceLocator": "pkg:oci/rhel9-go-toolset@sha256:a6b2fd68651aa7d544e53676f99f9017cf241b855bcdc2400d81081bba6f329a"
         }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b2fd68651aa7d544e53676f99f9017cf241b855bcdc2400d81081bba6f329a"
+        }
       ]
     },
     {
@@ -4019,6 +4025,12 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:oci/rhel@sha256:cb23b09712fa36dfa2cd39ea60afb439c17fd0fec60a26a59e122618c8a33379"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cb23b09712fa36dfa2cd39ea60afb439c17fd0fec60a26a59e122618c8a33379"
         }
       ]
     }

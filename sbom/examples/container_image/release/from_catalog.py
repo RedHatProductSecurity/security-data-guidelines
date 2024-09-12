@@ -214,8 +214,9 @@ def generate_sboms_for_image(image_nvr):
                 for a in parent_archives
                 if a["btype"] == "image" and a["extra"]["docker"]["config"]["architecture"] == arch
             ]
+            parent_digest = parent_digests[0] if parent_digests else ""
             if parent_digests:
-                version = f"@{parent_digests[0]}"
+                version = f"@{parent_digest}"
             else:
                 version = ""
 
@@ -245,6 +246,13 @@ def generate_sboms_for_image(image_nvr):
                     },
                 ],
             }
+            if parent_digest:
+                parent_pkg["checksums"] = [
+                    {
+                        "algorithm": "SHA256",
+                        "checksumValue": parent_digest.lstrip("sha256:"),
+                    }
+                ]
             other_pkgs.append(parent_pkg)
 
             if index == direct_parent_index:
