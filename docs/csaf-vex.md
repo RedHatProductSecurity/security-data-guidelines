@@ -44,38 +44,82 @@ and Red Hat products. Red Hat’s VEX files are publicly available per CVE
 ## Document Structure
 Although CSAF and VEX files ultimately serve different purposes, both CSAF and VEX files meet the 
 CSAF machine readable standard and use the VEX profile to convey security information. The CSAF-VEX standard includes
-three main sections: document metadata, a product tree array and vulnerability metadata. The full document structure can
+three main sections: document metadata, a product tree and vulnerability metadata. The full document structure can
 be found here [insert link].
 
+The next sections break down each section of the document using the 
+[VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2023/cve-2023-20593.json).
+
 ### Document Metadata 
-The "document_metadata" section contains general information about the published document itself 
-including CVE severity, vendor, published date and revision history. 
+The "document" section contains general information about the published document itself including CVE severity, vendor,
+published date and revision history. 
 
 General CVE Severity:
 
 ```
 "aggregate_severity": {
-"namespace": "https://access.redhat.com/security/updates/classification/",
-"text": "moderate"
+    "namespace": "https://access.redhat.com/security/updates/classification/",
+    "text": "moderate"
 },
 ```
 
-CVE ID, publish date, and last update:
+VEX Metadata: 
+
+```
+"category": "csaf_vex",
+"csaf_version": "2.0",
+"distribution": {
+    "text": "Copyright © Red Hat, Inc. All rights reserved.",
+    "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+    }
+},
+"lang": "en",
+"notes": [
+    {
+        "category": "legal_disclaimer",
+        "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+        "title": "Terms of Use"
+    }
+],
+```
+
+Vendor information:
+```
+"publisher": {
+    "category": "vendor",
+    "contact_details": "https://access.redhat.com/security/team/contact/",
+    "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat offerings.",
+    "name": "Red Hat Product Security",
+    "namespace": "https://www.redhat.com"
+},
+```
+
+CVE ID, CVE publish date and CVE revision history:
 
 ```
 "id": "CVE-2022-1247",
 "initial_release_date": "2022-05-11T09:37:00+00:00",
 "revision_history": [
-{
-"date": "2022-05-11T09:37:00+00:00",
-"number": "1",
-"summary": "Initial version"
-},
-{
-"date": "2023-09-19T14:13:41+00:00",
-"number": "2",
-"summary": "Current version"
-}
+    {
+        "date": "2022-05-11T09:37:00+00:00",
+        "number": "1",
+        "summary": "Initial version"
+    },
+    {
+        "date": "2023-09-19T14:13:41+00:00",
+        "number": "2",
+        "summary": "Current version"
+    },
+    {
+        "date": "2024-08-20T07:48:38+00:00",
+        "number": "3",
+        "summary": "Last generated version"
+    }
+],
+"status": "final",
+"version": "3"
 ```
 
 ### Product Tree 
@@ -85,33 +129,93 @@ objects in the “product_tree” object; “branches” and “relationships”
 
 #### Branches
 
-The "product_family" category represents a general Red Hat product stream. The following information is included:
+The parent "branches" object includes nested objects of three subcategories: "product_family", "product_name" and 
+"product_version". The "product_family" category represents a general Red Hat product stream and 
+includes one or more nested objects with the "product_name" category that represent an individual release. The 
+"product_name" object will always include the name of the product, a product ID and a product identification helper in 
+the form of a CPE. 
+
+In the example below, you can see that the "product_family" object is for Red Hat Enterprise Linux 9 and nested within 
+is the "product_name" object Red Hat Enterprise Linux 9. 
+
 ```
+{
+    "branches": [
+        {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux 9",
+            "product": {
+                "name": "Red Hat Enterprise Linux 9",
+                "product_id": "red_hat_enterprise_linux_9",
+                "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:9"
+                }
+            }
+        }
+    ],
+    "category": "product_family",
+    "name": "Red Hat Enterprise Linux 9"
+},
 ```
 
-The "product_name" category includes information about a specific Red Hat product version. The following information is 
-included:
+The "product_version" category includes information about a specific affected package. The "product_name" object will 
+always include the name of the component, a product ID and a product identification helper in the form of a PURL. The 
+example below represents the affected component kernel. 
 
 ```
-```
-
-The "product_version" category includes information about a specific affected package. The following information is 
-included:
-```
+{
+    "category": "product_version",
+    "name": "kernel",
+    "product": {
+        "name": "kernel",
+        "product_id": "kernel",
+        "product_identification_helper": {
+            "purl": "pkg:rpm/redhat/kernel?arch=src"
+        }
+    }
+},
 ```
 
 #### Relationships
-Also included in the "product_tree" section is a "relationships" object which is used by Red Hat to help represent layered 
-products. A relationship entry will be present for all "product_version" objects found in the "product_tree" object. 
-All of these nested objects are of the “default_component_of” category and include:
+Also included in the "product_tree" section is a "relationships" object which is used by Red Hat to help represent 
+layered products. One or more relationship entries will be present for all "product_version" objects found in the 
+"branches" object. All of these nested objects are of the “default_component_of” category and include the full product 
+name and product id (a combination of the "product_name" and the "product_version"), a reference to the component name 
+and a reference to the product name. 
+
+Continuing with the previous examples, we know that there should be at least one entry in the "relationships" object 
+that correlates to the "product_version" object for kernel. Looking at the VEX file, there are actually four entries for 
+kernel, all which relate to the different "product_name" objects from before. The below is the specific entry as it 
+relates to Red Hat Enterprise Linux 9.
+
+Here you can see that the "full_product_name" includes a name and a product_id which are the combination of the product,
+Red Hat Enterprise Linux 9, and the component, kernel. The "product_reference" will always refer to the component's name
+while the "relates_to_product_reference" will refer to the product name.
 
 ```
+{
+"category": "default_component_of",
+"full_product_name": {
+        "name": "kernel as a component of Red Hat Enterprise Linux 9",
+        "product_id": "red_hat_enterprise_linux_9:kernel"
+    },
+    "product_reference": "kernel",
+    "relates_to_product_reference": "red_hat_enterprise_linux_9"
+},
 ```
 
 
 ### Vulnerability Metadata 
-The "vulnerability_metadata" section reports vulnerability fix status for any "product_id" listed in the product_tree. 
-The following fix statuses are available:
+
+The "vulnerabilities" section reports vulnerability metadata for any CVEs included in the document and also contains a 
+"product_status" object that reports fix status for any "product_id" listed in the "product_tree". 
+
+CVE Information: 
+```
+
+```
+
+The "product_status" includes the following fix statuses:
 
 * Fixed: Contains the same fixed component versions and other details (product_tree objects) that the CSAF advisory 
 reports for that CVE
