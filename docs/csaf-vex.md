@@ -48,8 +48,8 @@ three main sections: document metadata, a product tree and vulnerability metadat
 be found 
 [here](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/csaf-vex-guidelines/docs/csaf-vex.json).
 
-The next sections break down each section of the document using the 
-[VEX file for CVE-2022-1247](https://access.redhat.com/security/data/csaf/v2/vex/2022/cve-2022-1247.json).
+The following sections break down the information included in CSAF/VEX documents using the 
+[VEX file for CVE-2022-1247](https://access.redhat.com/security/data/csaf/v2/vex/2022/cve-2022-1247.json) as an example.
 
 ### Document Metadata 
 The "document" section contains general information about the published document itself including CVE severity, vendor,
@@ -307,10 +307,18 @@ a specific CVE to the specific component and product
     ]
 },
 ```
-For all the product_ids found in the “Fixed” array, these will also be listed in the “remediations” 
-array, which correlates each product_id to the correct RHSAs. The RHSA can be determined by the “url” field in the same 
-remediation object.
 
+The "remediations" object includes information about
+* Vendor Fix: For all the product_ids found in the “Fixed” array there will be a corresponding entry in the 
+"remediations" object that correlates each product_id to the correct RHSAs. The RHSA can be determined by the “url” 
+field.
+* No Fix Planned: Correlates to the known affected
+  * Details: Will not fix or Out of support scope 
+* None Available: 
+  * Details: affected
+
+```
+```
 
 Additional CVE Resources:
 ```
@@ -337,7 +345,6 @@ Additional CVE Resources:
     }
 ],
 ```
-
 
 ## Additional Notes
 https://www.redhat.com/en/about/brand/standards/history

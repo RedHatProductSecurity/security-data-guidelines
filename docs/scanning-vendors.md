@@ -51,5 +51,5 @@ objects.
 
 
 
-## Additional Notes
+## Frequently Asked Questions
 
