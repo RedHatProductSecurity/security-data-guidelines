@@ -48,7 +48,7 @@ three main sections: document metadata, a product tree and vulnerability metadat
 be found here [insert link].
 
 The next sections break down each section of the document using the 
-[VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2023/cve-2023-20593.json).
+[VEX file for CVE-2022-1247](https://access.redhat.com/security/data/csaf/v2/vex/2022/cve-2022-1247.json).
 
 ### Document Metadata 
 The "document" section contains general information about the published document itself including CVE severity, vendor,
