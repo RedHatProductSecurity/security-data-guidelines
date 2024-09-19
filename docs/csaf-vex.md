@@ -210,9 +210,76 @@ while the "relates_to_product_reference" will refer to the product name.
 The "vulnerabilities" section reports vulnerability metadata for any CVEs included in the document and also contains a 
 "product_status" object that reports fix status for any "product_id" listed in the "product_tree". 
 
-CVE Information: 
+CVE ID, CWE and Publication Date:
+```
+"cve": "CVE-2022-1247",
+      "cwe": {
+        "id": "CWE-366",
+        "name": "Race Condition within a Thread"
+      },
+      "discovery_date": "2022-03-22T00:00:00+00:00",
 ```
 
+CVE Description, Summary and Statement:
+```
+"notes": [
+    {
+        "category": "description",
+        "text": "An issue found in linux-kernel that leads to a race condition in rose_connect(). The rose driver uses rose_neigh->use to represent how many objects are using the rose_neigh. When a user wants to delete a rose_route via rose_ioctl(), the rose driver calls rose_del_node() and removes neighbours only if their “count” and “use” are zero.",
+        "title": "Vulnerability description"
+    },
+    {
+        "category": "summary",
+        "text": "kernel: A race condition bug in rose_connect()",
+        "title": "Vulnerability summary"
+    },
+    {
+        "category": "other",
+        "text": "There was no shipped kernel version that was seen affected by this problem. These files are not built in our source code.",
+        "title": "Statement"
+    },
+    {
+        "category": "general",
+        "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+        "title": "CVSS score applicability"
+    }
+],
+```
+
+CVSS Score and Severity:
+```
+"scores": [
+    {
+        "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+        },
+        "products": [
+            "red_hat_enterprise_linux_9:kernel",
+            "red_hat_enterprise_linux_9:kernel-rt"
+        ]
+    }
+],
+"threats": [
+    {
+        "category": "impact",
+        "details": "Moderate",
+        "product_ids": [
+            "red_hat_enterprise_linux_9:kernel",
+            "red_hat_enterprise_linux_9:kernel-rt"
+        ]
+    }
+],
 ```
 
 The "product_status" includes the following fix statuses:
@@ -225,11 +292,50 @@ reports for that CVE
 a specific CVE to the specific component and product
 
 ```
+"product_status": {
+    "known_affected": [
+        "red_hat_enterprise_linux_9:kernel",
+        "red_hat_enterprise_linux_9:kernel-rt"
+    ],
+    "known_not_affected": [
+        "red_hat_enterprise_linux_6:kernel",
+        "red_hat_enterprise_linux_7:kernel",
+        "red_hat_enterprise_linux_7:kernel-rt",
+        "red_hat_enterprise_linux_8:kernel",
+        "red_hat_enterprise_linux_8:kernel-rt"
+    ]
+},
 ```
-
 For all the product_ids found in the “Fixed” array, these will also be listed in the “remediations” 
 array, which correlates each product_id to the correct RHSAs. The RHSA can be determined by the “url” field in the same 
 remediation object.
+
+
+Additional CVE Resources:
+```
+"references": [
+    {
+        "category": "self",
+        "summary": "Canonical URL",
+        "url": "https://access.redhat.com/security/cve/CVE-2022-1247"
+    },
+    {
+        "category": "external",
+        "summary": "RHBZ#2066799",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2066799"
+    },
+    {
+        "category": "external",
+        "summary": "https://www.cve.org/CVERecord?id=CVE-2022-1247",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2022-1247"
+    },
+    {
+        "category": "external",
+        "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-1247",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1247"
+    }
+],
+```
 
 
 ## Additional Notes
