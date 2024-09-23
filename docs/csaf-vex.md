@@ -55,7 +55,7 @@ The following sections break down the information included in CSAF/VEX documents
 The "document" section contains general information about the published document itself including CVE severity, vendor,
 published date and revision history.
 
-General CVE Severity:
+CVE severity:
 
 ```
 "aggregate_severity": {
@@ -64,7 +64,7 @@ General CVE Severity:
 },
 ```
 
-VEX Metadata: 
+VEX metadata: 
 
 ```
 "category": "csaf_vex",
@@ -286,7 +286,7 @@ The "vulnerabilities" section reports vulnerability metadata for any CVEs includ
 object. 
 
 #### CVE Information
-CVE ID, CWE and Publication Date:
+CVE ID, CWE and publication date:
 ```
 "cve": "CVE-2023-20593",
       "cwe": {
@@ -296,7 +296,7 @@ CVE ID, CWE and Publication Date:
       "discovery_date": "2023-05-31T00:00:00+00:00",
 ```
 
-CVE Description, Summary and Statement:
+CVE description, summary and statement:
 ```
 "notes": [
   {
@@ -317,7 +317,7 @@ CVE Description, Summary and Statement:
 ],
 ```
 
-CVSS Score and Severity:
+CVSS score and severity:
 ```
 "scores": [
     {
@@ -346,7 +346,7 @@ CVSS Score and Severity:
     }
 ],
 ```
-Additional CVE Resources:
+Additional CVE resources:
 ```
  "references": [
         {
@@ -385,11 +385,11 @@ Additional CVE Resources:
 #### Product Fix Status
 The "product_status" includes the following fix statuses:
 
-* Fixed: Contains the same fixed component versions and other details (product_tree objects) that the are reported fixed
+* "fixed": Contains the same fixed component versions and other details (product_tree objects) that the are reported fixed
 for a given CVE
-* Known Affected: Confirmation that the specific component and product is affected by a particular CVE
-* Known Not Affected: Confirmation that the specific component and product is not affected by a particular CVE
-* Under Investigation: Information that the Red Hat Product Security team is verifying the applicability and impact of 
+* "known_affected": Confirmation that the specific component and product is affected by a particular CVE
+* "known_not_affected": Confirmation that the specific component and product is not affected by a particular CVE
+* "under_investigation": Information that the Red Hat Product Security team is verifying the applicability and impact of 
 a specific CVE to the specific component and product
 
 Compressed down, a product_status object that included products of each category, would look like:
@@ -431,26 +431,53 @@ Our other full product ID "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src" ca
 The "remediations" object provides additional information about the previously identified product status. The following 
 remediations status are available per product_status:
 
-"fixed" product status:
-* "vendor_fix": For all the product_ids found in the “Fixed” product status there will be a corresponding entry in the 
-"remediations" object that correlates each product_id to the correct RHSAs. The RHSA can be determined by the “url” 
-field. Note: In VEX files, there may be more than one "vendor_fix" object if more than one RHSA released fixes for the
-CVE, while in CSAF files there will only be one "vendor_fix" object that correlates to the RHSA in that CSAF file.
+* "fixed" product status
+  * "vendor_fix": For all the product_IDs found in the “fixed” product_status there will be a corresponding entry
+    in the "remediations" object that correlates each full product ID to the correct RHSAs. The RHSA can be determined by
+    the “url” field. 
+    * Details: "Fixed"
+    * URL: Link to the RHSA
+  * "workaround": If a mitigation exists, it applies to all components regardless of their fix state.
+    * Details: "Mitigation"
+* "known_affected": For all the full product IDs found in the "known_affected" product status, there will be additional 
+entries in the "remediations" object that fall into the following categories.
+  * "no_fix_planned": Will include any product_IDs in the "known_affected" product status that will not be fixed by Red 
+  Hat, either because it is out of support scope or the engineering team has decided not to fix it for other reasons.
+    * Details: "Will not fix" or "Out of support scope"
+  * "none_available": Will include any product_IDs in the "known_affected" product status that are either still reported 
+  affected, meaning a fix is likely in progress, or deferred, which may be fixed at a future date. 
+    * Details: "Affected" or "Deferred" 
+  * "workaround": If a mitigation exists, it applies to all components regardless of their fix state.
+    * Details: "Mitigation"
+* "known_not_affected": There are no "remediation" objects for the known not affected status since it is implicitly 
+assumed that there are no remediations needed if the product and component are not affected.
+* "under_investigation": There are no "remediation" objects for the under investigation status since it is implicitly 
+assumed that no remediations exist since we are still investigating the vulnerability.
 
-"known_affected": 
-* 
+Note: As with the "product_status" object, there may not be an entry for every category. Additionally, in VEX files, 
+there may be more than one "vendor_fix" object if more than one RHSA released fixes for the CVE. In the CSAF files, 
+the only "remediation" category present will be one "vendor_fix" object that correlates to the RHSA that the CSAF 
+file represents.
 
-"known_not_affected":
-* "workaround"
+Following our two previous kernel examples, we can see that for the unfixed kernel component 
+"red_hat_enterprise_linux_6:kernel" there is no entry in the remediations section. This is expected behavior because 
+it was listed in the "known_not_affected" product status and therefore no remediation is needed.
 
-"under_investigation"
-* 
+For our fixed kernel component "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src", there are two remediation entries.
+One represents the vendor fix that was released and the other represents that there is a reported mitigation for this 
+CVE.
 
-* No Fix Planned: 
-  * Details: Will not fix
-  * Details: Out of support scope 
-* None Available: 
-  * Details: Affected
+```
+{
+  "category": "vendor_fix",
+  "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258\n\nThe system must be rebooted for this update to take effect.",
+  "product_ids": [
+    "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src",
+    "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.x86_64",
+    ...
+  ]
+}
+```
 
 ```
 {
@@ -464,7 +491,6 @@ CVE, while in CSAF files there will only be one "vendor_fix" object that correla
   ]
   
 ```
-
 
 
 ## Additional Notes
