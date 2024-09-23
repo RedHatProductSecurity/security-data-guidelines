@@ -22,9 +22,9 @@ for every single CVE record that is associated with the Red Hat portfolio in any
 
 ## Red Hat and CSAF/VEX
 ### CSAF Overview
-The Common Security Advisory Framework (CSAF) was originally published as an open standard by OASIS Open in November 2022.
-CSAF files provide a structured, machine-readable way of representing and sharing security advisory information 
-across all software and hardware providers. 
+The [Common Security Advisory Framework (CSAF)](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html) 
+was originally published as an open standard by OASIS Open in November 2022. CSAF files provide a structured, 
+machine-readable way of representing and sharing security advisory information across all software and hardware providers. 
  
 Red Hat's CSAF files are always associated with one specific advisory and a given advisory may include one or more product 
 version(s) and one or more components, depending on the product type and update scope. The advisory itself can also 
@@ -43,7 +43,7 @@ and Red Hat products. Red Hat’s VEX files are publicly available per CVE
 
 ## Document Structure
 Although CSAF and VEX files ultimately serve different purposes, both CSAF and VEX files meet the 
-CSAF machine readable standard and use the VEX profile to convey security information. The CSAF-VEX standard includes
+CSAF machine-readable standard and use the VEX profile to convey security information. The CSAF-VEX standard includes
 three main sections: document metadata, a product tree and vulnerability metadata. The full document structure can
 be found 
 [here](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/csaf-vex-guidelines/docs/csaf-vex.json).
@@ -125,24 +125,51 @@ CVE ID, CVE publish date and CVE revision history:
 
 ### Product Tree 
 The “product_tree” section identifies all affected Red Hat software, represents the nested 
-relationship of component to product and  provides CPEs or PURLs depending on the affected layer. There are two main 
-objects in the “product_tree” object; “branches” and “relationships”.
+relationship of component to product and provides CPEs or PURLs depending on the affected layer. There are two main 
+objects in the “product_tree” object: “branches” and “relationships”.
 
 #### Branches
 
-The parent "branches" object includes nested objects of three subcategories: "product_family", "product_name" and 
-"product_version". The "product_family" category represents a general Red Hat product stream and 
-includes one or more nested objects with the "product_name" category that represent an individual release. The 
-"product_name" object will always include the name of the product, a product ID and a product identification helper in 
-the form of a CPE. 
+The parent "branches" object has one child object of the "vendor" category with the name set to "Red Hat". All 
+affected Red Hat products and components will be nested in that "branches" array. 
+
+```
+{
+  "branches": [
+    {
+      "branches": []
+      "category": "vendor"
+      "name": "Red Hat:
+    }
+  ]
+}
+```
+
+All nested objects included in the "branches" object of the "vendor" category fall into the following subcategories:
+* "product_family": The "product_family" category represents a general Red Hat product stream and includes one or more 
+nested objects of the "product_name".
+* "product_name": The "product_name" category represents a specific product release and is always nested under the 
+corresponding "product_family"
+* "product_version": The "product version" category represents a specific component. When displayed unnested, the 
+component is not fixed yet and will not include a specific version number. Note: This will only be present in VEX files
+since CSAF files are per advisory and will only include fixed components.
+* "architecture": The "architecture" category represents fixed components by their architecture and includes nested 
+  "product_version" objects. These "product_version" will be fixed and provide the specific version number. 
+
+
+
+##### Product Family and Product Name Examples
+The "product_family" category represents a general Red Hat product stream and includes one or 
+more nested objects of the "product_name" category that represents an individual release. The "product_name" object will
+always include the name of the product, a product ID and a product identification helper in the form of a CPE. 
 
 In the example below, you can see that the "product_family" object is for Red Hat Enterprise Linux 9 and nested within 
-is the "product_name" object Red Hat Enterprise Linux 9. 
+is the "product_name" object Red Hat Enterprise Linux 9 with the CPE "cpe:/o:redhat:enterprise_linux:9". 
 
 ```
 {
     "branches": [
-        {
+      {
             "category": "product_name",
             "name": "Red Hat Enterprise Linux 9",
             "product": {
@@ -159,29 +186,62 @@ is the "product_name" object Red Hat Enterprise Linux 9.
 },
 ```
 
-The "product_version" category includes information about a specific affected package. The "product_name" object will 
-always include the name of the component, a product ID and a product identification helper in the form of a PURL. The 
-example below represents the affected component kernel. 
+##### Unfixed Product Versions (VEX only) Examples
+The "product_version" category includes information about a specific affected package. The "product_version" object will 
+always include the name of the component, a product ID and a product identification helper in the form of a PURL. When 
+displayed unnested under an "architecture" object, the "name" attribute will not reference a specific version number 
+because these components are unfixed. Again, these unfixed "product_version" components will only be found in VEX files 
+since CSAF files always represent a released RHSA.
+
+In the example below, the unfixed kernel component's name is "kernel" and doesn't include a specific version number.
 
 ```
 {
-    "category": "product_version",
+  "category": "product_version",
+  "name": "kernel",
+  "product": {
     "name": "kernel",
-    "product": {
-        "name": "kernel",
-        "product_id": "kernel",
-        "product_identification_helper": {
-            "purl": "pkg:rpm/redhat/kernel?arch=src"
-        }
+    "product_id": "kernel",
+    "product_identification_helper": {
+      "purl": "pkg:rpm/redhat/kernel?arch=src"
     }
+  }
 },
+```
+##### Architecture and Fixed Product Versions
+Similarly to the "product_family" object, the "architecture" category represents a specific architecture for packages 
+and includes one or more "product_version" objects. As before, the "product_version" category will still include the same
+information: the name of the component, a product ID and product identification helper in the form of a PURL. However, 
+when product_versions are nested under architecture object, they are fixed components and the "name" attribute will 
+include a specific version number and the specific architecture format. 
+
+In the example below, you can see the fixed kernel component's name is "kernel-0:3.10.0-693.112.1.el7.src" which includes
+the specific version number "0:3.10.0-693.112.1.el7" and architecture format ".src".
+```
+{ 
+  "branches": [
+    {
+      "category": "product_version",
+      "name": "kernel-0:3.10.0-693.112.1.el7.src",
+      "product": {
+        "name": "kernel-0:3.10.0-693.112.1.el7.src",
+        "product_id": "kernel-0:3.10.0-693.112.1.el7.src",
+        "product_identification_helper": {
+          "purl": "pkg:rpm/redhat/kernel@3.10.0-693.112.1.el7?arch=src"
+        }
+      }
+    }
+  ],
+  "category": "architecture",
+  "name": "src"
+}
 ```
 
 #### Relationships
 Also included in the "product_tree" section is a "relationships" object which is used by Red Hat to help represent 
 layered products. One or more relationship entries will be present for all "product_version" objects found in the 
-"branches" object. All of these nested objects are of the “default_component_of” category and include the full product 
-name and product id (a combination of the "product_name" and the "product_version"), a reference to the component name 
+"branches" object. All of these objects are of the “default_component_of” category and include the full product 
+name and product ID (a combination of the "product_name" and the "product_version"), a reference to the component name 
 and a reference to the product name. 
 
 Continuing with the previous examples, we know that there should be at least one entry in the "relationships" object 
@@ -189,7 +249,7 @@ that correlates to the "product_version" object for kernel. Looking at the VEX f
 kernel, all which relate to the different "product_name" objects from before. The below is the specific entry as it 
 relates to Red Hat Enterprise Linux 9.
 
-Here you can see that the "full_product_name" includes a name and a product_id which are the combination of the product,
+Here you can see that the "full_product_name" includes a name and a product ID which are the combination of the product,
 Red Hat Enterprise Linux 9, and the component, kernel. The "product_reference" will always refer to the component's name
 while the "relates_to_product_reference" will refer to the product name.
 
@@ -205,12 +265,13 @@ while the "relates_to_product_reference" will refer to the product name.
 },
 ```
 
-
-### Vulnerability Metadata 
+### Vulnerability Metadata
 
 The "vulnerabilities" section reports vulnerability metadata for any CVEs included in the document and also contains a 
-"product_status" object that reports fix status for any "product_id" listed in the "product_tree". 
+"product_status" object that reports fix status for any "product_id" listed in the "product_tree" and a "remediations" 
+object. 
 
+#### CVE Information
 CVE ID, CWE and Publication Date:
 ```
 "cve": "CVE-2022-1247",
@@ -282,6 +343,33 @@ CVSS Score and Severity:
     }
 ],
 ```
+Additional CVE Resources:
+```
+"references": [
+    {
+        "category": "self",
+        "summary": "Canonical URL",
+        "url": "https://access.redhat.com/security/cve/CVE-2022-1247"
+    },
+    {
+        "category": "external",
+        "summary": "RHBZ#2066799",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2066799"
+    },
+    {
+        "category": "external",
+        "summary": "https://www.cve.org/CVERecord?id=CVE-2022-1247",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2022-1247"
+    },
+    {
+        "category": "external",
+        "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-1247",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1247"
+    }
+],
+```
+
+#### Product Fix Status
 
 The "product_status" includes the following fix statuses:
 
@@ -308,43 +396,23 @@ a specific CVE to the specific component and product
 },
 ```
 
+#### Remediations 
 The "remediations" object includes information about
-* Vendor Fix: For all the product_ids found in the “Fixed” array there will be a corresponding entry in the 
+* Vendor Fix: For all the product_ids found in the “Fixed” product status there will be a corresponding entry in the 
 "remediations" object that correlates each product_id to the correct RHSAs. The RHSA can be determined by the “url” 
 field.
-* No Fix Planned: Correlates to the known affected
-  * Details: Will not fix or Out of support scope 
+  * Details: Link on how to apply update
+  * URL: Link for the correlated RHSA
+* No Fix Planned: 
+  * Details: Will not fix
+  * Details: Out of support scope 
 * None Available: 
-  * Details: affected
+  * Details: Affected
 
 ```
 ```
 
-Additional CVE Resources:
-```
-"references": [
-    {
-        "category": "self",
-        "summary": "Canonical URL",
-        "url": "https://access.redhat.com/security/cve/CVE-2022-1247"
-    },
-    {
-        "category": "external",
-        "summary": "RHBZ#2066799",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2066799"
-    },
-    {
-        "category": "external",
-        "summary": "https://www.cve.org/CVERecord?id=CVE-2022-1247",
-        "url": "https://www.cve.org/CVERecord?id=CVE-2022-1247"
-    },
-    {
-        "category": "external",
-        "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-1247",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1247"
-    }
-],
-```
+
 
 ## Additional Notes
 https://www.redhat.com/en/about/brand/standards/history
