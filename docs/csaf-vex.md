@@ -49,11 +49,11 @@ be found
 [here](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/csaf-vex-guidelines/docs/csaf-vex.json).
 
 The following sections break down the information included in CSAF/VEX documents using the 
-[VEX file for CVE-2022-1247](https://access.redhat.com/security/data/csaf/v2/vex/2022/cve-2022-1247.json) as an example.
+[VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2022/cve-2023-20593.json) as an example.
 
 ### Document Metadata 
 The "document" section contains general information about the published document itself including CVE severity, vendor,
-published date and revision history. 
+published date and revision history.
 
 General CVE Severity:
 
@@ -100,24 +100,24 @@ Vendor information:
 CVE ID, CVE publish date and CVE revision history:
 
 ```
-"id": "CVE-2022-1247",
-"initial_release_date": "2022-05-11T09:37:00+00:00",
+"id": "CVE-2023-20593",
+"initial_release_date": "2023-07-25T06:30:00+00:00",
 "revision_history": [
-    {
-        "date": "2022-05-11T09:37:00+00:00",
-        "number": "1",
-        "summary": "Initial version"
-    },
-    {
-        "date": "2023-09-19T14:13:41+00:00",
-        "number": "2",
-        "summary": "Current version"
-    },
-    {
-        "date": "2024-08-20T07:48:38+00:00",
-        "number": "3",
-        "summary": "Last generated version"
-    }
+  {
+    "date": "2023-07-25T06:30:00+00:00",
+    "number": "1",
+    "summary": "Initial version"
+  },
+  {
+    "date": "2024-04-18T04:20:20+00:00",
+    "number": "2",
+    "summary": "Current version"
+  },
+  {
+    "date": "2024-09-13T20:58:30+00:00",
+    "number": "3",
+    "summary": "Last generated version"
+  }
 ],
 "status": "final",
 "version": "3"
@@ -129,9 +129,9 @@ relationship of component to product and provides CPEs or PURLs depending on the
 objects in the “product_tree” object: “branches” and “relationships”.
 
 #### Branches
-
 The parent "branches" object has one child object of the "vendor" category with the name set to "Red Hat". All 
-affected Red Hat products and components will be nested in that "branches" array. 
+affected Red Hat products and components will be nested in that "branches" array. Compressed down, the parent branches 
+object would look like:
 
 ```
 {
@@ -163,26 +163,26 @@ The "product_family" category represents a general Red Hat product stream and in
 more nested objects of the "product_name" category that represents an individual release. The "product_name" object will
 always include the name of the product, a product ID and a product identification helper in the form of a CPE. 
 
-In the example below, you can see that the "product_family" object is for Red Hat Enterprise Linux 9 and nested within 
-is the "product_name" object Red Hat Enterprise Linux 9 with the CPE "cpe:/o:redhat:enterprise_linux:9". 
+In the example below, you can see that the "product_family" object is for Red Hat Enterprise Linux 6 and nested within 
+is the "product_name" object Red Hat Enterprise Linux 6 with the CPE "cpe:/o:redhat:enterprise_linux:6". 
 
 ```
 {
-    "branches": [
-      {
-            "category": "product_name",
-            "name": "Red Hat Enterprise Linux 9",
-            "product": {
-                "name": "Red Hat Enterprise Linux 9",
-                "product_id": "red_hat_enterprise_linux_9",
-                "product_identification_helper": {
-                    "cpe": "cpe:/o:redhat:enterprise_linux:9"
-                }
-            }
+  "branches": [
+    {
+      "category": "product_name",
+      "name": "Red Hat Enterprise Linux 6",
+      "product": {
+        "name": "Red Hat Enterprise Linux 6",
+        "product_id": "red_hat_enterprise_linux_6",
+        "product_identification_helper": {
+          "cpe": "cpe:/o:redhat:enterprise_linux:6"
         }
-    ],
-    "category": "product_family",
-    "name": "Red Hat Enterprise Linux 9"
+      }
+    }
+  ],
+"category": "product_family",
+"name": "Red Hat Enterprise Linux 6"
 },
 ```
 
@@ -193,7 +193,8 @@ displayed unnested under an "architecture" object, the "name" attribute will not
 because these components are unfixed. Again, these unfixed "product_version" components will only be found in VEX files 
 since CSAF files always represent a released RHSA.
 
-In the example below, the unfixed kernel component's name is "kernel" and doesn't include a specific version number.
+In the example below, the unfixed kernel component's name is "kernel" and doesn't include a specific version number or 
+an architecture format.
 
 ```
 {
@@ -208,6 +209,7 @@ In the example below, the unfixed kernel component's name is "kernel" and doesn'
   }
 },
 ```
+
 ##### Architecture and Fixed Product Versions
 Similarly to the "product_family" object, the "architecture" category represents a specific architecture for packages 
 and includes one or more "product_version" objects. As before, the "product_version" category will still include the same
@@ -247,26 +249,38 @@ and a reference to the product name.
 Continuing with the previous examples, we know that there should be at least one entry in the "relationships" object 
 that correlates to the "product_version" object for kernel. Looking at the VEX file, there are actually four entries for 
 kernel, all which relate to the different "product_name" objects from before. The below is the specific entry as it 
-relates to Red Hat Enterprise Linux 9.
+relates to Red Hat Enterprise Linux 6.
 
 Here you can see that the "full_product_name" includes a name and a product ID which are the combination of the product,
-Red Hat Enterprise Linux 9, and the component, kernel. The "product_reference" will always refer to the component's name
+Red Hat Enterprise Linux 6, and the component, kernel. The "product_reference" will always refer to the component's name
 while the "relates_to_product_reference" will refer to the product name.
 
 ```
 {
-"category": "default_component_of",
-"full_product_name": {
-        "name": "kernel as a component of Red Hat Enterprise Linux 9",
-        "product_id": "red_hat_enterprise_linux_9:kernel"
-    },
-    "product_reference": "kernel",
-    "relates_to_product_reference": "red_hat_enterprise_linux_9"
+  "category": "default_component_of",
+  "full_product_name": {
+    "name": "kernel as a component of Red Hat Enterprise Linux 6",
+    "product_id": "red_hat_enterprise_linux_6:kernel"
+  },
+  "product_reference": "kernel",
+  "relates_to_product_reference": "red_hat_enterprise_linux_6"
+},
+```
+
+For the fixed component kernel-0:3.10.0-693.112.1.el7.src, a relationship entry looks like: 
+```
+{
+  "category": "default_component_of",
+  "full_product_name": {
+    "name": "kernel-0:3.10.0-693.112.1.el7.src as a component of Red Hat Enterprise Linux Server AUS (v. 7.4)",
+    "product_id": "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src"
+  },
+  "product_reference": "kernel-0:3.10.0-693.112.1.el7.src",
+  "relates_to_product_reference": "7Server-7.4.AUS"
 },
 ```
 
 ### Vulnerability Metadata
-
 The "vulnerabilities" section reports vulnerability metadata for any CVEs included in the document and also contains a 
 "product_status" object that reports fix status for any "product_id" listed in the "product_tree" and a "remediations" 
 object. 
@@ -274,37 +288,32 @@ object.
 #### CVE Information
 CVE ID, CWE and Publication Date:
 ```
-"cve": "CVE-2022-1247",
+"cve": "CVE-2023-20593",
       "cwe": {
-        "id": "CWE-366",
-        "name": "Race Condition within a Thread"
+        "id": "CWE-1239",
+        "name": "Improper Zeroization of Hardware Register"
       },
-      "discovery_date": "2022-03-22T00:00:00+00:00",
+      "discovery_date": "2023-05-31T00:00:00+00:00",
 ```
 
 CVE Description, Summary and Statement:
 ```
 "notes": [
-    {
-        "category": "description",
-        "text": "An issue found in linux-kernel that leads to a race condition in rose_connect(). The rose driver uses rose_neigh->use to represent how many objects are using the rose_neigh. When a user wants to delete a rose_route via rose_ioctl(), the rose driver calls rose_del_node() and removes neighbours only if their “count” and “use” are zero.",
-        "title": "Vulnerability description"
-    },
-    {
-        "category": "summary",
-        "text": "kernel: A race condition bug in rose_connect()",
-        "title": "Vulnerability summary"
-    },
-    {
-        "category": "other",
-        "text": "There was no shipped kernel version that was seen affected by this problem. These files are not built in our source code.",
-        "title": "Statement"
-    },
-    {
-        "category": "general",
-        "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
-        "title": "CVSS score applicability"
-    }
+  {
+    "category": "description",
+    "text": "A flaw was found in hw, in “Zen 2” CPUs. This issue may allow an attacker to access sensitive information under specific microarchitectural circumstances.",
+    "title": "Vulnerability description"
+  },
+  {
+    "category": "summary",
+    "text": "hw: amd: Cross-Process Information Leak",
+    "title": "Vulnerability summary"
+  },
+  {
+    "category": "general",
+    "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+    "title": "CVSS score applicability"
+  }
 ],
 ```
 
@@ -315,94 +324,128 @@ CVSS Score and Severity:
         "cvss_v3": {
             "attackComplexity": "LOW",
             "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
             "confidentialityImpact": "HIGH",
-            "integrityImpact": "HIGH",
+            "integrityImpact": "NONE",
             "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
+            "scope": "CHANGED",
             "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
             "version": "3.1"
         },
-        "products": [
-            "red_hat_enterprise_linux_9:kernel",
-            "red_hat_enterprise_linux_9:kernel-rt"
-        ]
+        "products": []
     }
 ],
 "threats": [
     {
         "category": "impact",
         "details": "Moderate",
-        "product_ids": [
-            "red_hat_enterprise_linux_9:kernel",
-            "red_hat_enterprise_linux_9:kernel-rt"
-        ]
+        "product_ids": []
     }
 ],
 ```
 Additional CVE Resources:
 ```
-"references": [
-    {
-        "category": "self",
-        "summary": "Canonical URL",
-        "url": "https://access.redhat.com/security/cve/CVE-2022-1247"
-    },
-    {
-        "category": "external",
-        "summary": "RHBZ#2066799",
-        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2066799"
-    },
-    {
-        "category": "external",
-        "summary": "https://www.cve.org/CVERecord?id=CVE-2022-1247",
-        "url": "https://www.cve.org/CVERecord?id=CVE-2022-1247"
-    },
-    {
-        "category": "external",
-        "summary": "https://nvd.nist.gov/vuln/detail/CVE-2022-1247",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1247"
-    }
-],
+ "references": [
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://access.redhat.com/security/cve/CVE-2023-20593"
+        },
+        {
+          "category": "external",
+          "summary": "RHBZ#2217845",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2217845"
+        },
+        {
+          "category": "external",
+          "summary": "https://www.cve.org/CVERecord?id=CVE-2023-20593",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2023-20593"
+        },
+        {
+          "category": "external",
+          "summary": "https://nvd.nist.gov/vuln/detail/CVE-2023-20593",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20593"
+        },
+        {
+          "category": "external",
+          "summary": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=522b1d69219d8f083173819fde04f994aa051a98",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=522b1d69219d8f083173819fde04f994aa051a98"
+        },
+        {
+          "category": "external",
+          "summary": "https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7008.html",
+          "url": "https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7008.html"
+        }
+      ],
 ```
 
 #### Product Fix Status
-
 The "product_status" includes the following fix statuses:
 
-* Fixed: Contains the same fixed component versions and other details (product_tree objects) that the CSAF advisory 
-reports for that CVE
+* Fixed: Contains the same fixed component versions and other details (product_tree objects) that the are reported fixed
+for a given CVE
 * Known Affected: Confirmation that the specific component and product is affected by a particular CVE
 * Known Not Affected: Confirmation that the specific component and product is not affected by a particular CVE
 * Under Investigation: Information that the Red Hat Product Security team is verifying the applicability and impact of 
 a specific CVE to the specific component and product
 
+Compressed down, a product_status object that included products of each category, would look like:
+
 ```
 "product_status": {
-    "known_affected": [
-        "red_hat_enterprise_linux_9:kernel",
-        "red_hat_enterprise_linux_9:kernel-rt"
-    ],
-    "known_not_affected": [
-        "red_hat_enterprise_linux_6:kernel",
-        "red_hat_enterprise_linux_7:kernel",
-        "red_hat_enterprise_linux_7:kernel-rt",
-        "red_hat_enterprise_linux_8:kernel",
-        "red_hat_enterprise_linux_8:kernel-rt"
-    ]
+    "fixed": []
+    "known_affected": [],
+    "known_not_affected": [],
+    "under_investigation": []
 },
+```
+Note: It's important to remember that with VEX files, not every "product_status" will be included, only the categories that 
+have products which fall into those statuses. For CSAF files, the only included status will be the "fixed" category.
+
+Continuing with our previous examples with CVE-2023-20593, the full product ID "red_hat_enterprise_linux_6:kernel" 
+can be found in the "known_not_affected" list:
+
+```
+"known_not_affected": [
+  ...,
+  "red_hat_enterprise_linux_6:kernel",
+  "red_hat_enterprise_linux_6:microcode_ctl"
+]
+  
+```
+
+Our other full product ID "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src" can be found in the "fixed" list:
+```
+"fixed": [
+  ...,
+  "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src",
+  "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.x86_64",
+  ...
+]
 ```
 
 #### Remediations 
-The "remediations" object includes information about
-* Vendor Fix: For all the product_ids found in the “Fixed” product status there will be a corresponding entry in the 
+The "remediations" object provides additional information about the previously identified product status. The following 
+remediations status are available per product_status:
+
+"fixed" product status:
+* "vendor_fix": For all the product_ids found in the “Fixed” product status there will be a corresponding entry in the 
 "remediations" object that correlates each product_id to the correct RHSAs. The RHSA can be determined by the “url” 
-field.
-  * Details: Link on how to apply update
-  * URL: Link for the correlated RHSA
+field. Note: In VEX files, there may be more than one "vendor_fix" object if more than one RHSA released fixes for the
+CVE, while in CSAF files there will only be one "vendor_fix" object that correlates to the RHSA in that CSAF file.
+
+"known_affected": 
+* 
+
+"known_not_affected":
+* "workaround"
+
+"under_investigation"
+* 
+
 * No Fix Planned: 
   * Details: Will not fix
   * Details: Out of support scope 
@@ -410,6 +453,16 @@ field.
   * Details: Affected
 
 ```
+{
+  "category": "workaround",
+  "details": "Mitigation for this issue is either not available or the currently available options don't meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+  "product_ids": [
+    ...,
+    "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src",
+    "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.x86_64",
+    ...
+  ]
+  
 ```
 
 
