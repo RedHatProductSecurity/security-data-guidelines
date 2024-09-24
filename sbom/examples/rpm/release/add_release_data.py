@@ -27,6 +27,7 @@ def get_rpm_purl(ext_refs):
         (ref["referenceLocator"] for ref in ext_refs if ref["referenceType"] == "purl"),
         None,
     )
+    print(purl_str)
     if purl_str is None or (not purl_str.startswith("pkg:rpm/redhat")):
         return None
     return PackageURL.from_string(purl_str)
@@ -79,7 +80,7 @@ for pkg in sbom["packages"]:
             }
             new_refs.append(release_ref)
 
-    pkg["externalRefs"] = new_refs
+    pkg["externalRefs"] = sorted(new_refs, key=lambda ref: ref["referenceLocator"])
 
 with open(f"{sbom_name}.spdx.json", "w") as fp:
     json.dump(sbom, fp, indent=2)

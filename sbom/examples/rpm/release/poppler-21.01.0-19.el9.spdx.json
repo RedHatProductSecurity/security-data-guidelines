@@ -28,87 +28,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-appstream-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-i686-appstream-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-appstream-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-noarch-appstream-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-appstream-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-noarch-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-aarch64-baseos-aus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-i686-baseos-aus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-noarch-baseos-aus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -118,7 +38,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms"
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-i686-appstream-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-i686-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -128,7 +58,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms"
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-noarch-appstream-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-noarch-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -138,13 +78,81 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-noarch-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-appstream-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-appstream-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-appstream-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "ac99d8cb56bb9d866f83417d3ce8d9a40dba16a3777ddd4cbe233d0ca2ff6209"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 4f9cf76a6dd456bb727d6bda82644760"
         }
       ]
     },
@@ -198,23 +206,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "823c4d9dcda71187db507eb7451ba675d82f5fb24a282efebd5b64ce6c9f61d2"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 0967a27ade9f092d91e27dbc10a4593a"
         }
       ]
     },
@@ -235,23 +251,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "b55b55c1b41d159abcb46a6816d22740dc3f27dcfce056bd772516838caeeb7d"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 68e2eae7b9b260f885ac7b696d606118"
         }
       ]
     },
@@ -272,23 +296,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "13315bc37df94925caa5c0c883b391a529fe626be70c9c64d10be3f715e16b6c"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 5c1adabfbcb0e5cb11208e6244dd9a38"
         }
       ]
     },
@@ -309,23 +341,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "b6c48c1cd02e47a9c7066c89298f8739ae7629cd7334fec3371d9554cde33981"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 9ef555b6d0f543032d4379b3392f222d"
         }
       ]
     },
@@ -346,23 +386,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "7692e61a405901eeddd74b2d5c65da971a8516fd0aca51bc7a4b230e88d8ece2"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 7bc229d8a5eaaa44d7b1d439afeb6612"
         }
       ]
     },
@@ -383,23 +431,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "39fb1ddc551f5b4b8c9f6a6dfb497d6e6d6fac486e1110581ab05c672fc98ff7"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 6b59ba590ed0f767ec9aa535d43bf04b"
         }
       ]
     },
@@ -420,23 +476,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "3d8d5695f342391b685c451d7e8cd00842bffd96f3b832605412bb6a1c378e62"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: a160491f95353f1786a39dcd2a4cf962"
         }
       ]
     },
@@ -457,23 +521,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "b847e6f46dcd2d8ff698c90305108568e56f8ed032da104fde47489de8a2f967"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 0ba177a2516e0c9c20888c7d0f8287f9"
         }
       ]
     },
@@ -494,23 +566,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "a1ef27397ca7e873283289f47a082c682dd6a250f738b7b7208d637f4b75ca3a"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: d73f171b0510747933ffb440feea82bf"
         }
       ]
     },
@@ -531,23 +611,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "89d4e53b52ae3a3d310d363046fad45c367b18fd60244907303cfd018af3dc8c"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: a70354d5ab4c6a3c894409a6e7d8a230"
         }
       ]
     },
@@ -568,23 +656,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "42a88a004ae34220ad89a85209853231549fc2a4556477edcc52ad5a3563887a"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 3eede9f3ff49a9a94b23ec060c9df1aa"
         }
       ]
     },
@@ -605,23 +701,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "d5fb1ee67d50c6ab34c309642fff5acd8b8071cee3f48fc39905ee796c653f93"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: b7e36736ec8271287d27bb014cc469bd"
         }
       ]
     },
@@ -642,23 +746,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "2919696049591ddddf969ba46b671fd2d6bd688069b9844e49a54703a4e75f93"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 1ae9c8a446e4168d88d37e3c6ae498e5"
         }
       ]
     },
@@ -679,23 +791,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "c588c8528aa7eded3815b82c2a0ef058bb6e7f0700c62824b4d58e5651dedfd5"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 393cc91e23ba5dff8f3c47066b2db542"
         }
       ]
     },
@@ -716,23 +836,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "e4b83c35da3cc3b7def970d56f816a0f3de5e983b6f2e4b922eb399cfb140773"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: b2233be80a746e0b682b7f712975e854"
         }
       ]
     },
@@ -753,23 +881,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch&repository_id=rhel-9-for-noarch-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch&repository_id=rhel-9-for-noarch-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch&repository_id=rhel-9-for-noarch-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch&repository_id=rhel-9-for-noarch-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "4717a1695327994346eccc99c774f487e7c0143cdffba4e2dd4dd74aa2dbb968"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: a01f789672b2252f1bb52ba2ee1abe97"
         }
       ]
     },
@@ -790,23 +926,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "db09ef48ee9dcf416c9119e9dfa12c51388b89ae38cd8b821dc2624f06405f70"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 16c92a735a3f4f23b16b71ee442cc58a"
         }
       ]
     },
@@ -827,23 +971,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "701a10a1ec9ce2f101c4ad3a1aef77bfb327ba239b6e45b808ff93f2ec9ab680"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 482f4165fbdf18b5faed6f37c305ec4c"
         }
       ]
     },
@@ -864,23 +1016,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "88ebef3dbd2b4e71d5b1399107d4aaca5027299a53efd2d5e8fa164d2c57c45d"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 1fd10415d9c32ce22582df2b59517fcf"
         }
       ]
     },
@@ -901,23 +1061,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "746ac2c268979b7ded43644a6fb2fbcbfb66dfd48feb087abb2f9dca2c4326ba"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 0781dd9e45f95298c1cd52d71b4c635c"
         }
       ]
     },
@@ -938,23 +1106,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "142b44d12816bbefe3536ce7d8b15fa241a932f0e9fd716b3c5cdcb119dc647f"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 1bc1c1987430892aca8f4e106d92b5bf"
         }
       ]
     },
@@ -975,23 +1151,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "70184736ed864e9f5ee645c4fbd168468e9f3b463d2532c71e98cd7fe2253aba"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: ce490b225cb2605336e6f2d61f1cb53f"
         }
       ]
     },
@@ -1012,23 +1196,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "1854691cb2d1d7ab4197d92b471ab14e34c56ad4cad8a554eb6701c01cabc5e1"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 8b11e270d322e47c44857f3218a12f56"
         }
       ]
     },
@@ -1049,23 +1241,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "d39e2fad2e8c4cf9f925f915c1bfe6826b293d81bcd1112e65021a272a05c796"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 76520285bb0f5bf4e6fc242dc7e19b9a"
         }
       ]
     },
@@ -1086,23 +1286,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "df4d310e7581a816c5b5358cf161b24749db2e80324d751b75d71153bbdfca6e"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 1ea146bfb0d75c9193e49750825e0ace"
         }
       ]
     },
@@ -1123,23 +1331,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "58fb44f78aa269105f8fd5b0d1eb0cafe14d9dc7218ae9a362b8af264b05fe62"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 032c56e517c4ecf8adb851c801559219"
         }
       ]
     },
@@ -1160,23 +1376,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "ef13b612a62ea567e11ab2b60a5deed774ff6a500d59b90763c8a89ceafeb751"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: e42c91891a468b1152f2ecd910c26392"
         }
       ]
     },
@@ -1197,23 +1421,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "439d97f55dd9d80174983670b4d1a47c2dcb60b076a411fb57ccc74da6591993"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 32cf2baf6007fd9dcf3c957b797f07ed"
         }
       ]
     },
@@ -1234,23 +1466,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "f325bf658a24a0776495d9c17a7ad4a6d7d76744797fa6b3a7f7af179f4dca43"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 4afa07d70ad8fe31acee5801568e2675"
         }
       ]
     },
@@ -1271,23 +1511,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "12eb0caf192467f4bf005c253aaa5d2eb67c7f2fd6f80ff9b55a8991be534091"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: aea273188e8457fd89ca75fd4e80bb57"
         }
       ]
     },
@@ -1308,23 +1556,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "84e234f19993b8a8cdb21d50cbe002f88a0c629fd27a851309ea4322f113cde9"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 0191fa8694e76d0814366a0a0d40797b"
         }
       ]
     },
@@ -1345,23 +1601,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "6d4cd82f848758ccd07b79694c2e0b098f7f1e2dba4aae7771d499dd34fa02f7"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 19b8325423b4ee4c5932c34cfdb6cd46"
         }
       ]
     },
@@ -1382,23 +1646,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "32fb8dc4bbe094c9a33f829e8cdf37cec6dd640a27fae301158e6db43c2eb645"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 2dfdf488eae1a735daca17b2480a177c"
         }
       ]
     },
@@ -1419,23 +1691,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "9678b5a20ac152bc58b78c244401aaa41d76ce88bef524b5d97b04d6611da24f"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 96a69a7c373bb992af252941436bbc31"
         }
       ]
     },
@@ -1456,23 +1736,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "95831ac2acc87f85ae85187b4317764242d5de2641a2d3cc51805269f1792485"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 26e9e5d3888a77cfdbd90682f33c2bbc"
         }
       ]
     },
@@ -1493,23 +1781,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "2c3f418c82d5dc8b412422aa8260d00a7b2f10f066277de525c0df14d46705a5"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: fd62e12dcf7946c0a84b0b25f743cb0a"
         }
       ]
     },
@@ -1530,23 +1826,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "f9538e6b19edf5c63b1f0e3095f6fd012bfc1785d758e58fd4879caf9b911d23"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 6252e754c2f9a832789becfbb4995fb0"
         }
       ]
     },
@@ -1567,23 +1871,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "c241ec34c93d7e71b8d73282ea242e9143a0f4265f30d8d4ffb80a7140de2f8d"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 6a71cb69d3fa75940bbab5ceec3487b7"
         }
       ]
     },
@@ -1604,23 +1916,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "f16d56c5e2295d2635c1356b1279fa2b11952bf464359cfe8aa1ae4e35e15216"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 6aa8b7a983388c82b7806817441639f0"
         }
       ]
     },
@@ -1641,23 +1961,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "fefed1bc3970a1ad692b7b57095ee0bb6b98b0d59cdff910731938bf60c40011"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: fbd06dfe57683923eb3c4126a274089c"
         }
       ]
     },
@@ -1678,23 +2006,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "f2bff4d4ef0b641d25094c925082bec3254c9e881838af9bca8c18dee3e45f9d"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: e9000cf06fa18d4a2a14e4fd938760fc"
         }
       ]
     },
@@ -1715,23 +2051,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "7f8cae6b3a2c1346ade8967d1dbe65e2e1341816e510769bfad844d82e8cb98c"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 42e29fcdb5d8c69dbf05e5b095ddde70"
         }
       ]
     },
@@ -1752,23 +2096,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "78cbefee103f3258edd345af4df2a306de73c28a41971f8a2fa6ceb8a3025424"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 18c95d158c0d0d44cee5071d76c18aa7"
         }
       ]
     },
@@ -1789,23 +2141,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "1bca7e7d1224c87710aff3dbe2d2998ffb4cab09da38166c0abcca0864a700a2"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 3fb31080b2b88726a1d6c563d7dc1f53"
         }
       ]
     },
@@ -1826,23 +2186,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "bc35f7aa9abcebee86f57ebd30aab737c23d7bceab0af7d5d9d71d24b9a1b8e3"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 2b8f64a8be4fc7fef20e1a0c70a3a292"
         }
       ]
     },
@@ -1863,23 +2231,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "2b466bb6af0f1d2cac29bace9c9d1479a4d8ae16c02085ce61add5d1600a5a9c"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: f0103b274a9c20773360a6de2b03fc38"
         }
       ]
     },
@@ -1900,23 +2276,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "8bebb264e45338ce7d20064bba893e544703cdf965d4683982c5cfad36a541b6"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: ffd4c8adcc6a5db4dd712a000b39ac9d"
         }
       ]
     },
@@ -1937,23 +2321,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "0c5a9219064f27f94565798960cd596378d5a86edb3c9fe3ea3b5100b296c998"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: cdbb8cbc9b331aae0100fcdcfceea245"
         }
       ]
     },
@@ -1974,23 +2366,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "9b5f0d51959e9f5555d0814bda7c9a586c878f4c28b556e62abc1d7d03921096"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 74f0df98af26f5007b9c0d597ece5f2c"
         }
       ]
     },
@@ -2011,23 +2411,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "86f3d1bbc3846e38d7ba7c0c8c998c380318532937835fc407bebc21c7e121f4"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: aa902943d511988ea7e7c90e090f5533"
         }
       ]
     },
@@ -2048,23 +2456,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "d111695ffdc65ef8cc73271a3d9008d5bad65d58744f49283600df1f6409c9f2"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: e6deceadfd64aaacbae0877905255ac9"
         }
       ]
     },
@@ -2085,23 +2501,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "d0a5c7eeb6bc03cb40b6319ea52ec52dfe359d7bd626c461036028e4cd7a15d0"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: c6ab4d7789825d7e06d76cc90d2616be"
         }
       ]
     },
@@ -2122,23 +2546,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "223f5e1aef214f7cc6fea0d09c0089ebdc490e5ea1c17aba6f8c43a5e73eaf4a"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 8aa1cf52b7ad517f2f226aef85d8f2f5"
         }
       ]
     },
@@ -2159,23 +2591,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "e96071f842c2baa3cd3b5c357c1cec9ac5b58fe9c997c4e41a11cc2d5a593998"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 86f5e376a974549da2c6ddf69200ca0d"
         }
       ]
     },
@@ -2196,23 +2636,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "245cb852067ced7e0ec57ec98d02cd29a1ee922b5936486e71d0de7af3491e30"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 58a32943d9e452dec0b443bde7ab68f1"
         }
       ]
     },
@@ -2233,23 +2681,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "1fbf48ff1e14c6c0a66902d45a8c9c20dfacf6728838ab64badd3d63681c08b4"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 5e1fc7ff76e89014251c9fc188577bfa"
         }
       ]
     },
@@ -2270,23 +2726,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "ec1d95bd36bc3cad8df1de405390031af8dd86e4244e5270ce00e8564d0ede8d"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 18f9769c798ebec6ab55073392b9ca92"
         }
       ]
     },
@@ -2307,23 +2771,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "dca5a35069be635d141adc7aeae073b358131775a822ecce0c61adfa02e8715e"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 72c71b935fdab373524c93688d68027a"
         }
       ]
     },
@@ -2344,23 +2816,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "7a9870abfae6ddb825d2e326ec4c48b44326b87cb2907ef6d0a4a336476eb531"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 7c603cdfb53b1e8473479eecf5311c95"
         }
       ]
     },
@@ -2381,23 +2861,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "e4cf6aa6510d99ff40957946a6ad923787ea941a87ceea538ec867f02466929a"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 418ae7528069ed467c00d56c22e39ff9"
         }
       ]
     },
@@ -2418,23 +2906,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "7fb4201556ec1a91d0b9287b5b99f9de8cd3ad0e99c8b0936d18d0d0cf5c0c12"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: bad5c33d7873032cc2efedf559445b30"
         }
       ]
     },
@@ -2455,23 +2951,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "e4e83700630cf34e549b0b580523bbe81ac104ec1561a0c5d1b53e447e7a2038"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 7493836fe572582cdd4b6648dd4e8fdf"
         }
       ]
     },
@@ -2492,23 +2996,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "fa27d4ea22f4c975f824efee0ca8834a404456c9b2786b9daef0af0854577cd6"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: a36333a91b3d4285c8c0d43b62220c4e"
         }
       ]
     },
@@ -2529,23 +3041,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "dc905a69e8fc81752bb47099cf5d2d78044ae8f1c2592443a5d8cf17f1c119a9"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: f6a1c2a29bfb46627905704d1b83f388"
         }
       ]
     },
@@ -2566,23 +3086,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "2475175ba8f1abd41318888a14d833082e4d355647aeb4766d6a1e41481dbdad"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: aa44c950cef2a694f50d8ca6bf6d039f"
         }
       ]
     },
@@ -2603,23 +3131,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "de61c2cc52d0e93c6119a4ed92ac63e4f0927dba2885131241b4d86e650cb6f5"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 5db76ca03affff90d201e32f3ce1f317"
         }
       ]
     },
@@ -2640,23 +3176,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "933cca9dcc9d01bccf1164f550a7bd93d0d81b22e1dc1c59eebf1c5e2fb60a2f"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 1bad4a76ab4b361dfbe67f856beeb3ec"
         }
       ]
     },
@@ -2677,23 +3221,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "eb6940ee04b688318359e63191564085373d1a5a16d4d49076fde6fb6083735d"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 07a4b821820285b0a2bcb7f161cc632e"
         }
       ]
     },
@@ -2714,23 +3266,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "161c4593bea49a285db38541787eae3497594cc54f07394ee3b3f4acb31d031e"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: ee1aa8a495360dda2eca57319cd63791"
         }
       ]
     },
@@ -2751,23 +3311,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "93fd0f457d640c1464bdb266a72be0363a2f8ea02536bc226a759f909629878f"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 6e2be9c750229e9a46ccd8827c97f447"
         }
       ]
     },
@@ -2788,23 +3356,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "fa5fcff9f92d89e013410a611224efb09bed6c4c61958f3e76e0656c09c23457"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: d924084c9ddf1cf95933317a99e28e98"
         }
       ]
     },
@@ -2825,23 +3401,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "88768aeba2dd6939cfbb75ed252dbdf3a7675380d5580de1a233c248295fd0fa"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 5ac3c42a071433674803a9475f64271a"
         }
       ]
     },
@@ -2862,23 +3446,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "094ed04a4c2878088acfec6bbd3bdc052ba40ae13a64ae088c86d3d37bfc6b51"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: e2ef5192eb1e412c9ac6690795d763a4"
         }
       ]
     },
@@ -2899,23 +3491,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "bcdb57070fdead5365d6663dd54d87fd1aa35240e689cf9073c0ce6bb79694b4"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 179feb1fe0324a8d77eec19d3bc8ab08"
         }
       ]
     },
@@ -2936,23 +3536,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "697384f162c65e0860638f37f9a4d31b057fbbd94728c89e2f1aee5a67040519"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 026c0b75416b3312f9a8c55ed79d0acf"
         }
       ]
     },
@@ -2973,23 +3581,31 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "330dcbf7fdc773216624854ad07aa8e39968c1f1073363c379d12842a023a825"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: bbd4e69a12e039eb005a3d85b6c88aae"
         }
       ]
     }
