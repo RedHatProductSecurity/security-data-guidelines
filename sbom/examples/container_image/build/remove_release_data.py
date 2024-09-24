@@ -16,7 +16,8 @@ for pkg in sbom["packages"]:
         if purl.type == "oci":
             purl.qualifiers.pop("tag", None)
             purl.qualifiers.pop("repository_url", None)
-            purl_ref["referenceLocator"] = purl.to_string()
+            # Escape colon because: https://github.com/package-url/packageurl-python/issues/152
+            purl_ref["referenceLocator"] = purl.to_string().replace("sha256:", "sha256%3A")
 
 
 with open(f"{sbom_name}.spdx.json", "w") as fp:
