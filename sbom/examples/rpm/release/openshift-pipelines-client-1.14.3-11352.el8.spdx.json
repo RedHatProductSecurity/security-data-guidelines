@@ -18692,6 +18692,11 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-aarch64-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-ppc64le-source-rpms"
         },
         {
@@ -18703,11 +18708,6 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-x86_64-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-aarch64-source-rpms"
         }
       ],
       "checksums": [

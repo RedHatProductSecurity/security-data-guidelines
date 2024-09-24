@@ -23,67 +23,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-aus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-aus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-e4s-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
@@ -93,7 +33,67 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-aus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
@@ -163,17 +163,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -203,17 +203,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
@@ -243,17 +243,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -283,17 +283,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
@@ -323,17 +323,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -363,17 +363,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
@@ -403,17 +403,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -443,17 +443,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -483,17 +483,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -523,17 +523,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -563,17 +563,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -603,17 +603,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
@@ -643,17 +643,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
@@ -683,17 +683,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
@@ -723,17 +723,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
@@ -763,17 +763,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -803,17 +803,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
@@ -843,17 +843,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -883,17 +883,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
@@ -923,17 +923,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -963,17 +963,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -1003,17 +1003,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
@@ -1043,17 +1043,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
@@ -1083,17 +1083,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
@@ -1123,17 +1123,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -1163,17 +1163,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -1203,17 +1203,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -1243,17 +1243,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -1283,17 +1283,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
@@ -1323,17 +1323,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -1363,17 +1363,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
         }
       ],
       "checksums": [
@@ -1403,17 +1403,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -1443,17 +1443,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
         }
       ],
       "checksums": [
@@ -1483,17 +1483,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
@@ -1523,17 +1523,17 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
         }
       ],
       "checksums": [
