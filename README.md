@@ -13,7 +13,7 @@ pip install -r requirements/docs-requirements.txt
 mkdocs serve
 ```
 
-If your running on MacOS and experience issues with the `cairo` dependency, try add the following:
+If your running on MacOS and experience issues with the `cairo` dependency, try adding the following:
 
 ```
 brew install cairo

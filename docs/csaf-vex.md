@@ -1,23 +1,10 @@
 # Red Hat CSAF-VEX Advisories
 
 ## Red Hat Security Data Overview 
-The Red Hat Product Security was originally founded in 2001 and has always been committed to providing our customers 
-and partners with complete and accurate security data for all Red Hat software. In the past, Red Hat published security 
-advisory information using Common Vulnerability Reporting Framework (CVRF) and CVE information using the Open 
-Vulnerability and Assessment Language (OVAL) format. Over the last few years, the Common Security Advisory Framework 
-(CSAF) 2.0 standard was published and is now the successor to the CVRF version 1.2 as there are many enhancements to the
-information provided in each CSAF file. 
-
-On February 1st, 2023, Red Hat first announced the general availability of CSAF 2.0 documents. This version of our CSAF 
-files are published using the VEX profile (Vulnerability Exploitability eXchange) and the document type is now known as 
-csaf_vex. Since then Red Hat has continued to make improvements to our published security data, including the GA release
-of our VEX files on July 10th, 2024. While publishing our CSAF files was extremely helpful for correlating security data
-to individual advisories, we began publishing VEX files to make it easier for our partners and customers to correlate 
-both fixed and unfixed security information to an individual CVE. Additionally, the publication of our VEX files
-announced the deprecation of our previously published OVAL data, which did not provide the same level of detailed 
-security information. 
-
-Currently, Red Hat Product Security publishes CSAF advisories for every single Red Hat security advisory and VEX files 
+In the past, Red Hat published security advisory information using Common Vulnerability Reporting Framework (CVRF) and 
+CVE information using the Open Vulnerability and Assessment Language (OVAL) format. As of July 10th,2024, Red Hat 
+Product Security publishes CSAF files for every single Red Hat Security Advisory 
+([RHSA](https://access.redhat.com/articles/explaining_redhat_errata)) and VEX files 
 for every single CVE record that is associated with the Red Hat portfolio in any way.
 
 ## Red Hat and CSAF/VEX
@@ -26,9 +13,9 @@ The [Common Security Advisory Framework (CSAF)](https://docs.oasis-open.org/csaf
 was originally published as an open standard by OASIS Open in November 2022. CSAF files provide a structured, 
 machine-readable way of representing and sharing security advisory information across all software and hardware providers. 
  
-Red Hat's CSAF files are always associated with one specific advisory and a given advisory may include one or more product 
-version(s) and one or more components, depending on the product type and update scope. The advisory itself can also 
-include updates to address one or more vulnerabilities. Red Hat’s CSAF files are publicly available per advisory 
+Red Hat's CSAF files are always associated with RHSA and a given security advisory may include one or more product 
+version(s) and one or more components, depending on the product type and update scope. The RHSA itself can also 
+include updates to address one or more vulnerabilities. Red Hat’s CSAF files are publicly available per RHSA 
 [here](security.access.redhat.com/data).
 
 ### VEX Overview
@@ -43,13 +30,13 @@ and Red Hat products. Red Hat’s VEX files are publicly available per CVE
 
 ## Document Structure
 Although CSAF and VEX files ultimately serve different purposes, both CSAF and VEX files meet the 
-CSAF machine-readable standard and use the VEX profile to convey security information. The CSAF-VEX standard includes
+CSAF machine-readable standard and use the VEX profile to convey security information. The CSAF-P standard includes
 three main sections: document metadata, a product tree and vulnerability metadata. The full document structure can
 be found 
 [here](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/csaf-vex-guidelines/docs/csaf-vex.json).
 
 The following sections break down the information included in CSAF/VEX documents using the 
-[VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2022/cve-2023-20593.json) as an example.
+[VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2023/cve-2023-20593.json) as an example.
 
 ### Document Metadata 
 The `document` section contains general information about the published document itself including CVE severity, vendor,
@@ -147,12 +134,12 @@ object would look like:
 
 All nested objects included in the `branches` object of the `vendor` category fall into the following subcategories:
 * `product_family`: Represents a general Red Hat product stream and includes one or more 
-nested objects of the `product_name` category .
+nested objects of the `product_name` category.
 * `product_name`: Represents a specific product release and is always nested under the 
-corresponding "product_family"
+corresponding `product_family` category.
 * `product_version`: Represents a specific component. When displayed unnested, the 
 component is not fixed yet and will not include a specific version number. Note: This will only be present in VEX files
-since CSAF files are per advisory and will only include fixed components.
+since CSAF files are per RHSA and will only include fixed components.
 * `architecture`: Represents fixed components by their architecture and includes nested 
   "product_version" objects. These "product_version" will be fixed and provide the specific version number. 
 
@@ -188,7 +175,8 @@ is the `product_name` object Red Hat Enterprise Linux 6 with the CPE "cpe:/o:red
 
 ##### Unfixed Product Versions (VEX only) Examples
 The `product_version` category includes information about a specific affected package. The `product_version` object will 
-always include the name of the component, a product ID and a product identification helper in the form of a PURL. When 
+always include the name of the component, a product ID and a product identification helper in the form of a 
+[PURL](https://redhatproductsecurity.github.io/security-data-guidelines/purl/). When 
 displayed unnested under an `architecture` object, the `name` attribute will not reference a specific version number 
 because these components are unfixed. Again, these unfixed `product_version` components will only be found in VEX files 
 since CSAF files always represent a released RHSA.
@@ -213,7 +201,8 @@ an architecture format.
 ##### Architecture and Fixed Product Versions
 Similarly to the `product_family` object, the `architecture` category represents a specific architecture for packages 
 and includes one or more `product_version` objects. As before, the `product_version` category will still include the same
-information: the name of the component, a product ID and product identification helper in the form of a PURL. However, 
+information: the name of the component, a product ID and product identification helper in the form of a 
+[PURL](https://redhatproductsecurity.github.io/security-data-guidelines/purl/). However, 
 when `product_versions` are nested under `architecture` object, they are fixed components and the `name` attribute will 
 include a specific version number and the specific architecture format. 
 
