@@ -12,3 +12,9 @@ source venv/bin/activate
 pip install -r requirements/docs-requirements.txt
 mkdocs serve
 ```
+
+If your running on MacOS and experience issues with the `cairo` dependency, try add the following:
+
+```
+brew install cairo
+```
