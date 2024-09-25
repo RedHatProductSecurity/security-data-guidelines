@@ -18,7 +18,7 @@ comprehensive SBOM are:
 
 - Define an accurate identification of components and products usable across all published security data.
 
-It's also important to cover the qualities of an SBOM that are currently out of scope:
+It's equally important to clarify what remains outside the scope of an SBOM:
 
 - Provide a component dependency graph: providing dependency relationships between components as part of an
   application or an operating system is currently out of scope. This type of information is varied between different
@@ -469,9 +469,9 @@ purl identifiers
 :   A list of annotations may provide additional information that is specific to the RPM format. In the example
     above, the MD5 checksum the signed header of the RPM package is included.
 
-Each set of architecture-specific RPMs also have an associated source RPM that bundles all the source code that was
-used to build those RPMs. SRPMs should be represented as a separate package object in an SBOM, and their relationship
-to architecture-specific RPMs can be represented with:
+Each set of architecture-specific RPMs also have an associated source RPM (SRPM) that bundles all the source code
+that was used to build those RPMs. SRPMs should be represented as a separate package object in an SBOM, and their
+relationship to architecture-specific RPMs can be represented with:
 
 === "SPDX 2.3"
 
@@ -518,8 +518,6 @@ purl identifiers
     the respective package type. For components that are distributed as standalone bundles (such as OpenSSL in the
     example above), `generic` purls should be used with an exact download URL from where a specific bundle of source
     code was fetched from, including a checksum (which should also be specified in the `checksums` field).
-
-Note that provenance metadata may not be available for all components.
 
 To associate a set of source archives with the SRPM that includes them, use:
 
