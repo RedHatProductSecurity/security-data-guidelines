@@ -33,7 +33,7 @@ theme:
 
 nav:
   - Home: "index.md"
-  - PURL: "purl.md"
+  - purl: "purl.md"
   - CSAF-VEX: "csaf-vex.md"
 
 plugins:

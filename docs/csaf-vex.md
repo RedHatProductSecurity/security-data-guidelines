@@ -38,11 +38,11 @@ be found
 The following sections break down the information included in CSAF/VEX documents using the 
 [VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2023/cve-2023-20593.json) as an example.
 
-### Document Metadata 
-The `document` section contains general information about the published document itself including CVE severity, vendor,
+### Document Metadata
+The `document` section contains general information about the published document itself including the CVE severity, vendor,
 published date and revision history.
 
-CVE severity:
+The `aggregate_severity.text` object displays the general CVE severity:
 
 ```
 "aggregate_severity": {
@@ -51,7 +51,7 @@ CVE severity:
 },
 ```
 
-VEX metadata: 
+The following objects provide general information about the VEX file itself:
 
 ```
 "category": "csaf_vex",
@@ -73,7 +73,7 @@ VEX metadata:
 ],
 ```
 
-Vendor information:
+Vendor information is represented in the `publisher` object:
 ```
 "publisher": {
     "category": "vendor",
@@ -85,6 +85,9 @@ Vendor information:
 ```
 
 CVE ID, CVE publish date and CVE revision history:
+* `id`: Provides the official CVE ID.
+* `initial_release_date`: Represents the date that the Red Hat first published information on the CVE.
+* `revision_history`: Details any changes made to the CVE information published by Red Hat.
 
 ```
 "id": "CVE-2023-20593",
@@ -270,22 +273,30 @@ For the fixed component kernel-0:3.10.0-693.112.1.el7.src, a relationship entry 
 ```
 
 ### Vulnerability Metadata
-The `vulnerabilities` section reports vulnerability metadata for any CVEs included in the document and also contains a 
-`product_status` object that reports fix status for any `product_id` listed in the `product_tree` and a `remediations` 
-object. 
+The `vulnerabilities` section reports vulnerability metadata for the CVE and also contains a
+`product_status` object that reports affected status and fix information for any `product_id` listed in the `product_tree` and a `remediations`
+object.
 
-#### CVE Information
-CVE ID, CWE and publication date:
+#### General CVE Information
+Basic CVE information is represented using the following objects:
+* `cve`: The official CVE ID.
+* `cwe`: Information about the corresponding CWE, include the CWE ID and the name.
+* `discovery_date`: The first reported date of the vulnerability. Note: This date can differ from the previously
+  mentioned `initial_release_date` if the CVE was coordinated under embargo.
 ```
 "cve": "CVE-2023-20593",
-      "cwe": {
-        "id": "CWE-1239",
-        "name": "Improper Zeroization of Hardware Register"
-      },
-      "discovery_date": "2023-05-31T00:00:00+00:00",
+"cwe": {
+  "id": "CWE-1239",
+  "name": "Improper Zeroization of Hardware Register"
+},
+"discovery_date": "2023-05-31T00:00:00+00:00",
 ```
 
-CVE description, summary and statement:
+Additional CVE information can be found in the `notes` object:
+* `description`: This category includes a written description of the CVE.
+* `summary`: This category includes a short summary of the CVE.
+* `statement`: This category includes a statement from Red Hat on the CVE, when applicable (not present in the example).
+* `general`: This category includes a general statement on the applicability of CVSS scores.
 ```
 "notes": [
   {
@@ -306,7 +317,14 @@ CVE description, summary and statement:
 ],
 ```
 
-CVSS score and severity:
+A CVE can have a single CVSS score that is  associated to all products and components in the VEX file or there can
+be different CVSS score metrics for different subset of products and components (per component Severity and CVSS metadata)
+
+All CVSS scores associated with the CVE will have entries included `scores` object:
+* `cvss_v3`: Includes attributes for each CVSS base value, the complete CVSS vector string and the version of CVSS that
+  is used.
+* `products`: Includes all product IDs, both for products and components, that are represented by the scores in the
+  `cvss_v3` object.
 ```
 "scores": [
     {
@@ -327,6 +345,19 @@ CVSS score and severity:
         "products": []
     }
 ],
+```
+
+Similarly to CVSS scores, a CVE can have one severity impact value that represents all products and components in the
+VEX file or there can be different severity impact values for different subset of products and components
+(per component Severity and CVSS metadata).
+
+All severity impact values with the CVE will have entires includes in the `threats` object:
+* `category`: The "impact" value identifies that the following information is the severity impact value of a CVE.
+* `details`: Reports the appropriate [Red Hat Severity Rating](https://access.redhat.com/security/updates/classification/)
+  for the associated `product_ids`.
+* `product_ids`: Includes all product IDs, both for products and components, that have the severity rating in the
+  `details` object.
+```
 "threats": [
     {
         "category": "impact",
@@ -335,7 +366,11 @@ CVSS score and severity:
     }
 ],
 ```
-Additional CVE resources:
+
+Additional CVE resources are described in the `references` object:
+* `category`: Either of the type "self" or "external".
+* `summary`: A summary of the provided resource.
+* `url`: A link to the resource.
 ```
  "references": [
         {
