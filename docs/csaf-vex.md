@@ -127,9 +127,9 @@ object would look like:
 {
   "branches": [
     {
-      "branches": []
-      "category": "vendor"
-      "name": "Red Hat:
+      "branches": [],
+      "category": "vendor",
+      "name": "Red Hat"
     }
   ]
 }
@@ -516,6 +516,9 @@ CVE.
 ```
 
 
-## Additional Notes
-https://www.redhat.com/en/about/brand/standards/history
-https://www.redhat.com/en/blog/20-years-red-hat-product-security-inception-customer-experience
+## Additional Questions or Concerns 
+Red Hat is committed to continually improving our security data; any future changes to the data itself or the format of 
+the files are tracked in the [Red Hat Security Data Changelog](https://access.redhat.com/articles/5554431).
+
+Please contact Red Hat Product Security with any questions regarding security data at [secalert@redhat.com](secalert@redhat.com) or file an 
+issue in the public [SECDATA Jira project](https://issues.redhat.com/projects/SECDATA/issues/SECDATA-525?filter=allopenissues).
