@@ -14,8 +14,6 @@ catalog_url = "https://catalog.redhat.com/api/containers/v1/"
 nvr_api = catalog_url + "images/nvr/"
 rpm_manifest_api = catalog_url + "images/id/{catalog_image_id}/rpm-manifest"
 
-rpm_sbom_url = "https://access.redhat.com/security/data/sbom/v1/rpm/"
-
 
 def get_image_data(image_nvr):
     response = requests.get(nvr_api + image_nvr)
@@ -55,10 +53,10 @@ def create_sbom(image_id, root_package, packages, rel_type):
 
     spdx = {
         "spdxVersion": "SPDX-2.3",
-        "dataLicense": "CC0-1.0",
+        "dataLicense": "CC-BY-4.0",
         "SPDXID": "SPDXRef-DOCUMENT",
         "creationInfo": {
-            "created": "2006-08-14T02:34:56-06:00",
+            "created": "2006-08-14T02:34:56Z",
             "creators": [
                 "Tool: example SPDX document only",
             ],
@@ -70,7 +68,9 @@ def create_sbom(image_id, root_package, packages, rel_type):
     }
 
     with open(f"{image_id}.spdx.json", "w") as fp:
-        json.dump(spdx, fp, indent=2)
+        # Add an extra newline at the end since a lot of editors add one when you save a file,
+        # and these files get opened and read in editors a lot.
+        fp.write(json.dumps(spdx, indent=2) + "\n")
 
 
 def generate_sboms_for_image(image_nvr):

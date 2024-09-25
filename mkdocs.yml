@@ -1,7 +1,7 @@
 site_name: Red Hat Security Data Guidelines
 site_url: https://redhatproductsecurity.github.io/security-data-guidelines/
 edit_uri: "https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/docs"
-copyright: Copyright &copy; Red Hat, Inc. &nbsp;&centerdot;&nbsp; <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+copyright: Copyright &copy; Red Hat, Inc. &nbsp;&centerdot;&nbsp; <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>
 
 theme:
   name: material
@@ -19,30 +19,37 @@ theme:
   language: en
   favicon: images/favicon.png
   logo: images/logo.png
+  font:
+    text: Red Hat Text
+    code: Red Hat Mono
   palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/brightness-4
         name: Switch to dark mode
       primary: black
     - scheme: slate
       toggle:
-        icon: material/toggle-switch
+        icon: material/brightness-7
         name: Switch to light mode
       primary: black
 
 nav:
   - Home: "index.md"
+  - SBOM: "sbom.md"
   - purl: "purl.md"
 
 plugins:
   - social
   - search
 
+extra_css:
+  - stylesheets/extra.css
+
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/RedHatProductSecurity
+      link: https://github.com/RedHatProductSecurity/security-data-guidelines
     - icon: fontawesome/regular/envelope
       link: "mailto:secalert@redhat.com"
 
@@ -55,6 +62,7 @@ markdown_extensions:
   - attr_list
   - abbr  # https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations
   - md_in_html
+  - def_list  # https://squidfunk.github.io/mkdocs-material/reference/lists/#using-definition-lists
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
