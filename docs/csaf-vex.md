@@ -85,6 +85,7 @@ Vendor information is represented in the `publisher` object:
 ```
 
 CVE ID, CVE publish date and CVE revision history:
+
 * `id`: Provides the official CVE ID.
 * `initial_release_date`: Represents the date that the Red Hat first published information on the CVE.
 * `revision_history`: Details any changes made to the CVE information published by Red Hat.
@@ -136,6 +137,7 @@ object would look like:
 ```
 
 All nested objects included in the `branches` object of the `vendor` category fall into the following subcategories:
+
 * `product_family`: Represents a general Red Hat product stream and includes one or more 
 nested objects of the `product_name` category.
 * `product_name`: Represents a specific product release and is always nested under the 
@@ -293,6 +295,7 @@ Basic CVE information is represented using the following objects:
 ```
 
 Additional CVE information can be found in the `notes` object:
+
 * `description`: This category includes a written description of the CVE.
 * `summary`: This category includes a short summary of the CVE.
 * `statement`: This category includes a statement from Red Hat on the CVE, when applicable (not present in the example).
@@ -321,6 +324,7 @@ A CVE can have a single CVSS score that is  associated to all products and compo
 be different CVSS score metrics for different subset of products and components (per component Severity and CVSS metadata)
 
 All CVSS scores associated with the CVE will have entries included `scores` object:
+
 * `cvss_v3`: Includes attributes for each CVSS base value, the complete CVSS vector string and the version of CVSS that
   is used.
 * `products`: Includes all product IDs, both for products and components, that are represented by the scores in the
@@ -352,6 +356,7 @@ VEX file or there can be different severity impact values for different subset o
 (per component Severity and CVSS metadata).
 
 All severity impact values with the CVE will have entires includes in the `threats` object:
+
 * `category`: The "impact" value identifies that the following information is the severity impact value of a CVE.
 * `details`: Reports the appropriate [Red Hat Severity Rating](https://access.redhat.com/security/updates/classification/)
   for the associated `product_ids`.
@@ -368,6 +373,7 @@ All severity impact values with the CVE will have entires includes in the `threa
 ```
 
 Additional CVE resources are described in the `references` object:
+
 * `category`: Either of the type "self" or "external".
 * `summary`: A summary of the provided resource.
 * `url`: A link to the resource.
