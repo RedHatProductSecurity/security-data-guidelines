@@ -1,4 +1,4 @@
-# Red Hat CSAF-VEX Advisories
+# Red Hat CSAF-VEX Security Data
 
 ## Red Hat Security Data Overview 
 In the past, Red Hat published security advisory information using Common Vulnerability Reporting Framework (CVRF) and 
@@ -7,7 +7,7 @@ Product Security publishes CSAF files for every single Red Hat Security Advisory
 ([RHSA](https://access.redhat.com/articles/explaining_redhat_errata)) and VEX files 
 for every single CVE record that is associated with the Red Hat portfolio in any way.
 
-## Red Hat and CSAF/VEX
+## Red Hat and CSAF-VEX
 ### CSAF Overview
 The [Common Security Advisory Framework (CSAF)](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html) 
 was originally published as an open standard by OASIS Open in November 2022. CSAF files provide a structured, 
@@ -35,7 +35,7 @@ three main sections: document metadata, a product tree and vulnerability metadat
 be found 
 [here](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/csaf-vex-guidelines/docs/csaf-vex.json).
 
-The following sections break down the information included in CSAF/VEX documents using the 
+The following sections break down the information included in CSAF-VEX documents using the 
 [VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2023/cve-2023-20593.json) as an example.
 
 ### Document Metadata
