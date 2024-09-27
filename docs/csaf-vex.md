@@ -30,7 +30,7 @@ and Red Hat products. Red Hat’s VEX files are publicly available per CVE
 
 ## Document Structure
 Although CSAF and VEX files ultimately serve different purposes, both CSAF and VEX files meet the 
-CSAF machine-readable standard and use the VEX profile to convey security information. The CSAF-P standard includes
+CSAF machine-readable standard and use the VEX profile to convey security information. The CSAF standard includes
 three main sections: document metadata, a product tree and vulnerability metadata. The full document structure can
 be found 
 [here](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/csaf-vex-guidelines/docs/csaf-vex.json).
@@ -138,7 +138,7 @@ object would look like:
 
 All nested objects included in the `branches` object of the `vendor` category fall into the following subcategories:
 
-* `product_family`: Represents a general Red Hat product stream and includes one or more 
+* `product_family`: Represents a general Red Hat product main stream and includes one or more 
 nested objects of the `product_name` category.
 * `product_name`: Represents a specific product release and is always nested under the 
 corresponding `product_family` category.
@@ -184,7 +184,7 @@ always include the name of the component, a product ID and a product identificat
 [PURL](https://redhatproductsecurity.github.io/security-data-guidelines/purl/). When 
 displayed unnested under an `architecture` object, the `name` attribute will not reference a specific version number 
 because these components are unfixed. Again, these unfixed `product_version` components will only be found in VEX files 
-since CSAF files always represent a released RHSA.
+since CSAF files always represent a released RHSA. The purl identifiers for unfixed content are only available for `rpm`, `oci` (container), and `rpmmod` (modular) purl content type.
 
 In the example below, the unfixed kernel component's name is "kernel" and doesn't include a specific version number or 
 an architecture format.
@@ -433,7 +433,7 @@ Compressed down, a `product_status` object that included products of each catego
 },
 ```
 Note: It's important to remember that with VEX files, not every product status will be included, only the categories that 
-have products which fall into those statuses. For CSAF files, the only included status will be the `fixed` category.
+have products which fall into those statuses. For CSAF files, the only included status will be the `fixed` and optionally `known_not_affected` category if in the released RHSA there are more components and not all were vulnerable to the particular CVE id.
 
 Continuing with our previous examples with CVE-2023-20593, the full product ID "red_hat_enterprise_linux_6:kernel" 
 can be found in the `known_not_affected` list:
