@@ -18,6 +18,7 @@ rpm_manifest_api = catalog_url + "images/id/{catalog_image_id}/rpm-manifest"
 profile = koji.get_profile_module("brew")
 koji_session = koji.ClientSession(profile.config.server)
 
+
 def get_image_data(image_nvr):
     response = requests.get(nvr_api + image_nvr)
     response.raise_for_status()
