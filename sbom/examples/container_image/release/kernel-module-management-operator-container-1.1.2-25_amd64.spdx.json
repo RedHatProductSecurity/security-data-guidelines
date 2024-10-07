@@ -3991,6 +3991,48 @@
           "checksumValue": "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-0-amd64",
+      "name": "rhel9-go-toolset_amd64",
+      "versionInfo": "1.19.4-18",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/rhel9-go-toolset@sha256:354b40a0fdcd1a9dd9af1b88f9a45fc2b0c8065980dfd9b5097e137a7db6e0bd?tag=1.19.4-18"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "354b40a0fdcd1a9dd9af1b88f9a45fc2b0c8065980dfd9b5097e137a7db6e0bd"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-1-amd64",
+      "name": "rhel_amd64",
+      "versionInfo": "9.2-1191",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/rhel@sha256:8759d95740eb14a6b6253a574edeea7de6840be30d38c630675ae2a0c76b9f93?tag=9.2-1191&repository_url=registry.redhat.io/rhel9-2-els"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8759d95740eb14a6b6253a574edeea7de6840be30d38c630675ae2a0c76b9f93"
+        }
+      ]
     }
   ],
   "relationships": [
@@ -3998,6 +4040,16 @@
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-amd64"
+    },
+    {
+      "spdxElementId": "SPDXRef-parent-image-0-amd64",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-amd64"
+    },
+    {
+      "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
+      "relationshipType": "DESCENDANT_OF",
+      "relatedSpdxElement": "SPDXRef-parent-image-1-amd64"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",

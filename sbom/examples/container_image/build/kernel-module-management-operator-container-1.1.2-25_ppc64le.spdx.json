@@ -3991,6 +3991,48 @@
           "checksumValue": "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-0-ppc64le",
+      "name": "rhel9-go-toolset_ppc64le",
+      "versionInfo": "1.19.4-18",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/rhel9-go-toolset@sha256%3Aa6b2fd68651aa7d544e53676f99f9017cf241b855bcdc2400d81081bba6f329a"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b2fd68651aa7d544e53676f99f9017cf241b855bcdc2400d81081bba6f329a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-1-ppc64le",
+      "name": "rhel_ppc64le",
+      "versionInfo": "9.2-1191",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/rhel@sha256%3Acb23b09712fa36dfa2cd39ea60afb439c17fd0fec60a26a59e122618c8a33379"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cb23b09712fa36dfa2cd39ea60afb439c17fd0fec60a26a59e122618c8a33379"
+        }
+      ]
     }
   ],
   "relationships": [
@@ -3998,6 +4040,16 @@
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-ppc64le"
+    },
+    {
+      "spdxElementId": "SPDXRef-parent-image-0-ppc64le",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-ppc64le"
+    },
+    {
+      "spdxElementId": "SPDXRef-kernel-module-management-operator-container-ppc64le",
+      "relationshipType": "DESCENDANT_OF",
+      "relatedSpdxElement": "SPDXRef-parent-image-1-ppc64le"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-ppc64le",

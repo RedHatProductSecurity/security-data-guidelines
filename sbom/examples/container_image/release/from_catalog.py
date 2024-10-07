@@ -1,6 +1,7 @@
 import json
 import sys
 
+import koji
 import requests
 
 # These container images (identified by their NVR) are known to contain only RPM packages and no
@@ -13,6 +14,9 @@ RPM_CONTAINER_IMAGES = [
 catalog_url = "https://catalog.redhat.com/api/containers/v1/"
 nvr_api = catalog_url + "images/nvr/"
 rpm_manifest_api = catalog_url + "images/id/{catalog_image_id}/rpm-manifest"
+
+profile = koji.get_profile_module("brew")
+koji_session = koji.ClientSession(profile.config.server)
 
 
 def get_image_data(image_nvr):
@@ -29,14 +33,16 @@ def get_rpms(image_id):
     return sorted(response.json()["rpms"], key=lambda rpm: rpm["nvra"])
 
 
-def create_sbom(image_id, root_package, packages, rel_type):
-    relationships = [
+def create_sbom(image_id, root_package, packages, rel_type, other_pkgs=None, other_rels=None):
+    relationships = list(other_rels or [])
+    relationships.insert(
+        0,
         {
             "spdxElementId": "SPDXRef-DOCUMENT",
             "relationshipType": "DESCRIBES",
             "relatedSpdxElement": root_package["SPDXID"],
-        }
-    ]
+        },
+    )
     for pkg in packages:
         lhs = root_package["SPDXID"]
         rhs = pkg["SPDXID"]
@@ -63,7 +69,7 @@ def create_sbom(image_id, root_package, packages, rel_type):
         },
         "name": image_id,
         "documentNamespace": f"https://www.redhat.com/{image_id}.spdx.json",
-        "packages": [root_package] + packages,
+        "packages": [root_package] + packages + (other_pkgs or []),
         "relationships": relationships,
     }
 
@@ -83,6 +89,8 @@ def generate_sboms_for_image(image_nvr):
 
     for image in get_image_data(image_nvr):
         packages = []
+        other_pkgs = []
+        other_rels = []
 
         catalog_image_id = image["_id"]
         image_digest = image["image_id"]
@@ -156,10 +164,11 @@ def generate_sboms_for_image(image_nvr):
                 }
                 image_index_pkg["externalRefs"].append(ref)
 
-        spdx_image_id = f"SPDXRef-{image_nvr_name}-{image['architecture']}"
+        arch = image["architecture"]
+        spdx_image_id = f"SPDXRef-{image_nvr_name}-{arch}"
         image_pkg = {
             "SPDXID": spdx_image_id,
-            "name": f"{image_nvr_name}_{image['architecture']}",
+            "name": f"{image_nvr_name}_{arch}",
             "versionInfo": image_nvr_version,
             "supplier": "Organization: Red Hat",
             "downloadLocation": "NOASSERTION",
@@ -175,7 +184,7 @@ def generate_sboms_for_image(image_nvr):
         for name, repo_url, tag in sorted(repos):
             purl = (
                 f"pkg:oci/{name}@sha256%3A{image_index_digest}?"
-                f"arch={image['architecture']}&repository_url={repo_url}&tag={tag}"
+                f"arch={arch}&repository_url={repo_url}&tag={tag}"
             )
             ref = {
                 "referenceCategory": "PACKAGE-MANAGER",
@@ -184,6 +193,85 @@ def generate_sboms_for_image(image_nvr):
             }
             image_pkg["externalRefs"].append(ref)
         per_arch_images.append(image_pkg)
+
+        # Add in parent images
+        image_data = koji_session.getBuild(image_nvr)
+        for key in ("extra", "typeinfo", "image"):
+            image_data = image_data.get(key, {})
+
+        parent_image_builds = image_data.get("parent_image_builds", {})
+        parent_images = image_data.get("parent_images", [])
+        direct_parent_index = len(parent_images) - 1
+        for index, parent_image in enumerate(parent_images):
+            try:
+                parent_image_build_id = parent_image_builds[parent_image]["id"]
+            except KeyError:
+                # Skip scratch builds
+                continue
+
+            parent_archives = koji_session.listArchives(parent_image_build_id)
+            parent_digests = [
+                list(a["extra"]["docker"]["digests"].values())[0]
+                for a in parent_archives
+                if a["btype"] == "image" and a["extra"]["docker"]["config"]["architecture"] == arch
+            ]
+            parent_digest = parent_digests[0] if parent_digests else ""
+            if parent_digests:
+                version = f"@{parent_digest}"
+            else:
+                version = ""
+
+            registry, rest = parent_image.split("/", maxsplit=1)
+            use_registry = registry in ("registry.redhat.io", "registry.access.redhat.com")
+            name, tag = rest.rsplit(":", maxsplit=1)
+            if "/" in name:
+                namespace, name = name.rsplit("/", maxsplit=1)
+                registry += "/" + namespace
+
+            registry_q = f"&repository_url={registry}" if use_registry else ""
+            parent_spdx_id = f"SPDXRef-parent-image-{index}-{arch}"
+            purl = f"pkg:oci/{name}{version}?tag={tag}{registry_q}"
+
+            parent_pkg = {
+                "SPDXID": parent_spdx_id,
+                "name": f"{name}_{arch}",
+                "versionInfo": f"{tag}",
+                "supplier": "Organization: Red Hat",
+                "downloadLocation": "NOASSERTION",
+                "licenseDeclared": "NOASSERTION",
+                "externalRefs": [
+                    {
+                        "referenceCategory": "PACKAGE-MANAGER",
+                        "referenceType": "purl",
+                        "referenceLocator": purl,
+                    },
+                ],
+            }
+            if parent_digest:
+                parent_pkg["checksums"] = [
+                    {
+                        "algorithm": "SHA256",
+                        "checksumValue": parent_digest.lstrip("sha256:"),
+                    }
+                ]
+            other_pkgs.append(parent_pkg)
+
+            if index == direct_parent_index:
+                other_rels.append(
+                    {
+                        "spdxElementId": spdx_image_id,
+                        "relationshipType": "DESCENDANT_OF",
+                        "relatedSpdxElement": parent_spdx_id,
+                    }
+                )
+            else:
+                other_rels.append(
+                    {
+                        "spdxElementId": parent_spdx_id,
+                        "relationshipType": "BUILD_TOOL_OF",
+                        "relatedSpdxElement": spdx_image_id,
+                    }
+                )
 
         for rpm in get_rpms(catalog_image_id):
             rpm_purl = (
@@ -221,10 +309,12 @@ def generate_sboms_for_image(image_nvr):
             packages.append(rpm_pkg)
 
         create_sbom(
-            image_id=f"{image_nvr}_" f"{image['architecture']}",
+            image_id=f"{image_nvr}_" f"{arch}",
             root_package=image_pkg,
             packages=packages,
             rel_type="CONTAINS",
+            other_pkgs=other_pkgs,
+            other_rels=other_rels,
         )
 
     create_sbom(
