@@ -123,7 +123,15 @@ def run_syft(builddir):
             relationship["spdxElementId"] = "SPDXRef-Source0"  # pick first one
             relationship["relationshipType"] = "CONTAINS"
 
-    relationships.extend(syft_rels)
+    filtered_rels = []
+    for relationship in syft_rels:
+        if not (
+            relationship["relationshipType"] == "OTHER"
+            and relationship["comment"].startswith("evident-by:")
+        ):
+            filtered_rels.append(relationship)
+
+    relationships.extend(filtered_rels)
 
 
 def mock_openssl_midstream(sfn, source, sname, sver):
