@@ -14,7 +14,17 @@ When talking about inventories of components, it's also important to describe wh
 comprehensive SBOM are:
 
 - Provide a complete and accurate listing of software components and their relationships to each other from a
-  supply chain perspective.
+  supply chain perspective:
+
+    - For each software component, an SBOM must list its provenance. That is, if the (downstream) component is a
+      redistributed version of an open source project (upstream), the downstream component must be directly linked
+      to its upstream counterpart. If an upstream component is augmented in a mirrored repository before being used
+      in a build of a downstream component, this version of the component (also called a midstream component) must
+      be recorded as a separate package.
+
+    - A manifest must list all components that are included in the final deliverable that can be deployed and run by an
+      end user. Any software dependencies that are used strictly during the build process must be listed as well, but
+      separate from the runtime dependencies.
 
 - Define an accurate identification of components and products usable across all published security data.
 
@@ -484,8 +494,7 @@ relationship to architecture-specific RPMs can be represented with:
     ```
 
 SRPMs are also linked to one or more upstream sources that were used to build the downstream RPMs. An upstream
-
-Upstream source:
+source can be represented by a package object using the following data:
 
 === "SPDX 2.3"
 
