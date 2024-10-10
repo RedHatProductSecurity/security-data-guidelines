@@ -56,13 +56,14 @@ components used during the build process to produce the final artifact as well a
 process itself. This SBOM type also aligns with the _Build_ SBOM type from CISA's guidance on
 [Types of SBOM Documents](https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf).
 
-_Release-time_ SBOMs are generated when an artifact is released or published. These SBOMs build upon build-time
-SBOMs by incorporating additional metadata, such as the repositories or locations where the artifact is
+_Release-time_ SBOMs are created when an artifact is released or published. These SBOMs build upon build-time
+SBOMs by incorporating additional metadata, such as the repositories or locations where an artifact is
 published, and associating it with the relevant product information if there is any. Release-time SBOMs reflect the
-state of the software as it is distributed to end users. This SBOM type is close to the _Deployed_ type as defined
-by CISA, but it reflects the state of the product that _would_ be installed by a given end user.
+state of the software as it is distributed to end users. This SBOM type should still be considered as a _Build_ SBOM
+as defined by CISA, but it simply includes additional metadata that is not available during the build process and is
+added later on. For lack of a better term, we could call these _Curated Build SBOMs_.
 
-Red Hat's publicly available SBOMs are of the "release-time" type, including details about where an artifact
+Red Hat's publicly available SBOMs are of the release-time type, including details about where an artifact
 can be located after being released.
 
 **Example**:
