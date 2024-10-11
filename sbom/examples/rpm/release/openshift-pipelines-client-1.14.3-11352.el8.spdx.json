@@ -18726,15 +18726,41 @@
       ]
     },
     {
+      "SPDXID": "SPDXRef-Source0-origin",
+      "name": "tektoncd-cli",
+      "versionInfo": "4854f37a16f947b763bdd9dbdc5bca259a24141e",
+      "downloadLocation": "https://github.com/tektoncd/cli",
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "f8b6dc07a0f51f93a138c287ccdc81fbef410554"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/tektoncd-cli@4854f37a16f947b763bdd9dbdc5bca259a24141e?download_url=https://github.com/tektoncd/cli&checksum=SHA1:f8b6dc07a0f51f93a138c287ccdc81fbef410554"
+        }
+      ]
+    },
+    {
       "SPDXID": "SPDXRef-Source0",
       "name": "tektoncd-cli",
       "versionInfo": "4854f37a16f947b763bdd9dbdc5bca259a24141e",
-      "downloadLocation": "NOASSERTION",
+      "downloadLocation": "https://github.com/(RH tektoncd-cli midstream repo)/archive/refs/tags/4854f37a16f947b763bdd9dbdc5bca259a24141e.",
       "packageFileName": "tektoncd-cli-4854f37a16f947b763bdd9dbdc5bca259a24141e.tar.gz",
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "aabc96f5ad3ca2cd8a87f02cfd8a7faff79f98e3e3f065b56cce3e57374a1ad5"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/openshift-pipelines-client@1.14.3?download_url=https://github.com/(RH tektoncd-cli midstream repo)/archive/refs/tags/4854f37a16f947b763bdd9dbdc5bca259a24141e."
         }
       ]
     },
@@ -18752,15 +18778,41 @@
       ]
     },
     {
+      "SPDXID": "SPDXRef-Source2-origin",
+      "name": "openshift-pipelines-opc",
+      "versionInfo": "5c8cced44956893695bac7666ffe6bb3642f8aef",
+      "downloadLocation": "github.com/openshift-pipelines/opc",
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "c5d28fe15a4a8f6d483cdb984bc25d720d9c6631"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/openshift-pipelines-opc@5c8cced44956893695bac7666ffe6bb3642f8aef?download_url=github.com/openshift-pipelines/opc&checksum=SHA1:c5d28fe15a4a8f6d483cdb984bc25d720d9c6631"
+        }
+      ]
+    },
+    {
       "SPDXID": "SPDXRef-Source2",
       "name": "openshift-pipelines-opc",
       "versionInfo": "5c8cced44956893695bac7666ffe6bb3642f8aef",
-      "downloadLocation": "NOASSERTION",
+      "downloadLocation": "https://github.com/(RH openshift-pipelines-opc midstream repo)/archive/refs/tags/5c8cced44956893695bac7666ffe6bb3642f8aef.",
       "packageFileName": "openshift-pipelines-opc-5c8cced44956893695bac7666ffe6bb3642f8aef.tar.gz",
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "0fb52748f4b2868782fab0f3a3c680d238c061c164b8854a89681c99b357cf33"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/openshift-pipelines-client@1.14.3?download_url=https://github.com/(RH openshift-pipelines-opc midstream repo)/archive/refs/tags/5c8cced44956893695bac7666ffe6bb3642f8aef."
         }
       ]
     },
@@ -19009,10 +19061,17 @@
     {
       "fileName": "/go.mod",
       "SPDXID": "SPDXRef-File-go.mod-3fc5a8d3d86e9790",
+      "fileTypes": [
+        "TEXT"
+      ],
       "checksums": [
         {
           "algorithm": "SHA1",
-          "checksumValue": "0000000000000000000000000000000000000000"
+          "checksumValue": "61e310ee28d636ae56f3bd5b58308385cb4be6e5"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e8545aa76ef2e12ae5217094aec34a484a89e2a03b6fbd2a462cc8fd95912c07"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -19024,10 +19083,17 @@
     {
       "fileName": "/tools/go.mod",
       "SPDXID": "SPDXRef-File-tools-go.mod-9a8d257e44c7907a",
+      "fileTypes": [
+        "TEXT"
+      ],
       "checksums": [
         {
           "algorithm": "SHA1",
-          "checksumValue": "0000000000000000000000000000000000000000"
+          "checksumValue": "1f22db3942a1f6f65156bd3fe1d7bf977c7277a8"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a1d0f7714175923c352600d162681cf6ed1d5a100a2f05d4953354f5d6bc51c8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -19039,10 +19105,17 @@
     {
       "fileName": "/vendor/github.com/theupdateframework/go-tuf/requirements-test.txt",
       "SPDXID": "SPDXRef-File-...go-tuf-requirements-test.txt-8c7951abcf93b096",
+      "fileTypes": [
+        "TEXT"
+      ],
       "checksums": [
         {
           "algorithm": "SHA1",
-          "checksumValue": "0000000000000000000000000000000000000000"
+          "checksumValue": "e165e5712c8c96df7c42b3abdcadf405a6934819"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4c3e2e90d140cef32beb9c97a8ef711e7655da767648d2b2844f4a6979872ff3"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -19054,10 +19127,17 @@
     {
       "fileName": "/vendor/go.opentelemetry.io/otel/requirements.txt",
       "SPDXID": "SPDXRef-File-...otel-requirements.txt-b69fd806af1e91ad",
+      "fileTypes": [
+        "TEXT"
+      ],
       "checksums": [
         {
           "algorithm": "SHA1",
-          "checksumValue": "0000000000000000000000000000000000000000"
+          "checksumValue": "68bdb1034b31d05232669762f2be7f56fff5d849"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1ed38028659fda92b4f34d11c83bc4f8669526f84ef6f4fbc6c24f03b2c42ead"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -19069,10 +19149,17 @@
     {
       "fileName": "/go.mod",
       "SPDXID": "SPDXRef-File-go.mod-3fc5a8d3d86e9790",
+      "fileTypes": [
+        "TEXT"
+      ],
       "checksums": [
         {
           "algorithm": "SHA1",
-          "checksumValue": "0000000000000000000000000000000000000000"
+          "checksumValue": "61e119e3ec020c03afca7138b9a716c954726032"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "86eae4213ebf7a97720650b7753ac0db444c9669d5849741ad568e134e35c255"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -19084,10 +19171,17 @@
     {
       "fileName": "/go.mod",
       "SPDXID": "SPDXRef-File-go.mod-3fc5a8d3d86e9790",
+      "fileTypes": [
+        "TEXT"
+      ],
       "checksums": [
         {
           "algorithm": "SHA1",
-          "checksumValue": "0000000000000000000000000000000000000000"
+          "checksumValue": "96208d53013a00d87da290fb15f29ff76621bb8f"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2af9d1fe8ad92c27ab71c0a1195800e5fc9f990ea14cb5c6278963bb1856eab9"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -19099,10 +19193,17 @@
     {
       "fileName": "/vendor/github.com/theupdateframework/go-tuf/requirements-test.txt",
       "SPDXID": "SPDXRef-File-...go-tuf-requirements-test.txt-8c7951abcf93b096",
+      "fileTypes": [
+        "TEXT"
+      ],
       "checksums": [
         {
           "algorithm": "SHA1",
-          "checksumValue": "0000000000000000000000000000000000000000"
+          "checksumValue": "e165e5712c8c96df7c42b3abdcadf405a6934819"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4c3e2e90d140cef32beb9c97a8ef711e7655da767648d2b2844f4a6979872ff3"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -19114,10 +19215,17 @@
     {
       "fileName": "/vendor/go.opentelemetry.io/otel/requirements.txt",
       "SPDXID": "SPDXRef-File-...otel-requirements.txt-b69fd806af1e91ad",
+      "fileTypes": [
+        "TEXT"
+      ],
       "checksums": [
         {
           "algorithm": "SHA1",
-          "checksumValue": "0000000000000000000000000000000000000000"
+          "checksumValue": "68bdb1034b31d05232669762f2be7f56fff5d849"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1ed38028659fda92b4f34d11c83bc4f8669526f84ef6f4fbc6c24f03b2c42ead"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -24054,6 +24162,11 @@
       "relationshipType": "CONTAINS"
     },
     {
+      "spdxElementId": "SPDXRef-Source0",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source0-origin"
+    },
+    {
       "spdxElementId": "SPDXRef-SRPM",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Source0"
@@ -24062,6 +24175,11 @@
       "spdxElementId": "SPDXRef-SRPM",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Source1"
+    },
+    {
+      "spdxElementId": "SPDXRef-Source2",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source2-origin"
     },
     {
       "spdxElementId": "SPDXRef-SRPM",
