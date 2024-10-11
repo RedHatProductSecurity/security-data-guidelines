@@ -18717,7 +18717,7 @@
       "downloadLocation": "https://github.com/tektoncd/cli",
       "checksums": [
         {
-          "algorithm": "sha1",
+          "algorithm": "SHA1",
           "checksumValue": "f8b6dc07a0f51f93a138c287ccdc81fbef410554"
         }
       ],
@@ -18725,7 +18725,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:generic/tektoncd-cli@4854f37a16f947b763bdd9dbdc5bca259a24141e?download_url=https://github.com/tektoncd/cli&checksum=sha1:f8b6dc07a0f51f93a138c287ccdc81fbef410554"
+          "referenceLocator": "pkg:generic/tektoncd-cli@4854f37a16f947b763bdd9dbdc5bca259a24141e?download_url=https://github.com/tektoncd/cli&checksum=SHA1:f8b6dc07a0f51f93a138c287ccdc81fbef410554"
         }
       ]
     },
@@ -18769,7 +18769,7 @@
       "downloadLocation": "github.com/openshift-pipelines/opc",
       "checksums": [
         {
-          "algorithm": "sha1",
+          "algorithm": "SHA1",
           "checksumValue": "c5d28fe15a4a8f6d483cdb984bc25d720d9c6631"
         }
       ],
@@ -18777,7 +18777,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:generic/openshift-pipelines-opc@5c8cced44956893695bac7666ffe6bb3642f8aef?download_url=github.com/openshift-pipelines/opc&checksum=sha1:c5d28fe15a4a8f6d483cdb984bc25d720d9c6631"
+          "referenceLocator": "pkg:generic/openshift-pipelines-opc@5c8cced44956893695bac7666ffe6bb3642f8aef?download_url=github.com/openshift-pipelines/opc&checksum=SHA1:c5d28fe15a4a8f6d483cdb984bc25d720d9c6631"
         }
       ]
     },
