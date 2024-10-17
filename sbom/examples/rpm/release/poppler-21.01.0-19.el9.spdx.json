@@ -3608,6 +3608,51 @@
           "comment": "sigmd5: bbd4e69a12e039eb005a3d85b6c88aae"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-AppStream-9.4.0.GA",
+      "name": "Red Hat Enterprise Linux",
+      "versionInfo": "9.4.0.GA",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::appstream",
+          "referenceType": "cpe22Type"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-CRB-9.4.0.GA",
+      "name": "Red Hat Enterprise Linux",
+      "versionInfo": "9.4.0.GA",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::crb",
+          "referenceType": "cpe22Type"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-AppStream-9.4.0.Z.EUS",
+      "name": "Red Hat Enterprise Linux",
+      "versionInfo": "9.4.0.Z.EUS",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:rhel_eus:9.4::appstream",
+          "referenceType": "cpe22Type"
+        }
+      ]
     }
   ],
   "files": [],
@@ -4006,6 +4051,21 @@
       "spdxElementId": "SPDXRef-s390x-poppler-glib",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-SRPM",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-AppStream-9.4.0.GA"
+    },
+    {
+      "spdxElementId": "SPDXRef-SRPM",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-CRB-9.4.0.GA"
+    },
+    {
+      "spdxElementId": "SPDXRef-SRPM",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-AppStream-9.4.0.Z.EUS"
     }
   ]
 }

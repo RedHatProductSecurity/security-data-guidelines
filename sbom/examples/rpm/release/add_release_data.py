@@ -3,6 +3,124 @@ import sys
 
 from packageurl import PackageURL
 
+# With help from https://security.access.redhat.com/data/meta/v1/repository-to-cpe.json
+product_map = {
+    "openshift-pipelines-client-1.14.3-11352.el8": [
+        {
+            "SPDXID": "SPDXRef-OpenShift-Pipelines-1.15-RHEL-8",
+            "name": "Red Hat OpenShift Pipelines",
+            "versionInfo": "1.15-RHEL-8",
+            "supplier": "Organization: Red Hat",
+            "downloadLocation": "NOASSERTION",
+            "licenseConcluded": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "SECURITY",
+                    "referenceLocator": "cpe:/a:redhat:openshift_pipelines:1.15::el8",
+                    "referenceType": "cpe22Type",
+                }
+            ],
+        }
+    ],
+    "openssl-3.0.7-18.el9_2": [
+        # product_versions/1884/variants/4138
+        {
+            "SPDXID": "SPDXRef-AppStream-9.2.0.Z.EUS",
+            "name": "Red Hat Enterprise Linux",
+            "versionInfo": "9.2.0.Z.EUS",
+            "supplier": "Organization: Red Hat",
+            "downloadLocation": "NOASSERTION",
+            "licenseConcluded": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "SECURITY",
+                    "referenceLocator": "cpe:/a:redhat:rhel_eus:9.2::appstream",
+                    "referenceType": "cpe22Type",
+                }
+            ],
+        },
+        {
+            "SPDXID": "SPDXRef-BaseOS-9.2.0.Z.EUS",
+            "name": "Red Hat Enterprise Linux",
+            "versionInfo": "9.2.0.Z.EUS",
+            "supplier": "Organization: Red Hat",
+            "downloadLocation": "NOASSERTION",
+            "licenseConcluded": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "SECURITY",
+                    "referenceLocator": "cpe:/o:redhat:rhel_eus:9.2::baseos",
+                    "referenceType": "cpe22Type",
+                }
+            ],
+        },
+        {
+            "SPDXID": "SPDXRef-BaseOS-9.2.0.Z.E4S",
+            "name": "Red Hat Enterprise Linux",
+            "versionInfo": "9.2.0.Z.E4S",
+            "supplier": "Organization: Red Hat",
+            "downloadLocation": "NOASSERTION",
+            "licenseConcluded": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "SECURITY",
+                    "referenceLocator": "cpe:/o:redhat:rhel_e4s:9.2::baseos",
+                    "referenceType": "cpe22Type",
+                }
+            ],
+        },
+    ],
+    "poppler-21.01.0-19.el9": [
+        # product_versions/2063/variants/4424
+        {
+            "SPDXID": "SPDXRef-AppStream-9.4.0.GA",
+            "name": "Red Hat Enterprise Linux",
+            "versionInfo": "9.4.0.GA",
+            "supplier": "Organization: Red Hat",
+            "downloadLocation": "NOASSERTION",
+            "licenseConcluded": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "SECURITY",
+                    "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::appstream",
+                    "referenceType": "cpe22Type",
+                }
+            ],
+        },
+        {
+            "SPDXID": "SPDXRef-CRB-9.4.0.GA",
+            "name": "Red Hat Enterprise Linux",
+            "versionInfo": "9.4.0.GA",
+            "supplier": "Organization: Red Hat",
+            "downloadLocation": "NOASSERTION",
+            "licenseConcluded": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "SECURITY",
+                    "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::crb",
+                    "referenceType": "cpe22Type",
+                }
+            ],
+        },
+        {
+            "SPDXID": "SPDXRef-AppStream-9.4.0.Z.EUS",
+            "name": "Red Hat Enterprise Linux",
+            "versionInfo": "9.4.0.Z.EUS",
+            "supplier": "Organization: Red Hat",
+            "downloadLocation": "NOASSERTION",
+            "licenseConcluded": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "SECURITY",
+                    "referenceLocator": "cpe:/a:redhat:rhel_eus:9.4::appstream",
+                    "referenceType": "cpe22Type",
+                }
+            ],
+        },
+    ],
+}
+
+
 repo_id_map = {
     # https://access.redhat.com/downloads/content/openshift-pipelines-client/1.15.0-11496.el8/x86_64/fd431d51/package
     "openshift-pipelines-client-1.14.3-11352.el8": ["pipelines-1.14-for-rhel-8-{arch}-rpms"],
@@ -81,6 +199,18 @@ for pkg in sbom["packages"]:
             new_refs.append(release_ref)
 
     pkg["externalRefs"] = sorted(new_refs, key=lambda ref: ref["referenceLocator"])
+
+if sbom_name in product_map:
+    sbom["packages"].extend(product_map[sbom_name])
+    product_spdxids = set()
+    for product_package in product_map[sbom_name]:
+        sbom["relationships"].append(
+            {
+                "spdxElementId": "SPDXRef-SRPM",
+                "relationshipType": "PACKAGE_OF",
+                "relatedSpdxElement": product_package["SPDXID"],
+            }
+        )
 
 with open(f"{sbom_name}.spdx.json", "w") as fp:
     # Add an extra newline at the end since a lot of editors add one when you save a file,
