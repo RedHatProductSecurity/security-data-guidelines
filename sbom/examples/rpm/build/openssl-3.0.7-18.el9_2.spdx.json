@@ -3,7 +3,7 @@
   "dataLicense": "CC-BY-4.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
-    "created": "2006-08-14T02:34:56Z",
+    "created": "2006-08-14T02:34:56+00:00",
     "creators": [
       "Tool: example SPDX document only"
     ]
@@ -36,7 +36,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 0da276f660b44ab5bd128db8aa3d8ce1"
         }
       ]
@@ -106,7 +106,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 4cc665dd3173c8952184293588f9ee46"
         }
       ]
@@ -136,7 +136,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 8bf628bbb31e41bcc4139001ffca1fcb"
         }
       ]
@@ -166,7 +166,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: a4815b267d59c43662d6ea94d6b32eba"
         }
       ]
@@ -196,7 +196,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: f9e91d29b3e3b10cb1fe6b792d6ec3c6"
         }
       ]
@@ -226,7 +226,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 2a8826422579bd43b49774d11a68e383"
         }
       ]
@@ -256,7 +256,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: b6245825de11c602beff7870c7612542"
         }
       ]
@@ -286,7 +286,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 728afe59ed2768caea0634737878e2b9"
         }
       ]
@@ -316,7 +316,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 2b8f23243dc5469c31a1d78fe817cc63"
         }
       ]
@@ -346,7 +346,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 0a8de436e7188fd6a2eae746d0afce1f"
         }
       ]
@@ -376,7 +376,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 8bc5175c12d9772a5dee1721f40f691e"
         }
       ]
@@ -406,7 +406,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: c8006421182838d0db0559f89121e14d"
         }
       ]
@@ -436,7 +436,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 7d0cccc64dfed49cf9954784fb52d6d8"
         }
       ]
@@ -466,7 +466,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: df3c6c904df9135c5dbfb125be69cdb6"
         }
       ]
@@ -496,7 +496,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 050d1106c338216f24cf1300b73e7647"
         }
       ]
@@ -526,7 +526,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: cc789f980e1db3b3b49106f09d94b459"
         }
       ]
@@ -556,7 +556,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 3ceb671050a402f897728066d844414e"
         }
       ]
@@ -586,7 +586,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 4437626dedb09a7d5fefea71391d9666"
         }
       ]
@@ -616,7 +616,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 427cd7fdea922cddcfbdd736b6bb8717"
         }
       ]
@@ -646,7 +646,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 497871ca44f5dd4859c73c507f7c40f8"
         }
       ]
@@ -676,7 +676,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: eea71314fcc3f1be5af5d6773f82b6da"
         }
       ]
@@ -706,7 +706,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 0c92f2f4cd6bd41361dc25ddd4ffbb21"
         }
       ]
@@ -736,7 +736,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 62bc1369f326b14bfdb5450a59086c05"
         }
       ]
@@ -766,7 +766,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 746bb9be1752b46631e55fc2e8c1d48e"
         }
       ]
@@ -796,7 +796,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 94d964a9a930e8c914e7601b9df395a0"
         }
       ]
@@ -826,7 +826,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 862b17959c237e619217fabcf9939212"
         }
       ]
@@ -856,7 +856,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: cceaf391f5defa464df7bb55b6ad7486"
         }
       ]
@@ -886,7 +886,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: ebe25fb0a0033a8e0248869989e587e8"
         }
       ]
@@ -916,7 +916,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 94df67b3c5c8d3cb192ba79d6559b46f"
         }
       ]
@@ -946,7 +946,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 5ccbf569de20ef8c965993391c024832"
         }
       ]
@@ -976,7 +976,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 349224e7170e1bcee0cf15c04164fe85"
         }
       ]
@@ -1006,7 +1006,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 8ea0991914a7a90bccdee1264baaf74f"
         }
       ]
@@ -1036,7 +1036,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 12e9fefcf812eaf6e727b53b613d7f88"
         }
       ]
@@ -1066,7 +1066,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: fd189955871f77470c91193b845f755f"
         }
       ]
@@ -1096,7 +1096,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 5678f991a6d453ae482989fbe2ef5e51"
         }
       ]
@@ -1126,7 +1126,7 @@
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 879e4c4ba7c890c9fba001534ea552b5"
         }
       ]
