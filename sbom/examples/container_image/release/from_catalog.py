@@ -62,7 +62,7 @@ def create_sbom(image_id, root_package, packages, rel_type, other_pkgs=None, oth
         "dataLicense": "CC-BY-4.0",
         "SPDXID": "SPDXRef-DOCUMENT",
         "creationInfo": {
-            "created": "2006-08-14T02:34:56Z",
+            "created": "2006-08-14T02:34:56+00:00",
             "creators": [
                 "Tool: example SPDX document only",
             ],
