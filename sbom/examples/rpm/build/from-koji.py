@@ -123,24 +123,28 @@ def run_syft(builddir):
             relationship["spdxElementId"] = "SPDXRef-Source0"  # pick first one
             relationship["relationshipType"] = "CONTAINS"
 
-    relationships.extend(syft_rels)
+    filtered_rels = []
+    for relationship in syft_rels:
+        if not (
+            relationship["relationshipType"] == "OTHER"
+            and relationship["comment"].startswith("evident-by:")
+        ):
+            filtered_rels.append(relationship)
+
+    relationships.extend(filtered_rels)
 
 
-def mock_openssl_midstream(sfn, source, sname, sver):
+def mock_midstream(digest, alg, source, sname, sver, url, ext):
     # Model a midstream repository for this.
-    ext = re.sub(r".*-hobbled\.", "", sfn)
-    url = f"https://openssl.org/source/openssl-{sver}.{ext}"
     # Hard-code example value for 3.0.7
-    digest = "83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e"
     upackage = {
         "SPDXID": f"SPDXRef-{source}-origin",
         "name": sname,
         "versionInfo": sver,
         "downloadLocation": url,
-        "packageFileName": f"{sname}-{sver}.{ext}",
         "checksums": [
             {
-                "algorithm": "SHA256",
+                "algorithm": alg,
                 "checksumValue": digest,
             },
         ],
@@ -148,12 +152,13 @@ def mock_openssl_midstream(sfn, source, sname, sver):
             {
                 "referenceCategory": "PACKAGE-MANAGER",
                 "referenceType": "purl",
-                "referenceLocator": (
-                    f"pkg:generic/{sname}@{sver}?download_url={url}&checksum=sha256:{digest}",
-                ),
+                "referenceLocator":
+                    f"pkg:generic/{sname}@{sver}?download_url={url}&checksum={alg}:{digest}",
             }
         ],
     }
+    if ext:
+        upackage["packageFileName"] = f"{sname}-{sver}.{ext}"
 
     pkgs_by_arch.setdefault(arch, []).append(upackage)
     relationships.append(
@@ -165,7 +170,9 @@ def mock_openssl_midstream(sfn, source, sname, sver):
     )
 
     # Construct the URL for the sourceN package
-    url = f"https://github.com/(RH openssl midstream repo)/archive/refs/tags/{sver}.{ext}"
+    url = f"https://github.com/(RH {sname} midstream repo)/archive/refs/tags/{sver}"
+    if ext:
+        url = f"{url}.{ext}"
     return url
 
 
@@ -240,9 +247,36 @@ def handle_srpm(filename, name):
 
             (sname, sver) = tarball_re.match(sfn).groups()
 
-            # Special case to fix up example for openssl
+            # See Component Registry for a full worked example of unpacking sources
+            # https://github.com/RedHatProductSecurity/component-registry/blob/
+            #   c05d571ee37fde97a0bf109bcba23e3255df3964/corgi/tasks/sca.py#L296
             if sname == "openssl":
-                url = mock_openssl_midstream(sfn, source, sname, sver)
+                digest = "83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e"
+                alg = "SHA256"
+                ext = re.sub(r".*-hobbled\.", "", sfn)
+                upstream_url = f"https://openssl.org/source/openssl-{sver}.{ext}"
+                url = mock_midstream(digest, alg, source, sname, sver, upstream_url, ext)
+
+            # From distgit rpms/tektoncd-cli/tree/source-repos
+            #   ?h=pipelines-1.15-rhel-8&id=c30abfafca5c2865129111a8b7b3e96499d6dbbf
+            elif sname == "tektoncd-cli":
+                digest = "f8b6dc07a0f51f93a138c287ccdc81fbef410554"
+                alg = "SHA1"
+                upstream_url = "https://github.com/tektoncd/cli"
+                url = mock_midstream(digest, alg, source, sname, sver, upstream_url, "")
+
+            elif sname == "pipeline-as-code":
+                digest = "cfdf86bdbf1cdfbeadad20747a77294da4bc8c90"
+                alg = "SHA1"
+                upstream_url = "github.com/openshift-pipelines/pipelines-as-code"
+                url = mock_midstream(digest, alg, source, sname, sver, upstream_url, "")
+
+            elif sname == "openshift-pipelines-opc":
+                digest = "c5d28fe15a4a8f6d483cdb984bc25d720d9c6631"
+                alg = "SHA1"
+                upstream_url = "github.com/openshift-pipelines/opc"
+                url = mock_midstream(digest, alg, source, sname, sver, upstream_url, "")
+
 
             # Calculate checksum
             sha256 = hashlib.sha256()
@@ -273,6 +307,7 @@ def handle_srpm(filename, name):
             }
             if not sver:
                 del spackage["versioninfo"]
+
             if url != "NOASSERTION":
                 purl = f"pkg:generic/{name}@{version}?download_url={url}"
                 spackage["externalRefs"] = [
@@ -282,6 +317,7 @@ def handle_srpm(filename, name):
                         "referenceLocator": purl,
                     }
                 ]
+
             pkgs_by_arch.setdefault(arch, []).append(spackage)
 
             relationships.append(
