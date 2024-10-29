@@ -155,7 +155,7 @@ The following snippet shows a minimal SBOM document:
       "dataLicense": "CC-BY-4.0",// (2)!
       "SPDXID": "SPDXRef-DOCUMENT",// (3)!
       "creationInfo": {
-        "created": "2006-08-14T02:34:56Z",
+        "created": "2006-08-14T02:34:56+00:00",
         "creators": [
           "Tool: example SPDX document only"
         ]
@@ -459,7 +459,7 @@ An architecture-specific RPM built by Red Hat can be represented by a package ob
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 4cc665dd3173c8952184293588f9ee46"
         }
       ]
