@@ -65,7 +65,11 @@ markdown_extensions:
   - md_in_html
   - def_list  # https://squidfunk.github.io/mkdocs-material/reference/lists/#using-definition-lists
   - pymdownx.superfences
-  - pymdownx.tabbed:
+  - pymdownx.tabbed:  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tabbed
       alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - toc:
       permalink: 🔗  # Add anchor to each title element
