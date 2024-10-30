@@ -38,7 +38,7 @@ nav:
   - Home: "index.md"
   - SBOM: "sbom.md"
   - purl: "purl.md"
-  - CSAF-VEX: "csaf-vex.md"
+  - CSAF/VEX: "csaf-vex.md"
 
 plugins:
   - social
