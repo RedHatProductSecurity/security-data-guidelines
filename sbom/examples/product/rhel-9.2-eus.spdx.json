@@ -8,7 +8,7 @@
       "Tool: example SPDX document only"
     ]
   },
-  "name": "RHEL 9.2 EUS",
+  "name": "Red Hat Enterprise Linux 9.2 EUS",
   "documentNamespace": "https://www.redhat.com/rhel-9.2-eus.spdx.json",
   "packages": [
     {
@@ -21,13 +21,18 @@
       "externalRefs": [
         {
           "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:rhel_eus:9.2::appstream",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
           "referenceLocator": "cpe:/a:redhat:rhel_eus:9.2::baseos",
           "referenceType": "cpe22Type"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-SRPM-1",
+      "SPDXID": "SPDXRef-openssl-3.0.7-18.el9_2",
       "name": "openssl",
       "versionInfo": "3.0.7-18.el9_2",
       "supplier": "Organization: Red Hat",
@@ -127,7 +132,7 @@
       "relatedSpdxElement": "SPDXRef-RHEL-9.2-EUS"
     },
     {
-      "spdxElementId": "SPDXRef-SRPM-1",
+      "spdxElementId": "SPDXRef-openssl-3.0.7-18.el9_2",
       "relationshipType": "PACKAGE_OF",
       "relatedSpdxElement": "SPDXRef-RHEL-9.2-EUS"
     }

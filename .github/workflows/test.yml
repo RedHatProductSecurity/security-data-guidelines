@@ -21,5 +21,5 @@ jobs:
         tox_env: ${{ matrix.tox_env }}
     strategy:
       matrix:
-        tox_env: [black, ruff, schema]
+        tox_env: [black, ruff, spdx-schema, cdx-schema]
     runs-on: ubuntu-latest
