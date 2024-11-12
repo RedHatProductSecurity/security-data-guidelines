@@ -417,7 +417,7 @@ packages.extend([package for arch in pkgs_by_arch for package in pkgs_by_arch[ar
 
 spdx = {
     "spdxVersion": "SPDX-2.3",
-    "dataLicense": "CC-BY-4.0",
+    "dataLicense": "CC0-1.0",
     "SPDXID": "SPDXRef-DOCUMENT",
     "creationInfo": {
         "created": "2006-08-14T02:34:56+00:00",
