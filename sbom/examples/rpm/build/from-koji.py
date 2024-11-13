@@ -386,7 +386,7 @@ for rpm in rpms:
                 # Same as document.creationInfo.creators
                 "annotator": "Tool: example SPDX document only",
                 # Same as document.creationInfo.created
-                "annotationDate": "2006-08-14T02:34:56+00:00",
+                "annotationDate": "2006-08-14T02:34:56Z",
                 "comment": f"sigmd5: {sigmd5}",
             }
         ],
@@ -420,7 +420,7 @@ spdx = {
     "dataLicense": "CC-BY-4.0",
     "SPDXID": "SPDXRef-DOCUMENT",
     "creationInfo": {
-        "created": "2006-08-14T02:34:56+00:00",
+        "created": "2006-08-14T02:34:56Z",
         "creators": [
             "Tool: example SPDX document only",
         ],
