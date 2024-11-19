@@ -1,0 +1,553 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "serialNumber": "urn:uuid:223234df-bb5b-49af-a896-143736f7d806",
+  "metadata": {
+    "component": {
+
+    },
+    "timestamp": "2024-11-12T14:27:26-05:00",
+    "tools": {
+      "components": [
+        {
+          "name": "example tool",
+          "version": "1.2.3"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
+      "type": "library",
+      "name": "openssl",
+      "version": "3.0.7-18.el9_2",
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
+      "pedigree": {
+        "ancestors": [
+          {
+            "bom-ref": "pkg:generic/openssl@3.0.7?download_url=https://github.com/(RH openssl midstream repo)/archive/refs/tags/3.0.7.tar.gz",
+            "type": "library",
+            "name": "openssl",
+            "version": "3.0.7",
+            "purl": "pkg:generic/openssl@3.0.7?download_url=https://github.com/(RH openssl midstream repo)/archive/refs/tags/3.0.7.tar.gz",
+            "pedigree": {
+              "ancestors": [
+                {
+                  "bom-ref": "pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz&checksum=SHA256:83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e",
+                  "type": "library",
+                  "name": "openssl",
+                  "version": "3.0.7",
+                  "purl": "pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz&checksum=SHA256:83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64",
+      "type": "library",
+      "name": "openssl",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee46a56d9"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:sidmg5",
+          "value": "0da276f660b44ab5bd128db8aa3d8ce1"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686",
+      "type": "library",
+      "name": "openssl",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le",
+      "type": "library",
+      "name": "openssl",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x",
+      "type": "library",
+      "name": "openssl",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64",
+      "type": "library",
+      "name": "openssl",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64",
+      "type": "library",
+      "name": "openssl-debuginfo",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686",
+      "type": "library",
+      "name": "openssl-debuginfo",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
+      "type": "library",
+      "name": "openssl-debuginfo",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x",
+      "type": "library",
+      "name": "openssl-debuginfo",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64",
+      "type": "library",
+      "name": "openssl-debuginfo",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64",
+      "type": "library",
+      "name": "openssl-debugsource",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686",
+      "type": "library",
+      "name": "openssl-debugsource",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le",
+      "type": "library",
+      "name": "openssl-debugsource",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x",
+      "type": "library",
+      "name": "openssl-debugsource",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64",
+      "type": "library",
+      "name": "openssl-debugsource",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64",
+      "type": "library",
+      "name": "openssl-devel",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686",
+      "type": "library",
+      "name": "openssl-devel",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le",
+      "type": "library",
+      "name": "openssl-devel",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x",
+      "type": "library",
+      "name": "openssl-devel",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64",
+      "type": "library",
+      "name": "openssl-devel",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64",
+      "type": "library",
+      "name": "openssl-libs",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686",
+      "type": "library",
+      "name": "openssl-libs",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le",
+      "type": "library",
+      "name": "openssl-libs",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x",
+      "type": "library",
+      "name": "openssl-libs",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64",
+      "type": "library",
+      "name": "openssl-libs",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64",
+      "type": "library",
+      "name": "openssl-libs-debuginfo",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686",
+      "type": "library",
+      "name": "openssl-libs-debuginfo",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
+      "type": "library",
+      "name": "openssl-libs-debuginfo",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x",
+      "type": "library",
+      "name": "openssl-libs-debuginfo",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64",
+      "type": "library",
+      "name": "openssl-libs-debuginfo",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64",
+      "type": "library",
+      "name": "openssl-perl",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686",
+      "type": "library",
+      "name": "openssl-perl",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le",
+      "type": "library",
+      "name": "openssl-perl",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x",
+      "type": "library",
+      "name": "openssl-perl",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64",
+      "type": "library",
+      "name": "openssl-perl",
+      "version": "3.0.7-18.el9_2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64"
+    }
+  ]
+}
