@@ -32,7 +32,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-openssl-3.0.7-18.el9_2",
+      "SPDXID": "SPDXRef-openssl-3.0.7-18.el9-2",
       "name": "openssl",
       "versionInfo": "3.0.7-18.el9_2",
       "supplier": "Organization: Red Hat",
@@ -132,7 +132,7 @@
       "relatedSpdxElement": "SPDXRef-RHEL-9.2-EUS"
     },
     {
-      "spdxElementId": "SPDXRef-openssl-3.0.7-18.el9_2",
+      "spdxElementId": "SPDXRef-openssl-3.0.7-18.el9-2",
       "relationshipType": "PACKAGE_OF",
       "relatedSpdxElement": "SPDXRef-RHEL-9.2-EUS"
     }

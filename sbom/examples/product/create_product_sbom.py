@@ -74,7 +74,7 @@ def create_spdx():
         ]
         + [
             {
-                "SPDXID": f"SPDXRef-{pkg.name}-{pkg.version}",
+                "SPDXID": f"SPDXRef-{pkg.name}-{pkg.version.replace('_', '-')}",
                 "name": pkg.name,
                 "versionInfo": pkg.version,
                 "supplier": "Organization: Red Hat",
@@ -106,7 +106,7 @@ def create_spdx():
                 "relatedSpdxElement": f"SPDXRef-{name_short.upper()}",
             },
             {
-                "spdxElementId": f"SPDXRef-{pkg.name}-{pkg.version}",
+                "spdxElementId": f"SPDXRef-{pkg.name}-{pkg.version.replace('_', '-')}",
                 "relationshipType": "PACKAGE_OF",
                 "relatedSpdxElement": f"SPDXRef-{name_short.upper()}",
             },
