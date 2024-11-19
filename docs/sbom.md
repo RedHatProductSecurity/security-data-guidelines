@@ -155,7 +155,7 @@ The following snippet shows a minimal SBOM document:
       "dataLicense": "CC0-1.0",// (2)!
       "SPDXID": "SPDXRef-DOCUMENT",// (3)!
       "creationInfo": {
-        "created": "2006-08-14T02:34:56+00:00",
+        "created": "2006-08-14T02:34:56Z",// (4)!
         "creators": [
           "Tool: example SPDX document only"
         ]
@@ -174,6 +174,8 @@ The following snippet shows a minimal SBOM document:
 
     3. [`SPDXID`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#63-spdx-identifier-field)
        must be set to `SPDXRef-DOCUMENT`.
+
+    4. UTC timestamps must use the `YYYY-MM-DDThh:mm:ssZ` format.
 
 A more detailed breakdown of some of the fields:
 
