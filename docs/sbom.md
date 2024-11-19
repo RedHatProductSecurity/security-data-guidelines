@@ -152,7 +152,7 @@ The following snippet shows a minimal SBOM document:
     ```json
     {
       "spdxVersion": "SPDX-2.3",// (1)!
-      "dataLicense": "CC-BY-4.0",// (2)!
+      "dataLicense": "CC0-1.0",// (2)!
       "SPDXID": "SPDXRef-DOCUMENT",// (3)!
       "creationInfo": {
         "created": "2006-08-14T02:34:56Z",// (4)!
@@ -170,8 +170,7 @@ The following snippet shows a minimal SBOM document:
 
     1. SPDX version 2.3 as described at [https://spdx.github.io/spdx-spec/v2.3/](https://spdx.github.io/spdx-spec/v2.3/).
 
-    2. All Red Hat security data is published under the
-       [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+    2. The CC0-1.0 license is required by the SPDX specification.
 
     3. [`SPDXID`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#63-spdx-identifier-field)
        must be set to `SPDXRef-DOCUMENT`.
