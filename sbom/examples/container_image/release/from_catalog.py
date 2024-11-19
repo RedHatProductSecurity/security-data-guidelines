@@ -1,4 +1,5 @@
 import json
+import re
 import sys
 
 import koji
@@ -17,6 +18,17 @@ rpm_manifest_api = catalog_url + "images/id/{catalog_image_id}/rpm-manifest"
 
 profile = koji.get_profile_module("brew")
 koji_session = koji.ClientSession(profile.config.server)
+
+
+def sanitize_spdxid(value):
+    """ "Emit a valid SPDXRef-"[idstring]"
+
+    where [idstring] is a unique string containing letters, numbers, ., and/or -.
+    """
+    value = value.replace("_", "-")  # Replace underscores with dashes to retain readability
+    # Remove everything else (yes, there is a minor chance for conflicting IDs, but this is an
+    # example script with minimal examples; do not use this in production).
+    return re.sub(r"[^a-zA-Z0-9.-]", "", value)
 
 
 def get_image_data(image_nvr):
@@ -165,7 +177,7 @@ def generate_sboms_for_image(image_nvr):
                 image_index_pkg["externalRefs"].append(ref)
 
         arch = image["architecture"]
-        spdx_image_id = f"SPDXRef-{image_nvr_name}-{arch}"
+        spdx_image_id = sanitize_spdxid(f"SPDXRef-{image_nvr_name}-{arch}")
         image_pkg = {
             "SPDXID": spdx_image_id,
             "name": f"{image_nvr_name}_{arch}",
@@ -229,7 +241,7 @@ def generate_sboms_for_image(image_nvr):
                 registry += "/" + namespace
 
             registry_q = f"&repository_url={registry}" if use_registry else ""
-            parent_spdx_id = f"SPDXRef-parent-image-{index}-{arch}"
+            parent_spdx_id = sanitize_spdxid(f"SPDXRef-parent-image-{index}-{arch}")
             purl = f"pkg:oci/{name}{version}?tag={tag}{registry_q}"
 
             parent_pkg = {
@@ -281,7 +293,7 @@ def generate_sboms_for_image(image_nvr):
                 # lockfiles or other means eventually).
                 f"arch={rpm['architecture']}&repository_id={content_sets[0]}"
             )
-            spdx_rpm_id = f"SPDXRef-{rpm['architecture']}-{rpm['name']}"
+            spdx_rpm_id = sanitize_spdxid(f"SPDXRef-{rpm['architecture']}-{rpm['name']}")
             rpm_pkg = {
                 "SPDXID": spdx_rpm_id,
                 "name": rpm["name"],

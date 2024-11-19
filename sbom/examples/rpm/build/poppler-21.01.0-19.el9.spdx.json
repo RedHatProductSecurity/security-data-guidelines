@@ -1455,7 +1455,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-debuginfo",
+      "SPDXID": "SPDXRef-x86-64-poppler-debuginfo",
       "name": "poppler-debuginfo",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1485,7 +1485,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-glib-debuginfo",
+      "SPDXID": "SPDXRef-x86-64-poppler-glib-debuginfo",
       "name": "poppler-glib-debuginfo",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1515,7 +1515,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-utils-debuginfo",
+      "SPDXID": "SPDXRef-x86-64-poppler-utils-debuginfo",
       "name": "poppler-utils-debuginfo",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1545,7 +1545,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-qt5-debuginfo",
+      "SPDXID": "SPDXRef-x86-64-poppler-qt5-debuginfo",
       "name": "poppler-qt5-debuginfo",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1575,7 +1575,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-qt5-devel",
+      "SPDXID": "SPDXRef-x86-64-poppler-qt5-devel",
       "name": "poppler-qt5-devel",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1605,7 +1605,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-qt5",
+      "SPDXID": "SPDXRef-x86-64-poppler-qt5",
       "name": "poppler-qt5",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1635,7 +1635,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-cpp-debuginfo",
+      "SPDXID": "SPDXRef-x86-64-poppler-cpp-debuginfo",
       "name": "poppler-cpp-debuginfo",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1665,7 +1665,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-utils",
+      "SPDXID": "SPDXRef-x86-64-poppler-utils",
       "name": "poppler-utils",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1695,7 +1695,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-glib-devel",
+      "SPDXID": "SPDXRef-x86-64-poppler-glib-devel",
       "name": "poppler-glib-devel",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1725,7 +1725,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-cpp-devel",
+      "SPDXID": "SPDXRef-x86-64-poppler-cpp-devel",
       "name": "poppler-cpp-devel",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1755,7 +1755,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-cpp",
+      "SPDXID": "SPDXRef-x86-64-poppler-cpp",
       "name": "poppler-cpp",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1785,7 +1785,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler",
+      "SPDXID": "SPDXRef-x86-64-poppler",
       "name": "poppler",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1815,7 +1815,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-glib",
+      "SPDXID": "SPDXRef-x86-64-poppler-glib",
       "name": "poppler-glib",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1845,7 +1845,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-devel",
+      "SPDXID": "SPDXRef-x86-64-poppler-devel",
       "name": "poppler-devel",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -1875,7 +1875,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-poppler-debugsource",
+      "SPDXID": "SPDXRef-x86-64-poppler-debugsource",
       "name": "poppler-debugsource",
       "versionInfo": "21.01.0-19.el9",
       "supplier": "Organization: Red Hat",
@@ -2603,77 +2603,77 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-debuginfo",
+      "spdxElementId": "SPDXRef-x86-64-poppler-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-glib-debuginfo",
+      "spdxElementId": "SPDXRef-x86-64-poppler-glib-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-utils-debuginfo",
+      "spdxElementId": "SPDXRef-x86-64-poppler-utils-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-qt5-debuginfo",
+      "spdxElementId": "SPDXRef-x86-64-poppler-qt5-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-qt5-devel",
+      "spdxElementId": "SPDXRef-x86-64-poppler-qt5-devel",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-qt5",
+      "spdxElementId": "SPDXRef-x86-64-poppler-qt5",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-cpp-debuginfo",
+      "spdxElementId": "SPDXRef-x86-64-poppler-cpp-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-utils",
+      "spdxElementId": "SPDXRef-x86-64-poppler-utils",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-glib-devel",
+      "spdxElementId": "SPDXRef-x86-64-poppler-glib-devel",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-cpp-devel",
+      "spdxElementId": "SPDXRef-x86-64-poppler-cpp-devel",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-cpp",
+      "spdxElementId": "SPDXRef-x86-64-poppler-cpp",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler",
+      "spdxElementId": "SPDXRef-x86-64-poppler",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-glib",
+      "spdxElementId": "SPDXRef-x86-64-poppler-glib",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-devel",
+      "spdxElementId": "SPDXRef-x86-64-poppler-devel",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-poppler-debugsource",
+      "spdxElementId": "SPDXRef-x86-64-poppler-debugsource",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },

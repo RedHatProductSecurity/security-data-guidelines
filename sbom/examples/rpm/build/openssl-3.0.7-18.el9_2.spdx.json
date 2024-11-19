@@ -712,7 +712,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openssl-libs-debuginfo",
+      "SPDXID": "SPDXRef-x86-64-openssl-libs-debuginfo",
       "name": "openssl-libs-debuginfo",
       "versionInfo": "3.0.7-18.el9_2",
       "supplier": "Organization: Red Hat",
@@ -742,7 +742,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openssl-debuginfo",
+      "SPDXID": "SPDXRef-x86-64-openssl-debuginfo",
       "name": "openssl-debuginfo",
       "versionInfo": "3.0.7-18.el9_2",
       "supplier": "Organization: Red Hat",
@@ -772,7 +772,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openssl-debugsource",
+      "SPDXID": "SPDXRef-x86-64-openssl-debugsource",
       "name": "openssl-debugsource",
       "versionInfo": "3.0.7-18.el9_2",
       "supplier": "Organization: Red Hat",
@@ -802,7 +802,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openssl-perl",
+      "SPDXID": "SPDXRef-x86-64-openssl-perl",
       "name": "openssl-perl",
       "versionInfo": "3.0.7-18.el9_2",
       "supplier": "Organization: Red Hat",
@@ -832,7 +832,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openssl-libs",
+      "SPDXID": "SPDXRef-x86-64-openssl-libs",
       "name": "openssl-libs",
       "versionInfo": "3.0.7-18.el9_2",
       "supplier": "Organization: Red Hat",
@@ -862,7 +862,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openssl",
+      "SPDXID": "SPDXRef-x86-64-openssl",
       "name": "openssl",
       "versionInfo": "3.0.7-18.el9_2",
       "supplier": "Organization: Red Hat",
@@ -892,7 +892,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openssl-devel",
+      "SPDXID": "SPDXRef-x86-64-openssl-devel",
       "name": "openssl-devel",
       "versionInfo": "3.0.7-18.el9_2",
       "supplier": "Organization: Red Hat",
@@ -1255,37 +1255,37 @@
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-openssl-libs-debuginfo",
+      "spdxElementId": "SPDXRef-x86-64-openssl-libs-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-openssl-debuginfo",
+      "spdxElementId": "SPDXRef-x86-64-openssl-debuginfo",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-openssl-debugsource",
+      "spdxElementId": "SPDXRef-x86-64-openssl-debugsource",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-openssl-perl",
+      "spdxElementId": "SPDXRef-x86-64-openssl-perl",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-openssl-libs",
+      "spdxElementId": "SPDXRef-x86-64-openssl-libs",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-openssl",
+      "spdxElementId": "SPDXRef-x86-64-openssl",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },
     {
-      "spdxElementId": "SPDXRef-x86_64-openssl-devel",
+      "spdxElementId": "SPDXRef-x86-64-openssl-devel",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },

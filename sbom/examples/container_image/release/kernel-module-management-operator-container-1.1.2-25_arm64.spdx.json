@@ -1353,7 +1353,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-aarch64-libcom_err",
+      "SPDXID": "SPDXRef-aarch64-libcom-err",
       "name": "libcom_err",
       "versionInfo": "1.46.5",
       "supplier": "Organization: Red Hat",
@@ -2035,7 +2035,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-aarch64-libstdc++",
+      "SPDXID": "SPDXRef-aarch64-libstdc",
       "name": "libstdc++",
       "versionInfo": "11.3.1",
       "supplier": "Organization: Red Hat",
@@ -4354,7 +4354,7 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-libcom_err"
+      "relatedSpdxElement": "SPDXRef-aarch64-libcom-err"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",
@@ -4509,7 +4509,7 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-libstdc++"
+      "relatedSpdxElement": "SPDXRef-aarch64-libstdc"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",

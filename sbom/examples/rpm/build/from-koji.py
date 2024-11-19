@@ -29,6 +29,17 @@ license_replacements = {
 }
 
 
+def sanitize_spdxid(value):
+    """ "Emit a valid SPDXRef-"[idstring]"
+
+    where [idstring] is a unique string containing letters, numbers, ., and/or -.
+    """
+    value = value.replace("_", "-")  # Replace underscores with dashes to retain readability
+    # Remove everything else (yes, there is a minor chance for conflicting IDs, but this is an
+    # example script with minimal examples; do not use this in production).
+    return re.sub(r"[^a-zA-Z0-9.-]", "", value)
+
+
 def get_license(filename):
     licensep = subprocess.run(
         stdout=subprocess.PIPE,
@@ -277,7 +288,6 @@ def handle_srpm(filename, name):
                 upstream_url = "github.com/openshift-pipelines/opc"
                 url = mock_midstream(digest, alg, source, sname, sver, upstream_url, "")
 
-
             # Calculate checksum
             sha256 = hashlib.sha256()
             with open(os.path.join(srcdir, "SOURCES", sfn), "rb") as sfp:
@@ -293,7 +303,7 @@ def handle_srpm(filename, name):
             sref = f"SPDXRef-{source}"
             digest = sha256.hexdigest()
             spackage = {
-                "SPDXID": sref,
+                "SPDXID": sanitize_spdxid(sref),
                 "name": sname,
                 "versionInfo": sver,
                 "downloadLocation": url,
@@ -354,7 +364,7 @@ for rpm in rpms:
     if arch == "src":
         spdxid = "SPDXRef-SRPM"
     else:
-        spdxid = f"SPDXRef-{arch}-{name}"
+        spdxid = sanitize_spdxid(f"SPDXRef-{arch}-{name}")
 
     license = get_license(filename)
     digest = get_rpm_sha256header(filename)
