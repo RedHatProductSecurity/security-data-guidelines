@@ -89,6 +89,14 @@ def get_rpm_sigmd5(filename):
     return sha256.stdout.decode("utf-8")
 
 
+def get_sha256_checksum(filename):
+    h = hashlib.sha256()
+    with open(filename, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
 def run_syft(builddir):
     syft = subprocess.run(
         cwd=os.path.dirname(builddir),
@@ -163,8 +171,7 @@ def mock_midstream(digest, alg, source, sname, sver, url, ext):
             {
                 "referenceCategory": "PACKAGE-MANAGER",
                 "referenceType": "purl",
-                "referenceLocator":
-                    f"pkg:generic/{sname}@{sver}?download_url={url}&checksum={alg}:{digest}",
+                "referenceLocator": f"pkg:generic/{sname}@{sver}?download_url={url}",
             }
         ],
     }
@@ -288,20 +295,11 @@ def handle_srpm(filename, name):
                 upstream_url = "github.com/openshift-pipelines/opc"
                 url = mock_midstream(digest, alg, source, sname, sver, upstream_url, "")
 
-            # Calculate checksum
-            sha256 = hashlib.sha256()
-            with open(os.path.join(srcdir, "SOURCES", sfn), "rb") as sfp:
-                while True:
-                    data = sfp.read()
-                    if not data:
-                        break
-                    sha256.update(data)
-
             if url is None or ":" not in url:
                 url = "NOASSERTION"
 
             sref = f"SPDXRef-{source}"
-            digest = sha256.hexdigest()
+            digest = get_sha256_checksum(os.path.join(srcdir, "SOURCES", sfn))
             spackage = {
                 "SPDXID": sanitize_spdxid(sref),
                 "name": sname,
@@ -367,7 +365,8 @@ for rpm in rpms:
         spdxid = sanitize_spdxid(f"SPDXRef-{arch}-{name}")
 
     license = get_license(filename)
-    digest = get_rpm_sha256header(filename)
+    file_checksum = get_sha256_checksum(filename)
+    sha256header = get_rpm_sha256header(filename)
     sigmd5 = get_rpm_sigmd5(filename)
     package = {
         "SPDXID": spdxid,
@@ -387,7 +386,7 @@ for rpm in rpms:
         "checksums": [
             {
                 "algorithm": "SHA256",
-                "checksumValue": digest,
+                "checksumValue": file_checksum,
             },
         ],
         "annotations": [
@@ -398,7 +397,15 @@ for rpm in rpms:
                 # Same as document.creationInfo.created
                 "annotationDate": "2006-08-14T02:34:56Z",
                 "comment": f"sigmd5: {sigmd5}",
-            }
+            },
+            {
+                "annotationType": "OTHER",
+                # Same as document.creationInfo.creators
+                "annotator": "Tool: example SPDX document only",
+                # Same as document.creationInfo.created
+                "annotationDate": "2006-08-14T02:34:56Z",
+                "comment": f"sha256header: {sha256header}",
+            },
         ],
     }
     pkgs_by_arch.setdefault(arch, []).append(package)

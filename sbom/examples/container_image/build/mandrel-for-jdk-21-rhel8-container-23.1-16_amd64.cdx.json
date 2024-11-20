@@ -1,0 +1,113 @@
+{
+  "bomFormat": "CycloneDX",
+  "serialNumber": "urn:uuid:930fffb2-c807-4b92-9029-228a5cf711aa",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "name": "quarkus/mandrel-for-jdk-21-rhel8",
+      "publisher": "Red Hat",
+      "purl": "pkg:oci/mandrel-for-jdk-21-rhel8@sha256%3A65c139d16564a14b6832d1a393d18146e2fd921b8d263bf214df5720c1c79b19?arch=amd64&os=linux&tag=23.1-16",
+      "supplier": {
+        "name": "Red Hat",
+        "url": [
+          "https://www.redhat.com"
+        ]
+      },
+      "type": "container"
+    },
+    "timestamp": "2024-10-17T17:34:08Z"
+  },
+  "components": [
+    {
+      "bom-ref": "d9851388f78c0ae4",
+      "name": "quarkus/mandrel-for-jdk-21-rhel8",
+      "purl": "pkg:oci/mandrel-for-jdk-21-rhel8@sha256%3A65c139d16564a14b6832d1a393d18146e2fd921b8d263bf214df5720c1c79b19?arch=amd64&tag=23.1-16",
+      "type": "container",
+      "version": "sha256:65c139d16564a14b6832d1a393d18146e2fd921b8d263bf214df5720c1c79b19"
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/abattis-cantarell-fonts@0.0.25-6.el8?arch=noarch",
+      "licenses": [
+        {
+          "license": {
+            "name": "OFL"
+          }
+        }
+      ],
+      "name": "abattis-cantarell-fonts",
+      "properties": [
+        {
+          "name": "sbomer:package:type",
+          "value": "rpm"
+        },
+        {
+          "name": "sbomer:location:0:path",
+          "value": "/var/lib/rpm/Packages"
+        }
+      ],
+      "publisher": "Red Hat, Inc.",
+      "purl": "pkg:rpm/redhat/abattis-cantarell-fonts@0.0.25-6.el8?arch=noarch",
+      "type": "library",
+      "version": "0.0.25-6.el8"
+    },
+    {
+      "bom-ref": "pkg:maven/collections/collections@23.1.5.0-1-redhat-00001",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c4337f3611f7bcb5c4253d1cbcec9796"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "7af5cbeab522cea32d12779b9e4920f2acc943d5"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "feae3a06020d1d33be26f469ca9d96c6f253bb807a581ea145b77b11561aec4c"
+        }
+      ],
+      "name": "collections",
+      "properties": [
+        {
+          "name": "sbomer:package:language",
+          "value": "java"
+        },
+        {
+          "name": "sbomer:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "sbomer:location:0:path",
+          "value": "/usr/share/java/quarkus-mandrel-java/collections.jar"
+        },
+        {
+          "name": "sbomer:metadata:virtualPath",
+          "value": "/usr/share/java/quarkus-mandrel-java/collections.jar"
+        }
+      ],
+      "publisher": "Red Hat",
+      "purl": "pkg:maven/org.graalvm.sdk/collections@23.1.5.0-1-redhat-00001?type=jar",
+      "type": "library",
+      "version": "23.1.5.0-1-redhat-00001"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "pkg:rpm/redhat/abattis-cantarell-fonts@0.0.25-6.el8?arch=noarch&upstream=abattis-cantarell-fonts-0.0.25-6.el8.src.rpm&distro=rhel-8.10&package-id=a91121201ed3be00",
+        "pkg:maven/collections/collections@23.1.5.0-1-redhat-00001?package-id=a7c3ff6d3594e20f",
+
+      ],
+      "ref": "d9851388f78c0ae4"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:rpm/redhat/abattis-cantarell-fonts@0.0.25-6.el8?arch=noarch&upstream=abattis-cantarell-fonts-0.0.25-6.el8.src.rpm&distro=rhel-8.10&package-id=a91121201ed3be00"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:maven/collections/collections@23.1.5.0-1-redhat-00001?package-id=a7c3ff6d3594e20f"
+    }
+  ]
+}

@@ -16,22 +16,6 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "9215c64e7289a058248728089e4d98ed1cc392bb5eb9b8fcbe661d57e8145bbd"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": "31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee46a56d9"
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "0da276f660b44ab5bd128db8aa3d8ce1"
-        }
-      ],
       "publisher": "Red Hat"
     },
     "timestamp": "2024-11-12T14:27:26-05:00",
@@ -51,22 +35,6 @@
       "name": "openssl",
       "version": "3.0.7-18.el9_2",
       "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "9215c64e7289a058248728089e4d98ed1cc392bb5eb9b8fcbe661d57e8145bbd"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": "31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee46a56d9"
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "0da276f660b44ab5bd128db8aa3d8ce1"
-        }
-      ],
       "pedigree": {
         "ancestors": [
           {
@@ -78,23 +46,97 @@
             "pedigree": {
               "ancestors": [
                 {
-                  "bom-ref": "pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz",
+                  "bom-ref": "pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz&checksum=SHA256:83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e",
                   "type": "library",
                   "name": "openssl",
                   "version": "3.0.7",
-                  "purl": "pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz",
-                  "hashes": [
-                    {
-                      "alg": "SHA-256",
-                      "content": "83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e"
-                    }
-                  ]
+                  "purl": "pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz&checksum=SHA256:83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e"
                 }
               ]
             }
           }
         ]
       },
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-aus-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-e4s-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-aus-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-e4s-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-e4s-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
+          }
+        ]
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "TODO"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sha256header",
+          "value": "31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee46a56d9"
+        },
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "TODO"
+        }
+      ],
       "publisher": "Red Hat"
     },
     {
@@ -113,17 +155,17 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "9538011195d4997d7be4bba8cd01473abbf50e397dea06b6545d1d5fbd04817d"
+          "content": "31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee46a56d9"
         }
       ],
       "properties": [
         {
-          "name": "package:rpm:sha256header",
-          "value": "aaafa61c115ec37bb3895e124216ce46774069e49f6178248df085708ecb3878"
+          "name": "package:rpm:sidmg5",
+          "value": "0da276f660b44ab5bd128db8aa3d8ce1"
         },
         {
-          "name": "package:rpm:sigmd5",
-          "value": "2a8826422579bd43b49774d11a68e383"
+          "name": "package:rpm:sha256header",
+          "value": "0da276f660b44ab5bd128db8aa3d8ce1"
         }
       ],
       "publisher": "Red Hat"
@@ -141,23 +183,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "TODO"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": "TODO"
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "TODO"
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le",
@@ -172,23 +198,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x",
@@ -203,23 +213,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64",
@@ -234,23 +228,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64",
@@ -265,23 +243,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686",
@@ -296,23 +258,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
@@ -327,23 +273,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x",
@@ -358,23 +288,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64",
@@ -389,23 +303,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64",
@@ -420,23 +318,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686",
@@ -451,23 +333,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le",
@@ -482,23 +348,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x",
@@ -513,23 +363,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64",
@@ -544,23 +378,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64",
@@ -575,23 +393,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686",
@@ -606,23 +408,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le",
@@ -637,23 +423,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x",
@@ -668,23 +438,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64",
@@ -699,23 +453,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64",
@@ -730,23 +468,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686",
@@ -761,23 +483,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le",
@@ -792,23 +498,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x",
@@ -823,23 +513,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64",
@@ -854,23 +528,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64",
@@ -885,23 +543,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686",
@@ -916,23 +558,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
@@ -947,23 +573,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x",
@@ -978,23 +588,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64",
@@ -1009,23 +603,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64",
@@ -1040,23 +618,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686",
@@ -1071,23 +633,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le",
@@ -1102,23 +648,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x",
@@ -1133,23 +663,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     },
     {
       "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64",
@@ -1164,23 +678,7 @@
         }
       ],
       "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64",
-      "publisher": "Red Hat",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": ""
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sha256header",
-          "value": ""
-        },
-        {
-          "name": "package:rpm:sigmd5",
-          "value": ""
-        }
-      ]
+      "publisher": "Red Hat"
     }
   ],
   "dependencies": [
