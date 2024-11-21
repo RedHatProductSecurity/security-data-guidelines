@@ -2,21 +2,66 @@ import json
 from pathlib import Path
 from types import SimpleNamespace
 
-# A product version and all of its variants with their unique CPE IDs.
-product = SimpleNamespace(
-    name="Red Hat Enterprise Linux",
-    name_short="RHEL",
-    version="9.2 EUS",
-    cpes=["cpe:/a:redhat:rhel_eus:9.2::appstream", "cpe:/a:redhat:rhel_eus:9.2::baseos"],
+# A root component package identified by purls containing all the repositories it is available from.
+gcc_11_3_1_4_3 = SimpleNamespace(
+    name="gcc",
+    version="11.3.1-4.3.el9",
+    filename="gcc-11.3.1-4.3.el9.src.rpm",
+    license_concluded="GPL-3.0+",
+    checksums=["sha-256:31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee46a56ab"],
+    purl_summary="pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src",
+    purls=[
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-i686-baseos-eus-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-aarch64-baseos-aus-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-i686-baseos-aus-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-aarch64-baseos-e4s-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-e4s-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-i686-baseos-e4s-source-rpms",
+        "pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms",
+    ],
 )
 
-# A root component package identified by purls containing all the repositories it is available from.
-pkg = SimpleNamespace(
+openssl_3_0_7_17 = SimpleNamespace(
+    name="openssl",
+    version="3.0.7-17.el9_2",
+    filename="openssl-3.0.7-17.el9_2.src.rpm",
+    license_concluded="Apache-2.0",
+    checksums=["sha-256:31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee46a56d9"],
+    purl_summary="pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src",
+    purls=[
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-eus-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-aus-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-aus-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-e4s-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-e4s-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-i686-baseos-e4s-source-rpms",
+        "pkg:rpm/redhat/openssl@3.0.7-17.el9_2?arch=src&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms",
+    ],
+)
+
+openssl_3_0_7_18 = SimpleNamespace(
     name="openssl",
     version="3.0.7-18.el9_2",
     filename="openssl-3.0.7-18.el9_2.src.rpm",
     license_concluded="Apache-2.0",
-    checksums=["sha-256:31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee46a56d9"],
+    checksums=["sha-256:31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee468dag0"],
+    purl_summary="pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
     purls=[
         "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms",
         "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms",
@@ -36,8 +81,32 @@ pkg = SimpleNamespace(
     ],
 )
 
+# A product version and all of its variants with their unique CPE IDs.
+rhel_9_eus = SimpleNamespace(
+    name="Red Hat Enterprise Linux",
+    name_short="RHEL",
+    version="9.2 EUS",
+    cpes=["cpe:/a:redhat:rhel_eus:9.2::appstream", "cpe:/a:redhat:rhel_eus:9.2::baseos"],
+    released="2006-08-14T02:34:56Z",
+    packages=[openssl_3_0_7_18],
+)
 
-def create_spdx():
+rhel_9_main_eus = SimpleNamespace(
+    name="Red Hat Enterprise Linux",
+    name_short="RHEL",
+    version="9.2 MAIN+EUS",
+    cpes=[
+        "cpe:/o:redhat:enterprise_linux:9::baseos",
+        "cpe:/a:redhat:enterprise_linux:9::appstream",
+        "cpe:/a:redhat:rhel_eus:9.2::appstream",
+        "cpe:/a:redhat:rhel_eus:9.2::baseos",
+    ],
+    released="2006-08-01T02:34:56Z",
+    packages=[openssl_3_0_7_17, gcc_11_3_1_4_3],
+)
+
+
+def create_spdx(product):
     name = f"{product.name} {product.version}"
     name_short = (
         f"{product.name_short.lower().replace(' ', '-')}"
@@ -49,7 +118,7 @@ def create_spdx():
         "dataLicense": "CC0-1.0",
         "SPDXID": "SPDXRef-DOCUMENT",
         "creationInfo": {
-            "created": "2006-08-14T02:34:56Z",
+            "created": product.released,
             "creators": ["Tool: example SPDX document only"],
         },
         "name": name,
@@ -71,8 +140,19 @@ def create_spdx():
                     for cpe in product.cpes
                 ],
             }
-        ]
-        + [
+        ],
+        "files": [],
+        "relationships": [
+            {
+                "spdxElementId": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBES",
+                "relatedSpdxElement": f"SPDXRef-{name_short.upper()}",
+            }
+        ],
+    }
+
+    for pkg in product.packages:
+        sbom["packages"].append(
             {
                 "SPDXID": f"SPDXRef-{pkg.name}-{pkg.version.replace('_', '-')}",
                 "name": pkg.name,
@@ -97,66 +177,54 @@ def create_spdx():
                     for checksum in pkg.checksums
                 ],
             }
-        ],
-        "files": [],
-        "relationships": [
-            {
-                "spdxElementId": "SPDXRef-DOCUMENT",
-                "relationshipType": "DESCRIBES",
-                "relatedSpdxElement": f"SPDXRef-{name_short.upper()}",
-            },
+        )
+
+        sbom["relationships"].append(
             {
                 "spdxElementId": f"SPDXRef-{pkg.name}-{pkg.version.replace('_', '-')}",
                 "relationshipType": "PACKAGE_OF",
                 "relatedSpdxElement": f"SPDXRef-{name_short.upper()}",
-            },
-        ],
-    }
+            }
+        )
 
     return fname, sbom
 
 
-def create_cdx():
+def create_cdx(product):
     fname = (
         f"{product.name_short.lower().replace(' ', '-')}"
         f"-{product.version.lower().replace(' ', '-')}.cdx.json"
     )
     # Products MUST use the type "operating-system" (in case of RHEL) or "framework"
     # (for all other, non-OS products).
+
     product_component = {
         "type": "operating-system",
         "name": product.name,
         "version": product.version,
         "supplier": {"name": "Red Hat", "url": ["https://www.redhat.com"]},
+        "evidence": {"identity": [{"field": "cpe", "concludedValue": cpe} for cpe in product.cpes]},
     }
     sbom = {
         "bomFormat": "CycloneDX",
-        "specVersion": "1.5",
+        "specVersion": "1.6",
         "version": 1,
         "serialNumber": "urn:uuid:337d9115-4e7c-4e76-b389-51f7aed6eba8",
         "metadata": {
-            # Note that `metadata.component` is a singular component and thus cannot support
-            # listing more than one CPE. These are specified in the equivalent components within
-            # the `components` array.
             "component": product_component,
-            "timestamp": "2006-08-14T02:34:56Z",
+            "timestamp": product.released,
             "tools": [{"name": "example tool", "version": "1.2.3"}],
         },
-        "components": [
-            product_component.copy() | {"bom-ref": cpe, "cpe": cpe} for cpe in product.cpes
-        ],
-        "dependencies": [],
+        "components": [product_component.copy()],
     }
 
-    for purl in pkg.purls:
+    for pkg in product.packages:
         component = {
-            # Individual packages must use type "container" (for purls of type pkg:oci)
-            # "library" (for everything else).
             "type": "library",
             "name": pkg.name,
             "version": pkg.version,
-            "purl": purl,
-            "bom-ref": purl,
+            "purl": pkg.purl_summary,
+            "bom-ref": pkg.purl_summary,
             "supplier": {"name": "Red Hat", "url": ["https://www.redhat.com"]},
             "licenses": [{"license": {"id": pkg.license_concluded}}],
             "hashes": [
@@ -166,25 +234,25 @@ def create_cdx():
                 }
                 for checksum in pkg.checksums
             ],
+            "evidence": {
+                "identity": [{"field": "purl", "concludedValue": purl} for purl in pkg.purls]
+            },
         }
         sbom["components"].append(component)
-
-    for purl in pkg.purls:
-        dep = {"ref": purl, "dependsOn": [cpe for cpe in product.cpes]}
-        sbom["dependencies"].append(dep)
 
     return fname, sbom
 
 
 def main():
     curr_dir = Path(__file__).parent
-    fname, sbom = create_spdx()
-    with open(curr_dir / fname, "w") as fp:
-        fp.write(json.dumps(sbom, indent=2) + "\n")
+    for product in (rhel_9_main_eus, rhel_9_eus):
+        fname, sbom = create_spdx(product)
+        with open(curr_dir / fname, "w") as fp:
+            fp.write(json.dumps(sbom, indent=2) + "\n")
 
-    fname, sbom = create_cdx()
-    with open(curr_dir / fname, "w") as fp:
-        fp.write(json.dumps(sbom, indent=2) + "\n")
+        fname, sbom = create_cdx(product)
+        with open(curr_dir / fname, "w") as fp:
+            fp.write(json.dumps(sbom, indent=2) + "\n")
 
 
 if __name__ == "__main__":
