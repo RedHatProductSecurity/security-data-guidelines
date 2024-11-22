@@ -3,6 +3,21 @@ from pathlib import Path
 from types import SimpleNamespace
 
 # A root component package identified by purls containing all the repositories it is available from.
+ubi9_micro_9_4_6_1716471860 = SimpleNamespace(
+    name="ubi9-micro-container",
+    version="9.4-6.1716471860",
+    filename="",
+    license_concluded="GPL-2.0-or-later",
+    checksums=["sha-256:1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d"],
+    # It's not really clear which purl to 'pick' as the summary.
+    # Maybe the longest one out of ubi-micro or ubi9-micro?
+    purl_summary="pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d",
+    purls=[
+        "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?repository_url=registry.access.redhat.com/ubi9/ubi-micro&tag=9.4-6.1716471860",
+        "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?repository_url=registry.access.redhat.com/ubi9-micro&tag=9.4-6.1716471860",
+    ],
+)
+
 gcc_11_3_1_4_3 = SimpleNamespace(
     name="gcc",
     version="11.3.1-4.3.el9",
@@ -91,7 +106,7 @@ rhel_9_eus = SimpleNamespace(
     packages=[openssl_3_0_7_18],
 )
 
-rhel_9_main_eus = SimpleNamespace(
+rhel_9_2_main_eus = SimpleNamespace(
     name="Red Hat Enterprise Linux",
     name_short="RHEL",
     version="9.2 MAIN+EUS",
@@ -103,6 +118,15 @@ rhel_9_main_eus = SimpleNamespace(
     ],
     released="2006-08-01T02:34:56Z",
     packages=[openssl_3_0_7_17, gcc_11_3_1_4_3],
+)
+
+rhel_9_4_main_eus = SimpleNamespace(
+    name="Red Hat Enterprise Linux",
+    name_short="RHEL",
+    version="9.4 MAIN+EUS",
+    cpes=["cpe:/o:redhat:enterprise_linux:9::baseos"],
+    released="2008-08-01T02:34:56Z",
+    packages=[ubi9_micro_9_4_6_1716471860],
 )
 
 
@@ -245,7 +269,7 @@ def create_cdx(product):
 
 def main():
     curr_dir = Path(__file__).parent
-    for product in (rhel_9_main_eus, rhel_9_eus):
+    for product in (rhel_9_4_main_eus, rhel_9_2_main_eus, rhel_9_eus):
         fname, sbom = create_spdx(product)
         with open(curr_dir / fname, "w") as fp:
             fp.write(json.dumps(sbom, indent=2) + "\n")
