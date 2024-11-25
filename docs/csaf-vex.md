@@ -38,7 +38,7 @@ Although CSAF advisory and VEX files ultimately serve different purposes, both f
 CSAF machine-readable standard and use the VEX profile to convey security information. The CSAF standard includes
 three main sections: document metadata, a product tree and vulnerability metadata. The full document structure can
 be found
-[here](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/csaf-vex-guidelines/docs/csaf-vex.json).
+[here](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/csaf-vex/csaf-vex.json).
 
 The following sections break down the information included in CSAF-VEX documents using the
 [VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2023/cve-2023-20593.json) as an example.
