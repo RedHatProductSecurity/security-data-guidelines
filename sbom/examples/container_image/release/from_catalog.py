@@ -229,7 +229,7 @@ def generate_sboms_for_image(image_nvr):
             ]
             parent_digest = parent_digests[0] if parent_digests else ""
             if parent_digests:
-                version = f"@{parent_digest}"
+                version = f"@{parent_digest.replace(':', '%3A')}"
             else:
                 version = ""
 
