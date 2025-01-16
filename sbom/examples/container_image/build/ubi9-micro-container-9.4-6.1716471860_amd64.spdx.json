@@ -488,7 +488,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9@sha256%3A11d5b4a77bfc15341d4b6dffa3d6ed510189fec9583db77cfc107067b5f906c5"
+          "referenceLocator": "pkg:oci/ubi9@sha256%3A11d5b4a77bfc15341d4b6dffa3d6ed510189fec9583db77cfc107067b5f906c5?tag=9.4-947"
         }
       ],
       "checksums": [
