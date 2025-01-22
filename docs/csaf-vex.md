@@ -32,6 +32,23 @@ Red Hat's VEX files are always associated with one CVE and include fix status in
 and Red Hat products. Red Hat's VEX files are publicly available per CVE
 [here](https://security.access.redhat.com/data/csaf/v2/vex/).
 
+### Differences from OVAL
+
+The data that is included in CSAF files differs from that included in OVAL in certain cases:
+
+- CSAF files identify a variety of software components, not just RPMs. The identification mechanism used is purl,
+  which itself contains a type for each identified software component.
+
+- CSAF files refer to SRPMs only when listed as affected but not yet fixed components. OVAL files contain a
+  listing of binary RPMs but this listing proved to be difficult to maintain. Until CSAF data is improved to include
+  consistent lists of binary RPMs, consumers of CSAF data can look up the related SRPM (to be matched with the one in
+  CSAF files) for a given binary RPM with:
+  ```bash
+  # Example lookup for the vim-minimal binary RPM:
+  $ rpm -q --qf "%{SOURCERPM}\n" vim-minimal-8.2.2637-21.el9.x86_64
+  vim-8.2.2637-21.el9.src.rpm
+  ```
+
 ## Document Structure
 
 Although CSAF advisory and VEX files ultimately serve different purposes, both file types meet the
