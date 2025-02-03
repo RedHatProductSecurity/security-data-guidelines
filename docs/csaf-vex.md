@@ -28,7 +28,7 @@ Red Hat's VEX files are always associated with one CVE and include fix status in
 and Red Hat products. Red Hat’s VEX files are publicly available per CVE 
 [here](security.access.redhat.com/data).
 
-## Document Structure
+## Document Structureu
 Although CSAF and VEX files ultimately serve different purposes, both CSAF and VEX files meet the 
 CSAF machine-readable standard and use the VEX profile to convey security information. The CSAF standard includes
 three main sections: document metadata, a product tree and vulnerability metadata. The full document structure can
