@@ -15,23 +15,13 @@ Vendors are encouraged to raise any questions regarding security data by opening
 Many scanning vendors face similar challenges when reading and parsing Red Hat's security data. To check if your question 
 has already been asked, you can review the list of questions asked [here](https://issues.redhat.com/browse/SECDATA-862?filter=12444038).
 
-### RHSAs for Main Stream vs EUS / AUS / TUS 
+### Identifying CPEs
 
-For a container image based on RHEL 9.4, RHSAs should be reported as follows:
+### Identifying the correct RHSAs
 
-* If available, the vendor should always report the RHSA for RHEL 9.4 main fix
-* If there is an RHSA for RHEL 9.4 main + EUS and an RHSA for RHEL 9.5 main: 
-  * Report the RHSA for RHEL 9.4 main + EUS
-  * If the vendor allows for multiple reports, consider reporting both RHSAs
-* If there is not a RHEL 9.4 main fix or RHEL 9.4 main + EUS fix:
-  * Report the RHSA for the next main fix (RHEL 9.5), over a RHEL 9.4 EUS fix 
-  * If the vendor allows for multiple reports, consider reporting both RHSAs
-* If there is not a RHEL 9.4 main fix, RHEL 9.4 main + EUS fix or a  RHEL 9.5 main fix for the next version, but there 
-is a main fix for a previous version (RHEL 9.3) and an RHEL 9.4 EUS fix for the existing version:
-  * Report the RHSA for the RHEL 9.4 EUS fix
-* If there are only RHSAs for previous versions (RHEL 9.3, RHEL 9.2, etc)
-  * Ensure that there is an affected status for RHEL 9.4 as the CVE may predate the RHEL 9.4 release and has already 
-  been patched  
+
+
+
 
 
 
