@@ -33,6 +33,25 @@
   },
   "components": [
     {
+      "type": "operating-system",
+      "name": "Red Hat Enterprise Linux",
+      "version": "9.4 MAIN+EUS",
+      "supplier": {
+        "name": "Red Hat",
+        "url": [
+          "https://www.redhat.com"
+        ]
+      },
+      "evidence": {
+        "identity": [
+          {
+            "field": "cpe",
+            "concludedValue": "cpe:/o:redhat:enterprise_linux:9::baseos"
+          }
+        ]
+      }
+    },
+    {
       "type": "library",
       "name": "ubi9-micro-container",
       "version": "9.4-6.1716471860",

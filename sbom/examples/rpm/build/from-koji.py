@@ -4,6 +4,7 @@ import os
 import re
 import subprocess
 import sys
+from copy import deepcopy
 from tempfile import TemporaryDirectory
 
 import koji
@@ -19,8 +20,10 @@ profile = koji.get_profile_module(koji_profile)
 session = koji.ClientSession(profile.config.server)
 build = session.getBuild(build_id)
 rpms = session.listBuildRPMs(build_id)
-packages = []
-relationships = []
+spdx_packages = []
+cdx_components = []
+spdx_relationships = []
+cdx_dependencies = set()
 files = []
 license_replacements = {
     " and ": " AND ",
@@ -97,7 +100,7 @@ def get_sha256_checksum(filename):
     return h.hexdigest()
 
 
-def run_syft(builddir):
+def run_syft_spdx(builddir):
     syft = subprocess.run(
         cwd=os.path.dirname(builddir),
         check=True,
@@ -128,7 +131,7 @@ def run_syft(builddir):
         else:
             del pkg["externalRefs"]
 
-    packages.extend(syft_pkgs)
+    spdx_packages.extend(syft_pkgs)
     files.extend(result.get("files", []))
     syft_rels = result.get("relationships", [])
 
@@ -150,10 +153,47 @@ def run_syft(builddir):
         ):
             filtered_rels.append(relationship)
 
-    relationships.extend(filtered_rels)
+    spdx_relationships.extend(filtered_rels)
 
+def run_syft_cdx(builddir):
+    syft = subprocess.run(
+        cwd=os.path.dirname(builddir),
+        check=True,
+        stdout=subprocess.PIPE,
+        args=[
+            "syft",
+            "-o",
+            "cyclonedx-json",
+            # Ignore GitHub actions, which are more like build-time dependencies
+            "--select-catalogers",
+            "-github-actions-usage-cataloger,-github-action-workflow-usage-cataloger",
+            os.path.basename(builddir),
+        ],
+    )
+    result = json.loads(syft.stdout)
 
-def mock_midstream(digest, alg, source, sname, sver, url, ext):
+    syft_cdx_components = result.get("components", [])
+    if len(syft_cdx_components) < 2:
+        return
+
+    cdx_components.extend(syft_cdx_components)
+
+def mock_midstream_cdx(digest, sname, sver, url):
+    return {
+        "bom-ref": f"pkg:generic/{sname}@{sver}?download_url={url}",
+        "type": "library",
+        "name": sname,
+        "version": sver,
+        "purl": f"pkg:generic/{sname}@{sver}?download_url={url}",
+        "hashes": [
+            {
+                "alg": "SHA-256",
+                "content": digest
+            }
+        ]
+    }
+
+def mock_midstream_spdx(digest, alg, source, sname, sver, url, ext):
     # Model a midstream repository for this.
     # Hard-code example value for 3.0.7
     upackage = {
@@ -179,7 +219,7 @@ def mock_midstream(digest, alg, source, sname, sver, url, ext):
         upackage["packageFileName"] = f"{sname}-{sver}.{ext}"
 
     pkgs_by_arch.setdefault(arch, []).append(upackage)
-    relationships.append(
+    spdx_relationships.append(
         {
             "spdxElementId": f"SPDXRef-{source}",
             "relationshipType": "GENERATED_FROM",
@@ -238,7 +278,9 @@ def handle_srpm(filename, name):
             if dirpath == builddir:
                 continue
             dirnames.clear()
-            run_syft(dirpath)
+            run_syft_spdx(dirpath)
+            run_syft_cdx(dirpath)
+
 
         # Add sources as SPDX packages
         spectool = subprocess.run(
@@ -251,6 +293,7 @@ def handle_srpm(filename, name):
                 f"SPECS/{name}.spec",
             ],
         )
+        cdx_pedigrees = []
         for line in spectool.stdout.decode("utf-8").splitlines():
             m = source_re.match(line)
             if not m:
@@ -263,8 +306,10 @@ def handle_srpm(filename, name):
             if not tarball_match:
                 continue
 
+
             (sname, sver) = tarball_re.match(sfn).groups()
 
+            cdx_upstream_ancestor = None
             # See Component Registry for a full worked example of unpacking sources
             # https://github.com/RedHatProductSecurity/component-registry/blob/
             #   c05d571ee37fde97a0bf109bcba23e3255df3964/corgi/tasks/sca.py#L296
@@ -273,7 +318,8 @@ def handle_srpm(filename, name):
                 alg = "SHA256"
                 ext = re.sub(r".*-hobbled\.", "", sfn)
                 upstream_url = f"https://openssl.org/source/openssl-{sver}.{ext}"
-                url = mock_midstream(digest, alg, source, sname, sver, upstream_url, ext)
+                url = mock_midstream_spdx(digest, alg, source, sname, sver, upstream_url, ext)
+                cdx_upstream_ancestor = mock_midstream_cdx(digest, sname, sver, upstream_url)
 
             # From distgit rpms/tektoncd-cli/tree/source-repos
             #   ?h=pipelines-1.15-rhel-8&id=c30abfafca5c2865129111a8b7b3e96499d6dbbf
@@ -281,19 +327,22 @@ def handle_srpm(filename, name):
                 digest = "f8b6dc07a0f51f93a138c287ccdc81fbef410554"
                 alg = "SHA1"
                 upstream_url = "https://github.com/tektoncd/cli"
-                url = mock_midstream(digest, alg, source, sname, sver, upstream_url, "")
+                url = mock_midstream_spdx(digest, alg, source, sname, sver, upstream_url, "")
+                cdx_upstream_ancestor = mock_midstream_cdx(digest, sname, sver, upstream_url)
 
             elif sname == "pipeline-as-code":
                 digest = "cfdf86bdbf1cdfbeadad20747a77294da4bc8c90"
                 alg = "SHA1"
                 upstream_url = "github.com/openshift-pipelines/pipelines-as-code"
-                url = mock_midstream(digest, alg, source, sname, sver, upstream_url, "")
+                url = mock_midstream_spdx(digest, alg, source, sname, sver, upstream_url, "")
+                cdx_upstream_ancestor = mock_midstream_cdx(digest, sname, sver, upstream_url)
 
             elif sname == "openshift-pipelines-opc":
                 digest = "c5d28fe15a4a8f6d483cdb984bc25d720d9c6631"
                 alg = "SHA1"
                 upstream_url = "github.com/openshift-pipelines/opc"
-                url = mock_midstream(digest, alg, source, sname, sver, upstream_url, "")
+                url = mock_midstream_spdx(digest, alg, source, sname, sver, upstream_url, "")
+                cdx_upstream_ancestor = mock_midstream_cdx(digest, sname, sver, upstream_url)
 
             if url is None or ":" not in url:
                 url = "NOASSERTION"
@@ -326,15 +375,22 @@ def handle_srpm(filename, name):
                     }
                 ]
 
+            cdx_pedigree = mock_midstream_cdx(digest, sname, sver, url)
+            if cdx_upstream_ancestor:
+                cdx_pedigree["pedigree"] = {"ancestors": [cdx_upstream_ancestor]}
+
+
             pkgs_by_arch.setdefault(arch, []).append(spackage)
 
-            relationships.append(
+            spdx_relationships.append(
                 {
                     "spdxElementId": "SPDXRef-SRPM",
                     "relationshipType": "CONTAINS",
                     "relatedSpdxElement": sref,
                 }
             )
+            cdx_pedigrees.append(cdx_pedigree)
+        return cdx_pedigrees
 
 
 downloaddir = str(build_id)
@@ -349,7 +405,41 @@ try:
 except FileExistsError:
     pass
 
+def create_cdx_from_spdx(spdx_data):
+    purl = spdx_data["externalRefs"][0]["referenceLocator"]
+    component = {
+        "bom-ref": purl,
+        "type": "library",
+        "name": spdx_data["name"],
+        "version": spdx_data["versionInfo"],
+        "purl": purl,
+        "hashes": [
+            {
+                "alg": "SHA-256",
+                "content": spdx_data["checksums"][0]["checksumValue"]
+            }
+        ]
+    }
+
+    cdx_properties = []
+    annotation_prefixes = ("sigmd5", "sha256header")
+    if "annotations" in spdx_data:
+        for annotation in spdx_data["annotations"]:
+            comment = annotation["comment"]
+            for annotation_prefix in annotation_prefixes:
+                if comment.startswith(annotation_prefix):
+                    annotation_value = comment[(len(annotation_prefix) + 2):]
+                    cdx_properties.append({
+                        "name": f"package:rpm:{annotation_prefix}",
+                        "value": annotation_value
+                    })
+    if cdx_properties:
+        component["properties"] = cdx_properties
+    return component
+
 pkgs_by_arch = {}
+cdx_root_component = None
+cdx_pedigrees = []
 for rpm in rpms:
     (name, version, release, nvr, arch) = (
         rpm["name"],
@@ -409,18 +499,18 @@ for rpm in rpms:
         ],
     }
     pkgs_by_arch.setdefault(arch, []).append(package)
-
     if arch == "src":
-        relationships.append(
+        cdx_root_component = create_cdx_from_spdx(package)
+        spdx_relationships.append(
             {
                 "spdxElementId": "SPDXRef-DOCUMENT",
                 "relationshipType": "DESCRIBES",
                 "relatedSpdxElement": spdxid,
             }
         )
-        handle_srpm(filename, name)
+        cdx_pedigrees = handle_srpm(filename, name)
     else:
-        relationships.append(
+        spdx_relationships.append(
             {
                 "spdxElementId": spdxid,
                 "relationshipType": "GENERATED_FROM",
@@ -428,9 +518,14 @@ for rpm in rpms:
             }
         )
 
-packages.extend([package for package in pkgs_by_arch["src"]])
+spdx_packages.extend([package for package in pkgs_by_arch["src"]])
 del pkgs_by_arch["src"]
-packages.extend([package for arch in pkgs_by_arch for package in pkgs_by_arch[arch]])
+
+# [package for arch in pkgs_by_arch for package in pkgs_by_arch[arch]]
+for arch_packages in pkgs_by_arch.values():
+    for package in arch_packages:
+        spdx_packages.append(package)
+        cdx_components.append(create_cdx_from_spdx(package))
 
 spdx = {
     "spdxVersion": "SPDX-2.3",
@@ -444,12 +539,47 @@ spdx = {
     },
     "name": build["nvr"],
     "documentNamespace": f"https://www.redhat.com/{build['nvr']}.spdx.json",
-    "packages": packages,
+    "packages": spdx_packages,
     "files": files,
-    "relationships": relationships,
+    "relationships": spdx_relationships,
 }
+
+cdx = {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "version": 1,
+    "serialNumber": "urn:uuid:223234df-bb5b-49af-a896-143736f7d806",
+    "metadata": {
+        "component": cdx_root_component,
+        "timestamp": "2006-08-14T02:34:56Z",
+        "tools": {
+            "components": [
+                {
+                    "type": "application",
+                    "name": "example tool",
+                }
+            ]
+        }
+    }
+}
+
+copy_of_cdx_root = deepcopy(cdx_root_component)
+copy_of_cdx_root["pedigree"] = {"ancestors": cdx_pedigrees}
+cdx_components.append(copy_of_cdx_root)
+cdx["components"] = cdx_components
+
+binary_rpm_purls = {c["purl"] for c in cdx_components}
+cdx["dependencies"] = [
+    {
+        "ref": cdx_root_component["bom-ref"],
+        "provides": list(binary_rpm_purls)
+    }
+]
 
 with open(f"{build_id}.spdx.json", "w") as fp:
     # Add an extra newline at the end since a lot of editors add one when you save a file,
     # and these files get opened and read in editors a lot.
     fp.write(json.dumps(spdx, indent=2) + "\n")
+
+with open(f"{build_id}.cdx.json", "w") as fp:
+    fp.write(json.dumps(cdx, indent=2) + "\n")
