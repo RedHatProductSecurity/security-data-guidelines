@@ -416,6 +416,37 @@ The parent image of `example-container` is `ubi9`. Its relationship to `example-
     }
     ```
 
+Container Images are also linked to one or more upstream sources that were used to build them. An upstream source can be represented by a package object using the following data:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-image-index-Source-origin",
+      "name": "kernel-module-management",
+      "versionInfo": "d027509b6861d8a9f923cc99dd3e15d9b209e63e",
+      "downloadLocation": "https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/kernel-model-management@d027509b6861d8a9f923cc99dd3e15d9b209e63e?download_url=https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e"
+        }
+      ]
+    },
+
+To associate a set of remote sources with sources repository referencing them use:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-image-index-Source",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-image-index-Source-origin"
+    },
+    ```
+
 <!-- TODO: add diagram that shows all the relationships -->
 
 #### RPM
