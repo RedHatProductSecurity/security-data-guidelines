@@ -223,6 +223,7 @@ def create_cdx(product):
     # (for all other, non-OS products).
 
     product_component = {
+        "bom-ref": min(product.cpes, key=len),
         "type": "operating-system",
         "name": product.name,
         "version": product.version,

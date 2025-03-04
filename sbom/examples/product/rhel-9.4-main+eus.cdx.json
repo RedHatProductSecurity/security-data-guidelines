@@ -5,6 +5,7 @@
   "serialNumber": "urn:uuid:337d9115-4e7c-4e76-b389-51f7aed6eba8",
   "metadata": {
     "component": {
+      "bom-ref": "cpe:/o:redhat:enterprise_linux:9::baseos",
       "type": "operating-system",
       "name": "Red Hat Enterprise Linux",
       "version": "9.4 MAIN+EUS",
@@ -39,6 +40,7 @@
   },
   "components": [
     {
+      "bom-ref": "cpe:/o:redhat:enterprise_linux:9::baseos",
       "type": "operating-system",
       "name": "Red Hat Enterprise Linux",
       "version": "9.4 MAIN+EUS",
