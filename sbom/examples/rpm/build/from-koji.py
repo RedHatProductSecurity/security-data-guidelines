@@ -566,13 +566,20 @@ cdx = {
 copy_of_cdx_root = deepcopy(cdx_root_component)
 copy_of_cdx_root["pedigree"] = {"ancestors": cdx_pedigrees}
 cdx_components.append(copy_of_cdx_root)
-cdx["components"] = cdx_components
+# Assisted by watsonx Code Assistant 
+cdx["components"] = sorted(cdx_components, key=lambda c: c["purl"])
 
-binary_rpm_purls = {c["purl"] for c in cdx_components if c["bom-ref"] != cdx_root_component["bom-ref"]}
+
+binary_rpm_purls = set()
+for cdx_component in cdx_components:
+    if cdx_component["bom-ref"] == cdx_root_component["bom-ref"]:
+        continue
+    binary_rpm_purls.add(cdx_component["purl"])
+
 cdx["dependencies"] = [
     {
         "ref": cdx_root_component["bom-ref"],
-        "provides": list(binary_rpm_purls)
+        "provides": sorted(list(binary_rpm_purls))
     }
 ]
 

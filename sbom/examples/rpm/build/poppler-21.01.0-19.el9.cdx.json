@@ -39,121 +39,6 @@
   },
   "components": [
     {
-      "bom-ref": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "9d95ae9a07d38d6e03ea146e141a99d0d0e9caa57569107f39a59ac7fc224bfd"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "0967a27ade9f092d91e27dbc10a4593a"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "823c4d9dcda71187db507eb7451ba675d82f5fb24a282efebd5b64ce6c9f61d2"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-qt5-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "0a303accb3d2604c05e1ddf9b49a8eb90f33b56e9f6182a1392cc09034675b4a"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "68e2eae7b9b260f885ac7b696d606118"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "b55b55c1b41d159abcb46a6816d22740dc3f27dcfce056bd772516838caeeb7d"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-qt5-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "3b7a10adf732d18370dc83c19c451e2e27243bed232284640debbf0f488345dc"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "5c1adabfbcb0e5cb11208e6244dd9a38"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "13315bc37df94925caa5c0c883b391a529fe626be70c9c64d10be3f715e16b6c"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-cpp",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "bdf34012ab575b7a1fb63e158e3257250db952b9f47f275b550992eb7d72ed78"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "9ef555b6d0f543032d4379b3392f222d"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "b6c48c1cd02e47a9c7066c89298f8739ae7629cd7334fec3371d9554cde33981"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-cpp-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "5022c7069d1996090689e47b8dd2615b5b653db852ba073ca0a94347c293d241"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "7bc229d8a5eaaa44d7b1d439afeb6612"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "7692e61a405901eeddd74b2d5c65da971a8516fd0aca51bc7a4b230e88d8ece2"
-        }
-      ]
-    },
-    {
       "bom-ref": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64",
       "type": "library",
       "name": "poppler-cpp-debuginfo",
@@ -173,719 +58,6 @@
         {
           "name": "package:rpm:sha256header",
           "value": "39fb1ddc551f5b4b8c9f6a6dfb497d6e6d6fac486e1110581ab05c672fc98ff7"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "ffc8ac32d519b8a55c5fdaf2bcf185eb52e73790844abd4abc8b5aeb8eb99631"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "a160491f95353f1786a39dcd2a4cf962"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "3d8d5695f342391b685c451d7e8cd00842bffd96f3b832605412bb6a1c378e62"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-glib-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "31b3d3359d6ac481e7e189a82c3b6bc598f3b51937e9fce76bfb0ab561cbd4fb"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "0ba177a2516e0c9c20888c7d0f8287f9"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "b847e6f46dcd2d8ff698c90305108568e56f8ed032da104fde47489de8a2f967"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-qt5",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "8e787b3f263cde1a7ef453a87c1f96041387f522f7bc4baae9a383d769881842"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "d73f171b0510747933ffb440feea82bf"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "a1ef27397ca7e873283289f47a082c682dd6a250f738b7b7208d637f4b75ca3a"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-glib-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "9acc25304d5302ba68b3b0a401c651ce0e08454f26def121a8cfec3f593631e0"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "a70354d5ab4c6a3c894409a6e7d8a230"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "89d4e53b52ae3a3d310d363046fad45c367b18fd60244907303cfd018af3dc8c"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-debugsource",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "d146292ffd4defb00379787510a5d4566613de6b87340454b583c57e06cddd4a"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "3eede9f3ff49a9a94b23ec060c9df1aa"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "42a88a004ae34220ad89a85209853231549fc2a4556477edcc52ad5a3563887a"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-utils-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "e2cd901d2dc6961400ba2b26f3d3a4cded4bb0b21708d1e91ea844c251722ffb"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "b7e36736ec8271287d27bb014cc469bd"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "d5fb1ee67d50c6ab34c309642fff5acd8b8071cee3f48fc39905ee796c653f93"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "648122fa2138386263db7b0440eeb61c832bbfd4c75ca913c33a76428d182025"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "1ae9c8a446e4168d88d37e3c6ae498e5"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "2919696049591ddddf969ba46b671fd2d6bd688069b9844e49a54703a4e75f93"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-glib",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "8ec63f76dc5fd358056ed3365760eaa90daf91189d5c5be5fecbf7415605808e"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "393cc91e23ba5dff8f3c47066b2db542"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "c588c8528aa7eded3815b82c2a0ef058bb6e7f0700c62824b4d58e5651dedfd5"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64",
-      "type": "library",
-      "name": "poppler-utils",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "0663fcd9ecd6c11e560337ca2b5401e1a39dbd5a56a519f835b0f67d123425f5"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "b2233be80a746e0b682b7f712975e854"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "e4b83c35da3cc3b7def970d56f816a0f3de5e983b6f2e4b922eb399cfb140773"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch",
-      "type": "library",
-      "name": "poppler-glib-doc",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "2b0955db79eac3277a675a162484cb3b019d507aff292a8e85d9492b01d14d6d"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "a01f789672b2252f1bb52ba2ee1abe97"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "4717a1695327994346eccc99c774f487e7c0143cdffba4e2dd4dd74aa2dbb968"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-cpp-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "6a968f10b19e150d3501447bc498bc1c59c7560e5372ab40018b0fe3a047c62f"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "16c92a735a3f4f23b16b71ee442cc58a"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "db09ef48ee9dcf416c9119e9dfa12c51388b89ae38cd8b821dc2624f06405f70"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-glib-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "6966f07bc7d6f3080d50f1a8ecb371451c33c075a103b301fb5e0bf1b27b9bb1"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "482f4165fbdf18b5faed6f37c305ec4c"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "701a10a1ec9ce2f101c4ad3a1aef77bfb327ba239b6e45b808ff93f2ec9ab680"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-cpp-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "e9455309fcdcaa0588aae4c0280ef347b79eac7af5f2bafacb11cf715e9c18f5"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "1fd10415d9c32ce22582df2b59517fcf"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "88ebef3dbd2b4e71d5b1399107d4aaca5027299a53efd2d5e8fa164d2c57c45d"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-qt5",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "574c219d781b8b3fc9f4f2b688d70e020d7fd2079532fc6c5935f63487c1451e"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "0781dd9e45f95298c1cd52d71b4c635c"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "746ac2c268979b7ded43644a6fb2fbcbfb66dfd48feb087abb2f9dca2c4326ba"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-qt5-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "de7db082e0df2ee7f87e9126b282af6efd74303572f0cd113abff6b32397b6f8"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "1bc1c1987430892aca8f4e106d92b5bf"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "142b44d12816bbefe3536ce7d8b15fa241a932f0e9fd716b3c5cdcb119dc647f"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "092a3afe2eb1367fa42e4b49fba72dff4f3b963a369c05767af3a72a700ad33e"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "ce490b225cb2605336e6f2d61f1cb53f"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "70184736ed864e9f5ee645c4fbd168468e9f3b463d2532c71e98cd7fe2253aba"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-glib",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "96b3d4cd21e6f1f6f11866e66753c53aea716d14dea5f3d6b04b34fdf3a31001"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "8b11e270d322e47c44857f3218a12f56"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "1854691cb2d1d7ab4197d92b471ab14e34c56ad4cad8a554eb6701c01cabc5e1"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "c0ed7c54f998e1636d40535b352a917884989b1468d2897ed4dd9770e03d17c6"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "76520285bb0f5bf4e6fc242dc7e19b9a"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "d39e2fad2e8c4cf9f925f915c1bfe6826b293d81bcd1112e65021a272a05c796"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-utils",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "555b12c027ddf3d2dca2e0ec788c5500d5bbf10036c910eeb1c115822327f264"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "1ea146bfb0d75c9193e49750825e0ace"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "df4d310e7581a816c5b5358cf161b24749db2e80324d751b75d71153bbdfca6e"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-utils-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "1917813f2260ec9c76d99d46863e09a607c806b18bd541ca20c18a1c581e990e"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "032c56e517c4ecf8adb851c801559219"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "58fb44f78aa269105f8fd5b0d1eb0cafe14d9dc7218ae9a362b8af264b05fe62"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-glib-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "e20322ea7928cfd5519c9d6d19694fadf9e1365976b74539199ff41a4d19d402"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "e42c91891a468b1152f2ecd910c26392"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "ef13b612a62ea567e11ab2b60a5deed774ff6a500d59b90763c8a89ceafeb751"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-qt5-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "fdd49706864108a96ece4761f3975bc1de0b2bc424c85efb07d76f912885d968"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "32cf2baf6007fd9dcf3c957b797f07ed"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "439d97f55dd9d80174983670b4d1a47c2dcb60b076a411fb57ccc74da6591993"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-debugsource",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "55efb935bf1824f3e6d901cd8ba4c49a62dc159dbf73cc667bcc3000ea709b6c"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "4afa07d70ad8fe31acee5801568e2675"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "f325bf658a24a0776495d9c17a7ad4a6d7d76744797fa6b3a7f7af179f4dca43"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-cpp",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "dc47734f0ff549c164a86bf990948f872c320e0ceee7d90f030dea8f02ce1c71"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "aea273188e8457fd89ca75fd4e80bb57"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "12eb0caf192467f4bf005c253aaa5d2eb67c7f2fd6f80ff9b55a8991be534091"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le",
-      "type": "library",
-      "name": "poppler-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "a0889808f54eb83c5decf2abc0e21fe8b2d5b1e038e4e6c1d2876eeb31b015be"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "0191fa8694e76d0814366a0a0d40797b"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "84e234f19993b8a8cdb21d50cbe002f88a0c629fd27a851309ea4322f113cde9"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "2a76e648ba3522ca23ba329ea017325b0360761739f415d9f6246bda1fedf595"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "19b8325423b4ee4c5932c34cfdb6cd46"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "6d4cd82f848758ccd07b79694c2e0b098f7f1e2dba4aae7771d499dd34fa02f7"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-qt5-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "25a4ecccce6d059d9f3a9724886a94b8f41d171bda96f908757c54fd037bbc24"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "2dfdf488eae1a735daca17b2480a177c"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "32fb8dc4bbe094c9a33f829e8cdf37cec6dd640a27fae301158e6db43c2eb645"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-utils-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "67948ca67ecea36a60e43d86ba8944202ea78421dfb6f1beb26c3dd871cc7adf"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "96a69a7c373bb992af252941436bbc31"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "9678b5a20ac152bc58b78c244401aaa41d76ce88bef524b5d97b04d6611da24f"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-debugsource",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "b9d069c4e1c2912c0df635094cb73643a13b3227a8d77a0505e2c90abb25dbc7"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "26e9e5d3888a77cfdbd90682f33c2bbc"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "95831ac2acc87f85ae85187b4317764242d5de2641a2d3cc51805269f1792485"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "a09da9e825f9ae9201c3db560675f0f86bbf537418e95f149b7fbac25c5e0cf4"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "fd62e12dcf7946c0a84b0b25f743cb0a"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "2c3f418c82d5dc8b412422aa8260d00a7b2f10f066277de525c0df14d46705a5"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-glib-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "0cd59642fd34fa7e9c82307865c1b04e61e268493690a5d2ee0faeb091f61032"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "6252e754c2f9a832789becfbb4995fb0"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "f9538e6b19edf5c63b1f0e3095f6fd012bfc1785d758e58fd4879caf9b911d23"
         }
       ]
     },
@@ -913,738 +85,25 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "2466cb8912235bd5c1ca5adc79e14d1f226856b275909f0353e785b9b1b624a4"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "6aa8b7a983388c82b7806817441639f0"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "f16d56c5e2295d2635c1356b1279fa2b11952bf464359cfe8aa1ae4e35e15216"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-glib-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "08763a255485c842609b9fa821ba3bba84f476176b4f56d68d7f5d78cf81261e"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "fbd06dfe57683923eb3c4126a274089c"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "fefed1bc3970a1ad692b7b57095ee0bb6b98b0d59cdff910731938bf60c40011"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-utils",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "8f68cb95de70c97f305ccdd79ea856f36821761eba73a7ae31843b48695fd01f"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "e9000cf06fa18d4a2a14e4fd938760fc"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "f2bff4d4ef0b641d25094c925082bec3254c9e881838af9bca8c18dee3e45f9d"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-qt5",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "104fd60de9602d01c564be1d5d22eca4264567d78fd9d51824e6592bb1490b30"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "42e29fcdb5d8c69dbf05e5b095ddde70"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "7f8cae6b3a2c1346ade8967d1dbe65e2e1341816e510769bfad844d82e8cb98c"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-glib",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "a69f97a3e7f863ee930c8a25e8d7747c17e70d4baa1273e91ec1faa182804491"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "18c95d158c0d0d44cee5071d76c18aa7"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "78cbefee103f3258edd345af4df2a306de73c28a41971f8a2fa6ceb8a3025424"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-qt5-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "9e11de701852f4ef57c62503b003730a58bb189fd819f810fc772aa9088b7a47"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "3fb31080b2b88726a1d6c563d7dc1f53"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "1bca7e7d1224c87710aff3dbe2d2998ffb4cab09da38166c0abcca0864a700a2"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-cpp",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "c054d46477a7d7c05ebb3cfa3cf1583f75c01d2cfb1296883a1b995e8191dc7b"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "2b8f64a8be4fc7fef20e1a0c70a3a292"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "bc35f7aa9abcebee86f57ebd30aab737c23d7bceab0af7d5d9d71d24b9a1b8e3"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686",
-      "type": "library",
-      "name": "poppler-cpp-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "b90ea4034966737d915a71d2b57f6e6010f306ea3ab749aeac0976913c5df40f"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "f0103b274a9c20773360a6de2b03fc38"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "2b466bb6af0f1d2cac29bace9c9d1479a4d8ae16c02085ce61add5d1600a5a9c"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "af28ac3903e3a9c5b18035dc119940bc20434bc27334658818477b20e0e78441"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "ffd4c8adcc6a5db4dd712a000b39ac9d"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "8bebb264e45338ce7d20064bba893e544703cdf965d4683982c5cfad36a541b6"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-glib-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "0c5d7b40344e4006a2606bfe7580498724071a1168b646c52c4763300bbf5721"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "cdbb8cbc9b331aae0100fcdcfceea245"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "0c5a9219064f27f94565798960cd596378d5a86edb3c9fe3ea3b5100b296c998"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-utils-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "1ead3d93eda812f39b10ccf96d1a25d694f2b907d153820739744f0f96d833b5"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "74f0df98af26f5007b9c0d597ece5f2c"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "9b5f0d51959e9f5555d0814bda7c9a586c878f4c28b556e62abc1d7d03921096"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-qt5-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "ec702533bdef62f63530e2c2ec700667b33e1451f837d13ed8709ebfcd59665a"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "aa902943d511988ea7e7c90e090f5533"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "86f3d1bbc3846e38d7ba7c0c8c998c380318532937835fc407bebc21c7e121f4"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-qt5-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "794688b5bd303e888a95154ea081b8025ff774702115f52a17061658f41696fa"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "e6deceadfd64aaacbae0877905255ac9"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "d111695ffdc65ef8cc73271a3d9008d5bad65d58744f49283600df1f6409c9f2"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-qt5",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "26c91ac5f1eaf247d93dc1740dcbef7b00a7c7f7bbea95bc3dbe62eb183bd719"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "c6ab4d7789825d7e06d76cc90d2616be"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "d0a5c7eeb6bc03cb40b6319ea52ec52dfe359d7bd626c461036028e4cd7a15d0"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le",
       "type": "library",
       "name": "poppler-cpp-debuginfo",
       "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "purl": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "d6c8be898bf036638462335e9c4f691cf350372a4b4e9ac14d218f151cdba644"
+          "content": "e9455309fcdcaa0588aae4c0280ef347b79eac7af5f2bafacb11cf715e9c18f5"
         }
       ],
       "properties": [
         {
           "name": "package:rpm:sigmd5",
-          "value": "8aa1cf52b7ad517f2f226aef85d8f2f5"
+          "value": "1fd10415d9c32ce22582df2b59517fcf"
         },
         {
           "name": "package:rpm:sha256header",
-          "value": "223f5e1aef214f7cc6fea0d09c0089ebdc490e5ea1c17aba6f8c43a5e73eaf4a"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-utils",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "c52a3281e5b80e2a6a7ad0c8c60ba28d975a5c8f36851e760628c2ec2ba55e86"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "86f5e376a974549da2c6ddf69200ca0d"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "e96071f842c2baa3cd3b5c357c1cec9ac5b58fe9c997c4e41a11cc2d5a593998"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-glib-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "24ef4d20be39234724d5e40e4e144db983a859612be85929619626988094386a"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "58a32943d9e452dec0b443bde7ab68f1"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "245cb852067ced7e0ec57ec98d02cd29a1ee922b5936486e71d0de7af3491e30"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-cpp-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "bb17518c4144c176de3f7980a14b25db1d62b04cdd1ffba658272f0112ebfd63"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "5e1fc7ff76e89014251c9fc188577bfa"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "1fbf48ff1e14c6c0a66902d45a8c9c20dfacf6728838ab64badd3d63681c08b4"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-cpp",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "98694a86fdb3d06fab8e2d1ab60040449e1a5c3b625a49a9e4f0a02d84a4f717"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "18f9769c798ebec6ab55073392b9ca92"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "ec1d95bd36bc3cad8df1de405390031af8dd86e4244e5270ce00e8564d0ede8d"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "0769a5a3e63056a99292539ed87f5eaa70038ddfa44a37a3e042232c0dbce1e6"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "72c71b935fdab373524c93688d68027a"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "dca5a35069be635d141adc7aeae073b358131775a822ecce0c61adfa02e8715e"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-glib",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "4d1a54b08657b2f0d9f35277101cc8f2fe8a721593117048ac391d1a83679b66"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "7c603cdfb53b1e8473479eecf5311c95"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "7a9870abfae6ddb825d2e326ec4c48b44326b87cb2907ef6d0a4a336476eb531"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "729ce4a72b9b9ff7dbf0782a9ea7cf991cbd015a0c8ab01d0ef3184735bac0dd"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "418ae7528069ed467c00d56c22e39ff9"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "e4cf6aa6510d99ff40957946a6ad923787ea941a87ceea538ec867f02466929a"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64",
-      "type": "library",
-      "name": "poppler-debugsource",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "c611f6e164a0a4c33afb6eff30e910821f796f54cd482b925dd679730e79c586"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "bad5c33d7873032cc2efedf559445b30"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "7fb4201556ec1a91d0b9287b5b99f9de8cd3ad0e99c8b0936d18d0d0cf5c0c12"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x",
-      "type": "library",
-      "name": "poppler-glib-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "550ad08d5448627cd06b653aaabd59cf0811a0f1fc6af64526388d47a74e750a"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "7493836fe572582cdd4b6648dd4e8fdf"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "e4e83700630cf34e549b0b580523bbe81ac104ec1561a0c5d1b53e447e7a2038"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x",
-      "type": "library",
-      "name": "poppler-debugsource",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "9450341465086db088342b8751a796ee10c8659c256ac15ba41dda0bf8cc94e1"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "a36333a91b3d4285c8c0d43b62220c4e"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "fa27d4ea22f4c975f824efee0ca8834a404456c9b2786b9daef0af0854577cd6"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x",
-      "type": "library",
-      "name": "poppler-qt5",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "3c503e85c0a789673c40794dd6000628ad11b3dd4656c686095a4b33f26799a1"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "f6a1c2a29bfb46627905704d1b83f388"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "dc905a69e8fc81752bb47099cf5d2d78044ae8f1c2592443a5d8cf17f1c119a9"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x",
-      "type": "library",
-      "name": "poppler",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "57b9e7cd8552dc0329da54c06a77844c16f42a906ce6675f085ab44d9e03630b"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "aa44c950cef2a694f50d8ca6bf6d039f"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "2475175ba8f1abd41318888a14d833082e4d355647aeb4766d6a1e41481dbdad"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x",
-      "type": "library",
-      "name": "poppler-qt5-devel",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "b0f9f9787f20e88876b4f69b9b39807142ca5188c950643c0580ff8192e055a6"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "5db76ca03affff90d201e32f3ce1f317"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "de61c2cc52d0e93c6119a4ed92ac63e4f0927dba2885131241b4d86e650cb6f5"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x",
-      "type": "library",
-      "name": "poppler-qt5-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "d346d138c4b516808b4dc3c75ba76fdf52b0f4c856485ab7b21f1a044567048b"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "1bad4a76ab4b361dfbe67f856beeb3ec"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "933cca9dcc9d01bccf1164f550a7bd93d0d81b22e1dc1c59eebf1c5e2fb60a2f"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x",
-      "type": "library",
-      "name": "poppler-utils",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "437d4867510988184567cc3f6e751b752efc209c9d2fe21670da4d827e16da1f"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "07a4b821820285b0a2bcb7f161cc632e"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "eb6940ee04b688318359e63191564085373d1a5a16d4d49076fde6fb6083735d"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x",
-      "type": "library",
-      "name": "poppler-cpp",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "ba8bde6851373a8fe0e8a5622063b17f494c99a5d9e2a0738fdce98d99068756"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "ee1aa8a495360dda2eca57319cd63791"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "161c4593bea49a285db38541787eae3497594cc54f07394ee3b3f4acb31d031e"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x",
-      "type": "library",
-      "name": "poppler-utils-debuginfo",
-      "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "a35fd2ef9270ed7b6d590bb02e66b67daae0ada4b7a585f5a67b7ab0319e205f"
-        }
-      ],
-      "properties": [
-        {
-          "name": "package:rpm:sigmd5",
-          "value": "6e2be9c750229e9a46ccd8827c97f447"
-        },
-        {
-          "name": "package:rpm:sha256header",
-          "value": "93fd0f457d640c1464bdb266a72be0363a2f8ea02536bc226a759f909629878f"
+          "value": "88ebef3dbd2b4e71d5b1399107d4aaca5027299a53efd2d5e8fa164d2c57c45d"
         }
       ]
     },
@@ -1672,6 +131,98 @@
       ]
     },
     {
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-cpp-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d6c8be898bf036638462335e9c4f691cf350372a4b4e9ac14d218f151cdba644"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "8aa1cf52b7ad517f2f226aef85d8f2f5"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "223f5e1aef214f7cc6fea0d09c0089ebdc490e5ea1c17aba6f8c43a5e73eaf4a"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-cpp-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5022c7069d1996090689e47b8dd2615b5b653db852ba073ca0a94347c293d241"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "7bc229d8a5eaaa44d7b1d439afeb6612"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "7692e61a405901eeddd74b2d5c65da971a8516fd0aca51bc7a4b230e88d8ece2"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-cpp-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b90ea4034966737d915a71d2b57f6e6010f306ea3ab749aeac0976913c5df40f"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "f0103b274a9c20773360a6de2b03fc38"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "2b466bb6af0f1d2cac29bace9c9d1479a4d8ae16c02085ce61add5d1600a5a9c"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-cpp-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6a968f10b19e150d3501447bc498bc1c59c7560e5372ab40018b0fe3a047c62f"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "16c92a735a3f4f23b16b71ee442cc58a"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "db09ef48ee9dcf416c9119e9dfa12c51388b89ae38cd8b821dc2624f06405f70"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x",
       "type": "library",
       "name": "poppler-cpp-devel",
@@ -1695,25 +246,209 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x",
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64",
       "type": "library",
-      "name": "poppler-devel",
+      "name": "poppler-cpp-devel",
       "version": "21.01.0-19.el9",
-      "purl": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x",
+      "purl": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "5fcd5d62a6d8f638e74e1d464d4f01efc0f9d0dd538fa7115d7ab8ccf98f565f"
+          "content": "bb17518c4144c176de3f7980a14b25db1d62b04cdd1ffba658272f0112ebfd63"
         }
       ],
       "properties": [
         {
           "name": "package:rpm:sigmd5",
-          "value": "e2ef5192eb1e412c9ac6690795d763a4"
+          "value": "5e1fc7ff76e89014251c9fc188577bfa"
         },
         {
           "name": "package:rpm:sha256header",
-          "value": "094ed04a4c2878088acfec6bbd3bdc052ba40ae13a64ae088c86d3d37bfc6b51"
+          "value": "1fbf48ff1e14c6c0a66902d45a8c9c20dfacf6728838ab64badd3d63681c08b4"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-cpp",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bdf34012ab575b7a1fb63e158e3257250db952b9f47f275b550992eb7d72ed78"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "9ef555b6d0f543032d4379b3392f222d"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "b6c48c1cd02e47a9c7066c89298f8739ae7629cd7334fec3371d9554cde33981"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-cpp",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c054d46477a7d7c05ebb3cfa3cf1583f75c01d2cfb1296883a1b995e8191dc7b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "2b8f64a8be4fc7fef20e1a0c70a3a292"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "bc35f7aa9abcebee86f57ebd30aab737c23d7bceab0af7d5d9d71d24b9a1b8e3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-cpp",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "dc47734f0ff549c164a86bf990948f872c320e0ceee7d90f030dea8f02ce1c71"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "aea273188e8457fd89ca75fd4e80bb57"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "12eb0caf192467f4bf005c253aaa5d2eb67c7f2fd6f80ff9b55a8991be534091"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x",
+      "type": "library",
+      "name": "poppler-cpp",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ba8bde6851373a8fe0e8a5622063b17f494c99a5d9e2a0738fdce98d99068756"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "ee1aa8a495360dda2eca57319cd63791"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "161c4593bea49a285db38541787eae3497594cc54f07394ee3b3f4acb31d031e"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-cpp",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "98694a86fdb3d06fab8e2d1ab60040449e1a5c3b625a49a9e4f0a02d84a4f717"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "18f9769c798ebec6ab55073392b9ca92"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "ec1d95bd36bc3cad8df1de405390031af8dd86e4244e5270ce00e8564d0ede8d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9d95ae9a07d38d6e03ea146e141a99d0d0e9caa57569107f39a59ac7fc224bfd"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "0967a27ade9f092d91e27dbc10a4593a"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "823c4d9dcda71187db507eb7451ba675d82f5fb24a282efebd5b64ce6c9f61d2"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2a76e648ba3522ca23ba329ea017325b0360761739f415d9f6246bda1fedf595"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "19b8325423b4ee4c5932c34cfdb6cd46"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "6d4cd82f848758ccd07b79694c2e0b098f7f1e2dba4aae7771d499dd34fa02f7"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "092a3afe2eb1367fa42e4b49fba72dff4f3b963a369c05767af3a72a700ad33e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "ce490b225cb2605336e6f2d61f1cb53f"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "70184736ed864e9f5ee645c4fbd168468e9f3b463d2532c71e98cd7fe2253aba"
         }
       ]
     },
@@ -1741,6 +476,328 @@
       ]
     },
     {
+      "bom-ref": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "af28ac3903e3a9c5b18035dc119940bc20434bc27334658818477b20e0e78441"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "ffd4c8adcc6a5db4dd712a000b39ac9d"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "8bebb264e45338ce7d20064bba893e544703cdf965d4683982c5cfad36a541b6"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-debugsource",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d146292ffd4defb00379787510a5d4566613de6b87340454b583c57e06cddd4a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "3eede9f3ff49a9a94b23ec060c9df1aa"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "42a88a004ae34220ad89a85209853231549fc2a4556477edcc52ad5a3563887a"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-debugsource",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b9d069c4e1c2912c0df635094cb73643a13b3227a8d77a0505e2c90abb25dbc7"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "26e9e5d3888a77cfdbd90682f33c2bbc"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "95831ac2acc87f85ae85187b4317764242d5de2641a2d3cc51805269f1792485"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-debugsource",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "55efb935bf1824f3e6d901cd8ba4c49a62dc159dbf73cc667bcc3000ea709b6c"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "4afa07d70ad8fe31acee5801568e2675"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "f325bf658a24a0776495d9c17a7ad4a6d7d76744797fa6b3a7f7af179f4dca43"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x",
+      "type": "library",
+      "name": "poppler-debugsource",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9450341465086db088342b8751a796ee10c8659c256ac15ba41dda0bf8cc94e1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "a36333a91b3d4285c8c0d43b62220c4e"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "fa27d4ea22f4c975f824efee0ca8834a404456c9b2786b9daef0af0854577cd6"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-debugsource",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c611f6e164a0a4c33afb6eff30e910821f796f54cd482b925dd679730e79c586"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "bad5c33d7873032cc2efedf559445b30"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "7fb4201556ec1a91d0b9287b5b99f9de8cd3ad0e99c8b0936d18d0d0cf5c0c12"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ffc8ac32d519b8a55c5fdaf2bcf185eb52e73790844abd4abc8b5aeb8eb99631"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "a160491f95353f1786a39dcd2a4cf962"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "3d8d5695f342391b685c451d7e8cd00842bffd96f3b832605412bb6a1c378e62"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2466cb8912235bd5c1ca5adc79e14d1f226856b275909f0353e785b9b1b624a4"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "6aa8b7a983388c82b7806817441639f0"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "f16d56c5e2295d2635c1356b1279fa2b11952bf464359cfe8aa1ae4e35e15216"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a0889808f54eb83c5decf2abc0e21fe8b2d5b1e038e4e6c1d2876eeb31b015be"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "0191fa8694e76d0814366a0a0d40797b"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "84e234f19993b8a8cdb21d50cbe002f88a0c629fd27a851309ea4322f113cde9"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x",
+      "type": "library",
+      "name": "poppler-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5fcd5d62a6d8f638e74e1d464d4f01efc0f9d0dd538fa7115d7ab8ccf98f565f"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "e2ef5192eb1e412c9ac6690795d763a4"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "094ed04a4c2878088acfec6bbd3bdc052ba40ae13a64ae088c86d3d37bfc6b51"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "729ce4a72b9b9ff7dbf0782a9ea7cf991cbd015a0c8ab01d0ef3184735bac0dd"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "418ae7528069ed467c00d56c22e39ff9"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "e4cf6aa6510d99ff40957946a6ad923787ea941a87ceea538ec867f02466929a"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-glib-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "31b3d3359d6ac481e7e189a82c3b6bc598f3b51937e9fce76bfb0ab561cbd4fb"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "0ba177a2516e0c9c20888c7d0f8287f9"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "b847e6f46dcd2d8ff698c90305108568e56f8ed032da104fde47489de8a2f967"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-glib-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0cd59642fd34fa7e9c82307865c1b04e61e268493690a5d2ee0faeb091f61032"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "6252e754c2f9a832789becfbb4995fb0"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "f9538e6b19edf5c63b1f0e3095f6fd012bfc1785d758e58fd4879caf9b911d23"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-glib-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e20322ea7928cfd5519c9d6d19694fadf9e1365976b74539199ff41a4d19d402"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "e42c91891a468b1152f2ecd910c26392"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "ef13b612a62ea567e11ab2b60a5deed774ff6a500d59b90763c8a89ceafeb751"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x",
       "type": "library",
       "name": "poppler-glib-debuginfo",
@@ -1764,6 +821,236 @@
       ]
     },
     {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-glib-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0c5d7b40344e4006a2606bfe7580498724071a1168b646c52c4763300bbf5721"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "cdbb8cbc9b331aae0100fcdcfceea245"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "0c5a9219064f27f94565798960cd596378d5a86edb3c9fe3ea3b5100b296c998"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-glib-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9acc25304d5302ba68b3b0a401c651ce0e08454f26def121a8cfec3f593631e0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "a70354d5ab4c6a3c894409a6e7d8a230"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "89d4e53b52ae3a3d310d363046fad45c367b18fd60244907303cfd018af3dc8c"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-glib-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "08763a255485c842609b9fa821ba3bba84f476176b4f56d68d7f5d78cf81261e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "fbd06dfe57683923eb3c4126a274089c"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "fefed1bc3970a1ad692b7b57095ee0bb6b98b0d59cdff910731938bf60c40011"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-glib-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6966f07bc7d6f3080d50f1a8ecb371451c33c075a103b301fb5e0bf1b27b9bb1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "482f4165fbdf18b5faed6f37c305ec4c"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "701a10a1ec9ce2f101c4ad3a1aef77bfb327ba239b6e45b808ff93f2ec9ab680"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x",
+      "type": "library",
+      "name": "poppler-glib-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "550ad08d5448627cd06b653aaabd59cf0811a0f1fc6af64526388d47a74e750a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "7493836fe572582cdd4b6648dd4e8fdf"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "e4e83700630cf34e549b0b580523bbe81ac104ec1561a0c5d1b53e447e7a2038"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-glib-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "24ef4d20be39234724d5e40e4e144db983a859612be85929619626988094386a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "58a32943d9e452dec0b443bde7ab68f1"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "245cb852067ced7e0ec57ec98d02cd29a1ee922b5936486e71d0de7af3491e30"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch",
+      "type": "library",
+      "name": "poppler-glib-doc",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2b0955db79eac3277a675a162484cb3b019d507aff292a8e85d9492b01d14d6d"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "a01f789672b2252f1bb52ba2ee1abe97"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "4717a1695327994346eccc99c774f487e7c0143cdffba4e2dd4dd74aa2dbb968"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-glib",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8ec63f76dc5fd358056ed3365760eaa90daf91189d5c5be5fecbf7415605808e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "393cc91e23ba5dff8f3c47066b2db542"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "c588c8528aa7eded3815b82c2a0ef058bb6e7f0700c62824b4d58e5651dedfd5"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-glib",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a69f97a3e7f863ee930c8a25e8d7747c17e70d4baa1273e91ec1faa182804491"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "18c95d158c0d0d44cee5071d76c18aa7"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "78cbefee103f3258edd345af4df2a306de73c28a41971f8a2fa6ceb8a3025424"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-glib",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "96b3d4cd21e6f1f6f11866e66753c53aea716d14dea5f3d6b04b34fdf3a31001"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "8b11e270d322e47c44857f3218a12f56"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "1854691cb2d1d7ab4197d92b471ab14e34c56ad4cad8a554eb6701c01cabc5e1"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x",
       "type": "library",
       "name": "poppler-glib",
@@ -1783,6 +1070,696 @@
         {
           "name": "package:rpm:sha256header",
           "value": "330dcbf7fdc773216624854ad07aa8e39968c1f1073363c379d12842a023a825"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-glib",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4d1a54b08657b2f0d9f35277101cc8f2fe8a721593117048ac391d1a83679b66"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "7c603cdfb53b1e8473479eecf5311c95"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "7a9870abfae6ddb825d2e326ec4c48b44326b87cb2907ef6d0a4a336476eb531"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-qt5-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0a303accb3d2604c05e1ddf9b49a8eb90f33b56e9f6182a1392cc09034675b4a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "68e2eae7b9b260f885ac7b696d606118"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "b55b55c1b41d159abcb46a6816d22740dc3f27dcfce056bd772516838caeeb7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-qt5-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "25a4ecccce6d059d9f3a9724886a94b8f41d171bda96f908757c54fd037bbc24"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "2dfdf488eae1a735daca17b2480a177c"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "32fb8dc4bbe094c9a33f829e8cdf37cec6dd640a27fae301158e6db43c2eb645"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-qt5-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "de7db082e0df2ee7f87e9126b282af6efd74303572f0cd113abff6b32397b6f8"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "1bc1c1987430892aca8f4e106d92b5bf"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "142b44d12816bbefe3536ce7d8b15fa241a932f0e9fd716b3c5cdcb119dc647f"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x",
+      "type": "library",
+      "name": "poppler-qt5-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d346d138c4b516808b4dc3c75ba76fdf52b0f4c856485ab7b21f1a044567048b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "1bad4a76ab4b361dfbe67f856beeb3ec"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "933cca9dcc9d01bccf1164f550a7bd93d0d81b22e1dc1c59eebf1c5e2fb60a2f"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-qt5-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ec702533bdef62f63530e2c2ec700667b33e1451f837d13ed8709ebfcd59665a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "aa902943d511988ea7e7c90e090f5533"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "86f3d1bbc3846e38d7ba7c0c8c998c380318532937835fc407bebc21c7e121f4"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-qt5-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3b7a10adf732d18370dc83c19c451e2e27243bed232284640debbf0f488345dc"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "5c1adabfbcb0e5cb11208e6244dd9a38"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "13315bc37df94925caa5c0c883b391a529fe626be70c9c64d10be3f715e16b6c"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-qt5-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9e11de701852f4ef57c62503b003730a58bb189fd819f810fc772aa9088b7a47"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "3fb31080b2b88726a1d6c563d7dc1f53"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "1bca7e7d1224c87710aff3dbe2d2998ffb4cab09da38166c0abcca0864a700a2"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-qt5-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "fdd49706864108a96ece4761f3975bc1de0b2bc424c85efb07d76f912885d968"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "32cf2baf6007fd9dcf3c957b797f07ed"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "439d97f55dd9d80174983670b4d1a47c2dcb60b076a411fb57ccc74da6591993"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x",
+      "type": "library",
+      "name": "poppler-qt5-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b0f9f9787f20e88876b4f69b9b39807142ca5188c950643c0580ff8192e055a6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "5db76ca03affff90d201e32f3ce1f317"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "de61c2cc52d0e93c6119a4ed92ac63e4f0927dba2885131241b4d86e650cb6f5"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-qt5-devel",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "794688b5bd303e888a95154ea081b8025ff774702115f52a17061658f41696fa"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "e6deceadfd64aaacbae0877905255ac9"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "d111695ffdc65ef8cc73271a3d9008d5bad65d58744f49283600df1f6409c9f2"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-qt5",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8e787b3f263cde1a7ef453a87c1f96041387f522f7bc4baae9a383d769881842"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "d73f171b0510747933ffb440feea82bf"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "a1ef27397ca7e873283289f47a082c682dd6a250f738b7b7208d637f4b75ca3a"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-qt5",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "104fd60de9602d01c564be1d5d22eca4264567d78fd9d51824e6592bb1490b30"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "42e29fcdb5d8c69dbf05e5b095ddde70"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "7f8cae6b3a2c1346ade8967d1dbe65e2e1341816e510769bfad844d82e8cb98c"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-qt5",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "574c219d781b8b3fc9f4f2b688d70e020d7fd2079532fc6c5935f63487c1451e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "0781dd9e45f95298c1cd52d71b4c635c"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "746ac2c268979b7ded43644a6fb2fbcbfb66dfd48feb087abb2f9dca2c4326ba"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x",
+      "type": "library",
+      "name": "poppler-qt5",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3c503e85c0a789673c40794dd6000628ad11b3dd4656c686095a4b33f26799a1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "f6a1c2a29bfb46627905704d1b83f388"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "dc905a69e8fc81752bb47099cf5d2d78044ae8f1c2592443a5d8cf17f1c119a9"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-qt5",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "26c91ac5f1eaf247d93dc1740dcbef7b00a7c7f7bbea95bc3dbe62eb183bd719"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "c6ab4d7789825d7e06d76cc90d2616be"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "d0a5c7eeb6bc03cb40b6319ea52ec52dfe359d7bd626c461036028e4cd7a15d0"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-utils-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e2cd901d2dc6961400ba2b26f3d3a4cded4bb0b21708d1e91ea844c251722ffb"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "b7e36736ec8271287d27bb014cc469bd"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "d5fb1ee67d50c6ab34c309642fff5acd8b8071cee3f48fc39905ee796c653f93"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-utils-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "67948ca67ecea36a60e43d86ba8944202ea78421dfb6f1beb26c3dd871cc7adf"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "96a69a7c373bb992af252941436bbc31"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "9678b5a20ac152bc58b78c244401aaa41d76ce88bef524b5d97b04d6611da24f"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-utils-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1917813f2260ec9c76d99d46863e09a607c806b18bd541ca20c18a1c581e990e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "032c56e517c4ecf8adb851c801559219"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "58fb44f78aa269105f8fd5b0d1eb0cafe14d9dc7218ae9a362b8af264b05fe62"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x",
+      "type": "library",
+      "name": "poppler-utils-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a35fd2ef9270ed7b6d590bb02e66b67daae0ada4b7a585f5a67b7ab0319e205f"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "6e2be9c750229e9a46ccd8827c97f447"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "93fd0f457d640c1464bdb266a72be0363a2f8ea02536bc226a759f909629878f"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-utils-debuginfo",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1ead3d93eda812f39b10ccf96d1a25d694f2b907d153820739744f0f96d833b5"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "74f0df98af26f5007b9c0d597ece5f2c"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "9b5f0d51959e9f5555d0814bda7c9a586c878f4c28b556e62abc1d7d03921096"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler-utils",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0663fcd9ecd6c11e560337ca2b5401e1a39dbd5a56a519f835b0f67d123425f5"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "b2233be80a746e0b682b7f712975e854"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "e4b83c35da3cc3b7def970d56f816a0f3de5e983b6f2e4b922eb399cfb140773"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler-utils",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8f68cb95de70c97f305ccdd79ea856f36821761eba73a7ae31843b48695fd01f"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "e9000cf06fa18d4a2a14e4fd938760fc"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "f2bff4d4ef0b641d25094c925082bec3254c9e881838af9bca8c18dee3e45f9d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler-utils",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "555b12c027ddf3d2dca2e0ec788c5500d5bbf10036c910eeb1c115822327f264"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "1ea146bfb0d75c9193e49750825e0ace"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "df4d310e7581a816c5b5358cf161b24749db2e80324d751b75d71153bbdfca6e"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x",
+      "type": "library",
+      "name": "poppler-utils",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "437d4867510988184567cc3f6e751b752efc209c9d2fe21670da4d827e16da1f"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "07a4b821820285b0a2bcb7f161cc632e"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "eb6940ee04b688318359e63191564085373d1a5a16d4d49076fde6fb6083735d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler-utils",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c52a3281e5b80e2a6a7ad0c8c60ba28d975a5c8f36851e760628c2ec2ba55e86"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "86f5e376a974549da2c6ddf69200ca0d"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "e96071f842c2baa3cd3b5c357c1cec9ac5b58fe9c997c4e41a11cc2d5a593998"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64",
+      "type": "library",
+      "name": "poppler",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "648122fa2138386263db7b0440eeb61c832bbfd4c75ca913c33a76428d182025"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "1ae9c8a446e4168d88d37e3c6ae498e5"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "2919696049591ddddf969ba46b671fd2d6bd688069b9844e49a54703a4e75f93"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686",
+      "type": "library",
+      "name": "poppler",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a09da9e825f9ae9201c3db560675f0f86bbf537418e95f149b7fbac25c5e0cf4"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "fd62e12dcf7946c0a84b0b25f743cb0a"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "2c3f418c82d5dc8b412422aa8260d00a7b2f10f066277de525c0df14d46705a5"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le",
+      "type": "library",
+      "name": "poppler",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c0ed7c54f998e1636d40535b352a917884989b1468d2897ed4dd9770e03d17c6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "76520285bb0f5bf4e6fc242dc7e19b9a"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "d39e2fad2e8c4cf9f925f915c1bfe6826b293d81bcd1112e65021a272a05c796"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x",
+      "type": "library",
+      "name": "poppler",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "57b9e7cd8552dc0329da54c06a77844c16f42a906ce6675f085ab44d9e03630b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "aa44c950cef2a694f50d8ca6bf6d039f"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "2475175ba8f1abd41318888a14d833082e4d355647aeb4766d6a1e41481dbdad"
         }
       ]
     },
@@ -1838,88 +1815,111 @@
           }
         ]
       }
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64",
+      "type": "library",
+      "name": "poppler",
+      "version": "21.01.0-19.el9",
+      "purl": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0769a5a3e63056a99292539ed87f5eaa70038ddfa44a37a3e042232c0dbce1e6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "72c71b935fdab373524c93688d68027a"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "dca5a35069be635d141adc7aeae073b358131775a822ecce0c61adfa02e8715e"
+        }
+      ]
     }
   ],
   "dependencies": [
     {
       "ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src",
       "provides": [
-        "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch",
-        "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686",
         "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le",
         "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le",
-        "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686",
-        "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64",
-        "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64",
         "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x",
-        "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64",
         "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64",
-        "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64"
+        "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch",
+        "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64",
+        "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64",
+        "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686",
+        "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le",
+        "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x",
+        "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64"
       ]
     }
   ]
