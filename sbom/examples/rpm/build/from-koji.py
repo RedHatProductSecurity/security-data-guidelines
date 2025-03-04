@@ -552,6 +552,10 @@ cdx = {
     "metadata": {
         "component": cdx_root_component,
         "timestamp": "2006-08-14T02:34:56Z",
+        "supplier": {
+            "name": "Red Hat",
+            "url": ["https://www.redhat.com"]
+        },
         "tools": {
             "components": [
                 {

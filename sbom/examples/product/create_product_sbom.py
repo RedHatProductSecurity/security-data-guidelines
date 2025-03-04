@@ -236,6 +236,7 @@ def create_cdx(product):
         "serialNumber": "urn:uuid:337d9115-4e7c-4e76-b389-51f7aed6eba8",
         "metadata": {
             "component": product_component,
+            "supplier": {"name": "Red Hat", "url": ["https://www.redhat.com"]},
             "timestamp": product.released,
             "tools": [{"name": "example tool", "version": "1.2.3"}],
         },

@@ -23,6 +23,12 @@
         ]
       }
     },
+    "supplier": {
+      "name": "Red Hat",
+      "url": [
+        "https://www.redhat.com"
+      ]
+    },
     "timestamp": "2008-08-01T02:34:56Z",
     "tools": [
       {
