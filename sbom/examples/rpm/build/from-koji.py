@@ -568,7 +568,7 @@ copy_of_cdx_root["pedigree"] = {"ancestors": cdx_pedigrees}
 cdx_components.append(copy_of_cdx_root)
 cdx["components"] = cdx_components
 
-binary_rpm_purls = {c["purl"] for c in cdx_components}
+binary_rpm_purls = {c["purl"] for c in cdx_components if c["bom-ref"] != cdx_root_component["bom-ref"]}
 cdx["dependencies"] = [
     {
         "ref": cdx_root_component["bom-ref"],
