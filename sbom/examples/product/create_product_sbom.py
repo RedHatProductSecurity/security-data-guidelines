@@ -244,6 +244,7 @@ def create_cdx(product):
         "components": [product_component.copy()],
     }
 
+    components = []
     for pkg in product.packages:
         component = {
             "type": "library",
@@ -264,7 +265,17 @@ def create_cdx(product):
                 "identity": [{"field": "purl", "concludedValue": purl} for purl in pkg.purls]
             },
         }
-        sbom["components"].append(component)
+        components.append(component)
+
+    components = sorted(components, key=lambda x: x["purl"])
+    sbom["components"].extend(components)
+    sbom["dependencies"] = [
+        {
+            "ref": product_component["bom-ref"],
+            "provides": [c["purl"] for c in components],
+            "dependsOn": [],
+        }
+    ]
 
     return fname, sbom
 

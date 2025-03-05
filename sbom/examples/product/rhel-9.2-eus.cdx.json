@@ -157,5 +157,14 @@
         ]
       }
     }
+  ],
+  "dependencies": [
+    {
+      "ref": "cpe:/a:redhat:rhel_eus:9.2::baseos",
+      "provides": [
+        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src"
+      ],
+      "dependsOn": []
+    }
   ]
 }
