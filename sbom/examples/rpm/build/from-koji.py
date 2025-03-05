@@ -433,6 +433,7 @@ spdx = {
         "created": "2006-08-14T02:34:56Z",
         "creators": [
             "Tool: example SPDX document only",
+            "Organization: Red Hat"
         ],
     },
     "name": build["nvr"],

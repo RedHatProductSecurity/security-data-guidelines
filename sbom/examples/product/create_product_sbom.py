@@ -143,7 +143,7 @@ def create_spdx(product):
         "SPDXID": "SPDXRef-DOCUMENT",
         "creationInfo": {
             "created": product.released,
-            "creators": ["Tool: example SPDX document only"],
+            "creators": ["Tool: example SPDX document only", "Organization: Red Hat"],
         },
         "name": name,
         "documentNamespace": f"https://www.redhat.com/{fname}",
