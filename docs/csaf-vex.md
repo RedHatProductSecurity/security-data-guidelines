@@ -3,7 +3,7 @@
 ## Security Data Overview
 
 In the past, Red Hat published security advisory information using Common Vulnerability Reporting Framework (CVRF) and
-CVE information using the Open Vulnerability and Assessment Language (OVAL) format. As of July 10th,2024, Red Hat
+CVE information using the Open Vulnerability and Assessment Language (OVAL) format. As of July 10th, 2024, Red Hat
 Product Security publishes CSAF files for every single Red Hat Security Advisory
 ([RHSA](https://access.redhat.com/articles/explaining_redhat_errata)) and VEX files
 for every single CVE record that is associated with the Red Hat portfolio in any way.
@@ -32,6 +32,23 @@ Red Hat's VEX files are always associated with one CVE and include fix status in
 and Red Hat products. Red Hat's VEX files are publicly available per CVE
 [here](https://security.access.redhat.com/data/csaf/v2/vex/).
 
+### Differences from OVAL
+
+The data that is included in CSAF files differs from that included in OVAL in certain cases:
+
+- CSAF files identify a variety of software components, not just RPMs. The identification mechanism used is purl,
+  which itself contains a type for each identified software component.
+
+- CSAF files refer to SRPMs only when listed as affected but not yet fixed components. OVAL files contain a
+  listing of binary RPMs but this listing proved to be difficult to maintain. Until CSAF data is improved to include
+  consistent lists of binary RPMs, consumers of CSAF data can look up the related SRPM (to be matched with the one in
+  CSAF files) for a given binary RPM with:
+  ```bash
+  # Example lookup for the vim-minimal binary RPM:
+  $ rpm -q --qf "%{SOURCERPM}\n" vim-minimal-8.2.2637-21.el9.x86_64
+  vim-8.2.2637-21.el9.src.rpm
+  ```
+
 ## Document Structure
 
 Although CSAF advisory and VEX files ultimately serve different purposes, both file types meet the
@@ -44,6 +61,7 @@ The following sections break down the information included in CSAF-VEX documents
 [VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2023/cve-2023-20593.json) as an example.
 
 ### Document Metadata
+
 The `document` section contains general information about the published document itself including the CVE severity, vendor,
 published date and revision history.
 
@@ -83,6 +101,7 @@ The following objects provide general information about the VEX file itself:
 ```
 
 Vendor information is represented in the `publisher` object:
+
 ```json
 {
   "publisher": {
@@ -128,13 +147,15 @@ CVE ID, CVE publish date and CVE revision history:
 ```
 
 ### Product Tree
+
 The `product_tree` section identifies all affected Red Hat software, represents the nested
 relationship of component to product and provides CPEs or PURLs depending on the affected layer. There are two main
 objects in the “product_tree” object: `branches` and `relationships`.
 
 #### Branches
-The parent `branches` object has one child object of the `vendor` category with the name set to "Red Hat". All
-affected Red Hat products and components will be nested in that "branches" array. Compressed down, the parent branches
+
+The parent `branches` object has one child object of the `vendor` category with the name set to `Red Hat`. All
+affected Red Hat products and components will be nested in that `branches` array. Compressed down, the parent `branches`
 object would look like:
 
 ```json
@@ -161,9 +182,8 @@ since CSAF files are per RHSA and will only include fixed components.
 * `architecture`: Represents fixed components by their architecture and includes nested
   "product_version" objects. These "product_version" will be fixed and provide the specific version number.
 
-
-
 ##### Product Family and Product Name Examples
+
 The `product_family` category represents a general Red Hat product stream and includes one or
 more nested objects of the `product_name` category that represents an individual release. The `product_name` object will
 always include the name of the product, a product ID and a product identification helper in the form of a CPE.
@@ -192,14 +212,16 @@ is the `product_name` object Red Hat Enterprise Linux 6 with the CPE "cpe:/o:red
 ```
 
 ##### Unfixed Product Versions (VEX only) Examples
+
 The `product_version` category includes information about a specific affected package. The `product_version` object will
 always include the name of the component, a product ID and a product identification helper in the form of a
 [PURL](https://redhatproductsecurity.github.io/security-data-guidelines/purl/). When
 displayed unnested under an `architecture` object, the `name` attribute will not reference a specific version number
 because these components are unfixed. Again, these unfixed `product_version` components will only be found in VEX files
-since CSAF files always represent a released RHSA. The purl identifiers for unfixed content are only available for `rpm`, `oci` (container), and `rpmmod` (modular) purl content type.
+since CSAF files always represent a released RHSA. The purl identifiers for unfixed content are only available for
+`rpm`, `oci` (container), and `rpmmod` (modular) purl content type.
 
-In the example below, the unfixed kernel component's name is "kernel" and doesn't include a specific version number or
+In the example below, the unfixed kernel component's name is `kernel` and doesn't include a specific version number or
 an architecture format.
 
 ```json
@@ -217,6 +239,7 @@ an architecture format.
 ```
 
 ##### Architecture and Fixed Product Versions
+
 Similarly to the `product_family` object, the `architecture` category represents a specific architecture for packages
 and includes one or more `product_version` objects. As before, the `product_version` category will still include the same
 information: the name of the component, a product ID and product identification helper in the form of a
@@ -224,8 +247,9 @@ information: the name of the component, a product ID and product identification 
 when `product_versions` are nested under `architecture` object, they are fixed components and the `name` attribute will
 include a specific version number and the specific architecture format.
 
-In the example below, you can see the fixed kernel component's name is "kernel-0:3.10.0-693.112.1.el7.src" which includes
-the specific version number "0:3.10.0-693.112.1.el7" and architecture format ".src".
+In the example below, you can see the fixed kernel component's name is `kernel-0:3.10.0-693.112.1.el7.src` which includes
+the specific version number `0:3.10.0-693.112.1.el7` and architecture format `.src`.
+
 ```json
 {
   "branches": [
@@ -247,6 +271,7 @@ the specific version number "0:3.10.0-693.112.1.el7" and architecture format ".s
 ```
 
 #### Relationships
+
 Also included in the `product_tree` section is a `relationships` object which is used by Red Hat to help represent
 layered products. One or more relationship entries will be present for all `product_version` objects found in the
 `branches` object. All of these objects are of the `default_component_of` category and include the full product
@@ -274,7 +299,8 @@ while the `relates_to_product_reference` will refer to the product name.
 }
 ```
 
-For the fixed component kernel-0:3.10.0-693.112.1.el7.src, a relationship entry looks like:
+For the fixed component `kernel-0:3.10.0-693.112.1.el7.src`, a relationship entry looks like:
+
 ```json
 {
   "category": "default_component_of",
@@ -288,16 +314,19 @@ For the fixed component kernel-0:3.10.0-693.112.1.el7.src, a relationship entry 
 ```
 
 ### Vulnerability Metadata
+
 The `vulnerabilities` section reports vulnerability metadata for the CVE and also contains a
-`product_status` object that reports affected status and fix information for any `product_id` listed in the `product_tree` and a `remediations`
-object.
+`product_status` object that reports affected status and fix information for any `product_id` listed in the
+`product_tree` and a `remediations` object.
 
 #### General CVE Information
+
 Basic CVE information is represented using the following objects:
 * `cve`: The official CVE ID.
 * `cwe`: Information about the corresponding CWE, include the CWE ID and the name.
 * `discovery_date`: The first reported date of the vulnerability. Note: This date can differ from the previously
   mentioned `initial_release_date` if the CVE was coordinated under embargo.
+
 ```json
 {
   "cve": "CVE-2023-20593",
@@ -315,6 +344,7 @@ Additional CVE information can be found in the `notes` object:
 * `summary`: This category includes a short summary of the CVE.
 * `statement`: This category includes a statement from Red Hat on the CVE, when applicable (not present in the example).
 * `general`: This category includes a general statement on the applicability of CVSS scores.
+
 ```json
 {
   "notes": [
@@ -346,6 +376,7 @@ All CVSS scores associated with the CVE will have entries included `scores` obje
   is used.
 * `products`: Includes all product IDs, both for products and components, that are represented by the scores in the
   `cvss_v3` object.
+
 ```json
 {
   "scores": [
@@ -374,13 +405,14 @@ Similarly to CVSS scores, a CVE can have one severity impact value that represen
 VEX file or there can be different severity impact values for different subset of products and components
 (per component Severity and CVSS metadata).
 
-All severity impact values with the CVE will have entires includes in the `threats` object:
+All severity impact values with the CVE will have entries included in the `threats` object:
 
 * `category`: The "impact" value identifies that the following information is the severity impact value of a CVE.
 * `details`: Reports the appropriate [Red Hat Severity Rating](https://access.redhat.com/security/updates/classification/)
   for the associated `product_ids`.
 * `product_ids`: Includes all product IDs, both for products and components, that have the severity rating in the
   `details` object.
+
 ```json
 {
   "threats": [
@@ -395,9 +427,10 @@ All severity impact values with the CVE will have entires includes in the `threa
 
 Additional CVE resources are described in the `references` object:
 
-* `category`: Either of the type "self" or "external".
+* `category`: Either of the type `self` or `external`.
 * `summary`: A summary of the provided resource.
 * `url`: A link to the resource.
+
 ```json
 {
   "references": [
@@ -436,9 +469,10 @@ Additional CVE resources are described in the `references` object:
 ```
 
 #### Product Fix Status
+
 The `product_status` includes the following fix statuses:
 
-* `fixed`: Contains the same fixed component versions and other details (product_tree objects) that the are reported fixed
+* `fixed`: Contains the same fixed component versions and other details (`product_tree` objects) that are reported fixed
 for a given CVE
 * `known_affected`: Confirmation that the specific component and product is affected by a particular CVE
 * `known_not_affected`: Confirmation that the specific component and product is not affected by a particular CVE
@@ -457,10 +491,13 @@ Compressed down, a `product_status` object that included products of each catego
   }
 }
 ```
-Note: It's important to remember that with VEX files, not every product status will be included, only the categories that
-have products which fall into those statuses. For CSAF files, the only included status will be the `fixed` and optionally `known_not_affected` category if in the released RHSA there are more components and not all were vulnerable to the particular CVE id.
 
-Continuing with our previous examples with CVE-2023-20593, the full product ID "red_hat_enterprise_linux_6:kernel"
+Note: It's important to remember that with VEX files, not every product status will be included, only the categories
+that have products which fall into those statuses. For CSAF files, the only included status will be the `fixed` and
+optionally `known_not_affected` category if in the released RHSA there are more components and not all were
+vulnerable to the particular CVE id.
+
+Continuing with our previous examples with CVE-2023-20593, the full product ID `red_hat_enterprise_linux_6:kernel`
 can be found in the `known_not_affected` list:
 
 ```json
@@ -474,7 +511,7 @@ can be found in the `known_not_affected` list:
 
 ```
 
-Our other full product ID "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src" can be found in the `fixed` list:
+Our other full product ID `7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src` can be found in the `fixed` list:
 ```json
 {
   "fixed": [
@@ -487,6 +524,7 @@ Our other full product ID "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src" ca
 ```
 
 #### Remediations
+
 The `remediations` object provides additional information about the previously identified product status. The following
 remediations status are available per `product_status` category:
 
@@ -494,19 +532,19 @@ remediations status are available per `product_status` category:
   * `vendor_fix`: For all the product IDs with a fixed product status there will be a corresponding entry
     in the remediations object that correlates each full product ID to the correct RHSAs. The RHSA can be determined by
     the `url` field.
-    * Details: "Fixed"
+    * Details: `Fixed`
     * URL: Link to the RHSA
   * `workaround`: If a mitigation exists, it applies to all components regardless of their fix state.
-    * `Details`: "Mitigation"
+    * Details: `Mitigation`
 * `known_affected`
   * `no_fix_planned`: Will include any product IDs with the known affected product status that will not be fixed by Red
   Hat, either because it is out of support scope or the engineering team has decided not to fix it for other reasons.
-    * Details: "Will not fix" or "Out of support scope"
+    * Details: `Will not fix` or `Out of support scope`
   * `none_available`: Will include any product IDs with the known affected product status that are either still reported
   affected, meaning a fix is likely in progress, or deferred, which may be fixed at a future date.
-    * Details: "Affected" or "Deferred"
+    * Details: `Affected` or `Deferred`
   * `workaround`: If a mitigation exists, it applies to all components regardless of their fix state.
-    * Details: "Mitigation"
+    * Details: `Mitigation`
 * `known_not_affected`: There are no remediation objects for the known not affected status since it is implicitly
 assumed that there are no remediations needed if the product and component are not affected.
 * `under_investigation`: There are no remediation objects for the under investigation status since it is implicitly
@@ -518,10 +556,10 @@ CSAF files, the only `remediations` category present will be one `vendor_fix` ob
 the CSAF file represents.
 
 Following our two previous kernel examples, we can see that for the unfixed kernel component
-"red_hat_enterprise_linux_6:kernel" there is no entry in the remediation section. This is expected behavior because
+`red_hat_enterprise_linux_6:kernel` there is no entry in the remediation section. This is expected behavior because
 it was listed in the `known_not_affected` product status and therefore no remediation is needed.
 
-For our fixed kernel component "7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src", there are two remediation entries.
+For our fixed kernel component `7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src`, there are two remediation entries.
 One represents the vendor fix that was released and the other represents that there is a reported mitigation for this
 CVE.
 

@@ -10,7 +10,22 @@ with open(sbom_file) as fp:
     sbom = json.load(fp)
 
 
-for pkg in sbom["packages"]:
+relationships = sbom["relationships"]
+
+# Find the described packages
+described = [
+    rel["relatedSpdxElement"]
+    for rel in relationships
+    if rel["spdxElementId"] == "SPDXRef-DOCUMENT" and rel["relationshipType"] == "DESCRIBES"
+]
+# Find any packages that are VARIANT_OF the described packages
+variants = [
+    rel["spdxElementId"]
+    for rel in relationships
+    if rel["relatedSpdxElement"] in described and rel["relationshipType"] == "VARIANT_OF"
+]
+built = described + variants
+for pkg in [pkg for pkg in sbom["packages"] if pkg["SPDXID"] in built]:
     for purl_ref in [ref for ref in pkg.get("externalRefs", []) if ref["referenceType"] == "purl"]:
         purl = PackageURL.from_string(purl_ref["referenceLocator"])
         if purl.type == "oci":
