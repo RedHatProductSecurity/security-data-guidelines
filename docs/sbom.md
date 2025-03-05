@@ -157,7 +157,8 @@ The following snippet shows a minimal SBOM document:
       "creationInfo": {
         "created": "2006-08-14T02:34:56Z",// (4)!
         "creators": [
-          "Tool: example SPDX document only"
+          "Tool: example SPDX document only",
+          "Organization: Red Hat"// (5)!
         ]
       },
       "name": "ubi9-micro-container-9.4-6.1716471860_amd64",
@@ -177,17 +178,18 @@ The following snippet shows a minimal SBOM document:
 
     4. UTC timestamps must use the `YYYY-MM-DDThh:mm:ssZ` format.
 
+    5. creationInfo / creators includes the "Organization: Red Hat" value.
+
 A more detailed breakdown of some of the fields:
 
 `creationInfo`
 :   This field must contain at least the
-    [`created`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#68-creator-field) and
-    [`creators`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#69-created-field)
+    [`created`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#69-created-field) and
+    [`creators`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#68-creator-field)
     fields. The timestamp in the `created` field must be set to an ISO 8601-formatted date and time string using
     the UTC timezone. The `creators` field must identify the tool and its version that was used to generate the SBOM
     file (for example, `Tool: SBOMer 1.2.3` or even `Tool: pkg:github/project-ncl/sbomer@1.0.0.M3`).
-    Optionally, the organization responsible for generating the SBOM can be included in a separate string
-    (for example, `Organization: Red Hat Product Security (secalert@redhat.com)`).
+    The value `Organization: Red Hat` included in a separate string. This is required by Red Hat Trusted Profiler Analyser 2 in order to trigger special handling.
 
 [`name`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#64-document-name-field)
 :   This is an arbitrary value that should describe the main artifact described by the SBOM document. This can be a
