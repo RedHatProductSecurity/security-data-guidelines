@@ -39,6 +39,7 @@ nav:
   - SBOM: "sbom.md"
   - purl: "purl.md"
   - CSAF/VEX: "csaf-vex.md"
+  - Taxonomy: "taxonomy.md"
 
 plugins:
   - social
