@@ -477,9 +477,16 @@ purl identifiers
     they should only ever differ in their qualifier values, not the main components such as package type, name, or
     version; multiple package objects should be used if those values differ.
 
+[`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)
+:   Minimally, the list of checksums must include the SHA256 checksum of the RPM file or source archive itself.
+    All other checksums should be specified as annotations (see below). 
+
 [`annotations`](https://spdx.github.io/spdx-spec/v2.3/annotations/)
 :   A list of annotations may provide additional information that is specific to the RPM format. In the example
-    above, the MD5 checksum the signed header of the RPM package is included.
+    above, two checksum values are included:
+    - The MD5 checksum of the signed header of the RPM package is included.
+    - The SHA256 checksum of the RPM header (this value does not change when an RPM is signed; unlike the file SHA256 \
+      checksum used in `checksums`).
 
 Each set of architecture-specific RPMs also have an associated source RPM (SRPM) that bundles all the source code
 that was used to build those RPMs. SRPMs should be represented as a separate package object in an SBOM, and their
