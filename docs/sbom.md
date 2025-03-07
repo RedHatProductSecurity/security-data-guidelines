@@ -416,6 +416,37 @@ The parent image of `example-container` is `ubi9`. Its relationship to `example-
     }
     ```
 
+Container Images are also linked to one or more upstream sources that were used to build them. An upstream source can be represented by a package object using the following data:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-image-index-Source-origin",
+      "name": "kernel-module-management",
+      "versionInfo": "d027509b6861d8a9f923cc99dd3e15d9b209e63e",
+      "downloadLocation": "https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/kernel-model-management@d027509b6861d8a9f923cc99dd3e15d9b209e63e?download_url=https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e"
+        }
+      ]
+    },
+
+To associate a set of remote sources with the repository referencing them, use:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-image-index-Source",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-image-index-Source-origin"
+    },
+    ```
+
 <!-- TODO: add diagram that shows all the relationships -->
 
 #### RPM
@@ -477,9 +508,16 @@ purl identifiers
     they should only ever differ in their qualifier values, not the main components such as package type, name, or
     version; multiple package objects should be used if those values differ.
 
+[`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)
+:   Minimally, the list of checksums must include the SHA256 checksum of the RPM file or source archive itself.
+    All other checksums should be specified as annotations (see below). 
+
 [`annotations`](https://spdx.github.io/spdx-spec/v2.3/annotations/)
 :   A list of annotations may provide additional information that is specific to the RPM format. In the example
-    above, the MD5 checksum the signed header of the RPM package is included.
+    above, two checksum values are included:
+    - The MD5 checksum of the signed header of the RPM package is included.
+    - The SHA256 checksum of the RPM header (this value does not change when an RPM is signed; unlike the file SHA256 \
+      checksum used in `checksums`).
 
 Each set of architecture-specific RPMs also have an associated source RPM (SRPM) that bundles all the source code
 that was used to build those RPMs. SRPMs should be represented as a separate package object in an SBOM, and their

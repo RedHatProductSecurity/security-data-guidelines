@@ -140,6 +140,21 @@
           "checksumValue": "13fd2a0116a76eaa274fee20c86eef4dfba9f311784e8fb7d7f5fc38b32f3ef"
         }
       ]
+    },
+    {
+      "SPDXID": "ubi9-micro-container-9.4-6.1716471860-Source",
+      "name": "containers",
+      "versionInfo": "433dec61d526247ac9533c1d9b97e98a1127c782",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://git.example.com/containers/ubi9-micro#433dec61d526247ac9533c1d9b97e98a1127c782",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/containers@433dec61d526247ac9533c1d9b97e98a1127c782?download_url=https://git.example.com/containers/ubi9-micro#433dec61d526247ac9533c1d9b97e98a1127c782"
+        }
+      ]
     }
   ],
   "relationships": [
@@ -167,6 +182,11 @@
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-image-index"
+    },
+    {
+      "spdxElementId": "SPDXRef-image-index",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "ubi9-micro-container-9.4-6.1716471860-Source"
     }
   ]
 }

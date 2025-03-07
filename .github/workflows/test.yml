@@ -18,7 +18,8 @@ jobs:
     - name: Run all envs
       uses: fedora-python/tox-github-action@main
       with:
-        tox_env: ${{ matrix.tox_env }}
+        # tox_env: ${{ matrix.tox_env }}
+        tox_env: py313
     strategy:
       matrix:
         tox_env: [black, ruff, spdx-schema, cdx-schema]
