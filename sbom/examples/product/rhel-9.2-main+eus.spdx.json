@@ -5,7 +5,8 @@
   "creationInfo": {
     "created": "2006-08-01T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
   "name": "Red Hat Enterprise Linux 9.2 MAIN+EUS",

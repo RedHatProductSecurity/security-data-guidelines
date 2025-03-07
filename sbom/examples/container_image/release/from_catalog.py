@@ -103,9 +103,7 @@ def create_sbom(image_id, root_package, packages, rel_type, other_pkgs=None, oth
         "SPDXID": "SPDXRef-DOCUMENT",
         "creationInfo": {
             "created": "2006-08-14T02:34:56Z",
-            "creators": [
-                "Tool: example SPDX document only",
-            ],
+            "creators": ["Tool: example SPDX document only", "Organization: Red Hat"],
         },
         "name": image_id,
         "documentNamespace": f"https://www.redhat.com/{image_id}.spdx.json",
