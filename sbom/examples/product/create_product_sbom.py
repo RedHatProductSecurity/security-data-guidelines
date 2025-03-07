@@ -75,7 +75,7 @@ openssl_3_0_7_18 = SimpleNamespace(
     version="3.0.7-18.el9_2",
     filename="openssl-3.0.7-18.el9_2.src.rpm",
     license_concluded="Apache-2.0",
-    checksums=["sha-256:31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee468dag0"],
+    checksums=["sha-256:9215c64e7289a058248728089e4d98ed1cc392bb5eb9b8fcbe661d57e8145bbd"],
     purl_summary="pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
     purls=[
         "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms",
@@ -223,6 +223,7 @@ def create_cdx(product):
     # (for all other, non-OS products).
 
     product_component = {
+        "bom-ref": min(product.cpes, key=len),
         "type": "operating-system",
         "name": product.name,
         "version": product.version,
@@ -236,12 +237,14 @@ def create_cdx(product):
         "serialNumber": "urn:uuid:337d9115-4e7c-4e76-b389-51f7aed6eba8",
         "metadata": {
             "component": product_component,
+            "supplier": {"name": "Red Hat", "url": ["https://www.redhat.com"]},
             "timestamp": product.released,
             "tools": [{"name": "example tool", "version": "1.2.3"}],
         },
         "components": [product_component.copy()],
     }
 
+    components = []
     for pkg in product.packages:
         component = {
             "type": "library",
@@ -262,7 +265,17 @@ def create_cdx(product):
                 "identity": [{"field": "purl", "concludedValue": purl} for purl in pkg.purls]
             },
         }
-        sbom["components"].append(component)
+        components.append(component)
+
+    components = sorted(components, key=lambda x: x["purl"])
+    sbom["components"].extend(components)
+    sbom["dependencies"] = [
+        {
+            "ref": product_component["bom-ref"],
+            "provides": [c["purl"] for c in components],
+            "dependsOn": [],
+        }
+    ]
 
     return fname, sbom
 

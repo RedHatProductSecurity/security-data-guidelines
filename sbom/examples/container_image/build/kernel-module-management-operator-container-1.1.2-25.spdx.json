@@ -94,6 +94,36 @@
           "checksumValue": "32a9929e6f11dfefb7a339d6767d1050cec2b24d397856cbd9b46a1bbc3f8827"
         }
       ]
+    },
+    {
+      "SPDXID": "kernel-module-management-operator-container-1.1.2-25-Source",
+      "name": "containers",
+      "versionInfo": "799f12ccdec1ead269f54c4e3e51c28d7c794ae4",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://git.example.com/containers/kernel-module-management-operator#799f12ccdec1ead269f54c4e3e51c28d7c794ae4",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/containers@799f12ccdec1ead269f54c4e3e51c28d7c794ae4?download_url=https://git.example.com/containers/kernel-module-management-operator#799f12ccdec1ead269f54c4e3e51c28d7c794ae4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "kernel-module-management-operator-container-1.1.2-25-Source-origin",
+      "name": "kernel-module-management-rhel9-operator",
+      "versionInfo": "591541ea5a4503c63a26e524d5a102eb1bf951a3",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://github.com/rh-ecosystem-edge/kernel-module-management#591541ea5a4503c63a26e524d5a102eb1bf951a3",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/rh-ecosystem-edge@591541ea5a4503c63a26e524d5a102eb1bf951a3?download_url=https://pkgs.devel.redhat.com/git/containers/kernel-module-management-operator#799f12ccdec1ead269f54c4e3e51c28d7c794ae4"
+        }
+      ]
     }
   ],
   "relationships": [
@@ -116,6 +146,16 @@
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-ppc64le",
       "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-image-index"
+    },
+    {
+      "spdxElementId": "SPDXRef-image-index",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "kernel-module-management-operator-container-1.1.2-25-Source"
+    },
+    {
+      "spdxElementId": "kernel-module-management-operator-container-1.1.2-25-Source",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "kernel-module-management-operator-container-1.1.2-25-Source-origin"
     }
   ]
 }

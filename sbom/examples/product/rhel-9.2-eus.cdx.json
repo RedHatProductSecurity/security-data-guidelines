@@ -5,6 +5,7 @@
   "serialNumber": "urn:uuid:337d9115-4e7c-4e76-b389-51f7aed6eba8",
   "metadata": {
     "component": {
+      "bom-ref": "cpe:/a:redhat:rhel_eus:9.2::baseos",
       "type": "operating-system",
       "name": "Red Hat Enterprise Linux",
       "version": "9.2 EUS",
@@ -27,6 +28,12 @@
         ]
       }
     },
+    "supplier": {
+      "name": "Red Hat",
+      "url": [
+        "https://www.redhat.com"
+      ]
+    },
     "timestamp": "2006-08-14T02:34:56Z",
     "tools": [
       {
@@ -37,6 +44,7 @@
   },
   "components": [
     {
+      "bom-ref": "cpe:/a:redhat:rhel_eus:9.2::baseos",
       "type": "operating-system",
       "name": "Red Hat Enterprise Linux",
       "version": "9.2 EUS",
@@ -81,7 +89,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee468dag0"
+          "content": "9215c64e7289a058248728089e4d98ed1cc392bb5eb9b8fcbe661d57e8145bbd"
         }
       ],
       "evidence": {
@@ -148,6 +156,15 @@
           }
         ]
       }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "cpe:/a:redhat:rhel_eus:9.2::baseos",
+      "provides": [
+        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src"
+      ],
+      "dependsOn": []
     }
   ]
 }
