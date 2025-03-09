@@ -5,7 +5,8 @@
   "creationInfo": {
     "created": "2006-08-14T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
   "name": "ubi9-micro-container-9.4-6.1716471860_s390x",
