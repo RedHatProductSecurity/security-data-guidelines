@@ -20,11 +20,17 @@
   },
   "components": [
     {
-      "bom-ref": "d9851388f78c0ae4",
+      "bom-ref": "pkg:oci/mandrel-for-jdk-21-rhel8@sha256%3A65c139d16564a14b6832d1a393d18146e2fd921b8d263bf214df5720c1c79b19?arch=amd64&tag=23.1-16",
       "name": "quarkus/mandrel-for-jdk-21-rhel8",
       "purl": "pkg:oci/mandrel-for-jdk-21-rhel8@sha256%3A65c139d16564a14b6832d1a393d18146e2fd921b8d263bf214df5720c1c79b19?arch=amd64&tag=23.1-16",
       "type": "container",
-      "version": "sha256:65c139d16564a14b6832d1a393d18146e2fd921b8d263bf214df5720c1c79b19"
+      "version": "sha256:65c139d16564a14b6832d1a393d18146e2fd921b8d263bf214df5720c1c79b19",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "65c139d16564a14b6832d1a393d18146e2fd921b8d263bf214df5720c1c79b19"
+        }
+      ]
     },
     {
       "bom-ref": "pkg:rpm/redhat/abattis-cantarell-fonts@0.0.25-6.el8?arch=noarch",
@@ -99,7 +105,7 @@
         "pkg:maven/collections/collections@23.1.5.0-1-redhat-00001?package-id=a7c3ff6d3594e20f",
 
       ],
-      "ref": "d9851388f78c0ae4"
+      "ref": "pkg:oci/mandrel-for-jdk-21-rhel8@sha256%3A65c139d16564a14b6832d1a393d18146e2fd921b8d263bf214df5720c1c79b19?arch=amd64&tag=23.1-16"
     },
     {
       "dependsOn": [],
