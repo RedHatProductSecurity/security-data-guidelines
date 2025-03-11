@@ -38,6 +38,11 @@ refer to the [official documentation](https://github.com/CycloneDX/cyclonedx-pro
 | `redhat:sbomer:image:labels:vcs-type`                                           | Specifies the type of version control system used, such as Git or SVN.                                                                 | `components[]`       |
 | `redhat:sbomer:image:labels:vendor`                                             | Identifies the organization or individual responsible for a container image.                                                           | `components[]`       |
 | `redhat:sbomer:image:labels:version`                                            | Denotes the version of the application or component contained within a container image.                                                | `components[]`       |
+| `redhat:sbomer:location:0:path`                                                 | Indicates the file system path where the package or artifact was found.                                                | `components[]`       |
+| `redhat:sbomer:metadata:virtualPath`                                            | Represents a virtual file path that points to a package inside an archive or layered file system.                                          | `components[]`       |
+| `redhat:sbomer:package:language`                                                | Specifies the programming language of the detected package.                                              | `components[]`       |
+| `redhat:sbomer:package:type`                                                    | Defines the type of package, indicating how it was installed or distributed.                                          | `components[]`       |
+
 
 The `Scope` column describes which `properties` section is the intended location for the property. For example,
 a scope of `metadata` means that the property is intended for use in `metadata/properties`. This is meant as a
