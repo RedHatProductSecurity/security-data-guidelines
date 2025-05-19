@@ -86,20 +86,14 @@ distribution versions.
 [RPM modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_software_with_the_dnf_tool/assembly_distribution-of-content-in-rhel-9_managing-software-with-the-dnf-tool#con_modules_assembly_distribution-of-content-in-rhel-9)
 allow grouping a set of RPMs to represent a single component. Installing for example the `nodejs` module may result in
 the installation of the `c-ares` library, the `npm` package manager, the `nodejs` runtime, among other RPM packages.
-While RPM modules do not yet have an existing purl type, a proposal to add one called `rpmmod` has been submitted to
-the purl specification that, but has not yet been merged as of today:
-[https://github.com/package-url/purl-spec/pull/199](https://github.com/package-url/purl-spec/pull/199).
+RPM modules do not yet have an existing purl type.
 
-RPM modules follow a slightly different naming convention than regular RPMs. Each RPM module can be identified using
-[NSVC](https://docs.fedoraproject.org/en-US/modularity/core-concepts/nsvca/#_forms): Name, Stream, Version, Context.
-The purl for the `squid:4` module available for RHEL 8.6 EUS would be the following:
+We most often want to refer to a specific RPM without a module, and rarely to the RPM module itself, therefore we use the RPM type
+to refer to the specific module, and add an `rpmmod` qualifier to specify the module. For example the purl for the `libecap` RPM in the `squid:4` module available for RHEL 8.6 EUS would be the following:
 
 ```
-pkg:rpmmod/redhat/squid@4%3A8040020210420090912%3A522a0ee4?arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
+pkg:rpm/redhat/libecap@1.0.1-2.module+el8.1.0+4044+36416a77?rpmmod=squid:4&arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
 ```
-
-The version string is a percent-encoded value that contains the Stream, Version, and Context:
-`4:8040020210420090912:522a0ee4`.
 
 ## Identifying container images
 
