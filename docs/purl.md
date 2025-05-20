@@ -65,7 +65,7 @@ repository from where the RPM can be downloaded. We are purposefully not using t
 Hat purls because the base URL can vary depending on whether packages are sourced from Red Hat-hosted repositories
 (at _cdn.redhat.com_), local Red Hat Satellite-mirrored repositories, or Cloud provider-hosted repositories. Instead,
 Red Hat purls use a `repository_id` qualifier that identifies the repository from which the package can be
-downloaded using YUM or DNF. 
+downloaded using YUM or DNF.
 
 The repository ID is a unique value that identifies an RPM repository from where RPM packages can be fetched. If the
 ID of the repository is the same and the other attributes of the RPM match, such packages even though sourced from
@@ -86,14 +86,17 @@ distribution versions.
 [RPM modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_software_with_the_dnf_tool/assembly_distribution-of-content-in-rhel-9_managing-software-with-the-dnf-tool#con_modules_assembly_distribution-of-content-in-rhel-9)
 allow grouping a set of RPMs to represent a single component. Installing for example the `nodejs` module may result in
 the installation of the `c-ares` library, the `npm` package manager, the `nodejs` runtime, among other RPM packages.
-RPM modules do not yet have an existing purl type.
 
-We most often want to refer to a specific RPM without a module, and rarely to the RPM module itself, therefore we use the RPM type
-to refer to the specific module, and add an `rpmmod` qualifier to specify the module. For example the purl for the `libecap` RPM in the `squid:4` module available for RHEL 8.6 EUS would be the following:
+RPM modules do not an existing purl type. We most often want to refer to a specific RPM without a module, and rarely
+to the RPM module itself, therefore we use the RPM type to refer to the specific RPM, and add an `rpmmod` qualifier
+to specify the module. For example the purl for the `libecap` RPM in the `squid:4` module available for RHEL 8.6 EUS
+would be the following:
 
 ```
-pkg:rpm/redhat/libecap@1.0.1-2.module+el8.1.0+4044+36416a77?rpmmod=squid:4&arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
+pkg:rpm/redhat/libecap@1.0.1-2.module%2Bel8.1.0%2B4044%2B36416a77?rpmmod=squid:4:8030020200828070549:30b713e6&arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
 ```
+
+The RPM module Name, Stream, Version, and Context can be parsed from `squid:4:8030020200828070549:30b713e6`.
 
 ## Identifying container images
 
