@@ -1,12 +1,12 @@
 import json
 import re
+import subprocess
 import sys
+import tempfile
+import urllib.parse
 
 import koji
 import requests
-import subprocess
-import tempfile
-import urllib.parse
 import yaml
 
 # These container images (identified by their NVR) are known to contain only RPM packages and no
@@ -79,7 +79,7 @@ def create_sbom(
     packages = packages + list(source_pkgs or [])
 
     # This is a convention in the script only that the first source_pkg is the
-    # midststream repository
+    # midstream repository
     if source_pkgs:
         first_source_package = source_pkgs.pop(0)
         relationships.append(
@@ -130,7 +130,6 @@ def generate_sboms_for_image(image_nvr):
     image_nvr_version = "-".join(image_nvr_version)
 
     image_index_pkg = None
-    midstream_repo = None
     source_pkgs = []
     per_arch_images = []
 
