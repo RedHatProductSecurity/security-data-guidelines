@@ -49,7 +49,9 @@ def get_rpms(image_id):
     return sorted(response.json()["rpms"], key=lambda rpm: rpm["nvra"])
 
 
-def create_sbom(image_id, root_package, packages, rel_type, other_pkgs=None, other_rels=None, source_pkgs=None):
+def create_sbom(
+    image_id, root_package, packages, rel_type, other_pkgs=None, other_rels=None, source_pkgs=None
+):
     relationships = list(other_rels or [])
     relationships.insert(
         0,
@@ -84,18 +86,18 @@ def create_sbom(image_id, root_package, packages, rel_type, other_pkgs=None, oth
             {
                 "spdxElementId": root_package["SPDXID"],
                 "relationshipType": "GENERATED_FROM",
-                "relatedSpdxElement": first_source_package["SPDXID"]
+                "relatedSpdxElement": first_source_package["SPDXID"],
             }
         )
         if source_pkgs:
             for source in source_pkgs:
                 relationships.append(
-                {
-                    "spdxElementId": first_source_package["SPDXID"],
-                    "relationshipType": "DEPENDS_ON",
-                    "relatedSpdxElement": source["SPDXID"]
-                }
-        )
+                    {
+                        "spdxElementId": first_source_package["SPDXID"],
+                        "relationshipType": "DEPENDS_ON",
+                        "relatedSpdxElement": source["SPDXID"],
+                    }
+                )
 
     spdx = {
         "spdxVersion": "SPDX-2.3",
@@ -116,10 +118,11 @@ def create_sbom(image_id, root_package, packages, rel_type, other_pkgs=None, oth
         # and these files get opened and read in editors a lot.
         fp.write(json.dumps(spdx, indent=2) + "\n")
 
+
 def get_package_name_from_uri(uri: str) -> str:
-    # Assisted by watsonx Code Assistant         
     parse_image_repo = urllib.parse.urlparse(uri)
     return parse_image_repo.path.split("/")[1]
+
 
 def generate_sboms_for_image(image_nvr):
     # Split to e.g. "ubi9-micro-container" and "9.4-6.1716471860"
@@ -251,26 +254,27 @@ def generate_sboms_for_image(image_nvr):
             mock_source = RPM_CONTAINER_IMAGES[image_nvr]
             mock_repo, mock_commit = split_source_repo_parts(mock_source)
             package_name = get_package_name_from_uri(mock_repo)
-            source_pkgs.append({
-                "SPDXID": f"{image_nvr}-Source",
-                "name": package_name,
-                "versionInfo": f"{mock_commit}",
-                "supplier": "Organization: Red Hat",
-                "downloadLocation": mock_source,
-                "licenseDeclared": "NOASSERTION",
-                "externalRefs": [
-                    {
-                        "referenceCategory": "PACKAGE-MANAGER",
-                        "referenceType": "purl",
-                        "referenceLocator": f"pkg:generic/{package_name}@{repo_commit}?download_url={mock_source}",
-                    },
-                ],
-            })
-        
+            source_pkgs.append(
+                {
+                    "SPDXID": f"{image_nvr}-Source",
+                    "name": package_name,
+                    "versionInfo": f"{mock_commit}",
+                    "supplier": "Organization: Red Hat",
+                    "downloadLocation": mock_source,
+                    "licenseDeclared": "NOASSERTION",
+                    "externalRefs": [
+                        {
+                            "referenceCategory": "PACKAGE-MANAGER",
+                            "referenceType": "purl",
+                            "referenceLocator": f"pkg:generic/{package_name}@{repo_commit}?download_url={mock_source}",
+                        },
+                    ],
+                }
+            )
+
             remote_repo = ""
             remote_ref = ""
 
-            # Assisted by watsonx Code Assistant 
             # Clone the repository to a temporary directory
             with tempfile.TemporaryDirectory() as temp_dir:
                 subprocess.run(["git", "clone", image_repo, temp_dir])
@@ -278,7 +282,7 @@ def generate_sboms_for_image(image_nvr):
                 # Change to the specific commit
                 subprocess.run(["git", "checkout", repo_commit], cwd=temp_dir)
 
-                # Remote Sources could be a list, for example 
+                # Remote Sources could be a list, for example
                 # https://pkgs.devel.redhat.com/cgit/containers/quay/tree/container.yaml?h=quay-3.13-rhel-8
                 # Read the YAML file
                 with open(f"{temp_dir}/container.yaml", "r") as file:
@@ -305,9 +309,8 @@ def generate_sboms_for_image(image_nvr):
                                 "referenceLocator": f"pkg:generic/{package_name}@{remote_ref}?download_url={image_source}",
                             },
                         ],
-                }
-            )
-
+                    }
+                )
 
         # Add in parent images
         for key in ("extra", "typeinfo", "image"):
@@ -428,7 +431,7 @@ def generate_sboms_for_image(image_nvr):
             packages=packages,
             rel_type="CONTAINS",
             other_pkgs=other_pkgs,
-            other_rels=other_rels
+            other_rels=other_rels,
         )
 
     create_sbom(
@@ -438,15 +441,17 @@ def generate_sboms_for_image(image_nvr):
         rel_type="VARIANT_OF",
         other_pkgs=None,
         other_rels=None,
-        source_pkgs=source_pkgs
+        source_pkgs=source_pkgs,
     )
+
 
 def split_source_repo_parts(image_source):
     image_source_parts = image_source.rsplit("#", 2)
     if len(image_source_parts) == 2:
         image_repo = image_source_parts[0]
         repo_commit = image_source_parts[1]
-    return image_repo,repo_commit
+    return image_repo, repo_commit
+
 
 for rpm_image in RPM_CONTAINER_IMAGES.keys():
     generate_sboms_for_image(rpm_image)
