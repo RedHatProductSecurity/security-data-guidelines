@@ -5,7 +5,8 @@
   "creationInfo": {
     "created": "2006-08-14T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
   "name": "kernel-module-management-operator-container-1.1.2-25",
@@ -43,7 +44,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Ad845f0bd93dad56c92c47e8c116a11a0cc5924c0b99aed912b4f8b54178efa98?arch=amd64"
+          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Asha256%3Aed976a0ba418a498b05a56cb05afa0cb36a65e750771f3840b12e9bae3afb22d?arch=amd64"
         }
       ],
       "checksums": [
@@ -64,7 +65,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Ad845f0bd93dad56c92c47e8c116a11a0cc5924c0b99aed912b4f8b54178efa98?arch=arm64"
+          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Asha256%3A9e74a91f532b7550ee909c6ce1636122982a5c5e32859c40c3bfe68231d31100?arch=arm64"
         }
       ],
       "checksums": [
@@ -85,7 +86,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Ad845f0bd93dad56c92c47e8c116a11a0cc5924c0b99aed912b4f8b54178efa98?arch=ppc64le"
+          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Asha256%3A32a9929e6f11dfefb7a339d6767d1050cec2b24d397856cbd9b46a1bbc3f8827?arch=ppc64le"
         }
       ],
       "checksums": [

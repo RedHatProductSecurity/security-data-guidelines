@@ -155,6 +155,7 @@ def run_syft_spdx(builddir):
 
     spdx_relationships.extend(filtered_rels)
 
+
 def run_syft_cdx(builddir):
     syft = subprocess.run(
         cwd=os.path.dirname(builddir),
@@ -178,6 +179,7 @@ def run_syft_cdx(builddir):
 
     cdx_components.extend(syft_cdx_components)
 
+
 def mock_midstream_cdx(digest, sname, sver, url):
     return {
         "bom-ref": f"pkg:generic/{sname}@{sver}?download_url={url}",
@@ -185,13 +187,9 @@ def mock_midstream_cdx(digest, sname, sver, url):
         "name": sname,
         "version": sver,
         "purl": f"pkg:generic/{sname}@{sver}?download_url={url}",
-        "hashes": [
-            {
-                "alg": "SHA-256",
-                "content": digest
-            }
-        ]
+        "hashes": [{"alg": "SHA-256", "content": digest}],
     }
+
 
 def mock_midstream_spdx(digest, alg, source, sname, sver, url, ext):
     # Model a midstream repository for this.
@@ -281,7 +279,6 @@ def handle_srpm(filename, name):
             run_syft_spdx(dirpath)
             run_syft_cdx(dirpath)
 
-
         # Add sources as SPDX packages
         spectool = subprocess.run(
             cwd=srcdir,
@@ -305,7 +302,6 @@ def handle_srpm(filename, name):
             tarball_match = tarball_re.match(sfn)
             if not tarball_match:
                 continue
-
 
             (sname, sver) = tarball_re.match(sfn).groups()
 
@@ -379,7 +375,6 @@ def handle_srpm(filename, name):
             if cdx_upstream_ancestor:
                 cdx_pedigree["pedigree"] = {"ancestors": [cdx_upstream_ancestor]}
 
-
             pkgs_by_arch.setdefault(arch, []).append(spackage)
 
             spdx_relationships.append(
@@ -405,6 +400,7 @@ try:
 except FileExistsError:
     pass
 
+
 def create_cdx_from_spdx(spdx_data):
     purl = spdx_data["externalRefs"][0]["referenceLocator"]
     component = {
@@ -413,12 +409,7 @@ def create_cdx_from_spdx(spdx_data):
         "name": spdx_data["name"],
         "version": spdx_data["versionInfo"],
         "purl": purl,
-        "hashes": [
-            {
-                "alg": "SHA-256",
-                "content": spdx_data["checksums"][0]["checksumValue"]
-            }
-        ]
+        "hashes": [{"alg": "SHA-256", "content": spdx_data["checksums"][0]["checksumValue"]}],
     }
 
     cdx_properties = []
@@ -428,14 +419,14 @@ def create_cdx_from_spdx(spdx_data):
             comment = annotation["comment"]
             for annotation_prefix in annotation_prefixes:
                 if comment.startswith(annotation_prefix):
-                    annotation_value = comment[(len(annotation_prefix) + 2):]
-                    cdx_properties.append({
-                        "name": f"package:rpm:{annotation_prefix}",
-                        "value": annotation_value
-                    })
+                    annotation_value = comment[(len(annotation_prefix) + 2) :]
+                    cdx_properties.append(
+                        {"name": f"package:rpm:{annotation_prefix}", "value": annotation_value}
+                    )
     if cdx_properties:
         component["properties"] = cdx_properties
     return component
+
 
 pkgs_by_arch = {}
 cdx_root_component = None
@@ -533,10 +524,7 @@ spdx = {
     "SPDXID": "SPDXRef-DOCUMENT",
     "creationInfo": {
         "created": "2006-08-14T02:34:56Z",
-        "creators": [
-            "Tool: example SPDX document only",
-            "Organization: Red Hat"
-        ],
+        "creators": ["Tool: example SPDX document only", "Organization: Red Hat"],
     },
     "name": build["nvr"],
     "documentNamespace": f"https://www.redhat.com/{build['nvr']}.spdx.json",
@@ -553,10 +541,7 @@ cdx = {
     "metadata": {
         "component": cdx_root_component,
         "timestamp": "2006-08-14T02:34:56Z",
-        "supplier": {
-            "name": "Red Hat",
-            "url": ["https://www.redhat.com"]
-        },
+        "supplier": {"name": "Red Hat", "url": ["https://www.redhat.com"]},
         "tools": {
             "components": [
                 {
@@ -564,14 +549,13 @@ cdx = {
                     "name": "example tool",
                 }
             ]
-        }
-    }
+        },
+    },
 }
 
 copy_of_cdx_root = deepcopy(cdx_root_component)
 copy_of_cdx_root["pedigree"] = {"ancestors": cdx_pedigrees}
 cdx_components.append(copy_of_cdx_root)
-# Assisted by watsonx Code Assistant 
 cdx["components"] = sorted(cdx_components, key=lambda c: c["purl"])
 
 
@@ -582,10 +566,7 @@ for cdx_component in cdx_components:
     binary_rpm_purls.add(cdx_component["purl"])
 
 cdx["dependencies"] = [
-    {
-        "ref": cdx_root_component["bom-ref"],
-        "provides": sorted(list(binary_rpm_purls))
-    }
+    {"ref": cdx_root_component["bom-ref"], "provides": sorted(list(binary_rpm_purls))}
 ]
 
 with open(f"{build_id}.spdx.json", "w") as fp:

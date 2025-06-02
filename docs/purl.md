@@ -93,10 +93,10 @@ to specify the module. For example the purl for the `libecap` RPM in the `squid:
 would be the following:
 
 ```
-pkg:rpm/redhat/libecap@1.0.1-2.module%2Bel8.1.0%2B4044%2B36416a77?rpmmod=squid:4:8030020200828070549:30b713e6&arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
+pkg:rpmmod/redhat/squid@4:8040020210420090912:522a0ee4?arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
 ```
 
-The RPM module Name, Stream, Version, and Context can be parsed from `squid:4:8030020200828070549:30b713e6`.
+The version component of the purl is a value that contains the Stream, Version, and Context, delimited by a colon.
 
 ## Identifying container images
 
@@ -115,7 +115,7 @@ its digest value for the amd64 architecture is:
 `sha256:8bca3b1be5750aeb94ef1351aa22636a54112f595d11a4d5c777890b80dfd387`. In purl, this information is represented as:
 
 ```
-pkg:oci/ubi@sha256%3A8bca3b1be5750aeb94ef1351aa22636a54112f595d11a4d5c777890b80dfd387?arch=amd64&repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
+pkg:oci/ubi@sha256:8bca3b1be5750aeb94ef1351aa22636a54112f595d11a4d5c777890b80dfd387?arch=amd64&repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
 ```
 
 Note that an image with a particular digest value may appear in multiple repositories, so the purl would only differ
@@ -129,7 +129,7 @@ A purl may also refer to the [Image Index](https://github.com/opencontainers/ima
 which is a higher-level representation of a set of image manifests. An image index has its own unique digest value:
 
 ```
-pkg:oci/ubi@sha256%3A66233eebd72bb5baa25190d4f55e1dc3fff3a9b77186c1f91a0abdb274452072?repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
+pkg:oci/ubi@sha256:66233eebd72bb5baa25190d4f55e1dc3fff3a9b77186c1f91a0abdb274452072?repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
 ```
 
 The `arch` qualifier is simply omitted in this purl.

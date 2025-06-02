@@ -5,7 +5,8 @@
   "creationInfo": {
     "created": "2006-08-14T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
   "name": "ubi9-micro-container-9.4-6.1716471860_amd64",
@@ -22,12 +23,12 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=amd64"
+          "referenceLocator": "pkg:oci/ubi-micro@sha256%3Asha256%3A213fd2a0116a76eaa274fee20c86eef4dfba9f311784e8fb7d7f5fc38b32f3ef?arch=amd64"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=amd64"
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3Asha256%3A213fd2a0116a76eaa274fee20c86eef4dfba9f311784e8fb7d7f5fc38b32f3ef?arch=amd64"
         }
       ],
       "checksums": [
@@ -488,7 +489,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9@sha256%3A11d5b4a77bfc15341d4b6dffa3d6ed510189fec9583db77cfc107067b5f906c5?tag=9.4-947"
+          "referenceLocator": "pkg:oci/ubi9@sha256:11d5b4a77bfc15341d4b6dffa3d6ed510189fec9583db77cfc107067b5f906c5?tag=9.4-947"
         }
       ],
       "checksums": [
