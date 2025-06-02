@@ -201,7 +201,7 @@ def generate_sboms_for_image(image_nvr):
             }
             for name, repo_url, tag in sorted(repos):
                 purl = (
-                    f"pkg:oci/{name}@sha256%3A{image_index_digest}?"
+                    f"pkg:oci/{name}@sha256:{image_index_digest}?"
                     f"repository_url={repo_url}&tag={tag}"
                 )
                 ref = {
@@ -230,7 +230,7 @@ def generate_sboms_for_image(image_nvr):
         }
         for name, repo_url, tag in sorted(repos):
             purl = (
-                f"pkg:oci/{name}@sha256%3A{image_index_digest}?"
+                f"pkg:oci/{name}@sha256:{image_digest}?"
                 f"arch={arch}&repository_url={repo_url}&tag={tag}"
             )
             ref = {
@@ -334,7 +334,7 @@ def generate_sboms_for_image(image_nvr):
             ]
             parent_digest = parent_digests[0] if parent_digests else ""
             if parent_digests:
-                version = f"@{parent_digest.replace(':', '%3A')}"
+                version = f"@{parent_digest}"
             else:
                 version = ""
 
