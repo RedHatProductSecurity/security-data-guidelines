@@ -436,6 +436,7 @@ Container Images are also linked to one or more upstream sources that were used 
         }
       ]
     },
+    ```
 
 To associate a set of remote sources with the repository referencing them, use:
 
