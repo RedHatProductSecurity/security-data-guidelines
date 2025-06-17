@@ -84,19 +84,19 @@ distribution versions.
 ## Identifying RPM modules
 
 [RPM modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_software_with_the_dnf_tool/assembly_distribution-of-content-in-rhel-9_managing-software-with-the-dnf-tool#con_modules_assembly_distribution-of-content-in-rhel-9)
-allow grouping a set of RPMs to represent a single component. Installing for example the `nodejs` module may result in
+allow grouping a set of RPMs to represent a single component. Installing, for example, the `nodejs` module may result in
 the installation of the `c-ares` library, the `npm` package manager, the `nodejs` runtime, among other RPM packages.
 
-RPM modules do not an existing purl type. We most often want to refer to a specific RPM without a module, and rarely
-to the RPM module itself, therefore we use the RPM type to refer to the specific RPM, and add an `rpmmod` qualifier
-to specify the module. For example the purl for the `libecap` RPM in the `squid:4` module available for RHEL 8.6 EUS
-would be the following:
+RPM modules do not have an existing purl type. In most cases, we want to refer to a specific RPM without a module, and
+rarely to the RPM module itself. Therefore, we use the RPM type to refer to the specific RPM, and add an `rpmmod`
+qualifier to specify the module. For example, the purl for the `libecap` RPM in the `squid:4` module available for
+RHEL 8.6 EUS would be the following:
 
 ```
-pkg:rpmmod/redhat/squid@4:8040020210420090912:522a0ee4?arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
+pkg:rpm/redhat/libecap@1.0.1-2.module%2Bel8.1.0%2B4044%2B36416a77?rpmmod=squid:4:8030020200828070549:30b713e6&arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
 ```
 
-The version component of the purl is a value that contains the Stream, Version, and Context, delimited by a colon.
+The `rpmmod` qualifier of the purl is a value that contains the Stream, Version, and Context, delimited by a colon.
 
 ## Identifying container images
 
