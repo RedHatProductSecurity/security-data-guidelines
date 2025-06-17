@@ -8,6 +8,7 @@ from copy import deepcopy
 from tempfile import TemporaryDirectory
 
 import koji
+import yaml
 
 # Script requires these RPMs: brewkoji, rpmdevtools, rpm-build
 # Run with: ./from-koji.py brew <NVR>
@@ -387,18 +388,47 @@ def handle_srpm(filename, name):
             cdx_pedigrees.append(cdx_pedigree)
         return cdx_pedigrees
 
+def check_module(build_id, session):
+    is_module = False
+    build_type_data = session.getBuildType(build_id)
+    if "module" in build_type_data:
+        is_module = True
+    return is_module
 
-downloaddir = str(build_id)
-try:
-    os.mkdir(downloaddir)
-    subprocess.run(
-        cwd=str(downloaddir),
-        check=True,
-        stdout=None,
-        args=["koji", "-p", koji_profile, "download-build", "--debuginfo", build_id],
-    )
-except FileExistsError:
-    pass
+def get_modulemd_data(build_id, session):
+    result = {}
+    build_info = session.getBuild(build_id)
+    modulemd_yaml = build_info["extra"]["typeinfo"]["module"].get("modulemd_str", "")
+    if not modulemd_yaml:
+        raise ValueError("Cannot get module build data, modulemd_yaml is undefined")
+    modulemd = yaml.safe_load(modulemd_yaml)
+    module_data = modulemd["data"]
+    result["module_name"] = module_data["name"]
+    result["module_stream"] = module_data["stream"]
+    mbs = module_data["xmd"]["mbs"]
+    result["src_rpms"] = mbs.get("rpms", [])
+    result["binary_rpms"] = mbs.get("ursine_rpms")
+    return result
+
+is_module = check_module(build_id, session)
+
+if is_module:
+    result = get_modulemd_data(build_id, session)
+    print(result)
+    # TODO build rpms dict similar to that returned by koji's listBuildRPMs function 
+    # probably have to adjust the rpm loop below to look for module information in SRPM objects.
+else:
+    downloaddir = str(build_id)
+    try:
+        os.mkdir(downloaddir)
+        subprocess.run(
+            cwd=str(downloaddir),
+            check=True,
+            stdout=None,
+            args=["koji", "-p", koji_profile, "download-build", "--debuginfo", build_id],
+        )
+    except FileExistsError:
+        pass
 
 
 def create_cdx_from_spdx(spdx_data):
