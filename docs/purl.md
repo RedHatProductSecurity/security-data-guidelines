@@ -93,10 +93,10 @@ qualifier to specify the module. For example, the purl for the `libecap` RPM in 
 RHEL 8.6 EUS would be the following:
 
 ```
-pkg:rpm/redhat/libecap@1.0.1-2.module%2Bel8.1.0%2B4044%2B36416a77?rpmmod=squid:4:8030020200828070549:30b713e6&arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
+pkg:rpm/redhat/libecap@1.0.1-2.module%2Bel8.1.0%2B4044%2B36416a77?rpmmod=squid:4&arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
 ```
 
-The `rpmmod` qualifier of the purl is a value that contains the Stream, Version, and Context, delimited by a colon.
+The `rpmmod` qualifier of the purl is a value that contains the module Name and Stream separated by a colon.
 
 ## Identifying container images
 
