@@ -1,0 +1,964 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "creationInfo": {
+    "created": "2006-08-14T02:34:56Z",
+    "creators": [
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
+    ]
+  },
+  "name": "delve-1.7.2-1.module+el8.6.0+12972+ebab5911",
+  "documentNamespace": "https://www.redhat.com/delve-1.7.2-1.module+el8.6.0+12972+ebab5911.spdx.json",
+  "packages": [
+    {
+      "name": "configs-dsl-kotlin",
+      "SPDXID": "SPDXRef-Package-java-archive-configs-dsl-kotlin-7e7c7515f3b97144",
+      "versionInfo": "UNKNOWN",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed java archive: /delve-1.7.2/.teamcity/pom.xml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin"
+        }
+      ]
+    },
+    {
+      "name": "configs-dsl-kotlin",
+      "SPDXID": "SPDXRef-Package-java-archive-configs-dsl-kotlin-86a3651cd6c56dbd",
+      "versionInfo": "UNKNOWN",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed java archive: /delve-1.7.2/_build/src/github.com/go-delve/delve/.teamcity/pom.xml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin"
+        }
+      ]
+    },
+    {
+      "name": "configs-dsl-kotlin-plugins",
+      "SPDXID": "SPDXRef-Package-java-archive-configs-dsl-kotlin-plugins-502e78465d9d858f",
+      "versionInfo": "1.0-SNAPSHOT",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed java archive: /delve-1.7.2/.teamcity/pom.xml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin-plugins@1.0-SNAPSHOT"
+        }
+      ]
+    },
+    {
+      "name": "configs-dsl-kotlin-plugins",
+      "SPDXID": "SPDXRef-Package-java-archive-configs-dsl-kotlin-plugins-fdfd39f92677d68a",
+      "versionInfo": "1.0-SNAPSHOT",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed java archive: /delve-1.7.2/_build/src/github.com/go-delve/delve/.teamcity/pom.xml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin-plugins@1.0-SNAPSHOT"
+        }
+      ]
+    },
+    {
+      "name": "github.com/cpuguy83/go-md2man/v2",
+      "SPDXID": "SPDXRef-Package-go-module-github.com-cpuguy83-go-md2man-v2-684e1d2bb82d480f",
+      "versionInfo": "v2.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/cpuguy83/go-md2man@v2.0.0#v2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/davecgh/go-spew",
+      "SPDXID": "SPDXRef-Package-go-module-github.com-davecgh-go-spew-4fbb2abaf5a9f6b9",
+      "versionInfo": "v1.1.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/davecgh/go-spew@v1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/inconshreveable/mousetrap",
+      "SPDXID": "SPDXRef-Package-go-module-github.com-inconshreveable-mousetrap-c6b6800ebe178855",
+      "versionInfo": "v1.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/inconshreveable/mousetrap@v1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/konsorten/go-windows-terminal-sequences",
+      "SPDXID": "SPDXRef-Package-go-module-github.com-konsorten-go-windows-terminal-sequences-c044bce54c967cd9",
+      "versionInfo": "v1.0.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/konsorten/go-windows-terminal-sequences@v1.0.3"
+        }
+      ]
+    },
+    {
+      "name": "github.com/mitchellh/go-homedir",
+      "SPDXID": "SPDXRef-Package-go-module-github.com-mitchellh-go-homedir-94383438e8b1b2c2",
+      "versionInfo": "v1.1.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/mitchellh/go-homedir@v1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/pmezard/go-difflib",
+      "SPDXID": "SPDXRef-Package-go-module-github.com-pmezard-go-difflib-e7da3801b3ec88c8",
+      "versionInfo": "v1.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/pmezard/go-difflib@v1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/spf13/pflag",
+      "SPDXID": "SPDXRef-Package-go-module-github.com-spf13-pflag-624e103ad4771f91",
+      "versionInfo": "v1.0.5",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/spf13/pflag@v1.0.5"
+        }
+      ]
+    },
+    {
+      "name": "github.com/spf13/viper",
+      "SPDXID": "SPDXRef-Package-go-module-github.com-spf13-viper-ca21ba16e4bb6b84",
+      "versionInfo": "v1.7.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/spf13/viper@v1.7.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/stretchr/testify",
+      "SPDXID": "SPDXRef-Package-go-module-github.com-stretchr-testify-f41962eaf76ffd6a",
+      "versionInfo": "v1.2.2",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/stretchr/testify@v1.2.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/stretchr/testify",
+      "SPDXID": "SPDXRef-Package-go-module-github.com-stretchr-testify-5cd730fd65332f3e",
+      "versionInfo": "v1.7.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/aquasecurity/libbpfgo/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/stretchr/testify@v1.7.0"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/sys",
+      "SPDXID": "SPDXRef-Package-go-module-golang.org-x-sys-35f16fd9ebe88cb2",
+      "versionInfo": "v0.0.0-20190422165155-953cdadca894",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/sys@v0.0.0-20190422165155-953cdadca894"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/sys",
+      "SPDXID": "SPDXRef-Package-go-module-golang.org-x-sys-43a9ff7074a3d367",
+      "versionInfo": "v0.0.0-20210514084401-e8d321eab015",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/aquasecurity/libbpfgo/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/sys@v0.0.0-20210514084401-e8d321eab015"
+        }
+      ]
+    },
+    {
+      "name": "gopkg.in/check.v1",
+      "SPDXID": "SPDXRef-Package-go-module-gopkg.in-check.v1-259f6ad4e92627e9",
+      "versionInfo": "v0.0.0-20161208181325-20d25e280405",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/gopkg.in/yaml.v2/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/gopkg.in/check.v1@v0.0.0-20161208181325-20d25e280405"
+        }
+      ]
+    },
+    {
+      "name": "gopkg.in/yaml.v2",
+      "SPDXID": "SPDXRef-Package-go-module-gopkg.in-yaml.v2-0cf37f6b0932a619",
+      "versionInfo": "v2.4.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/gopkg.in/yaml.v2@v2.4.0"
+        }
+      ]
+    },
+    {
+      "name": "kotlin-script-runtime",
+      "SPDXID": "SPDXRef-Package-java-archive-kotlin-script-runtime-eef159be5a7c66a1",
+      "versionInfo": "UNKNOWN",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed java archive: /delve-1.7.2/.teamcity/pom.xml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime"
+        }
+      ]
+    },
+    {
+      "name": "kotlin-script-runtime",
+      "SPDXID": "SPDXRef-Package-java-archive-kotlin-script-runtime-e73900687d6b1056",
+      "versionInfo": "UNKNOWN",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed java archive: /delve-1.7.2/_build/src/github.com/go-delve/delve/.teamcity/pom.xml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime"
+        }
+      ]
+    },
+    {
+      "name": "kotlin-stdlib-jdk8",
+      "SPDXID": "SPDXRef-Package-java-archive-kotlin-stdlib-jdk8-d8f8d070696dfca9",
+      "versionInfo": "UNKNOWN",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed java archive: /delve-1.7.2/.teamcity/pom.xml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8"
+        }
+      ]
+    },
+    {
+      "name": "kotlin-stdlib-jdk8",
+      "SPDXID": "SPDXRef-Package-java-archive-kotlin-stdlib-jdk8-8bb4c6b9bf3afc54",
+      "versionInfo": "UNKNOWN",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed java archive: /delve-1.7.2/_build/src/github.com/go-delve/delve/.teamcity/pom.xml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8"
+        }
+      ]
+    },
+    {
+      "name": "delve-1.7.2-build",
+      "SPDXID": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "primaryPackagePurpose": "FILE"
+    },
+    {
+      "SPDXID": "SPDXRef-SRPM",
+      "name": "delve",
+      "versionInfo": "1.7.2-1.module+el8.6.0+12972+ebab5911",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "delve-1.7.2-1.module+el8.6.0+12972+ebab5911.src.rpm",
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-eus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8bce66ddde235b7dac6ed2973483f8fa21776c2786bdd537ce0dd538f3582e3b"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 5149bd3ad32abb0fd7eebd742bb2f654"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 8d1fbd62ebbb9006ed9866832c00a0273d166b6b5d1c71daf89c5fd708a4cbce"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Source0",
+      "name": "delve",
+      "versionInfo": "1.7.2",
+      "downloadLocation": "https://github.com/go-delve/delve/archive/v1.7.2.tar.gz#/delve-1.7.2.tar.gz",
+      "packageFileName": "delve-1.7.2.tar.gz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c2eb068d5677e114286b38f57f784b3792dbd2db06743bb57217611a092b31f2"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/delve@1.7.2?download_url=https://github.com/go-delve/delve/archive/v1.7.2.tar.gz#/delve-1.7.2.tar.gz"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-delve",
+      "name": "delve",
+      "versionInfo": "1.7.2-1.module+el8.6.0+12972+ebab5911",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "delve-1.7.2-1.module+el8.6.0+12972+ebab5911.x86_64.rpm",
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-aus-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-eus-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-rpms&rpmmod=go-toolset:rhel8"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2694e31f5ec5c6d30e510cb9bdea837868933a4b5ceb6e7f790a38a89c407985"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 5963ac2a38ef8e83a52ba6d492ab1000"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: c7b8dcf8308f3c509e8835b5d62545c8adae38646dd0b50e808cbac69854c1ef"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-delve-debugsource",
+      "name": "delve-debugsource",
+      "versionInfo": "1.7.2-1.module+el8.6.0+12972+ebab5911",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "delve-debugsource-1.7.2-1.module+el8.6.0+12972+ebab5911.x86_64.rpm",
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-eus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dd219e6b0919b4d9a0eb5c9720cbf845e22c6f0a8875b1b5ef249f3b6a3c28cd"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 493ee3e22075763da66b142996ef1c6b"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: e31e3483aac9c02042182226e7f8366e0eef8b2f72e60a2d0cc8c8829cde3953"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-delve-debuginfo",
+      "name": "delve-debuginfo",
+      "versionInfo": "1.7.2-1.module+el8.6.0+12972+ebab5911",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "delve-debuginfo-1.7.2-1.module+el8.6.0+12972+ebab5911.x86_64.rpm",
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-aus-debug-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-debug-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-debug-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-eus-debug-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-debug-rpms&rpmmod=go-toolset:rhel8"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a1d63f6204402e74512d6f32a31169f3469f7721c390b55db11439f8fdd71a08"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 35d24baabf41ce40cca89805435fa62c"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 47c5086da6531bd109c2f90ad506ad0aa36cf436288a05aea1da6ca3442b00d0"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "/delve-1.7.2/.teamcity/pom.xml",
+      "SPDXID": "SPDXRef-File-delve-1.7.2-.teamcity-pom.xml-c3973dd2ad5a6a4d",
+      "fileTypes": [
+        "TEXT"
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "8b2fc9b1fbbcc83e550eedda405663db13f24b87"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d7593c9c1df7af6ce06038bad114265be78ee17ceb214fb937907e469f630e06"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": ""
+    },
+    {
+      "fileName": "/delve-1.7.2/_build/src/github.com/aquasecurity/libbpfgo/go.mod",
+      "SPDXID": "SPDXRef-File-...aquasecurity-libbpfgo-go.mod-e48d0ba37869f6d9",
+      "fileTypes": [
+        "TEXT"
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "3435ca60f7378f8bf74df6ba3ff8f34d97c0020f"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "aa31c7e85a12b9a3189268c5a1872815b2936ca9650f49dbeeaa6163f30e07cb"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": ""
+    },
+    {
+      "fileName": "/delve-1.7.2/_build/src/github.com/go-delve/delve/.teamcity/pom.xml",
+      "SPDXID": "SPDXRef-File-...go-delve-delve-.teamcity-pom.xml-63887df3992b241b",
+      "fileTypes": [
+        "TEXT"
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "8b2fc9b1fbbcc83e550eedda405663db13f24b87"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d7593c9c1df7af6ce06038bad114265be78ee17ceb214fb937907e469f630e06"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": ""
+    },
+    {
+      "fileName": "/delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod",
+      "SPDXID": "SPDXRef-File-...src-github.com-sirupsen-logrus-go.mod-8351225aa5724965",
+      "fileTypes": [
+        "TEXT"
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "db86ddbaabb641af0c9a1832cfe9c4f3c8a8e6ea"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "beaceda8dcafec25a9f8fec478de2cd2df69658b643e0fdfc800980f2e3957f3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": ""
+    },
+    {
+      "fileName": "/delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod",
+      "SPDXID": "SPDXRef-File-...src-github.com-spf13-cobra-go.mod-28a6c91c3082d646",
+      "fileTypes": [
+        "TEXT"
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "d05b4987e35eec3c0995e9b06241dc09efa050e3"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "879c4a1020dc61cfa0f3db250323665c3554d27f5fef504da53be6cc1cf416a5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": ""
+    },
+    {
+      "fileName": "/delve-1.7.2/_build/src/gopkg.in/yaml.v2/go.mod",
+      "SPDXID": "SPDXRef-File-...-build-src-gopkg.in-yaml.v2-go.mod-ef6c39a5763a1b4b",
+      "fileTypes": [
+        "TEXT"
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "5f7e941d75c7a9a445fc81663a735596ae17460e"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c3b11ba9a0775ff9bc6f11dbb58a1e48cc1e68bac378a8cdc620becc661d4c33"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": ""
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-java-archive-configs-dsl-kotlin-7e7c7515f3b97144",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-java-archive-configs-dsl-kotlin-86a3651cd6c56dbd",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-java-archive-configs-dsl-kotlin-plugins-502e78465d9d858f",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-java-archive-configs-dsl-kotlin-plugins-fdfd39f92677d68a",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-github.com-cpuguy83-go-md2man-v2-684e1d2bb82d480f",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-github.com-davecgh-go-spew-4fbb2abaf5a9f6b9",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-github.com-inconshreveable-mousetrap-c6b6800ebe178855",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-github.com-konsorten-go-windows-terminal-sequences-c044bce54c967cd9",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-github.com-mitchellh-go-homedir-94383438e8b1b2c2",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-github.com-pmezard-go-difflib-e7da3801b3ec88c8",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-github.com-spf13-pflag-624e103ad4771f91",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-github.com-spf13-viper-ca21ba16e4bb6b84",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-github.com-stretchr-testify-f41962eaf76ffd6a",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-github.com-stretchr-testify-5cd730fd65332f3e",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-golang.org-x-sys-35f16fd9ebe88cb2",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-golang.org-x-sys-43a9ff7074a3d367",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-gopkg.in-check.v1-259f6ad4e92627e9",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-gopkg.in-yaml.v2-0cf37f6b0932a619",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-java-archive-kotlin-script-runtime-eef159be5a7c66a1",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-java-archive-kotlin-script-runtime-e73900687d6b1056",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-java-archive-kotlin-stdlib-jdk8-d8f8d070696dfca9",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relatedSpdxElement": "SPDXRef-Package-java-archive-kotlin-stdlib-jdk8-8bb4c6b9bf3afc54",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-Source0",
+      "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-delve-1.7.2-build",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-SRPM",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Source0"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-delve",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-delve-debugsource",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-delve-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    }
+  ]
+}

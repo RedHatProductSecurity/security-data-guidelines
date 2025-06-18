@@ -19,6 +19,26 @@ repo_id_map = {
         "rhel-9-for-{arch}-baseos-aus-rpms",
         "rhel-9-for-{arch}-baseos-e4s-rpms",
     ],
+    # https://access.redhat.com/downloads/content/delve/1.7.2-1.module+el8.6.0+12972+ebab5911/x86_64/fd431d51/package
+    "delve-1.7.2-1.module+el8.6.0+12972+ebab5911": [
+        "rhel-8-for-{arch}-appstream-rpms",
+        "rhel-8-for-{arch}-appstream-eus-rpms",
+        "rhel-8-for-{arch}-appstream-aus-rpms",
+        "rhel-8-for-{arch}-appstream-tus-rpms",
+        "rhel-8-for-{arch}-appstream-e4s-rpms",
+    ],
+    # https://access.redhat.com/downloads/content/go-toolset/1.17.13-2.module+el8.6.0+22782+bd95fb4c/x86_64/fd431d51/package
+    "go-toolset-1.17.13-2.module+el8.6.0+22782+bd95fb4c": [
+        "rhel-8-for-{arch}-appstream-aus-rpms",
+        "rhel-8-for-{arch}-appstream-tus-rpms",
+        "rhel-8-for-{arch}-appstream-e4s-rpms",
+    ],
+    # https://access.redhat.com/downloads/content/golang/1.17.13-9.module+el8.6.0+23245+b36ba85c/x86_64/fd431d51/package
+    "golang-1.17.13-9.module+el8.6.0+23245+b36ba85c": [
+        "rhel-8-for-{arch}-appstream-aus-rpms",
+        "rhel-8-for-{arch}-appstream-tus-rpms",
+        "rhel-8-for-{arch}-appstream-e4s-rpms",
+    ]
 }
 
 

@@ -1,0 +1,1579 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "serialNumber": "urn:uuid:223234df-bb5b-49af-a896-143736f7d806",
+  "metadata": {
+    "component": {
+      "bom-ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8",
+      "type": "library",
+      "name": "delve",
+      "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",
+      "purl": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8bce66ddde235b7dac6ed2973483f8fa21776c2786bdd537ce0dd538f3582e3b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "5149bd3ad32abb0fd7eebd742bb2f654"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "8d1fbd62ebbb9006ed9866832c00a0273d166b6b5d1c71daf89c5fd708a4cbce"
+        }
+      ]
+    },
+    "timestamp": "2006-08-14T02:34:56Z",
+    "supplier": {
+      "name": "Red Hat",
+      "url": [
+        "https://www.redhat.com"
+      ]
+    },
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "example tool"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:golang/github.com/cpuguy83/go-md2man@v2.0.0?package-id=684e1d2bb82d480f#v2",
+      "type": "library",
+      "name": "github.com/cpuguy83/go-md2man/v2",
+      "version": "v2.0.0",
+      "cpe": "cpe:2.3:a:cpuguy83:go-md2man\\/v2:v2.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/cpuguy83/go-md2man@v2.0.0#v2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:cpuguy83:go_md2man\\/v2:v2.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:EoUDS0afbrsXAZ9YQ9jdu/mZ2sXgT1/2yyNng4PGlyM="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/davecgh/go-spew@v1.1.1?package-id=4fbb2abaf5a9f6b9",
+      "type": "library",
+      "name": "github.com/davecgh/go-spew",
+      "version": "v1.1.1",
+      "cpe": "cpe:2.3:a:davecgh:go-spew:v1.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:davecgh:go_spew:v1.1.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/inconshreveable/mousetrap@v1.0.0?package-id=c6b6800ebe178855",
+      "type": "library",
+      "name": "github.com/inconshreveable/mousetrap",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:inconshreveable:mousetrap:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/inconshreveable/mousetrap@v1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:Z8tu5sraLXCXIcARxBp/8cbvlwVa7Z1NHg9XEKhtSvM="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/konsorten/go-windows-terminal-sequences@v1.0.3?package-id=c044bce54c967cd9",
+      "type": "library",
+      "name": "github.com/konsorten/go-windows-terminal-sequences",
+      "version": "v1.0.3",
+      "cpe": "cpe:2.3:a:konsorten:go-windows-terminal-sequences:v1.0.3:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/konsorten/go-windows-terminal-sequences@v1.0.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:konsorten:go_windows_terminal_sequences:v1.0.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:CE8S1cTafDpPvMhIxNJKvHsGVBgn1xWYf1NbHQhywc8="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/mitchellh/go-homedir@v1.1.0?package-id=94383438e8b1b2c2",
+      "type": "library",
+      "name": "github.com/mitchellh/go-homedir",
+      "version": "v1.1.0",
+      "cpe": "cpe:2.3:a:mitchellh:go-homedir:v1.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/mitchellh/go-homedir@v1.1.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mitchellh:go_homedir:v1.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG+4E0Y="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/pmezard/go-difflib@v1.0.0?package-id=e7da3801b3ec88c8",
+      "type": "library",
+      "name": "github.com/pmezard/go-difflib",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:pmezard:go-difflib:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/pmezard/go-difflib@v1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pmezard:go_difflib:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/pflag@v1.0.5?package-id=624e103ad4771f91",
+      "type": "library",
+      "name": "github.com/spf13/pflag",
+      "version": "v1.0.5",
+      "cpe": "cpe:2.3:a:spf13:pflag:v1.0.5:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/spf13/pflag@v1.0.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/viper@v1.7.0?package-id=ca21ba16e4bb6b84",
+      "type": "library",
+      "name": "github.com/spf13/viper",
+      "version": "v1.7.0",
+      "cpe": "cpe:2.3:a:spf13:viper:v1.7.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/spf13/viper@v1.7.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:xVKxvI7ouOI5I+U9s2eeiUfMaWBVoXA3AWskkrqK0VM="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/stretchr/testify@v1.2.2?package-id=f41962eaf76ffd6a",
+      "type": "library",
+      "name": "github.com/stretchr/testify",
+      "version": "v1.2.2",
+      "cpe": "cpe:2.3:a:stretchr:testify:v1.2.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/stretchr/testify@v1.2.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:bSDNvY7ZPG5RlJ8otE/7V6gMiyenm9RtJ7IUVIAoJ1w="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/stretchr/testify@v1.7.0?package-id=5cd730fd65332f3e",
+      "type": "library",
+      "name": "github.com/stretchr/testify",
+      "version": "v1.7.0",
+      "cpe": "cpe:2.3:a:stretchr:testify:v1.7.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/stretchr/testify@v1.7.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/aquasecurity/libbpfgo/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/sys@v0.0.0-20190422165155-953cdadca894?package-id=35f16fd9ebe88cb2",
+      "type": "library",
+      "name": "golang.org/x/sys",
+      "version": "v0.0.0-20190422165155-953cdadca894",
+      "cpe": "cpe:2.3:a:golang:x\\/sys:v0.0.0-20190422165155-953cdadca894:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/sys@v0.0.0-20190422165155-953cdadca894",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/sirupsen/logrus/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:Cz4ceDQGXuKRnVBDTS23GTn/pU5OE2C0WrNTOYK1Uuc="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/sys@v0.0.0-20210514084401-e8d321eab015?package-id=43a9ff7074a3d367",
+      "type": "library",
+      "name": "golang.org/x/sys",
+      "version": "v0.0.0-20210514084401-e8d321eab015",
+      "cpe": "cpe:2.3:a:golang:x\\/sys:v0.0.0-20210514084401-e8d321eab015:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/sys@v0.0.0-20210514084401-e8d321eab015",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/aquasecurity/libbpfgo/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:hZR0X1kPW+nwyJ9xRxqZk1vx5RUObAPBdKVvXPDUH/E="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/check.v1@v0.0.0-20161208181325-20d25e280405?package-id=259f6ad4e92627e9",
+      "type": "library",
+      "name": "gopkg.in/check.v1",
+      "version": "v0.0.0-20161208181325-20d25e280405",
+      "purl": "pkg:golang/gopkg.in/check.v1@v0.0.0-20161208181325-20d25e280405",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/gopkg.in/yaml.v2/go.mod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/yaml.v2@v2.4.0?package-id=0cf37f6b0932a619",
+      "type": "library",
+      "name": "gopkg.in/yaml.v2",
+      "version": "v2.4.0",
+      "purl": "pkg:golang/gopkg.in/yaml.v2@v2.4.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-file-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/spf13/cobra/go.mod"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:D8xgwECY7CYvx+Y2n4sBz93Jn9JRvxdiyyo8CTfuKaY="
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime?package-id=eef159be5a7c66a1",
+      "type": "library",
+      "group": "org.jetbrains.kotlin",
+      "name": "kotlin-script-runtime",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:kotlin-script-runtime:kotlin-script-runtime:*:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-script-runtime:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script_runtime:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script_runtime:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.kotlin:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.kotlin:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-script:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-script:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-script-runtime:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script_runtime:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.kotlin:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-script:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/.teamcity/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "kotlin-script-runtime"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.jetbrains.kotlin"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime?package-id=e73900687d6b1056",
+      "type": "library",
+      "group": "org.jetbrains.kotlin",
+      "name": "kotlin-script-runtime",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:kotlin-script-runtime:kotlin-script-runtime:*:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-script-runtime:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script_runtime:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script_runtime:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.kotlin:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.kotlin:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-script:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-script:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-script-runtime:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin-script-runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin_script_runtime:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script_runtime:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.kotlin:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-script:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_script:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/go-delve/delve/.teamcity/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "kotlin-script-runtime"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.jetbrains.kotlin"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8?package-id=d8f8d070696dfca9",
+      "type": "library",
+      "group": "org.jetbrains.kotlin",
+      "name": "kotlin-stdlib-jdk8",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:org.jetbrains.kotlin:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.kotlin:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib-jdk8:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib-jdk8:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib_jdk8:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib_jdk8:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.kotlin:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib-jdk8:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib_jdk8:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/.teamcity/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "kotlin-stdlib-jdk8"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.jetbrains.kotlin"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8?package-id=8bb4c6b9bf3afc54",
+      "type": "library",
+      "group": "org.jetbrains.kotlin",
+      "name": "kotlin-stdlib-jdk8",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:org.jetbrains.kotlin:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.kotlin:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib-jdk8:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib-jdk8:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib_jdk8:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib_jdk8:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.kotlin:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib-jdk8:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin-stdlib-jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin_stdlib_jdk8:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib_jdk8:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin-stdlib:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin_stdlib:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:kotlin:kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/go-delve/delve/.teamcity/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "kotlin-stdlib-jdk8"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.jetbrains.kotlin"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin?package-id=7e7c7515f3b97144",
+      "type": "library",
+      "group": "org.jetbrains.teamcity",
+      "name": "configs-dsl-kotlin",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:org.jetbrains.teamcity:configs-dsl-kotlin:*:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.teamcity:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl-kotlin:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl-kotlin:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:teamcity:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:teamcity:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/.teamcity/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "configs-dsl-kotlin"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.jetbrains.teamcity"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin?package-id=86a3651cd6c56dbd",
+      "type": "library",
+      "group": "org.jetbrains.teamcity",
+      "name": "configs-dsl-kotlin",
+      "version": "UNKNOWN",
+      "cpe": "cpe:2.3:a:org.jetbrains.teamcity:configs-dsl-kotlin:*:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.teamcity:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl-kotlin:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl-kotlin:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:teamcity:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:teamcity:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs:configs-dsl-kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs:configs_dsl_kotlin:*:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/go-delve/delve/.teamcity/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "configs-dsl-kotlin"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.jetbrains.teamcity"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin-plugins@1.0-SNAPSHOT?package-id=502e78465d9d858f",
+      "type": "library",
+      "group": "org.jetbrains.teamcity",
+      "name": "configs-dsl-kotlin-plugins",
+      "version": "1.0-SNAPSHOT",
+      "cpe": "cpe:2.3:a:configs-dsl-kotlin-plugins:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin-plugins@1.0-SNAPSHOT",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl-kotlin-plugins:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin_plugins:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin_plugins:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.teamcity:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.teamcity:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl-kotlin:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl-kotlin:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:teamcity:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:teamcity:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/.teamcity/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "configs-dsl-kotlin-plugins"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.jetbrains.teamcity"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin-plugins@1.0-SNAPSHOT?package-id=fdfd39f92677d68a",
+      "type": "library",
+      "group": "org.jetbrains.teamcity",
+      "name": "configs-dsl-kotlin-plugins",
+      "version": "1.0-SNAPSHOT",
+      "cpe": "cpe:2.3:a:configs-dsl-kotlin-plugins:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin-plugins@1.0-SNAPSHOT",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-pom-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl-kotlin-plugins:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin_plugins:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin_plugins:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.teamcity:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.jetbrains.teamcity:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl-kotlin:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl-kotlin:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl_kotlin:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs-dsl:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs_dsl:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jetbrains:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:teamcity:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:teamcity:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs:configs-dsl-kotlin-plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:configs:configs_dsl_kotlin_plugins:1.0-SNAPSHOT:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/delve-1.7.2/_build/src/github.com/go-delve/delve/.teamcity/pom.xml"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "configs-dsl-kotlin-plugins"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.jetbrains.teamcity"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "type": "library",
+      "name": "delve-debuginfo",
+      "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",
+      "purl": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a1d63f6204402e74512d6f32a31169f3469f7721c390b55db11439f8fdd71a08"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "35d24baabf41ce40cca89805435fa62c"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "47c5086da6531bd109c2f90ad506ad0aa36cf436288a05aea1da6ca3442b00d0"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "type": "library",
+      "name": "delve-debugsource",
+      "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",
+      "purl": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "dd219e6b0919b4d9a0eb5c9720cbf845e22c6f0a8875b1b5ef249f3b6a3c28cd"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "493ee3e22075763da66b142996ef1c6b"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "e31e3483aac9c02042182226e7f8366e0eef8b2f72e60a2d0cc8c8829cde3953"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8",
+      "type": "library",
+      "name": "delve",
+      "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",
+      "purl": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8bce66ddde235b7dac6ed2973483f8fa21776c2786bdd537ce0dd538f3582e3b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "5149bd3ad32abb0fd7eebd742bb2f654"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "8d1fbd62ebbb9006ed9866832c00a0273d166b6b5d1c71daf89c5fd708a4cbce"
+        }
+      ],
+      "pedigree": {
+        "ancestors": [
+          {
+            "bom-ref": "pkg:generic/delve@1.7.2?download_url=https://github.com/go-delve/delve/archive/v1.7.2.tar.gz#/delve-1.7.2.tar.gz",
+            "type": "library",
+            "name": "delve",
+            "version": "1.7.2",
+            "purl": "pkg:generic/delve@1.7.2?download_url=https://github.com/go-delve/delve/archive/v1.7.2.tar.gz#/delve-1.7.2.tar.gz",
+            "hashes": [
+              {
+                "alg": "SHA-256",
+                "content": "c2eb068d5677e114286b38f57f784b3792dbd2db06743bb57217611a092b31f2"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "type": "library",
+      "name": "delve",
+      "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",
+      "purl": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2694e31f5ec5c6d30e510cb9bdea837868933a4b5ceb6e7f790a38a89c407985"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package:rpm:sigmd5",
+          "value": "5963ac2a38ef8e83a52ba6d492ab1000"
+        },
+        {
+          "name": "package:rpm:sha256header",
+          "value": "c7b8dcf8308f3c509e8835b5d62545c8adae38646dd0b50e808cbac69854c1ef"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8",
+      "provides": [
+        "pkg:golang/github.com/cpuguy83/go-md2man@v2.0.0#v2",
+        "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
+        "pkg:golang/github.com/inconshreveable/mousetrap@v1.0.0",
+        "pkg:golang/github.com/konsorten/go-windows-terminal-sequences@v1.0.3",
+        "pkg:golang/github.com/mitchellh/go-homedir@v1.1.0",
+        "pkg:golang/github.com/pmezard/go-difflib@v1.0.0",
+        "pkg:golang/github.com/spf13/pflag@v1.0.5",
+        "pkg:golang/github.com/spf13/viper@v1.7.0",
+        "pkg:golang/github.com/stretchr/testify@v1.2.2",
+        "pkg:golang/github.com/stretchr/testify@v1.7.0",
+        "pkg:golang/golang.org/x/sys@v0.0.0-20190422165155-953cdadca894",
+        "pkg:golang/golang.org/x/sys@v0.0.0-20210514084401-e8d321eab015",
+        "pkg:golang/gopkg.in/check.v1@v0.0.0-20161208181325-20d25e280405",
+        "pkg:golang/gopkg.in/yaml.v2@v2.4.0",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8",
+        "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin",
+        "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin-plugins@1.0-SNAPSHOT",
+        "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+        "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+        "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+      ]
+    }
+  ]
+}

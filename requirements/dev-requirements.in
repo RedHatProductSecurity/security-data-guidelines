@@ -2,3 +2,4 @@ black
 check-jsonschema
 packageurl-python
 ruff
+koji
