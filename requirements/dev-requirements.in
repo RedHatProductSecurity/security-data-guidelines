@@ -3,4 +3,3 @@ check-jsonschema
 packageurl-python
 ruff
 koji
-PyYAML

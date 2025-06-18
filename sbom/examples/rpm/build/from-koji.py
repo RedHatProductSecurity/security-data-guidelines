@@ -4,11 +4,9 @@ import os
 import re
 import subprocess
 import sys
+import koji
 from copy import deepcopy
 from tempfile import TemporaryDirectory
-
-import koji
-import yaml
 
 # Script requires these RPMs: brewkoji, rpmdevtools, rpm-build
 # Run with: ./from-koji.py brew <NVR>
@@ -588,13 +586,8 @@ def get_modulemd_data():
 
     build_module = build_info["extra"]["typeinfo"]["module"]
     module_tag = build_module["content_koji_tag"]
-    modulemd_yaml = build_module.get("modulemd_str", "")
-    if not modulemd_yaml:
-        raise ValueError("Cannot get module build data, modulemd_yaml is undefined")
-    modulemd = yaml.safe_load(modulemd_yaml)
-    module_data = modulemd["data"]
-    module_name = module_data["name"]
-    module_stream = module_data["stream"]
+    module_name = build_module["name"]
+    module_stream = build_module["stream"]
     return module_tag, module_name, module_stream
 
 
