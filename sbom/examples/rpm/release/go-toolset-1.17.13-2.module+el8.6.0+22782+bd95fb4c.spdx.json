@@ -1,0 +1,319 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "creationInfo": {
+    "created": "2006-08-14T02:34:56Z",
+    "creators": [
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
+    ]
+  },
+  "name": "go-toolset-1.17.13-2.module+el8.6.0+22782+bd95fb4c",
+  "documentNamespace": "https://www.redhat.com/go-toolset-1.17.13-2.module+el8.6.0+22782+bd95fb4c.spdx.json",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-SRPM",
+      "name": "go-toolset",
+      "versionInfo": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "go-toolset-1.17.13-2.module+el8.6.0+22782+bd95fb4c.src.rpm",
+      "licenseConcluded": "BSD AND Public Domain",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-aarch64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-aarch64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-aarch64-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-ppc64le-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-ppc64le-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-ppc64le-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-s390x-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-s390x-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-s390x-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-x86_64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-x86_64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=src&repository_id=rhel-8-for-x86_64-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e7cfe9d4e7758e511bd525967ab68d3c67f9e8eb9aeb14ed06541f4224cc9dfc"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: bf270a16cf4d7c77c2cf43d99fadefdd"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 9e25668985132176233bb46b99734f75b07d05d52becd0f608b902e359bff403"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-go-toolset",
+      "name": "go-toolset",
+      "versionInfo": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "go-toolset-1.17.13-2.module+el8.6.0+22782+bd95fb4c.aarch64.rpm",
+      "licenseConcluded": "BSD AND Public Domain",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-aus-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-tus-rpms&rpmmod=go-toolset:rhel8"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9573b5cd848a238f98a827da0482a10df48bc096d4d85bbc54e30279fb0e5397"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: cdb2fcd67b741b1258cda2cfe96c4bc0"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 4fe76389a32753e20f7889283a5222f7321aff1b9ede4e1f5c1cf3d274c18724"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-go-toolset",
+      "name": "go-toolset",
+      "versionInfo": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "go-toolset-1.17.13-2.module+el8.6.0+22782+bd95fb4c.ppc64le.rpm",
+      "licenseConcluded": "BSD AND Public Domain",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-aus-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-e4s-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-tus-rpms&rpmmod=go-toolset:rhel8"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3e5ddbbbf63a819f7fcf5e04009af794cf437969799a7801b522bd5612e4847e"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 548097352860183b483eea68b9163567"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: f1d777458bedd3ee4c33599d24ab3384101560f28a0e770c9dc38e253827cce0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-go-toolset",
+      "name": "go-toolset",
+      "versionInfo": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "go-toolset-1.17.13-2.module+el8.6.0+22782+bd95fb4c.s390x.rpm",
+      "licenseConcluded": "BSD AND Public Domain",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-aus-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-e4s-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-tus-rpms&rpmmod=go-toolset:rhel8"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "baf8fa6ad07bb7118ab42141a0dcd3780eedea66f0a116bd5e7809e35a8ca98f"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 07bf321ec0b883c40e53de0d2de8ab1f"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 5d634139eedfdb424b2287e657e040aac60346468ac14b9e54c782e2d82db7b1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-go-toolset",
+      "name": "go-toolset",
+      "versionInfo": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "go-toolset-1.17.13-2.module+el8.6.0+22782+bd95fb4c.x86_64.rpm",
+      "licenseConcluded": "BSD AND Public Domain",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-aus-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module%2Bel8.6.0%2B22782%2Bbd95fb4c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-rpms&rpmmod=go-toolset:rhel8"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c8c7e507cb3ae37519b6d0c224af7da290ccb0743ebbd0d0adef48f8614a2d45"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: ea9ac6aa5f10f7a28c3a58cec25a0e30"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: ced8b4befb56a909d3448de7cc7cc5fe8654ddf0af339dd072435ec922715e47"
+        }
+      ]
+    }
+  ],
+  "files": [],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-go-toolset",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-go-toolset",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-go-toolset",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-go-toolset",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    }
+  ]
+}
