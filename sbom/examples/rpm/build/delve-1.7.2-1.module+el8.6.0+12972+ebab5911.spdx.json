@@ -452,7 +452,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -508,7 +508,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -544,7 +544,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -580,7 +580,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [

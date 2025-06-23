@@ -24,7 +24,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -60,7 +60,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=aarch64&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=aarch64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -96,7 +96,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=ppc64le&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=ppc64le&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -132,7 +132,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=s390x&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=s390x&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -168,7 +168,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=x86_64&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [

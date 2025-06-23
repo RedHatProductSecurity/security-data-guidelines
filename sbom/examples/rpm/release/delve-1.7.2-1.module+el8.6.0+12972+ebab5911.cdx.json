@@ -5,11 +5,11 @@
   "serialNumber": "urn:uuid:223234df-bb5b-49af-a896-143736f7d806",
   "metadata": {
     "component": {
-      "bom-ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "delve",
       "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",
-      "purl": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -1439,11 +1439,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "delve-debuginfo",
       "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",
-      "purl": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -1464,33 +1464,33 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
     },
     {
-      "bom-ref": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "delve-debugsource",
       "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",
-      "purl": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -1511,33 +1511,33 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
     },
     {
-      "bom-ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "delve",
       "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",
-      "purl": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -1575,33 +1575,33 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
     },
     {
-      "bom-ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "delve",
       "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",
-      "purl": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -1622,23 +1622,23 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -1646,7 +1646,7 @@
   ],
   "dependencies": [
     {
-      "ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8",
+      "ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "provides": [
         "pkg:golang/github.com/cpuguy83/go-md2man@v2.0.0#v2",
         "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
@@ -1666,9 +1666,9 @@
         "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8",
         "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin",
         "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin-plugins@1.0-SNAPSHOT",
-        "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
-        "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8",
-        "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8"
+        "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
+        "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
+        "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
       ]
     }
   ]

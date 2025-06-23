@@ -319,7 +319,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=src&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -355,7 +355,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=aarch64&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=aarch64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -391,7 +391,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang-bin@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=aarch64&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang-bin@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=aarch64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -427,7 +427,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang-docs@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=noarch&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang-docs@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=noarch&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -463,7 +463,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang-misc@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=noarch&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang-misc@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=noarch&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -499,7 +499,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang-tests@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=noarch&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang-tests@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=noarch&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -535,7 +535,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang-src@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=noarch&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang-src@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=noarch&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -571,7 +571,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=ppc64le&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=ppc64le&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -607,7 +607,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang-bin@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=ppc64le&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang-bin@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=ppc64le&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -643,7 +643,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=s390x&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=s390x&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -679,7 +679,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang-bin@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=s390x&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang-bin@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=s390x&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -715,7 +715,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=x86_64&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -751,7 +751,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang-bin@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=x86_64&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang-bin@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [
@@ -787,7 +787,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:rpm/redhat/golang-race@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=x86_64&rpmmod=go-toolset:rhel8"
+          "referenceLocator": "pkg:rpm/redhat/golang-race@1.17.13-9.module+el8.6.0+23245+b36ba85c?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
         }
       ],
       "checksums": [

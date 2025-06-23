@@ -588,7 +588,11 @@ def get_modulemd_data():
     module_tag = build_module["content_koji_tag"]
     module_name = build_module["name"]
     module_stream = build_module["stream"]
-    return module_tag, module_name, module_stream
+    module_version = build_module["version"]
+    module_context = build_module["context"]
+
+    module_nsvc = f"{module_name}:{module_stream}:{module_version}:{module_context}"
+    return module_tag, module_nsvc
 
 
 def create_cdx_from_spdx(spdx_data):
@@ -623,8 +627,8 @@ is_module = check_module()
 build_ids = []
 rpmmod = ""
 if is_module:
-    module_tag, module_name, module_stream = get_modulemd_data()
-    rpmmod = f"{module_name}:{module_stream}"
+    module_tag, module_nsvc= get_modulemd_data()
+    rpmmod = module_nsvc
     module_builds = SESSION.listTagged(module_tag)
     for module_build in module_builds:
         build_ids.append(module_build["nvr"])

@@ -5,11 +5,11 @@
   "serialNumber": "urn:uuid:223234df-bb5b-49af-a896-143736f7d806",
   "metadata": {
     "component": {
-      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "go-toolset",
       "version": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
-      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -45,11 +45,11 @@
   },
   "components": [
     {
-      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=aarch64&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=aarch64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "go-toolset",
       "version": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
-      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=aarch64&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=aarch64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -68,11 +68,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=ppc64le&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=ppc64le&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "go-toolset",
       "version": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
-      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=ppc64le&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=ppc64le&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -91,11 +91,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=s390x&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=s390x&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "go-toolset",
       "version": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
-      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=s390x&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=s390x&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -114,11 +114,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "go-toolset",
       "version": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
-      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -140,11 +140,11 @@
       }
     },
     {
-      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "bom-ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "go-toolset",
       "version": "1.17.13-2.module+el8.6.0+22782+bd95fb4c",
-      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=x86_64&rpmmod=go-toolset:rhel8",
+      "purl": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -165,12 +165,12 @@
   ],
   "dependencies": [
     {
-      "ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8",
+      "ref": "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "provides": [
-        "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=aarch64&rpmmod=go-toolset:rhel8",
-        "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=ppc64le&rpmmod=go-toolset:rhel8",
-        "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=s390x&rpmmod=go-toolset:rhel8",
-        "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=x86_64&rpmmod=go-toolset:rhel8"
+        "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=aarch64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
+        "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=ppc64le&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
+        "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=s390x&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
+        "pkg:rpm/redhat/go-toolset@1.17.13-2.module+el8.6.0+22782+bd95fb4c?arch=x86_64&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
       ]
     }
   ]
