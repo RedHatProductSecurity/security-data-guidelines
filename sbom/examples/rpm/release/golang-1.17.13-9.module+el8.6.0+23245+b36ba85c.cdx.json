@@ -576,11 +576,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -615,11 +615,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -654,11 +654,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -693,11 +693,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-bin@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -732,11 +732,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-docs@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-docs@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-docs@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-docs@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -771,11 +771,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-misc@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-misc@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-misc@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-misc@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -810,11 +810,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-race@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-race@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-race@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-race@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -849,11 +849,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-src@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-src@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-src@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-src@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -888,11 +888,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-tests@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-tests@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang-tests@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang-tests@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=noarch&repository_id=rhel-8-for-noarch-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -927,11 +927,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=aarch64&repository_id=rhel-8-for-aarch64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -966,11 +966,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=ppc64le&repository_id=rhel-8-for-ppc64le-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -1005,11 +1005,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=s390x&repository_id=rhel-8-for-s390x-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -1043,11 +1043,11 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-noarch-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-aarch64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-x86_64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-noarch-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
@@ -1059,35 +1059,15 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-aarch64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-x86_64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-noarch-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
-          },
-          {
-            "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-x86_64-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
-          },
-          {
-            "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-ppc64le-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
-          },
-          {
-            "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-s390x-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
-          },
-          {
-            "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-aarch64-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-aarch64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
             "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-noarch-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
-          },
-          {
-            "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-x86_64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
@@ -1099,7 +1079,27 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-aarch64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-x86_64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-aarch64-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-noarch-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-ppc64le-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-s390x-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=src&repository_id=rhel-8-for-x86_64-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -1134,11 +1134,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/golang@1.17.13-9.module%2Bel8.6.0%2B23245%2Bb36ba85c?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }

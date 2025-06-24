@@ -130,9 +130,9 @@ elif sbom_file.endswith(".cdx.json"):
         purl_data = PackageURL.from_string(purl)
 
         new_refs = []
-        for repo_id in repo_id_map[sbom_name]:
+        for repo_id in sorted(repo_id_map[sbom_name]):
             if purl_data.qualifiers["arch"] == "src":
-                for arch in all_arches:
+                for arch in sorted(all_arches):
                     purl_data.qualifiers["repository_id"] = (
                         repo_id.format(arch=arch).removesuffix("-rpms") + "-source-rpms"
                     )

@@ -25,7 +25,6 @@ class SBOMBuilder:
         self.cdx_components = []
         self.spdx_relationships = []
         self.cdx_dependencies = set()
-        self.files = []
         self.license_replacements = {
             " and ": " AND ",
             " or ": " OR ",
@@ -134,7 +133,6 @@ class SBOMBuilder:
                 del pkg["externalRefs"]
 
         self.spdx_packages.extend(syft_pkgs)
-        self.files.extend(result.get("files", []))
         syft_rels = result.get("relationships", [])
 
         # Adjust top-level relationship to document, to link it into Source0
@@ -525,7 +523,6 @@ class SBOMBuilder:
             "name": build["nvr"],
             "documentNamespace": f"https://www.redhat.com/{build['nvr']}.spdx.json",
             "packages": self.spdx_packages,
-            "files": self.files,
             "relationships": self.spdx_relationships,
         }
 

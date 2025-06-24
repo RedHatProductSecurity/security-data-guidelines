@@ -1464,7 +1464,11 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-debug-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-aus-debug-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-debug-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
@@ -1472,15 +1476,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-aus-debug-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-debug-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
             "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-debug-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
-          },
-          {
-            "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debuginfo@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-debug-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -1511,7 +1511,11 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
@@ -1519,15 +1523,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
             "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
-          },
-          {
-            "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve-debugsource@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -1575,7 +1575,11 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
@@ -1583,15 +1587,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-aus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
             "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-tus-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
-          },
-          {
-            "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=src&repository_id=rhel-8-for-x86_64-appstream-e4s-source-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }
@@ -1622,7 +1622,11 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-aus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+          },
+          {
+            "field": "purl",
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
@@ -1630,15 +1634,11 @@
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-aus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
+            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           },
           {
             "field": "purl",
             "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-tus-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
-          },
-          {
-            "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/delve@1.7.2-1.module%2Bel8.6.0%2B12972%2Bebab5911?arch=x86_64&repository_id=rhel-8-for-x86_64-appstream-e4s-rpms&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f"
           }
         ]
       }

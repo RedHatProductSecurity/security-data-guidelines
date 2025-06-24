@@ -74446,11 +74446,11 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-ppc64le-source-rpms"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-aarch64-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-aarch64-source-rpms"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-ppc64le-source-rpms"
           },
           {
             "field": "purl",
