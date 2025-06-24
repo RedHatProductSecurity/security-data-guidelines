@@ -74152,7 +74152,7 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=aarch64&repository_id=pipelines-1.14-for-rhel-8-aarch64-rpms"
           }
         ]
       }
@@ -74183,7 +74183,7 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=ppc64le&repository_id=pipelines-1.14-for-rhel-8-ppc64le-rpms"
           }
         ]
       }
@@ -74214,7 +74214,7 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=s390x&repository_id=pipelines-1.14-for-rhel-8-s390x-rpms"
           }
         ]
       }
@@ -74245,7 +74245,7 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client-redistributable@1.14.3-11352.el8?arch=x86_64&repository_id=pipelines-1.14-for-rhel-8-x86_64-rpms"
           }
         ]
       }
@@ -74276,7 +74276,7 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=aarch64&repository_id=pipelines-1.14-for-rhel-8-aarch64-rpms"
           }
         ]
       }
@@ -74307,7 +74307,7 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=ppc64le&repository_id=pipelines-1.14-for-rhel-8-ppc64le-rpms"
           }
         ]
       }
@@ -74338,7 +74338,7 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=s390x&repository_id=pipelines-1.14-for-rhel-8-s390x-rpms"
           }
         ]
       }
@@ -74446,19 +74446,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-ppc64le-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-aarch64-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-s390x-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src&repository_id=pipelines-1.14-for-rhel-8-x86_64-source-rpms"
           }
         ]
       }
@@ -74489,7 +74489,7 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=x86_64&repository_id=pipelines-1.14-for-rhel-8-x86_64-rpms"
           }
         ]
       }

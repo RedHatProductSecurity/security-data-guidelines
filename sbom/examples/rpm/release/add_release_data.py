@@ -138,7 +138,7 @@ elif sbom_file.endswith(".cdx.json"):
                     )
                     release_ref = {
                         "field": "purl",
-                        "concludedValue": purl,
+                        "concludedValue": purl_data.to_string(),
                     }
                     new_refs.append(release_ref)
             else:
@@ -151,7 +151,7 @@ elif sbom_file.endswith(".cdx.json"):
                 )
                 release_ref = {
                     "field": "purl",
-                    "concludedValue": purl,
+                    "concludedValue": purl_data.to_string(),
                 }
                 new_refs.append(release_ref)
 
