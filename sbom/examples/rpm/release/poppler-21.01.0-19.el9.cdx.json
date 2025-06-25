@@ -70,19 +70,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -113,19 +113,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -156,19 +156,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -199,19 +199,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -242,19 +242,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -285,19 +285,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
           }
         ]
       }
@@ -328,19 +328,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
           }
         ]
       }
@@ -371,19 +371,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
           }
         ]
       }
@@ -414,19 +414,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
           }
         ]
       }
@@ -457,19 +457,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
           }
         ]
       }
@@ -500,19 +500,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
           }
         ]
       }
@@ -543,19 +543,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
           }
         ]
       }
@@ -586,19 +586,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
           }
         ]
       }
@@ -629,19 +629,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
           }
         ]
       }
@@ -672,19 +672,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-cpp@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
           }
         ]
       }
@@ -715,19 +715,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -758,19 +758,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -801,19 +801,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -844,19 +844,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -887,19 +887,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -930,19 +930,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
           }
         ]
       }
@@ -973,19 +973,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
           }
         ]
       }
@@ -1016,19 +1016,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
           }
         ]
       }
@@ -1059,19 +1059,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
           }
         ]
       }
@@ -1102,19 +1102,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-debugsource@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
           }
         ]
       }
@@ -1145,19 +1145,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
           }
         ]
       }
@@ -1188,19 +1188,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
           }
         ]
       }
@@ -1231,19 +1231,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
           }
         ]
       }
@@ -1274,19 +1274,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
           }
         ]
       }
@@ -1317,19 +1317,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
           }
         ]
       }
@@ -1360,19 +1360,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -1403,19 +1403,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -1446,19 +1446,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -1489,19 +1489,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -1532,19 +1532,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -1575,19 +1575,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
           }
         ]
       }
@@ -1618,19 +1618,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
           }
         ]
       }
@@ -1661,19 +1661,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
           }
         ]
       }
@@ -1704,19 +1704,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
           }
         ]
       }
@@ -1747,19 +1747,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
           }
         ]
       }
@@ -1790,19 +1790,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch&repository_id=rhel-9-for-noarch-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch&repository_id=rhel-9-for-noarch-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch&repository_id=rhel-9-for-noarch-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib-doc@21.01.0-19.el9?arch=noarch&repository_id=rhel-9-for-noarch-baseos-eus-rpms"
           }
         ]
       }
@@ -1833,19 +1833,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
           }
         ]
       }
@@ -1876,19 +1876,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
           }
         ]
       }
@@ -1919,19 +1919,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
           }
         ]
       }
@@ -1962,19 +1962,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
           }
         ]
       }
@@ -2005,19 +2005,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-glib@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
           }
         ]
       }
@@ -2048,19 +2048,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -2091,19 +2091,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -2134,19 +2134,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -2177,19 +2177,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -2220,19 +2220,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -2263,19 +2263,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
           }
         ]
       }
@@ -2306,19 +2306,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
           }
         ]
       }
@@ -2349,19 +2349,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
           }
         ]
       }
@@ -2392,19 +2392,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
           }
         ]
       }
@@ -2435,19 +2435,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5-devel@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
           }
         ]
       }
@@ -2478,19 +2478,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
           }
         ]
       }
@@ -2521,19 +2521,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
           }
         ]
       }
@@ -2564,19 +2564,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
           }
         ]
       }
@@ -2607,19 +2607,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
           }
         ]
       }
@@ -2650,19 +2650,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-qt5@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
           }
         ]
       }
@@ -2693,19 +2693,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -2736,19 +2736,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -2779,19 +2779,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -2822,19 +2822,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -2865,19 +2865,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-debug-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils-debuginfo@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-debug-rpms"
           }
         ]
       }
@@ -2908,19 +2908,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
           }
         ]
       }
@@ -2951,19 +2951,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
           }
         ]
       }
@@ -2994,19 +2994,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
           }
         ]
       }
@@ -3037,19 +3037,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
           }
         ]
       }
@@ -3080,19 +3080,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler-utils@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
           }
         ]
       }
@@ -3123,19 +3123,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
           }
         ]
       }
@@ -3166,19 +3166,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=i686&repository_id=rhel-9-for-i686-baseos-eus-rpms"
           }
         ]
       }
@@ -3209,19 +3209,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=ppc64le&repository_id=rhel-9-for-ppc64le-baseos-eus-rpms"
           }
         ]
       }
@@ -3252,19 +3252,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=s390x&repository_id=rhel-9-for-s390x-baseos-eus-rpms"
           }
         ]
       }
@@ -3325,99 +3325,99 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-aarch64-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-i686-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-noarch-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-appstream-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-aarch64-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-i686-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-noarch-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-aus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-aarch64-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-i686-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-noarch-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-e4s-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-aarch64-baseos-eus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-i686-baseos-eus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-noarch-baseos-eus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-ppc64le-baseos-eus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-s390x-baseos-eus-source-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src&repository_id=rhel-9-for-x86_64-baseos-eus-source-rpms"
           }
         ]
       }
@@ -3448,19 +3448,19 @@
         "identity": [
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-appstream-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-aus-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-e4s-rpms"
           },
           {
             "field": "purl",
-            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64"
+            "concludedValue": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=x86_64&repository_id=rhel-9-for-x86_64-baseos-eus-rpms"
           }
         ]
       }
