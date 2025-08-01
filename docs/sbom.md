@@ -8,7 +8,8 @@ cases where SBOMs are beneficial:
 
 - accurate vulnerability risk assessment when combined with VEX data,
 
-- or faster incident response when aggregating SBOMs for an entire product portfolio.
+- or faster incident response when aggregating SBOMs for an entire product portfolio, as well as the pipeline components
+  that build them.
 
 When talking about inventories of components, it's also important to describe what the current design goals of a
 comprehensive SBOM are:
@@ -104,6 +105,17 @@ container image (identified by two distinct purls) itself is available from:
          }
        ],
 ```
+
+### Product vs Pipeline
+
+_Product_ SBOMs, as described above in the Build vs Release section, align with the _Build_ SBOM type from CISA's guidance on
+[Types of SBOM Documents](https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf).
+
+_Pipeline_ SBOMs document the software components that make up systems, tools, and infrastructure (STIs) composing a Pipeline
+for building our products. These SBOMs may align with _Build_ SBOM type as defined by CISA, or they may align with _Source_,
+_Analyzed_, or even _Deployed_ SBOM types. The difference between these types lies in how the SBOMs are generated, which
+depends on when during the build and deploy process of a Pipeline STI the SBOM is generated.
+
 
 ### Component-Level vs Product-Level
 
