@@ -50,7 +50,15 @@ version, and repository name but were provided by a different vendor.
 If a purl identifies a Source RPM (SRPM, a package containing source code files that are used to build one or more
 RPMs containing binary artifacts), the `arch` qualifier must use the special value `src`. In the NEVRA file name
 pattern, SRPM packages use a `.src.rpm` suffix. Packages that are not architecture-specific must use the special
-`noarch` value in the arch qualifier.
+`noarch` value in the arch qualifier. Binary RPM packages will include a specific architecture as shown in the
+example above, or will omit the `arch` qualifier entirely to signify that the identifier applies to all available
+architectures.
+
+```
+pkg:rpm/redhat/emacs@27.2-9.el9?arch=x86_64  # Binary RPM package for the x86_64 architecture
+pkg:rpm/redhat/emacs?arch=src  # SRPM package that identifies all available versions of the emacs package
+pkg:rpm/redhat/emacs  # Binary RPM package that identifies all available versions and architectures
+```
 
 An RPM package may also include an epoch number; if not present, it is assumed to be `0`. In a purl, epoch is
 not part of the version field, but instead is specified using the `epoch` qualifier (e.g. `epoch=1`).
