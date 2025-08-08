@@ -16,13 +16,13 @@ The examples used in this article will be for the following images:
 [Repository: registry.redhat.io/rhel9/python-312 Tag: 1-25](https://catalog.redhat.com/software/containers/rhel9/python-312/657b088123df896ebfacf1f0?q=python&container-tabs=overview&image=66cf3054a2c0cf86bc022be9) 
 [Repository: registry.redhat.io/openshift4/ose-console-rhel9 Tag: v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9](https://catalog.redhat.com/software/containers/openshift4/ose-console-rhel9/65280984f0f695f11b13a24e?image=66eb1a1cdf6256d9be4690e6&architecture=amd64)
 
-### Package Identification and purls
+## Package Identification and purls
 In order to accurately report on vulnerabilities in Red hat products, scanning vendors must properly identify the 
 Red Hat package versions for RPMs, RPM modules and container first content, to identify any backported fixes. The
 following section provides guidance on how to find information about packages and how they are reported in Red Hat's 
 CSAF-VEX content. 
 
-#### RPMs and RPM modules 
+### RPMs and RPM modules 
 An RPM package is a file format used by the Red Hat Package Manager (RPM) system for software distribution and management, 
 which package consists of an archive of files and metadata used to install and erase these files.
 
@@ -67,7 +67,7 @@ pkg:rpm/redhat/gcc?arch=src
 
 More detailed information about RPM purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
 
-#### Container metadata and container first content 
+### Container metadata and container first content 
 Container images frequently include non-RPM packages, often referred to as container first content. Non-RPM packages 
 that are present found in a container image will be reported on the container itself instead of the package name. Containers 
 will use the oci purl type. 
@@ -81,14 +81,14 @@ pkg:oci/
 ```
 More detailed information about OCI purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-container-images).
 
-### Determining CPEs 
+## Determining CPEs 
 Common Platform Enumeration (CPE) is a standardized method of describing and identifying classes of applications, 
 operating systems, and hardware devices present among an enterprise's computing assets.
 
 Red Hat uses CPEs to uniquely identify each product and version, following the CPE 2.2 schema. Detailed information about 
 Red Hat CPEs can be found [here]. 
 
-#### Repositories
+### Repositories
 Each Red Hat published container image published after June 2020 includes content manifest JSON files for each layer included in 
 the container image. Inside each content manifest JSON file, you'll find a content sets object, which specifies the 
 repository names that provided the packages found in the container image. Scanning vendors should use the repositories 
@@ -143,7 +143,7 @@ $ cat /root/buildinfo/content_manifests/openshift-enterprise-console-container-v
 }
 ```
 
-#### Repository to CPE mapping 
+### Repository to CPE mapping 
 Red Hat maintains a json file to map Red Hat CDN repositories to our CPEs. Once you have identified the repositories
 used for the product and version by following the previous steps, you search for the repository label and determine
 both the set of related CPEs and the list of repository relative URLs. The repository to CPE mapping is located 
@@ -177,7 +177,7 @@ both the set of related CPEs and the list of repository relative URLs. The repos
 },
 ```
 
-### Using CSAF-VEX
+## Using CSAF-VEX
 Red Hat current publishes security data following the the CSAF standard. Red Hat Product Security currently publishes 
 [CSAF files](https://security.access.redhat.com/data/csaf/v2/advisories/) for every single Red Hat Security Advisory 
 (RHSA) and [VEX files](https://security.access.redhat.com/data/csaf/v2/vex/) for every single CVE record that is associated 
@@ -189,7 +189,7 @@ A detailed breakdown of the format and information included in these files can b
 For the following examples in this section, we will be taking a look how [CVE-2022-27943](https://security.access.redhat.com/data/csaf/v2/vex/2022/cve-2022-27943.json) 
 affects the gcc component in the rhel9/python-312:1-25 container image.
 
-#### Using purls and CPE to find Product IDs 
+### Using purls and CPE to find Product IDs 
 CSAF-VEX files includes information about products, packages and the relationships between products and packages. 
 A `product_name` entry will represent a product and include a `production_identification_helper` in the form of a CPE.
 For any relevant components, a `product_version`entry will be present and include a `product_ifentification_helper` in the
@@ -275,7 +275,7 @@ the component "gcc". The `product_id` for the combination of the product and com
 },
 ```
 
-#### CVE Information
+### CVE Information
 Basic CVE information is represented in the `vulnerabilities` section of CSAF-VEX files:
 
 * `cve`: The official CVE ID
@@ -294,7 +294,7 @@ Basic CVE information is represented in the `vulnerabilities` section of CSAF-VE
 ```
 
 
-#### Affectedness 
+### Affectedness 
 After following the previous steps, scanning vendors can use the full product/component `product_id`
 "red_hat_enterprise_linux_9:gcc", to determine affectedness information about the product and 
 component in the `vulnerabilities`section of the document. Each product/component `product_id ` will be listed in the 
@@ -315,7 +315,7 @@ For the "red_hat_enterprise_linux_9:gcc" product/component pair, it is listed in
 ]
 ```
 
-#### RHSAs 
+### RHSAs 
 Remediation information is also available in the `vulnerabilities` section. Each product/component pair is also listed
 with `category` and `details` attributes that describe the fix status of that product and component. 
 
@@ -337,7 +337,7 @@ listed in the `none_available` category, with details `fixed_deffered`of the `re
 ] 
 ```
 
-#### CVSS score and Severity
+### CVSS score and Severity
 
 The last sections in the `vulnerabilities` object to be aware of are the `scores` object and the `threats` object.
 Although CVSS score 
