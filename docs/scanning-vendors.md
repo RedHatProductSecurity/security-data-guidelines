@@ -26,7 +26,7 @@ CSAF-VEX content.
 An RPM package is a file format used by the Red Hat Package Manager (RPM) system for software distribution and management, 
 which package consists of an archive of files and metadata used to install and erase these files.
 
-There are two types of RPM packages- Source RPMs and binary RPMs. Both types share the file format and tooling, but have
+There are two types of RPM packages: source RPMs and binary RPMs. Both types share the same file format and tooling, but have
 different contents and serve different purposes. A source RPM (SRPM) contains source code and a spec file, which 
 describes how to build the source code into a binary RPM, while a binary RPM contains the binaries built from the 
 sources and patches.
