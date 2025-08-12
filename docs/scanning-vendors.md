@@ -17,7 +17,7 @@ The examples used in this article will be for the following images:
 [Repository: registry.redhat.io/openshift4/ose-console-rhel9 Tag: v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9](https://catalog.redhat.com/software/containers/openshift4/ose-console-rhel9/65280984f0f695f11b13a24e?image=66eb1a1cdf6256d9be4690e6&architecture=amd64)
 
 ## Package Identification and purls
-In order to accurately report on vulnerabilities in Red hat products, scanning vendors must properly identify the 
+In order to accurately report on vulnerabilities in Red Hat products, scanning vendors must properly identify the 
 Red Hat package versions for RPMs, RPM modules and container first content, to identify any backported fixes. The
 following section provides guidance on how to find information about packages and how they are reported in Red Hat's 
 CSAF-VEX content. 
