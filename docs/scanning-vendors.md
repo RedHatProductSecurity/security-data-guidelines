@@ -70,7 +70,7 @@ More detailed information about RPM purl usage can be found [here](https://redha
 ### Container metadata and container first content 
 Container images frequently include non-RPM packages, often referred to as container first content. Non-RPM packages 
 that are present found in a container image will be reported on the container itself instead of the package name. Containers 
-will use the oci purl type. 
+will use the `oci` purl type. 
 
 
 
