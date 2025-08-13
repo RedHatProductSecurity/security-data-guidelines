@@ -1,11 +1,12 @@
 {
   "spdxVersion": "SPDX-2.3",
-  "dataLicense": "CC-BY-4.0",
+  "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
     "created": "2006-08-14T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
   "name": "ubi9-micro-container-9.4-6.1716471860_amd64",
@@ -22,12 +23,12 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=amd64&repository_url=registry.access.redhat.com/ubi9/ubi-micro&tag=9.4-6.1716471860"
+          "referenceLocator": "pkg:oci/ubi-micro@sha256:sha256:213fd2a0116a76eaa274fee20c86eef4dfba9f311784e8fb7d7f5fc38b32f3ef?arch=amd64&repository_url=registry.access.redhat.com/ubi9/ubi-micro&tag=9.4-6.1716471860"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=amd64&repository_url=registry.access.redhat.com/ubi9-micro&tag=9.4-6.1716471860"
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256:sha256:213fd2a0116a76eaa274fee20c86eef4dfba9f311784e8fb7d7f5fc38b32f3ef?arch=amd64&repository_url=registry.access.redhat.com/ubi9-micro&tag=9.4-6.1716471860"
         }
       ],
       "checksums": [
@@ -60,7 +61,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-bash",
+      "SPDXID": "SPDXRef-x86-64-bash",
       "name": "bash",
       "versionInfo": "5.1.8",
       "supplier": "Organization: Red Hat",
@@ -82,7 +83,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-coreutils-single",
+      "SPDXID": "SPDXRef-x86-64-coreutils-single",
       "name": "coreutils-single",
       "versionInfo": "8.32",
       "supplier": "Organization: Red Hat",
@@ -104,7 +105,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-filesystem",
+      "SPDXID": "SPDXRef-x86-64-filesystem",
       "name": "filesystem",
       "versionInfo": "3.16",
       "supplier": "Organization: Red Hat",
@@ -126,7 +127,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-glibc",
+      "SPDXID": "SPDXRef-x86-64-glibc",
       "name": "glibc",
       "versionInfo": "2.34",
       "supplier": "Organization: Red Hat",
@@ -148,7 +149,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-glibc-common",
+      "SPDXID": "SPDXRef-x86-64-glibc-common",
       "name": "glibc-common",
       "versionInfo": "2.34",
       "supplier": "Organization: Red Hat",
@@ -170,7 +171,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-glibc-minimal-langpack",
+      "SPDXID": "SPDXRef-x86-64-glibc-minimal-langpack",
       "name": "glibc-minimal-langpack",
       "versionInfo": "2.34",
       "supplier": "Organization: Red Hat",
@@ -192,7 +193,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libacl",
+      "SPDXID": "SPDXRef-x86-64-libacl",
       "name": "libacl",
       "versionInfo": "2.3.1",
       "supplier": "Organization: Red Hat",
@@ -214,7 +215,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libattr",
+      "SPDXID": "SPDXRef-x86-64-libattr",
       "name": "libattr",
       "versionInfo": "2.5.1",
       "supplier": "Organization: Red Hat",
@@ -236,7 +237,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libcap",
+      "SPDXID": "SPDXRef-x86-64-libcap",
       "name": "libcap",
       "versionInfo": "2.48",
       "supplier": "Organization: Red Hat",
@@ -258,7 +259,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libgcc",
+      "SPDXID": "SPDXRef-x86-64-libgcc",
       "name": "libgcc",
       "versionInfo": "11.4.1",
       "supplier": "Organization: Red Hat",
@@ -280,7 +281,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libselinux",
+      "SPDXID": "SPDXRef-x86-64-libselinux",
       "name": "libselinux",
       "versionInfo": "3.6",
       "supplier": "Organization: Red Hat",
@@ -302,7 +303,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libsepol",
+      "SPDXID": "SPDXRef-x86-64-libsepol",
       "name": "libsepol",
       "versionInfo": "3.6",
       "supplier": "Organization: Red Hat",
@@ -346,7 +347,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-ncurses-libs",
+      "SPDXID": "SPDXRef-x86-64-ncurses-libs",
       "name": "ncurses-libs",
       "versionInfo": "6.2",
       "supplier": "Organization: Red Hat",
@@ -368,7 +369,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-pcre2",
+      "SPDXID": "SPDXRef-x86-64-pcre2",
       "name": "pcre2",
       "versionInfo": "10.40",
       "supplier": "Organization: Red Hat",
@@ -412,7 +413,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-redhat-release",
+      "SPDXID": "SPDXRef-x86-64-redhat-release",
       "name": "redhat-release",
       "versionInfo": "9.4",
       "supplier": "Organization: Red Hat",
@@ -476,12 +477,38 @@
           "checksumValue": "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-0-amd64",
+      "name": "ubi9_amd64",
+      "versionInfo": "9.4-947",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi9@sha256:11d5b4a77bfc15341d4b6dffa3d6ed510189fec9583db77cfc107067b5f906c5?tag=9.4-947"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "11d5b4a77bfc15341d4b6dffa3d6ed510189fec9583db77cfc107067b5f906c5"
+        }
+      ]
     }
   ],
   "relationships": [
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-amd64"
+    },
+    {
+      "spdxElementId": "SPDXRef-parent-image-0-amd64",
+      "relationshipType": "BUILD_TOOL_OF",
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-amd64"
     },
     {
@@ -492,62 +519,62 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-bash"
+      "relatedSpdxElement": "SPDXRef-x86-64-bash"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-coreutils-single"
+      "relatedSpdxElement": "SPDXRef-x86-64-coreutils-single"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-filesystem"
+      "relatedSpdxElement": "SPDXRef-x86-64-filesystem"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-glibc"
+      "relatedSpdxElement": "SPDXRef-x86-64-glibc"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-glibc-common"
+      "relatedSpdxElement": "SPDXRef-x86-64-glibc-common"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-glibc-minimal-langpack"
+      "relatedSpdxElement": "SPDXRef-x86-64-glibc-minimal-langpack"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libacl"
+      "relatedSpdxElement": "SPDXRef-x86-64-libacl"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libattr"
+      "relatedSpdxElement": "SPDXRef-x86-64-libattr"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libcap"
+      "relatedSpdxElement": "SPDXRef-x86-64-libcap"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libgcc"
+      "relatedSpdxElement": "SPDXRef-x86-64-libgcc"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libselinux"
+      "relatedSpdxElement": "SPDXRef-x86-64-libselinux"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libsepol"
+      "relatedSpdxElement": "SPDXRef-x86-64-libsepol"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
@@ -557,12 +584,12 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-ncurses-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-ncurses-libs"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-pcre2"
+      "relatedSpdxElement": "SPDXRef-x86-64-pcre2"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
@@ -572,7 +599,7 @@
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-redhat-release"
+      "relatedSpdxElement": "SPDXRef-x86-64-redhat-release"
     },
     {
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",

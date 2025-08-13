@@ -1,11 +1,12 @@
 {
   "spdxVersion": "SPDX-2.3",
-  "dataLicense": "CC-BY-4.0",
+  "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
     "created": "2006-08-14T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
   "name": "kernel-module-management-operator-container-1.1.2-25_arm64",
@@ -22,7 +23,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Ad845f0bd93dad56c92c47e8c116a11a0cc5924c0b99aed912b4f8b54178efa98?arch=arm64"
+          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Asha256%3A9e74a91f532b7550ee909c6ce1636122982a5c5e32859c40c3bfe68231d31100?arch=arm64"
         }
       ],
       "checksums": [
@@ -1353,7 +1354,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-aarch64-libcom_err",
+      "SPDXID": "SPDXRef-aarch64-libcom-err",
       "name": "libcom_err",
       "versionInfo": "1.46.5",
       "supplier": "Organization: Red Hat",
@@ -2035,7 +2036,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-aarch64-libstdc++",
+      "SPDXID": "SPDXRef-aarch64-libstdc",
       "name": "libstdc++",
       "versionInfo": "11.3.1",
       "supplier": "Organization: Red Hat",
@@ -3991,6 +3992,48 @@
           "checksumValue": "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-0-arm64",
+      "name": "rhel9-go-toolset_arm64",
+      "versionInfo": "1.19.4-18",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/rhel9-go-toolset@sha256:355b1d0a6e12250247d157949dcdc68d8a9508fc027223515a6d4662f4ec03f6?tag=1.19.4-18"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "355b1d0a6e12250247d157949dcdc68d8a9508fc027223515a6d4662f4ec03f6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-1-arm64",
+      "name": "rhel_arm64",
+      "versionInfo": "9.2-1191",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/rhel@sha256:8d79ed0aaf36d7bf914411aab26e3a78308fe6217ca865ad7cc107c9078bfb12?tag=9.2-1191&repository_url=registry.redhat.io/rhel9-2-els"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8d79ed0aaf36d7bf914411aab26e3a78308fe6217ca865ad7cc107c9078bfb12"
+        }
+      ]
     }
   ],
   "relationships": [
@@ -3998,6 +4041,16 @@
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-parent-image-0-arm64",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",
+      "relationshipType": "DESCENDANT_OF",
+      "relatedSpdxElement": "SPDXRef-parent-image-1-arm64"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",
@@ -4302,7 +4355,7 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-libcom_err"
+      "relatedSpdxElement": "SPDXRef-aarch64-libcom-err"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",
@@ -4457,7 +4510,7 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-aarch64-libstdc++"
+      "relatedSpdxElement": "SPDXRef-aarch64-libstdc"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-arm64",

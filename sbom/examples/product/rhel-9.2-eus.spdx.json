@@ -1,14 +1,15 @@
 {
   "spdxVersion": "SPDX-2.3",
-  "dataLicense": "CC-BY-4.0",
+  "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
     "created": "2006-08-14T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
-  "name": "RHEL 9.2 EUS",
+  "name": "Red Hat Enterprise Linux 9.2 EUS",
   "documentNamespace": "https://www.redhat.com/rhel-9.2-eus.spdx.json",
   "packages": [
     {
@@ -21,13 +22,18 @@
       "externalRefs": [
         {
           "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:rhel_eus:9.2::appstream",
+          "referenceType": "cpe22Type"
+        },
+        {
+          "referenceCategory": "SECURITY",
           "referenceLocator": "cpe:/a:redhat:rhel_eus:9.2::baseos",
           "referenceType": "cpe22Type"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-SRPM-1",
+      "SPDXID": "SPDXRef-openssl-3.0.7-18.el9-2",
       "name": "openssl",
       "versionInfo": "3.0.7-18.el9_2",
       "supplier": "Organization: Red Hat",
@@ -114,7 +120,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee46a56d9"
+          "checksumValue": "9215c64e7289a058248728089e4d98ed1cc392bb5eb9b8fcbe661d57e8145bbd"
         }
       ]
     }
@@ -127,7 +133,7 @@
       "relatedSpdxElement": "SPDXRef-RHEL-9.2-EUS"
     },
     {
-      "spdxElementId": "SPDXRef-SRPM-1",
+      "spdxElementId": "SPDXRef-openssl-3.0.7-18.el9-2",
       "relationshipType": "PACKAGE_OF",
       "relatedSpdxElement": "SPDXRef-RHEL-9.2-EUS"
     }

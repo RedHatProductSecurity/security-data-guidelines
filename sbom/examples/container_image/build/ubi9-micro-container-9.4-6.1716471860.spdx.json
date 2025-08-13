@@ -1,11 +1,12 @@
 {
   "spdxVersion": "SPDX-2.3",
-  "dataLicense": "CC-BY-4.0",
+  "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
     "created": "2006-08-14T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
   "name": "ubi9-micro-container-9.4-6.1716471860",
@@ -48,12 +49,12 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=ppc64le"
+          "referenceLocator": "pkg:oci/ubi-micro@sha256%3Asha256%3A26f08722139c4da653b870272a192fac700960a3315baa1f79f83a4712a436d4?arch=ppc64le"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=ppc64le"
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3Asha256%3A26f08722139c4da653b870272a192fac700960a3315baa1f79f83a4712a436d4?arch=ppc64le"
         }
       ],
       "checksums": [
@@ -74,12 +75,12 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=s390x"
+          "referenceLocator": "pkg:oci/ubi-micro@sha256%3Asha256%3A2c9e70f4174747c6b53d253e879177c52731cc4bdc5fe9c6a2555412d849a952?arch=s390x"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=s390x"
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3Asha256%3A2c9e70f4174747c6b53d253e879177c52731cc4bdc5fe9c6a2555412d849a952?arch=s390x"
         }
       ],
       "checksums": [
@@ -100,12 +101,12 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=arm64"
+          "referenceLocator": "pkg:oci/ubi-micro@sha256%3Asha256%3Ac72c705fe4e9de2e065a817be2fbf1b6406010610532243727fdc3042227c71b?arch=arm64"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=arm64"
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3Asha256%3Ac72c705fe4e9de2e065a817be2fbf1b6406010610532243727fdc3042227c71b?arch=arm64"
         }
       ],
       "checksums": [
@@ -126,18 +127,33 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=amd64"
+          "referenceLocator": "pkg:oci/ubi-micro@sha256%3Asha256%3A213fd2a0116a76eaa274fee20c86eef4dfba9f311784e8fb7d7f5fc38b32f3ef?arch=amd64"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=amd64"
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3Asha256%3A213fd2a0116a76eaa274fee20c86eef4dfba9f311784e8fb7d7f5fc38b32f3ef?arch=amd64"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "13fd2a0116a76eaa274fee20c86eef4dfba9f311784e8fb7d7f5fc38b32f3ef"
+        }
+      ]
+    },
+    {
+      "SPDXID": "ubi9-micro-container-9.4-6.1716471860-Source",
+      "name": "containers",
+      "versionInfo": "433dec61d526247ac9533c1d9b97e98a1127c782",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://git.example.com/containers/ubi9-micro#433dec61d526247ac9533c1d9b97e98a1127c782",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/containers@433dec61d526247ac9533c1d9b97e98a1127c782?download_url=https://git.example.com/containers/ubi9-micro#433dec61d526247ac9533c1d9b97e98a1127c782"
         }
       ]
     }
@@ -167,6 +183,11 @@
       "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
       "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-image-index"
+    },
+    {
+      "spdxElementId": "SPDXRef-image-index",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "ubi9-micro-container-9.4-6.1716471860-Source"
     }
   ]
 }

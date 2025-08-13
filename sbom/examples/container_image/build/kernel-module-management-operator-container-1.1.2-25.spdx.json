@@ -1,11 +1,12 @@
 {
   "spdxVersion": "SPDX-2.3",
-  "dataLicense": "CC-BY-4.0",
+  "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
     "created": "2006-08-14T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
   "name": "kernel-module-management-operator-container-1.1.2-25",
@@ -43,7 +44,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Ad845f0bd93dad56c92c47e8c116a11a0cc5924c0b99aed912b4f8b54178efa98?arch=amd64"
+          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Asha256%3Aed976a0ba418a498b05a56cb05afa0cb36a65e750771f3840b12e9bae3afb22d?arch=amd64"
         }
       ],
       "checksums": [
@@ -64,7 +65,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Ad845f0bd93dad56c92c47e8c116a11a0cc5924c0b99aed912b4f8b54178efa98?arch=arm64"
+          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Asha256%3A9e74a91f532b7550ee909c6ce1636122982a5c5e32859c40c3bfe68231d31100?arch=arm64"
         }
       ],
       "checksums": [
@@ -85,13 +86,43 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Ad845f0bd93dad56c92c47e8c116a11a0cc5924c0b99aed912b4f8b54178efa98?arch=ppc64le"
+          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Asha256%3A32a9929e6f11dfefb7a339d6767d1050cec2b24d397856cbd9b46a1bbc3f8827?arch=ppc64le"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "32a9929e6f11dfefb7a339d6767d1050cec2b24d397856cbd9b46a1bbc3f8827"
+        }
+      ]
+    },
+    {
+      "SPDXID": "kernel-module-management-operator-container-1.1.2-25-Source",
+      "name": "containers",
+      "versionInfo": "799f12ccdec1ead269f54c4e3e51c28d7c794ae4",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://git.example.com/containers/kernel-module-management-operator#799f12ccdec1ead269f54c4e3e51c28d7c794ae4",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/containers@799f12ccdec1ead269f54c4e3e51c28d7c794ae4?download_url=https://git.example.com/containers/kernel-module-management-operator#799f12ccdec1ead269f54c4e3e51c28d7c794ae4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "kernel-module-management-operator-container-1.1.2-25-Source-origin",
+      "name": "kernel-module-management-rhel9-operator",
+      "versionInfo": "591541ea5a4503c63a26e524d5a102eb1bf951a3",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://github.com/rh-ecosystem-edge/kernel-module-management#591541ea5a4503c63a26e524d5a102eb1bf951a3",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/rh-ecosystem-edge@591541ea5a4503c63a26e524d5a102eb1bf951a3?download_url=https://pkgs.devel.redhat.com/git/containers/kernel-module-management-operator#799f12ccdec1ead269f54c4e3e51c28d7c794ae4"
         }
       ]
     }
@@ -116,6 +147,16 @@
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-ppc64le",
       "relationshipType": "VARIANT_OF",
       "relatedSpdxElement": "SPDXRef-image-index"
+    },
+    {
+      "spdxElementId": "SPDXRef-image-index",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "kernel-module-management-operator-container-1.1.2-25-Source"
+    },
+    {
+      "spdxElementId": "kernel-module-management-operator-container-1.1.2-25-Source",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "kernel-module-management-operator-container-1.1.2-25-Source-origin"
     }
   ]
 }

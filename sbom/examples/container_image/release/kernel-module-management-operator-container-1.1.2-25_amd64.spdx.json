@@ -1,11 +1,12 @@
 {
   "spdxVersion": "SPDX-2.3",
-  "dataLicense": "CC-BY-4.0",
+  "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
     "created": "2006-08-14T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
   "name": "kernel-module-management-operator-container-1.1.2-25_amd64",
@@ -22,7 +23,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256%3Ad845f0bd93dad56c92c47e8c116a11a0cc5924c0b99aed912b4f8b54178efa98?arch=amd64&repository_url=registry.access.redhat.com/kmm/kernel-module-management-rhel9-operator&tag=1.1.2-25"
+          "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256:sha256:ed976a0ba418a498b05a56cb05afa0cb36a65e750771f3840b12e9bae3afb22d?arch=amd64&repository_url=registry.access.redhat.com/kmm/kernel-module-management-rhel9-operator&tag=1.1.2-25"
         }
       ],
       "checksums": [
@@ -33,7 +34,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-acl",
+      "SPDXID": "SPDXRef-x86-64-acl",
       "name": "acl",
       "versionInfo": "2.3.1",
       "supplier": "Organization: Red Hat",
@@ -55,7 +56,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-alternatives",
+      "SPDXID": "SPDXRef-x86-64-alternatives",
       "name": "alternatives",
       "versionInfo": "1.20",
       "supplier": "Organization: Red Hat",
@@ -77,7 +78,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-audit-libs",
+      "SPDXID": "SPDXRef-x86-64-audit-libs",
       "name": "audit-libs",
       "versionInfo": "3.0.7",
       "supplier": "Organization: Red Hat",
@@ -121,7 +122,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-bash",
+      "SPDXID": "SPDXRef-x86-64-bash",
       "name": "bash",
       "versionInfo": "5.1.8",
       "supplier": "Organization: Red Hat",
@@ -143,7 +144,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-bzip2-libs",
+      "SPDXID": "SPDXRef-x86-64-bzip2-libs",
       "name": "bzip2-libs",
       "versionInfo": "1.0.8",
       "supplier": "Organization: Red Hat",
@@ -187,7 +188,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-coreutils-single",
+      "SPDXID": "SPDXRef-x86-64-coreutils-single",
       "name": "coreutils-single",
       "versionInfo": "8.32",
       "supplier": "Organization: Red Hat",
@@ -209,7 +210,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-cracklib",
+      "SPDXID": "SPDXRef-x86-64-cracklib",
       "name": "cracklib",
       "versionInfo": "2.9.6",
       "supplier": "Organization: Red Hat",
@@ -231,7 +232,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-cracklib-dicts",
+      "SPDXID": "SPDXRef-x86-64-cracklib-dicts",
       "name": "cracklib-dicts",
       "versionInfo": "2.9.6",
       "supplier": "Organization: Red Hat",
@@ -297,7 +298,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-curl-minimal",
+      "SPDXID": "SPDXRef-x86-64-curl-minimal",
       "name": "curl-minimal",
       "versionInfo": "7.76.1",
       "supplier": "Organization: Red Hat",
@@ -319,7 +320,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-cyrus-sasl-lib",
+      "SPDXID": "SPDXRef-x86-64-cyrus-sasl-lib",
       "name": "cyrus-sasl-lib",
       "versionInfo": "2.1.27",
       "supplier": "Organization: Red Hat",
@@ -341,7 +342,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-dbus",
+      "SPDXID": "SPDXRef-x86-64-dbus",
       "name": "dbus",
       "versionInfo": "1.12.20",
       "supplier": "Organization: Red Hat",
@@ -363,7 +364,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-dbus-broker",
+      "SPDXID": "SPDXRef-x86-64-dbus-broker",
       "name": "dbus-broker",
       "versionInfo": "28",
       "supplier": "Organization: Red Hat",
@@ -407,7 +408,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-dbus-libs",
+      "SPDXID": "SPDXRef-x86-64-dbus-libs",
       "name": "dbus-libs",
       "versionInfo": "1.12.20",
       "supplier": "Organization: Red Hat",
@@ -451,7 +452,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-dmidecode",
+      "SPDXID": "SPDXRef-x86-64-dmidecode",
       "name": "dmidecode",
       "versionInfo": "3.3",
       "supplier": "Organization: Red Hat",
@@ -539,7 +540,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-elfutils-libelf",
+      "SPDXID": "SPDXRef-x86-64-elfutils-libelf",
       "name": "elfutils-libelf",
       "versionInfo": "0.188",
       "supplier": "Organization: Red Hat",
@@ -561,7 +562,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-elfutils-libs",
+      "SPDXID": "SPDXRef-x86-64-elfutils-libs",
       "name": "elfutils-libs",
       "versionInfo": "0.188",
       "supplier": "Organization: Red Hat",
@@ -583,7 +584,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-expat",
+      "SPDXID": "SPDXRef-x86-64-expat",
       "name": "expat",
       "versionInfo": "2.5.0",
       "supplier": "Organization: Red Hat",
@@ -605,7 +606,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-file-libs",
+      "SPDXID": "SPDXRef-x86-64-file-libs",
       "name": "file-libs",
       "versionInfo": "5.39",
       "supplier": "Organization: Red Hat",
@@ -627,7 +628,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-filesystem",
+      "SPDXID": "SPDXRef-x86-64-filesystem",
       "name": "filesystem",
       "versionInfo": "3.16",
       "supplier": "Organization: Red Hat",
@@ -649,7 +650,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-findutils",
+      "SPDXID": "SPDXRef-x86-64-findutils",
       "name": "findutils",
       "versionInfo": "4.8.0",
       "supplier": "Organization: Red Hat",
@@ -693,7 +694,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-gawk",
+      "SPDXID": "SPDXRef-x86-64-gawk",
       "name": "gawk",
       "versionInfo": "5.1.0",
       "supplier": "Organization: Red Hat",
@@ -715,7 +716,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-gdb-gdbserver",
+      "SPDXID": "SPDXRef-x86-64-gdb-gdbserver",
       "name": "gdb-gdbserver",
       "versionInfo": "10.2",
       "supplier": "Organization: Red Hat",
@@ -737,7 +738,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-gdbm-libs",
+      "SPDXID": "SPDXRef-x86-64-gdbm-libs",
       "name": "gdbm-libs",
       "versionInfo": "1.19",
       "supplier": "Organization: Red Hat",
@@ -759,7 +760,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-glib2",
+      "SPDXID": "SPDXRef-x86-64-glib2",
       "name": "glib2",
       "versionInfo": "2.68.4",
       "supplier": "Organization: Red Hat",
@@ -781,7 +782,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-glibc",
+      "SPDXID": "SPDXRef-x86-64-glibc",
       "name": "glibc",
       "versionInfo": "2.34",
       "supplier": "Organization: Red Hat",
@@ -803,7 +804,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-glibc-common",
+      "SPDXID": "SPDXRef-x86-64-glibc-common",
       "name": "glibc-common",
       "versionInfo": "2.34",
       "supplier": "Organization: Red Hat",
@@ -825,7 +826,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-glibc-minimal-langpack",
+      "SPDXID": "SPDXRef-x86-64-glibc-minimal-langpack",
       "name": "glibc-minimal-langpack",
       "versionInfo": "2.34",
       "supplier": "Organization: Red Hat",
@@ -847,7 +848,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-gmp",
+      "SPDXID": "SPDXRef-x86-64-gmp",
       "name": "gmp",
       "versionInfo": "6.2.0",
       "supplier": "Organization: Red Hat",
@@ -869,7 +870,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-gnupg2",
+      "SPDXID": "SPDXRef-x86-64-gnupg2",
       "name": "gnupg2",
       "versionInfo": "2.3.3",
       "supplier": "Organization: Red Hat",
@@ -891,7 +892,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-gnutls",
+      "SPDXID": "SPDXRef-x86-64-gnutls",
       "name": "gnutls",
       "versionInfo": "3.7.6",
       "supplier": "Organization: Red Hat",
@@ -913,7 +914,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-gobject-introspection",
+      "SPDXID": "SPDXRef-x86-64-gobject-introspection",
       "name": "gobject-introspection",
       "versionInfo": "1.68.0",
       "supplier": "Organization: Red Hat",
@@ -935,7 +936,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-gpgme",
+      "SPDXID": "SPDXRef-x86-64-gpgme",
       "name": "gpgme",
       "versionInfo": "1.15.1",
       "supplier": "Organization: Red Hat",
@@ -957,7 +958,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-grep",
+      "SPDXID": "SPDXRef-x86-64-grep",
       "name": "grep",
       "versionInfo": "3.6",
       "supplier": "Organization: Red Hat",
@@ -979,7 +980,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-gzip",
+      "SPDXID": "SPDXRef-x86-64-gzip",
       "name": "gzip",
       "versionInfo": "1.12",
       "supplier": "Organization: Red Hat",
@@ -1001,7 +1002,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-ima-evm-utils",
+      "SPDXID": "SPDXRef-x86-64-ima-evm-utils",
       "name": "ima-evm-utils",
       "versionInfo": "1.4",
       "supplier": "Organization: Red Hat",
@@ -1023,7 +1024,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-json-c",
+      "SPDXID": "SPDXRef-x86-64-json-c",
       "name": "json-c",
       "versionInfo": "0.14",
       "supplier": "Organization: Red Hat",
@@ -1045,7 +1046,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-json-glib",
+      "SPDXID": "SPDXRef-x86-64-json-glib",
       "name": "json-glib",
       "versionInfo": "1.6.6",
       "supplier": "Organization: Red Hat",
@@ -1067,7 +1068,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-keyutils-libs",
+      "SPDXID": "SPDXRef-x86-64-keyutils-libs",
       "name": "keyutils-libs",
       "versionInfo": "1.6.3",
       "supplier": "Organization: Red Hat",
@@ -1089,7 +1090,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-kmod-libs",
+      "SPDXID": "SPDXRef-x86-64-kmod-libs",
       "name": "kmod-libs",
       "versionInfo": "28",
       "supplier": "Organization: Red Hat",
@@ -1111,7 +1112,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-krb5-libs",
+      "SPDXID": "SPDXRef-x86-64-krb5-libs",
       "name": "krb5-libs",
       "versionInfo": "1.20.1",
       "supplier": "Organization: Red Hat",
@@ -1199,7 +1200,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libacl",
+      "SPDXID": "SPDXRef-x86-64-libacl",
       "name": "libacl",
       "versionInfo": "2.3.1",
       "supplier": "Organization: Red Hat",
@@ -1221,7 +1222,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libarchive",
+      "SPDXID": "SPDXRef-x86-64-libarchive",
       "name": "libarchive",
       "versionInfo": "3.5.3",
       "supplier": "Organization: Red Hat",
@@ -1243,7 +1244,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libassuan",
+      "SPDXID": "SPDXRef-x86-64-libassuan",
       "name": "libassuan",
       "versionInfo": "2.5.5",
       "supplier": "Organization: Red Hat",
@@ -1265,7 +1266,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libattr",
+      "SPDXID": "SPDXRef-x86-64-libattr",
       "name": "libattr",
       "versionInfo": "2.5.1",
       "supplier": "Organization: Red Hat",
@@ -1287,7 +1288,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libblkid",
+      "SPDXID": "SPDXRef-x86-64-libblkid",
       "name": "libblkid",
       "versionInfo": "2.37.4",
       "supplier": "Organization: Red Hat",
@@ -1309,7 +1310,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libcap",
+      "SPDXID": "SPDXRef-x86-64-libcap",
       "name": "libcap",
       "versionInfo": "2.48",
       "supplier": "Organization: Red Hat",
@@ -1331,7 +1332,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libcap-ng",
+      "SPDXID": "SPDXRef-x86-64-libcap-ng",
       "name": "libcap-ng",
       "versionInfo": "0.8.2",
       "supplier": "Organization: Red Hat",
@@ -1353,7 +1354,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libcom_err",
+      "SPDXID": "SPDXRef-x86-64-libcom-err",
       "name": "libcom_err",
       "versionInfo": "1.46.5",
       "supplier": "Organization: Red Hat",
@@ -1375,7 +1376,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libcomps",
+      "SPDXID": "SPDXRef-x86-64-libcomps",
       "name": "libcomps",
       "versionInfo": "0.1.18",
       "supplier": "Organization: Red Hat",
@@ -1397,7 +1398,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libcurl-minimal",
+      "SPDXID": "SPDXRef-x86-64-libcurl-minimal",
       "name": "libcurl-minimal",
       "versionInfo": "7.76.1",
       "supplier": "Organization: Red Hat",
@@ -1419,7 +1420,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libdb",
+      "SPDXID": "SPDXRef-x86-64-libdb",
       "name": "libdb",
       "versionInfo": "5.3.28",
       "supplier": "Organization: Red Hat",
@@ -1441,7 +1442,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libdnf",
+      "SPDXID": "SPDXRef-x86-64-libdnf",
       "name": "libdnf",
       "versionInfo": "0.69.0",
       "supplier": "Organization: Red Hat",
@@ -1463,7 +1464,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libdnf-plugin-subscription-manager",
+      "SPDXID": "SPDXRef-x86-64-libdnf-plugin-subscription-manager",
       "name": "libdnf-plugin-subscription-manager",
       "versionInfo": "1.29.33.2",
       "supplier": "Organization: Red Hat",
@@ -1485,7 +1486,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libeconf",
+      "SPDXID": "SPDXRef-x86-64-libeconf",
       "name": "libeconf",
       "versionInfo": "0.4.1",
       "supplier": "Organization: Red Hat",
@@ -1507,7 +1508,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libevent",
+      "SPDXID": "SPDXRef-x86-64-libevent",
       "name": "libevent",
       "versionInfo": "2.1.12",
       "supplier": "Organization: Red Hat",
@@ -1529,7 +1530,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libfdisk",
+      "SPDXID": "SPDXRef-x86-64-libfdisk",
       "name": "libfdisk",
       "versionInfo": "2.37.4",
       "supplier": "Organization: Red Hat",
@@ -1551,7 +1552,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libffi",
+      "SPDXID": "SPDXRef-x86-64-libffi",
       "name": "libffi",
       "versionInfo": "3.4.2",
       "supplier": "Organization: Red Hat",
@@ -1573,7 +1574,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libgcc",
+      "SPDXID": "SPDXRef-x86-64-libgcc",
       "name": "libgcc",
       "versionInfo": "11.3.1",
       "supplier": "Organization: Red Hat",
@@ -1595,7 +1596,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libgcrypt",
+      "SPDXID": "SPDXRef-x86-64-libgcrypt",
       "name": "libgcrypt",
       "versionInfo": "1.10.0",
       "supplier": "Organization: Red Hat",
@@ -1617,7 +1618,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libgomp",
+      "SPDXID": "SPDXRef-x86-64-libgomp",
       "name": "libgomp",
       "versionInfo": "11.3.1",
       "supplier": "Organization: Red Hat",
@@ -1639,7 +1640,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libgpg-error",
+      "SPDXID": "SPDXRef-x86-64-libgpg-error",
       "name": "libgpg-error",
       "versionInfo": "1.42",
       "supplier": "Organization: Red Hat",
@@ -1661,7 +1662,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libidn2",
+      "SPDXID": "SPDXRef-x86-64-libidn2",
       "name": "libidn2",
       "versionInfo": "2.3.0",
       "supplier": "Organization: Red Hat",
@@ -1683,7 +1684,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libksba",
+      "SPDXID": "SPDXRef-x86-64-libksba",
       "name": "libksba",
       "versionInfo": "1.5.1",
       "supplier": "Organization: Red Hat",
@@ -1705,7 +1706,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libmodulemd",
+      "SPDXID": "SPDXRef-x86-64-libmodulemd",
       "name": "libmodulemd",
       "versionInfo": "2.13.0",
       "supplier": "Organization: Red Hat",
@@ -1727,7 +1728,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libmount",
+      "SPDXID": "SPDXRef-x86-64-libmount",
       "name": "libmount",
       "versionInfo": "2.37.4",
       "supplier": "Organization: Red Hat",
@@ -1749,7 +1750,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libnghttp2",
+      "SPDXID": "SPDXRef-x86-64-libnghttp2",
       "name": "libnghttp2",
       "versionInfo": "1.43.0",
       "supplier": "Organization: Red Hat",
@@ -1771,7 +1772,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libnl3",
+      "SPDXID": "SPDXRef-x86-64-libnl3",
       "name": "libnl3",
       "versionInfo": "3.7.0",
       "supplier": "Organization: Red Hat",
@@ -1793,7 +1794,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libpwquality",
+      "SPDXID": "SPDXRef-x86-64-libpwquality",
       "name": "libpwquality",
       "versionInfo": "1.4.4",
       "supplier": "Organization: Red Hat",
@@ -1815,7 +1816,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-librepo",
+      "SPDXID": "SPDXRef-x86-64-librepo",
       "name": "librepo",
       "versionInfo": "1.14.5",
       "supplier": "Organization: Red Hat",
@@ -1859,7 +1860,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-librhsm",
+      "SPDXID": "SPDXRef-x86-64-librhsm",
       "name": "librhsm",
       "versionInfo": "0.0.3",
       "supplier": "Organization: Red Hat",
@@ -1881,7 +1882,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libseccomp",
+      "SPDXID": "SPDXRef-x86-64-libseccomp",
       "name": "libseccomp",
       "versionInfo": "2.5.2",
       "supplier": "Organization: Red Hat",
@@ -1903,7 +1904,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libselinux",
+      "SPDXID": "SPDXRef-x86-64-libselinux",
       "name": "libselinux",
       "versionInfo": "3.5",
       "supplier": "Organization: Red Hat",
@@ -1925,7 +1926,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libsemanage",
+      "SPDXID": "SPDXRef-x86-64-libsemanage",
       "name": "libsemanage",
       "versionInfo": "3.5",
       "supplier": "Organization: Red Hat",
@@ -1947,7 +1948,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libsepol",
+      "SPDXID": "SPDXRef-x86-64-libsepol",
       "name": "libsepol",
       "versionInfo": "3.5",
       "supplier": "Organization: Red Hat",
@@ -1969,7 +1970,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libsigsegv",
+      "SPDXID": "SPDXRef-x86-64-libsigsegv",
       "name": "libsigsegv",
       "versionInfo": "2.13",
       "supplier": "Organization: Red Hat",
@@ -1991,7 +1992,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libsmartcols",
+      "SPDXID": "SPDXRef-x86-64-libsmartcols",
       "name": "libsmartcols",
       "versionInfo": "2.37.4",
       "supplier": "Organization: Red Hat",
@@ -2013,7 +2014,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libsolv",
+      "SPDXID": "SPDXRef-x86-64-libsolv",
       "name": "libsolv",
       "versionInfo": "0.7.22",
       "supplier": "Organization: Red Hat",
@@ -2035,7 +2036,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libstdc++",
+      "SPDXID": "SPDXRef-x86-64-libstdc",
       "name": "libstdc++",
       "versionInfo": "11.3.1",
       "supplier": "Organization: Red Hat",
@@ -2057,7 +2058,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libtasn1",
+      "SPDXID": "SPDXRef-x86-64-libtasn1",
       "name": "libtasn1",
       "versionInfo": "4.16.0",
       "supplier": "Organization: Red Hat",
@@ -2079,7 +2080,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libunistring",
+      "SPDXID": "SPDXRef-x86-64-libunistring",
       "name": "libunistring",
       "versionInfo": "0.9.10",
       "supplier": "Organization: Red Hat",
@@ -2101,7 +2102,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libuser",
+      "SPDXID": "SPDXRef-x86-64-libuser",
       "name": "libuser",
       "versionInfo": "0.63",
       "supplier": "Organization: Red Hat",
@@ -2123,7 +2124,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libutempter",
+      "SPDXID": "SPDXRef-x86-64-libutempter",
       "name": "libutempter",
       "versionInfo": "1.2.1",
       "supplier": "Organization: Red Hat",
@@ -2145,7 +2146,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libuuid",
+      "SPDXID": "SPDXRef-x86-64-libuuid",
       "name": "libuuid",
       "versionInfo": "2.37.4",
       "supplier": "Organization: Red Hat",
@@ -2167,7 +2168,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libverto",
+      "SPDXID": "SPDXRef-x86-64-libverto",
       "name": "libverto",
       "versionInfo": "0.3.2",
       "supplier": "Organization: Red Hat",
@@ -2189,7 +2190,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libxcrypt",
+      "SPDXID": "SPDXRef-x86-64-libxcrypt",
       "name": "libxcrypt",
       "versionInfo": "4.4.18",
       "supplier": "Organization: Red Hat",
@@ -2211,7 +2212,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libxml2",
+      "SPDXID": "SPDXRef-x86-64-libxml2",
       "name": "libxml2",
       "versionInfo": "2.9.13",
       "supplier": "Organization: Red Hat",
@@ -2233,7 +2234,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libyaml",
+      "SPDXID": "SPDXRef-x86-64-libyaml",
       "name": "libyaml",
       "versionInfo": "0.2.5",
       "supplier": "Organization: Red Hat",
@@ -2255,7 +2256,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-libzstd",
+      "SPDXID": "SPDXRef-x86-64-libzstd",
       "name": "libzstd",
       "versionInfo": "1.5.1",
       "supplier": "Organization: Red Hat",
@@ -2277,7 +2278,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-lua-libs",
+      "SPDXID": "SPDXRef-x86-64-lua-libs",
       "name": "lua-libs",
       "versionInfo": "5.4.4",
       "supplier": "Organization: Red Hat",
@@ -2299,7 +2300,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-lz4-libs",
+      "SPDXID": "SPDXRef-x86-64-lz4-libs",
       "name": "lz4-libs",
       "versionInfo": "1.9.3",
       "supplier": "Organization: Red Hat",
@@ -2321,7 +2322,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-mpfr",
+      "SPDXID": "SPDXRef-x86-64-mpfr",
       "name": "mpfr",
       "versionInfo": "4.1.0",
       "supplier": "Organization: Red Hat",
@@ -2365,7 +2366,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-ncurses-libs",
+      "SPDXID": "SPDXRef-x86-64-ncurses-libs",
       "name": "ncurses-libs",
       "versionInfo": "6.2",
       "supplier": "Organization: Red Hat",
@@ -2387,7 +2388,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-nettle",
+      "SPDXID": "SPDXRef-x86-64-nettle",
       "name": "nettle",
       "versionInfo": "3.8",
       "supplier": "Organization: Red Hat",
@@ -2409,7 +2410,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-npth",
+      "SPDXID": "SPDXRef-x86-64-npth",
       "name": "npth",
       "versionInfo": "1.6",
       "supplier": "Organization: Red Hat",
@@ -2431,7 +2432,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openldap",
+      "SPDXID": "SPDXRef-x86-64-openldap",
       "name": "openldap",
       "versionInfo": "2.6.2",
       "supplier": "Organization: Red Hat",
@@ -2453,7 +2454,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openldap-compat",
+      "SPDXID": "SPDXRef-x86-64-openldap-compat",
       "name": "openldap-compat",
       "versionInfo": "2.6.2",
       "supplier": "Organization: Red Hat",
@@ -2475,7 +2476,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openssl",
+      "SPDXID": "SPDXRef-x86-64-openssl",
       "name": "openssl",
       "versionInfo": "3.0.7",
       "supplier": "Organization: Red Hat",
@@ -2497,7 +2498,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-openssl-libs",
+      "SPDXID": "SPDXRef-x86-64-openssl-libs",
       "name": "openssl-libs",
       "versionInfo": "3.0.7",
       "supplier": "Organization: Red Hat",
@@ -2519,7 +2520,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-p11-kit",
+      "SPDXID": "SPDXRef-x86-64-p11-kit",
       "name": "p11-kit",
       "versionInfo": "0.24.1",
       "supplier": "Organization: Red Hat",
@@ -2541,7 +2542,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-p11-kit-trust",
+      "SPDXID": "SPDXRef-x86-64-p11-kit-trust",
       "name": "p11-kit-trust",
       "versionInfo": "0.24.1",
       "supplier": "Organization: Red Hat",
@@ -2563,7 +2564,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-pam",
+      "SPDXID": "SPDXRef-x86-64-pam",
       "name": "pam",
       "versionInfo": "1.5.1",
       "supplier": "Organization: Red Hat",
@@ -2585,7 +2586,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-passwd",
+      "SPDXID": "SPDXRef-x86-64-passwd",
       "name": "passwd",
       "versionInfo": "0.80",
       "supplier": "Organization: Red Hat",
@@ -2607,7 +2608,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-pcre",
+      "SPDXID": "SPDXRef-x86-64-pcre",
       "name": "pcre",
       "versionInfo": "8.44",
       "supplier": "Organization: Red Hat",
@@ -2629,7 +2630,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-pcre2",
+      "SPDXID": "SPDXRef-x86-64-pcre2",
       "name": "pcre2",
       "versionInfo": "10.40",
       "supplier": "Organization: Red Hat",
@@ -2673,7 +2674,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-popt",
+      "SPDXID": "SPDXRef-x86-64-popt",
       "name": "popt",
       "versionInfo": "1.18",
       "supplier": "Organization: Red Hat",
@@ -2695,7 +2696,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3",
+      "SPDXID": "SPDXRef-x86-64-python3",
       "name": "python3",
       "versionInfo": "3.9.16",
       "supplier": "Organization: Red Hat",
@@ -2739,7 +2740,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-cloud-what",
+      "SPDXID": "SPDXRef-x86-64-python3-cloud-what",
       "name": "python3-cloud-what",
       "versionInfo": "1.29.33.2",
       "supplier": "Organization: Red Hat",
@@ -2783,7 +2784,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-dbus",
+      "SPDXID": "SPDXRef-x86-64-python3-dbus",
       "name": "python3-dbus",
       "versionInfo": "1.2.18",
       "supplier": "Organization: Red Hat",
@@ -2871,7 +2872,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-ethtool",
+      "SPDXID": "SPDXRef-x86-64-python3-ethtool",
       "name": "python3-ethtool",
       "versionInfo": "0.15",
       "supplier": "Organization: Red Hat",
@@ -2893,7 +2894,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-gobject-base",
+      "SPDXID": "SPDXRef-x86-64-python3-gobject-base",
       "name": "python3-gobject-base",
       "versionInfo": "3.40.1",
       "supplier": "Organization: Red Hat",
@@ -2937,7 +2938,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-gpg",
+      "SPDXID": "SPDXRef-x86-64-python3-gpg",
       "name": "python3-gpg",
       "versionInfo": "1.15.1",
       "supplier": "Organization: Red Hat",
@@ -2959,7 +2960,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-hawkey",
+      "SPDXID": "SPDXRef-x86-64-python3-hawkey",
       "name": "python3-hawkey",
       "versionInfo": "0.69.0",
       "supplier": "Organization: Red Hat",
@@ -3047,7 +3048,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-libcomps",
+      "SPDXID": "SPDXRef-x86-64-python3-libcomps",
       "name": "python3-libcomps",
       "versionInfo": "0.1.18",
       "supplier": "Organization: Red Hat",
@@ -3069,7 +3070,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-libdnf",
+      "SPDXID": "SPDXRef-x86-64-python3-libdnf",
       "name": "python3-libdnf",
       "versionInfo": "0.69.0",
       "supplier": "Organization: Red Hat",
@@ -3091,7 +3092,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-librepo",
+      "SPDXID": "SPDXRef-x86-64-python3-librepo",
       "name": "python3-librepo",
       "versionInfo": "1.14.5",
       "supplier": "Organization: Red Hat",
@@ -3113,7 +3114,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-libs",
+      "SPDXID": "SPDXRef-x86-64-python3-libs",
       "name": "python3-libs",
       "versionInfo": "3.9.16",
       "supplier": "Organization: Red Hat",
@@ -3201,7 +3202,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-rpm",
+      "SPDXID": "SPDXRef-x86-64-python3-rpm",
       "name": "python3-rpm",
       "versionInfo": "4.16.1.3",
       "supplier": "Organization: Red Hat",
@@ -3289,7 +3290,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-subscription-manager-rhsm",
+      "SPDXID": "SPDXRef-x86-64-python3-subscription-manager-rhsm",
       "name": "python3-subscription-manager-rhsm",
       "versionInfo": "1.29.33.2",
       "supplier": "Organization: Red Hat",
@@ -3311,7 +3312,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-python3-systemd",
+      "SPDXID": "SPDXRef-x86-64-python3-systemd",
       "name": "python3-systemd",
       "versionInfo": "234",
       "supplier": "Organization: Red Hat",
@@ -3355,7 +3356,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-readline",
+      "SPDXID": "SPDXRef-x86-64-readline",
       "name": "readline",
       "versionInfo": "8.1",
       "supplier": "Organization: Red Hat",
@@ -3377,7 +3378,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-redhat-release",
+      "SPDXID": "SPDXRef-x86-64-redhat-release",
       "name": "redhat-release",
       "versionInfo": "9.2",
       "supplier": "Organization: Red Hat",
@@ -3421,7 +3422,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-rpm",
+      "SPDXID": "SPDXRef-x86-64-rpm",
       "name": "rpm",
       "versionInfo": "4.16.1.3",
       "supplier": "Organization: Red Hat",
@@ -3443,7 +3444,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-rpm-build-libs",
+      "SPDXID": "SPDXRef-x86-64-rpm-build-libs",
       "name": "rpm-build-libs",
       "versionInfo": "4.16.1.3",
       "supplier": "Organization: Red Hat",
@@ -3465,7 +3466,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-rpm-libs",
+      "SPDXID": "SPDXRef-x86-64-rpm-libs",
       "name": "rpm-libs",
       "versionInfo": "4.16.1.3",
       "supplier": "Organization: Red Hat",
@@ -3487,7 +3488,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-rpm-sign-libs",
+      "SPDXID": "SPDXRef-x86-64-rpm-sign-libs",
       "name": "rpm-sign-libs",
       "versionInfo": "4.16.1.3",
       "supplier": "Organization: Red Hat",
@@ -3509,7 +3510,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-sed",
+      "SPDXID": "SPDXRef-x86-64-sed",
       "name": "sed",
       "versionInfo": "4.8",
       "supplier": "Organization: Red Hat",
@@ -3553,7 +3554,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-shadow-utils",
+      "SPDXID": "SPDXRef-x86-64-shadow-utils",
       "name": "shadow-utils",
       "versionInfo": "4.9",
       "supplier": "Organization: Red Hat",
@@ -3575,7 +3576,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-sqlite-libs",
+      "SPDXID": "SPDXRef-x86-64-sqlite-libs",
       "name": "sqlite-libs",
       "versionInfo": "3.34.1",
       "supplier": "Organization: Red Hat",
@@ -3597,7 +3598,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-subscription-manager",
+      "SPDXID": "SPDXRef-x86-64-subscription-manager",
       "name": "subscription-manager",
       "versionInfo": "1.29.33.2",
       "supplier": "Organization: Red Hat",
@@ -3641,7 +3642,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-systemd",
+      "SPDXID": "SPDXRef-x86-64-systemd",
       "name": "systemd",
       "versionInfo": "252",
       "supplier": "Organization: Red Hat",
@@ -3663,7 +3664,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-systemd-libs",
+      "SPDXID": "SPDXRef-x86-64-systemd-libs",
       "name": "systemd-libs",
       "versionInfo": "252",
       "supplier": "Organization: Red Hat",
@@ -3685,7 +3686,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-systemd-pam",
+      "SPDXID": "SPDXRef-x86-64-systemd-pam",
       "name": "systemd-pam",
       "versionInfo": "252",
       "supplier": "Organization: Red Hat",
@@ -3729,7 +3730,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-tar",
+      "SPDXID": "SPDXRef-x86-64-tar",
       "name": "tar",
       "versionInfo": "1.34",
       "supplier": "Organization: Red Hat",
@@ -3751,7 +3752,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-tpm2-tss",
+      "SPDXID": "SPDXRef-x86-64-tpm2-tss",
       "name": "tpm2-tss",
       "versionInfo": "3.0.3",
       "supplier": "Organization: Red Hat",
@@ -3795,7 +3796,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-usermode",
+      "SPDXID": "SPDXRef-x86-64-usermode",
       "name": "usermode",
       "versionInfo": "1.114",
       "supplier": "Organization: Red Hat",
@@ -3817,7 +3818,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-util-linux",
+      "SPDXID": "SPDXRef-x86-64-util-linux",
       "name": "util-linux",
       "versionInfo": "2.37.4",
       "supplier": "Organization: Red Hat",
@@ -3839,7 +3840,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-util-linux-core",
+      "SPDXID": "SPDXRef-x86-64-util-linux-core",
       "name": "util-linux-core",
       "versionInfo": "2.37.4",
       "supplier": "Organization: Red Hat",
@@ -3861,7 +3862,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-vim-minimal",
+      "SPDXID": "SPDXRef-x86-64-vim-minimal",
       "name": "vim-minimal",
       "versionInfo": "8.2.2637",
       "supplier": "Organization: Red Hat",
@@ -3883,7 +3884,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-virt-what",
+      "SPDXID": "SPDXRef-x86-64-virt-what",
       "name": "virt-what",
       "versionInfo": "1.25",
       "supplier": "Organization: Red Hat",
@@ -3905,7 +3906,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-which",
+      "SPDXID": "SPDXRef-x86-64-which",
       "name": "which",
       "versionInfo": "2.21",
       "supplier": "Organization: Red Hat",
@@ -3927,7 +3928,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-xz-libs",
+      "SPDXID": "SPDXRef-x86-64-xz-libs",
       "name": "xz-libs",
       "versionInfo": "5.2.5",
       "supplier": "Organization: Red Hat",
@@ -3971,7 +3972,7 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-x86_64-zlib",
+      "SPDXID": "SPDXRef-x86-64-zlib",
       "name": "zlib",
       "versionInfo": "1.2.11",
       "supplier": "Organization: Red Hat",
@@ -3991,6 +3992,48 @@
           "checksumValue": "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-0-amd64",
+      "name": "rhel9-go-toolset_amd64",
+      "versionInfo": "1.19.4-18",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/rhel9-go-toolset@sha256:354b40a0fdcd1a9dd9af1b88f9a45fc2b0c8065980dfd9b5097e137a7db6e0bd?tag=1.19.4-18"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "354b40a0fdcd1a9dd9af1b88f9a45fc2b0c8065980dfd9b5097e137a7db6e0bd"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-1-amd64",
+      "name": "rhel_amd64",
+      "versionInfo": "9.2-1191",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/rhel@sha256:8759d95740eb14a6b6253a574edeea7de6840be30d38c630675ae2a0c76b9f93?tag=9.2-1191&repository_url=registry.redhat.io/rhel9-2-els"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8759d95740eb14a6b6253a574edeea7de6840be30d38c630675ae2a0c76b9f93"
+        }
+      ]
     }
   ],
   "relationships": [
@@ -4000,19 +4043,29 @@
       "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-amd64"
     },
     {
+      "spdxElementId": "SPDXRef-parent-image-0-amd64",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-kernel-module-management-operator-container-amd64"
+    },
+    {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-acl"
+      "relationshipType": "DESCENDANT_OF",
+      "relatedSpdxElement": "SPDXRef-parent-image-1-amd64"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-alternatives"
+      "relatedSpdxElement": "SPDXRef-x86-64-acl"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-audit-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-alternatives"
+    },
+    {
+      "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-x86-64-audit-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4022,12 +4075,12 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-bash"
+      "relatedSpdxElement": "SPDXRef-x86-64-bash"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-bzip2-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-bzip2-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4037,17 +4090,17 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-coreutils-single"
+      "relatedSpdxElement": "SPDXRef-x86-64-coreutils-single"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-cracklib"
+      "relatedSpdxElement": "SPDXRef-x86-64-cracklib"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-cracklib-dicts"
+      "relatedSpdxElement": "SPDXRef-x86-64-cracklib-dicts"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4062,22 +4115,22 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-curl-minimal"
+      "relatedSpdxElement": "SPDXRef-x86-64-curl-minimal"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-cyrus-sasl-lib"
+      "relatedSpdxElement": "SPDXRef-x86-64-cyrus-sasl-lib"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-dbus"
+      "relatedSpdxElement": "SPDXRef-x86-64-dbus"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-dbus-broker"
+      "relatedSpdxElement": "SPDXRef-x86-64-dbus-broker"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4087,7 +4140,7 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-dbus-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-dbus-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4097,7 +4150,7 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-dmidecode"
+      "relatedSpdxElement": "SPDXRef-x86-64-dmidecode"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4117,32 +4170,32 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-elfutils-libelf"
+      "relatedSpdxElement": "SPDXRef-x86-64-elfutils-libelf"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-elfutils-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-elfutils-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-expat"
+      "relatedSpdxElement": "SPDXRef-x86-64-expat"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-file-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-file-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-filesystem"
+      "relatedSpdxElement": "SPDXRef-x86-64-filesystem"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-findutils"
+      "relatedSpdxElement": "SPDXRef-x86-64-findutils"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4152,102 +4205,102 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-gawk"
+      "relatedSpdxElement": "SPDXRef-x86-64-gawk"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-gdb-gdbserver"
+      "relatedSpdxElement": "SPDXRef-x86-64-gdb-gdbserver"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-gdbm-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-gdbm-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-glib2"
+      "relatedSpdxElement": "SPDXRef-x86-64-glib2"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-glibc"
+      "relatedSpdxElement": "SPDXRef-x86-64-glibc"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-glibc-common"
+      "relatedSpdxElement": "SPDXRef-x86-64-glibc-common"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-glibc-minimal-langpack"
+      "relatedSpdxElement": "SPDXRef-x86-64-glibc-minimal-langpack"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-gmp"
+      "relatedSpdxElement": "SPDXRef-x86-64-gmp"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-gnupg2"
+      "relatedSpdxElement": "SPDXRef-x86-64-gnupg2"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-gnutls"
+      "relatedSpdxElement": "SPDXRef-x86-64-gnutls"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-gobject-introspection"
+      "relatedSpdxElement": "SPDXRef-x86-64-gobject-introspection"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-gpgme"
+      "relatedSpdxElement": "SPDXRef-x86-64-gpgme"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-grep"
+      "relatedSpdxElement": "SPDXRef-x86-64-grep"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-gzip"
+      "relatedSpdxElement": "SPDXRef-x86-64-gzip"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-ima-evm-utils"
+      "relatedSpdxElement": "SPDXRef-x86-64-ima-evm-utils"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-json-c"
+      "relatedSpdxElement": "SPDXRef-x86-64-json-c"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-json-glib"
+      "relatedSpdxElement": "SPDXRef-x86-64-json-glib"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-keyutils-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-keyutils-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-kmod-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-kmod-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-krb5-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-krb5-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4267,147 +4320,147 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libacl"
+      "relatedSpdxElement": "SPDXRef-x86-64-libacl"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libarchive"
+      "relatedSpdxElement": "SPDXRef-x86-64-libarchive"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libassuan"
+      "relatedSpdxElement": "SPDXRef-x86-64-libassuan"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libattr"
+      "relatedSpdxElement": "SPDXRef-x86-64-libattr"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libblkid"
+      "relatedSpdxElement": "SPDXRef-x86-64-libblkid"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libcap"
+      "relatedSpdxElement": "SPDXRef-x86-64-libcap"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libcap-ng"
+      "relatedSpdxElement": "SPDXRef-x86-64-libcap-ng"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libcom_err"
+      "relatedSpdxElement": "SPDXRef-x86-64-libcom-err"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libcomps"
+      "relatedSpdxElement": "SPDXRef-x86-64-libcomps"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libcurl-minimal"
+      "relatedSpdxElement": "SPDXRef-x86-64-libcurl-minimal"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libdb"
+      "relatedSpdxElement": "SPDXRef-x86-64-libdb"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libdnf"
+      "relatedSpdxElement": "SPDXRef-x86-64-libdnf"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libdnf-plugin-subscription-manager"
+      "relatedSpdxElement": "SPDXRef-x86-64-libdnf-plugin-subscription-manager"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libeconf"
+      "relatedSpdxElement": "SPDXRef-x86-64-libeconf"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libevent"
+      "relatedSpdxElement": "SPDXRef-x86-64-libevent"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libfdisk"
+      "relatedSpdxElement": "SPDXRef-x86-64-libfdisk"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libffi"
+      "relatedSpdxElement": "SPDXRef-x86-64-libffi"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libgcc"
+      "relatedSpdxElement": "SPDXRef-x86-64-libgcc"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libgcrypt"
+      "relatedSpdxElement": "SPDXRef-x86-64-libgcrypt"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libgomp"
+      "relatedSpdxElement": "SPDXRef-x86-64-libgomp"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libgpg-error"
+      "relatedSpdxElement": "SPDXRef-x86-64-libgpg-error"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libidn2"
+      "relatedSpdxElement": "SPDXRef-x86-64-libidn2"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libksba"
+      "relatedSpdxElement": "SPDXRef-x86-64-libksba"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libmodulemd"
+      "relatedSpdxElement": "SPDXRef-x86-64-libmodulemd"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libmount"
+      "relatedSpdxElement": "SPDXRef-x86-64-libmount"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libnghttp2"
+      "relatedSpdxElement": "SPDXRef-x86-64-libnghttp2"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libnl3"
+      "relatedSpdxElement": "SPDXRef-x86-64-libnl3"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libpwquality"
+      "relatedSpdxElement": "SPDXRef-x86-64-libpwquality"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-librepo"
+      "relatedSpdxElement": "SPDXRef-x86-64-librepo"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4417,112 +4470,112 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-librhsm"
+      "relatedSpdxElement": "SPDXRef-x86-64-librhsm"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libseccomp"
+      "relatedSpdxElement": "SPDXRef-x86-64-libseccomp"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libselinux"
+      "relatedSpdxElement": "SPDXRef-x86-64-libselinux"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libsemanage"
+      "relatedSpdxElement": "SPDXRef-x86-64-libsemanage"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libsepol"
+      "relatedSpdxElement": "SPDXRef-x86-64-libsepol"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libsigsegv"
+      "relatedSpdxElement": "SPDXRef-x86-64-libsigsegv"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libsmartcols"
+      "relatedSpdxElement": "SPDXRef-x86-64-libsmartcols"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libsolv"
+      "relatedSpdxElement": "SPDXRef-x86-64-libsolv"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libstdc++"
+      "relatedSpdxElement": "SPDXRef-x86-64-libstdc"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libtasn1"
+      "relatedSpdxElement": "SPDXRef-x86-64-libtasn1"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libunistring"
+      "relatedSpdxElement": "SPDXRef-x86-64-libunistring"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libuser"
+      "relatedSpdxElement": "SPDXRef-x86-64-libuser"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libutempter"
+      "relatedSpdxElement": "SPDXRef-x86-64-libutempter"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libuuid"
+      "relatedSpdxElement": "SPDXRef-x86-64-libuuid"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libverto"
+      "relatedSpdxElement": "SPDXRef-x86-64-libverto"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libxcrypt"
+      "relatedSpdxElement": "SPDXRef-x86-64-libxcrypt"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libxml2"
+      "relatedSpdxElement": "SPDXRef-x86-64-libxml2"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libyaml"
+      "relatedSpdxElement": "SPDXRef-x86-64-libyaml"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-libzstd"
+      "relatedSpdxElement": "SPDXRef-x86-64-libzstd"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-lua-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-lua-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-lz4-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-lz4-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-mpfr"
+      "relatedSpdxElement": "SPDXRef-x86-64-mpfr"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4532,67 +4585,67 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-ncurses-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-ncurses-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-nettle"
+      "relatedSpdxElement": "SPDXRef-x86-64-nettle"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-npth"
+      "relatedSpdxElement": "SPDXRef-x86-64-npth"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-openldap"
+      "relatedSpdxElement": "SPDXRef-x86-64-openldap"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-openldap-compat"
+      "relatedSpdxElement": "SPDXRef-x86-64-openldap-compat"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-openssl"
+      "relatedSpdxElement": "SPDXRef-x86-64-openssl"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-openssl-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-openssl-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-p11-kit"
+      "relatedSpdxElement": "SPDXRef-x86-64-p11-kit"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-p11-kit-trust"
+      "relatedSpdxElement": "SPDXRef-x86-64-p11-kit-trust"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-pam"
+      "relatedSpdxElement": "SPDXRef-x86-64-pam"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-passwd"
+      "relatedSpdxElement": "SPDXRef-x86-64-passwd"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-pcre"
+      "relatedSpdxElement": "SPDXRef-x86-64-pcre"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-pcre2"
+      "relatedSpdxElement": "SPDXRef-x86-64-pcre2"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4602,12 +4655,12 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-popt"
+      "relatedSpdxElement": "SPDXRef-x86-64-popt"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4617,7 +4670,7 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-cloud-what"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-cloud-what"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4627,7 +4680,7 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-dbus"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-dbus"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4647,12 +4700,12 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-ethtool"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-ethtool"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-gobject-base"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-gobject-base"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4662,12 +4715,12 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-gpg"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-gpg"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-hawkey"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-hawkey"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4687,22 +4740,22 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-libcomps"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-libcomps"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-libdnf"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-libdnf"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-librepo"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-librepo"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4722,7 +4775,7 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-rpm"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-rpm"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4742,12 +4795,12 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-subscription-manager-rhsm"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-subscription-manager-rhsm"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-python3-systemd"
+      "relatedSpdxElement": "SPDXRef-x86-64-python3-systemd"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4757,12 +4810,12 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-readline"
+      "relatedSpdxElement": "SPDXRef-x86-64-readline"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-redhat-release"
+      "relatedSpdxElement": "SPDXRef-x86-64-redhat-release"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4772,27 +4825,27 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-rpm"
+      "relatedSpdxElement": "SPDXRef-x86-64-rpm"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-rpm-build-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-rpm-build-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-rpm-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-rpm-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-rpm-sign-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-rpm-sign-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-sed"
+      "relatedSpdxElement": "SPDXRef-x86-64-sed"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4802,17 +4855,17 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-shadow-utils"
+      "relatedSpdxElement": "SPDXRef-x86-64-shadow-utils"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-sqlite-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-sqlite-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-subscription-manager"
+      "relatedSpdxElement": "SPDXRef-x86-64-subscription-manager"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4822,17 +4875,17 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-systemd"
+      "relatedSpdxElement": "SPDXRef-x86-64-systemd"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-systemd-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-systemd-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-systemd-pam"
+      "relatedSpdxElement": "SPDXRef-x86-64-systemd-pam"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4842,12 +4895,12 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-tar"
+      "relatedSpdxElement": "SPDXRef-x86-64-tar"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-tpm2-tss"
+      "relatedSpdxElement": "SPDXRef-x86-64-tpm2-tss"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4857,37 +4910,37 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-usermode"
+      "relatedSpdxElement": "SPDXRef-x86-64-usermode"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-util-linux"
+      "relatedSpdxElement": "SPDXRef-x86-64-util-linux"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-util-linux-core"
+      "relatedSpdxElement": "SPDXRef-x86-64-util-linux-core"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-vim-minimal"
+      "relatedSpdxElement": "SPDXRef-x86-64-vim-minimal"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-virt-what"
+      "relatedSpdxElement": "SPDXRef-x86-64-virt-what"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-which"
+      "relatedSpdxElement": "SPDXRef-x86-64-which"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-xz-libs"
+      "relatedSpdxElement": "SPDXRef-x86-64-xz-libs"
     },
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
@@ -4897,7 +4950,7 @@
     {
       "spdxElementId": "SPDXRef-kernel-module-management-operator-container-amd64",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-x86_64-zlib"
+      "relatedSpdxElement": "SPDXRef-x86-64-zlib"
     }
   ]
 }

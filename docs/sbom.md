@@ -8,13 +8,24 @@ cases where SBOMs are beneficial:
 
 - accurate vulnerability risk assessment when combined with VEX data,
 
-- or faster incident response when aggregating SBOMs for an entire product portfolio.
+- or faster incident response when aggregating SBOMs for an entire product portfolio, as well as the pipeline components
+  that build them.
 
 When talking about inventories of components, it's also important to describe what the current design goals of a
 comprehensive SBOM are:
 
 - Provide a complete and accurate listing of software components and their relationships to each other from a
-  supply chain perspective.
+  supply chain perspective:
+
+    - For each software component, an SBOM must list its provenance. That is, if the (downstream) component is a
+      redistributed version of an open source project (upstream), the downstream component must be directly linked
+      to its upstream counterpart. If an upstream component is augmented in a mirrored repository before being used
+      in a build of a downstream component, this version of the component (also called a midstream component) must
+      be recorded as a separate package.
+
+    - A manifest must list all components that are included in the final deliverable that can be deployed and run by an
+      end user. Any software dependencies that are used strictly during the build process must be listed as well, but
+      separate from the runtime dependencies.
 
 - Define an accurate identification of components and products usable across all published security data.
 
@@ -56,13 +67,14 @@ components used during the build process to produce the final artifact as well a
 process itself. This SBOM type also aligns with the _Build_ SBOM type from CISA's guidance on
 [Types of SBOM Documents](https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf).
 
-_Release-time_ SBOMs are generated when an artifact is released or published. These SBOMs build upon build-time
-SBOMs by incorporating additional metadata, such as the repositories or locations where the artifact is
+_Release-time_ SBOMs are created when an artifact is released or published. These SBOMs build upon build-time
+SBOMs by incorporating additional metadata, such as the repositories or locations where an artifact is
 published, and associating it with the relevant product information if there is any. Release-time SBOMs reflect the
-state of the software as it is distributed to end users. This SBOM type is close to the _Deployed_ type as defined
-by CISA, but it reflects the state of the product that _would_ be installed by a given end user.
+state of the software as it is distributed to end users. This SBOM type should still be considered as a _Build_ SBOM
+as defined by CISA, but it simply includes additional metadata that is not available during the build process and is
+added later on. For lack of a better term, we could call these _Curated Build SBOMs_.
 
-Red Hat's publicly available SBOMs are of the "release-time" type, including details about where an artifact
+Red Hat's publicly available SBOMs are of the release-time type, including details about where an artifact
 can be located after being released.
 
 **Example**:
@@ -93,6 +105,17 @@ container image (identified by two distinct purls) itself is available from:
          }
        ],
 ```
+
+### Product vs Pipeline
+
+_Product_ SBOMs, as described above in the Build vs Release section, align with the _Build_ SBOM type from CISA's guidance on
+[Types of SBOM Documents](https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf).
+
+_Pipeline_ SBOMs document the software components that make up systems, tools, and infrastructure (STIs) composing a Pipeline
+for building our products. These SBOMs may align with _Build_ SBOM type as defined by CISA, or they may align with _Source_,
+_Analyzed_, or even _Deployed_ SBOM types. The difference between these types lies in how the SBOMs are generated, which
+depends on when during the build and deploy process of a Pipeline STI the SBOM is generated.
+
 
 ### Component-Level vs Product-Level
 
@@ -141,12 +164,13 @@ The following snippet shows a minimal SBOM document:
     ```json
     {
       "spdxVersion": "SPDX-2.3",// (1)!
-      "dataLicense": "CC-BY-4.0",// (2)!
+      "dataLicense": "CC0-1.0",// (2)!
       "SPDXID": "SPDXRef-DOCUMENT",// (3)!
       "creationInfo": {
-        "created": "2006-08-14T02:34:56Z",
+        "created": "2006-08-14T02:34:56Z",// (4)!
         "creators": [
-          "Tool: example SPDX document only"
+          "Tool: example SPDX document only",
+          "Organization: Red Hat"// (5)!
         ]
       },
       "name": "ubi9-micro-container-9.4-6.1716471860_amd64",
@@ -159,23 +183,25 @@ The following snippet shows a minimal SBOM document:
 
     1. SPDX version 2.3 as described at [https://spdx.github.io/spdx-spec/v2.3/](https://spdx.github.io/spdx-spec/v2.3/).
 
-    2. All Red Hat security data is published under the
-       [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+    2. The CC0-1.0 license is required by the SPDX specification.
 
     3. [`SPDXID`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#63-spdx-identifier-field)
        must be set to `SPDXRef-DOCUMENT`.
+
+    4. UTC timestamps must use the `YYYY-MM-DDThh:mm:ssZ` format.
+
+    5. creationInfo / creators includes the "Organization: Red Hat" value.
 
 A more detailed breakdown of some of the fields:
 
 `creationInfo`
 :   This field must contain at least the
-    [`created`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#68-creator-field) and
-    [`creators`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#69-created-field)
+    [`created`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#69-created-field) and
+    [`creators`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#68-creator-field)
     fields. The timestamp in the `created` field must be set to an ISO 8601-formatted date and time string using
     the UTC timezone. The `creators` field must identify the tool and its version that was used to generate the SBOM
     file (for example, `Tool: SBOMer 1.2.3` or even `Tool: pkg:github/project-ncl/sbomer@1.0.0.M3`).
-    Optionally, the organization responsible for generating the SBOM can be included in a separate string
-    (for example, `Organization: Red Hat Product Security (secalert@redhat.com)`).
+    The value `Organization: Red Hat` included in a separate string. This is required by Red Hat Trusted Profiler Analyser 2 in order to trigger special handling.
 
 [`name`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#64-document-name-field)
 :   This is an arbitrary value that should describe the main artifact described by the SBOM document. This can be a
@@ -404,6 +430,38 @@ The parent image of `example-container` is `ubi9`. Its relationship to `example-
     }
     ```
 
+Container Images are also linked to one or more upstream sources that were used to build them. An upstream source can be represented by a package object using the following data:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-image-index-Source-origin",
+      "name": "kernel-module-management",
+      "versionInfo": "d027509b6861d8a9f923cc99dd3e15d9b209e63e",
+      "downloadLocation": "https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/kernel-model-management@d027509b6861d8a9f923cc99dd3e15d9b209e63e?download_url=https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e"
+        }
+      ]
+    },
+    ```
+
+To associate a set of remote sources with the repository referencing them, use:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-image-index-Source",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-image-index-Source-origin"
+    },
+    ```
+
 <!-- TODO: add diagram that shows all the relationships -->
 
 #### RPM
@@ -448,7 +506,7 @@ An architecture-specific RPM built by Red Hat can be represented by a package ob
         {
           "annotationType": "OTHER",
           "annotator": "Tool: example SPDX document only",
-          "annotationDate": "2006-08-14T02:34:56Z",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
           "comment": "sigmd5: 4cc665dd3173c8952184293588f9ee46"
         }
       ]
@@ -465,9 +523,16 @@ purl identifiers
     they should only ever differ in their qualifier values, not the main components such as package type, name, or
     version; multiple package objects should be used if those values differ.
 
+[`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)
+:   Minimally, the list of checksums must include the SHA256 checksum of the RPM file or source archive itself.
+    All other checksums should be specified as annotations (see below). 
+
 [`annotations`](https://spdx.github.io/spdx-spec/v2.3/annotations/)
 :   A list of annotations may provide additional information that is specific to the RPM format. In the example
-    above, the MD5 checksum the signed header of the RPM package is included.
+    above, two checksum values are included:
+    - The MD5 checksum of the signed header of the RPM package is included.
+    - The SHA256 checksum of the RPM header (this value does not change when an RPM is signed; unlike the file SHA256 \
+      checksum used in `checksums`).
 
 Each set of architecture-specific RPMs also have an associated source RPM (SRPM) that bundles all the source code
 that was used to build those RPMs. SRPMs should be represented as a separate package object in an SBOM, and their
@@ -484,8 +549,7 @@ relationship to architecture-specific RPMs can be represented with:
     ```
 
 SRPMs are also linked to one or more upstream sources that were used to build the downstream RPMs. An upstream
-
-Upstream source:
+source can be represented by a package object using the following data:
 
 === "SPDX 2.3"
 

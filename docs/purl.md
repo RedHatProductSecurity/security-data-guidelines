@@ -50,7 +50,15 @@ version, and repository name but were provided by a different vendor.
 If a purl identifies a Source RPM (SRPM, a package containing source code files that are used to build one or more
 RPMs containing binary artifacts), the `arch` qualifier must use the special value `src`. In the NEVRA file name
 pattern, SRPM packages use a `.src.rpm` suffix. Packages that are not architecture-specific must use the special
-`noarch` value in the arch qualifier.
+`noarch` value in the arch qualifier. Binary RPM packages will include a specific architecture as shown in the
+example above, or will omit the `arch` qualifier entirely to signify that the identifier applies to all available
+architectures.
+
+```
+pkg:rpm/redhat/emacs@27.2-9.el9?arch=x86_64  # Binary RPM package for the x86_64 architecture
+pkg:rpm/redhat/emacs?arch=src  # SRPM package that identifies all available versions of the emacs package
+pkg:rpm/redhat/emacs  # Binary RPM package that identifies all available versions and architectures
+```
 
 An RPM package may also include an epoch number; if not present, it is assumed to be `0`. In a purl, epoch is
 not part of the version field, but instead is specified using the `epoch` qualifier (e.g. `epoch=1`).
@@ -65,7 +73,7 @@ repository from where the RPM can be downloaded. We are purposefully not using t
 Hat purls because the base URL can vary depending on whether packages are sourced from Red Hat-hosted repositories
 (at _cdn.redhat.com_), local Red Hat Satellite-mirrored repositories, or Cloud provider-hosted repositories. Instead,
 Red Hat purls use a `repository_id` qualifier that identifies the repository from which the package can be
-downloaded using YUM or DNF. 
+downloaded using YUM or DNF.
 
 The repository ID is a unique value that identifies an RPM repository from where RPM packages can be fetched. If the
 ID of the repository is the same and the other attributes of the RPM match, such packages even though sourced from
@@ -84,22 +92,19 @@ distribution versions.
 ## Identifying RPM modules
 
 [RPM modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_software_with_the_dnf_tool/assembly_distribution-of-content-in-rhel-9_managing-software-with-the-dnf-tool#con_modules_assembly_distribution-of-content-in-rhel-9)
-allow grouping a set of RPMs to represent a single component. Installing for example the `nodejs` module may result in
+allow grouping a set of RPMs to represent a single component. Installing, for example, the `nodejs` module may result in
 the installation of the `c-ares` library, the `npm` package manager, the `nodejs` runtime, among other RPM packages.
-While RPM modules do not yet have an existing purl type, a proposal to add one called `rpmmod` has been submitted to
-the purl specification that, but has not yet been merged as of today:
-[https://github.com/package-url/purl-spec/pull/199](https://github.com/package-url/purl-spec/pull/199).
 
-RPM modules follow a slightly different naming convention than regular RPMs. Each RPM module can be identified using
-[NSVC](https://docs.fedoraproject.org/en-US/modularity/core-concepts/nsvca/#_forms): Name, Stream, Version, Context.
-The purl for the `squid:4` module available for RHEL 8.6 EUS would be the following:
+RPM modules do not have an existing purl type. In most cases, we want to refer to a specific RPM without a module, and
+rarely to the RPM module itself. Therefore, we use the RPM type to refer to the specific RPM, and add an `rpmmod`
+qualifier to specify the module. For example, the purl for the `libecap` RPM in the `squid:4` module available for
+RHEL 8.6 EUS would be the following:
 
 ```
-pkg:rpmmod/redhat/squid@4%3A8040020210420090912%3A522a0ee4?arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
+pkg:rpm/redhat/libecap@1.0.1-2.module%2Bel8.1.0%2B4044%2B36416a77?rpmmod=squid:4:8030020200828070549:30b713e6&arch=ppc64le&repository_id=rhel-8-for-x86_64-appstream-eus-rpms__8_DOT_6
 ```
 
-The version string is a percent-encoded value that contains the Stream, Version, and Context:
-`4:8040020210420090912:522a0ee4`.
+The `rpmmod` qualifier of the purl is a value that contains the Stream, Version, and Context, delimited by a colon.
 
 ## Identifying container images
 
@@ -118,7 +123,7 @@ its digest value for the amd64 architecture is:
 `sha256:8bca3b1be5750aeb94ef1351aa22636a54112f595d11a4d5c777890b80dfd387`. In purl, this information is represented as:
 
 ```
-pkg:oci/ubi@sha256%3A8bca3b1be5750aeb94ef1351aa22636a54112f595d11a4d5c777890b80dfd387?arch=amd64&repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
+pkg:oci/ubi@sha256:8bca3b1be5750aeb94ef1351aa22636a54112f595d11a4d5c777890b80dfd387?arch=amd64&repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
 ```
 
 Note that an image with a particular digest value may appear in multiple repositories, so the purl would only differ
@@ -132,7 +137,7 @@ A purl may also refer to the [Image Index](https://github.com/opencontainers/ima
 which is a higher-level representation of a set of image manifests. An image index has its own unique digest value:
 
 ```
-pkg:oci/ubi@sha256%3A66233eebd72bb5baa25190d4f55e1dc3fff3a9b77186c1f91a0abdb274452072?repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
+pkg:oci/ubi@sha256:66233eebd72bb5baa25190d4f55e1dc3fff3a9b77186c1f91a0abdb274452072?repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
 ```
 
 The `arch` qualifier is simply omitted in this purl.

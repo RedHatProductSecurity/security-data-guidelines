@@ -89,7 +89,7 @@
                 "purl": "pkg:rpm/redhat/kernel?arch=src"
               }
             }
-          },
+          }
         ],
         "category": "vendor",
         "name": "Red Hat"
@@ -189,7 +189,7 @@
             "attackComplexity": "",
             "attackVector": "",
             "availabilityImpact": "",
-            "baseScore": ,
+            "baseScore": "",
             "baseSeverity": "",
             "confidentialityImpact": "",
             "integrityImpact": "",

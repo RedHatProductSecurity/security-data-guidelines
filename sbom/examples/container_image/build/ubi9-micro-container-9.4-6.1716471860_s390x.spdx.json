@@ -1,11 +1,12 @@
 {
   "spdxVersion": "SPDX-2.3",
-  "dataLicense": "CC-BY-4.0",
+  "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "creationInfo": {
     "created": "2006-08-14T02:34:56Z",
     "creators": [
-      "Tool: example SPDX document only"
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
     ]
   },
   "name": "ubi9-micro-container-9.4-6.1716471860_s390x",
@@ -22,12 +23,12 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=s390x"
+          "referenceLocator": "pkg:oci/ubi-micro@sha256%3Asha256%3A2c9e70f4174747c6b53d253e879177c52731cc4bdc5fe9c6a2555412d849a952?arch=s390x"
         },
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?arch=s390x"
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3Asha256%3A2c9e70f4174747c6b53d253e879177c52731cc4bdc5fe9c6a2555412d849a952?arch=s390x"
         }
       ],
       "checksums": [
@@ -476,12 +477,38 @@
           "checksumValue": "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
         }
       ]
+    },
+    {
+      "SPDXID": "SPDXRef-parent-image-0-s390x",
+      "name": "ubi9_s390x",
+      "versionInfo": "9.4-947",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi9@sha256:dee3c77221eab321e79ad2b0277b91856879a8f5b675a48ad83af26c7a774fb3?tag=9.4-947"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dee3c77221eab321e79ad2b0277b91856879a8f5b675a48ad83af26c7a774fb3"
+        }
+      ]
     }
   ],
   "relationships": [
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ubi9-micro-container-s390x"
+    },
+    {
+      "spdxElementId": "SPDXRef-parent-image-0-s390x",
+      "relationshipType": "BUILD_TOOL_OF",
       "relatedSpdxElement": "SPDXRef-ubi9-micro-container-s390x"
     },
     {
