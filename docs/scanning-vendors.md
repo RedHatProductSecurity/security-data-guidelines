@@ -189,6 +189,9 @@ both the set of related CPEs and the list of repository relative URLs. The repos
 ### Openshift CPEs 
 <!-- TODO: Add information on how to determine CPEs for container first content --> 
 
+### CPE differences based on fix status
+<!-- TODO: Add https://issues.redhat.com/browse/SECDATA-811 --> 
+
 ## Using CSAF-VEX
 Red Hat current publishes security data following the the CSAF standard. Red Hat Product Security currently publishes 
 [CSAF advisories](https://security.access.redhat.com/data/csaf/v2/advisories/) for every single Red Hat Security Advisory 
@@ -314,6 +317,7 @@ component in the `vulnerabilities`section of the document. Each product/componen
 
 CVEs should be reported as follows, based on the `product_status` for the product/component pair.
 
+<!-- https://issues.redhat.com/browse/SECDATA-696 and https://issues.redhat.com/browse/SECDATA-744-->
 <!-- TODO: Add text about old CVEs that may not have a product match --> 
 <!-- TODO: Add column to table about product information -->
 
