@@ -463,8 +463,8 @@ remediations status are available per `product_status` category:
 
 * `fixed`
   * `vendor_fix`: For all the product IDs with a fixed product status there will be a corresponding entry
-    in the remediations object that correlates each full product ID to the correct RHSAs. The RHSA can be determined by
-    the `url` field. 
+  in the remediations object that correlates each full product ID to the correct RHSAs. The RHSA can be determined by
+  the `url` field. 
     * Details: "Fixed"
     * URL: Link to the RHSA
   * `workaround`: If a mitigation exists, it applies to all components regardless of their fix state.
