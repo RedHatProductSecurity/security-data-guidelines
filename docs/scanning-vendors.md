@@ -56,7 +56,6 @@ gcc-11.3.1-4.3.el9.src.rpm
  ```
 SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the `rpm` purl type. 
 
-
 ```
 # Example of a RPM purl
 pkg:rpm/redhat/libgcc-11.3.1-4.3.el9?arch=x86_64
@@ -187,6 +186,9 @@ both the set of related CPEs and the list of repository relative URLs. The repos
 },
 ```
 
+### Openshift CPEs 
+<!-- TODO: Add information on how to determine CPEs for container first content --> 
+
 ## Using CSAF-VEX
 Red Hat current publishes security data following the the CSAF standard. Red Hat Product Security currently publishes 
 [CSAF advisories](https://security.access.redhat.com/data/csaf/v2/advisories/) for every single Red Hat Security Advisory 
@@ -310,11 +312,22 @@ After following the previous steps, scanning vendors can use the full product/co
 component in the `vulnerabilities`section of the document. Each product/component `product_id ` will be listed in the 
 `product_status` category that corresponds to the affectedness of that product/component pair.
 
-<!-- TODO: Add text with table of what should / shouldn't be reported -->
+CVEs should be reported as follows, based on the `product_status` for the product/component pair.
+
+<!-- TODO: Add text about old CVEs that may not have a product match --> 
+<!-- TODO: Add column to table about product information -->
+
+| Product Status        | Component Details                                                                                 | Reporting Information                                                                                                                   |
+|-----------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `under_investigation` | No version information available.                                                                                                  | Reported                                                                                                                                | 
+| `known_affected`      | No version information available.                                                                                               | Reported                                                                                                                                |
+| `known_not_affected`  | No version information available.                                                                 | Not reported                                                                                                                            |
+| `fixed`               | The fixed component version is newer than the component version included in the scanned software. | Reported: In this case, the component is vulnerable and should be upgraded. The associated RHSA should also be reported with this CVE.  |
+|`fixed` | The fixed component version is older than the component version included in the scanned software. | Not reported: In this case, the component should be considered already fixed and is not vulnerable in the scanned software.             |
 
 For the "red_hat_enterprise_linux_9:gcc" product/component pair, it is listed in the `known_affected` section.
 
-<!-- TODO: Add CVE example with "known_not_affected" -->
+<!-- TODO: Add CVE example with "known_not_affected"  CVE-2024-43790 / vim -->
 
 ```
 "vulnerabilities": [
@@ -337,8 +350,8 @@ with `category` and `details` attributes that describe the fix status of that pr
 For the "red_hat_enterprise_linux_9:gcc" product/component pair, there is no fix available so you see the `product_id` 
 listed in the `none_available` category, with details `fixed_deffered`of the `remediations` object. 
 
-<!-- TODO: Add CVE example with RHSA -->
-<!-- TODO: Add CVE example with OCP RHSA -->
+<!-- TODO: Add CVE example with RHSA CVE-2024-2511 / RHSA-2024:9333 -->
+<!-- TODO: Add CVE example with OCP RHSA CVE-2024-24791 / RHSA-2024:8260 -->
 
 ```
 "remediations": [
@@ -358,15 +371,14 @@ listed in the `none_available` category, with details `fixed_deffered`of the `re
 ### CVSS score and Severity
 
 The last sections in the `vulnerabilities` object to be aware of are the `scores` object and the `threats` object.
-Both CVSS scores and Red Hat severities are available for each product/component pair. Red Hat recommends that 
-scanning vendors reference the per product CVSS scores and severity scores for each vulnerability instead of the
-aggregate severity for the CVE. 
+Both CVSS scores and Red Hat severities are available when the product/component pair differs from the aggregate CVE severity.
+Red Hat recommends that scanning vendors check the per product CVSS scores and severity scores for each vulnerability 
+and report the product/component severity instead of the aggregate severity for the CVE, when applicable. 
 
 For the "red_hat_enterprise_linux_9:gcc" product/component pair, the CVSS base score is "5.5" with a vector string of
 "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H". 
 
-<!-- TODO: Add CVE example with different severities per product pair -->
-<!-- ? Will known_not_affected pairs be listed here ? -->
+<!-- TODO: Add CVE example with different severities per product pair CVE-2024-1485 -->
 ```
 "scores": [
     {
@@ -415,6 +427,22 @@ Vendors are encouraged to raise any questions regarding security data by opening
 
 Many scanning vendors face similar challenges when reading and parsing Red Hat's security data. To check if your question
 has already been asked, you can review the list of questions asked [here](https://issues.redhat.com/browse/SECDATA-862?filter=12444038).
+
+### Python vulnerabilities 
+https://issues.redhat.com/browse/SECDATA-831
+
+### Repository relative URLs 
+https://issues.redhat.com/browse/SECDATA-1089
+https://issues.redhat.com/browse/SECDATA-797
+https://issues.redhat.com/browse/SECDATA-1020
+
+###  Empty content sets
+https://issues.redhat.com/browse/SECDATA-966
+
+### Duplicate RHSAs
+https://issues.redhat.com/browse/SECDATA-969
+
+
 
 
 ## Additional Questions or Concerns 
