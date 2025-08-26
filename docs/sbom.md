@@ -149,7 +149,7 @@ composing multiple SBOMs into a larger set (to describe a product, for example).
 
 _Complete_ SBOMs provide a full, in-depth representation of all levels of the build process in a single file. A
 Complete SBOM includes all component layers and their dependencies, offering a complete view of a product's composition.
-These types of SBOMs are mostly used for procurement and audit purposes.
+These types of SBOMs are mostly used for procurement and audit.
 
 Red Hat aims to publish Complete SBOMs at
 [https://security.access.redhat.com/data/sbom/](https://security.access.redhat.com/data/sbom/) while Shallow SBOMs
@@ -466,7 +466,21 @@ To associate a set of remote sources with the repository referencing them, use:
 
 #### RPM
 
-An architecture-specific RPM built by Red Hat can be represented by a package object using the following data:
+Before defining what RPM package objects look like, let's also define the specific types of sources that can be involved
+in the RPM build process:
+
+- An _upstream source_ is the original source code as released by the software's primary developers or maintainers.
+
+- A _midstream source_ is a copy of the upstream code, which may be modified or simply mirrored for distribution
+  purposes. Midstream sources are optional.
+
+- A _downstream source_ is a set of sources used to create a source RPM. These are the real build inputs that get
+  packaged into an SRPM, regardless of whether they originated directly from upstream or came through a midstream
+  archive. Downstream sources may include distribution-specific patches, build configuration changes, spec files,
+  and any other files needed to build the final RPM package.
+
+An architecture-specific (downstream) RPM built by Red Hat can be represented by a package object using
+the following data:
 
 === "SPDX 2.3"
 
@@ -525,7 +539,7 @@ purl identifiers
 
 [`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)
 :   Minimally, the list of checksums must include the SHA256 checksum of the RPM file or source archive itself.
-    All other checksums should be specified as annotations (see below). 
+    All other checksums should be specified as annotations (see below).
 
 [`annotations`](https://spdx.github.io/spdx-spec/v2.3/annotations/)
 :   A list of annotations may provide additional information that is specific to the RPM format. In the example
@@ -534,7 +548,7 @@ purl identifiers
     - The SHA256 checksum of the RPM header (this value does not change when an RPM is signed; unlike the file SHA256 \
       checksum used in `checksums`).
 
-Each set of architecture-specific RPMs also have an associated source RPM (SRPM) that bundles all the source code
+Each set of architecture-specific RPMs also has an associated source RPM (SRPM) that bundles all the source code
 that was used to build those RPMs. SRPMs should be represented as a separate package object in an SBOM, and their
 relationship to architecture-specific RPMs can be represented with:
 
@@ -594,6 +608,35 @@ To associate a set of source archives with the SRPM that includes them, use:
       "relatedSpdxElement": "SPDXRef-Source0"
     }
     ```
+
+Optionally, an upstream source may be mirrored in a different repository where the source is modified in a way that
+makes it consumable by the downstream distributor. This is referred to as a midstream source. The package object for
+the midstream source looks identical to an upstream package, but with different download location and purl identifier.
+
+The relationship between an upstream source and a midstream source can be represented with:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-Midstream0",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source0"
+    }
+    ```
+
+The complete diagram of the relationships between the various types of sources in an SBOM might look like this:
+
+``` mermaid
+graph TD
+    A["https://openssl.org/source/openssl-3.0.7.tar.gz"]
+    B["https://github.com/(RH openssl midstream repo)/archive/refs/tags/3.0.7.tar.gz"]
+    C["SRPM: openssl 3.0.7-18.el9_2.src"]
+    D["RPM: openssl 3.0.7-18.el9_2.aarch64"]
+    C -->|CONTAINS| B
+    B -->|GENERATED_FROM| A
+    D -->|GENERATED_FROM| C
+```
 
 #### Product
 
