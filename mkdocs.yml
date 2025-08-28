@@ -8,6 +8,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.expand
     - toc.integrate
     - navigation.top
     - search.suggest
@@ -36,7 +37,9 @@ theme:
 
 nav:
   - Home: "index.md"
-  - SBOM: "sbom.md"
+  - SBOM:
+    - Building SBOMs: "sbom.md"
+    - Property Taxonomy: "taxonomy.md"
   - purl: "purl.md"
   - CSAF/VEX: "csaf-vex.md"
 
