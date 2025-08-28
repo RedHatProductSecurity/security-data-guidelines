@@ -38,7 +38,13 @@ repo_id_map = {
         "rhel-8-for-{arch}-appstream-aus-rpms",
         "rhel-8-for-{arch}-appstream-tus-rpms",
         "rhel-8-for-{arch}-appstream-e4s-rpms",
-    ]
+    ],
+    # https://access.redhat.com/downloads/content/vim-minimal/9.1.083-5.el10/x86_64/fd431d51/package
+    "vim-9.1.083-5.el10": [
+        "rhel-10-for-{arch}-baseos-rpms",
+        "rhel-10-for-{arch}-baseos-eus-rpms",
+        "rhel-10-for-{arch}-baseos-e4s-rpms",
+    ],
 }
 
 
