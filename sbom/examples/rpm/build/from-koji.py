@@ -423,12 +423,13 @@ class SBOMBuilder:
         cdx_root_component = None
         cdx_pedigrees = []
         for rpm in rpms:
-            (name, version, release, nvr, arch) = (
+            (name, version, release, nvr, arch, epoch) = (
                 rpm["name"],
                 rpm["version"],
                 rpm["release"],
                 rpm["nvr"],
                 rpm["arch"],
+                rpm["epoch"],
             )
             filename = f"{downloaddir}/{name}-{version}-{release}.{arch}.rpm"
             if arch == "src":
@@ -441,6 +442,8 @@ class SBOMBuilder:
             sha256header = self.get_rpm_sha256header(filename)
             sigmd5 = self.get_rpm_sigmd5(filename)
             purl = f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}"
+            if epoch:
+                purl = f"{purl}&epoch={epoch}"
             if rpmmod:
                 purl = f"{purl}&rpmmod={rpmmod}"
             package = {
@@ -624,7 +627,7 @@ is_module = check_module()
 build_ids = []
 rpmmod = ""
 if is_module:
-    module_tag, module_nsvc= get_modulemd_data()
+    module_tag, module_nsvc = get_modulemd_data()
     rpmmod = module_nsvc
     module_builds = SESSION.listTagged(module_tag)
     for module_build in module_builds:

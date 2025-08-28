@@ -5,11 +5,11 @@
   "serialNumber": "urn:uuid:223234df-bb5b-49af-a896-143736f7d806",
   "metadata": {
     "component": {
-      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&epoch=1",
       "type": "library",
       "name": "openssl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -45,11 +45,11 @@
   },
   "components": [
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64",
+      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "type": "library",
       "name": "openssl-debuginfo",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64",
+      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -68,11 +68,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686",
+      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686&epoch=1",
       "type": "library",
       "name": "openssl-debuginfo",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686",
+      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -91,11 +91,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
+      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "type": "library",
       "name": "openssl-debuginfo",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
+      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -114,11 +114,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x",
+      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "type": "library",
       "name": "openssl-debuginfo",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x",
+      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -137,11 +137,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64",
+      "bom-ref": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "type": "library",
       "name": "openssl-debuginfo",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64",
+      "purl": "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -160,11 +160,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64",
+      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "type": "library",
       "name": "openssl-debugsource",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64",
+      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -183,11 +183,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686",
+      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686&epoch=1",
       "type": "library",
       "name": "openssl-debugsource",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686",
+      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -206,11 +206,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le",
+      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "type": "library",
       "name": "openssl-debugsource",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le",
+      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -229,11 +229,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x",
+      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "type": "library",
       "name": "openssl-debugsource",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x",
+      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -252,11 +252,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64",
+      "bom-ref": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "type": "library",
       "name": "openssl-debugsource",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64",
+      "purl": "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -275,11 +275,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64",
+      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "type": "library",
       "name": "openssl-devel",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64",
+      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -298,11 +298,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686",
+      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686&epoch=1",
       "type": "library",
       "name": "openssl-devel",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686",
+      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -321,11 +321,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le",
+      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "type": "library",
       "name": "openssl-devel",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le",
+      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -344,11 +344,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x",
+      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "type": "library",
       "name": "openssl-devel",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x",
+      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -367,11 +367,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64",
+      "bom-ref": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "type": "library",
       "name": "openssl-devel",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64",
+      "purl": "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -390,11 +390,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64",
+      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "type": "library",
       "name": "openssl-libs-debuginfo",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64",
+      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -413,11 +413,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686",
+      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686&epoch=1",
       "type": "library",
       "name": "openssl-libs-debuginfo",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686",
+      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -436,11 +436,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
+      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "type": "library",
       "name": "openssl-libs-debuginfo",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
+      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -459,11 +459,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x",
+      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "type": "library",
       "name": "openssl-libs-debuginfo",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x",
+      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -482,11 +482,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64",
+      "bom-ref": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "type": "library",
       "name": "openssl-libs-debuginfo",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64",
+      "purl": "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -505,11 +505,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64",
+      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "type": "library",
       "name": "openssl-libs",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64",
+      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -528,11 +528,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686",
+      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686&epoch=1",
       "type": "library",
       "name": "openssl-libs",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686",
+      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -551,11 +551,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le",
+      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "type": "library",
       "name": "openssl-libs",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le",
+      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -574,11 +574,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x",
+      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "type": "library",
       "name": "openssl-libs",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x",
+      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -597,11 +597,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64",
+      "bom-ref": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "type": "library",
       "name": "openssl-libs",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64",
+      "purl": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -620,11 +620,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64",
+      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "type": "library",
       "name": "openssl-perl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64",
+      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -643,11 +643,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686",
+      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686&epoch=1",
       "type": "library",
       "name": "openssl-perl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686",
+      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -666,11 +666,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le",
+      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "type": "library",
       "name": "openssl-perl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le",
+      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -689,11 +689,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x",
+      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "type": "library",
       "name": "openssl-perl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x",
+      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -712,11 +712,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64",
+      "bom-ref": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "type": "library",
       "name": "openssl-perl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64",
+      "purl": "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -735,11 +735,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64",
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "type": "library",
       "name": "openssl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64",
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -758,11 +758,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686",
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686&epoch=1",
       "type": "library",
       "name": "openssl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686",
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -781,11 +781,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le",
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "type": "library",
       "name": "openssl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le",
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -804,11 +804,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x",
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "type": "library",
       "name": "openssl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x",
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -827,11 +827,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&epoch=1",
       "type": "library",
       "name": "openssl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -884,11 +884,11 @@
       }
     },
     {
-      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64",
+      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "type": "library",
       "name": "openssl",
       "version": "3.0.7-18.el9_2",
-      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64",
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64&epoch=1",
       "hashes": [
         {
           "alg": "SHA-256",
@@ -909,43 +909,43 @@
   ],
   "dependencies": [
     {
-      "ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src",
+      "ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&epoch=1",
       "provides": [
-        "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64",
-        "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686",
-        "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
-        "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x",
-        "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64",
-        "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64",
-        "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686",
-        "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le",
-        "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x",
-        "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64",
-        "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64",
-        "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686",
-        "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le",
-        "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x",
-        "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64",
-        "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64",
-        "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686",
-        "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le",
-        "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x",
-        "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64",
-        "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64",
-        "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686",
-        "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le",
-        "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x",
-        "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64",
-        "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64",
-        "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686",
-        "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le",
-        "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x",
-        "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64",
-        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64",
-        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686",
-        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le",
-        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x",
-        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64"
+        "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=aarch64&epoch=1",
+        "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=i686&epoch=1",
+        "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
+        "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=s390x&epoch=1",
+        "pkg:rpm/redhat/openssl-debuginfo@3.0.7-18.el9_2?arch=x86_64&epoch=1",
+        "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=aarch64&epoch=1",
+        "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=i686&epoch=1",
+        "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
+        "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=s390x&epoch=1",
+        "pkg:rpm/redhat/openssl-debugsource@3.0.7-18.el9_2?arch=x86_64&epoch=1",
+        "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=aarch64&epoch=1",
+        "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=i686&epoch=1",
+        "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
+        "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=s390x&epoch=1",
+        "pkg:rpm/redhat/openssl-devel@3.0.7-18.el9_2?arch=x86_64&epoch=1",
+        "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=aarch64&epoch=1",
+        "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=i686&epoch=1",
+        "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
+        "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=s390x&epoch=1",
+        "pkg:rpm/redhat/openssl-libs-debuginfo@3.0.7-18.el9_2?arch=x86_64&epoch=1",
+        "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&epoch=1",
+        "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=i686&epoch=1",
+        "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
+        "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=s390x&epoch=1",
+        "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=x86_64&epoch=1",
+        "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=aarch64&epoch=1",
+        "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=i686&epoch=1",
+        "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
+        "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=s390x&epoch=1",
+        "pkg:rpm/redhat/openssl-perl@3.0.7-18.el9_2?arch=x86_64&epoch=1",
+        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=aarch64&epoch=1",
+        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=i686&epoch=1",
+        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=ppc64le&epoch=1",
+        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=s390x&epoch=1",
+        "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=x86_64&epoch=1"
       ]
     }
   ]

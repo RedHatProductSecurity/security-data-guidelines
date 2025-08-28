@@ -61527,7 +61527,7 @@
       ]
     },
     {
-      "bom-ref": "pkg:golang/go.opentelemetry.io/contrib/instrumentation@v0.46.1?package-id=5bd72523ff97f024#googlegolangorg/grpc/otelgrpc",
+      "bom-ref": "pkg:golang/go.opentelemetry.io/contrib/instrumentation@v0.46.1?package-id=5bd72523ff97f024#google.golang.org/grpc/otelgrpc",
       "type": "library",
       "name": "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc",
       "version": "v0.46.1",
@@ -61561,7 +61561,7 @@
       ]
     },
     {
-      "bom-ref": "pkg:golang/go.opentelemetry.io/contrib/instrumentation@v0.46.1?package-id=32dc6765d524c372#googlegolangorg/grpc/otelgrpc",
+      "bom-ref": "pkg:golang/go.opentelemetry.io/contrib/instrumentation@v0.46.1?package-id=32dc6765d524c372#google.golang.org/grpc/otelgrpc",
       "type": "library",
       "name": "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc",
       "version": "v0.46.1",
@@ -61595,7 +61595,7 @@
       ]
     },
     {
-      "bom-ref": "pkg:golang/go.opentelemetry.io/contrib/instrumentation@v0.46.1?package-id=5d57e43f394fdd30#googlegolangorg/grpc/otelgrpc",
+      "bom-ref": "pkg:golang/go.opentelemetry.io/contrib/instrumentation@v0.46.1?package-id=5d57e43f394fdd30#google.golang.org/grpc/otelgrpc",
       "type": "library",
       "name": "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc",
       "version": "v0.46.1",
@@ -61629,7 +61629,7 @@
       ]
     },
     {
-      "bom-ref": "pkg:golang/go.opentelemetry.io/contrib/instrumentation@v0.46.1?package-id=ffc736852a1ceb9e#googlegolangorg/grpc/otelgrpc",
+      "bom-ref": "pkg:golang/go.opentelemetry.io/contrib/instrumentation@v0.46.1?package-id=ffc736852a1ceb9e#google.golang.org/grpc/otelgrpc",
       "type": "library",
       "name": "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc",
       "version": "v0.46.1",

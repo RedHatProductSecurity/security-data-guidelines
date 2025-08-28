@@ -1,0 +1,2500 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "creationInfo": {
+    "created": "2006-08-14T02:34:56Z",
+    "creators": [
+      "Tool: example SPDX document only",
+      "Organization: Red Hat"
+    ]
+  },
+  "name": "vim-9.1.083-5.el10",
+  "documentNamespace": "https://www.redhat.com/vim-9.1.083-5.el10.spdx.json",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-SRPM",
+      "name": "vim",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-9.1.083-5.el10.src.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-aarch64-baseos-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-noarch-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-noarch-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-noarch-baseos-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-s390x-baseos-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim@9.1.083-5.el10?arch=src&epoch=2&repository_id=rhel-10-for-x86_64-baseos-source-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bbe8e0cef34fc39537c308ff59677d4d5da4f53cb006503f5f1d2000cf9b8d93"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 827edb6013348ae5cc30a195d3f068be"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: c0eb94861726448208eeb981eecb9be8dc6a551c2de78648d4e8263a9ff693b8"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Source0",
+      "name": "vim",
+      "versionInfo": "9.1-083",
+      "downloadLocation": "ftp://ftp.vim.org/pub/vim/unix/vim-9.1-083.tar.bz2",
+      "packageFileName": "vim-9.1-083.tar.bz2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b1563f236e1be4d185732d73dd4071821bbbf5c28dd269d61b0d5a68ecce7a41"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/vim@9.1.083?download_url=ftp://ftp.vim.org/pub/vim/unix/vim-9.1-083.tar.bz2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-vim-X11-debuginfo",
+      "name": "vim-X11-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-X11-debuginfo-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "61b12d74e4e078e4a70fe21a91e66b7d8c104b9ecc7b0b588678a6bcc070ef68"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 11f1e78369ae43ab22f191f5d368824e"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: a36fe5f966c4b4399e1a6f021a4f20cf9cb60cf883555e3de7c117ff3ecc696a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-vim-minimal-debuginfo",
+      "name": "vim-minimal-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-minimal-debuginfo-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1dbd967532d474d1087e16449e328f4bd1e0a722cfb85455e6318cf848486cff"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 826a580eb70b5bc18743454bea613aa1"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 57756c9ea8531d8412222215ea7e07f1fc67c9462f9e96d77362d07ef20214ff"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-vim-debugsource",
+      "name": "vim-debugsource",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-debugsource-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-source-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b2992d1908710051c94ade47ccc57da6174ec0e39b930335b293c7986c1d7b88"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 64d2ef2f0fb6eb6f31acccd0e7fa3a9f"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: f578f9b9375670103c7397d955f5a257d906c9b652b1bd3a2fdece001b04bf29"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-vim-X11",
+      "name": "vim-X11",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-X11-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ce747c458aad69052a5614db3fa7e6b4cd320861f274d9dc1959f3933f96ca9b"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 0277a3255cb61e51983355b4b632817a"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 8ec75abb89c383eac8765fc90abd4402aa729e4aa4e9fad16572ba37c4f38971"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-vim-enhanced-debuginfo",
+      "name": "vim-enhanced-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-enhanced-debuginfo-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b3e45647466e176aa27e7eaa62d555105ab632c2da6f4bce7501ee4ebedc788e"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 563752f6c0951d84a6b7549f541085a7"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 28e174a3546919a26b0aee4ca8631b608e281e29dcf39aa319157d2251ab359d"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-vim-minimal",
+      "name": "vim-minimal",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-minimal-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0e1c63ad6b35af6b678a7428f1fab013f2c1451c556ec7ff8bbfb425c050a541"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 4d720c5f024e55a52115ac4be0387438"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: fb223c09efd401484280f9f4f2f862fa7b6308e522a5c32eedfd62da1ccc52e0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-vim-debuginfo",
+      "name": "vim-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-debuginfo-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f23f42aecbc1d4cdf14ac8690c0f2a73fdc08b9243d82da77818f96005101bb9"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 72efd07742557ae80fd22b4d22ad8e8d"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: fc70b2e586db5536c8daefd89bba3275d7bf2687cc77a13a16e4fee98fc75e78"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-xxd",
+      "name": "xxd",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "xxd-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d13c2ab9c67a1f4cec53ac799864bc2b2edda9dff289a93f90a282f42b0a96c4"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 0fde592368c6c613666986b4f6cdcc24"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 0233fb4b88d96ae344fe808ede4d0d63446c09c8f83892721a34caa897cc9afc"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-xxd-debuginfo",
+      "name": "xxd-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "xxd-debuginfo-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f9e9a40888ebdb96b051f843fbf26148a3df94f8b6e64bf082cdcaba00f9fdbd"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 5094d49bb4b8952246a8a800e4384c35"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: d9032e15d0d2f9006bababcddd0d9880fb71a8c874fa6909123f7b57adf757b0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-vim-enhanced",
+      "name": "vim-enhanced",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-enhanced-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "de3590de8ee90d56cc26135c414e917d562b2ebf3fd91de4af5d045c5dbd1b22"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 9b351e6daecc2d8ae1afafef1ebc01c3"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: c5688f57c280e822e6ea617f0babdc07b523f525b283be883cd104ddf7448dce"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-aarch64-vim-common",
+      "name": "vim-common",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-common-9.1.083-5.el10.aarch64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=aarch64&epoch=2&repository_id=rhel-10-for-aarch64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "65245cb2ba6590fe3fe0e20a78cf1c130c1bc38ee3d2069af33ef8e306fb56fa"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: bdd59dcd7352d849674866ec2650ee33"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: d5891f54f703313f79ba94e30342215c5edfc0a9411de8c152c3f0ce86eb0d73"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-vim-data",
+      "name": "vim-data",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-data-9.1.083-5.el10.noarch.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-data@9.1.083-5.el10?arch=noarch&epoch=2&repository_id=rhel-10-for-noarch-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-data@9.1.083-5.el10?arch=noarch&epoch=2&repository_id=rhel-10-for-noarch-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-data@9.1.083-5.el10?arch=noarch&epoch=2&repository_id=rhel-10-for-noarch-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "06fd3d48acce38d4c9acb69d6f979b852338c53b46322a7f2ada66dc38ec773b"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 9f3984684ed3ec9505305c76ba837c34"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: ba0d3f033a624e1db1f6ee70c285ec46930a2ecd81c1344dc8bdf686c32be39d"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-noarch-vim-filesystem",
+      "name": "vim-filesystem",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-filesystem-9.1.083-5.el10.noarch.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-filesystem@9.1.083-5.el10?arch=noarch&epoch=2&repository_id=rhel-10-for-noarch-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-filesystem@9.1.083-5.el10?arch=noarch&epoch=2&repository_id=rhel-10-for-noarch-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-filesystem@9.1.083-5.el10?arch=noarch&epoch=2&repository_id=rhel-10-for-noarch-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d669868f10423b92471e773d4cdedd8643698abb9f2bfc9a5a978451e12caa32"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 1233383232621c8e275b9638b31e293f"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 9903996fccd8507c9fb64de5958a9c2791e2ca0267d29e796939deb11bee43e1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-vim-X11-debuginfo",
+      "name": "vim-X11-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-X11-debuginfo-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "660561b75a4a9cfa3b669969e02eaeb8cab045168b25241d9283ac856f272f84"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 0f29ace009a295c154a09c7a1b152a1a"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: f2d8f69e50b15eacfb460b180290d350ecab374316ff8271f0dde3462e78a3bb"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-xxd",
+      "name": "xxd",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "xxd-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "03e3128cb5ea54166cfdd35ab281725edc073d3a3e9a32cc486fd42d65454413"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 1476feb977fba37ad33f2fea1ff11a2f"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 793b00aa7a27326f7184ed1598737f4a40d2e9ea796f649c561b38e83a12ab6c"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-vim-minimal-debuginfo",
+      "name": "vim-minimal-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-minimal-debuginfo-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "29bc6ba4839d671c4cf6331318c341f506277fd852a8770df7b5af682824d42d"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 298f3fd7de1839f70d6dfa15d1555279"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: bc54faec8c75cc4449e81a67d6aef5467047080bb5638044b5648c0b55d26b82"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-vim-enhanced",
+      "name": "vim-enhanced",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-enhanced-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "780f520c9cc5c7ebbd054b6edceb34782a3310bc0309050704498b73e39b15fc"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: ecf31fdc3b953a1a9c7bdbc9fdc478b5"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 4d65774b46ea5160cfb954e545bd4aab8257b273bbc681e3a4c4837bcce7ab7d"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-xxd-debuginfo",
+      "name": "xxd-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "xxd-debuginfo-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ad418b00ccc2869fdfccfc400e5bbbe70129b53c943aa6ab68dba4a35672f909"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: d2b85a5d70943843c55caf362d36b8c0"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: a784b1ff0343d9a26029a419d0271ca7b0c2c00d2944bcf831f02128f890a6a5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-vim-minimal",
+      "name": "vim-minimal",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-minimal-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "43564623807b19cda5901b17d8529bcfc693075b9118ab8a59bf54e384f08214"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: c3518b5b9b58ac6aa235c528c20f4517"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 14662f6ad59282b8e9022830acc26d8d66d85201d0db6d25b499168d8bfd5dfd"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-vim-X11",
+      "name": "vim-X11",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-X11-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a6588310865fab6bf0f1fda5c7c56e97279c50cc5407f34af90149ee0242431a"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 72afd83daa61cdd5edcd907cf7b48234"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 444d09836ccebd98735ff1c20beabf61887c22e9d515b1b5f991599c022d695a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-vim-enhanced-debuginfo",
+      "name": "vim-enhanced-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-enhanced-debuginfo-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e14e2570f3884b46eb26e9869424c535073d261a5a2b3f041415bc1c26dcff8e"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 12944240e0924e87f8fc3c5b5b797571"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 5a00354aa9e94774f40a611b7e9364453bd908b87b7c80d6f6cb105209706789"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-vim-debuginfo",
+      "name": "vim-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-debuginfo-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2416a750925e49b30c018dd9a0c55081df4f6a29f25647357856c08a14f3a30c"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 357aca37c2c120dbdde0edbc9190331e"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 53d716fe1c183c9e33a0489ac5a0c242b9a30252355e50940bb13198b71840f2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-vim-debugsource",
+      "name": "vim-debugsource",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-debugsource-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-source-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8032a07ecfa91e7c783f35d0a0c19f0cac802c4323c2f759978f8728b0773480"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: a2ea2c8f2912eccb13b6badf896e17aa"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 1f0b20de3cd634046081ace80130d2b6424f791047b82cd21a264ad756086ede"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ppc64le-vim-common",
+      "name": "vim-common",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-common-9.1.083-5.el10.ppc64le.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=ppc64le&epoch=2&repository_id=rhel-10-for-ppc64le-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "50b8b60eb6cb9b0d3ac61bc945a4dcf2195b5b80022928d09789c7d3b183ea29"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 1d082929babaa7812144760f59c31fc7"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 64f875eeca2042da3c44414a3b1e9cf03845a3ed5a43ba5346c738b5e060486d"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-xxd-debuginfo",
+      "name": "xxd-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "xxd-debuginfo-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8c9e620444d2f9d4f9d65ea9745f1c9375e3959ada5c59d72eacb4ee717eafe9"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: cc465a3d149271c11d5ab5f467d07c0e"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: aae5a12aeeb54f70b0ab65689ee194c6252f8de2c867eee02223f94c9732379f"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-vim-enhanced-debuginfo",
+      "name": "vim-enhanced-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-enhanced-debuginfo-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e31cfc455f3888557587c641ad35e5701727e7ec62c6857561d681b8a0f495c5"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 61ea1fde9472a688b8f19d2a050d692b"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: a72784a9d95b4e0395a72895ed53a41f28b67c490174ece7eaadff264ae79f80"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-vim-X11-debuginfo",
+      "name": "vim-X11-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-X11-debuginfo-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "371d48e2a0c57048d5985a4a3419305ca9360dcd1d19cf5ef0ef487be0ad4958"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: a2389defd33f52bc69c848b15416a377"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 5b62a25b574c5bbfa73ea24001123b55a27e45754967513c2e456f12a18ade8e"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-vim-debugsource",
+      "name": "vim-debugsource",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-debugsource-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-source-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "74340a2f08607760fb92640e696573cd39edc741581907bb4882db8aaad39baa"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 3769363926fca63f652b6c31698459a3"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: ae62ae1b059aa80837c30783aac07dd599d2810528159d95b03668c4c1324a5b"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-xxd",
+      "name": "xxd",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "xxd-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "35c830f88405f57eec9618df07c5b7f6a5ea38c0a9a109f9fb741c078cfee958"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: e76991123792d01ddd9c63479780a3a5"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: b9d31f08a185af476b34622606b1d68752f5ec11eb10e9502c1d49331c3451d9"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-vim-debuginfo",
+      "name": "vim-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-debuginfo-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2c0640bad4fad771bd9bc97805e3ff637f9bfd2166774c18e422ab24157e43e4"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 1c5b77782f6ac5b3fa48f205e96fec57"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 0062f7d6882e51e50175cb8a96cd6cbb9408708cb8451d6f366348cf2acd5918"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-vim-minimal",
+      "name": "vim-minimal",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-minimal-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "24ad572d120d07e2cc941fe51cd49da710d62d414e4cef2a6be42925217439de"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 890a6d7bfd86b4412b228c55a6791d7a"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: c028e137ad3ec0e39502b00d86ba76230d50f349021a971523fcd466b921482c"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-vim-minimal-debuginfo",
+      "name": "vim-minimal-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-minimal-debuginfo-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a78263a078606788a38ab82bb17ea6996b3f6b7382d245ade8ed0367124d06a5"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: b4ef5e02dd68f285dc3387c009641fb9"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 542276c7386369e8d1ac3e7f7f2c51c3430f664e93b2d407caa71895608fabad"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-vim-enhanced",
+      "name": "vim-enhanced",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-enhanced-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8a305c3f668e508b4b9f37d90c3a2767912c98aeaba52ac96f74fc5445db08f0"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 3696d4aaf9e6279ab295c7563b3da2b7"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 493696cd601863e9f7ee79f37fe60e2277473ac95ecfc436aa28f53050520a4a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-vim-X11",
+      "name": "vim-X11",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-X11-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "10aa0aa1e64254f33a96a9f6c6b853b51ddd1ed6d504156ab3dfbc61f1271a08"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 1854bf47f36f004dacc5b0f74a489242"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 870f8f76a713af93664337d153ade1883fead18ab9c4eb2ccdd8eed0fa0c8861"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-x86-64-vim-common",
+      "name": "vim-common",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-common-9.1.083-5.el10.x86_64.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=x86_64&epoch=2&repository_id=rhel-10-for-x86_64-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ff73f861b7985ad417416927c8e2f9e24ebd21462b732330c57d0af1239e1a0e"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 233745322a67bcd8bc4e8c847e3d3a40"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: c2cc7fa6f8877350b9979ea7bbcff1f766ffac83064228e139688f689f78f119"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-vim-X11-debuginfo",
+      "name": "vim-X11-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-X11-debuginfo-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "188542d52ffa43b1efea382819731f7b0e21eb7b7c2adc6073c5c7b8b23e42c1"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: d21557d2eaedb3b67c2b1957c35f212d"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 3ae6435186481765465ba4dd8bc7e96249fbd73dfbd6b4702bfd22e1fdccde43"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-vim-enhanced-debuginfo",
+      "name": "vim-enhanced-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-enhanced-debuginfo-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "31d90ee02bf31c11d9fd0a948ef99e4be61c8f1a88f0949dc645a1dc6e572ff1"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 514d04d542dea301c603da068990a513"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: a94612135c941903110500a22e7c5d56438a048a63064e0aa40e7dc39bb6c581"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-vim-debugsource",
+      "name": "vim-debugsource",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-debugsource-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-source-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debugsource@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-source-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "915404a0b83a94ddc00070aacb3599f244daac2aa707cfae8b0199cc0be9fac9"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 4a133df64a613eb09bc382558f52e5a5"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 0207f9cf2233e9c04ae40b079272da9aeea3ec19c5d797eaa6833fbfc45bad3c"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-vim-common",
+      "name": "vim-common",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-common-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-common@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a1bfe393c46b31f61afe52cc4b8cb2c2c4f7901d43b5c5898b95f7c0f69d48de"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 62b56d9f5fb05bd52df34878a89dc5cd"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: afc6f9cd039c209e949e8405957c7942013b47b2271f7c3c9087c8f2627a6657"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-vim-X11",
+      "name": "vim-X11",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-X11-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-X11@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b5f6a847970eb6033352f9ffc4171d866a7058076f64791e4f4bd9458ce417c4"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 9b59367fb9bf98601a6f1d32298f56d0"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: fd86a50af06685373f485995ba4686043411b54f8414a8ddceab966aad3fcaa3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-vim-minimal-debuginfo",
+      "name": "vim-minimal-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-minimal-debuginfo-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "55397d949dcfe00133775d469664238dc1c70e59a5af65857f201974dd84f868"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 4bd2fec86e4e0d0944eb829c580a8fd4"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: a23a80bd921c4875c44cd18c31327dae6af69a29c8f81bee93a97a32dd72a6e3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-vim-enhanced",
+      "name": "vim-enhanced",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-enhanced-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-enhanced@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2d49db7b1713f8a0c43a43b506563bef5084d695dc784cfae0c83a20ae968d05"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 7cb90b5cd55f386242f1183deaa579c6"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: fb2d999f1c5b0f4ededae2af2b1bb0906f0030d8aeabfd70f0ea7ddfd7008710"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-vim-minimal",
+      "name": "vim-minimal",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-minimal-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-minimal@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3026f5242c5dcf33c4656faf6555da3511ed006971dd128e6194b0b8f13e9ea9"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 8d40fa4f5bc83ec9d9502c20a6e85fb1"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 36a7ecca2a2b3c1bc4304a40a7dcec89f195bdff9e170b6f2be7af8c690f7375"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-vim-debuginfo",
+      "name": "vim-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "vim-debuginfo-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/vim-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9e0e8e301e98544641964e9db2c0d63e10ad53aabe1b977183af8f7579dc25d4"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: 29892c49dbbe2d0e1a29dc6dbef88b30"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 51277655678932df977bf3d9052398bf0707342281d99a4b0c170f107c15b93b"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-xxd-debuginfo",
+      "name": "xxd-debuginfo",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "xxd-debuginfo-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-debug-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd-debuginfo@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-debug-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7787f1620d776d131867fa00b769f886954cd1df476be0cbd69d8a539c244bc3"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: bbf746390bd4caa25b93d1b0b6d9bf1a"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: d4f1b98175b856eccd202952106cf0a998316e351f88d445c60a0280737014a5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-s390x-xxd",
+      "name": "xxd",
+      "versionInfo": "9.1.083-5.el10",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "xxd-9.1.083-5.el10.s390x.rpm",
+      "licenseConcluded": "Vim AND LGPL-2.1-or-later AND MIT AND GPL-1.0-only AND (GPL-2.0-only OR Vim) AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-2.0-or-later AND GPL-3.0-or-later AND OPUBL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-e4s-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=s390x&epoch=2&repository_id=rhel-10-for-s390x-baseos-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ad30298ef33b2680f0e2f922468f961f868bfba7744a30c17992b8d63409a720"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sigmd5: fc1b412ca87af9387516ebe933ef614a"
+        },
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56Z",
+          "comment": "sha256header: 27c5d73d76507f33250eb3109159e73487e305c19bea0197925fe5e622bc694c"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-SRPM",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Source0"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-vim-X11-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-noarch-vim-data",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-vim-minimal-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-vim-debugsource",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-vim-X11",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-vim-enhanced-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-vim-minimal",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-vim-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-xxd",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-xxd-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-noarch-vim-filesystem",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-vim-enhanced",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-aarch64-vim-common",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-vim-X11-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-xxd",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-vim-minimal-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-vim-enhanced",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-xxd-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-vim-minimal",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-vim-X11",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-vim-enhanced-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-vim-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-vim-debugsource",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-ppc64le-vim-common",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-xxd-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-vim-enhanced-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-vim-X11-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-vim-debugsource",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-xxd",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-vim-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-vim-minimal",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-vim-minimal-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-vim-enhanced",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-vim-X11",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-x86-64-vim-common",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-vim-X11-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-vim-enhanced-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-vim-debugsource",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-vim-common",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-vim-X11",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-vim-minimal-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-vim-enhanced",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-vim-minimal",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-vim-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-xxd-debuginfo",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    },
+    {
+      "spdxElementId": "SPDXRef-s390x-xxd",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    }
+  ]
+}
