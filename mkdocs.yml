@@ -64,7 +64,11 @@ markdown_extensions:
   - abbr  # https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations
   - md_in_html
   - def_list  # https://squidfunk.github.io/mkdocs-material/reference/lists/#using-definition-lists
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - toc:
