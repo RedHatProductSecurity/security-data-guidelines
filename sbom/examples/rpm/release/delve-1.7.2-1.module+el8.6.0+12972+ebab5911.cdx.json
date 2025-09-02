@@ -5,7 +5,6 @@
   "serialNumber": "urn:uuid:223234df-bb5b-49af-a896-143736f7d806",
   "metadata": {
     "component": {
-      "bom-ref": "pkg:rpm/redhat/delve@1.7.2-1.module+el8.6.0+12972+ebab5911?arch=src&rpmmod=go-toolset:rhel8:8060020250609110611:97d7f71f",
       "type": "library",
       "name": "delve",
       "version": "1.7.2-1.module+el8.6.0+12972+ebab5911",

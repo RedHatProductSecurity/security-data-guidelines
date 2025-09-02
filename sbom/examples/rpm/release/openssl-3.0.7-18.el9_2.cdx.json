@@ -5,7 +5,6 @@
   "serialNumber": "urn:uuid:223234df-bb5b-49af-a896-143736f7d806",
   "metadata": {
     "component": {
-      "bom-ref": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&epoch=1",
       "type": "library",
       "name": "openssl",
       "version": "3.0.7-18.el9_2",

@@ -5,7 +5,6 @@
   "serialNumber": "urn:uuid:223234df-bb5b-49af-a896-143736f7d806",
   "metadata": {
     "component": {
-      "bom-ref": "pkg:rpm/redhat/openshift-pipelines-client@1.14.3-11352.el8?arch=src",
       "type": "library",
       "name": "openshift-pipelines-client",
       "version": "1.14.3-11352.el8",
