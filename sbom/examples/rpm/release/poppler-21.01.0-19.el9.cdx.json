@@ -5,7 +5,6 @@
   "serialNumber": "urn:uuid:223234df-bb5b-49af-a896-143736f7d806",
   "metadata": {
     "component": {
-      "bom-ref": "pkg:rpm/redhat/poppler@21.01.0-19.el9?arch=src",
       "type": "library",
       "name": "poppler",
       "version": "21.01.0-19.el9",
