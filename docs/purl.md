@@ -156,6 +156,22 @@ Red Hat. If the type qualifier is not set, it is assumed to be `jar` (as describ
 [POM documentation](https://maven.apache.org/pom.html)). The value in the `repository_url` should be Red
 Hat's Maven repository at [https://maven.repository.redhat.com/ga/](https://maven.repository.redhat.com/ga/).
 
+## Generic components
+
+The purl specification allows for the use of a `generic` purl type that can be used to identify any software component
+that does not fit into a specific package ecosystem. Components identified using the `generic` type normally point to
+specific artifacts like upstream source code. For example, the purl for the OpenSSL upstream source code repository
+would be:
+
+```
+pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz&checksum=sha256:83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e
+```
+
+Each `generic` purl must include an exact location from where the artifact can be downloaded, and ideally a checksum
+that corresponds to the artifact.
+
+The use of `generic` purls should be limited to components that are not available in any other purl type.
+
 ## Additional Notes
 
 The guidelines highlighted in this document represent an ideal state across all of Red Hat-published security data
