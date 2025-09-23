@@ -69,6 +69,14 @@ TODO
 TODO
 ```
 
+```
+# Example of an unfixed RPM module purl
+```
+
+```
+# Example of a fixed RPM module purl 
+```
+
 More detailed information about RPM purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
 
 ### Container metadata and container first content 
@@ -85,7 +93,7 @@ From within the pod, you can determine the container name and pullspec in a dedi
 ```
 
 If you already have the pullspec for the container image you are scanning, you can use the following commands to 
-determine the container name and tag.
+determine the container metadata.
 
 ```
 # Example using oc image command with the pullspec
@@ -97,7 +105,9 @@ $ oc image info [pullspec]
 $ podman inspect [pullspec] 
 
 ```
-
+<!-- Container name: name
+Container tag: release
+Openshift version: version -->
 
 CSAF advisories and VEX data, containers are represented with the `oci` purl type.
 ```
@@ -128,13 +138,13 @@ Common Platform Enumeration (CPE) is a standardized method of describing and ide
 operating systems, and hardware devices present among an enterprise's computing assets.
 
 Red Hat uses CPEs to uniquely identify each product and version, following the CPE 2.2 schema. Detailed information about 
-Red Hat CPEs can be found [here]. 
+Red Hat CPEs can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/cpe/). 
 
 ### RPM Repositories
 Each Red Hat published container image published after June 2020 includes content manifest JSON files for each layer included in 
 the container image. Inside each content manifest JSON file, you'll find a content sets object, which specifies the 
 repository names that provided the packages found in the container image. Scanning vendors should use the repositories 
-listed in the content sets object to map to the correct CPEs.  
+listed in the content sets object to map the repositories used within the image to the correct CPEs.  
 
 The following examples show how to get a list of the content manifest files from within a container image. 
 
@@ -219,11 +229,50 @@ both the set of related CPEs and the list of repository relative URLs. The repos
 },
 ```
 
-### Openshift CPEs 
-<!-- TODO: Add information on how to determine CPEs for container first content --> 
-
 ### CPE differences based on fix status
 <!-- TODO: Add https://issues.redhat.com/browse/SECDATA-811 Match for RHEL 10, should be no differences, link to CPE --> 
+
+
+
+
+#### RHEL 9 and Before Examples 
+```
+# Example of MAIN/EUS unfixed CPE for RHEL 9 and before
+cpe:/o:redhat:enterprise_linux:9
+```
+
+```
+# Example of a main stream fixed CPE for RHEL 9 and before
+cpe:/a:redhat:enterprise_linux:9::appstream
+```
+
+```
+# Example of an EUS stream fixed CPE 
+cpe:/a:redhat:rhel_eus:9.2::appstream
+```
+
+#### RHEL 10 Examples
+```
+# Example of MAIN/EUS unfixed CPE for RHEL 10
+cpe:/o:redhat:enterprise_linux:10
+```
+
+```
+# Example of a main stream fixed CPE for RHEL 10
+cpe:/o:redhat:enterprise_linux:10.0
+```
+
+#### Openshift Examples 
+```
+# Example of an unfixed CPE for Openshift 
+cpe:/a:redhat:openshift:4 
+```
+
+```
+# Example of a fixed CPE for Openshift 
+cpe:/a:redhat:openshift:4.16::el9
+```
+
 
 ## Using CSAF-VEX
 Red Hat current publishes security data following the the CSAF standard. Red Hat Product Security currently publishes 
@@ -343,9 +392,7 @@ Red Hat recommends that scanning vendors check the per product CVSS scores and s
 and report the product/component severity instead of the aggregate severity for the CVE, when applicable. 
 
 For the "red_hat_enterprise_linux_9:gcc" product/component pair, the CVSS base score is "5.5" with a vector string of
-"CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H". 
-
-<!-- TODO: Add CVE example with different severities per product/component pair CVE-2024-1485 -->
+"CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H".
 ```
 "scores": [
     {
@@ -397,6 +444,9 @@ has already been asked, you can review the list of questions asked [here](https:
 
 ### Python vulnerabilities 
 https://issues.redhat.com/browse/SECDATA-831
+
+### Differences in OVAL and VEX CPEs
+https://issues.redhat.com/browse/SECDATA-1141 
 
 ### Repository relative URLs 
 https://issues.redhat.com/browse/SECDATA-1089
