@@ -8,10 +8,13 @@ data to accurately report on vulnerabilities, specifically for Red Hat container
 Red Hat security data reports vulnerability information per product and component combination. In order to accurately report 
 vulnerability information against Red Hat products using CSAF advisories and VEX data, vendors should follow these process steps: 
 
-1. **Component Identification:** Determine what components are included in the scanned container, including information about the container itself.
+1. **Component Identification:** Determine what components are included in the scanned container, including information 
+about the container itself.
 2. **Product Identification:** Determine what product the components are correlated to using container metadata.
-3. **Product and Component Matching:** Using the information gather in steps 1 & 2, vendors will identify components using purls, products using CPEs and product/component pairs using unique product IDs. 
-4. **Determine Vulnerability Information:** Vulnerability information such 
+3. **Product and Component Matching:** Using the information gathered in steps 1 & 2, vendors will identify components 
+using purls, products using CPEs and product/component pairs using unique product IDs. 
+4. **Determine Vulnerability Information:** Vulnerability information such as severity, affectedness information and any 
+available security fixes, can be determined using the product IDs that represent each product/component pair.
 
 The rest of this document will cover each of these topics in more detail and include relevant examples from the following images: 
 
@@ -22,8 +25,7 @@ The rest of this document will cover each of these topics in more detail and inc
 ## Component Identification and purls
 In order to accurately report on vulnerabilities in Red Hat products, scanning vendors must properly identify the 
 Red Hat package versions for RPMs, RPM modules and container first content, to correctly identify delivered Red Hat 
-security patches. The following section provides guidance on how to find information about packages and how they are 
-reported in Red Hat's CSAF advisories and VEX  content. 
+security patches. The following section provides guidance on how to find information about each component type. 
 
 ### RPMs and RPM modules 
 An RPM package is a file format used by the Red Hat Package Manager (RPM) system for software distribution and management, 
@@ -36,7 +38,8 @@ sources and patches.
 
 Similarly, an RPM module is a set of RPM packages that represent a component and are usually installed together. A typical module 
 contains packages with an application, packages with the application-specific dependency libraries, packages with 
-documentation for the application, and packages with helper utilities. 
+documentation for the application, and packages with helper utilities. Starting from RHEL 10, there will be no more 
+RPM modules.
 
 #### Binary RPMs
 Both binary RPMs and RPM modules installed in a container image can be discovered using the `rpm -qa` command.
@@ -78,6 +81,7 @@ From within the pod, you can determine the container name and pullspec in a give
 If you already have the pullspec for the container image you are scanning, you can use the following commands to 
 determine additional container metadata.
 
+OC Image command
 ```
 # Example using oc image command with the pullspec
 $ oc image info registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a
@@ -150,6 +154,7 @@ From the output above, we can determine the following information for this image
 * Container Tag: release=202409181705.p0.g0b1616c.assembly.stream.el9 
 * Openshift Minor Version: version=v4.16.0
 
+Podman inspect command
 ```
 # Example using podman inspect with the pullspec
 $ podman inspect registry.redhat.io/rhel9/python-312@sha256:297775052f3359f454971aa08fa1691e1aa00e77331060ef3dad0c0395943ea2  
@@ -243,10 +248,14 @@ Red Hat uses CPEs to uniquely identify each product and version, following the C
 Red Hat CPEs can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/cpe/). 
 
 ### RPM Repositories
-Each Red Hat published container image published after June 2020 includes content manifest JSON files for each layer included in 
-the container image. Inside each content manifest JSON file, you'll find a content sets object, which specifies the 
-repository names that provided the packages found in the container image. Scanning vendors should use the repositories 
-listed in the content sets object to map the repositories used within the image to the correct CPEs.  
+Each Red Hat published container image published after June 2020 includes information about the repositories from which 
+the packages used in the container are sourced. Scanning vendors should use the repositories
+listed in the content sets object to map the repositories used within the image to the correct CPEs.
+
+#### Content Manifest JSON files
+Previously, content manifest JSON files were included for each layer in the container image in the `root/buildinfo/` 
+directory. Inside each content manifest JSON file, you'll find a `content_sets` object, which specifies the
+repository names that provided the packages found in the container image. 
 
 The following examples show how to get a list of the content manifest files from within a container image. 
 
@@ -297,11 +306,41 @@ $ cat /root/buildinfo/content_manifests/openshift-enterprise-console-container-v
 }
 ```
 
+#### Content-Sets JSON files
+Starting from January 2025, the content_manifests has been replaced by single content-sets.json file available in the
+`/usr/share/buildinfo/` directory and the same content is copied to the legacy location `/root/buildinfo/`. In some 
+container images, access to the root directory is locked, so the `/root/buildinfo/` location will be deprecated in the 
+future and the main location for the content-sets.json metadata will remain `/usr/share/buildinfo`.
+
+The following is an example of how to determine the repositories used from the new content sets JSON file. 
+```
+# Example of repositories in the content sets JSON 
+$ cat /usr/share/buildinfo <CONFIRM>
+
+{
+  "metadata": {
+    "icm_version": 1,
+    "icm_spec": "https://raw.githubusercontent.com/containerbuildsystem/atomic-reactor/master/atomic_reactor/schemas/content_manifest.json",
+    "image_layer_index": 0
+  },
+  "from_dnf_hint": true,
+  "content_sets": [
+    "ubi-9-for-x86_64-appstream-rpms",
+    "ubi-9-for-x86_64-appstream-source-rpms",
+    "ubi-9-for-x86_64-baseos-rpms",
+    "ubi-9-for-x86_64-baseos-source-rpms"
+  ]
+}
+```
+
+
 ### RPM Repository to CPE mapping 
 Red Hat maintains a JSON file to map Red Hat RPM repositories to our CPEs. Once you have identified the repositories
 used for the product and version by following the previous steps, you search for the repository label and determine
 both the set of related CPEs and the list of repository relative URLs. The repository to CPE mapping is located 
 [here](https://security.access.redhat.com/data/metrics/repository-to-cpe.json).
+
+The following are examples of how to determine CPEs from repositories using the repository-to-CPE JSON file. 
 
 ```
 # Example of repository to CPE mapping for rhel9/python-312 repositories
@@ -333,7 +372,7 @@ both the set of related CPEs and the list of repository relative URLs. The repos
 
 
 ## Product and Component Matching in CSAF-VEX 
-Red Hat security metadata reports vulnerability information per product and component combination. 
+All Red Hat security metadata reports vulnerability information per product and component combination. 
 
 CSAF advisories and VEX data includes information about each potentially affected product and component and the relationships
 between the applicable products and components. Vendors must identify both the relevant products and components 
@@ -343,7 +382,7 @@ A detailed breakdown of the format and information included in these files can b
 [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/).
 
 ### Product matching using CPEs in CSAF-VEX
-CSAF advisories and VEX data represents products using a `product_name` object. The `product_name` entry will include a 
+CSAF advisories and VEX data represent products using a `product_name` object. The `product_name` entry will include a 
 `production_identification_helper` in the form of a CPE. Vendors should follow the previous steps to determine a list of 
 potential CPEs that can be used to match to `product_name` entries. More information about `product_name` objects can be
 found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#product-family-and-product-name-examples)
@@ -414,10 +453,22 @@ information gathered from the container, but this is not always the case.
 If the repositories used in a container image are xUS streams, it is also necessary to check for the existence of a main
 stream CPEs as well, if the vulnerability is unfixed or did not release a fix to the xUS stream.
 
-<!-- Add example of what CPEs should be matched--> 
+The following are examples of the potential CPEs that could be matched depending on both the fix status and the product stream. 
+
+```
+Add example of what CPEs should be matched for a unfixed CVE with main repos
+```
+
+```
+Add example of what CPEs should be matched for an unfixed CVE with EUS repos 
+```
+
+```
+Add example of what CPEs should be matched for a fixed CVE with either main or EUS repos 
+```
 
 ### Component matching using purls in CSAF-VEX
-CSAF advisories and VEX data represents components using a `product_version` object. The `product_version` entry will 
+CSAF advisories and VEX data represent components using a `product_version` object. The `product_version` entry will 
 include a `production_identification_helper` in the form of a purl. Vendors should follow the previous steps to identify 
 components and then format the appropriate purls to match to `product_version` entries. More information about 
 `product_version` objects can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#unfixed-product-versions-vex-only-examples).
@@ -485,6 +536,20 @@ TODO
 As seen above, purls in CSAF advisories and VEX files can be represented differently based on fix status. When attempting
 to match a component using purls in these files, Red Hat recommends vendors to matching to against any component entries 
 based on component name. 
+
+The following are examples of the potential purls that could be matched depending on both the fix status and the fix component version.
+
+```
+Add example of what purls should be matched for a unfixed CVE 
+```
+
+```
+Add example of what CPEs should be matched for an fixed CVE with same version
+```
+
+```
+Add example of what CPEs should be matched for a fixed CVE with either newer or older
+```
 
 ### Using purls and CPE to find Product IDs 
 Vendors should use the previous steps to be able to identify the appropriate `product_name` objects using CPE and `product_version` 
