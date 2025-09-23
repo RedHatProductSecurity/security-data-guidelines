@@ -3,6 +3,7 @@
 
 ## RHEL 10 CPEs
 Starting with  RHEL 10, we will change the way CPEs are assigned to RHEL:
+
 * Minor versions will be used in CPEs for mainstream RHEL versionss
 * The cpe:/o prefix will be used instead of mixed usage of cpe:/o and cpe:/a for all RHEL variants
 * The channel specifiers are being dropped
@@ -40,6 +41,6 @@ layered products to distinguish their base RHEL version if known.
 Extended streams such as EUS, AUS or TUS always used the name rhel instead of enterprise_linux in the CPE name.
 Starting with RHEL 10, we will use enterprise_linux only for increased consistency.
 
-## RHEL 9 CPEs and Before 
+
 
 
