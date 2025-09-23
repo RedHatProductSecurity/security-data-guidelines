@@ -593,14 +593,15 @@ CVEs should be reported as follows, based on the `product_status` for the produc
 <!-- TODO: Add text about old CVEs that may not have a product match --> 
 <!-- TODO: Add column to table about product information -->
 
-| Product Status        | Component Details                                                                                 | Reporting Information                                                                                                                   |
-|-----------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| `under_investigation` | No version information available.                                                                                                  | Reported                                                                                                                                | 
-| `known_affected`      | No version information available.                                                                                               | Reported                                                                                                                                |
-| `known_not_affected`  | No version information available.                                                                 | Not reported                                                                                                                            |
-| `fixed`               | The fixed component version is newer than the component version included in the scanned software. | Reported: In this case, the component is vulnerable and should be upgraded. The associated RHSA should also be reported with this CVE.  |
-|`fixed` | The fixed component version is older than the component version included in the scanned software. | Not reported: In this case, the component should be considered already fixed and is not vulnerable in the scanned software.             |
-
+| Product Status        | Product Details                                  | Component Details                                                                                 | Reporting Information                                                                                                                   |
+|-----------------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `under_investigation` | Only main product version information available. | No component version information available.                                                       | Reported                                                                                                                               | 
+| `known_affected`      | Only main product version information available. | No component version information available.                                                       | Reported                                                                                                                               |
+| `known_not_affected`  | Only main product version information available. | No component version information available.                                                       | Not reported                                                                                                                           |
+| `fixed`               | Fixed on the same product stream                 | The fixed component version is newer than the component version included in the scanned software. | Reported: In this case, the component is vulnerable and should be upgraded. The associated RHSA should also be reported with this CVE. |
+| `fixed`               | Fixed on a different product stream              | The fixed component version is newer than the component version included in the scanned software. |  |
+|`fixed` | Fixed on the same product stream                 | The fixed component version is older than the component version included in the scanned software. | Not reported: In this case, the component should be considered already fixed and is not vulnerable in the scanned software. |
+|`fixed` | Fixed on a different product stream              | The fixed component version is older than the component version included in the scanned software. | |
 For the "red_hat_enterprise_linux_9:gcc" product/component pair, it is listed in the `known_affected` section.
 
 <!-- TODO: Add CVE example with "known_not_affected"  CVE-2024-43790 / vim -->
@@ -702,19 +703,19 @@ Vendors are encouraged to raise any questions regarding security data by opening
 Many scanning vendors face similar challenges when reading and parsing Red Hat's security data. To check if your question
 has already been asked, you can review the list of questions asked [here](https://issues.redhat.com/browse/SECDATA-862?filter=12444038).
 
-### Python vulnerabilities 
+### Python and VENV 
 https://issues.redhat.com/browse/SECDATA-831
 
-### Differences in OVAL and VEX CPEs
-https://issues.redhat.com/browse/SECDATA-1141 
-
-### Repository relative URLs 
+### Repository Relative URLs 
 https://issues.redhat.com/browse/SECDATA-1089
 https://issues.redhat.com/browse/SECDATA-797
 https://issues.redhat.com/browse/SECDATA-1020
 
-### Empty content sets
+### Empty Content Sets
 https://issues.redhat.com/browse/SECDATA-966
+
+### Differences in OVAL and VEX CPEs
+https://issues.redhat.com/browse/SECDATA-1141
 
 ### Duplicate RHSAs
 https://issues.redhat.com/browse/SECDATA-969
