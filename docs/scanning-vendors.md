@@ -1,13 +1,6 @@
 # Technical Guidance for Vulnerability Scanning Vendors
 
-## Certification Overview 
-The Red Hat Vulnerability Scanner Certification is a collaboration with security partners to deliver more accurate and 
-reliable container vulnerability scanning results of Red Hat products and packages. Security partners can now consume 
-and leverage Red Hat’s extensive and evolving set of published security data to minimize customer false positives and 
-other discrepancies.
-
-For more detailed information on the program please see the [Partner Guide for Red Hat Vulnerability Scanner Certification](https://redhat-connect.gitbook.io/partner-guide-red-hat-vulnerability-scanner-cert)
-
+## Introduction
 The following sections in this article will cover the basic principles for how scanning vendors should use Red Hat security 
 data to accurately report on vulnerabilities, specifically for Red Hat containers images. 
 
@@ -18,9 +11,9 @@ The examples used in this article will be for the following images:
 
 ## Package Identification and purls
 In order to accurately report on vulnerabilities in Red Hat products, scanning vendors must properly identify the 
-Red Hat package versions for RPMs, RPM modules and container first content, to identify any backported fixes. The
-following section provides guidance on how to find information about packages and how they are reported in Red Hat's 
-CSAF advisories and VEX  content. 
+Red Hat package versions for RPMs, RPM modules and container first content, to correctly identify delivered Red Hat 
+security patches. The following section provides guidance on how to find information about packages and how they are 
+reported in Red Hat's CSAF advisories and VEX  content. 
 
 ### RPMs and RPM modules 
 An RPM package is a file format used by the Red Hat Package Manager (RPM) system for software distribution and management, 
@@ -50,31 +43,71 @@ basesystem-11-13.el9.noarch
 Additionally, SRPMs can be discovered from a binary RPM by using the following command: 
  ```
 # Example return of SRPM query
-$ rpm -q --qf "%{SOURCERPM}\n" libgcc-11.3.1-4.3.el9.x86_64    
+$ rpm -q --qf "%{SOURCERPM}\n" 
    
-gcc-11.3.1-4.3.el9.src.rpm
+
  ```
 SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the `rpm` purl type. 
 
 ```
-# Example of a RPM purl
-pkg:rpm/redhat/libgcc-11.3.1-4.3.el9?arch=x86_64
+# Example of an unfixed RPM purl 
+TODO
+```
 
-# Example of a SRPM purl 
-pkg:rpm/redhat/gcc?arch=src
+```
+# Example of a fixed RPM purl
+TODO
+```
+
+```
+# Example of an unfixed SRPM purl
+TODO
+```
+
+```
+# Example of a fixed SRPM purl 
+TODO
 ```
 
 More detailed information about RPM purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
 
 ### Container metadata and container first content 
 Container images frequently include non-RPM packages, often referred to as container first content. Non-RPM packages 
-that are present found in a container image will be reported on the container itself instead of the package name. Containers 
-will use the `oci` purl type. 
+that are present found in a container image are reported in security data (CVE pages, CSAF/VEX files) on the container 
+level instead of the package name. 
+
+
+From within the pod, you can determine the container name and pullspec in a dedicated namespace using the following command. 
 
 ```
-# Example of a container purl 
-pkg:oci/ose-console-rhel9?repository_url=registry.redhat.io/openshift4/ose-console-rhel9
+ # Example of using oc get pod 
+ $ oc get pod <pod-name> -o jsonpath=' {.spec.containers[*].name}' -n <namespace>
+```
 
+If you already have the pullspec for the container image you are scanning, you can use the following commands to 
+determine the container name and tag.
+
+```
+# Example using oc image command with the pullspec
+$ oc image info [pullspec]
+```
+
+```
+# Example using podman inspect with the pullspec
+$ podman inspect [pullspec] 
+
+```
+
+
+CSAF advisories and VEX data, containers are represented with the `oci` purl type.
+```
+# Example of an unfixed container purl 
+TODO
+```
+
+```
+# Example of a fixed container purl 
+TODO
 ```
 More detailed information about OCI purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-container-images).
 
@@ -82,11 +115,11 @@ More detailed information about OCI purl usage can be found [here](https://redha
 Although both RPM, RPM modules and containers are represented in CSAF advisories and VEX data using standard purls, 
 there are a few differences in their representation depending on the fix status. 
 
-* Unfixed: Includes the `under_investigation`, `known_affected` and `known_not_affected` product statuses
+* Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
   * Component version: All unfixed components, both `rpm` and `oci` purl formats will not include any component versioning
   * Architecture: SRPMs will have the qualifier `arch=src`, but both binary RPMs and container will not include any
 architecture information
-* Fixed: Includes the `fixed` product status 
+* Fixed: Includes all `fixed` product status and the occasional `known_not-affected` product statuses
   * Component version: All fixed components will include versioning in  the `rpm` and `oci` purl formats 
   * Architecture: All fixed components will include architecture information in the `rpm` and `oci` purl formats
 
@@ -190,7 +223,7 @@ both the set of related CPEs and the list of repository relative URLs. The repos
 <!-- TODO: Add information on how to determine CPEs for container first content --> 
 
 ### CPE differences based on fix status
-<!-- TODO: Add https://issues.redhat.com/browse/SECDATA-811 --> 
+<!-- TODO: Add https://issues.redhat.com/browse/SECDATA-811 Match for RHEL 10, should be no differences, link to CPE --> 
 
 ## Using CSAF-VEX
 Red Hat current publishes security data following the the CSAF standard. Red Hat Product Security currently publishes 
@@ -207,88 +240,18 @@ affects the gcc component in the rhel9/python-312:1-25 container image.
 ### Using purls and CPE to find Product IDs 
 CSAF advisories and VEX data includes information about products, packages and the relationships between products and packages. 
 A `product_name` entry will represent a product and include a `production_identification_helper` in the form of a CPE.
-For any relevant components, a `product_version`entry will be present and include a `product_ifentification_helper` in the
-form a purl. Vendors should use the previous steps to be able to identify the appropriate `product_name` and `product_version` 
-entries. 
+For any relevant components, a `product_version`entry will be present and include a `product_identification_helper` in the
+form a purl. 
 
-For each valid combination of `product_name` and `product_version` there will also be a dedicated `default_component_of` 
-entry in the `relationships` section of the file. The `default_component_of` object will reference the `product_id` of 
-each `product_name` and `product` version entry, while providing a new `product_id` that represents a unique combination
-of a product (CPE) and component (purl). Once identified, this `product_id` should be used to find severity, affectedness 
-information and any available security fixes.
+Vendors should use the previous steps to be able to identify the appropriate `product_name` using CPE and `product_version` using
+purl in order to determine the unique `product_id`. Once identified, this `product_id` should be used to find severity, 
+affectedness information and any available security fixes.
 
-The following example shows what a `product_name` entry would look like for Red Hat Enterprise Linux 9. The `product_id` 
-for this entry is "red_hat_enterprise_linux_9". 
-
-```
-# Example of product_name with product CPE
-{
-    "branches": [
-        {
-            "category": "product_name",
-            "name": "Red Hat Enterprise Linux 9",
-            "product": {
-                "name": "Red Hat Enterprise Linux 9",
-                "product_id": "red_hat_enterprise_linux_9",
-                "product_identification_helper": {
-                    "cpe": "cpe:/o:redhat:enterprise_linux:9"
-                }
-            }
-        }
-    ],
-    "category": "product_family",
-    "name": "Red Hat Enterprise Linux 9"
-},
-```
-
-The following example shows what a `product_version` entry looks like for the gcc SRPM. The `product_id` for this entry 
-is "gcc". 
-
-```
-# Example of product_version with component purl
-{
-    "branches": [
-    ... },
-        {
-            "category": "product_version",
-            "name": "gcc",
-            "product": {
-                "name": "gcc",
-                "product_id": "gcc",
-                "product_identification_helper": {
-                    "purl": "pkg:rpm/redhat/gcc?arch=src"
-                }
-            }
-        }
-    ],
-    "category": "vendor",
-    "name": "Red Hat"
-},
-```
-
-Using the previously identified `product_id` from `product_name` and `product_version` entries, we are able to map to
-the following relationship entry. The `product_id` of the `product_name` will be refenced in the `relates_to_product_reference` 
-attribute and the `product_id` of the `product_version` will be found in the `product_reference` attribute. 
+More information about how to determine the `product_id` using `product_name`, `product_version` and `relationships` can 
+be found [here]()
 
 The following is an example of what a relationship entry would like for the product "Red Hat Enterprise Linux 9" and 
 the component "gcc". The `product_id` for the combination of the product and component is "red_hat_enterprise_linux_9:gcc".
-
-```
-# Example of default_component_of relationship 
-
-"relationships": [
-    {
-        "category": "default_component_of",
-        "full_product_name": {
-            "name": "gcc as a component of Red Hat Enterprise Linux 9",
-            "product_id": "red_hat_enterprise_linux_9:gcc"
-        },
-        "product_reference": "gcc",
-        "relates_to_product_reference": "red_hat_enterprise_linux_9"
-    },
-  ]
-},
-```
 
 ### CVE Information
 Basic CVE information is represented in the `vulnerabilities` section of CSAF advisories and VEX data:
@@ -382,7 +345,7 @@ and report the product/component severity instead of the aggregate severity for 
 For the "red_hat_enterprise_linux_9:gcc" product/component pair, the CVSS base score is "5.5" with a vector string of
 "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H". 
 
-<!-- TODO: Add CVE example with different severities per product pair CVE-2024-1485 -->
+<!-- TODO: Add CVE example with different severities per product/component pair CVE-2024-1485 -->
 ```
 "scores": [
     {
@@ -440,14 +403,11 @@ https://issues.redhat.com/browse/SECDATA-1089
 https://issues.redhat.com/browse/SECDATA-797
 https://issues.redhat.com/browse/SECDATA-1020
 
-###  Empty content sets
+### Empty content sets
 https://issues.redhat.com/browse/SECDATA-966
 
 ### Duplicate RHSAs
 https://issues.redhat.com/browse/SECDATA-969
-
-
-
 
 ## Additional Questions or Concerns 
 Red Hat is committed to continually improving our security data; any future changes to the data itself or the format of 
