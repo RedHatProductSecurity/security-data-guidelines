@@ -53,11 +53,11 @@ libgcc-11.3.1-4.3.el9.x86_64 gcc-11.3.1-4.3.el9.src.rpm
 
 ### Container metadata and container first content 
 Container images frequently include non-RPM packages, often referred to as container first content. Non-RPM packages 
-that are present found in a container image are reported in security data (CVE pages, CSAF/VEX files) on the container 
+that exist in a container image are reported in security data (CVE pages, CSAF/VEX files) on the container 
 level instead of the package name. 
 
 #### Container name and pullspec
-From within the pod, you can determine the container name and pullspec in a dedicated namespace using the following command. 
+From within the pod, you can determine the container name and pullspec in a given namespace using the following command. 
 
 ```
  # Example of using oc get pod 
@@ -67,22 +67,165 @@ From within the pod, you can determine the container name and pullspec in a dedi
 
 #### Container tag, Openshift version and other metadata
 If you already have the pullspec for the container image you are scanning, you can use the following commands to 
-determine the container metadata.
+determine additional container metadata.
 
 ```
 # Example using oc image command with the pullspec
-$ oc image info [pullspec]
-TODO example output
+$ oc image info registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a
+
+Name:        registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a
+Media Type:  application/vnd.docker.distribution.manifest.v2+json
+Created:     1y ago
+Image Size:  210.8MB in 4 layers
+Layers:      78.17MB sha256:ca1636478fe5b8e2a56600e24d6759147feb15020824334f4a798c1cb6ed58e2
+             47.67MB sha256:24f5353c85f58ec262052e1b10214db36acc498ffe45b3ffd8ac3af8d7eec61c
+             10.47MB sha256:0cb75215d50fe354485561a528b8b0239ac54a68fd3a6b670f3654ba54b24ec0
+             74.45MB sha256:356fed97f66574bd12d47f144a3bf53471b52b11e99b79a3701da0f9f45eafe9
+OS:          linux
+Arch:        amd64
+Command:     /opt/bridge/bin/bridge --public-dir=/opt/bridge/static
+Working Dir: /
+User:        1001
+Environment: PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+             container=oci
+             GODEBUG=x509ignoreCN=0,madvdontneed=1
+             __doozer=merge
+             BUILD_RELEASE=202409181705.p0.g0b1616c.assembly.stream.el9
+             BUILD_VERSION=v4.16.0
+             OS_GIT_MAJOR=4
+             OS_GIT_MINOR=16
+             OS_GIT_PATCH=0
+             OS_GIT_TREE_STATE=clean
+             OS_GIT_VERSION=4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9-0b1616c
+             SOURCE_GIT_TREE_STATE=clean
+             __doozer_group=openshift-4.16
+             __doozer_key=openshift-enterprise-console
+             __doozer_version=v4.16.0
+             OS_GIT_COMMIT=0b1616c
+             SOURCE_DATE_EPOCH=1726676250
+             SOURCE_GIT_COMMIT=0b1616cb0c45e5fdb5792fb96ffce1f157705369
+             SOURCE_GIT_TAG=v6.0.6-23073-g0b1616cb0c
+             SOURCE_GIT_URL=https://github.com/openshift/console
+Labels:      License=GPLv2+
+             architecture=x86_64
+             build-date=2024-09-18T17:30:51
+             com.redhat.component=openshift-enterprise-console-container
+             com.redhat.license_terms=https://www.redhat.com/agreements
+             description=This is a component of OpenShift Container Platform and provides a web console.
+             distribution-scope=public
+             io.buildah.version=1.29.0
+             io.k8s.description=This is a component of OpenShift Container Platform and provides a web console.
+             io.k8s.display-name=OpenShift Console
+             io.openshift.build.commit.id=0b1616cb0c45e5fdb5792fb96ffce1f157705369
+             io.openshift.build.commit.url=https://github.com/openshift/console/commit/0b1616cb0c45e5fdb5792fb96ffce1f157705369
+             io.openshift.build.source-location=https://github.com/openshift/console
+             io.openshift.expose-services=
+             io.openshift.maintainer.component=Management Console
+             io.openshift.maintainer.project=OCPBUGS
+             io.openshift.tags=openshift,console
+             maintainer=Samuel Padgett <spadgett@redhat.com>
+             name=openshift/ose-console-rhel9
+             release=202409181705.p0.g0b1616c.assembly.stream.el9
+             summary=Provides the latest release of the Red Hat Extended Life Base Image.
+             url=https://access.redhat.com/containers/#/registry.access.redhat.com/openshift/ose-console-rhel9/images/v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9
+             vcs-ref=29bd3d1b3311656960d7b3a53d39f52f318a1da9
+             vcs-type=git
+             vendor=Red Hat, Inc.
+             version=v4.16.0
+
 ```
+ 
+From the output above, we can determine the following information for this image:
+
+* Container Name: name=openshift/ose-console-rhel9
+* Container Tag: release=202409181705.p0.g0b1616c.assembly.stream.el9 
+* Openshift Minor Version: version=v4.16.0
 
 ```
 # Example using podman inspect with the pullspec
-$ podman inspect [pullspec] 
-TODO example output 
+$ podman inspect registry.redhat.io/rhel9/python-312@sha256:297775052f3359f454971aa08fa1691e1aa00e77331060ef3dad0c0395943ea2  
+[
+     {
+          "Id": "c61270b11bce136ba431556967613299bd5198f7d82b5be53628e7f2a836db34",
+          "Digest": "sha256:297775052f3359f454971aa08fa1691e1aa00e77331060ef3dad0c0395943ea2",
+          "RepoTags": [],
+          "RepoDigests": [
+               "registry.redhat.io/rhel9/python-312@sha256:297775052f3359f454971aa08fa1691e1aa00e77331060ef3dad0c0395943ea2"
+          ],
+          "Parent": "",
+          "Comment": "",
+          "Created": "2024-08-28T14:01:20.979463657Z",
+          "Config": {
+               "User": "1001",
+               "ExposedPorts": {
+                    "8080/tcp": {}
+               },
+               "Env": [
+                    "container=oci",
+                    "STI_SCRIPTS_URL=image:///usr/libexec/s2i",
+                    "STI_SCRIPTS_PATH=/usr/libexec/s2i",
+                    "APP_ROOT=/opt/app-root",
+                    "HOME=/opt/app-root/src",
+                    "PLATFORM=el9",
+                    "NODEJS_VER=20",
+                    "PYTHON_VERSION=3.12",
+                    "PATH=/opt/app-root/src/.local/bin/:/opt/app-root/src/bin:/opt/app-root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                    "PYTHONUNBUFFERED=1",
+                    "PYTHONIOENCODING=UTF-8",
+                    "LC_ALL=en_US.UTF-8",
+                    "LANG=en_US.UTF-8",
+                    "CNB_STACK_ID=com.redhat.stacks.ubi9-python-312",
+                    "CNB_USER_ID=1001",
+                    "CNB_GROUP_ID=0",
+                    "PIP_NO_CACHE_DIR=off",
+                    "SUMMARY=Platform for building and running Python 3.12 applications",
+                    "DESCRIPTION=Python 3.12 available as container is a base platform for building and running various Python 3.12 applications and frameworks. Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.",
+                    "BASH_ENV=/opt/app-root/bin/activate",
+                    "ENV=/opt/app-root/bin/activate",
+                    "PROMPT_COMMAND=. /opt/app-root/bin/activate"
+               ],
+               "Entrypoint": [
+                    "container-entrypoint"
+               ],
+               "Cmd": [
+                    "/bin/sh",
+                    "-c",
+                    "$STI_SCRIPTS_PATH/usage"
+               ],
+               "WorkingDir": "/opt/app-root/src",
+               "Labels": {
+                    "architecture": "x86_64",
+                    "build-date": "2024-08-28T13:57:37",
+                    "com.redhat.component": "python-312-container",
+                    "com.redhat.license_terms": "https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI",
+                    "description": "Python 3.12 available as container is a base platform for building and running various Python 3.12 applications and frameworks. Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.",
+                    "distribution-scope": "public",
+                    "io.buildah.version": "1.29.0",
+                    "io.buildpacks.stack.id": "com.redhat.stacks.ubi9-python-312",
+                    "io.k8s.description": "Python 3.12 available as container is a base platform for building and running various Python 3.12 applications and frameworks. Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.",
+                    "io.k8s.display-name": "Python 3.12",
+                    "io.openshift.expose-services": "8080:http",
+                    "io.openshift.s2i.scripts-url": "image:///usr/libexec/s2i",
+                    "io.openshift.tags": "builder,python,python312,python-312,rh-python312",
+                    "io.s2i.scripts-url": "image:///usr/libexec/s2i",
+                    "maintainer": "SoftwareCollections.org <sclorg@redhat.com>",
+                    "name": "ubi9/python-312",
+                    "release": "25",
+                    "summary": "Platform for building and running Python 3.12 applications",
+                    "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/python-312/images/1-25",
+                    "usage": "s2i build https://github.com/sclorg/s2i-python-container.git --context-dir=3.12/test/setup-test-app/ ubi9/python-312 python-sample-app",
+                    "vcs-ref": "4cd1d8f166d0b901dd5a2659bb128d69c760b5a3",
+                    "vcs-type": "git",
+                    "vendor": "Red Hat, Inc.",
+                    "version": "1"
+               }
+          },
+
 ```
-<!-- Container name: name
-Container tag: release
-Openshift version: version -->
+
+* Container Name: "name": "ubi9/python-312"
+* Container Tag: "release": "25",
+
 
 ### Purl Examples
 Purls in CSAF advisories and VEX data are represented differently based on fix status.
