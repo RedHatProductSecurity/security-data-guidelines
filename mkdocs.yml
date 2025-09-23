@@ -36,11 +36,11 @@ theme:
 
 nav:
   - Home: "index.md"
-  - SBOM: "sbom.md"
-  - purl: "purl.md"
+  - CPE: "cpe.md"
   - CSAF/VEX: "csaf-vex.md"
-  - cpe: "cpe.md"
-
+  - purl: "purl.md"
+  - SBOM: "sbom.md"
+  
 plugins:
   - social
   - search
