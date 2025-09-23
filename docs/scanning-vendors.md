@@ -4,13 +4,22 @@
 The following sections in this article will cover the basic principles for how scanning vendors should use Red Hat security 
 data to accurately report on vulnerabilities, specifically for Red Hat containers images. 
 
-The examples used in this article will be for the following images: 
+### Process Overview 
+Red Hat security data reports vulnerability information per product and component combination. In order to accurately report 
+vulnerability information against Red Hat products using CSAF advisories and VEX data, vendors should follow these process steps: 
+
+1. **Component Identification:** Determine what components are included in the scanned container, including information about the container itself.
+2. **Product Identification:** Determine what product the components are correlated to using container metadata.
+3. **Product and Component Matching:** Using the information gather in steps 1 & 2, vendors will identify components using purls, products using CPEs and product/component pairs using unique product IDs. 
+4. **Determine Vulnerability Information:** Vulnerability information such 
+
+The rest of this document will cover each of these topics in more detail and include relevant examples from the following images: 
 
 [Repository: registry.redhat.io/rhel9/python-312 Tag: 1-25](https://catalog.redhat.com/software/containers/rhel9/python-312/657b088123df896ebfacf1f0?q=python&container-tabs=overview&image=66cf3054a2c0cf86bc022be9) 
 
 [Repository: registry.redhat.io/openshift4/ose-console-rhel9 Tag: v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9](https://catalog.redhat.com/software/containers/openshift4/ose-console-rhel9/65280984f0f695f11b13a24e?image=66eb1a1cdf6256d9be4690e6&architecture=amd64)
 
-## Package Identification and purls
+## Component Identification and purls
 In order to accurately report on vulnerabilities in Red Hat products, scanning vendors must properly identify the 
 Red Hat package versions for RPMs, RPM modules and container first content, to correctly identify delivered Red Hat 
 security patches. The following section provides guidance on how to find information about packages and how they are 
@@ -224,70 +233,9 @@ $ podman inspect registry.redhat.io/rhel9/python-312@sha256:297775052f3359f45497
 ```
 
 * Container Name: "name": "ubi9/python-312"
-* Container Tag: "release": "25",
+* Container Tag: "release": "25"
 
-
-### Purl Examples
-Purls in CSAF advisories and VEX data are represented differently based on fix status.
-
-* Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
-  * Component version: All unfixed components, both `rpm` and `oci` purl formats will not include any component versioning
-  * Architecture: SRPMs will have the qualifier `arch=src`, but both binary RPMs and container will not include any
-architecture information
-* Fixed: Includes all `fixed` product status and the occasional `known_not-affected` product statuses
-  * Component version: All fixed components will include versioning in  the `rpm` and `oci` purl formats 
-  * Architecture: All fixed components will include architecture information in the `rpm` and `oci` purl formats
-
-
-#### SRPMS, RPMS and RPM modules Examples
-SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the `rpm` purl type. More detailed
-information about RPM purl usage can be found
-[here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
-
-```
-# Example of an unfixed RPM purl 
-TODO
-```
-
-```
-# Example of a fixed RPM purl
-TODO
-```
-
-```
-# Example of an unfixed SRPM purl
-TODO
-```
-
-```
-# Example of a fixed SRPM purl 
-TODO
-```
-
-```
-# Example of an unfixed RPM module purl
-TODO
-```
-
-```
-# Example of a fixed RPM module purl 
-TODO
-```
-
-#### Container Examples
-CSAF advisories and VEX data, containers are represented with the `oci` purl type. More detailed information about OCI
-purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-container-images).
-```
-# Example of an unfixed container purl 
-TODO
-```
-
-```
-# Example of a fixed container purl 
-TODO
-```
-
-## Determining CPEs 
+## Product Identification
 Common Platform Enumeration (CPE) is a standardized method of describing and identifying classes of applications, 
 operating systems, and hardware devices present among an enterprise's computing assets.
 
@@ -383,17 +331,39 @@ both the set of related CPEs and the list of repository relative URLs. The repos
 },
 ```
 
-### CPE Examples
-<!-- TODO: Add https://issues.redhat.com/browse/SECDATA-811 Match for RHEL 10, should be no differences, link to CPE --> 
 
-Similarly to purls, CPEs in CSAF advisories and VEX data are represented slightly different based on fix status. 
+## Product and Component Matching in CSAF-VEX 
+Red Hat security metadata reports vulnerability information per product and component combination. 
 
-* Unfixed: 
-* Fixed: 
+CSAF advisories and VEX data includes information about each potentially affected product and component and the relationships
+between the applicable products and components. Vendors must identify both the relevant products and components 
+individually and then determine the available product/component combinations in order to report vulnerability information correctly. 
 
-Red Hat recommends using only the first 5  reporting information when a direct CPE match is available, but this is not always the case. 
+A detailed breakdown of the format and information included in these files can be found
+[here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/).
 
-#### RHEL 9 and Before Examples 
+### Product matching using CPEs in CSAF-VEX
+CSAF advisories and VEX data represents products using a `product_name` object. The `product_name` entry will include a 
+`production_identification_helper` in the form of a CPE. Vendors should follow the previous steps to determine a list of 
+potential CPEs that can be used to match to `product_name` entries. More information about `product_name` objects can be
+found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#product-family-and-product-name-examples)
+
+#### CPEs in CSAF-VEX
+
+CPEs in CSAF advisories and VEX data are represented slightly different based on fix status.
+
+* Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
+  * Product version: Unfixed products will only include the major product version in the CPE
+  * Channel specifiers: Channel specifiers will not be included in CPEs (only applicable to RHEL 9 and before)
+* Fixed: Includes all `fixed` product status and the occasional `known_not-affected` product statuses
+  * Product version:
+    * RHEL 9 and before: Fixed products will include a major version for main stream products and a major and minor version for xUS streams
+    * RHEL 10: Fixed products will include a major and minor version for both main and xUS streams
+  * Channel specifiers: Channel specifiers will be included for CPEs (only applicable to RHEL 9 and before)
+
+#### CPE Examples
+
+RHEL 9 and Before
 ```
 # Example of MAIN/EUS unfixed CPE for RHEL 9 and before
 cpe:/o:redhat:enterprise_linux:9
@@ -409,7 +379,7 @@ cpe:/a:redhat:enterprise_linux:9::appstream
 cpe:/a:redhat:rhel_eus:9.2::appstream
 ```
 
-#### RHEL 10 Examples
+RHEL 10 Examples
 ```
 # Example of MAIN/EUS unfixed CPE for RHEL 10
 cpe:/o:redhat:enterprise_linux:10
@@ -420,7 +390,12 @@ cpe:/o:redhat:enterprise_linux:10
 cpe:/o:redhat:enterprise_linux:10.0
 ```
 
-#### Openshift Examples 
+```
+# Example of an EUS stream fixed CPE for RHEL 10 
+cpe:/o:redhat:enterprise_linux_eus:10.2 
+```
+
+Openshift Examples
 ```
 # Example of an unfixed CPE for Openshift 
 cpe:/a:redhat:openshift:4 
@@ -431,34 +406,98 @@ cpe:/a:redhat:openshift:4
 cpe:/a:redhat:openshift:4.16::el9
 ```
 
+#### CPE Matching Logic
+Due to the differences in CPE representation based on fix status, Red Hat recommends vendors attempt to match to CPEs
+using only the first 5 segments of the CPE. When available, it is best to use CPEs with a direct match to the repository
+information gathered from the container, but this is not always the case.
 
-## Using CSAF-VEX
-Red Hat current publishes security data following the the CSAF standard. Red Hat Product Security currently publishes 
-[CSAF advisories](https://security.access.redhat.com/data/csaf/v2/advisories/) for every single Red Hat Security Advisory 
-(RHSA) and [VEX files](https://security.access.redhat.com/data/csaf/v2/vex/) for every single CVE record that is associated 
-with the Red Hat portfolio in any way.
+If the repositories used in a container image are xUS streams, it is also necessary to check for the existence of a main
+stream CPEs as well, if the vulnerability is unfixed or did not release a fix to the xUS stream.
 
-A detailed breakdown of the format and information included in these files can be found
-[here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/).
+<!-- Add example of what CPEs should be matched--> 
 
-For the following examples in this section, we will be taking a look how [CVE-2022-27943](https://security.access.redhat.com/data/csaf/v2/vex/2022/cve-2022-27943.json) 
-affects the gcc component in the rhel9/python-312:1-25 container image.
+### Component matching using purls in CSAF-VEX
+CSAF advisories and VEX data represents components using a `product_version` object. The `product_version` entry will 
+include a `production_identification_helper` in the form of a purl. Vendors should follow the previous steps to identify 
+components and then format the appropriate purls to match to `product_version` entries. More information about 
+`product_version` objects can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#unfixed-product-versions-vex-only-examples).
+
+#### Purls in CSAF-VEX
+Similarly to CPEs, purls in CSAF advisories and VEX data are represented differently based on fix status.
+
+* Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
+  * Component version: All unfixed components, both `rpm` and `oci` purl formats will not include any component versioning
+  * Architecture: SRPMs will have the qualifier `arch=src`, but both binary RPMs and container will not include any
+    architecture information
+* Fixed: Includes all `fixed` product status and the occasional `known_not-affected` product statuses
+  * Component version: All fixed components will include versioning in  the `rpm` and `oci` purl formats
+  * Architecture: All fixed components will include architecture information in the `rpm` and `oci` purl formats
+
+#### Purl Examples
+
+SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the `rpm` purl type. More detailed
+information about RPM purl usage can be found
+[here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
+
+```
+# Example of an unfixed RPM purl 
+TODO
+```
+
+```
+# Example of a fixed RPM purl
+TODO
+```
+
+```
+# Example of an unfixed SRPM purl
+TODO
+```
+
+```
+# Example of a fixed SRPM purl 
+TODO
+```
+
+```
+# Example of an unfixed RPM module purl
+TODO
+```
+
+```
+# Example of a fixed RPM module purl 
+TODO
+```
+
+Non-rpm content is represented at the container level. Containers are represented with the `oci` purl type. More detailed information about OCI
+purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-container-images).
+```
+# Example of an unfixed container purl 
+TODO
+```
+
+```
+# Example of a fixed container purl 
+TODO
+```
+
+#### Purl Matching Logic
+As seen above, purls in CSAF advisories and VEX files can be represented differently based on fix status. When attempting
+to match a component using purls in these files, Red Hat recommends vendors to matching to against any component entries 
+based on component name. 
 
 ### Using purls and CPE to find Product IDs 
-CSAF advisories and VEX data includes information about products, packages and the relationships between products and packages. 
-A `product_name` entry will represent a product and include a `production_identification_helper` in the form of a CPE.
-For any relevant components, a `product_version`entry will be present and include a `product_identification_helper` in the
-form a purl. 
+Vendors should use the previous steps to be able to identify the appropriate `product_name` objects using CPE and `product_version` 
+objects using purl. 
 
-Vendors should use the previous steps to be able to identify the appropriate `product_name` using CPE and `product_version` using
-purl in order to determine the unique `product_id`. Once identified, this `product_id` should be used to find severity, 
-affectedness information and any available security fixes.
+In order to determine unique `product_id` combinations for each product/component pair, vendors should use the `relationship`
+object. More information about how to determine unique `product_id` combinations using `product_name`, `product_version` and `relationships` can 
+be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#relationships).
 
-More information about how to determine the `product_id` using `product_name`, `product_version` and `relationships` can 
-be found [here]()
 
-The following is an example of what a relationship entry would like for the product "Red Hat Enterprise Linux 9" and 
-the component "gcc". The `product_id` for the combination of the product and component is "red_hat_enterprise_linux_9:gcc".
+## Determine Vulnerability Information
+After following the previous steps, vendors should now have a list of unqiue product/component pairs in the form of 
+unique `product_id` combinations. These `product_id` combinations should be used to determine severity, affectedness information and any available security fixes.
 
 ### CVE Information
 Basic CVE information is represented in the `vulnerabilities` section of CSAF advisories and VEX data:
@@ -480,10 +519,8 @@ Basic CVE information is represented in the `vulnerabilities` section of CSAF ad
 
 
 ### Affectedness 
-After following the previous steps, scanning vendors can use the full product/component `product_id`
-"red_hat_enterprise_linux_9:gcc", to determine affectedness information about the product and 
-component in the `vulnerabilities`section of the document. Each product/component `product_id ` will be listed in the 
-`product_status` category that corresponds to the affectedness of that product/component pair.
+Affectedness information is also found in the `vulnerabilities`section of the document. Each product/component `product_id` 
+will be listed in the `product_status` category that corresponds to the affectedness of that product/component pair.
 
 CVEs should be reported as follows, based on the `product_status` for the product/component pair.
 
