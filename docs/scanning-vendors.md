@@ -7,6 +7,7 @@ data to accurately report on vulnerabilities, specifically for Red Hat container
 The examples used in this article will be for the following images: 
 
 [Repository: registry.redhat.io/rhel9/python-312 Tag: 1-25](https://catalog.redhat.com/software/containers/rhel9/python-312/657b088123df896ebfacf1f0?q=python&container-tabs=overview&image=66cf3054a2c0cf86bc022be9) 
+
 [Repository: registry.redhat.io/openshift4/ose-console-rhel9 Tag: v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9](https://catalog.redhat.com/software/containers/openshift4/ose-console-rhel9/65280984f0f695f11b13a24e?image=66eb1a1cdf6256d9be4690e6&architecture=amd64)
 
 ## Package Identification and purls
@@ -28,6 +29,7 @@ Similarly, an RPM module is a set of RPM packages that represent a component and
 contains packages with an application, packages with the application-specific dependency libraries, packages with 
 documentation for the application, and packages with helper utilities. 
 
+#### Binary RPMs
 Both binary RPMs and RPM modules installed in a container image can be discovered using the `rpm -qa` command.
 ```
 # Example return of RPM query
@@ -40,14 +42,64 @@ filesystem-3.16-2.el9.x86_64
 basesystem-11-13.el9.noarch
 ```
 
+#### SRPMs
 Additionally, SRPMs can be discovered from a binary RPM by using the following command: 
  ```
 # Example return of SRPM query
-$ rpm -q --qf "%{SOURCERPM}\n" 
-   
+$ rpm -q --qf '%{NEVRA} %{SOURCERPM}\n' libgcc-11.3.1-4.3.el9.x86_64
 
+libgcc-11.3.1-4.3.el9.x86_64 gcc-11.3.1-4.3.el9.src.rpm
  ```
-SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the `rpm` purl type. 
+
+### Container metadata and container first content 
+Container images frequently include non-RPM packages, often referred to as container first content. Non-RPM packages 
+that are present found in a container image are reported in security data (CVE pages, CSAF/VEX files) on the container 
+level instead of the package name. 
+
+#### Container name and pullspec
+From within the pod, you can determine the container name and pullspec in a dedicated namespace using the following command. 
+
+```
+ # Example of using oc get pod 
+ $ oc get pod <pod-name> -o jsonpath=' {.spec.containers[*].name}' -n <namespace>
+ TODO example output
+```
+
+#### Container tag, Openshift version and other metadata
+If you already have the pullspec for the container image you are scanning, you can use the following commands to 
+determine the container metadata.
+
+```
+# Example using oc image command with the pullspec
+$ oc image info [pullspec]
+TODO example output
+```
+
+```
+# Example using podman inspect with the pullspec
+$ podman inspect [pullspec] 
+TODO example output 
+```
+<!-- Container name: name
+Container tag: release
+Openshift version: version -->
+
+### Purl Examples
+Purls in CSAF advisories and VEX data are represented differently based on fix status.
+
+* Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
+  * Component version: All unfixed components, both `rpm` and `oci` purl formats will not include any component versioning
+  * Architecture: SRPMs will have the qualifier `arch=src`, but both binary RPMs and container will not include any
+architecture information
+* Fixed: Includes all `fixed` product status and the occasional `known_not-affected` product statuses
+  * Component version: All fixed components will include versioning in  the `rpm` and `oci` purl formats 
+  * Architecture: All fixed components will include architecture information in the `rpm` and `oci` purl formats
+
+
+#### SRPMS, RPMS and RPM modules Examples
+SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the `rpm` purl type. More detailed
+information about RPM purl usage can be found
+[here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
 
 ```
 # Example of an unfixed RPM purl 
@@ -71,45 +123,17 @@ TODO
 
 ```
 # Example of an unfixed RPM module purl
+TODO
 ```
 
 ```
 # Example of a fixed RPM module purl 
+TODO
 ```
 
-More detailed information about RPM purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
-
-### Container metadata and container first content 
-Container images frequently include non-RPM packages, often referred to as container first content. Non-RPM packages 
-that are present found in a container image are reported in security data (CVE pages, CSAF/VEX files) on the container 
-level instead of the package name. 
-
-
-From within the pod, you can determine the container name and pullspec in a dedicated namespace using the following command. 
-
-```
- # Example of using oc get pod 
- $ oc get pod <pod-name> -o jsonpath=' {.spec.containers[*].name}' -n <namespace>
-```
-
-If you already have the pullspec for the container image you are scanning, you can use the following commands to 
-determine the container metadata.
-
-```
-# Example using oc image command with the pullspec
-$ oc image info [pullspec]
-```
-
-```
-# Example using podman inspect with the pullspec
-$ podman inspect [pullspec] 
-
-```
-<!-- Container name: name
-Container tag: release
-Openshift version: version -->
-
-CSAF advisories and VEX data, containers are represented with the `oci` purl type.
+#### Container Examples
+CSAF advisories and VEX data, containers are represented with the `oci` purl type. More detailed information about OCI
+purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-container-images).
 ```
 # Example of an unfixed container purl 
 TODO
@@ -119,19 +143,6 @@ TODO
 # Example of a fixed container purl 
 TODO
 ```
-More detailed information about OCI purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-container-images).
-
-### Purl differences based on fix status
-Although both RPM, RPM modules and containers are represented in CSAF advisories and VEX data using standard purls, 
-there are a few differences in their representation depending on the fix status. 
-
-* Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
-  * Component version: All unfixed components, both `rpm` and `oci` purl formats will not include any component versioning
-  * Architecture: SRPMs will have the qualifier `arch=src`, but both binary RPMs and container will not include any
-architecture information
-* Fixed: Includes all `fixed` product status and the occasional `known_not-affected` product statuses
-  * Component version: All fixed components will include versioning in  the `rpm` and `oci` purl formats 
-  * Architecture: All fixed components will include architecture information in the `rpm` and `oci` purl formats
 
 ## Determining CPEs 
 Common Platform Enumeration (CPE) is a standardized method of describing and identifying classes of applications, 
@@ -229,11 +240,15 @@ both the set of related CPEs and the list of repository relative URLs. The repos
 },
 ```
 
-### CPE differences based on fix status
+### CPE Examples
 <!-- TODO: Add https://issues.redhat.com/browse/SECDATA-811 Match for RHEL 10, should be no differences, link to CPE --> 
 
+Similarly to purls, CPEs in CSAF advisories and VEX data are represented slightly different based on fix status. 
 
+* Unfixed: 
+* Fixed: 
 
+Red Hat recommends using only the first 5  reporting information when a direct CPE match is available, but this is not always the case. 
 
 #### RHEL 9 and Before Examples 
 ```
