@@ -423,12 +423,13 @@ class SBOMBuilder:
         cdx_root_component = None
         cdx_pedigrees = []
         for rpm in rpms:
-            (name, version, release, nvr, arch) = (
+            (name, version, release, nvr, arch, epoch) = (
                 rpm["name"],
                 rpm["version"],
                 rpm["release"],
                 rpm["nvr"],
                 rpm["arch"],
+                rpm["epoch"],
             )
             filename = f"{downloaddir}/{name}-{version}-{release}.{arch}.rpm"
             if arch == "src":
@@ -441,6 +442,8 @@ class SBOMBuilder:
             sha256header = self.get_rpm_sha256header(filename)
             sigmd5 = self.get_rpm_sigmd5(filename)
             purl = f"pkg:rpm/redhat/{name}@{version}-{release}?arch={arch}"
+            if epoch:
+                purl = f"{purl}&epoch={epoch}"
             if rpmmod:
                 purl = f"{purl}&rpmmod={rpmmod}"
             package = {
@@ -526,6 +529,8 @@ class SBOMBuilder:
             "relationships": self.spdx_relationships,
         }
 
+        copy_of_cdx_root = deepcopy(cdx_root_component)
+        cdx_root_component.pop("bom-ref")
         cdx = {
             "bomFormat": "CycloneDX",
             "specVersion": "1.6",
@@ -546,19 +551,18 @@ class SBOMBuilder:
             },
         }
 
-        copy_of_cdx_root = deepcopy(cdx_root_component)
         copy_of_cdx_root["pedigree"] = {"ancestors": cdx_pedigrees}
         self.cdx_components.append(copy_of_cdx_root)
         cdx["components"] = sorted(self.cdx_components, key=lambda c: c["purl"])
 
         binary_rpm_purls = set()
         for cdx_component in self.cdx_components:
-            if cdx_component["bom-ref"] == cdx_root_component["bom-ref"]:
+            if cdx_component["bom-ref"] == copy_of_cdx_root["bom-ref"]:
                 continue
             binary_rpm_purls.add(cdx_component["purl"])
 
         cdx["dependencies"] = [
-            {"ref": cdx_root_component["bom-ref"], "provides": sorted(list(binary_rpm_purls))}
+            {"ref": copy_of_cdx_root["bom-ref"], "provides": sorted(list(binary_rpm_purls))}
         ]
 
         with open(f"{build_id}.spdx.json", "w") as fp:
@@ -624,7 +628,7 @@ is_module = check_module()
 build_ids = []
 rpmmod = ""
 if is_module:
-    module_tag, module_nsvc= get_modulemd_data()
+    module_tag, module_nsvc = get_modulemd_data()
     rpmmod = module_nsvc
     module_builds = SESSION.listTagged(module_tag)
     for module_build in module_builds:
