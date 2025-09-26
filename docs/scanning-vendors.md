@@ -1,20 +1,21 @@
 # Technical Guidance for Vulnerability Scanning Vendors
 
 ## Introduction
-The following sections in this article will cover the basic principles for how scanning vendors should use Red Hat security 
-data to accurately report on vulnerabilities, specifically for Red Hat containers images. 
+This article covers the basic principles for how scanning vendors should use Red Hat security data to accurately report 
+on vulnerabilities, specifically for Red Hat containers images. 
 
 ### Process Overview 
 Red Hat security data reports vulnerability information per product and component combination. In order to accurately report 
 vulnerability information against Red Hat products using CSAF advisories and VEX data, vendors should follow these process steps: 
 
 1. **Component Identification:** Determine what components are included in the scanned container, including information 
-about the container itself.
-2. **Product Identification:** Determine what product the components are correlated to using container metadata.
-3. **Product and Component Matching:** Using the information gathered in steps 1 & 2, vendors will identify components 
-using purls, products using CPEs and product/component pairs using unique product IDs. 
-4. **Determine Vulnerability Information:** Vulnerability information such as severity, affectedness information and any 
-available security fixes, can be determined using the product IDs that represent each product/component pair.
+about the container itself and represent them using purls.
+2. **Product Identification:** Determine what product the components are correlated to using container metadata using 
+repositories and represent them with CPEs.
+3. **Product and Component Matching:** Identify product/component pairs with product IDs by matching components to purls 
+and products to CPEs.
+4. **Determine Vulnerability Information:** Find vulnerability information such as severity, affectedness information 
+and any available security fixes by using the product/component product IDs.
 
 The rest of this document will cover each of these topics in more detail and include relevant examples from the following images: 
 
@@ -22,66 +23,90 @@ The rest of this document will cover each of these topics in more detail and inc
 
 [Repository: registry.redhat.io/openshift4/ose-console-rhel9 Tag: v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9](https://catalog.redhat.com/software/containers/openshift4/ose-console-rhel9/65280984f0f695f11b13a24e?image=66eb1a1cdf6256d9be4690e6&architecture=amd64)
 
-## Component Identification and purls
-In order to accurately report on vulnerabilities in Red Hat products, scanning vendors must properly identify the 
-Red Hat package versions for RPMs, RPM modules and container first content, to correctly identify delivered Red Hat 
-security patches. The following section provides guidance on how to find information about each component type. 
+## Component Identification
+The Package URL (purl) specification has become a widely used standard for identifying and locating software 
+components throughout the open source software community.
+
+Red Hat uses purl to identify software components, including RPMs, RPM modules and container first content, in our 
+CSAF advisory and VEX files as well as our SBOM files. Detailed information about Red Hat purls can be found 
+[here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/).
 
 ### RPMs and RPM modules 
 An RPM package is a file format used by the Red Hat Package Manager (RPM) system for software distribution and management, 
 which package consists of an archive of files and metadata used to install and erase these files.
 
-There are two types of RPM packages: source RPMs and binary RPMs. Both types share the same file format and tooling, but have
-different contents and serve different purposes. A source RPM (SRPM) contains source code and a spec file, which 
-describes how to build the source code into a binary RPM, while a binary RPM contains the binaries built from the 
-sources and patches.
+There are two types of RPM packages: source RPMs, which contain source code and a spec file and binary RPMs, which are
+the files built from source packages and patches. 
 
-Similarly, an RPM module is a set of RPM packages that represent a component and are usually installed together. A typical module 
-contains packages with an application, packages with the application-specific dependency libraries, packages with 
-documentation for the application, and packages with helper utilities. Starting from RHEL 10, there will be no more 
-RPM modules.
+Additionally, an RPM module is a set of RPM packages that represent a component and are usually installed together. 
+Starting from RHEL 10, there will be no more RPM modules.
+
+SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the `rpm` purl type. More detailed
+information about RPM purl usage can be found
+[here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
+
 
 #### Binary RPMs
-Both binary RPMs and RPM modules installed in a container image can be discovered using the `rpm -qa` command.
+Both binary RPMs and RPM modules installed in a container image can be discovered using the `rpm -qa` command from within 
+the container image.
 ```
 # Example return of RPM query
-$ rpm -qa
+$ rpm -qa --qf '%{NAME} %{EPOCHNUM} %{VERSION} %{RELEASE} %{ARCH}\n'
 
-libgcc-11.3.1-4.3.el9.x86_64
-subscription-manager-rhsm-certificates-20220623-1.el9.noarch
-setup-2.13.7-9.el9.noarch
-filesystem-3.16-2.el9.x86_64
-basesystem-11-13.el9.noarch
+libgcc 0 11.3.1 4.3.el9 x86_64
+subscription-manager-rhsm-certificates 0 20220623 1.el9 noarch
+setup 0 2.13.7 9.el9 noarch
+filesystem 0 3.16 2.el9 x86_64
+basesystem 0 11 13.el9 noarch
+```
+
+Using this information, we can format a purl for the libgcc component. 
+```
+# Example of binary RPM purl using name, version and architecture
+
+pkg:rpm/redhat/libgcc@11.3.1-4.3.el9?arch=x86_64
 ```
 
 #### SRPMs
-Additionally, SRPMs can be discovered from a binary RPM by using the following command: 
+Additionally, SRPMs can be discovered from a binary RPM by using the following command from within the container image.  
  ```
 # Example return of SRPM query
-$ rpm -q --qf '%{NEVRA} %{SOURCERPM}\n' libgcc-11.3.1-4.3.el9.x86_64
-
-libgcc-11.3.1-4.3.el9.x86_64 gcc-11.3.1-4.3.el9.src.rpm
+$ rpm -q --qf '%{SOURCERPM}\n' libgcc  
+                    
+gcc-11.3.1-4.3.el9.src.rpm
  ```
+
+The gcc source component can be represented using the following purl.
+```
+# Example of SRPM purl using name, version and architecture 
+
+pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src
+```
+
+#### RPM modules
+
+
 
 ### Container metadata and container first content 
 Container images frequently include non-RPM packages, often referred to as container first content. Non-RPM packages 
 that exist in a container image are reported in security data (CVE pages, CSAF/VEX files) on the container 
-level instead of the package name. 
+level instead of the package name.
+
+Containers are represented with the `oci` purl type. More detailed information about OCI
+purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-container-images).
 
 #### Container name and pullspec
-From within the pod, you can determine the container name and pullspec in a given namespace using the following command. 
-
+From within the pod, you can determine the container name and pullspec in a given namespace using the following command.
 ```
  # Example of using oc get pod 
  $ oc get pod <pod-name> -o jsonpath=' {.spec.containers[*].name}' -n <namespace>
+ 
  TODO example output
 ```
 
 #### Container tag, Openshift version and other metadata
-If you already have the pullspec for the container image you are scanning, you can use the following commands to 
+If you already have the pullspec for the container image you are scanning, you can use the following method to 
 determine additional container metadata.
-
-OC Image command
 ```
 # Example using oc image command with the pullspec
 $ oc image info registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a
@@ -151,94 +176,16 @@ Labels:      License=GPLv2+
 From the output above, we can determine the following information for this image:
 
 * Container Name: name=openshift/ose-console-rhel9
-* Container Tag: release=202409181705.p0.g0b1616c.assembly.stream.el9 
-* Openshift Minor Version: version=v4.16.0
+* Container Architecture: Arch: amd64
+* Container Repository: 
+* Container Tag: release=202409181705.p0.g0b1616c.assembly.stream.el9
 
-Podman inspect command
+Using this information, we can represent this container image with the following purl.
 ```
-# Example using podman inspect with the pullspec
-$ podman inspect registry.redhat.io/rhel9/python-312@sha256:297775052f3359f454971aa08fa1691e1aa00e77331060ef3dad0c0395943ea2  
-[
-     {
-          "Id": "c61270b11bce136ba431556967613299bd5198f7d82b5be53628e7f2a836db34",
-          "Digest": "sha256:297775052f3359f454971aa08fa1691e1aa00e77331060ef3dad0c0395943ea2",
-          "RepoTags": [],
-          "RepoDigests": [
-               "registry.redhat.io/rhel9/python-312@sha256:297775052f3359f454971aa08fa1691e1aa00e77331060ef3dad0c0395943ea2"
-          ],
-          "Parent": "",
-          "Comment": "",
-          "Created": "2024-08-28T14:01:20.979463657Z",
-          "Config": {
-               "User": "1001",
-               "ExposedPorts": {
-                    "8080/tcp": {}
-               },
-               "Env": [
-                    "container=oci",
-                    "STI_SCRIPTS_URL=image:///usr/libexec/s2i",
-                    "STI_SCRIPTS_PATH=/usr/libexec/s2i",
-                    "APP_ROOT=/opt/app-root",
-                    "HOME=/opt/app-root/src",
-                    "PLATFORM=el9",
-                    "NODEJS_VER=20",
-                    "PYTHON_VERSION=3.12",
-                    "PATH=/opt/app-root/src/.local/bin/:/opt/app-root/src/bin:/opt/app-root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
-                    "PYTHONUNBUFFERED=1",
-                    "PYTHONIOENCODING=UTF-8",
-                    "LC_ALL=en_US.UTF-8",
-                    "LANG=en_US.UTF-8",
-                    "CNB_STACK_ID=com.redhat.stacks.ubi9-python-312",
-                    "CNB_USER_ID=1001",
-                    "CNB_GROUP_ID=0",
-                    "PIP_NO_CACHE_DIR=off",
-                    "SUMMARY=Platform for building and running Python 3.12 applications",
-                    "DESCRIPTION=Python 3.12 available as container is a base platform for building and running various Python 3.12 applications and frameworks. Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.",
-                    "BASH_ENV=/opt/app-root/bin/activate",
-                    "ENV=/opt/app-root/bin/activate",
-                    "PROMPT_COMMAND=. /opt/app-root/bin/activate"
-               ],
-               "Entrypoint": [
-                    "container-entrypoint"
-               ],
-               "Cmd": [
-                    "/bin/sh",
-                    "-c",
-                    "$STI_SCRIPTS_PATH/usage"
-               ],
-               "WorkingDir": "/opt/app-root/src",
-               "Labels": {
-                    "architecture": "x86_64",
-                    "build-date": "2024-08-28T13:57:37",
-                    "com.redhat.component": "python-312-container",
-                    "com.redhat.license_terms": "https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI",
-                    "description": "Python 3.12 available as container is a base platform for building and running various Python 3.12 applications and frameworks. Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.",
-                    "distribution-scope": "public",
-                    "io.buildah.version": "1.29.0",
-                    "io.buildpacks.stack.id": "com.redhat.stacks.ubi9-python-312",
-                    "io.k8s.description": "Python 3.12 available as container is a base platform for building and running various Python 3.12 applications and frameworks. Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.",
-                    "io.k8s.display-name": "Python 3.12",
-                    "io.openshift.expose-services": "8080:http",
-                    "io.openshift.s2i.scripts-url": "image:///usr/libexec/s2i",
-                    "io.openshift.tags": "builder,python,python312,python-312,rh-python312",
-                    "io.s2i.scripts-url": "image:///usr/libexec/s2i",
-                    "maintainer": "SoftwareCollections.org <sclorg@redhat.com>",
-                    "name": "ubi9/python-312",
-                    "release": "25",
-                    "summary": "Platform for building and running Python 3.12 applications",
-                    "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/python-312/images/1-25",
-                    "usage": "s2i build https://github.com/sclorg/s2i-python-container.git --context-dir=3.12/test/setup-test-app/ ubi9/python-312 python-sample-app",
-                    "vcs-ref": "4cd1d8f166d0b901dd5a2659bb128d69c760b5a3",
-                    "vcs-type": "git",
-                    "vendor": "Red Hat, Inc.",
-                    "version": "1"
-               }
-          },
+# Example of the container purl using name, architecture, repository and tag
 
+pkg:oci/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a?arch=amd64&repository_url=registry.redhat.io/openshift4/ose-console-rhel9&tag=v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9"
 ```
-
-* Container Name: "name": "ubi9/python-312"
-* Container Tag: "release": "25"
 
 ## Product Identification
 Common Platform Enumeration (CPE) is a standardized method of describing and identifying classes of applications, 
@@ -248,17 +195,17 @@ Red Hat uses CPEs to uniquely identify each product and version, following the C
 Red Hat CPEs can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/cpe/). 
 
 ### RPM Repositories
-Each Red Hat published container image published after June 2020 includes information about the repositories from which 
-the packages used in the container are sourced. Scanning vendors should use the repositories
-listed in the content sets object to map the repositories used within the image to the correct CPEs.
+Each Red Hat container images published after June 2020 include information about the repositories from which 
+the packages used in the container are sourced. Scanning vendors will use the repositories to identify CPEs that are 
+associated with the scanned image. The following sections explain different ways to identify repository information for 
+a container image. 
 
 #### Content Manifest JSON files
 Previously, content manifest JSON files were included for each layer in the container image in the `root/buildinfo/` 
 directory. Inside each content manifest JSON file, you'll find a `content_sets` object, which specifies the
 repository names that provided the packages found in the container image. 
 
-The following examples show how to get a list of the content manifest files from within a container image. 
-
+The following examples show how to get a list of the content manifest files from within a container image.
 ```
 # Example of content manifest files for rhel9/python-312 image 
 $ ls /root/buildinfo/content_manifests 
@@ -279,8 +226,7 @@ openshift-enterprise-console-container-v4.16.0-202409181705.p0.g0b1616c.assembly
 rhel-els-container-9.2-483.json
 ```
 
-The following examples provide a look at the content sets object within an individual manifest file. 
-
+The following examples provide a look at the content sets object within an individual manifest file.
 ```
 # Example of repositories in content sets for rhel9/python-312 image 
 $ cat /root/buildinfo/content_manifests/python-312-container-1-25.json
@@ -308,14 +254,14 @@ $ cat /root/buildinfo/content_manifests/openshift-enterprise-console-container-v
 
 #### Content-Sets JSON files
 Starting from January 2025, the content_manifests has been replaced by single content-sets.json file available in the
-`/usr/share/buildinfo/` directory and the same content is copied to the legacy location `/root/buildinfo/`. In some 
-container images, access to the root directory is locked, so the `/root/buildinfo/` location will be deprecated in the 
-future and the main location for the content-sets.json metadata will remain `/usr/share/buildinfo`.
+`/usr/share/buildinfo/` directory and the same content is copied to the legacy location `/root/buildinfo/content_manifests/`. 
+In some container images, access to the root directory is locked, so the `/root/buildinfo/` location will be deprecated 
+in the future and the main location for the content-sets.json metadata will remain in `/usr/share/buildinfo`.
 
 The following is an example of how to determine the repositories used from the new content sets JSON file. 
 ```
 # Example of repositories in the content sets JSON 
-$ cat /usr/share/buildinfo <CONFIRM>
+$ cat cat /usr/share/buildinfo/content-sets.json
 
 {
   "metadata": {
@@ -325,14 +271,36 @@ $ cat /usr/share/buildinfo <CONFIRM>
   },
   "from_dnf_hint": true,
   "content_sets": [
-    "ubi-9-for-x86_64-appstream-rpms",
-    "ubi-9-for-x86_64-appstream-source-rpms",
-    "ubi-9-for-x86_64-baseos-rpms",
-    "ubi-9-for-x86_64-baseos-source-rpms"
+    "rhel-9-for-aarch64-appstream-rpms",
+    "rhel-9-for-aarch64-appstream-source-rpms",
+    "rhel-9-for-aarch64-baseos-rpms",
+    "rhel-9-for-aarch64-baseos-source-rpms",
+    "rhel-9-for-ppc64le-appstream-rpms",
+    "rhel-9-for-ppc64le-appstream-source-rpms",
+    "rhel-9-for-ppc64le-baseos-rpms",
+    "rhel-9-for-ppc64le-baseos-source-rpms",
+    "rhel-9-for-s390x-appstream-rpms",
+    "rhel-9-for-s390x-appstream-source-rpms",
+    "rhel-9-for-s390x-baseos-rpms",
+    "rhel-9-for-s390x-baseos-source-rpms",
+    "rhel-9-for-x86_64-appstream-rpms",
+    "rhel-9-for-x86_64-appstream-source-rpms",
+    "rhel-9-for-x86_64-baseos-rpms",
+    "rhel-9-for-x86_64-baseos-source-rpms"
   ]
 }
 ```
+#### Querying Repositories for Binary RPMs 
 
+Although container images provide a list of repositories from which the packages in the image are sourced, vendors may also 
+be interested in determining the repository that provided a specific binary RPM. This can be done using the dnf database, but 
+dnf is not always shipped with container images.
+```
+# Example return of repository query 
+$ dnf repoquery --qf "%{repoid}" libgcc-11.3.1-4.3.el9.x86_64
+
+rhel-9-for-x86_64-baseos-rpms
+```
 
 ### RPM Repository to CPE mapping 
 Red Hat maintains a JSON file to map Red Hat RPM repositories to our CPEs. Once you have identified the repositories
@@ -340,8 +308,7 @@ used for the product and version by following the previous steps, you search for
 both the set of related CPEs and the list of repository relative URLs. The repository to CPE mapping is located 
 [here](https://security.access.redhat.com/data/metrics/repository-to-cpe.json).
 
-The following are examples of how to determine CPEs from repositories using the repository-to-CPE JSON file. 
-
+The following are examples of how to determine CPEs from repositories using the repository-to-CPE JSON file.
 ```
 # Example of repository to CPE mapping for rhel9/python-312 repositories
 "rhel-9-for-aarch64-baseos-rpms": {
@@ -358,7 +325,24 @@ The following are examples of how to determine CPEs from repositories using the 
         "content/dist/rhel9/9.8/aarch64/baseos/os", 
         "content/dist/rhel9/9/aarch64/baseos/os"]
 },
+...
+"rhel-9-for-aarch64-appstream-rpms": {
+    "cpes": [
+        "cpe:/a:redhat:enterprise_linux:9::appstream"], 
+    "repo_relative_urls": [
+        "content/dist/rhel9/9.1/aarch64/appstream/os", 
+        "content/dist/rhel9/9.2/aarch64/appstream/os", 
+        "content/dist/rhel9/9.3/aarch64/appstream/os", 
+        "content/dist/rhel9/9.4/aarch64/appstream/os", 
+        "content/dist/rhel9/9.5/aarch64/appstream/os", 
+        "content/dist/rhel9/9.6/aarch64/appstream/os", 
+        "content/dist/rhel9/9.7/aarch64/appstream/os", 
+        "content/dist/rhel9/9.8/aarch64/appstream/os", 
+        "content/dist/rhel9/9/aarch64/appstream/os"]
+},
 ```
+The two CPEs that we have identified for the rhel9/python-312 image are `cpe:/o:redhat:enterprise_linux:9::baseos` and 
+`cpe:/a:redhat:enterprise_linux:9::appstream`.
 
 ```
 # Example of repository to CPE mapping for openshift4/ose-console-rhel9 repositories
@@ -368,14 +352,27 @@ The following are examples of how to determine CPEs from repositories using the 
     "repo_relative_urls": [
         "content/eus/rhel9/9.2/x86_64/appstream/os"]
 },
+...
+"rhel-9-for-x86_64-baseos-eus-rpms__9_DOT_2": {
+    "cpes": [
+        "cpe:/o:redhat:rhel_eus:9.2::baseos"], 
+    "repo_relative_urls": [
+        "content/eus/rhel9/9.2/x86_64/baseos/os"]
+},
 ```
-
+The two CPEs we have identified for the openshift4/ose-console-rhel9 image are `cpe:/a:redhat:rhel_eus:9.2::appstream"` 
+and `cpe:/o:redhat:rhel_eus:9.2::baseos`.
 
 ## Product and Component Matching in CSAF-VEX 
-All Red Hat security metadata reports vulnerability information per product and component combination. 
+The [Common Security Advisory Framework (CSAF)](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html) is a 
+standard that provides a structured, machine-readable way of representing and sharing security advisory information 
+across all software and hardware providers. 
 
-CSAF advisories and VEX data includes information about each potentially affected product and component and the relationships
-between the applicable products and components. Vendors must identify both the relevant products and components 
+Red Hat Product Security publishes CSAF files for every single Red Hat Security Advisory (RHSA) and VEX files for every 
+single CVE record that is associated with the Red Hat portfolio in any way.
+
+CSAF advisories and VEX data includes information about products, components and the relationships
+between the applicable products and components. Scanning vendors must identify both the relevant products and components 
 individually and then determine the available product/component combinations in order to report vulnerability information correctly. 
 
 A detailed breakdown of the format and information included in these files can be found
@@ -388,7 +385,6 @@ potential CPEs that can be used to match to `product_name` entries. More informa
 found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#product-family-and-product-name-examples)
 
 #### CPEs in CSAF-VEX
-
 CPEs in CSAF advisories and VEX data are represented slightly different based on fix status.
 
 * Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
@@ -400,72 +396,49 @@ CPEs in CSAF advisories and VEX data are represented slightly different based on
     * RHEL 10: Fixed products will include a major and minor version for both main and xUS streams
   * Channel specifiers: Channel specifiers will be included for CPEs (only applicable to RHEL 9 and before)
 
-#### CPE Examples
-
-RHEL 9 and Before
-```
-# Example of MAIN/EUS unfixed CPE for RHEL 9 and before
-cpe:/o:redhat:enterprise_linux:9
-```
-
-```
-# Example of a main stream fixed CPE for RHEL 9 and before
-cpe:/a:redhat:enterprise_linux:9::appstream
-```
-
-```
-# Example of an EUS stream fixed CPE 
-cpe:/a:redhat:rhel_eus:9.2::appstream
-```
-
-RHEL 10 Examples
-```
-# Example of MAIN/EUS unfixed CPE for RHEL 10
-cpe:/o:redhat:enterprise_linux:10
-```
-
-```
-# Example of a main stream fixed CPE for RHEL 10
-cpe:/o:redhat:enterprise_linux:10.0
-```
-
-```
-# Example of an EUS stream fixed CPE for RHEL 10 
-cpe:/o:redhat:enterprise_linux_eus:10.2 
-```
-
-Openshift Examples
-```
-# Example of an unfixed CPE for Openshift 
-cpe:/a:redhat:openshift:4 
-```
-
-```
-# Example of a fixed CPE for Openshift 
-cpe:/a:redhat:openshift:4.16::el9
-```
-
 #### CPE Matching Logic
 Due to the differences in CPE representation based on fix status, Red Hat recommends vendors attempt to match to CPEs
-using only the first 5 segments of the CPE. When available, it is best to use CPEs with a direct match to the repository
-information gathered from the container, but this is not always the case.
+using only the first 5 segments of the CPE and excluding any channel specifies. When available, it is best to use CPEs 
+with a direct match to the repository information gathered from the container, but there may not always be a direct match.
 
 If the repositories used in a container image are xUS streams, it is also necessary to check for the existence of a main
 stream CPEs as well, if the vulnerability is unfixed or did not release a fix to the xUS stream.
 
-The following are examples of the potential CPEs that could be matched depending on both the fix status and the product stream. 
+The following are examples of the CPEs that should be used to account for matching and then the potential matches depending on 
+the CVE fix statuses and product streams.
+```
+# Example of CPEs that should be checked for the rhel9/python-312 image  
+
+cpe:/o:redhat:enterprise_linux:9
+cpe:/a:redhat:enterprise_linux:9
+```
+Examples of potential CPE matches depending on fix statuses for the rhel9/python-312
+
+| CPE                                          | product_id                 | Notes                               |
+|----------------------------------------------|----------------------------|-------------------------------------|
+| cpe:/o:redhat:enterprise_linux:9             | red_hat_enterprise_linux_9 | CVE is unfixed                      | 
+| cpe:/o:redhat:enterprise_linux:9::baseos     | BaseOS-9.5.0.Z.MAIN        | CVE is fixed for RHEL 9 MAIN stream |
+| cpe:/a:redhat:enterprise_linux:9::appstream  | AppStream-9.5.0.Z.MAIN     | CVE is fixed for RHEL 9 MAIN stream |                                   
+| cpe:/a:redhat:enterprise_linux:9::crb        | CRB-9.5.0.Z.MAIN           | CVE is fixed for RHEL 9 MAIN stream |                                   
+
 
 ```
-Add example of what CPEs should be matched for a unfixed CVE with main repos
+# Example of CPEs that should be checked for the openshift4/ose-console-rhel9
+
+cpe:/o:redhat:enterprise_linux:9
+cpe:/a:redhat:rhel_eus:9.2
+cpe:/o:redhat:rhel_eus:9.2
 ```
 
-```
-Add example of what CPEs should be matched for an unfixed CVE with EUS repos 
-```
+Examples of potential CPE matches depending on fix statuses for the openshift4/ose-console-rhel9
 
-```
-Add example of what CPEs should be matched for a fixed CVE with either main or EUS repos 
-```
+| CPE                                      | product_id                 | Notes                               |
+|------------------------------------------|----------------------------|-------------------------------------|
+| cpe:/o:redhat:enterprise_linux:9         | red_hat_enterprise_linux_9 | CVE is unfixed                      | 
+| cpe:/o:redhat:enterprise_linux:9::baseos | BaseOS-9.5.0.Z.MAIN        | CVE is fixed for RHEL 9 MAIN stream |
+| cpe:/o:redhat:rhel_eus:9.2::baseos       | BaseOS-9.2.0.Z.EUS         | CVE is fixed for RHEL 9.2 EUS       |
+| cpe:/a:redhat:rhel_eus:9.2::appstream    | AppStream-9.2.0.Z.EUS      | CVE is fixed for RHEL 9.2 EUS       |
+| cpe:/a:redhat:rhel_eus:9.2::crb          | CRB-9.2.0.Z.EUS            | CVE is fixed for RHEL 9.2 EUS       |
 
 ### Component matching using purls in CSAF-VEX
 CSAF advisories and VEX data represent components using a `product_version` object. The `product_version` entry will 
@@ -480,76 +453,50 @@ Similarly to CPEs, purls in CSAF advisories and VEX data are represented differe
   * Component version: All unfixed components, both `rpm` and `oci` purl formats will not include any component versioning
   * Architecture: SRPMs will have the qualifier `arch=src`, but both binary RPMs and container will not include any
     architecture information
-* Fixed: Includes all `fixed` product status and the occasional `known_not-affected` product statuses
+* Fixed: Includes all `fixed` product status and the occasional `known_not_affected` product statuses
   * Component version: All fixed components will include versioning in  the `rpm` and `oci` purl formats
   * Architecture: All fixed components will include architecture information in the `rpm` and `oci` purl formats
-
-#### Purl Examples
-
-SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the `rpm` purl type. More detailed
-information about RPM purl usage can be found
-[here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
-
-```
-# Example of an unfixed RPM purl 
-TODO
-```
-
-```
-# Example of a fixed RPM purl
-TODO
-```
-
-```
-# Example of an unfixed SRPM purl
-TODO
-```
-
-```
-# Example of a fixed SRPM purl 
-TODO
-```
-
-```
-# Example of an unfixed RPM module purl
-TODO
-```
-
-```
-# Example of a fixed RPM module purl 
-TODO
-```
-
-Non-rpm content is represented at the container level. Containers are represented with the `oci` purl type. More detailed information about OCI
-purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-container-images).
-```
-# Example of an unfixed container purl 
-TODO
-```
-
-```
-# Example of a fixed container purl 
-TODO
-```
 
 #### Purl Matching Logic
 As seen above, purls in CSAF advisories and VEX files can be represented differently based on fix status. When attempting
 to match a component using purls in these files, Red Hat recommends vendors to matching to against any component entries 
 based on component name. 
 
-The following are examples of the potential purls that could be matched depending on both the fix status and the fix component version.
+The following are examples of the purls that could be matched depending on both the fix status and the 
+fix component version.
 
+Binary RPMs
 ```
-Add example of what purls should be matched for a unfixed CVE 
+# Example of potential purls that should be checked for libgcc component 
+
+pkg:rpm/redhat/libgcc 
+pkg:rpm/redhat/libgcc@ 
 ```
 
-```
-Add example of what CPEs should be matched for an fixed CVE with same version
-```
+Example of potential purl matches depending on fix status for the libgcc component, limited to the x86_64 architecture.  
 
-```
-Add example of what CPEs should be matched for a fixed CVE with either newer or older
-```
+| purl                                               | product_id                       | Notes          |
+|----------------------------------------------------|----------------------------------|----------------|
+| pkg:rpm/redhat/libgcc                              |                                  | CVE is unfixed | 
+| pkg:rpm/redhat/libgcc@4.8.5-45.el7_9?arch=x86_64   | libgcc-0:4.8.5-45.el7_9.x86_64   | CVE is fixed   |
+| pkg:rpm/redhat/libgcc@4.8.5-40.el7_7?arch=x86_64   | libgcc-0:4.8.5-40.el7_7.x86_64   | CVE is fixed   |
+| pkg:rpm/redhat/libgcc@11.5.0-5.el9_5?arch=x86_64   | libgcc-0:11.5.0-5.el9_5.x86_64   | CVE is fixed   |
+| pkg:rpm/redhat/libgcc@8.4.1-1.4.el8_4?arch=x86_64  | libgcc-0:8.4.1-1.4.el8_4.x86_64  | CVE is fixed   |
+| pkg:rpm/redhat/libgcc@8.5.0-18.3.el8_8?arch=x86_64 | libgcc-0:8.5.0-18.3.el8_8.x86_64 | CVE is fixed   |
+| pkg:rpm/redhat/libgcc@8.3.1-8.el8_2?arch=x86_64    | libgcc-0:8.3.1-8.el8_2.x86_64    | CVE is fixed   |
+| pkg:rpm/redhat/libgcc@11.4.1-4.el9_4?arch=x86_64   | libgcc-0:11.4.1-4.el9_4.x86_64   | CVE is fixed   |
+| pkg:rpm/redhat/libgcc@8.5.0-23.el8_10?arch=x86_64  | libgcc-0:8.5.0-23.el8_10.x86_64  | CVE is fixed   |
+| pkg:rpm/redhat/libgcc@11.3.1-4.4.el9_2?arch=x86_64 | libgcc-0:11.3.1-4.4.el9_2.x86_64 | CVE is fixed   |
+| pkg:rpm/redhat/libgcc@8.5.0-10.4.el8_6?arch=x86_64 | libgcc-0:8.5.0-10.4.el8_6.x86_64 | CVE is fixed   |
+| pkg:rpm/redhat/libgcc@11.2.1-9.5.el9_0?arch=x86_64 | libgcc-0:11.2.1-9.5.el9_0.x86_64 | CVE is fixed   |
+...
+
+SRPMs 
+
+RPM modules
+
+Containers
+
 
 ### Using purls and CPE to find Product IDs 
 Vendors should use the previous steps to be able to identify the appropriate `product_name` objects using CPE and `product_version` 
@@ -560,8 +507,18 @@ object. More information about how to determine unique `product_id` combinations
 be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#relationships).
 
 
+Example of potential component/product IDs, using the product `product_id` value to filter down the potential matches.
+
+| Product product_id         | Component product_id           | Product/Component product_id                          | 
+|----------------------------|--------------------------------|-------------------------------------------------------|
+| red_hat_enterprise_linux_9 | libgcc                         | red_hat_enterprise_linux_9:libgcc                     | 
+| BaseOS-9.5.0.Z.MAIN        | libgcc-0:11.5.0-5.el9_5.x86_64 | BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64    |  
+| AppStream-9.5.0.Z.MAIN     | libgcc-0:11.5.0-5.el9_5.x86_64 | AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64 | 
+| CRB-9.5.0.Z.MAIN           | libgcc-0:11.5.0-5.el9_5.x86_64 | CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64       |
+
+
 ## Determine Vulnerability Information
-After following the previous steps, vendors should now have a list of unqiue product/component pairs in the form of 
+After following the previous steps, vendors should now have a list of unique product/component pairs in the form of 
 unique `product_id` combinations. These `product_id` combinations should be used to determine severity, affectedness information and any available security fixes.
 
 ### CVE Information
@@ -574,12 +531,12 @@ Basic CVE information is represented in the `vulnerabilities` section of CSAF ad
 ```
 "vulnerabilities": [
     {
-      "cve": "CVE-2022-27943",
+      "cve": "CVE-2020-11023",
       "cwe": {
-        "id": "CWE-400",
-        "name": "Uncontrolled Resource Consumption"
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
       },
-      "discovery_date": "2022-04-04T00:00:00+00:00",
+      "discovery_date": "2020-06-23T00:00:00+00:00",
 ```
 
 
@@ -602,18 +559,22 @@ CVEs should be reported as follows, based on the `product_status` for the produc
 | `fixed`               | Fixed on a different product stream              | The fixed component version is newer than the component version included in the scanned software. |  |
 |`fixed` | Fixed on the same product stream                 | The fixed component version is older than the component version included in the scanned software. | Not reported: In this case, the component should be considered already fixed and is not vulnerable in the scanned software. |
 |`fixed` | Fixed on a different product stream              | The fixed component version is older than the component version included in the scanned software. | |
-For the "red_hat_enterprise_linux_9:gcc" product/component pair, it is listed in the `known_affected` section.
+
 
 <!-- TODO: Add CVE example with "known_not_affected"  CVE-2024-43790 / vim -->
+
 
 ```
 "vulnerabilities": [
     {
         ...
         "product_status": {
-            "known_affected": [
+            "fixed": [
                 ... , 
-                "red_hat_enterprise_linux_9:gcc"
+                "AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64",
+                "BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64",
+                "CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64" 
+                ...
             ],
         }
     }
@@ -625,7 +586,7 @@ Remediation information is also available in the `vulnerabilities` section. Each
 with `category` and `details` attributes that describe the fix status of that product and component. 
 
 For the "red_hat_enterprise_linux_9:gcc" product/component pair, there is no fix available so you see the `product_id` 
-listed in the `none_available` category, with details `fixed_deffered`of the `remediations` object. 
+listed in the `none_available` category, with details `fixed_deferred`of the `remediations` object. 
 
 <!-- TODO: Add CVE example with RHSA CVE-2024-2511 / RHSA-2024:9333 -->
 <!-- TODO: Add CVE example with OCP RHSA CVE-2024-24791 / RHSA-2024:8260 -->
@@ -635,12 +596,16 @@ listed in the `none_available` category, with details `fixed_deffered`of the `re
     ...
     },
     {
-        "category": "none_available",
-        "details": "Fix deferred",
+        "category": "vendor_fix",
+        "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
         "product_ids": [
-            ... ,
-            "red_hat_enterprise_linux_9:gcc"
-        ]
+            ... , 
+             "AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64",
+             "BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64",
+             "CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64" 
+            ...
+        ],
+        "url": "https://access.redhat.com/errata/RHSA-2025:1346"
     }
 ] 
 ```
@@ -652,44 +617,47 @@ Both CVSS scores and Red Hat severities are available when the product/component
 Red Hat recommends that scanning vendors check the per product CVSS scores and severity scores for each vulnerability 
 and report the product/component severity instead of the aggregate severity for the CVE, when applicable. 
 
-For the "red_hat_enterprise_linux_9:gcc" product/component pair, the CVSS base score is "5.5" with a vector string of
-"CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H".
+
 ```
 "scores": [
     {
         "cvss_v3": {
             "attackComplexity": "LOW",
-            "attackVector": "LOCAL",
-            "availabilityImpact": "HIGH",
-            "baseScore": 5.5,
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 6.1,
             "baseSeverity": "MEDIUM",
-            "confidentialityImpact": "NONE",
-            "integrityImpact": "NONE",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
             "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
+            "scope": "CHANGED",
             "userInteraction": "REQUIRED",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
             "version": "3.1"
         },
         "products": [
-            ... ,
-            "red_hat_enterprise_linux_9:gcc",
-            "red_hat_virtualization_4:gcc"
+            ... , 
+             "AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64",
+             "BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64",
+             "CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64" 
+            ...
         ]
     }
 ],
 ```
 
-For the "red_hat_enterprise_linux_9:gcc" product/component pair, the Red Hat severity is "Low". 
+
 ```
 "threats": [
     {
         "category": "impact",
         "details": "Low",
           "product_ids": [
-             ... ,
-            "red_hat_enterprise_linux_9:gcc",
-            "red_hat_virtualization_4:gcc"
+             ... , 
+             "AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64",
+             "BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64",
+             "CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64" 
+             ...
           ]
         }
       ],
