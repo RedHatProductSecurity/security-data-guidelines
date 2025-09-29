@@ -71,7 +71,7 @@ pkg:rpm/redhat/libgcc@11.3.1-4.3.el9?arch=x86_64
 Additionally, SRPMs can be discovered from a binary RPM by using the following command from within the container image.  
  ```
 # Example return of SRPM query
-$ rpm -q --qf '%{SOURCERPM}\n' libgcc  
+$ r libgcc  
                     
 gcc-11.3.1-4.3.el9.src.rpm
  ```
@@ -84,8 +84,15 @@ pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src
 ```
 
 #### RPM modules
+RPM modules can be discovered using the same command seen in the Binary RPMs section, but will be represented slightly 
+differently in purl format. 
 
+The following is an example of how the nodejs-docs rpm from the nodejs module is represented in a purl 
+```
+# Example of RPM module purl using name, version, rpm mod qualifier and architecture 
 
+pkg:rpm/redhat/nodejs-docs@20.16.0-1.module%2Bel9.4.0%2B22197%2b9e60f127?arch=x86_64&epoch=1&rpmmod=nodejs:20:9040020240807145403:rhel9
+```
 
 ### Container metadata and container first content 
 Container images frequently include non-RPM packages, often referred to as container first content. Non-RPM packages 
@@ -96,12 +103,11 @@ Containers are represented with the `oci` purl type. More detailed information a
 purl usage can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-container-images).
 
 #### Container name and pullspec
-From within the pod, you can determine the container name and pullspec in a given namespace using the following command.
+From within the OpenShift cluster, you can determine the container pullspecs in a given namespace using the following command.
 ```
- # Example of using oc get pod 
- $ oc get pod <pod-name> -o jsonpath=' {.spec.containers[*].name}' -n <namespace>
+ # oc get pod command
  
- TODO example output
+ $ oc get pod <pod-name> -o jsonpath=' {.spec.containers[*].name}' -n <namespace>
 ```
 
 #### Container tag, Openshift version and other metadata
@@ -175,10 +181,12 @@ Labels:      License=GPLv2+
  
 From the output above, we can determine the following information for this image:
 
-* Container Name: name=openshift/ose-console-rhel9
-* Container Architecture: Arch: amd64
-* Container Repository: 
-* Container Tag: release=202409181705.p0.g0b1616c.assembly.stream.el9
+* Container Name and Repository: `Name:   registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a` 
+  * Name: ose-console-rhel9
+  * Repository: registry.redhat.io/openshift4/ose-console-rhel9
+* Container Architecture: `Arch: amd64` 
+* Container Tag: `release=202409181705.p0.g0b1616c.assembly.stream.el9`
+* OpenShift version: `version=v4.16.0`
 
 Using this information, we can represent this container image with the following purl.
 ```
@@ -291,10 +299,9 @@ $ cat cat /usr/share/buildinfo/content-sets.json
 }
 ```
 #### Querying Repositories for Binary RPMs 
-
 Although container images provide a list of repositories from which the packages in the image are sourced, vendors may also 
 be interested in determining the repository that provided a specific binary RPM. This can be done using the dnf database, but 
-dnf is not always shipped with container images.
+dnf is not always shipped with container images. 
 ```
 # Example return of repository query 
 $ dnf repoquery --qf "%{repoid}" libgcc-11.3.1-4.3.el9.x86_64
@@ -404,6 +411,8 @@ with a direct match to the repository information gathered from the container, b
 If the repositories used in a container image are xUS streams, it is also necessary to check for the existence of a main
 stream CPEs as well, if the vulnerability is unfixed or did not release a fix to the xUS stream.
 
+Additionally, if the scanned container includes any container first content, you should also check for an OpenShift CPE. 
+
 The following are examples of the CPEs that should be used to account for matching and then the potential matches depending on 
 the CVE fix statuses and product streams.
 ```
@@ -412,33 +421,54 @@ the CVE fix statuses and product streams.
 cpe:/o:redhat:enterprise_linux:9
 cpe:/a:redhat:enterprise_linux:9
 ```
-Examples of potential CPE matches depending on fix statuses for the rhel9/python-312
+Examples of potential CPE matches depending on fix statuses for the rhel9/python-312 container
 
-| CPE                                          | product_id                 | Notes                               |
-|----------------------------------------------|----------------------------|-------------------------------------|
-| cpe:/o:redhat:enterprise_linux:9             | red_hat_enterprise_linux_9 | CVE is unfixed                      | 
-| cpe:/o:redhat:enterprise_linux:9::baseos     | BaseOS-9.5.0.Z.MAIN        | CVE is fixed for RHEL 9 MAIN stream |
-| cpe:/a:redhat:enterprise_linux:9::appstream  | AppStream-9.5.0.Z.MAIN     | CVE is fixed for RHEL 9 MAIN stream |                                   
-| cpe:/a:redhat:enterprise_linux:9::crb        | CRB-9.5.0.Z.MAIN           | CVE is fixed for RHEL 9 MAIN stream |                                   
+| CPE                                          | product_id                 | Notes                                            |
+|----------------------------------------------|----------------------------|--------------------------------------------------|
+| cpe:/o:redhat:enterprise_linux:9             | red_hat_enterprise_linux_9 | CVE is unfixed                                   | 
+| cpe:/o:redhat:enterprise_linux:9::baseos     | BaseOS-9.5.0.Z.MAIN        | CVE-2020-11023 is fixed for RHEL 9 MAIN stream   |
+| cpe:/a:redhat:enterprise_linux:9::appstream  | AppStream-9.5.0.Z.MAIN     | CVE-2020-11023 is fixed for RHEL 9 MAIN stream   |                                   
+| cpe:/a:redhat:enterprise_linux:9::crb        | CRB-9.5.0.Z.MAIN           | CVE-2020-11023 is fixed for RHEL 9 MAIN stream   |                                   
+
+For CVE-2020-11023, there are direct matches for both `cpe:/o:redhat:enterprise_linux:9` and `cpe:/a:redhat:enterprise_linux:9`, 
+so the `BaseOS-9.5.0.Z.MAIN `, `AppStream-9.5.0.Z.MAIN` and `CRB-9.5.0.Z.MAIN ` product IDs should be used. 
 
 
+For the OpenShift container, we also add OpenShift CPEs, because this container includes container first content. 
+Using the OpenShift version discovered earlier, vendors can format those OpenShift CPEs. 
 ```
 # Example of CPEs that should be checked for the openshift4/ose-console-rhel9
 
 cpe:/o:redhat:enterprise_linux:9
 cpe:/a:redhat:rhel_eus:9.2
 cpe:/o:redhat:rhel_eus:9.2
+cpe:/a:redhat:openshift:4
+cpe:/a:redhat:openshift:4.16 
 ```
 
-Examples of potential CPE matches depending on fix statuses for the openshift4/ose-console-rhel9
+Examples of potential CPE matches depending on fix statuses for the openshift4/ose-console-rhel9 container
 
-| CPE                                      | product_id                 | Notes                               |
-|------------------------------------------|----------------------------|-------------------------------------|
-| cpe:/o:redhat:enterprise_linux:9         | red_hat_enterprise_linux_9 | CVE is unfixed                      | 
-| cpe:/o:redhat:enterprise_linux:9::baseos | BaseOS-9.5.0.Z.MAIN        | CVE is fixed for RHEL 9 MAIN stream |
-| cpe:/o:redhat:rhel_eus:9.2::baseos       | BaseOS-9.2.0.Z.EUS         | CVE is fixed for RHEL 9.2 EUS       |
-| cpe:/a:redhat:rhel_eus:9.2::appstream    | AppStream-9.2.0.Z.EUS      | CVE is fixed for RHEL 9.2 EUS       |
-| cpe:/a:redhat:rhel_eus:9.2::crb          | CRB-9.2.0.Z.EUS            | CVE is fixed for RHEL 9.2 EUS       |
+| CPE                                      | product_id                             | Notes                                                      |
+|------------------------------------------|----------------------------------------|------------------------------------------------------------|
+| cpe:/o:redhat:enterprise_linux:9         | red_hat_enterprise_linux_9             | CVE is unfixed                                             | 
+| cpe:/o:redhat:enterprise_linux:9::baseos | BaseOS-9.5.0.Z.MAIN                    | CVE-2020-11023 is fixed for RHEL 9 MAIN stream             |
+| cpe:/o:redhat:rhel_eus:9.2::baseos       | BaseOS-9.2.0.Z.EUS                     | CVE-2020-11023 is fixed for RHEL 9.2 EUS                   |
+| cpe:/a:redhat:rhel_eus:9.2::appstream    | AppStream-9.2.0.Z.EUS                  | CVE-2020-11023 is fixed for RHEL 9.2 EUS                   |
+| cpe:/a:redhat:rhel_eus:9.2::crb          | CRB-9.2.0.Z.EUS                        | CVE-2020-11023 is fixed for RHEL 9.2 EUS                   |
+| cpe:/a:redhat:openshift:4                | red_hat_openshift_container_platform_4 | CVE is unfixed                                             |
+| cpe:/a:redhat:openshift:4.12::el8        | 8Base-RHOSE-4.12                       | CVE-2024-24791 is fixed for OpenShift 4.12 based on RHEL 8 |
+| cpe:/a:redhat:openshift:4.12::el9        | 9Base-RHOSE-4.12                       | CVE-2024-24791 is fixed for OpenShift 4.12 based on RHEL 9 |
+| cpe:/a:redhat:openshift:4.13::el8        | 8Base-RHOSE-4.13                       | CVE-2024-24791 is fixed for OpenShift 4.13 based on RHEL 8 |
+| cpe:/a:redhat:openshift:4.13::el9        | 9Base-RHOSE-4.13                       | CVE-2024-24791 is fixed for OpenShift 4.13 based on RHEL 9 |
+| cpe:/a:redhat:openshift:4.14::el8        | 8Base-RHOSE-4.14                       | CVE-2024-24791 is fixed for OpenShift 4.14 based on RHEL 8 |
+| cpe:/a:redhat:openshift:4.14::el9        | 9Base-RHOSE-4.14                       | CVE-2024-24791 is fixed for OpenShift 4.14 based on RHEL 9 |
+| cpe:/a:redhat:openshift:4.15::el8        | 8Base-RHOSE-4.15                       | CVE-2024-24791 is fixed for OpenShift 4.15 based on RHEL 8 |
+| cpe:/a:redhat:openshift:4.15::el9        | 9Base-RHOSE-4.15                       | CVE-2024-24791 is fixed for OpenShift 4.15 based on RHEL 9 |
+| cpe:/a:redhat:openshift:4.16::el9        | 9Base-RHOSE-4.16                       | CVE-2024-24791 is fixed for OpenShift 4.16 based on RHEL 9 |
+| cpe:/a:redhat:openshift:4.17::el9        | 9Base-RHOSE-4.17                       | CVE-2024-24791 is fixed for OpenShift 4.17 based on RHEL 9 |
+
+For CVE-2024-24791, there is a direct match for `cpe:/a:redhat:openshift:4.16 `, so the `9Base-RHOSE-4.16` product ID should 
+be used for any container first content. 
 
 ### Component matching using purls in CSAF-VEX
 CSAF advisories and VEX data represent components using a `product_version` object. The `product_version` entry will 
@@ -465,7 +495,7 @@ based on component name.
 The following are examples of the purls that could be matched depending on both the fix status and the 
 fix component version.
 
-Binary RPMs
+RPMs, SRPMS, RPM modules
 ```
 # Example of potential purls that should be checked for libgcc component 
 
@@ -475,28 +505,37 @@ pkg:rpm/redhat/libgcc@
 
 Example of potential purl matches depending on fix status for the libgcc component, limited to the x86_64 architecture.  
 
-| purl                                               | product_id                       | Notes          |
-|----------------------------------------------------|----------------------------------|----------------|
-| pkg:rpm/redhat/libgcc                              |                                  | CVE is unfixed | 
-| pkg:rpm/redhat/libgcc@4.8.5-45.el7_9?arch=x86_64   | libgcc-0:4.8.5-45.el7_9.x86_64   | CVE is fixed   |
-| pkg:rpm/redhat/libgcc@4.8.5-40.el7_7?arch=x86_64   | libgcc-0:4.8.5-40.el7_7.x86_64   | CVE is fixed   |
-| pkg:rpm/redhat/libgcc@11.5.0-5.el9_5?arch=x86_64   | libgcc-0:11.5.0-5.el9_5.x86_64   | CVE is fixed   |
-| pkg:rpm/redhat/libgcc@8.4.1-1.4.el8_4?arch=x86_64  | libgcc-0:8.4.1-1.4.el8_4.x86_64  | CVE is fixed   |
-| pkg:rpm/redhat/libgcc@8.5.0-18.3.el8_8?arch=x86_64 | libgcc-0:8.5.0-18.3.el8_8.x86_64 | CVE is fixed   |
-| pkg:rpm/redhat/libgcc@8.3.1-8.el8_2?arch=x86_64    | libgcc-0:8.3.1-8.el8_2.x86_64    | CVE is fixed   |
-| pkg:rpm/redhat/libgcc@11.4.1-4.el9_4?arch=x86_64   | libgcc-0:11.4.1-4.el9_4.x86_64   | CVE is fixed   |
-| pkg:rpm/redhat/libgcc@8.5.0-23.el8_10?arch=x86_64  | libgcc-0:8.5.0-23.el8_10.x86_64  | CVE is fixed   |
-| pkg:rpm/redhat/libgcc@11.3.1-4.4.el9_2?arch=x86_64 | libgcc-0:11.3.1-4.4.el9_2.x86_64 | CVE is fixed   |
-| pkg:rpm/redhat/libgcc@8.5.0-10.4.el8_6?arch=x86_64 | libgcc-0:8.5.0-10.4.el8_6.x86_64 | CVE is fixed   |
-| pkg:rpm/redhat/libgcc@11.2.1-9.5.el9_0?arch=x86_64 | libgcc-0:11.2.1-9.5.el9_0.x86_64 | CVE is fixed   |
-...
+| purl                                               | product_id                       | Notes                       |
+|----------------------------------------------------|----------------------------------|-----------------------------|
+| pkg:rpm/redhat/libgcc                              | libgcc                           | CVE is unfixed              | 
+| pkg:rpm/redhat/libgcc@4.8.5-45.el7_9?arch=x86_64   | libgcc-0:4.8.5-45.el7_9.x86_64   | CVE-2020-11023 is fixed     |
+| pkg:rpm/redhat/libgcc@4.8.5-40.el7_7?arch=x86_64   | libgcc-0:4.8.5-40.el7_7.x86_64   | CVE-2020-11023 is fixed     |
+| pkg:rpm/redhat/libgcc@11.5.0-5.el9_5?arch=x86_64   | libgcc-0:11.5.0-5.el9_5.x86_64   | CVE-2020-11023 is fixed     |
+| pkg:rpm/redhat/libgcc@8.4.1-1.4.el8_4?arch=x86_64  | libgcc-0:8.4.1-1.4.el8_4.x86_64  | CVE-2020-11023 is fixed     |
+| pkg:rpm/redhat/libgcc@8.5.0-18.3.el8_8?arch=x86_64 | libgcc-0:8.5.0-18.3.el8_8.x86_64 | CVE-2020-11023 is fixed     |
+| pkg:rpm/redhat/libgcc@8.3.1-8.el8_2?arch=x86_64    | libgcc-0:8.3.1-8.el8_2.x86_64    | CVE-2020-11023 is fixed     |
+| pkg:rpm/redhat/libgcc@11.4.1-4.el9_4?arch=x86_64   | libgcc-0:11.4.1-4.el9_4.x86_64   | CVE-2020-11023 is fixed     |
+| pkg:rpm/redhat/libgcc@8.5.0-23.el8_10?arch=x86_64  | libgcc-0:8.5.0-23.el8_10.x86_64  | CVE-2020-11023 is fixed     |
+| pkg:rpm/redhat/libgcc@11.3.1-4.4.el9_2?arch=x86_64 | libgcc-0:11.3.1-4.4.el9_2.x86_64 | CVE-2020-11023 is fixed     |
+| pkg:rpm/redhat/libgcc@8.5.0-10.4.el8_6?arch=x86_64 | libgcc-0:8.5.0-10.4.el8_6.x86_64 | CVE-2020-11023 is fixed     |
+| pkg:rpm/redhat/libgcc@11.2.1-9.5.el9_0?arch=x86_64 | libgcc-0:11.2.1-9.5.el9_0.x86_64 | CVE-2020-11023 is fixed     |
 
-SRPMs 
-
-RPM modules
 
 Containers
+```
+# Example of potential purls that should be checked for the ose-console-rhel9 container 
 
+pkg:oci/ose-console-rhel9
+pkg:oci/ose-console-rhel9@
+```
+Example of potential purl matches depending on fix status for the openshift4/ose-console-rhel9 container, 
+limited to the amd64 architecture.
+
+| purl                                                                                                                                                                                                                                  | proudct_id                                                                                                  | Notes                   |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------|
+| pkg:oci/ose-console-rhel9                                                                                                                                                                                                             | openshift4/ose-console-rhel9                                                                                | CVE is unfixed          |
+| pkg:oci/ose-console-rhel9@sha256:fb32b644069ea9dbd35da2895d9fe9fda94ed50fb0707121645b168c31b57bde?arch=amd64&repository_url=registry.redhat.io/openshift4/ose-console-rhel9&tag=v4.16.0-202410180404.p0.g95b8916.assembly.stream.el9  | openshift4/ose-console-rhel9@sha256:fb32b644069ea9dbd35da2895d9fe9fda94ed50fb0707121645b168c31b57bde_amd64  | CVE-2024-24791 is fixed |
+| pkg:oci/ose-console-rhel9@sha256:1b5f3e45a6778bad18ab5acbca08ee4390cd8b1fdefd2ca3020de7b127f3a54c?arch=amd64&repository_url=registry.redhat.io/openshift4/ose-console-rhel9&tag=v4.17.0-202410091535.p0.ge61f187.assembly.stream.el9  | openshift4/ose-console-rhel9@sha256:1b5f3e45a6778bad18ab5acbca08ee4390cd8b1fdefd2ca3020de7b127f3a54c_amd64  | CVE-2024-24791 is fixed |                  
 
 ### Using purls and CPE to find Product IDs 
 Vendors should use the previous steps to be able to identify the appropriate `product_name` objects using CPE and `product_version` 
@@ -506,20 +545,28 @@ In order to determine unique `product_id` combinations for each product/componen
 object. More information about how to determine unique `product_id` combinations using `product_name`, `product_version` and `relationships` can 
 be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#relationships).
 
+For CVE-2020-11023, the following product/component IDs are available for the rhel9/python-312 container and the libgcc component, using the
+`BaseOS-9.5.0.Z.MAIN `, `AppStream-9.5.0.Z.MAIN` and `CRB-9.5.0.Z.MAIN ` product IDs to filter out any potential matches purl matches on irrelevant product streams. 
 
-Example of potential component/product IDs, using the product `product_id` value to filter down the potential matches.
+| Product product_id         | Component product_id           | Product/Component product_id                          | Notes                        | 
+|----------------------------|--------------------------------|-------------------------------------------------------|------------------------------|
+| BaseOS-9.5.0.Z.MAIN        | libgcc-0:11.5.0-5.el9_5.x86_64 | BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64    | CVE-2020-11023 is fixed      |
+| AppStream-9.5.0.Z.MAIN     | libgcc-0:11.5.0-5.el9_5.x86_64 | AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64 | CVE-2020-11023 is fixed      |
+| CRB-9.5.0.Z.MAIN           | libgcc-0:11.5.0-5.el9_5.x86_64 | CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64       | CVE-2020-11023 is fixed      |
 
-| Product product_id         | Component product_id           | Product/Component product_id                          | 
-|----------------------------|--------------------------------|-------------------------------------------------------|
-| red_hat_enterprise_linux_9 | libgcc                         | red_hat_enterprise_linux_9:libgcc                     | 
-| BaseOS-9.5.0.Z.MAIN        | libgcc-0:11.5.0-5.el9_5.x86_64 | BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64    |  
-| AppStream-9.5.0.Z.MAIN     | libgcc-0:11.5.0-5.el9_5.x86_64 | AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64 | 
-| CRB-9.5.0.Z.MAIN           | libgcc-0:11.5.0-5.el9_5.x86_64 | CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64       |
 
+For CVE-2024-24791, the following product/component ID is available for the openshift4/ose-console-rhel9 container, using the `9Base-RHOSE-4.16` product ID 
+value to filter out any potential purl matches on irrelevant product streams.
+
+| Product product_id                      | Component product_id                                                                                       | Product/Component product_id                                                                                                         | Notes                     |
+|-----------------------------------------|------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
+| 9Base-RHOSE-4.16                        | openshift4/ose-console-rhel9@sha256:fb32b644069ea9dbd35da2895d9fe9fda94ed50fb0707121645b168c31b57bde_amd64 | 9Base-RHOSE-4.16:openshift4/ose-console-rhel9-operator@sha256:514ab7310f840027dc2609b10fa465eb6282c11d110f3d69efcf21ea5ef63ec9_amd64 | CVE-2024-24791 is fixed   |
 
 ## Determine Vulnerability Information
 After following the previous steps, vendors should now have a list of unique product/component pairs in the form of 
 unique `product_id` combinations. These `product_id` combinations should be used to determine severity, affectedness information and any available security fixes.
+
+The following section will continue with CVE-2020-11023 for the rhel9/python-312 container and the libgcc component. 
 
 ### CVE Information
 Basic CVE information is represented in the `vulnerabilities` section of CSAF advisories and VEX data:
@@ -546,24 +593,17 @@ will be listed in the `product_status` category that corresponds to the affected
 
 CVEs should be reported as follows, based on the `product_status` for the product/component pair.
 
-<!-- https://issues.redhat.com/browse/SECDATA-696 and https://issues.redhat.com/browse/SECDATA-744-->
-<!-- TODO: Add text about old CVEs that may not have a product match --> 
-<!-- TODO: Add column to table about product information -->
-
-| Product Status        | Product Details                                  | Component Details                                                                                 | Reporting Information                                                                                                                   |
-|-----------------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| `under_investigation` | Only main product version information available. | No component version information available.                                                       | Reported                                                                                                                               | 
-| `known_affected`      | Only main product version information available. | No component version information available.                                                       | Reported                                                                                                                               |
-| `known_not_affected`  | Only main product version information available. | No component version information available.                                                       | Not reported                                                                                                                           |
-| `fixed`               | Fixed on the same product stream                 | The fixed component version is newer than the component version included in the scanned software. | Reported: In this case, the component is vulnerable and should be upgraded. The associated RHSA should also be reported with this CVE. |
-| `fixed`               | Fixed on a different product stream              | The fixed component version is newer than the component version included in the scanned software. |  |
-|`fixed` | Fixed on the same product stream                 | The fixed component version is older than the component version included in the scanned software. | Not reported: In this case, the component should be considered already fixed and is not vulnerable in the scanned software. |
-|`fixed` | Fixed on a different product stream              | The fixed component version is older than the component version included in the scanned software. | |
+| Product Status                           | Product Details                                 | Component Details                                                                                                         | Reporting Information                                                                                        |
+|------------------------------------------|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| `under_investigation` or `known_affected`| Only main product version information available | No component version information available                                                                                | Reported                                                                                                     | 
+| `known_not_affected`                     | Only main product version information available | No component version information available                                                                                | Not reported                                                                                                 |
+| `fixed`                                  | A direct CPE match exists                       | The fixed component version is newer than the component version included in the scanned software                          | Reported: The component is vulnerable and an associated RHSA should also be reported.                        |
+| `fixed`                                  | A direct CPE match exists                       | The fixed component version is either a direct match or older than the component version included in the scanned software | ot reported: The component should be considered already fixed and is not vulnerable in the scanned software. |
 
 
-<!-- TODO: Add CVE example with "known_not_affected"  CVE-2024-43790 / vim -->
-
-
+In the previous example, for CVE-2020-11023, the three product/component `product_id`s identified are listed in the `fixed` 
+product status. Because the libgcc-0:11.5.0-5.el9_5 component version is newer than the identified libgcc-0:11.3.1-4.3.el9 that was
+present in the rhel9/python-312 container, the package is considered vulnerable and this CVE should be reported.
 ```
 "vulnerabilities": [
     {
@@ -585,12 +625,8 @@ CVEs should be reported as follows, based on the `product_status` for the produc
 Remediation information is also available in the `vulnerabilities` section. Each product/component pair is also listed
 with `category` and `details` attributes that describe the fix status of that product and component. 
 
-For the "red_hat_enterprise_linux_9:gcc" product/component pair, there is no fix available so you see the `product_id` 
-listed in the `none_available` category, with details `fixed_deferred`of the `remediations` object. 
-
-<!-- TODO: Add CVE example with RHSA CVE-2024-2511 / RHSA-2024:9333 -->
-<!-- TODO: Add CVE example with OCP RHSA CVE-2024-24791 / RHSA-2024:8260 -->
-
+For CVE-2020-11023, the three product/component `product_id`s identified are fixed, so they are also listed  
+in the `vendor_fix` category of the `remediations` object. The `url` field will provide the RHSA link that shipped the fixes.
 ```
 "remediations": [
     ...
@@ -611,13 +647,13 @@ listed in the `none_available` category, with details `fixed_deferred`of the `re
 ```
 
 ### CVSS score and Severity
-
 The last sections in the `vulnerabilities` object to be aware of are the `scores` object and the `threats` object.
 Both CVSS scores and Red Hat severities are available when the product/component pair differs from the aggregate CVE severity.
 Red Hat recommends that scanning vendors check the per product CVSS scores and severity scores for each vulnerability 
 and report the product/component severity instead of the aggregate severity for the CVE, when applicable. 
 
-
+For the rhel9/python-312 container and the libgcc component, the CVSS base score of 6.1 with a CVSS vector of 
+CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N.
 ```
 "scores": [
     {
@@ -646,7 +682,7 @@ and report the product/component severity instead of the aggregate severity for 
 ],
 ```
 
-
+A Low Red Hat severity should be reported for the rhel9/python-312 container and the libgcc component.
 ```
 "threats": [
     {
