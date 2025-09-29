@@ -89,7 +89,7 @@ differently in purl format.
 
 The following is an example of how the nodejs-docs rpm from the nodejs module is represented in a purl 
 ```
-# Example of RPM module purl using name, version, rpm mod qualifier and architecture 
+# Example of RPM module purl using name, version, rpmmod qualifier and architecture 
 
 pkg:rpm/redhat/nodejs-docs@20.16.0-1.module%2Bel9.4.0%2B22197%2b9e60f127?arch=x86_64&epoch=1&rpmmod=nodejs:20:9040020240807145403:rhel9
 ```
@@ -182,8 +182,8 @@ Labels:      License=GPLv2+
 From the output above, we can determine the following information for this image:
 
 * Container Name and Repository: `Name:   registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a` 
-  * Name: ose-console-rhel9
-  * Repository: registry.redhat.io/openshift4/ose-console-rhel9
+  * Name: `ose-console-rhel9`
+  * Repository: `registry.redhat.io/openshift4/ose-console-rhel9`
 * Container Architecture: `Arch: amd64` 
 * Container Tag: `release=202409181705.p0.g0b1616c.assembly.stream.el9`
 * OpenShift version: `version=v4.16.0`
@@ -246,6 +246,7 @@ $ cat /root/buildinfo/content_manifests/python-312-container-1-25.json
     ],
 }
 ```
+The two repositories identified for the rhel9/python-312 container are `rhel-9-for-aarch64-baseos-rpms` and `rhel-9-for-aarch64-appstream-rpms`.
 
 ```
 # Example of repositories in content sets for openshift4/ose-console-rhel9 image
@@ -259,9 +260,11 @@ $ cat /root/buildinfo/content_manifests/openshift-enterprise-console-container-v
     ]
 }
 ```
+The two repositories identified for the openshift4/ose-console-rhel9 container are `rhel-9-for-x86_64-appstream-eus-rpms__9_DOT_2`
+and `rhel-9-for-x86_64-baseos-eus-rpms__9_DOT_2`.
 
-#### Content-Sets JSON files
-Starting from January 2025, the content_manifests has been replaced by single content-sets.json file available in the
+#### Content Sets JSON files
+Starting from January 2025, the content manifest files have been replaced by a single content-sets.json file available in the
 `/usr/share/buildinfo/` directory and the same content is copied to the legacy location `/root/buildinfo/content_manifests/`. 
 In some container images, access to the root directory is locked, so the `/root/buildinfo/` location will be deprecated 
 in the future and the main location for the content-sets.json metadata will remain in `/usr/share/buildinfo`.
@@ -298,6 +301,7 @@ $ cat cat /usr/share/buildinfo/content-sets.json
   ]
 }
 ```
+
 #### Querying Repositories for Binary RPMs 
 Although container images provide a list of repositories from which the packages in the image are sourced, vendors may also 
 be interested in determining the repository that provided a specific binary RPM. This can be done using the dnf database, but 
@@ -379,8 +383,8 @@ Red Hat Product Security publishes CSAF files for every single Red Hat Security 
 single CVE record that is associated with the Red Hat portfolio in any way.
 
 CSAF advisories and VEX data includes information about products, components and the relationships
-between the applicable products and components. Scanning vendors must identify both the relevant products and components 
-individually and then determine the available product/component combinations in order to report vulnerability information correctly. 
+between the applicable products and components. Scanning vendors should identify the relevant products and components 
+individually and then determine the available product/component combinations. 
 
 A detailed breakdown of the format and information included in these files can be found
 [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/).
@@ -389,7 +393,7 @@ A detailed breakdown of the format and information included in these files can b
 CSAF advisories and VEX data represent products using a `product_name` object. The `product_name` entry will include a 
 `production_identification_helper` in the form of a CPE. Vendors should follow the previous steps to determine a list of 
 potential CPEs that can be used to match to `product_name` entries. More information about `product_name` objects can be
-found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#product-family-and-product-name-examples)
+found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#product-family-and-product-name-examples).
 
 #### CPEs in CSAF-VEX
 CPEs in CSAF advisories and VEX data are represented slightly different based on fix status.
@@ -411,7 +415,7 @@ with a direct match to the repository information gathered from the container, b
 If the repositories used in a container image are xUS streams, it is also necessary to check for the existence of a main
 stream CPEs as well, if the vulnerability is unfixed or did not release a fix to the xUS stream.
 
-Additionally, if the scanned container includes any container first content, you should also check for an OpenShift CPE. 
+Additionally, if the scanned container includes any container first content, scanning vendors should also check for an OpenShift CPE. 
 
 The following are examples of the CPEs that should be used to account for matching and then the potential matches depending on 
 the CVE fix statuses and product streams.
@@ -421,7 +425,7 @@ the CVE fix statuses and product streams.
 cpe:/o:redhat:enterprise_linux:9
 cpe:/a:redhat:enterprise_linux:9
 ```
-Examples of potential CPE matches depending on fix statuses for the rhel9/python-312 container
+Examples of potential CPE matches depending on fix statuses for the rhel9/python-312 container.
 
 | CPE                                          | product_id                 | Notes                                            |
 |----------------------------------------------|----------------------------|--------------------------------------------------|
@@ -446,7 +450,7 @@ cpe:/a:redhat:openshift:4
 cpe:/a:redhat:openshift:4.16 
 ```
 
-Examples of potential CPE matches depending on fix statuses for the openshift4/ose-console-rhel9 container
+Examples of potential CPE matches depending on fix statuses for the openshift4/ose-console-rhel9 container.
 
 | CPE                                      | product_id                             | Notes                                                      |
 |------------------------------------------|----------------------------------------|------------------------------------------------------------|
@@ -495,7 +499,7 @@ based on component name.
 The following are examples of the purls that could be matched depending on both the fix status and the 
 fix component version.
 
-RPMs, SRPMS, RPM modules
+##### RPMs, SRPMS, RPM modules
 ```
 # Example of potential purls that should be checked for libgcc component 
 
@@ -521,7 +525,7 @@ Example of potential purl matches depending on fix status for the libgcc compone
 | pkg:rpm/redhat/libgcc@11.2.1-9.5.el9_0?arch=x86_64 | libgcc-0:11.2.1-9.5.el9_0.x86_64 | CVE-2020-11023 is fixed     |
 
 
-Containers
+##### Container first content
 ```
 # Example of potential purls that should be checked for the ose-console-rhel9 container 
 
@@ -546,7 +550,7 @@ object. More information about how to determine unique `product_id` combinations
 be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#relationships).
 
 For CVE-2020-11023, the following product/component IDs are available for the rhel9/python-312 container and the libgcc component, using the
-`BaseOS-9.5.0.Z.MAIN `, `AppStream-9.5.0.Z.MAIN` and `CRB-9.5.0.Z.MAIN ` product IDs to filter out any potential matches purl matches on irrelevant product streams. 
+`BaseOS-9.5.0.Z.MAIN `, `AppStream-9.5.0.Z.MAIN` and `CRB-9.5.0.Z.MAIN ` product IDs to filter out any potential purl matches for irrelevant product streams. 
 
 | Product product_id         | Component product_id           | Product/Component product_id                          | Notes                        | 
 |----------------------------|--------------------------------|-------------------------------------------------------|------------------------------|
@@ -556,7 +560,7 @@ For CVE-2020-11023, the following product/component IDs are available for the rh
 
 
 For CVE-2024-24791, the following product/component ID is available for the openshift4/ose-console-rhel9 container, using the `9Base-RHOSE-4.16` product ID 
-value to filter out any potential purl matches on irrelevant product streams.
+value to filter out any potential purl matches for irrelevant product streams.
 
 | Product product_id                      | Component product_id                                                                                       | Product/Component product_id                                                                                                         | Notes                     |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
@@ -593,17 +597,16 @@ will be listed in the `product_status` category that corresponds to the affected
 
 CVEs should be reported as follows, based on the `product_status` for the product/component pair.
 
-| Product Status                           | Product Details                                 | Component Details                                                                                                         | Reporting Information                                                                                        |
-|------------------------------------------|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| `under_investigation` or `known_affected`| Only main product version information available | No component version information available                                                                                | Reported                                                                                                     | 
-| `known_not_affected`                     | Only main product version information available | No component version information available                                                                                | Not reported                                                                                                 |
-| `fixed`                                  | A direct CPE match exists                       | The fixed component version is newer than the component version included in the scanned software                          | Reported: The component is vulnerable and an associated RHSA should also be reported.                        |
-| `fixed`                                  | A direct CPE match exists                       | The fixed component version is either a direct match or older than the component version included in the scanned software | ot reported: The component should be considered already fixed and is not vulnerable in the scanned software. |
-
+| Product Status                           | Product Details                               | Component Details                                                                                                         | Reporting Information                                                                                         |
+|------------------------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| `under_investigation` or `known_affected`| Only main product version information available | No component version information available                                                                                | Reported                                                                                                      | 
+| `known_not_affected`                     | Only main product version information available | Component version may be available                                                                                        | Not reported                                                                                                  |
+| `fixed`                                  | A CPE match exists                      | The fixed component version is newer than the component version included in the scanned software                          | Reported: The component is vulnerable and an associated RHSA should also be reported.                         |
+| `fixed`                                  | A CPE match exists                      | The fixed component version is either a direct match or older than the component version included in the scanned software | Not reported: The component should be considered already fixed and is not vulnerable in the scanned software. |
 
 In the previous example, for CVE-2020-11023, the three product/component `product_id`s identified are listed in the `fixed` 
-product status. Because the libgcc-0:11.5.0-5.el9_5 component version is newer than the identified libgcc-0:11.3.1-4.3.el9 that was
-present in the rhel9/python-312 container, the package is considered vulnerable and this CVE should be reported.
+product status. Because the libgcc-0:11.5.0-5.el9_5 component version is newer than the identified libgcc-0:11.3.1-4.3.el9 
+component version that was present in the rhel9/python-312 container, the package is considered vulnerable and this CVE should be reported.
 ```
 "vulnerabilities": [
     {
@@ -701,7 +704,7 @@ A Low Red Hat severity should be reported for the rhel9/python-312 container and
 
 
 ## Frequently Asked Questions (FAQs)
-Vendors are encouraged to raise any questions regarding security data by opening a ticket in the public
+Vendors are encouraged to raise any questions regarding security data by opening a 'Ticket' issue type in the public
 [SECDATA Jira project](https://issues.redhat.com/projects/SECDATA/).
 
 Many scanning vendors face similar challenges when reading and parsing Red Hat's security data. To check if your question
@@ -728,5 +731,4 @@ https://issues.redhat.com/browse/SECDATA-969
 Red Hat is committed to continually improving our security data; any future changes to the data itself or the format of 
 the files are tracked in the [Red Hat Security Data Changelog](https://access.redhat.com/articles/5554431).
 
-Please contact Red Hat Product Security with any questions regarding security data at [secalert@redhat.com](secalert@redhat.com) or file an 
-issue in the public [SECDATA Jira project](https://issues.redhat.com/projects/SECDATA/issues/SECDATA-525?filter=allopenissues).
+For any potential bugs identified regarding security data, please file a 'Bug' issue type in the public [SECDATA Jira project](https://issues.redhat.com/projects/SECDATA/).
