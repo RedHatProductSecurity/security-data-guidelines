@@ -68,13 +68,14 @@ pkg:rpm/redhat/libgcc@11.3.1-4.3.el9?arch=x86_64
 ```
 
 #### SRPMs
-Additionally, SRPMs can be discovered from a binary RPM by using the following command from within the container image.  
- ```
+Additionally, SRPMs can be discovered from a binary RPM by using the following command from within the container image.
+
+```
 # Example return of SRPM query
-$ r libgcc  
+$ rpm -q --qf '%{SOURCERPM}\n' libgcc  
                     
 gcc-11.3.1-4.3.el9.src.rpm
- ```
+```
 
 The gcc source component can be represented using the following purl.
 ```
@@ -711,21 +712,21 @@ Many scanning vendors face similar challenges when reading and parsing Red Hat's
 has already been asked, you can review the list of questions asked [here](https://issues.redhat.com/browse/SECDATA-862?filter=12444038).
 
 ### Python and VENV 
-https://issues.redhat.com/browse/SECDATA-831
+[https://issues.redhat.com/browse/SECDATA-831](https://issues.redhat.com/browse/SECDATA-831)
 
 ### Repository Relative URLs 
-https://issues.redhat.com/browse/SECDATA-1089
-https://issues.redhat.com/browse/SECDATA-797
-https://issues.redhat.com/browse/SECDATA-1020
+[https://issues.redhat.com/browse/SECDATA-1089](https://issues.redhat.com/browse/SECDATA-1089)
+[https://issues.redhat.com/browse/SECDATA-797](https://issues.redhat.com/browse/SECDATA-797)
+[https://issues.redhat.com/browse/SECDATA-1020](https://issues.redhat.com/browse/SECDATA-1020)
 
 ### Empty Content Sets
-https://issues.redhat.com/browse/SECDATA-966
+[https://issues.redhat.com/browse/SECDATA-966](https://issues.redhat.com/browse/SECDATA-966)
 
 ### Differences in OVAL and VEX CPEs
-https://issues.redhat.com/browse/SECDATA-1141
+[https://issues.redhat.com/browse/SECDATA-1141](https://issues.redhat.com/browse/SECDATA-1141)
 
 ### Duplicate RHSAs
-https://issues.redhat.com/browse/SECDATA-969
+[https://issues.redhat.com/browse/SECDATA-969](https://issues.redhat.com/browse/SECDATA-969)
 
 ## Additional Questions or Concerns 
 Red Hat is committed to continually improving our security data; any future changes to the data itself or the format of 

@@ -528,7 +528,7 @@ Our other full product ID `7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src` ca
 The `remediations` object provides additional information about the previously identified product status. The following
 remediations status are available per `product_status` category:
 
-* `fixed`
+`fixed`
 
   * `vendor_fix`: For all the product IDs with a fixed product status there will be a corresponding entry
     in the remediations object that correlates each full product ID to the correct RHSAs. The RHSA can be determined by
@@ -538,7 +538,7 @@ remediations status are available per `product_status` category:
   * `workaround`: If a mitigation exists, it applies to all components regardless of their fix state.
       * `details`: The mitigation statement
 
-* `known_affected`
+`known_affected`
 
   * `no_fix_planned`: Will include any product IDs with the known affected product status that will not be fixed by Red
   Hat, either because it is out of support scope or the engineering team has decided not to fix it for other reasons.
@@ -549,10 +549,10 @@ remediations status are available per `product_status` category:
   * `workaround`: If a mitigation exists, it applies to all components regardless of their fix state.
       * `details`: The mitigation statement
 
-* `known_not_affected`: There are no remediation objects for the known not affected status since it is implicitly
+`known_not_affected`: There are no remediation objects for the known not affected status since it is implicitly
 assumed that no remediation is needed if the product and component are not affected.
 
-* `under_investigation`: There are no remediation objects for the under investigation status since it is implicitly
+`under_investigation`: There are no remediation objects for the under investigation status since it is implicitly
 assumed that no remediation exist while still under investigation.
 
 Note: As with the `product_status` object, there may not be a `remediations` entry for every category. Additionally,
