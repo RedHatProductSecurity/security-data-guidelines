@@ -406,7 +406,7 @@ CPEs in CSAF advisories and VEX data are represented slightly different based on
   * Product version:
     * RHEL 9 and before: Fixed products will include a major version for main stream products and a major and minor version for xUS streams
     * RHEL 10: Fixed products will include a major and minor version for both main and xUS streams
-  * Channel specifiers: Channel specifiers will be included for CPEs (only applicable to RHEL 9 and before)
+    * Channel specifiers: Channel specifiers will be included for CPEs (only applicable to RHEL 9 and before)
 
 #### CPE Matching Logic
 Due to the differences in CPE representation based on fix status, Red Hat recommends vendors attempt to match to CPEs
@@ -538,7 +538,7 @@ limited to the amd64 architecture.
 
 | purl                                                                                                                                                                                                                                  | proudct_id                                                                                                  | Notes                   |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------|
-| pkg:oci/ose-console-rhel9                                                                                                                                                                                                             | openshift4/ose-console-rhel9                                                                                | CVE is unfixed          |
+| pkg:oci/ose-console-rhel9?repository_url=registry.redhat.io/openshift4/ose-console-rhel9                                                                                                                                              | openshift4/ose-console-rhel9                                                                                | CVE is unfixed          |
 | pkg:oci/ose-console-rhel9@sha256:fb32b644069ea9dbd35da2895d9fe9fda94ed50fb0707121645b168c31b57bde?arch=amd64&repository_url=registry.redhat.io/openshift4/ose-console-rhel9&tag=v4.16.0-202410180404.p0.g95b8916.assembly.stream.el9  | openshift4/ose-console-rhel9@sha256:fb32b644069ea9dbd35da2895d9fe9fda94ed50fb0707121645b168c31b57bde_amd64  | CVE-2024-24791 is fixed |
 | pkg:oci/ose-console-rhel9@sha256:1b5f3e45a6778bad18ab5acbca08ee4390cd8b1fdefd2ca3020de7b127f3a54c?arch=amd64&repository_url=registry.redhat.io/openshift4/ose-console-rhel9&tag=v4.17.0-202410091535.p0.ge61f187.assembly.stream.el9  | openshift4/ose-console-rhel9@sha256:1b5f3e45a6778bad18ab5acbca08ee4390cd8b1fdefd2ca3020de7b127f3a54c_amd64  | CVE-2024-24791 is fixed |                  
 
