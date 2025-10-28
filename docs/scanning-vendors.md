@@ -182,12 +182,12 @@ Labels:      License=GPLv2+
  
 From the output above, we can determine the following information for this image:
 
-* Container Name and Repository: `Name:   registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a` 
-  * Name: `ose-console-rhel9`
-  * Repository: `registry.redhat.io/openshift4/ose-console-rhel9`
-* Container Architecture: `Arch: amd64` 
-* Container Tag: `release=202409181705.p0.g0b1616c.assembly.stream.el9`
-* OpenShift version: `version=v4.16.0`
+  * Container Name and Repository: `Name:   registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a` 
+    * Name: `ose-console-rhel9`
+    * Repository: `registry.redhat.io/openshift4/ose-console-rhel9`
+  * Container Architecture: `Arch: amd64`
+  * Container Tag: `release=202409181705.p0.g0b1616c.assembly.stream.el9`
+  * OpenShift version: `version=v4.16.0`
 
 Using this information, we can represent this container image with the following purl.
 ```
@@ -399,14 +399,14 @@ found [here](https://redhatproductsecurity.github.io/security-data-guidelines/cs
 #### CPEs in CSAF-VEX
 CPEs in CSAF advisories and VEX data are represented slightly different based on fix status.
 
-* Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
-  * Product version: Unfixed products will only include the major product version in the CPE
-  * Channel specifiers: Channel specifiers will not be included in CPEs (only applicable to RHEL 9 and before)
-* Fixed: Includes all `fixed` product status and the occasional `known_not-affected` product statuses
-  * Product version:
-    * RHEL 9 and before: Fixed products will include a major version for main stream products and a major and minor version for xUS streams
-    * RHEL 10: Fixed products will include a major and minor version for both main and xUS streams
-  * Channel specifiers: Channel specifiers will be included for CPEs (only applicable to RHEL 9 and before)
+  * Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
+    * Product version: Unfixed products will only include the major product version in the CPE
+    * Channel specifiers: Channel specifiers will not be included in CPEs (only applicable to RHEL 9 and before)
+  * Fixed: Includes all `fixed` product status and the occasional `known_not-affected` product statuses
+    * Product version:
+      * RHEL 9 and before: Fixed products will include a major version for main stream products and a major and minor version for xUS streams
+      * RHEL 10: Fixed products will include a major and minor version for both main and xUS streams
+    * Channel specifiers: Channel specifiers will be included for CPEs (only applicable to RHEL 9 and before)
 
 #### CPE Matching Logic
 Due to the differences in CPE representation based on fix status, Red Hat recommends vendors attempt to match to CPEs
@@ -484,13 +484,13 @@ components and then format the appropriate purls to match to `product_version` e
 #### Purls in CSAF-VEX
 Similarly to CPEs, purls in CSAF advisories and VEX data are represented differently based on fix status.
 
-* Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
-  * Component version: All unfixed components, both `rpm` and `oci` purl formats will not include any component versioning
-  * Architecture: SRPMs will have the qualifier `arch=src`, but both binary RPMs and container will not include any
-    architecture information
-* Fixed: Includes all `fixed` product status and the occasional `known_not_affected` product statuses
-  * Component version: All fixed components will include versioning in  the `rpm` and `oci` purl formats
-  * Architecture: All fixed components will include architecture information in the `rpm` and `oci` purl formats
+  * Unfixed: Includes the `under_investigation`, `known_affected` and most `known_not_affected` product statuses
+    * Component version: All unfixed components, both `rpm` and `oci` purl formats will not include any component versioning
+    * Architecture: SRPMs will have the qualifier `arch=src`, but both binary RPMs and container will not include any
+      architecture information 
+  * Fixed: Includes all `fixed` product status and the occasional `known_not_affected` product statuses
+    * Component version: All fixed components will include versioning in  the `rpm` and `oci` purl formats
+    * Architecture: All fixed components will include architecture information in the `rpm` and `oci` purl formats
 
 #### Purl Matching Logic
 As seen above, purls in CSAF advisories and VEX files can be represented differently based on fix status. When attempting
@@ -538,7 +538,7 @@ limited to the amd64 architecture.
 
 | purl                                                                                                                                                                                                                                  | proudct_id                                                                                                  | Notes                   |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------|
-| pkg:oci/ose-console-rhel9                                                                                                                                                                                                             | openshift4/ose-console-rhel9                                                                                | CVE is unfixed          |
+| pkg:oci/ose-console-rhel9?repository_url=registry.redhat.io/openshift4/ose-console-rhel9                                                                                                                                              | openshift4/ose-console-rhel9                                                                                | CVE is unfixed          |
 | pkg:oci/ose-console-rhel9@sha256:fb32b644069ea9dbd35da2895d9fe9fda94ed50fb0707121645b168c31b57bde?arch=amd64&repository_url=registry.redhat.io/openshift4/ose-console-rhel9&tag=v4.16.0-202410180404.p0.g95b8916.assembly.stream.el9  | openshift4/ose-console-rhel9@sha256:fb32b644069ea9dbd35da2895d9fe9fda94ed50fb0707121645b168c31b57bde_amd64  | CVE-2024-24791 is fixed |
 | pkg:oci/ose-console-rhel9@sha256:1b5f3e45a6778bad18ab5acbca08ee4390cd8b1fdefd2ca3020de7b127f3a54c?arch=amd64&repository_url=registry.redhat.io/openshift4/ose-console-rhel9&tag=v4.17.0-202410091535.p0.ge61f187.assembly.stream.el9  | openshift4/ose-console-rhel9@sha256:1b5f3e45a6778bad18ab5acbca08ee4390cd8b1fdefd2ca3020de7b127f3a54c_amd64  | CVE-2024-24791 is fixed |                  
 
