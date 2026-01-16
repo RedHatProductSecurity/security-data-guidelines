@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://security.access.redhat.com/data/meta/v1/embedded_metadata.v1.schema.json",
+  "type": "object",
+  "name": "Red Hat Container Embedded metadata",
+  "description": "This describes necessary metadata to make security determinations about a container image.",
+  "properties": {
+    "name": {
+      "description": "This defines a canonical name for a container. This is likely to be displayed to an end-user.",
+      "type": "string",
+      "pattern": "[a-z0-9]+((\\.|_|__|-+)[a-z0-9]+)*(\\/[a-z0-9]+((\\.|_|__|-+)[a-z0-9]+)*)*",
+      "$comment": "This regexp is the \"name\" regexp from the OCI Distribution spec."
+    },
+    "org.opencontainers.image.created": {
+      "description": "This is the creation timestamp of the container.\n\nThis MUST be a complete RFC3339 timestamp",
+      "type": "string",
+      "format": "date-time"
+    },
+    "cpe": {
+      "description": "This is the CPE Name identifying this container.\n\nAny version attributes SHOULD NOT be provided.\nContainers with distinct CPE Names MUST be considered distinct pieces of software with incomparible versions.",
+      "type": "string",
+      "oneOf": [
+        {
+          "description": "This is the CPE 2.2 regexp: https://cpe.mitre.org/specification/2.2/cpe-language_2.2.xsd",
+          "type": "string",
+          "pattern": "^[c][pP][eE]:/[AHOaho]?(:[A-Za-z0-9\\._\\-~%]*){0,6}$"
+        },
+        {
+          "description": "This is the CPE 2.3 regexp: https://csrc.nist.gov/schema/cpe/2.3/cpe-naming_2.3.xsd",
+          "type": "string",
+          "pattern": "^cpe:2\\.3:[aho\\*\\-](:(((\\?*|\\*?)([a-zA-Z0-9\\-\\._]|(\\\\[\\\\\\*\\?!\"#$$%&'\\(\\)\\+,/:;<=>@\\[\\]\\^`\\{\\|}~]))+(\\?*|\\*?))|[\\*\\-])){5}(:(([a-zA-Z]{2,3}(-([a-zA-Z]{2}|[0-9]{3}))?)|[\\*\\-]))(:(((\\?*|\\*?)([a-zA-Z0-9\\-\\._]|(\\\\[\\\\\\*\\?!\"#$$%&'\\(\\)\\+,/:;<=>@\\[\\]\\^`\\{\\|}~]))+(\\?*|\\*?))|[\\*\\-])){4}$"
+        }
+      ]
+    },
+    "architecture": {
+      "description": "This is the intended architecture of the container.",
+      "$comment": "This is modern(ish) architectures as their golang name.",
+      "enum": [
+        "amd64",
+        "arm64",
+        "mips64",
+        "mips64le",
+        "ppc64",
+        "ppc64le",
+        "riscv64",
+        "s390x"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "org.opencontainers.image.created",
+    "cpe",
+    "architecture"
+  ],
+  "examples": [
+    {
+      "name": "openshift-gitops-1/gitops-rhel8-operator",
+      "org.opencontainers.image.created": "2025-04-14T02:14:26Z",
+      "cpe": "cpe:/a:redhat:openshift_gitops:::el8",
+      "architecture": "amd64"
+    }
+  ]
+}
