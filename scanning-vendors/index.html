@@ -1,0 +1,1505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://redhatproductsecurity.github.io/security-data-guidelines/scanning-vendors/">
+      
+      
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Technical Guidance for Vulnerability Scanning Vendors - Red Hat Security Data Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Hat+Text:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Red Hat Text";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Technical Guidance for Vulnerability Scanning Vendors - Red Hat Security Data Guidelines" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://redhatproductsecurity.github.io/security-data-guidelines/assets/images/social/scanning-vendors.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://redhatproductsecurity.github.io/security-data-guidelines/scanning-vendors/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Technical Guidance for Vulnerability Scanning Vendors - Red Hat Security Data Guidelines" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://redhatproductsecurity.github.io/security-data-guidelines/assets/images/social/scanning-vendors.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#technical-guidance-for-vulnerability-scanning-vendors" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Red Hat Security Data Guidelines" class="md-header__button md-logo" aria-label="Red Hat Security Data Guidelines" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Red Hat Security Data Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Technical Guidance for Vulnerability Scanning Vendors
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cpe/" class="md-tabs__link">
+        
+  
+    
+  
+  CPE
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../csaf-vex/" class="md-tabs__link">
+          
+  
+  CSAF/VEX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../purl/" class="md-tabs__link">
+        
+  
+    
+  
+  purl
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../sbom/" class="md-tabs__link">
+        
+  
+    
+  
+  SBOM
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Red Hat Security Data Guidelines" class="md-nav__button md-logo" aria-label="Red Hat Security Data Guidelines" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Red Hat Security Data Guidelines
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSAF/VEX
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            CSAF/VEX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../csaf-vex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSAF/VEX Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vex-alpha/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VEX-Alpha
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../purl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    purl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sbom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SBOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/RedHatProductSecurity/security-data-guidelines/raw/main/docs/scanning-vendors.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="technical-guidance-for-vulnerability-scanning-vendors">Technical Guidance for Vulnerability Scanning Vendors<a class="headerlink" href="#technical-guidance-for-vulnerability-scanning-vendors" title="Permanent link">🔗</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">🔗</a></h2>
+<p>This article covers the basic principles for how scanning vendors should use Red Hat security data to accurately report 
+on vulnerabilities, specifically for Red Hat containers images. </p>
+<h3 id="process-overview">Process Overview<a class="headerlink" href="#process-overview" title="Permanent link">🔗</a></h3>
+<p>Red Hat security data reports vulnerability information per product and component combination. In order to accurately report 
+vulnerability information against Red Hat products using CSAF advisories and VEX data, vendors should follow these process steps: </p>
+<ol>
+<li><strong>Component Identification:</strong> Determine what components are included in the scanned container, including information 
+about the container itself and represent them using purls.</li>
+<li><strong>Product Identification:</strong> Determine what product the components are correlated to using container metadata using 
+repositories and represent them with CPEs.</li>
+<li><strong>Product and Component Matching:</strong> Identify product/component pairs with product IDs by matching components to purls 
+and products to CPEs.</li>
+<li><strong>Determine Vulnerability Information:</strong> Find vulnerability information such as severity, affectedness information 
+and any available security fixes by using the product/component product IDs.</li>
+</ol>
+<p>The rest of this document will cover each of these topics in more detail and include relevant examples from the following images: </p>
+<p><a href="https://catalog.redhat.com/software/containers/rhel9/python-312/657b088123df896ebfacf1f0?q=python&amp;container-tabs=overview&amp;image=66cf3054a2c0cf86bc022be9">Repository: registry.redhat.io/rhel9/python-312 Tag: 1-25</a> </p>
+<p><a href="https://catalog.redhat.com/software/containers/openshift4/ose-console-rhel9/65280984f0f695f11b13a24e?image=66eb1a1cdf6256d9be4690e6&amp;architecture=amd64">Repository: registry.redhat.io/openshift4/ose-console-rhel9 Tag: v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9</a></p>
+<h2 id="component-identification">Component Identification<a class="headerlink" href="#component-identification" title="Permanent link">🔗</a></h2>
+<p>The Package URL (purl) specification has become a widely used standard for identifying and locating software 
+components throughout the open source software community.</p>
+<p>Red Hat uses purl to identify software components, including RPMs, RPM modules and container first content, in our 
+CSAF advisory and VEX files as well as our SBOM files. Detailed information about Red Hat purls can be found 
+<a href="https://redhatproductsecurity.github.io/security-data-guidelines/purl/">here</a>.</p>
+<h3 id="rpms-and-rpm-modules">RPMs and RPM modules<a class="headerlink" href="#rpms-and-rpm-modules" title="Permanent link">🔗</a></h3>
+<p>An RPM package is a file format used by the Red Hat Package Manager (RPM) system for software distribution and management, 
+which package consists of an archive of files and metadata used to install and erase these files.</p>
+<p>There are two types of RPM packages: source RPMs, which contain source code and a spec file and binary RPMs, which are
+the files built from source packages and patches. </p>
+<p>Additionally, an RPM module is a set of RPM packages that represent a component and are usually installed together. 
+Starting from RHEL 10, there will be no more RPM modules.</p>
+<p>SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the <code>rpm</code> purl type. More detailed
+information about RPM purl usage can be found
+<a href="https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages">here</a>.</p>
+<h4 id="binary-rpms">Binary RPMs<a class="headerlink" href="#binary-rpms" title="Permanent link">🔗</a></h4>
+<p>Both binary RPMs and RPM modules installed in a container image can be discovered using the <code>rpm -qa</code> command from within 
+the container image.
+<div class="highlight"><pre><span></span><code># Example return of RPM query
+$ rpm -qa --qf &#39;%{NAME} %{EPOCHNUM} %{VERSION} %{RELEASE} %{ARCH}\n&#39;
+
+libgcc 0 11.3.1 4.3.el9 x86_64
+subscription-manager-rhsm-certificates 0 20220623 1.el9 noarch
+setup 0 2.13.7 9.el9 noarch
+filesystem 0 3.16 2.el9 x86_64
+basesystem 0 11 13.el9 noarch
+</code></pre></div></p>
+<p>Using this information, we can format a purl for the libgcc component. 
+<div class="highlight"><pre><span></span><code># Example of binary RPM purl using name, version and architecture
+
+pkg:rpm/redhat/libgcc@11.3.1-4.3.el9?arch=x86_64
+</code></pre></div></p>
+<h4 id="srpms">SRPMs<a class="headerlink" href="#srpms" title="Permanent link">🔗</a></h4>
+<p>Additionally, SRPMs can be discovered from a binary RPM by using the following command from within the container image.</p>
+<div class="highlight"><pre><span></span><code># Example return of SRPM query
+$ rpm -q --qf &#39;%{SOURCERPM}\n&#39; libgcc  
+
+gcc-11.3.1-4.3.el9.src.rpm
+</code></pre></div>
+<p>The gcc source component can be represented using the following purl.
+<div class="highlight"><pre><span></span><code># Example of SRPM purl using name, version and architecture 
+
+pkg:rpm/redhat/gcc@11.3.1-4.3.el9?arch=src
+</code></pre></div></p>
+<h4 id="rpm-modules">RPM modules<a class="headerlink" href="#rpm-modules" title="Permanent link">🔗</a></h4>
+<p>RPM modules can be discovered using the same command seen in the Binary RPMs section, but will be represented slightly 
+differently in purl format. </p>
+<p>The following is an example of how the nodejs-docs rpm from the nodejs module is represented in a purl 
+<div class="highlight"><pre><span></span><code># Example of RPM module purl using name, version, rpmmod qualifier and architecture 
+
+pkg:rpm/redhat/nodejs-docs@20.16.0-1.module%2Bel9.4.0%2B22197%2b9e60f127?arch=x86_64&amp;epoch=1&amp;rpmmod=nodejs:20:9040020240807145403:rhel9
+</code></pre></div></p>
+<h3 id="container-metadata-and-container-first-content">Container metadata and container first content<a class="headerlink" href="#container-metadata-and-container-first-content" title="Permanent link">🔗</a></h3>
+<p>Container images frequently include non-RPM packages, often referred to as container first content. Non-RPM packages 
+that exist in a container image are reported in security data (CVE pages, CSAF/VEX files) on the container 
+level instead of the package name.</p>
+<p>Containers are represented with the <code>oci</code> purl type. More detailed information about OCI
+purl usage can be found <a href="https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-container-images">here</a>.</p>
+<h4 id="container-name-and-pullspec">Container name and pullspec<a class="headerlink" href="#container-name-and-pullspec" title="Permanent link">🔗</a></h4>
+<p>From within the OpenShift cluster, you can determine the container pullspecs in a given namespace using the following command.
+<div class="highlight"><pre><span></span><code> # oc get pod command
+
+ $ oc get pod &lt;pod-name&gt; -o jsonpath=&#39; {.spec.containers[*].name}&#39; -n &lt;namespace&gt;
+</code></pre></div></p>
+<h4 id="container-tag-openshift-version-and-other-metadata">Container tag, Openshift version and other metadata<a class="headerlink" href="#container-tag-openshift-version-and-other-metadata" title="Permanent link">🔗</a></h4>
+<p>If you already have the pullspec for the container image you are scanning, you can use the following method to 
+determine additional container metadata.
+<div class="highlight"><pre><span></span><code># Example using oc image command with the pullspec
+$ oc image info registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a
+
+Name:        registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a
+Media Type:  application/vnd.docker.distribution.manifest.v2+json
+Created:     1y ago
+Image Size:  210.8MB in 4 layers
+Layers:      78.17MB sha256:ca1636478fe5b8e2a56600e24d6759147feb15020824334f4a798c1cb6ed58e2
+             47.67MB sha256:24f5353c85f58ec262052e1b10214db36acc498ffe45b3ffd8ac3af8d7eec61c
+             10.47MB sha256:0cb75215d50fe354485561a528b8b0239ac54a68fd3a6b670f3654ba54b24ec0
+             74.45MB sha256:356fed97f66574bd12d47f144a3bf53471b52b11e99b79a3701da0f9f45eafe9
+OS:          linux
+Arch:        amd64
+Command:     /opt/bridge/bin/bridge --public-dir=/opt/bridge/static
+Working Dir: /
+User:        1001
+Environment: PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+             container=oci
+             GODEBUG=x509ignoreCN=0,madvdontneed=1
+             __doozer=merge
+             BUILD_RELEASE=202409181705.p0.g0b1616c.assembly.stream.el9
+             BUILD_VERSION=v4.16.0
+             OS_GIT_MAJOR=4
+             OS_GIT_MINOR=16
+             OS_GIT_PATCH=0
+             OS_GIT_TREE_STATE=clean
+             OS_GIT_VERSION=4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9-0b1616c
+             SOURCE_GIT_TREE_STATE=clean
+             __doozer_group=openshift-4.16
+             __doozer_key=openshift-enterprise-console
+             __doozer_version=v4.16.0
+             OS_GIT_COMMIT=0b1616c
+             SOURCE_DATE_EPOCH=1726676250
+             SOURCE_GIT_COMMIT=0b1616cb0c45e5fdb5792fb96ffce1f157705369
+             SOURCE_GIT_TAG=v6.0.6-23073-g0b1616cb0c
+             SOURCE_GIT_URL=https://github.com/openshift/console
+Labels:      License=GPLv2+
+             architecture=x86_64
+             build-date=2024-09-18T17:30:51
+             com.redhat.component=openshift-enterprise-console-container
+             com.redhat.license_terms=https://www.redhat.com/agreements
+             description=This is a component of OpenShift Container Platform and provides a web console.
+             distribution-scope=public
+             io.buildah.version=1.29.0
+             io.k8s.description=This is a component of OpenShift Container Platform and provides a web console.
+             io.k8s.display-name=OpenShift Console
+             io.openshift.build.commit.id=0b1616cb0c45e5fdb5792fb96ffce1f157705369
+             io.openshift.build.commit.url=https://github.com/openshift/console/commit/0b1616cb0c45e5fdb5792fb96ffce1f157705369
+             io.openshift.build.source-location=https://github.com/openshift/console
+             io.openshift.expose-services=
+             io.openshift.maintainer.component=Management Console
+             io.openshift.maintainer.project=OCPBUGS
+             io.openshift.tags=openshift,console
+             maintainer=Samuel Padgett &lt;spadgett@redhat.com&gt;
+             name=openshift/ose-console-rhel9
+             release=202409181705.p0.g0b1616c.assembly.stream.el9
+             summary=Provides the latest release of the Red Hat Extended Life Base Image.
+             url=https://access.redhat.com/containers/#/registry.access.redhat.com/openshift/ose-console-rhel9/images/v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9
+             vcs-ref=29bd3d1b3311656960d7b3a53d39f52f318a1da9
+             vcs-type=git
+             vendor=Red Hat, Inc.
+             version=v4.16.0
+</code></pre></div></p>
+<p>From the output above, we can determine the following information for this image:</p>
+<ul>
+<li>Container Name and Repository: <code>Name:   registry.redhat.io/openshift4/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a</code> <ul>
+<li>Name: <code>ose-console-rhel9</code></li>
+<li>Repository: <code>registry.redhat.io/openshift4/ose-console-rhel9</code></li>
+</ul>
+</li>
+<li>Container Architecture: <code>Arch: amd64</code></li>
+<li>Container Tag: <code>release=202409181705.p0.g0b1616c.assembly.stream.el9</code></li>
+<li>OpenShift version: <code>version=v4.16.0</code></li>
+</ul>
+<p>Using this information, we can represent this container image with the following purl.
+<div class="highlight"><pre><span></span><code># Example of the container purl using name, architecture, repository and tag
+
+pkg:oci/ose-console-rhel9@sha256:4a6ea66336fc875f84f24bf9ebfdf5b7c166eb19dd68d88ec6035392162b4c5a?arch=amd64&amp;repository_url=registry.redhat.io/openshift4/ose-console-rhel9&amp;tag=v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9&quot;
+</code></pre></div></p>
+<h2 id="product-identification">Product Identification<a class="headerlink" href="#product-identification" title="Permanent link">🔗</a></h2>
+<p>Common Platform Enumeration (CPE) is a standardized method of describing and identifying classes of applications, 
+operating systems, and hardware devices present among an enterprise's computing assets.</p>
+<p>Red Hat uses CPEs to uniquely identify each product and version, following the CPE 2.2 schema. Detailed information about 
+Red Hat CPEs can be found <a href="https://redhatproductsecurity.github.io/security-data-guidelines/cpe/">here</a>. </p>
+<h3 id="rpm-repositories">RPM Repositories<a class="headerlink" href="#rpm-repositories" title="Permanent link">🔗</a></h3>
+<p>Each Red Hat container images published after June 2020 include information about the repositories from which 
+the packages used in the container are sourced. Scanning vendors will use the repositories to identify CPEs that are 
+associated with the scanned image. The following sections explain different ways to identify repository information for 
+a container image. </p>
+<h4 id="content-manifest-json-files">Content Manifest JSON files<a class="headerlink" href="#content-manifest-json-files" title="Permanent link">🔗</a></h4>
+<p>Previously, content manifest JSON files were included for each layer in the container image in the <code>root/buildinfo/</code> 
+directory. Inside each content manifest JSON file, you'll find a <code>content_sets</code> object, which specifies the
+repository names that provided the packages found in the container image. </p>
+<p>The following examples show how to get a list of the content manifest files from within a container image.
+<div class="highlight"><pre><span></span><code># Example of content manifest files for rhel9/python-312 image 
+$ ls /root/buildinfo/content_manifests 
+
+python-312-container-1-25.json
+s2i-core-container-1-511.json
+s2i-base-container-1-530.json   
+ubi9-container-9.4-1214.json
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code># Example of content manifest files for openshift4/ose-console-rhel9 image
+$ ls /root/buildinfo/content_manifests 
+
+openshift-base-rhel9-container-v4.16.0-202409032335.p0.gb45ea65.assembly.stream.el9.json
+openshift-enterprise-base-rhel9-container-v4.16.0-202409051837.p0.gb58673a.assembly.stream.el9.json
+openshift-enterprise-console-container-v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9.json
+rhel-els-container-9.2-483.json
+</code></pre></div>
+<p>The following examples provide a look at the content sets object within an individual manifest file.
+<div class="highlight"><pre><span></span><code># Example of repositories in content sets for rhel9/python-312 image 
+$ cat /root/buildinfo/content_manifests/python-312-container-1-25.json
+...
+},
+&quot;content_sets&quot;: [
+        &quot;rhel-9-for-aarch64-baseos-rpms&quot;,
+        &quot;rhel-9-for-aarch64-appstream-rpms&quot;
+    ],
+}
+</code></pre></div>
+The two repositories identified for the rhel9/python-312 container are <code>rhel-9-for-aarch64-baseos-rpms</code> and <code>rhel-9-for-aarch64-appstream-rpms</code>.</p>
+<p><div class="highlight"><pre><span></span><code># Example of repositories in content sets for openshift4/ose-console-rhel9 image
+$ cat /root/buildinfo/content_manifests/openshift-enterprise-console-container-v4.16.0-202409181705.p0.g0b1616c.assembly.stream.el9.json
+
+...
+},
+&quot;content_sets&quot;: [
+        &quot;rhel-9-for-x86_64-appstream-eus-rpms__9_DOT_2&quot;,
+        &quot;rhel-9-for-x86_64-baseos-eus-rpms__9_DOT_2&quot;
+    ]
+}
+</code></pre></div>
+The two repositories identified for the openshift4/ose-console-rhel9 container are <code>rhel-9-for-x86_64-appstream-eus-rpms__9_DOT_2</code>
+and <code>rhel-9-for-x86_64-baseos-eus-rpms__9_DOT_2</code>.</p>
+<h4 id="content-sets-json-files">Content Sets JSON files<a class="headerlink" href="#content-sets-json-files" title="Permanent link">🔗</a></h4>
+<p>Starting from January 2025, the content manifest files have been replaced by a single content-sets.json file available in the
+<code>/usr/share/buildinfo/</code> directory and the same content is copied to the legacy location <code>/root/buildinfo/content_manifests/</code>. 
+In some container images, access to the root directory is locked, so the <code>/root/buildinfo/</code> location will be deprecated 
+in the future and the main location for the content-sets.json metadata will remain in <code>/usr/share/buildinfo</code>.</p>
+<p>The following is an example of how to determine the repositories used from the new content sets JSON file. 
+<div class="highlight"><pre><span></span><code># Example of repositories in the content sets JSON 
+$ cat cat /usr/share/buildinfo/content-sets.json
+
+{
+  &quot;metadata&quot;: {
+    &quot;icm_version&quot;: 1,
+    &quot;icm_spec&quot;: &quot;https://raw.githubusercontent.com/containerbuildsystem/atomic-reactor/master/atomic_reactor/schemas/content_manifest.json&quot;,
+    &quot;image_layer_index&quot;: 0
+  },
+  &quot;from_dnf_hint&quot;: true,
+  &quot;content_sets&quot;: [
+    &quot;rhel-9-for-aarch64-appstream-rpms&quot;,
+    &quot;rhel-9-for-aarch64-appstream-source-rpms&quot;,
+    &quot;rhel-9-for-aarch64-baseos-rpms&quot;,
+    &quot;rhel-9-for-aarch64-baseos-source-rpms&quot;,
+    &quot;rhel-9-for-ppc64le-appstream-rpms&quot;,
+    &quot;rhel-9-for-ppc64le-appstream-source-rpms&quot;,
+    &quot;rhel-9-for-ppc64le-baseos-rpms&quot;,
+    &quot;rhel-9-for-ppc64le-baseos-source-rpms&quot;,
+    &quot;rhel-9-for-s390x-appstream-rpms&quot;,
+    &quot;rhel-9-for-s390x-appstream-source-rpms&quot;,
+    &quot;rhel-9-for-s390x-baseos-rpms&quot;,
+    &quot;rhel-9-for-s390x-baseos-source-rpms&quot;,
+    &quot;rhel-9-for-x86_64-appstream-rpms&quot;,
+    &quot;rhel-9-for-x86_64-appstream-source-rpms&quot;,
+    &quot;rhel-9-for-x86_64-baseos-rpms&quot;,
+    &quot;rhel-9-for-x86_64-baseos-source-rpms&quot;
+  ]
+}
+</code></pre></div></p>
+<h4 id="querying-repositories-for-binary-rpms">Querying Repositories for Binary RPMs<a class="headerlink" href="#querying-repositories-for-binary-rpms" title="Permanent link">🔗</a></h4>
+<p>Although container images provide a list of repositories from which the packages in the image are sourced, vendors may also 
+be interested in determining the repository that provided a specific binary RPM. This can be done using the dnf database, but 
+dnf is not always shipped with container images. 
+<div class="highlight"><pre><span></span><code># Example return of repository query 
+$ dnf repoquery --qf &quot;%{repoid}&quot; libgcc-11.3.1-4.3.el9.x86_64
+
+rhel-9-for-x86_64-baseos-rpms
+</code></pre></div></p>
+<h3 id="rpm-repository-to-cpe-mapping">RPM Repository to CPE mapping<a class="headerlink" href="#rpm-repository-to-cpe-mapping" title="Permanent link">🔗</a></h3>
+<p>Red Hat maintains a JSON file to map Red Hat RPM repositories to our CPEs. Once you have identified the repositories
+used for the product and version by following the previous steps, you search for the repository label and determine
+both the set of related CPEs and the list of repository relative URLs. The repository to CPE mapping is located 
+<a href="https://security.access.redhat.com/data/metrics/repository-to-cpe.json">here</a>.</p>
+<p>The following are examples of how to determine CPEs from repositories using the repository-to-CPE JSON file.
+<div class="highlight"><pre><span></span><code># Example of repository to CPE mapping for rhel9/python-312 repositories
+&quot;rhel-9-for-aarch64-baseos-rpms&quot;: {
+    &quot;cpes&quot;: [
+        &quot;cpe:/o:redhat:enterprise_linux:9::baseos&quot;], 
+    &quot;repo_relative_urls&quot;: [
+        &quot;content/dist/rhel9/9.1/aarch64/baseos/os&quot;, 
+        &quot;content/dist/rhel9/9.2/aarch64/baseos/os&quot;, 
+        &quot;content/dist/rhel9/9.3/aarch64/baseos/os&quot;, 
+        &quot;content/dist/rhel9/9.4/aarch64/baseos/os&quot;, 
+        &quot;content/dist/rhel9/9.5/aarch64/baseos/os&quot;, 
+        &quot;content/dist/rhel9/9.6/aarch64/baseos/os&quot;, 
+        &quot;content/dist/rhel9/9.7/aarch64/baseos/os&quot;, 
+        &quot;content/dist/rhel9/9.8/aarch64/baseos/os&quot;, 
+        &quot;content/dist/rhel9/9/aarch64/baseos/os&quot;]
+},
+...
+&quot;rhel-9-for-aarch64-appstream-rpms&quot;: {
+    &quot;cpes&quot;: [
+        &quot;cpe:/a:redhat:enterprise_linux:9::appstream&quot;], 
+    &quot;repo_relative_urls&quot;: [
+        &quot;content/dist/rhel9/9.1/aarch64/appstream/os&quot;, 
+        &quot;content/dist/rhel9/9.2/aarch64/appstream/os&quot;, 
+        &quot;content/dist/rhel9/9.3/aarch64/appstream/os&quot;, 
+        &quot;content/dist/rhel9/9.4/aarch64/appstream/os&quot;, 
+        &quot;content/dist/rhel9/9.5/aarch64/appstream/os&quot;, 
+        &quot;content/dist/rhel9/9.6/aarch64/appstream/os&quot;, 
+        &quot;content/dist/rhel9/9.7/aarch64/appstream/os&quot;, 
+        &quot;content/dist/rhel9/9.8/aarch64/appstream/os&quot;, 
+        &quot;content/dist/rhel9/9/aarch64/appstream/os&quot;]
+},
+</code></pre></div>
+The two CPEs that we have identified for the rhel9/python-312 image are <code>cpe:/o:redhat:enterprise_linux:9::baseos</code> and 
+<code>cpe:/a:redhat:enterprise_linux:9::appstream</code>.</p>
+<p><div class="highlight"><pre><span></span><code># Example of repository to CPE mapping for openshift4/ose-console-rhel9 repositories
+&quot;rhel-9-for-x86_64-appstream-eus-rpms__9_DOT_2&quot;: {
+    &quot;cpes&quot;: [
+        &quot;cpe:/a:redhat:rhel_eus:9.2::appstream&quot;], 
+    &quot;repo_relative_urls&quot;: [
+        &quot;content/eus/rhel9/9.2/x86_64/appstream/os&quot;]
+},
+...
+&quot;rhel-9-for-x86_64-baseos-eus-rpms__9_DOT_2&quot;: {
+    &quot;cpes&quot;: [
+        &quot;cpe:/o:redhat:rhel_eus:9.2::baseos&quot;], 
+    &quot;repo_relative_urls&quot;: [
+        &quot;content/eus/rhel9/9.2/x86_64/baseos/os&quot;]
+},
+</code></pre></div>
+The two CPEs we have identified for the openshift4/ose-console-rhel9 image are <code>cpe:/a:redhat:rhel_eus:9.2::appstream"</code> 
+and <code>cpe:/o:redhat:rhel_eus:9.2::baseos</code>.</p>
+<h2 id="product-and-component-matching-in-csaf-vex">Product and Component Matching in CSAF-VEX<a class="headerlink" href="#product-and-component-matching-in-csaf-vex" title="Permanent link">🔗</a></h2>
+<p>The <a href="https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html">Common Security Advisory Framework (CSAF)</a> is a 
+standard that provides a structured, machine-readable way of representing and sharing security advisory information 
+across all software and hardware providers. </p>
+<p>Red Hat Product Security publishes CSAF files for every single Red Hat Security Advisory (RHSA) and VEX files for every 
+single CVE record that is associated with the Red Hat portfolio in any way.</p>
+<p>CSAF advisories and VEX data includes information about products, components and the relationships
+between the applicable products and components. Scanning vendors should identify the relevant products and components 
+individually and then determine the available product/component combinations. </p>
+<p>A detailed breakdown of the format and information included in these files can be found
+<a href="https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/">here</a>.</p>
+<h3 id="product-matching-using-cpes-in-csaf-vex">Product matching using CPEs in CSAF-VEX<a class="headerlink" href="#product-matching-using-cpes-in-csaf-vex" title="Permanent link">🔗</a></h3>
+<p>CSAF advisories and VEX data represent products using a <code>product_name</code> object. The <code>product_name</code> entry will include a 
+<code>production_identification_helper</code> in the form of a CPE. Vendors should follow the previous steps to determine a list of 
+potential CPEs that can be used to match to <code>product_name</code> entries. More information about <code>product_name</code> objects can be
+found <a href="https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#product-family-and-product-name-examples">here</a>.</p>
+<h4 id="cpes-in-csaf-vex">CPEs in CSAF-VEX<a class="headerlink" href="#cpes-in-csaf-vex" title="Permanent link">🔗</a></h4>
+<p>CPEs in CSAF advisories and VEX data are represented slightly different based on fix status.</p>
+<ul>
+<li>Unfixed: Includes the <code>under_investigation</code>, <code>known_affected</code> and most <code>known_not_affected</code> product statuses<ul>
+<li>Product version: Unfixed products will only include the major product version in the CPE</li>
+<li>Channel specifiers: Channel specifiers will not be included in CPEs (only applicable to RHEL 9 and before)</li>
+</ul>
+</li>
+<li>Fixed: Includes all <code>fixed</code> product status and the occasional <code>known_not-affected</code> product statuses<ul>
+<li>Product version:</li>
+<li>RHEL 9 and before: Fixed products will include a major version for main stream products and a major and minor version for xUS streams</li>
+<li>RHEL 10: Fixed products will include a major and minor version for both main and xUS streams</li>
+<li>Channel specifiers: Channel specifiers will be included for CPEs (only applicable to RHEL 9 and before)</li>
+</ul>
+</li>
+</ul>
+<h4 id="cpe-matching-logic">CPE Matching Logic<a class="headerlink" href="#cpe-matching-logic" title="Permanent link">🔗</a></h4>
+<p>Due to the differences in CPE representation based on fix status, Red Hat recommends vendors attempt to match to CPEs
+using only the first 5 segments of the CPE and excluding any channel specifies. When available, it is best to use CPEs 
+with a direct match to the repository information gathered from the container, but there may not always be a direct match.</p>
+<p>If the repositories used in a container image are xUS streams, it is also necessary to check for the existence of a main
+stream CPEs as well, if the vulnerability is unfixed or did not release a fix to the xUS stream.</p>
+<p>Additionally, if the scanned container includes any container first content, scanning vendors should also check for an OpenShift CPE. </p>
+<p>The following are examples of the CPEs that should be used to account for matching and then the potential matches depending on 
+the CVE fix statuses and product streams.
+<div class="highlight"><pre><span></span><code># Example of CPEs that should be checked for the rhel9/python-312 image  
+
+cpe:/o:redhat:enterprise_linux:9
+cpe:/a:redhat:enterprise_linux:9
+</code></pre></div>
+Examples of potential CPE matches depending on fix statuses for the rhel9/python-312 container.</p>
+<table>
+<thead>
+<tr>
+<th>CPE</th>
+<th>product_id</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cpe:/o:redhat:enterprise_linux:9</td>
+<td>red_hat_enterprise_linux_9</td>
+<td>CVE is unfixed</td>
+</tr>
+<tr>
+<td>cpe:/o:redhat:enterprise_linux:9::baseos</td>
+<td>BaseOS-9.5.0.Z.MAIN</td>
+<td>CVE-2020-11023 is fixed for RHEL 9 MAIN stream</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:enterprise_linux:9::appstream</td>
+<td>AppStream-9.5.0.Z.MAIN</td>
+<td>CVE-2020-11023 is fixed for RHEL 9 MAIN stream</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:enterprise_linux:9::crb</td>
+<td>CRB-9.5.0.Z.MAIN</td>
+<td>CVE-2020-11023 is fixed for RHEL 9 MAIN stream</td>
+</tr>
+</tbody>
+</table>
+<p>For CVE-2020-11023, there are direct matches for both <code>cpe:/o:redhat:enterprise_linux:9</code> and <code>cpe:/a:redhat:enterprise_linux:9</code>, 
+so the <code>BaseOS-9.5.0.Z.MAIN</code>, <code>AppStream-9.5.0.Z.MAIN</code> and <code>CRB-9.5.0.Z.MAIN</code> product IDs should be used. </p>
+<p>For the OpenShift container, we also add OpenShift CPEs, because this container includes container first content. 
+Using the OpenShift version discovered earlier, vendors can format those OpenShift CPEs. 
+<div class="highlight"><pre><span></span><code># Example of CPEs that should be checked for the openshift4/ose-console-rhel9
+
+cpe:/o:redhat:enterprise_linux:9
+cpe:/a:redhat:rhel_eus:9.2
+cpe:/o:redhat:rhel_eus:9.2
+cpe:/a:redhat:openshift:4
+cpe:/a:redhat:openshift:4.16 
+</code></pre></div></p>
+<p>Examples of potential CPE matches depending on fix statuses for the openshift4/ose-console-rhel9 container.</p>
+<table>
+<thead>
+<tr>
+<th>CPE</th>
+<th>product_id</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cpe:/o:redhat:enterprise_linux:9</td>
+<td>red_hat_enterprise_linux_9</td>
+<td>CVE is unfixed</td>
+</tr>
+<tr>
+<td>cpe:/o:redhat:enterprise_linux:9::baseos</td>
+<td>BaseOS-9.5.0.Z.MAIN</td>
+<td>CVE-2020-11023 is fixed for RHEL 9 MAIN stream</td>
+</tr>
+<tr>
+<td>cpe:/o:redhat:rhel_eus:9.2::baseos</td>
+<td>BaseOS-9.2.0.Z.EUS</td>
+<td>CVE-2020-11023 is fixed for RHEL 9.2 EUS</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:rhel_eus:9.2::appstream</td>
+<td>AppStream-9.2.0.Z.EUS</td>
+<td>CVE-2020-11023 is fixed for RHEL 9.2 EUS</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:rhel_eus:9.2::crb</td>
+<td>CRB-9.2.0.Z.EUS</td>
+<td>CVE-2020-11023 is fixed for RHEL 9.2 EUS</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4</td>
+<td>red_hat_openshift_container_platform_4</td>
+<td>CVE is unfixed</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4.12::el8</td>
+<td>8Base-RHOSE-4.12</td>
+<td>CVE-2024-24791 is fixed for OpenShift 4.12 based on RHEL 8</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4.12::el9</td>
+<td>9Base-RHOSE-4.12</td>
+<td>CVE-2024-24791 is fixed for OpenShift 4.12 based on RHEL 9</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4.13::el8</td>
+<td>8Base-RHOSE-4.13</td>
+<td>CVE-2024-24791 is fixed for OpenShift 4.13 based on RHEL 8</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4.13::el9</td>
+<td>9Base-RHOSE-4.13</td>
+<td>CVE-2024-24791 is fixed for OpenShift 4.13 based on RHEL 9</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4.14::el8</td>
+<td>8Base-RHOSE-4.14</td>
+<td>CVE-2024-24791 is fixed for OpenShift 4.14 based on RHEL 8</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4.14::el9</td>
+<td>9Base-RHOSE-4.14</td>
+<td>CVE-2024-24791 is fixed for OpenShift 4.14 based on RHEL 9</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4.15::el8</td>
+<td>8Base-RHOSE-4.15</td>
+<td>CVE-2024-24791 is fixed for OpenShift 4.15 based on RHEL 8</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4.15::el9</td>
+<td>9Base-RHOSE-4.15</td>
+<td>CVE-2024-24791 is fixed for OpenShift 4.15 based on RHEL 9</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4.16::el9</td>
+<td>9Base-RHOSE-4.16</td>
+<td>CVE-2024-24791 is fixed for OpenShift 4.16 based on RHEL 9</td>
+</tr>
+<tr>
+<td>cpe:/a:redhat:openshift:4.17::el9</td>
+<td>9Base-RHOSE-4.17</td>
+<td>CVE-2024-24791 is fixed for OpenShift 4.17 based on RHEL 9</td>
+</tr>
+</tbody>
+</table>
+<p>For CVE-2024-24791, there is a direct match for <code>cpe:/a:redhat:openshift:4.16</code>, so the <code>9Base-RHOSE-4.16</code> product ID should 
+be used for any container first content. </p>
+<h3 id="component-matching-using-purls-in-csaf-vex">Component matching using purls in CSAF-VEX<a class="headerlink" href="#component-matching-using-purls-in-csaf-vex" title="Permanent link">🔗</a></h3>
+<p>CSAF advisories and VEX data represent components using a <code>product_version</code> object. The <code>product_version</code> entry will 
+include a <code>production_identification_helper</code> in the form of a purl. Vendors should follow the previous steps to identify 
+components and then format the appropriate purls to match to <code>product_version</code> entries. More information about 
+<code>product_version</code> objects can be found <a href="https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#unfixed-product-versions-vex-only-examples">here</a>.</p>
+<h4 id="purls-in-csaf-vex">Purls in CSAF-VEX<a class="headerlink" href="#purls-in-csaf-vex" title="Permanent link">🔗</a></h4>
+<p>Similarly to CPEs, purls in CSAF advisories and VEX data are represented differently based on fix status.</p>
+<ul>
+<li>Unfixed: Includes the <code>under_investigation</code>, <code>known_affected</code> and most <code>known_not_affected</code> product statuses<ul>
+<li>Component version: All unfixed components, both <code>rpm</code> and <code>oci</code> purl formats will not include any component versioning</li>
+<li>Architecture: SRPMs will have the qualifier <code>arch=src</code>, but both binary RPMs and container will not include any
+  architecture information </li>
+</ul>
+</li>
+<li>Fixed: Includes all <code>fixed</code> product status and the occasional <code>known_not_affected</code> product statuses<ul>
+<li>Component version: All fixed components will include versioning in  the <code>rpm</code> and <code>oci</code> purl formats</li>
+<li>Architecture: All fixed components will include architecture information in the <code>rpm</code> and <code>oci</code> purl formats</li>
+</ul>
+</li>
+</ul>
+<h4 id="purl-matching-logic">Purl Matching Logic<a class="headerlink" href="#purl-matching-logic" title="Permanent link">🔗</a></h4>
+<p>As seen above, purls in CSAF advisories and VEX files can be represented differently based on fix status. When attempting
+to match a component using purls in these files, Red Hat recommends vendors to matching to against any component entries 
+based on component name. </p>
+<p>The following are examples of the purls that could be matched depending on both the fix status and the 
+fix component version.</p>
+<h5 id="rpms-srpms-rpm-modules">RPMs, SRPMS, RPM modules<a class="headerlink" href="#rpms-srpms-rpm-modules" title="Permanent link">🔗</a></h5>
+<div class="highlight"><pre><span></span><code># Example of potential purls that should be checked for libgcc component 
+
+pkg:rpm/redhat/libgcc 
+pkg:rpm/redhat/libgcc@ 
+</code></pre></div>
+<p>Example of potential purl matches depending on fix status for the libgcc component, limited to the x86_64 architecture.  </p>
+<table>
+<thead>
+<tr>
+<th>purl</th>
+<th>product_id</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pkg:rpm/redhat/libgcc</td>
+<td>libgcc</td>
+<td>CVE is unfixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@4.8.5-45.el7_9?arch=x86_64</td>
+<td>libgcc-0:4.8.5-45.el7_9.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@4.8.5-40.el7_7?arch=x86_64</td>
+<td>libgcc-0:4.8.5-40.el7_7.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@11.5.0-5.el9_5?arch=x86_64</td>
+<td>libgcc-0:11.5.0-5.el9_5.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@8.4.1-1.4.el8_4?arch=x86_64</td>
+<td>libgcc-0:8.4.1-1.4.el8_4.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@8.5.0-18.3.el8_8?arch=x86_64</td>
+<td>libgcc-0:8.5.0-18.3.el8_8.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@8.3.1-8.el8_2?arch=x86_64</td>
+<td>libgcc-0:8.3.1-8.el8_2.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@11.4.1-4.el9_4?arch=x86_64</td>
+<td>libgcc-0:11.4.1-4.el9_4.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@8.5.0-23.el8_10?arch=x86_64</td>
+<td>libgcc-0:8.5.0-23.el8_10.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@11.3.1-4.4.el9_2?arch=x86_64</td>
+<td>libgcc-0:11.3.1-4.4.el9_2.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@8.5.0-10.4.el8_6?arch=x86_64</td>
+<td>libgcc-0:8.5.0-10.4.el8_6.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>pkg:rpm/redhat/libgcc@11.2.1-9.5.el9_0?arch=x86_64</td>
+<td>libgcc-0:11.2.1-9.5.el9_0.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+</tbody>
+</table>
+<h5 id="container-first-content">Container first content<a class="headerlink" href="#container-first-content" title="Permanent link">🔗</a></h5>
+<p><div class="highlight"><pre><span></span><code># Example of potential purls that should be checked for the ose-console-rhel9 container 
+
+pkg:oci/ose-console-rhel9
+pkg:oci/ose-console-rhel9@
+</code></pre></div>
+Example of potential purl matches depending on fix status for the openshift4/ose-console-rhel9 container, 
+limited to the amd64 architecture.</p>
+<table>
+<thead>
+<tr>
+<th>purl</th>
+<th>proudct_id</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pkg:oci/ose-console-rhel9?repository_url=registry.redhat.io/openshift4/ose-console-rhel9</td>
+<td>openshift4/ose-console-rhel9</td>
+<td>CVE is unfixed</td>
+</tr>
+<tr>
+<td>pkg:oci/ose-console-rhel9@sha256:fb32b644069ea9dbd35da2895d9fe9fda94ed50fb0707121645b168c31b57bde?arch=amd64&amp;repository_url=registry.redhat.io/openshift4/ose-console-rhel9&amp;tag=v4.16.0-202410180404.p0.g95b8916.assembly.stream.el9</td>
+<td>openshift4/ose-console-rhel9@sha256:fb32b644069ea9dbd35da2895d9fe9fda94ed50fb0707121645b168c31b57bde_amd64</td>
+<td>CVE-2024-24791 is fixed</td>
+</tr>
+<tr>
+<td>pkg:oci/ose-console-rhel9@sha256:1b5f3e45a6778bad18ab5acbca08ee4390cd8b1fdefd2ca3020de7b127f3a54c?arch=amd64&amp;repository_url=registry.redhat.io/openshift4/ose-console-rhel9&amp;tag=v4.17.0-202410091535.p0.ge61f187.assembly.stream.el9</td>
+<td>openshift4/ose-console-rhel9@sha256:1b5f3e45a6778bad18ab5acbca08ee4390cd8b1fdefd2ca3020de7b127f3a54c_amd64</td>
+<td>CVE-2024-24791 is fixed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="using-purls-and-cpe-to-find-product-ids">Using purls and CPE to find Product IDs<a class="headerlink" href="#using-purls-and-cpe-to-find-product-ids" title="Permanent link">🔗</a></h3>
+<p>Vendors should use the previous steps to be able to identify the appropriate <code>product_name</code> objects using CPE and <code>product_version</code> 
+objects using purl. </p>
+<p>In order to determine unique <code>product_id</code> combinations for each product/component pair, vendors should use the <code>relationship</code>
+object. More information about how to determine unique <code>product_id</code> combinations using <code>product_name</code>, <code>product_version</code> and <code>relationships</code> can 
+be found <a href="https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/#relationships">here</a>.</p>
+<p>For CVE-2020-11023, the following product/component IDs are available for the rhel9/python-312 container and the libgcc component, using the
+<code>BaseOS-9.5.0.Z.MAIN</code>, <code>AppStream-9.5.0.Z.MAIN</code> and <code>CRB-9.5.0.Z.MAIN</code> product IDs to filter out any potential purl matches for irrelevant product streams. </p>
+<table>
+<thead>
+<tr>
+<th>Product product_id</th>
+<th>Component product_id</th>
+<th>Product/Component product_id</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BaseOS-9.5.0.Z.MAIN</td>
+<td>libgcc-0:11.5.0-5.el9_5.x86_64</td>
+<td>BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>AppStream-9.5.0.Z.MAIN</td>
+<td>libgcc-0:11.5.0-5.el9_5.x86_64</td>
+<td>AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+<tr>
+<td>CRB-9.5.0.Z.MAIN</td>
+<td>libgcc-0:11.5.0-5.el9_5.x86_64</td>
+<td>CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64</td>
+<td>CVE-2020-11023 is fixed</td>
+</tr>
+</tbody>
+</table>
+<p>For CVE-2024-24791, the following product/component ID is available for the openshift4/ose-console-rhel9 container, using the <code>9Base-RHOSE-4.16</code> product ID 
+value to filter out any potential purl matches for irrelevant product streams.</p>
+<table>
+<thead>
+<tr>
+<th>Product product_id</th>
+<th>Component product_id</th>
+<th>Product/Component product_id</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9Base-RHOSE-4.16</td>
+<td>openshift4/ose-console-rhel9@sha256:fb32b644069ea9dbd35da2895d9fe9fda94ed50fb0707121645b168c31b57bde_amd64</td>
+<td>9Base-RHOSE-4.16:openshift4/ose-console-rhel9-operator@sha256:514ab7310f840027dc2609b10fa465eb6282c11d110f3d69efcf21ea5ef63ec9_amd64</td>
+<td>CVE-2024-24791 is fixed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="determine-vulnerability-information">Determine Vulnerability Information<a class="headerlink" href="#determine-vulnerability-information" title="Permanent link">🔗</a></h2>
+<p>After following the previous steps, vendors should now have a list of unique product/component pairs in the form of 
+unique <code>product_id</code> combinations. These <code>product_id</code> combinations should be used to determine severity, affectedness information and any available security fixes.</p>
+<p>The following section will continue with CVE-2020-11023 for the rhel9/python-312 container and the libgcc component. </p>
+<h3 id="cve-information">CVE Information<a class="headerlink" href="#cve-information" title="Permanent link">🔗</a></h3>
+<p>Basic CVE information is represented in the <code>vulnerabilities</code> section of CSAF advisories and VEX data:</p>
+<ul>
+<li><code>cve</code>: The official CVE ID</li>
+<li><code>cwe</code>: Information about the corresponding CWE, include the CWE ID and the name </li>
+<li><code>discovery_date</code>: The first reported date of the vulnerability</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&quot;vulnerabilities&quot;: [
+    {
+      &quot;cve&quot;: &quot;CVE-2020-11023&quot;,
+      &quot;cwe&quot;: {
+        &quot;id&quot;: &quot;CWE-79&quot;,
+        &quot;name&quot;: &quot;Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;)&quot;
+      },
+      &quot;discovery_date&quot;: &quot;2020-06-23T00:00:00+00:00&quot;,
+</code></pre></div>
+<h3 id="affectedness">Affectedness<a class="headerlink" href="#affectedness" title="Permanent link">🔗</a></h3>
+<p>Affectedness information is also found in the <code>vulnerabilities</code>section of the document. Each product/component <code>product_id</code> 
+will be listed in the <code>product_status</code> category that corresponds to the affectedness of that product/component pair.</p>
+<p>CVEs should be reported as follows, based on the <code>product_status</code> for the product/component pair.</p>
+<table>
+<thead>
+<tr>
+<th>Product Status</th>
+<th>Product Details</th>
+<th>Component Details</th>
+<th>Reporting Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>under_investigation</code> or <code>known_affected</code></td>
+<td>Only main product version information available</td>
+<td>No component version information available</td>
+<td>Reported</td>
+</tr>
+<tr>
+<td><code>known_not_affected</code></td>
+<td>Only main product version information available</td>
+<td>Component version may be available</td>
+<td>Not reported</td>
+</tr>
+<tr>
+<td><code>fixed</code></td>
+<td>A CPE match exists</td>
+<td>The fixed component version is newer than the component version included in the scanned software</td>
+<td>Reported: The component is vulnerable and an associated RHSA should also be reported.</td>
+</tr>
+<tr>
+<td><code>fixed</code></td>
+<td>A CPE match exists</td>
+<td>The fixed component version is either a direct match or older than the component version included in the scanned software</td>
+<td>Not reported: The component should be considered already fixed and is not vulnerable in the scanned software.</td>
+</tr>
+</tbody>
+</table>
+<p>In the previous example, for CVE-2020-11023, the three product/component <code>product_id</code>s identified are listed in the <code>fixed</code> 
+product status. Because the libgcc-0:11.5.0-5.el9_5 component version is newer than the identified libgcc-0:11.3.1-4.3.el9 
+component version that was present in the rhel9/python-312 container, the package is considered vulnerable and this CVE should be reported.
+<div class="highlight"><pre><span></span><code>&quot;vulnerabilities&quot;: [
+    {
+        ...
+        &quot;product_status&quot;: {
+            &quot;fixed&quot;: [
+                ... , 
+                &quot;AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot;,
+                &quot;BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot;,
+                &quot;CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot; 
+                ...
+            ],
+        }
+    }
+]
+</code></pre></div></p>
+<h3 id="rhsas">RHSAs<a class="headerlink" href="#rhsas" title="Permanent link">🔗</a></h3>
+<p>Remediation information is also available in the <code>vulnerabilities</code> section. Each product/component pair is also listed
+with <code>category</code> and <code>details</code> attributes that describe the fix status of that product and component. </p>
+<p>For CVE-2020-11023, the three product/component <code>product_id</code>s identified are fixed, so they are also listed<br />
+in the <code>vendor_fix</code> category of the <code>remediations</code> object. The <code>url</code> field will provide the RHSA link that shipped the fixes.
+<div class="highlight"><pre><span></span><code>&quot;remediations&quot;: [
+    ...
+    },
+    {
+        &quot;category&quot;: &quot;vendor_fix&quot;,
+        &quot;details&quot;: &quot;For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258&quot;,
+        &quot;product_ids&quot;: [
+            ... , 
+             &quot;AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot;,
+             &quot;BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot;,
+             &quot;CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot; 
+            ...
+        ],
+        &quot;url&quot;: &quot;https://access.redhat.com/errata/RHSA-2025:1346&quot;
+    }
+] 
+</code></pre></div></p>
+<h3 id="cvss-score-and-severity">CVSS score and Severity<a class="headerlink" href="#cvss-score-and-severity" title="Permanent link">🔗</a></h3>
+<p>The last sections in the <code>vulnerabilities</code> object to be aware of are the <code>scores</code> object and the <code>threats</code> object.
+Both CVSS scores and Red Hat severities are available when the product/component pair differs from the aggregate CVE severity.
+Red Hat recommends that scanning vendors check the per product CVSS scores and severity scores for each vulnerability 
+and report the product/component severity instead of the aggregate severity for the CVE, when applicable. </p>
+<p>For the rhel9/python-312 container and the libgcc component, the CVSS base score of 6.1 with a CVSS vector of 
+CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N.
+<div class="highlight"><pre><span></span><code>&quot;scores&quot;: [
+    {
+        &quot;cvss_v3&quot;: {
+            &quot;attackComplexity&quot;: &quot;LOW&quot;,
+            &quot;attackVector&quot;: &quot;NETWORK&quot;,
+            &quot;availabilityImpact&quot;: &quot;NONE&quot;,
+            &quot;baseScore&quot;: 6.1,
+            &quot;baseSeverity&quot;: &quot;MEDIUM&quot;,
+            &quot;confidentialityImpact&quot;: &quot;LOW&quot;,
+            &quot;integrityImpact&quot;: &quot;LOW&quot;,
+            &quot;privilegesRequired&quot;: &quot;NONE&quot;,
+            &quot;scope&quot;: &quot;CHANGED&quot;,
+            &quot;userInteraction&quot;: &quot;REQUIRED&quot;,
+            &quot;vectorString&quot;: &quot;CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N&quot;,
+            &quot;version&quot;: &quot;3.1&quot;
+        },
+        &quot;products&quot;: [
+            ... , 
+             &quot;AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot;,
+             &quot;BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot;,
+             &quot;CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot; 
+            ...
+        ]
+    }
+],
+</code></pre></div></p>
+<p>A Low Red Hat severity should be reported for the rhel9/python-312 container and the libgcc component.
+<div class="highlight"><pre><span></span><code>&quot;threats&quot;: [
+    {
+        &quot;category&quot;: &quot;impact&quot;,
+        &quot;details&quot;: &quot;Low&quot;,
+          &quot;product_ids&quot;: [
+             ... , 
+             &quot;AppStream-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot;,
+             &quot;BaseOS-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot;,
+             &quot;CRB-9.5.0.Z.MAIN:libgcc-0:11.5.0-5.el9_5.x86_64&quot; 
+             ...
+          ]
+        }
+      ],
+</code></pre></div></p>
+<h2 id="frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)<a class="headerlink" href="#frequently-asked-questions-faqs" title="Permanent link">🔗</a></h2>
+<p>Vendors are encouraged to raise any questions regarding security data by opening a 'Ticket' issue type in the public
+<a href="https://issues.redhat.com/projects/SECDATA/">SECDATA Jira project</a>.</p>
+<p>Many scanning vendors face similar challenges when reading and parsing Red Hat's security data. To check if your question
+has already been asked, you can review the list of questions asked <a href="https://issues.redhat.com/browse/SECDATA-862?filter=12444038">here</a>.</p>
+<h3 id="python-and-venv">Python and VENV<a class="headerlink" href="#python-and-venv" title="Permanent link">🔗</a></h3>
+<p><a href="https://issues.redhat.com/browse/SECDATA-831">https://issues.redhat.com/browse/SECDATA-831</a></p>
+<h3 id="repository-relative-urls">Repository Relative URLs<a class="headerlink" href="#repository-relative-urls" title="Permanent link">🔗</a></h3>
+<p><a href="https://issues.redhat.com/browse/SECDATA-1089">https://issues.redhat.com/browse/SECDATA-1089</a>
+<a href="https://issues.redhat.com/browse/SECDATA-797">https://issues.redhat.com/browse/SECDATA-797</a>
+<a href="https://issues.redhat.com/browse/SECDATA-1020">https://issues.redhat.com/browse/SECDATA-1020</a></p>
+<h3 id="empty-content-sets">Empty Content Sets<a class="headerlink" href="#empty-content-sets" title="Permanent link">🔗</a></h3>
+<p><a href="https://issues.redhat.com/browse/SECDATA-966">https://issues.redhat.com/browse/SECDATA-966</a></p>
+<h3 id="differences-in-oval-and-vex-cpes">Differences in OVAL and VEX CPEs<a class="headerlink" href="#differences-in-oval-and-vex-cpes" title="Permanent link">🔗</a></h3>
+<p><a href="https://issues.redhat.com/browse/SECDATA-1141">https://issues.redhat.com/browse/SECDATA-1141</a></p>
+<h3 id="duplicate-rhsas">Duplicate RHSAs<a class="headerlink" href="#duplicate-rhsas" title="Permanent link">🔗</a></h3>
+<p><a href="https://issues.redhat.com/browse/SECDATA-969">https://issues.redhat.com/browse/SECDATA-969</a></p>
+<h2 id="additional-questions-or-concerns">Additional Questions or Concerns<a class="headerlink" href="#additional-questions-or-concerns" title="Permanent link">🔗</a></h2>
+<p>Red Hat is committed to continually improving our security data; any future changes to the data itself or the format of 
+the files are tracked in the <a href="https://access.redhat.com/articles/5554431">Red Hat Security Data Changelog</a>.</p>
+<p>For any potential bugs identified regarding security data, please file a 'Bug' issue type in the public <a href="https://issues.redhat.com/projects/SECDATA/">SECDATA Jira project</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Red Hat, Inc. &nbsp;&centerdot;&nbsp; <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/RedHatProductSecurity/security-data-guidelines" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:secalert@redhat.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1l172.5 141.6c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "content.action.view"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>

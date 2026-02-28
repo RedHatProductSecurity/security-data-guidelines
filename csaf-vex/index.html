@@ -1,0 +1,1384 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/">
+      
+      
+        <link rel="prev" href="../cpe/">
+      
+      
+        <link rel="next" href="../vex-alpha/">
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>CSAF/VEX Overview - Red Hat Security Data Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Hat+Text:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Red Hat Text";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="CSAF/VEX Overview - Red Hat Security Data Guidelines" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://redhatproductsecurity.github.io/security-data-guidelines/assets/images/social/csaf-vex.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://redhatproductsecurity.github.io/security-data-guidelines/csaf-vex/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="CSAF/VEX Overview - Red Hat Security Data Guidelines" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://redhatproductsecurity.github.io/security-data-guidelines/assets/images/social/csaf-vex.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#csaf-security-advisories-and-vex-security-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Red Hat Security Data Guidelines" class="md-header__button md-logo" aria-label="Red Hat Security Data Guidelines" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Red Hat Security Data Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CSAF/VEX Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cpe/" class="md-tabs__link">
+        
+  
+    
+  
+  CPE
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  CSAF/VEX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../purl/" class="md-tabs__link">
+        
+  
+    
+  
+  purl
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../sbom/" class="md-tabs__link">
+        
+  
+    
+  
+  SBOM
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Red Hat Security Data Guidelines" class="md-nav__button md-logo" aria-label="Red Hat Security Data Guidelines" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Red Hat Security Data Guidelines
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    CSAF/VEX
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            CSAF/VEX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CSAF/VEX Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CSAF/VEX Overview
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#security-data-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Data Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Data Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csaf-security-advisories-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSAF Security Advisories Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csaf-vex-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSAF VEX Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differences-from-oval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differences from OVAL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#document-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-family-and-product-name-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Family and Product Name Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unfixed-product-versions-vex-only-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unfixed Product Versions (VEX only) Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-and-fixed-product-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture and Fixed Product Versions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationships
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerability-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnerability Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vulnerability Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-cve-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      General CVE Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-fix-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Fix Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remediations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remediations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-questions-or-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Questions or Concerns
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vex-alpha/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VEX-Alpha
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../purl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    purl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sbom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SBOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/RedHatProductSecurity/security-data-guidelines/raw/main/docs/csaf-vex.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="csaf-security-advisories-and-vex-security-data">CSAF Security Advisories and VEX Security Data<a class="headerlink" href="#csaf-security-advisories-and-vex-security-data" title="Permanent link">🔗</a></h1>
+<h2 id="security-data-overview">Security Data Overview<a class="headerlink" href="#security-data-overview" title="Permanent link">🔗</a></h2>
+<p>In the past, Red Hat published security advisory information using Common Vulnerability Reporting Framework (CVRF) and
+CVE information using the Open Vulnerability and Assessment Language (OVAL) format. As of July 10th, 2024, Red Hat
+Product Security publishes CSAF files for every single Red Hat Security Advisory
+(<a href="https://access.redhat.com/articles/explaining_redhat_errata">RHSA</a>) and VEX files
+for every single CVE record that is associated with the Red Hat portfolio in any way.</p>
+<p>The <a href="https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html">Common Security Advisory Framework (CSAF)</a>
+was originally published as an open standard by OASIS Open in November 2022. CSAF files provide a structured,
+machine-readable way of representing and sharing security advisory information across all software and hardware providers.</p>
+<h3 id="csaf-security-advisories-overview">CSAF Security Advisories Overview<a class="headerlink" href="#csaf-security-advisories-overview" title="Permanent link">🔗</a></h3>
+<p>Red Hat's CSAF security advisory files are always associated with an RHSA. A given security advisory may describe
+one or more product version(s) and one or more components, depending on the product type and update scope. The RHSA
+itself can also include updates to address one or more vulnerabilities. Red Hat's CSAF files are publicly available
+per RHSA <a href="https://security.access.redhat.com/data/csaf/v2/advisories/">here</a>.</p>
+<!-- TOOD: add note about RHBAs/RHEAs that are also considered security advisories if they fix a CVE -->
+
+<h3 id="csaf-vex-overview">CSAF VEX Overview<a class="headerlink" href="#csaf-vex-overview" title="Permanent link">🔗</a></h3>
+<p>The CSAF standard acknowledges the need for different use cases and has therefore defined a variety of profiles.
+Each profile describes the necessary fields and information needed for that specific use case. Red Hat has adopted the
+Vulnerability Exploitability eXchange (VEX) profile, which is intended to provide the affected state of a vulnerability
+on a product or component.</p>
+<p>Red Hat's VEX files are always associated with one CVE and include fix status information for all vulnerable packages
+and Red Hat products. Red Hat's VEX files are publicly available per CVE
+<a href="https://security.access.redhat.com/data/csaf/v2/vex/">here</a>.</p>
+<h3 id="differences-from-oval">Differences from OVAL<a class="headerlink" href="#differences-from-oval" title="Permanent link">🔗</a></h3>
+<p>The data that is included in CSAF files differs from that included in OVAL in certain cases:</p>
+<ul>
+<li>
+<p>CSAF files identify a variety of software components, not just RPMs. The identification mechanism used is purl,
+  which itself contains a type for each identified software component.</p>
+</li>
+<li>
+<p>CSAF files refer to SRPMs only when listed as affected but not yet fixed components. OVAL files contain a
+  listing of binary RPMs but this listing proved to be difficult to maintain. Until CSAF data is improved to include
+  consistent lists of binary RPMs, consumers of CSAF data can look up the related SRPM (to be matched with the one in
+  CSAF files) for a given binary RPM with:
+  <div class="highlight"><pre><span></span><code><span class="c1"># Example lookup for the vim-minimal binary RPM:</span>
+$<span class="w"> </span>rpm<span class="w"> </span>-q<span class="w"> </span>--qf<span class="w"> </span><span class="s2">&quot;%{SOURCERPM}\n&quot;</span><span class="w"> </span>vim-minimal-8.2.2637-21.el9.x86_64
+vim-8.2.2637-21.el9.src.rpm
+</code></pre></div></p>
+</li>
+</ul>
+<h2 id="document-structure">Document Structure<a class="headerlink" href="#document-structure" title="Permanent link">🔗</a></h2>
+<p>Although CSAF advisory and VEX files ultimately serve different purposes, both file types meet the
+CSAF machine-readable standard and use the VEX profile to convey security information. The CSAF standard includes
+three main sections: document metadata, a product tree and vulnerability metadata. The full document structure can
+be found
+<a href="https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/csaf-vex/csaf-vex.json">here</a>.</p>
+<p>The following sections break down the information included in CSAF-VEX documents using the
+<a href="https://access.redhat.com/security/data/csaf/v2/vex/2023/cve-2023-20593.json">VEX file for CVE-2023-20593</a> as an example.</p>
+<h3 id="document-metadata">Document Metadata<a class="headerlink" href="#document-metadata" title="Permanent link">🔗</a></h3>
+<p>The <code>document</code> section contains general information about the published document itself including the CVE severity, vendor,
+published date and revision history.</p>
+<p>The <code>aggregate_severity.text</code> object displays the general CVE severity:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;aggregate_severity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://access.redhat.com/security/updates/classification/&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;moderate&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The following objects provide general information about the VEX file itself:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;csaf_vex&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;csaf_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;distribution&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Copyright © Red Hat, Inc. All rights reserved.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;tlp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WHITE&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.first.org/tlp/&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;legal_disclaimer&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Terms of Use&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Vendor information is represented in the <code>publisher</code> object:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;publisher&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vendor&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;contact_details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://access.redhat.com/security/team/contact/&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;issuing_authority&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Hat Product Security is responsible for vulnerability handling across all Red Hat offerings.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Hat Product Security&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.redhat.com&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>CVE ID, CVE publish date and CVE revision history:</p>
+<ul>
+<li><code>id</code>: Provides the official CVE ID.</li>
+<li><code>initial_release_date</code>: Represents the date that the Red Hat first published information on the CVE.</li>
+<li><code>revision_history</code>: Details any changes made to the CVE information published by Red Hat.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CVE-2023-20593&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;initial_release_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-07-25T06:30:00+00:00&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;revision_history&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-07-25T06:30:00+00:00&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Initial version&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-18T04:20:20+00:00&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Current version&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-09-13T20:58:30+00:00&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Last generated version&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;final&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="product-tree">Product Tree<a class="headerlink" href="#product-tree" title="Permanent link">🔗</a></h3>
+<p>The <code>product_tree</code> section identifies all affected Red Hat software, represents the nested
+relationship of component to product and provides CPEs or PURLs depending on the affected layer. There are two main
+objects in the “product_tree” object: <code>branches</code> and <code>relationships</code>.</p>
+<h4 id="branches">Branches<a class="headerlink" href="#branches" title="Permanent link">🔗</a></h4>
+<p>The parent <code>branches</code> object has one child object of the <code>vendor</code> category with the name set to <code>Red Hat</code>. All
+affected Red Hat products and components will be nested in that <code>branches</code> array. Compressed down, the parent <code>branches</code>
+object would look like:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;branches&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;branches&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vendor&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Hat&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>All nested objects included in the <code>branches</code> object of the <code>vendor</code> category fall into the following subcategories:</p>
+<ul>
+<li><code>product_family</code>: Represents a general Red Hat product main stream and includes one or more
+nested objects of the <code>product_name</code> category.</li>
+<li><code>product_name</code>: Represents a specific product release and is always nested under the
+corresponding <code>product_family</code> category.</li>
+<li><code>product_version</code>: Represents a specific component. When displayed unnested, the
+component is not fixed yet and will not include a specific version number. Note: This will only be present in VEX files
+since CSAF files are per RHSA and will only include fixed components.</li>
+<li><code>architecture</code>: Represents fixed components by their architecture and includes nested
+  "product_version" objects. These "product_version" will be fixed and provide the specific version number.</li>
+</ul>
+<h5 id="product-family-and-product-name-examples">Product Family and Product Name Examples<a class="headerlink" href="#product-family-and-product-name-examples" title="Permanent link">🔗</a></h5>
+<p>The <code>product_family</code> category represents a general Red Hat product stream and includes one or
+more nested objects of the <code>product_name</code> category that represents an individual release. The <code>product_name</code> object will
+always include the name of the product, a product ID and a product identification helper in the form of a CPE.</p>
+<p>In the example below, you can see that the <code>product_family</code> object is for Red Hat Enterprise Linux 6 and nested within
+is the <code>product_name</code> object Red Hat Enterprise Linux 6 with the CPE "cpe:/o:redhat:enterprise_linux:6".</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;branches&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;product_name&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Hat Enterprise Linux 6&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;product&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Hat Enterprise Linux 6&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;product_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;red_hat_enterprise_linux_6&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;product_identification_helper&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;cpe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cpe:/o:redhat:enterprise_linux:6&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;product_family&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Hat Enterprise Linux 6&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h5 id="unfixed-product-versions-vex-only-examples">Unfixed Product Versions (VEX only) Examples<a class="headerlink" href="#unfixed-product-versions-vex-only-examples" title="Permanent link">🔗</a></h5>
+<p>The <code>product_version</code> category includes information about a specific affected package. The <code>product_version</code> object will
+always include the name of the component, a product ID and a product identification helper in the form of a
+<a href="https://redhatproductsecurity.github.io/security-data-guidelines/purl/">PURL</a>. When
+displayed unnested under an <code>architecture</code> object, the <code>name</code> attribute will not reference a specific version number
+because these components are unfixed. Again, these unfixed <code>product_version</code> components will only be found in VEX files
+since CSAF files always represent a released RHSA. The purl identifiers for unfixed content are only available for
+<code>rpm</code>, <code>oci</code> (container), and <code>rpmmod</code> (modular) purl content type.</p>
+<p>In the example below, the unfixed kernel component's name is <code>kernel</code> and doesn't include a specific version number or
+an architecture format.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;product_version&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;product&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;product_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;product_identification_helper&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;purl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pkg:rpm/redhat/kernel?arch=src&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h5 id="architecture-and-fixed-product-versions">Architecture and Fixed Product Versions<a class="headerlink" href="#architecture-and-fixed-product-versions" title="Permanent link">🔗</a></h5>
+<p>Similarly to the <code>product_family</code> object, the <code>architecture</code> category represents a specific architecture for packages
+and includes one or more <code>product_version</code> objects. As before, the <code>product_version</code> category will still include the same
+information: the name of the component, a product ID and product identification helper in the form of a
+<a href="https://redhatproductsecurity.github.io/security-data-guidelines/purl/">PURL</a>. However,
+when <code>product_versions</code> are nested under <code>architecture</code> object, they are fixed components and the <code>name</code> attribute will
+include a specific version number and the specific architecture format.</p>
+<p>In the example below, you can see the fixed kernel component's name is <code>kernel-0:3.10.0-693.112.1.el7.src</code> which includes
+the specific version number <code>0:3.10.0-693.112.1.el7</code> and architecture format <code>.src</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;branches&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;product_version&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel-0:3.10.0-693.112.1.el7.src&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;product&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel-0:3.10.0-693.112.1.el7.src&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;product_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel-0:3.10.0-693.112.1.el7.src&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;product_identification_helper&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;purl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pkg:rpm/redhat/kernel@3.10.0-693.112.1.el7?arch=src&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;architecture&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;src&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="relationships">Relationships<a class="headerlink" href="#relationships" title="Permanent link">🔗</a></h4>
+<p>Also included in the <code>product_tree</code> section is a <code>relationships</code> object which is used by Red Hat to help represent
+layered products. One or more relationship entries will be present for all <code>product_version</code> objects found in the
+<code>branches</code> object. All of these objects are of the <code>default_component_of</code> category and include the full product
+name and product ID (a combination of the <code>product_name</code> and the <code>product_version</code>), a reference to the component name
+and a reference to the product name.</p>
+<p>Continuing with the previous examples, we know that there should be at least one entry in the <code>relationships</code> object
+that correlates to the <code>product_version</code> object for kernel. Looking at the VEX file, there are actually four entries for
+kernel, all which relate to the different <code>product_name</code> objects from before. The below is the specific entry as it
+relates to Red Hat Enterprise Linux 6.</p>
+<p>Here you can see that the <code>full_product_name</code> includes a <code>name</code> and a <code>product_id</code> which are the combination of the product,
+Red Hat Enterprise Linux 6, and the component, kernel. The <code>product_reference</code> will always refer to the component's name
+while the <code>relates_to_product_reference</code> will refer to the product name.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default_component_of&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;full_product_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel as a component of Red Hat Enterprise Linux 6&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;product_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;red_hat_enterprise_linux_6:kernel&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;product_reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relates_to_product_reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;red_hat_enterprise_linux_6&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>For the fixed component <code>kernel-0:3.10.0-693.112.1.el7.src</code>, a relationship entry looks like:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default_component_of&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;full_product_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel-0:3.10.0-693.112.1.el7.src as a component of Red Hat Enterprise Linux Server AUS (v. 7.4)&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;product_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;product_reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel-0:3.10.0-693.112.1.el7.src&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relates_to_product_reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7Server-7.4.AUS&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="vulnerability-metadata">Vulnerability Metadata<a class="headerlink" href="#vulnerability-metadata" title="Permanent link">🔗</a></h3>
+<p>The <code>vulnerabilities</code> section reports vulnerability metadata for the CVE and also contains a
+<code>product_status</code> object that reports affected status and fix information for any <code>product_id</code> listed in the
+<code>product_tree</code> and a <code>remediations</code> object.</p>
+<h4 id="general-cve-information">General CVE Information<a class="headerlink" href="#general-cve-information" title="Permanent link">🔗</a></h4>
+<p>Basic CVE information is represented using the following objects:
+* <code>cve</code>: The official CVE ID.
+* <code>cwe</code>: Information about the corresponding CWE, include the CWE ID and the name.
+* <code>discovery_date</code>: The first reported date of the vulnerability. Note: This date can differ from the previously
+  mentioned <code>initial_release_date</code> if the CVE was coordinated under embargo.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;cve&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CVE-2023-20593&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;cwe&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CWE-1239&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Improper Zeroization of Hardware Register&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;discovery_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-05-31T00:00:00+00:00&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Additional CVE information can be found in the <code>notes</code> object:</p>
+<ul>
+<li><code>description</code>: This category includes a written description of the CVE.</li>
+<li><code>summary</code>: This category includes a short summary of the CVE.</li>
+<li><code>statement</code>: This category includes a statement from Red Hat on the CVE, when applicable (not present in the example).</li>
+<li><code>general</code>: This category includes a general statement on the applicability of CVSS scores.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;description&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A flaw was found in hw, in “Zen 2” CPUs. This issue may allow an attacker to access sensitive information under specific microarchitectural circumstances.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Vulnerability description&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;summary&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hw: amd: Cross-Process Information Leak&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Vulnerability summary&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;general&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The CVSS score(s) listed for this vulnerability do not reflect the associated product&#39;s status, and are included for informational purposes to better understand the severity of this vulnerability.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CVSS score applicability&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>A CVE can have a single CVSS score that is  associated to all products and components in the VEX file or there can
+be different CVSS score metrics for different subset of products and components (per component Severity and CVSS metadata)</p>
+<p>All CVSS scores associated with the CVE will have entries included <code>scores</code> object:</p>
+<ul>
+<li><code>cvss_v3</code>: Includes attributes for each CVSS base value, the complete CVSS vector string and the version of CVSS that
+  is used.</li>
+<li><code>products</code>: Includes all product IDs, both for products and components, that are represented by the scores in the
+  <code>cvss_v3</code> object.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;scores&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;cvss_v3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;attackComplexity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LOW&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;attackVector&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LOCAL&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;availabilityImpact&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;baseScore&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">6.5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;baseSeverity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MEDIUM&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;confidentialityImpact&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HIGH&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;integrityImpact&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;privilegesRequired&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LOW&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CHANGED&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;userInteraction&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;vectorString&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.1&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;products&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Similarly to CVSS scores, a CVE can have one severity impact value that represents all products and components in the
+VEX file or there can be different severity impact values for different subset of products and components
+(per component Severity and CVSS metadata).</p>
+<p>All severity impact values with the CVE will have entries included in the <code>threats</code> object:</p>
+<ul>
+<li><code>category</code>: The "impact" value identifies that the following information is the severity impact value of a CVE.</li>
+<li><code>details</code>: Reports the appropriate <a href="https://access.redhat.com/security/updates/classification/">Red Hat Severity Rating</a>
+  for the associated <code>product_ids</code>.</li>
+<li><code>product_ids</code>: Includes all product IDs, both for products and components, that have the severity rating in the
+  <code>details</code> object.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;threats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;impact&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Moderate&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;product_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Additional CVE resources are described in the <code>references</code> object:</p>
+<ul>
+<li><code>category</code>: Either of the type <code>self</code> or <code>external</code>.</li>
+<li><code>summary</code>: A summary of the provided resource.</li>
+<li><code>url</code>: A link to the resource.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;references&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;self&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Canonical URL&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://access.redhat.com/security/cve/CVE-2023-20593&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;external&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RHBZ#2217845&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://bugzilla.redhat.com/show_bug.cgi?id=2217845&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;external&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.cve.org/CVERecord?id=CVE-2023-20593&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.cve.org/CVERecord?id=CVE-2023-20593&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;external&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://nvd.nist.gov/vuln/detail/CVE-2023-20593&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://nvd.nist.gov/vuln/detail/CVE-2023-20593&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;external&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=522b1d69219d8f083173819fde04f994aa051a98&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=522b1d69219d8f083173819fde04f994aa051a98&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;external&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7008.html&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7008.html&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="product-fix-status">Product Fix Status<a class="headerlink" href="#product-fix-status" title="Permanent link">🔗</a></h4>
+<p>The <code>product_status</code> includes the following fix statuses:</p>
+<ul>
+<li><code>fixed</code>: Contains the same fixed component versions and other details (<code>product_tree</code> objects) that are reported fixed
+for a given CVE</li>
+<li><code>known_affected</code>: Confirmation that the specific component and product is affected by a particular CVE</li>
+<li><code>known_not_affected</code>: Confirmation that the specific component and product is not affected by a particular CVE</li>
+<li><code>under_investigation</code>: Information that the Red Hat Product Security team is verifying the applicability and impact of
+a specific CVE to the specific component and product</li>
+</ul>
+<p>Compressed down, a <code>product_status</code> object that included products of each category, would look like:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;product_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;fixed&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nt">&quot;known_affected&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nt">&quot;known_not_affected&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nt">&quot;under_investigation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Note: It's important to remember that with VEX files, not every product status will be included, only the categories
+that have products which fall into those statuses. For CSAF files, the only included status will be the <code>fixed</code> and
+optionally <code>known_not_affected</code> category if in the released RHSA there are more components and not all were
+vulnerable to the particular CVE id.</p>
+<p>Continuing with our previous examples with CVE-2023-20593, the full product ID <code>red_hat_enterprise_linux_6:kernel</code>
+can be found in the <code>known_not_affected</code> list:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;known_not_affected&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;red_hat_enterprise_linux_6:kernel&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;red_hat_enterprise_linux_6:microcode_ctl&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Our other full product ID <code>7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src</code> can be found in the <code>fixed</code> list:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;fixed&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.x86_64&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;...&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="remediations">Remediations<a class="headerlink" href="#remediations" title="Permanent link">🔗</a></h4>
+<p>The <code>remediations</code> object provides additional information about the previously identified product status. The following
+remediations status are available per <code>product_status</code> category:</p>
+<p><code>fixed</code></p>
+<ul>
+<li><code>vendor_fix</code>: For all the product IDs with a fixed product status there will be a corresponding entry
+    in the remediations object that correlates each full product ID to the correct RHSAs. The RHSA can be determined by
+    the <code>url</code> field.<ul>
+<li><code>details</code>: Advisory specific information </li>
+<li><code>url</code>: Link to the RHSA</li>
+</ul>
+</li>
+<li><code>workaround</code>: If a mitigation exists, it applies to all components regardless of their fix state.<ul>
+<li><code>details</code>: The mitigation statement</li>
+</ul>
+</li>
+</ul>
+<p><code>known_affected</code></p>
+<ul>
+<li><code>no_fix_planned</code>: Will include any product IDs with the known affected product status that will not be fixed by Red
+  Hat, either because it is out of support scope or the engineering team has decided not to fix it for other reasons.<ul>
+<li><code>details</code>: "Will not fix" or "Out of support scope"</li>
+</ul>
+</li>
+<li><code>none_available</code>: Will include any product IDs with the known affected product status that are either still reported
+    affected, meaning a fix is likely in progress, or deferred, which may be fixed at a future date.<ul>
+<li><code>details</code>: "Affected" or "Deferred"</li>
+</ul>
+</li>
+<li><code>workaround</code>: If a mitigation exists, it applies to all components regardless of their fix state.<ul>
+<li><code>details</code>: The mitigation statement</li>
+</ul>
+</li>
+</ul>
+<p><code>known_not_affected</code>: There are no remediation objects for the known not affected status since it is implicitly
+assumed that no remediation is needed if the product and component are not affected.</p>
+<p><code>under_investigation</code>: There are no remediation objects for the under investigation status since it is implicitly
+assumed that no remediation exist while still under investigation.</p>
+<p>Note: As with the <code>product_status</code> object, there may not be a <code>remediations</code> entry for every category. Additionally,
+in VEX files, there may be more than one <code>vendor_fix</code> object if more than one RHSA released fixes for the CVE. In the
+CSAF files, the only <code>remediations</code> category present will be one <code>vendor_fix</code> object that maps to the RHSA that
+the CSAF file represents.</p>
+<p>Following our two previous kernel examples, we can see that for the unfixed kernel component
+<code>red_hat_enterprise_linux_6:kernel</code> there is no entry in the remediation section. This is expected behavior because
+it was listed in the <code>known_not_affected</code> product status and therefore no remediation is needed.</p>
+<p>For our fixed kernel component <code>7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src</code>, there are two remediation entries.
+One represents the vendor fix that was released and the other represents that there is a reported mitigation for this
+CVE.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vendor_fix&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258\n\nThe system must be rebooted for this update to take effect.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;product_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.x86_64&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;...&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;workaround&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mitigation for this issue is either not available or the currently available options don&#39;t meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;product_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.src&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;7Server-7.4.AUS:kernel-0:3.10.0-693.112.1.el7.x86_64&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;...&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="additional-questions-or-concerns">Additional Questions or Concerns<a class="headerlink" href="#additional-questions-or-concerns" title="Permanent link">🔗</a></h2>
+<p>Red Hat is committed to continually improving our security data; any future changes to the data itself or the format of
+the files are tracked in the <a href="https://access.redhat.com/articles/5554431">Red Hat Security Data Changelog</a>.</p>
+<p>Please contact Red Hat Product Security with any questions regarding security data at <a href="secalert@redhat.com">secalert@redhat.com</a> or file an
+issue in the public <a href="https://issues.redhat.com/projects/SECDATA/issues/SECDATA-525?filter=allopenissues">SECDATA Jira project</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Red Hat, Inc. &nbsp;&centerdot;&nbsp; <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/RedHatProductSecurity/security-data-guidelines" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:secalert@redhat.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1l172.5 141.6c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "content.action.view"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1512 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://redhatproductsecurity.github.io/security-data-guidelines/sbom/">
+      
+      
+        <link rel="prev" href="../purl/">
+      
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>SBOM - Red Hat Security Data Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Hat+Text:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Red Hat Text";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="SBOM - Red Hat Security Data Guidelines" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://redhatproductsecurity.github.io/security-data-guidelines/assets/images/social/sbom.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://redhatproductsecurity.github.io/security-data-guidelines/sbom/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="SBOM - Red Hat Security Data Guidelines" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://redhatproductsecurity.github.io/security-data-guidelines/assets/images/social/sbom.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#understanding-sboms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Red Hat Security Data Guidelines" class="md-header__button md-logo" aria-label="Red Hat Security Data Guidelines" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Red Hat Security Data Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SBOM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cpe/" class="md-tabs__link">
+        
+  
+    
+  
+  CPE
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../csaf-vex/" class="md-tabs__link">
+          
+  
+  CSAF/VEX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../purl/" class="md-tabs__link">
+        
+  
+    
+  
+  purl
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  SBOM
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Red Hat Security Data Guidelines" class="md-nav__button md-logo" aria-label="Red Hat Security Data Guidelines" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Red Hat Security Data Guidelines
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSAF/VEX
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            CSAF/VEX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../csaf-vex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSAF/VEX Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vex-alpha/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VEX-Alpha
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../purl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    purl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SBOM
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    SBOM
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-vs-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build vs Release
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-vs-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product vs Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-level-vs-product-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component-Level vs Product-Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shallow-vs-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shallow vs Complete
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packages-and-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packages and Relationships
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Packages and Relationships">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#container-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container Image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      RPM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/RedHatProductSecurity/security-data-guidelines/raw/main/docs/sbom.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="understanding-sboms">Understanding SBOMs<a class="headerlink" href="#understanding-sboms" title="Permanent link">🔗</a></h1>
+<p>A Software Bill of Materials (SBOM) is at its core a listing of software components for a given deliverable. That
+deliverable may be a single RPM package, a container image, or an entire product version. There are several use
+cases where SBOMs are beneficial:</p>
+<ul>
+<li>
+<p>in-depth review of the composition of a particular product for procurement or audit purposes,</p>
+</li>
+<li>
+<p>accurate vulnerability risk assessment when combined with VEX data,</p>
+</li>
+<li>
+<p>or faster incident response when aggregating SBOMs for an entire product portfolio, as well as the pipeline components
+  that build them.</p>
+</li>
+</ul>
+<p>When talking about inventories of components, it's also important to describe what the current design goals of a
+comprehensive SBOM are:</p>
+<ul>
+<li>
+<p>Provide a complete and accurate listing of software components and their relationships to each other from a
+  supply chain perspective:</p>
+<ul>
+<li>
+<p>For each software component, an SBOM must list its provenance. That is, if the (downstream) component is a
+  redistributed version of an open source project (upstream), the downstream component must be directly linked
+  to its upstream counterpart. If an upstream component is augmented in a mirrored repository before being used
+  in a build of a downstream component, this version of the component (also called a midstream component) must
+  be recorded as a separate package.</p>
+</li>
+<li>
+<p>A manifest must list all components that are included in the final deliverable that can be deployed and run by an
+  end user. Any software dependencies that are used strictly during the build process must be listed as well, but
+  separate from the runtime dependencies.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Define an accurate identification of components and products usable across all published security data.</p>
+</li>
+</ul>
+<p>It's equally important to clarify what remains outside the scope of an SBOM:</p>
+<ul>
+<li>
+<p>Provide a component dependency graph: providing dependency relationships between components as part of an
+  application or an operating system is currently out of scope. This type of information is varied between different
+  ecosystems, and it would be difficult to express it correctly in product-level SBOMs.
+  The relationships currently represented are limited to more direct dependencies, such as those between a container
+  image and the packages it includes, an operating system and its constituent packages, or a package and its
+  upstream counterpart. We do not include application-level dependencies, like those where a Python package such as
+  <a href="https://pypi.org/project/requests/"><code>requests</code></a> depends on another package like
+  <a href="https://pypi.org/project/certifi/"><code>certifi</code></a>.</p>
+</li>
+<li>
+<p>Inclusion of complete listings of individual files for each component: for each listed component in an SBOM, it is
+  assumed that the user can fetch it from its indicated location, and inspect the component itself to list out its
+  files. For example, when downloading a source RPM, the downloaded archive can be unpacked and inspected to acquire
+  a list of files contained in it.</p>
+</li>
+</ul>
+<h2 id="formats">Formats<a class="headerlink" href="#formats" title="Permanent link">🔗</a></h2>
+<p>The two most widely used SBOM formats are <a href="https://spdx.dev/">SPDX</a> and
+<a href="https://cyclonedx.org/">CycloneDX</a>. Both offer similar features and data fields, and can be used to represent
+complex inventories of components, their metadata (such as provenance or licensing), and additional document properties.</p>
+<p>Most of this document focuses on Red Hat's use of SPDX 2.3 in its published SBOMs. In the future, we may add similar
+guidelines for CycloneDX and SPDX 3.0.</p>
+<h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">🔗</a></h2>
+<p>Depending on how an SBOM is generated, it will contain varying levels of information. The sections below highlight
+different viewpoints of when an SBOM is created and what type of data it includes.</p>
+<h3 id="build-vs-release">Build vs Release<a class="headerlink" href="#build-vs-release" title="Permanent link">🔗</a></h3>
+<p><em>Build-time</em> SBOMs are created during the initial build process of an artifact (for example, when an RPM is created
+from source files or a container image is built using <a href="https://buildah.io/"><code>buildah</code></a>). These SBOMs document the
+components used during the build process to produce the final artifact as well as any components used for the build
+process itself. This SBOM type also aligns with the <em>Build</em> SBOM type from CISA's guidance on
+<a href="https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf">Types of SBOM Documents</a>.</p>
+<p><em>Release-time</em> SBOMs are created when an artifact is released or published. These SBOMs build upon build-time
+SBOMs by incorporating additional metadata, such as the repositories or locations where an artifact is
+published, and associating it with the relevant product information if there is any. Release-time SBOMs reflect the
+state of the software as it is distributed to end users. This SBOM type should still be considered as a <em>Build</em> SBOM
+as defined by CISA, but it simply includes additional metadata that is not available during the build process and is
+added later on. For lack of a better term, we could call these <em>Curated Build SBOMs</em>.</p>
+<p>Red Hat's publicly available SBOMs are of the release-time type, including details about where an artifact
+can be located after being released.</p>
+<p><strong>Example</strong>:</p>
+<ul>
+<li>Build-time SBOM of the <code>ubi9-micro</code> container image along with all of its installed components (RPMs):
+  <a href="https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/sbom/examples/container_image/build/ubi9-micro-container-9.4-6.1716471860_amd64.spdx.json">build/ubi9-micro-container-9.4-6.1716471860_amd64</a></li>
+<li>Release-time SBOM of the same <code>ubi9-micro</code> container image:
+  <a href="https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/sbom/examples/container_image/release/ubi9-micro-container-9.4-6.1716471860_amd64.spdx.json">release/ubi9-micro-container-9.4-6.1716471860_amd64</a></li>
+</ul>
+<p>The difference between these two SBOMs is relatively minor; the release-time SBOM contains information on where the
+container image (identified by two distinct purls) itself is available from:</p>
+<div class="highlight"><pre><span></span><code><span class="gd">--- sbom/examples/container_image/build/ubi9-micro-container-9.4-6.1716471860_amd64.spdx.json</span>
+<span class="gi">+++ sbom/examples/container_image/release/ubi9-micro-container-9.4-6.1716471860_amd64.spdx.json</span>
+<span class="gu">@@ -22,12 +22,12 @@</span>
+<span class="w"> </span>        {
+<span class="w"> </span>          &quot;referenceCategory&quot;: &quot;PACKAGE-MANAGER&quot;,
+<span class="w"> </span>          &quot;referenceType&quot;: &quot;purl&quot;,
+<span class="gd">-          &quot;referenceLocator&quot;: &quot;pkg:oci/ubi-micro@sha256%3A1c84[...]?arch=amd64&quot;</span>
+<span class="gi">+          &quot;referenceLocator&quot;: &quot;pkg:oci/ubi-micro@sha256%3A1c84[...]?arch=amd64&amp;repository_url=registry.access.redhat.com/ubi9/ubi-micro&amp;tag=9.4-6.1716471860&quot;</span>
+<span class="w"> </span>        },
+<span class="w"> </span>        {
+<span class="w"> </span>          &quot;referenceCategory&quot;: &quot;PACKAGE-MANAGER&quot;,
+<span class="w"> </span>          &quot;referenceType&quot;: &quot;purl&quot;,
+<span class="gd">-          &quot;referenceLocator&quot;: &quot;pkg:oci/ubi9-micro@sha256%3A1c84[...]?arch=amd64&quot;</span>
+<span class="gi">+          &quot;referenceLocator&quot;: &quot;pkg:oci/ubi9-micro@sha256%3A1c84[...]?arch=amd64&amp;repository_url=registry.access.redhat.com/ubi9-micro&amp;tag=9.4-6.1716471860&quot;</span>
+<span class="w"> </span>        }
+<span class="w"> </span>      ],
+</code></pre></div>
+<h3 id="product-vs-pipeline">Product vs Pipeline<a class="headerlink" href="#product-vs-pipeline" title="Permanent link">🔗</a></h3>
+<p><em>Product</em> SBOMs, as described above in the Build vs Release section, align with the <em>Build</em> SBOM type from CISA's guidance on
+<a href="https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf">Types of SBOM Documents</a>.</p>
+<p><em>Pipeline</em> SBOMs document the software components that make up systems, tools, and infrastructure (STIs) composing a Pipeline
+for building our products. These SBOMs may align with <em>Build</em> SBOM type as defined by CISA, or they may align with <em>Source</em>,
+<em>Analyzed</em>, or even <em>Deployed</em> SBOM types. The difference between these types lies in how the SBOMs are generated, which
+depends on when during the build and deploy process of a Pipeline STI the SBOM is generated.</p>
+<h3 id="component-level-vs-product-level">Component-Level vs Product-Level<a class="headerlink" href="#component-level-vs-product-level" title="Permanent link">🔗</a></h3>
+<p><em>Component-level</em> SBOMs describe individual components, such as a single RPM package or a container
+image. They document the full listing of individual components, libraries, and other relevant
+software that went into building that component. Component-level SBOMs also include provenance metadata for certain
+components. For example, a component-level SBOM of an RPM will point to the upstream sources that that RPM is based on.</p>
+<p><em>Product-level</em> SBOMs describe an entire product and the subset of its components that were built and included in
+the final product. A product-level SBOM may cover one or more component-level SBOMs, providing a way to connect each
+release component to its parent product.</p>
+<p><strong>Example</strong>:</p>
+<ul>
+<li>
+<p>Component-level SBOM of the <code>openssl-3.0.7-18.el9_2</code> RPM package:
+  <a href="https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/sbom/examples/rpm/release/openssl-3.0.7-18.el9_2.spdx.json">release/openssl-3.0.7-18.el9_2</a></p>
+</li>
+<li>
+<p>Product-level SBOM of the <code>openssl-3.0.7-18.el9_2</code> RPM package as included in RHEL 9.2 EUS repositories:
+  <a href="https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/sbom/examples/product/rhel-9.2-eus.spdx.json">product/rhel-9.2-eus</a></p>
+</li>
+</ul>
+<p>Note that the root package described by the component-level SBOM, the OpenSSL Source RPM (SRPM), is the only
+reference present in the product-level SBOM to not duplicate information between the two SBOMs. The purl
+reference from the SRPM package can be used to discover the component-level SBOM from the product-level SBOM.</p>
+<h3 id="shallow-vs-complete">Shallow vs Complete<a class="headerlink" href="#shallow-vs-complete" title="Permanent link">🔗</a></h3>
+<p><em>Shallow</em> SBOMs describe only the current layer of components that were used to build a specific artifact. They
+focus on the immediate components without necessarily documenting their origins. The benefit of this approach is
+smaller SBOM files, and the ability to make incremental changes in select SBOMs while others remain unchanged when
+composing multiple SBOMs into a larger set (to describe a product, for example).</p>
+<p><em>Complete</em> SBOMs provide a full, in-depth representation of all levels of the build process in a single file. A
+Complete SBOM includes all component layers and their dependencies, offering a complete view of a product's composition.
+These types of SBOMs are mostly used for procurement and audit.</p>
+<p>Red Hat aims to publish Complete SBOMs at
+<a href="https://security.access.redhat.com/data/sbom/">https://security.access.redhat.com/data/sbom/</a> while Shallow SBOMs
+may be published for individual components such as container images.</p>
+<h2 id="document-structure">Document Structure<a class="headerlink" href="#document-structure" title="Permanent link">🔗</a></h2>
+<p>The following snippet shows a minimal SBOM document:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;spdxVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDX-2.3&quot;</span><span class="p">,</span><span class="c1">// (1)!</span>
+<span class="w">  </span><span class="nt">&quot;dataLicense&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CC0-1.0&quot;</span><span class="p">,</span><span class="c1">// (2)!</span>
+<span class="w">  </span><span class="nt">&quot;SPDXID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-DOCUMENT&quot;</span><span class="p">,</span><span class="c1">// (3)!</span>
+<span class="w">  </span><span class="nt">&quot;creationInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;created&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2006-08-14T02:34:56Z&quot;</span><span class="p">,</span><span class="c1">// (4)!</span>
+<span class="w">    </span><span class="nt">&quot;creators&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;Tool: example SPDX document only&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;Organization: Red Hat&quot;</span><span class="c1">// (5)!</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubi9-micro-container-9.4-6.1716471860_amd64&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;documentNamespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.redhat.com/ubi9-micro-container-9.4-6.1716471860_amd64.spdx.json&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;packages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>
+<p>SPDX version 2.3 as described at <a href="https://spdx.github.io/spdx-spec/v2.3/">https://spdx.github.io/spdx-spec/v2.3/</a>.</p>
+</li>
+<li>
+<p>The CC0-1.0 license is required by the SPDX specification.</p>
+</li>
+<li>
+<p><a href="https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#63-spdx-identifier-field"><code>SPDXID</code></a>
+   must be set to <code>SPDXRef-DOCUMENT</code>.</p>
+</li>
+<li>
+<p>UTC timestamps must use the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+</li>
+<li>
+<p>creationInfo / creators includes the "Organization: Red Hat" value.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<p>A more detailed breakdown of some of the fields:</p>
+<dl>
+<dt><code>creationInfo</code></dt>
+<dd>This field must contain at least the
+<a href="https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#69-created-field"><code>created</code></a> and
+<a href="https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#68-creator-field"><code>creators</code></a>
+fields. The timestamp in the <code>created</code> field must be set to an ISO 8601-formatted date and time string using
+the UTC timezone. The <code>creators</code> field must identify the tool and its version that was used to generate the SBOM
+file (for example, <code>Tool: SBOMer 1.2.3</code> or even <code>Tool: pkg:github/project-ncl/sbomer@1.0.0.M3</code>).
+The value <code>Organization: Red Hat</code> included in a separate string. This is required by Red Hat Trusted Profiler Analyser 2 in order to trigger special handling.</dd>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#64-document-name-field"><code>name</code></a></dt>
+<dd>This is an arbitrary value that should describe the main artifact described by the SBOM document. This can be a
+product, a container image, or a specific package. The name should contain a descriptive value for that given
+artifact along with a version identifier. This field should only serve as a human-readable value and be shown in
+user interfaces for informational purposes. The metadata of the main package (the one <em>DESCRIBED</em> by
+the SBOM document) should be used for any automation purposes. Note also that the <code>name</code> value may not be unique
+to a single SBOM document.</dd>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#65-spdx-document-namespace-field"><code>documentNamespace</code></a></dt>
+<dd>
+<p>This field uniquely identifies the SPDX SBOM document and must be a valid URI, even though that URI does not
+have to be accessible. Red Hat SBOMs can use one of two possible values:</p>
+<ul>
+<li>
+<p>A URI that is namespaced to a generic Red Hat location: <code>https://www.redhat.com/[DocumentID].spdx.json</code>.
+  This URI is not accessible and only serves the purpose of identifying the document to its namespace (here,
+  Red Hat).</p>
+</li>
+<li>
+<p>A URI that is namespaced to <code>access.redhat.com/security/data</code>:
+ <code>https://security.access.redhat.com/data/sbom/spdx/[DocumentID].spdx.json</code>. This URI is assumed to be accessible
+  and the identified SBOM can be downloaded from the specified location.</p>
+</li>
+</ul>
+<p>The <code>documentNamespace</code> value has no direct relationship to the <code>name</code> value.</p>
+</dd>
+</dl>
+<p>The <code>packages</code> and <code>relationships</code> fields are described in depth in the sections below for each respective software
+content type. The <code>files</code> field is currently unused and will thus either not be present at all, or set to an empty
+list. All software components in an SBOM are described as packages; all files are assumed to be a part of <em>some</em>
+package and should thus not be listed on their own in the <code>files</code> field.</p>
+<h3 id="packages-and-relationships">Packages and Relationships<a class="headerlink" href="#packages-and-relationships" title="Permanent link">🔗</a></h3>
+<p>The purpose of listing out all components as separate package objects ensures we can define meaningful relationships
+between them. Some packages may for example embed other software components, and other packages may be used only
+during the build process of creating a set of packages. Differentiating between these different types of components
+allows us to narrow down the scope of responding to vulnerabilities to only the components that are truly affected
+by a given vulnerability.</p>
+<p>The following example shows the structure of a package object for a specific component:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;SPDXID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-[UUID]&quot;</span><span class="p">,</span><span class="c1">// (1)!</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubi9-micro-container&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;versionInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9.4-6.1716471860&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;supplier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Organization: Red Hat&quot;</span><span class="p">,</span><span class="c1">// (2)!</span>
+<span class="w">  </span><span class="nt">&quot;downloadLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOASSERTION&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;licenseConcluded&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOASSERTION&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;externalRefs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;checksums&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>
+<p>A unique identifier of a given component within this document. This value should only be used to associate
+   relationships to other components described in an SBOM via their relationships.</p>
+</li>
+<li>
+<p>The value <code>Organization: Red Hat</code> must be used for all components that are distributed by Red Hat.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<p>A more detailed breakdown of some of the fields:</p>
+<dl>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/package-information/#71-package-name-field"><code>name</code></a></dt>
+<dd>The name of the component. This value may differ for different types of package ecosystems. It is recommended to
+use the <code>name</code> field of the associated purl string for consistent results.</dd>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/package-information/#73-package-version-field"><code>versionInfo</code></a></dt>
+<dd>The version of the component. This value may differ for different types of package ecosystems. It is
+recommended to use the <code>version</code> field of the associated purl string for consistent results.</dd>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/package-information/#77-package-download-location-field"><code>downloadLocation</code></a></dt>
+<dd>This field is used to point to the VCS that holds the related source code for this component. In most cases,
+this field will be set to <code>NOASSERTION</code> because the upstream equivalent of a downstream component is represented
+with its own package object.</dd>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/package-information/#713-concluded-license-field"><code>licenseConcluded</code></a></dt>
+<dd>The concluded license of the package, based on the information available during the build. If during the build,
+this information cannot be determined, the value <code>NOASSERTION</code> should be used.</dd>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/package-information/#722-external-reference-comment-field"><code>externalRefs</code></a></dt>
+<dd>At least one of the references must include a Package URL (purl) unless the object is describing a product.
+<a href="../purl/">Identifying Red Hat components using Package URL</a> documents what purl strings for different types of
+components should look like. Note that multiple purls may be used for a single package to identify multiple
+locations from where the package can be accessed.</dd>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field"><code>checksums</code></a></dt>
+<dd>The checksums of the component. The type of checksum used will depend on the type of the component. See below
+sections for more information.</dd>
+</dl>
+<h4 id="container-image">Container Image<a class="headerlink" href="#container-image" title="Permanent link">🔗</a></h4>
+<p>A container image can be represented by a package object using the following data:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;SPDXID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-image-index&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ubi9-micro-container&quot;</span><span class="p">,</span><span class="c1">// (1)!</span>
+<span class="w">  </span><span class="nt">&quot;versionInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9.4-6.1716471860&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;supplier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Organization: Red Hat&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;downloadLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOASSERTION&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;licenseDeclared&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOASSERTION&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;externalRefs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;referenceCategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PACKAGE-MANAGER&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;purl&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceLocator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?repository_url=registry.access.redhat.com/ubi9&amp;tag=9.4-6.1716471860&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;referenceCategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PACKAGE-MANAGER&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;purl&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceLocator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?repository_url=registry.access.redhat.com&amp;tag=9.4-6.1716471860&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;checksums&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;algorithm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SHA256&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;checksumValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>The name does not necessarily have to reflect what the container image is named in the container registry;
+   the name component of the associated purl identifier should be used instead.</li>
+</ol>
+</div>
+</div>
+</div>
+<dl>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field"><code>checksums</code></a></dt>
+<dd>The checksum value for a container image refers to the image digest value as defined in the
+<a href="https://github.com/opencontainers/image-spec/blob/v1.0.1/descriptor.md#digests">OCI Image Format</a>.</dd>
+<dt>purl identifiers</dt>
+<dd>A container image may have one or more purls, depending on whether the same image is available in different
+registries, or different repositories within the same registry. Note that if multiple purls are present,
+they should only ever differ in their qualifier values, not the main components such as package type, name, or
+version; multiple package objects should be used if those values differ.</dd>
+<dt>license information</dt>
+<dd>Licensing information should in most cases be set to <code>NOASSERTION</code> since licensing is set on the software
+components provided by the container image, and not the image itself.</dd>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/package-information/#77-package-download-location-field"><code>downloadLocation</code></a></dt>
+<dd>The <code>downloadlocation</code> will never be set; container images don't have their own VCS repos. The location from
+where the image itself can be downloaded can be acquired from the purl identifier.</dd>
+</dl>
+<p>An SBOM should contain representation of both an
+<a href="https://github.com/opencontainers/image-spec/blob/main/image-index.md">Image Index</a> and an architecture-specific
+image itself. The following is an example of an SPDX relationship between the two:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-DOCUMENT&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DESCRIBES&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-image-index&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-ubi9-micro-container-ppc64le&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VARIANT_OF&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-image-index&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>An SBOM that represent a container image must also list out all the components included in that image, and create
+relationships to the architecture-specific image that they are included in:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-ubi9-micro-container-amd64&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CONTAINS&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-x86_64-bash&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>A container image SBOM must also list its parent container image and any container images that were used in the
+process of building the container image (that is, used in a multi-stage build). As an example, consider the following
+Dockerfile used to create an image (<code>example-container</code>) by building the <code>foo</code> and <code>bar</code> dependencies using separate
+images:</p>
+<div class="highlight"><pre><span></span><code><span class="c"># Dockerfile of example-container</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">img-a</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">stage1</span>
+<span class="k">RUN</span><span class="w"> </span>make<span class="w"> </span>foo
+
+<span class="k">FROM</span><span class="w"> </span><span class="s">img-b</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">stage2</span>
+<span class="k">RUN</span><span class="w"> </span>make<span class="w"> </span>bar
+
+<span class="k">FROM</span><span class="w"> </span><span class="s">ubi9</span>
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>stage1<span class="w"> </span>/work/foo<span class="w"> </span>/foo
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>stage2<span class="w"> </span>/work/bar<span class="w"> </span>/bar
+</code></pre></div>
+<p>The relationship of <code>example-container</code> image to the two container images (<code>stage1</code> and <code>stage2</code>) that were used to
+build <code>foo</code> and <code>bar</code> so they can be added to the final layers can be represented as:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-stage1-amd64&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BUILD_TOOL_OF&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-example-container-container-amd64&quot;</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-stage2-amd64&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BUILD_TOOL_OF&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-example-container-container-amd64&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>The parent image of <code>example-container</code> is <code>ubi9</code>. Its relationship to <code>example-container</code> can be represented as:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-example-container-amd64&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DESCENDANT_OF&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-ubi9-amd64&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Container Images are also linked to one or more upstream sources that were used to build them. An upstream source can be represented by a package object using the following data:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;SPDXID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-image-index-Source-origin&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kernel-module-management&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;versionInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d027509b6861d8a9f923cc99dd3e15d9b209e63e&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;downloadLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;externalRefs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;referenceCategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PACKAGE-MANAGER&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;purl&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceLocator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pkg:generic/kernel-model-management@d027509b6861d8a9f923cc99dd3e15d9b209e63e?download_url=https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">},</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>To associate a set of remote sources with the repository referencing them, use:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-image-index-Source&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DEPENDS_ON&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-image-index-Source-origin&quot;</span>
+<span class="p">},</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<!-- TODO: add diagram that shows all the relationships -->
+
+<h4 id="rpm">RPM<a class="headerlink" href="#rpm" title="Permanent link">🔗</a></h4>
+<p>Before defining what RPM package objects look like, let's also define the specific types of sources that can be involved
+in the RPM build process:</p>
+<ul>
+<li>
+<p>An <em>upstream source</em> is the original source code as released by the software's primary developers or maintainers.</p>
+</li>
+<li>
+<p>A <em>midstream source</em> is a copy of the upstream code, which may be modified or simply mirrored for distribution
+  purposes. Midstream sources are optional.</p>
+</li>
+<li>
+<p>A <em>downstream source</em> is a set of sources used to create a source RPM. These are the real build inputs that get
+  packaged into an SRPM, regardless of whether they originated directly from upstream or came through a midstream
+  archive. Downstream sources may include distribution-specific patches, build configuration changes, spec files,
+  and any other files needed to build the final RPM package.</p>
+</li>
+</ul>
+<p>An architecture-specific (downstream) RPM built by Red Hat can be represented by a package object using
+the following data:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;SPDXID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-aarch64-openssl-libs&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;openssl-libs&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;versionInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.0.7-18.el9_2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;supplier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Organization: Red Hat&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;downloadLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOASSERTION&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;packageFileName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;openssl-libs-3.0.7-18.el9_2.aarch64.rpm&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;licenseConcluded&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Apache-2.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;externalRefs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;referenceCategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PACKAGE-MANAGER&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;purl&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceLocator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&amp;repository_id=rhel-9-for-aarch64-baseos-eus-rpms&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;referenceCategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PACKAGE-MANAGER&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;purl&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceLocator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&amp;repository_id=rhel-9-for-aarch64-baseos-aus-rpms&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;referenceCategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PACKAGE-MANAGER&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;purl&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceLocator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&amp;repository_id=rhel-9-for-aarch64-baseos-e4s-rpms&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;checksums&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;algorithm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SHA256&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;checksumValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cae5941219fd64e75c2b29509c6fe712bef77181a586702275a46a5e812d4dd4&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;annotationType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OTHER&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;annotator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tool: example SPDX document only&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;annotationDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2006-08-14T02:34:56+00:00&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sigmd5: 4cc665dd3173c8952184293588f9ee46&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<dl>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/package-information/#77-package-download-location-field"><code>downloadLocation</code></a></dt>
+<dd>The <code>downloadlocation</code> will never be set; container images don't have their own VCS repos. The location from
+where the image itself can be downloaded can be acquired from the purl identifier.</dd>
+<dt>purl identifiers</dt>
+<dd>A single RPM package may be available from multiple DNF/Yum repositories, in which case it will include a purl
+identifier for each repository it can be downloaded from. Note that if multiple purls are present,
+they should only ever differ in their qualifier values, not the main components such as package type, name, or
+version; multiple package objects should be used if those values differ.</dd>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field"><code>checksums</code></a></dt>
+<dd>Minimally, the list of checksums must include the SHA256 checksum of the RPM file or source archive itself.
+All other checksums should be specified as annotations (see below).</dd>
+<dt><a href="https://spdx.github.io/spdx-spec/v2.3/annotations/"><code>annotations</code></a></dt>
+<dd>A list of annotations may provide additional information that is specific to the RPM format. In the example
+above, two checksum values are included:
+- The MD5 checksum of the signed header of the RPM package is included.
+- The SHA256 checksum of the RPM header (this value does not change when an RPM is signed; unlike the file SHA256 \
+  checksum used in <code>checksums</code>).</dd>
+</dl>
+<p>Each set of architecture-specific RPMs also has an associated source RPM (SRPM) that bundles all the source code
+that was used to build those RPMs. SRPMs should be represented as a separate package object in an SBOM, and their
+relationship to architecture-specific RPMs can be represented with:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-ppc64le-openssl-libs&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GENERATED_FROM&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-SRPM&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>SRPMs are also linked to one or more upstream sources that were used to build the downstream RPMs. An upstream
+source can be represented by a package object using the following data:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;SPDXID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-Source0-origin&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;openssl&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;versionInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.0.7&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;downloadLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://openssl.org/source/openssl-3.0.7.tar.gz&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;homepage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://openssl-library.org/&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;packageFileName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;openssl-3.0.7.tar.gz&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;checksums&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;algorithm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SHA256&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;checksumValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;externalRefs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;referenceCategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PACKAGE-MANAGER&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;purl&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceLocator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz&amp;checksum=sha256:83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<dl>
+<dt>purl identifiers</dt>
+<dd>In cases where the upstream source is a package in a registry such as PyPI or NPM, the purl identifier will use
+the respective package type. For components that are distributed as standalone bundles (such as OpenSSL in the
+example above), <code>generic</code> purls should be used with an exact download URL from where a specific bundle of source
+code was fetched from, including a checksum (which should also be specified in the <code>checksums</code> field).</dd>
+</dl>
+<p>To associate a set of source archives with the SRPM that includes them, use:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-SRPM&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CONTAINS&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-Source0&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Optionally, an upstream source may be mirrored in a different repository where the source is modified in a way that
+makes it consumable by the downstream distributor. This is referred to as a midstream source. The package object for
+the midstream source looks identical to an upstream package, but with different download location and purl identifier.</p>
+<p>The relationship between an upstream source and a midstream source can be represented with:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-Midstream0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GENERATED_FROM&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-Source0&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>The complete diagram of the relationships between the various types of sources in an SBOM might look like this:</p>
+<pre class="mermaid"><code>graph TD
+    A["https://openssl.org/source/openssl-3.0.7.tar.gz"]
+    B["https://github.com/(RH openssl midstream repo)/archive/refs/tags/3.0.7.tar.gz"]
+    C["SRPM: openssl 3.0.7-18.el9_2.src"]
+    D["RPM: openssl 3.0.7-18.el9_2.aarch64"]
+    C --&gt;|CONTAINS| B
+    B --&gt;|GENERATED_FROM| A
+    D --&gt;|GENERATED_FROM| C</code></pre>
+<h4 id="product">Product<a class="headerlink" href="#product" title="Permanent link">🔗</a></h4>
+<p>Individual components such as packages and container images are almost always provided as part of a specific product.
+Products represent a bundle of components that can be purchased, has a life cycle
+(<a href="https://access.redhat.com/support/policy/updates/errata#RHEL8_and_9_Life_Cycle">example</a>) defined for it, and
+a support policy.</p>
+<p>If one or more components described in a given SBOM are being provided as part of a product, that product should
+be represented with its own package object:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;SPDXID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-RHEL-9.2-EUS&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Hat Enterprise Linux&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;versionInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9.2 EUS&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;supplier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Organization: Red Hat&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;downloadLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOASSERTION&quot;</span><span class="p">,</span><span class="c1">// (1)!</span>
+<span class="w">  </span><span class="nt">&quot;licenseConcluded&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOASSERTION&quot;</span><span class="p">,</span><span class="c1">// (2)!</span>
+<span class="w">  </span><span class="nt">&quot;externalRefs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;referenceCategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SECURITY&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceLocator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cpe:/a:redhat:rhel_eus:9.2::baseos&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referenceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cpe22Type&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>
+<p>Not used because this product component is not specific enough to an architecture or ISO variant (for example,
+   workstation vs server) for there to be an exact download location.</p>
+</li>
+<li>
+<p>Not set, only components have licenses.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<dl>
+<dt><code>name</code></dt>
+<dd>This field must contain a human-readable name of the product.</dd>
+<dt><code>versionInfo</code></dt>
+<dd>This field must contain the most granular version of the product, for which the SBOM was generated.</dd>
+<dt><code>externalRefs</code></dt>
+<dd>External references must contain a unique identifier of the product. Red Hat uses CPE IDs to identify products.
+A given product may have one or more of these identifiers, covering all possible variants of a single product
+version.</dd>
+</dl>
+<p>A relationship between a component and the product it is a part of can be represented as:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">SPDX 2.3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;spdxElementId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-SRPM-1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relationshipType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PACKAGE_OF&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;relatedSpdxElement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SPDXRef-RHEL-9.2-EUS&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="additional-notes">Additional Notes<a class="headerlink" href="#additional-notes" title="Permanent link">🔗</a></h2>
+<p>The guidelines highlighted in this document represent an ideal state across all of Red Hat-published security data
+that we want to achieve in the long term. In some SBOMs, components may be missing their provenance data or their
+license expressions may not be accurate. Please
+<a href="https://access.redhat.com/security/team/contact/">contact Red Hat Product Security</a> or file a Jira issue in the
+<a href="https://issues.redhat.com/projects/SECDATA">SECDATA project</a> if you find any discrepancies in Red Hat's security data.
+Feedback on our SBOM design and publishing is always welcome and appreciated.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Red Hat, Inc. &nbsp;&centerdot;&nbsp; <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/RedHatProductSecurity/security-data-guidelines" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:secalert@redhat.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1l172.5 141.6c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "content.action.view"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
