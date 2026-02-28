@@ -37,7 +37,9 @@ theme:
 nav:
   - Home: "index.md"
   - CPE: "cpe.md"
-  - CSAF/VEX: "csaf-vex.md"
+  - CSAF/VEX: 
+    - "CSAF/VEX Overview": "csaf-vex.md"
+    - "VEX-Alpha": "vex-alpha.md"
   - purl: "purl.md"
   - SBOM: "sbom.md"
   
