@@ -39,7 +39,7 @@ nav:
   - CPE: "cpe.md"
   - CSAF/VEX: 
     - "CSAF/VEX Overview": "csaf-vex.md"
-    - "VEX Alpha": "vex-alpha.md"
+    - "VEX-Alpha": "vex-alpha.md"
   - purl: "purl.md"
   - SBOM: "sbom.md"
   
