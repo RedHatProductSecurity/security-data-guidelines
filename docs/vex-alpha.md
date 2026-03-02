@@ -15,7 +15,7 @@ This update focuses on data precision and standardizing our CSAF VEX format. Key
 - **Streamlined Content**: We’ve removed unrequired fields (duplicate titles, redundant CVSS scores, unnecessary note objects) and ensured `fixed` product and components no longer appear in `workaround` remediation objects.
 - **Modernized Infrastructure**: We have migrated VEX publication to a completely new service that improves performance and supportability.
 
-More detailed information on the differences between legacy VEX files and Alpha VEX files will be found [here](https://security.access.redhat.com/data/csaf/v2/vex-alpha-details/).
+More detailed information on the differences between legacy VEX files and Alpha VEX files will be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/vex-alpha-details/).
 
 ### Alpha Limitations & Known Issues
 
