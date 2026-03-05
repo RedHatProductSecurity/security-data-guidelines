@@ -2,6 +2,8 @@
 
 This document is intended to cover the changes made in the new release of alpha VEX files compared to the legacy VEX files. These changes are broken out by the three main CSAF VEX document sections: Document, Product Tree and Vulnerabilities. 
 
+<u>Please Note: </u> The alpha VEX files are still in a state of flux as we address known issues. We aim to keep this documentation in sync with the changes, but there may be times when the documentation and implementation are not aligned. If you have questions on any of these changes, please see [How to Provide Feedback](https://redhatproductsecurity.github.io/security-data-guidelines/vex-alpha-details/#how-to-provide-feedback).
+
 ## Document Section 
 The new alpha VEX files include a few minor changes to the `document` section, outlined in the sections below. 
 
@@ -358,6 +360,65 @@ The new alpha VEX files change how multiple product variants are represented. Fo
 ### Component Changes
 In additon to the product representation changes, there are a few changes to component representation. 
 
+#### Component Naming 
+A minor change was made to the component naming in the new alpha VEX files. The `product_version.name` and `product.name` fields for components will not include any version information, even when fixed in the new alpha VEX files.
+
+```json
+# Example of legacy VEX component naming for unfixed component
+{
+  "category": "product_version",
+  "name": "libxml2.src",
+  "product": {
+    "name": "libxml2.src",
+    "product_id": "libxml2.src",
+    "product_identification_helper": {
+      "purl": "pkg:rpm/redhat/libxml2?arch=src"
+    }
+  }
+}
+
+# Example of legacy VEX component naming for fixed component
+{
+  "category": "product_version",
+  "name": "libxml2-0:2.9.13-10.el9_6.src",
+  "product": {
+    "name": "libxml2-0:2.9.13-10.el9_6.src",
+    "product_id": "libxml2-0:2.9.13-10.el9_6.src",
+    "product_identification_helper": {
+      "purl": "pkg:rpm/redhat/libxml2@2.9.13-10.el9_6?arch=src"
+    }
+  }
+}
+```
+
+```json
+# Example of alpha VEX component naming for unfixed component 
+{
+  "category": "product_version",
+  "name": "libxml2",
+  "product": {
+    "name": "libxml2",
+    "product_id": "libxml2",
+    "product_identification_helper": {
+      "purl": "pkg:rpm/redhat/libxml2?arch=src"
+    }
+  }
+}
+
+# Example of alpha VEX component naming for fixed component
+{
+  "category": "product_version",
+  "name": "libxml2",
+  "product": {
+    "name": "libxml2",
+    "product_id": "libxml2-2.9.13-10.el9_6",
+    "product_identification_helper": {
+      "purl": "pkg:rpm/redhat/libxml2@2.9.13-10.el9_6?arch=src"
+    }
+  }
+}
+```
+
 #### Architecture Removal
 In legacy VEX files, fixed components were represented multiple times for their different architectures. To reduce the total number of component and relationship entries, we have decided to remove architecture representation for components in both their `name`, `product_id` and `purl`. The only exception to this is for SRPM components, which will include a ".src" in the `name` and `product_id` and "arch=src" in the `purl`.
 
@@ -412,12 +473,22 @@ In legacy VEX files, fixed components were represented multiple times for their 
 
 ```json
 # Example of alpha VEX component architecture
-TO DO: Pending component version fixes 
+# Note: Subject to change pending resolution of component version jiras 
+{ 
+  "category": "product_version", 
+  "name": "glibc", 
+  "product": { 
+    "name": "glibc", 
+    "product_id": "glibc-2.34-231.el9_7.10", 
+    "product_identification_helper": { 
+      "purl": "pkg:rpm/redhat/glibc@2.34-231.el9_7.10?arch=src" 
+    } 
+  }
+}, 
 
 ```
 #### Binary RPMs 
-TO DO 
-
+More information available soon 
 
 ## Vulnerabilities Section
 Finally, there were a few changes made the the `vulnerabilties` section of the new alpha VEX files. 
