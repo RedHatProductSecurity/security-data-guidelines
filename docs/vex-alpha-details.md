@@ -3,6 +3,7 @@
 This document is intended to cover the changes made in the new release of alpha VEX files compared to the legacy VEX files. These changes are broken out by the three main CSAF VEX document sections: Document, Product Tree and Vulnerabilities. 
 
 ## Document Section 
+The new alpha VEX files include a few minor changes to the document section, outlined in the sections below. 
 
 ### Document Changes 
 
@@ -92,6 +93,7 @@ The following optional objects were removed in the document section and will not
 
 
 ## Product Tree Section 
+The product tree section of VEX files includes the most significant changes between legacy VEX files and the new alpha VEX files. 
 
 ### Branch Removal 
 In the product tree section of a VEX file, legacy VEX files use to nest `product_name` objects under `product_family` branches and `product_version` objects under `architecture` branches, depending on the fix status of each. The new alpha VEX files remove any branch nesting. All `product_name` and `product_version` objects will only be nested under the parent `vendor` branch. 
@@ -233,25 +235,137 @@ The [alpha VEX file](https://security.access.redhat.com/data/csaf/v2/vex-alpha/2
 ```
 
 #### Product Naming
+Previously, legacy VEX files used different naming schemas based on the fix status of the product. The new alpha VEX files has standardized on a naming schema to improve consistency of a product's representation throughout the entire lifecycle of a VEX file.  
+
+By comparing the Openshift 4.18 in legacy VEX files for [CVE-2025-12801](https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-12801.json) and [CVE-2025-6176](https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-6176.json), you can see that the `product_id` changes format from "red_hat_openshift_container_platform_4" in an unfixed state to "9Base-RHOSE-4.18" in a fixed state. 
 
 ```json
-# Example of legacy VEX 
+# Example of legacy VEX unfixed product name for CVE-2025-12801
+{
+  "category": "product_name",
+  "name": "Red Hat OpenShift Container Platform 4",
+  "product": {
+    "name": "Red Hat OpenShift Container Platform 4",
+    "product_id": "red_hat_openshift_container_platform_4",
+    "product_identification_helper": {
+      "cpe": "cpe:/a:redhat:openshift:4"
+    }
+  }
+}
+
+# Example of legacy VEX fixed product name for CVE-2025-6176
+{
+  "category": "product_name",
+  "name": "Red Hat OpenShift Container Platform 4.18",
+  "product": {
+    "name": "Red Hat OpenShift Container Platform 4.18",
+    "product_id": "9Base-RHOSE-4.18",
+    "product_identification_helper": {
+      "cpe": "cpe:/a:redhat:openshift:4.18::el9"
+    }
+  }
+}
 ```
+In new alpha VEX files for [CVE-2025-12801](https://security.access.redhat.com/data/csaf/v2/vex-alpha/2025/cve-2025-12801.json) and [CVE-2025-6176](https://security.access.redhat.com/data/csaf/v2/vex-alpha/2025/cve-2025-6176.json), the `product_id` value remains the same between fixed and unfixed states. 
 
 ```json
-# Example of alpha VEX 
+# Example of alpha VEX unfixed product name for CVE-2025-12801
+{
+  "category": "product_name",
+  "name": "OpenShift Container Platform 4.18",
+  "product": {
+    "name": "OpenShift Container Platform 4.18",
+    "product_id": "openshift-4.18",
+    "product_identification_helper": {
+      "cpe": "cpe:/a:redhat:openshift:4.18"
+    }
+  }
+}
+
+# Example of alpha VEX fixed product name for CVE-2025-6176
+{
+  "category": "product_name",
+  "name": "OpenShift Container Platform 4.18",
+  "product": {
+    "name": "OpenShift Container Platform 4.18",
+    "product_id": "openshift-4.18",
+    "product_identification_helper": {
+      "cpe": "cpe:/a:redhat:openshift:4.18"
+    }
+  }
+},
+
 ```
 
 #### Product Variants
+The new alpha VEX files change how multiple product variants are represented. For RHEL products, only the 'appstream' variant will be represented. For other products that are based on RHEL, the RHEL base version will be represented like '::el8'.
+
+```json 
+# Example of legacy VEX product variants
+{
+  "category": "product_name",
+  "name": "Red Hat Enterprise Linux CodeReady Linux Builder (v. 9)",
+  "product": {
+    "name": "Red Hat Enterprise Linux CodeReady Linux Builder (v. 9)",
+    "product_id": "CRB-9.7.0.Z.MAIN",
+    "product_identification_helper": {
+      "cpe": "cpe:/a:redhat:enterprise_linux:9::crb"
+    }
+  }
+},
+{
+  "category": "product_name",
+  "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+  "product": {
+    "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+    "product_id": "AppStream-9.7.0.Z.MAIN",
+    "product_identification_helper": {
+      "cpe": "cpe:/a:redhat:enterprise_linux:9::appstream"
+    }
+  }
+},
+{
+  "category": "product_name",
+  "name": "Red Hat Enterprise Linux BaseOS (v. 9)",
+  "product": {
+    "name": "Red Hat Enterprise Linux BaseOS (v. 9)",
+    "product_id": "BaseOS-9.7.0.Z.MAIN",
+    "product_identification_helper": {
+      "cpe": "cpe:/o:redhat:enterprise_linux:9::baseos"
+    }
+ }
+},
+
+```
+
+```json
+# Example of alpha VEX product variants 
+{
+  "category": "product_name",
+  "name": "Red Hat Enterprise Linux 9.7.z",
+  "product": {
+    "name": "Red Hat Enterprise Linux 9.7.z",
+    "product_id": "rhel-9.7.z::appstream",
+    "product_identification_helper": {
+      "cpe": "cpe:/a:redhat:enterprise_linux:9::appstream"
+    }
+  }
+},
+
+```
+
 
 ### Component Changes
 
 #### Architecture Removal
 
+#### Binary RPMs 
+
+
 ## Vulnerabilities Section
 
-
 ### Remediations 
+
 
 ### CVSS Score
 The new alpha VEX files simplify the representation of CVSS scores by eliminating the individual metrics, which are still represented in the `vectorString`.  
