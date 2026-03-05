@@ -29,7 +29,7 @@ As we perform final data cleanup and address some remaining functionality, you m
 
 ### Short Term Adoption Timeline
 
-- **Beta VEX (End of March)**: Will address any outstanding known issues and initial vendor feedback. We will recommend that vendors begin the adoption process at this time.
+- **Beta VEX (End of March)**: Will address any outstanding known issues and initial vendor feedback. We will recommend that vendors begin the adoption process at this time. At this time, the VEX files will be moved into the final hosted location at https://security.access.redhat.com/data/csaf/v2/vex-feed/. The legacy VEX file location will remain unchanged.
 - **GA VEX (Red Hat Summit)**: Upon GA, legacy VEX files will be deprecated. No further enhancements will be made to legacy files, though they will remain published for a transition period based on vendor adoption.
 
 ### Future Enhancements

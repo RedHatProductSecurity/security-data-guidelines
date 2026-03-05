@@ -41,6 +41,7 @@ nav:
     - "CSAF/VEX Overview": "csaf-vex.md"
     - "VEX-Alpha Release": "vex-alpha.md"
     - "VEX-Alpha Details": "vex-alpha-details.md"
+    - "Scanning Vendor Guidance": "scanning-vendors.md"
   - purl: "purl.md"
   - SBOM: "sbom.md"
   
