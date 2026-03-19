@@ -74,6 +74,8 @@ state of the software as it is distributed to end users. This SBOM type should s
 as defined by CISA, but it simply includes additional metadata that is not available during the build process and is
 added later on. For lack of a better term, we could call these _Curated Build SBOMs_.
 
+For component-level _Release-time_ SBOMs (for example, container images), the package that represents the component may include product CPE(s) in its externalRefs with referenceCategory `SECURITY` and referenceType `cpe22Type` (and the CPE string in referenceLocator), so the component is explicitly associated with the Red Hat product(s) it is released as part of.
+
 Red Hat's publicly available SBOMs are of the release-time type, including details about where an artifact
 can be located after being released.
 
@@ -283,7 +285,9 @@ A more detailed breakdown of some of the fields:
 :   At least one of the references must include a Package URL (purl) unless the object is describing a product.
     [Identifying Red Hat components using Package URL](./purl.md) documents what purl strings for different types of
     components should look like. Note that multiple purls may be used for a single package to identify multiple
-    locations from where the package can be accessed.
+    locations from where the package can be accessed. For release-time component-level SBOMs, externalRefs may also
+    include `SECURITY` references with referenceType `cpe22Type` and the product CPE string(s) in `referenceLocator`, linking
+    the component to the Red Hat product(s) it is released as part of; one or more CPEs per package is allowed.
 
 [`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)
 :   The checksums of the component. The type of checksum used will depend on the type of the component. See below
