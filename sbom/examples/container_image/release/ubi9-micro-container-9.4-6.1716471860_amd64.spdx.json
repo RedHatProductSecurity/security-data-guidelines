@@ -33,7 +33,12 @@
         {
           "referenceCategory": "SECURITY",
           "referenceType": "cpe22Type",
-          "referenceLocator": "cpe:/a:redhat:product:1.0::el9"
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::appstream"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/o:redhat:enterprise_linux:9::baseos"
         }
       ],
       "checksums": [
@@ -495,6 +500,16 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:oci/ubi9@sha256:11d5b4a77bfc15341d4b6dffa3d6ed510189fec9583db77cfc107067b5f906c5?tag=9.4-947"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::appstream"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/o:redhat:enterprise_linux:9::baseos"
         }
       ],
       "checksums": [

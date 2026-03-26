@@ -49,6 +49,13 @@ def get_rpms(image_id):
     return sorted(response.json()["rpms"], key=lambda rpm: rpm["nvra"])
 
 
+def append_cpe_external_refs(pkg, cpe_ids):
+    for cpe in cpe_ids or []:
+        pkg["externalRefs"].append(
+            {"referenceCategory": "SECURITY", "referenceType": "cpe22Type", "referenceLocator": cpe}
+        )
+
+
 def create_sbom(
     image_id, root_package, packages, rel_type, other_pkgs=None, other_rels=None, source_pkgs=None
 ):
@@ -209,6 +216,7 @@ def generate_sboms_for_image(image_nvr):
                     "referenceLocator": purl,
                 }
                 image_index_pkg["externalRefs"].append(ref)
+            append_cpe_external_refs(image_index_pkg, image.get("cpe_ids"))
 
         arch = image["architecture"]
         spdx_image_id = sanitize_spdxid(f"SPDXRef-{image_nvr_name}-{arch}")
@@ -238,6 +246,7 @@ def generate_sboms_for_image(image_nvr):
                 "referenceLocator": purl,
             }
             image_pkg["externalRefs"].append(ref)
+        append_cpe_external_refs(image_pkg, image.get("cpe_ids"))
         per_arch_images.append(image_pkg)
 
         image_data = koji_session.getBuild(image_nvr)

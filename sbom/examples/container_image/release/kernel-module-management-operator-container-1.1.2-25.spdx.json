@@ -24,6 +24,16 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256:d845f0bd93dad56c92c47e8c116a11a0cc5924c0b99aed912b4f8b54178efa98?repository_url=registry.access.redhat.com/kmm/kernel-module-management-rhel9-operator&tag=1.1.2-25"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::appstream"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/o:redhat:enterprise_linux:9::baseos"
         }
       ],
       "checksums": [
@@ -45,6 +55,16 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256:sha256:ed976a0ba418a498b05a56cb05afa0cb36a65e750771f3840b12e9bae3afb22d?arch=amd64&repository_url=registry.access.redhat.com/kmm/kernel-module-management-rhel9-operator&tag=1.1.2-25"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::appstream"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/o:redhat:enterprise_linux:9::baseos"
         }
       ],
       "checksums": [
@@ -66,6 +86,16 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256:sha256:9e74a91f532b7550ee909c6ce1636122982a5c5e32859c40c3bfe68231d31100?arch=arm64&repository_url=registry.access.redhat.com/kmm/kernel-module-management-rhel9-operator&tag=1.1.2-25"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::appstream"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/o:redhat:enterprise_linux:9::baseos"
         }
       ],
       "checksums": [
@@ -87,6 +117,16 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:oci/kernel-module-management-rhel9-operator@sha256:sha256:32a9929e6f11dfefb7a339d6767d1050cec2b24d397856cbd9b46a1bbc3f8827?arch=ppc64le&repository_url=registry.access.redhat.com/kmm/kernel-module-management-rhel9-operator&tag=1.1.2-25"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::appstream"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/o:redhat:enterprise_linux:9::baseos"
         }
       ],
       "checksums": [
