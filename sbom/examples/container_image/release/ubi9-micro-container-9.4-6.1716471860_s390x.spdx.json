@@ -29,6 +29,16 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:oci/ubi9-micro@sha256:sha256:2c9e70f4174747c6b53d253e879177c52731cc4bdc5fe9c6a2555412d849a952?arch=s390x&repository_url=registry.access.redhat.com/ubi9-micro&tag=9.4-6.1716471860"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::appstream"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/o:redhat:enterprise_linux:9::baseos"
         }
       ],
       "checksums": [
@@ -490,6 +500,16 @@
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
           "referenceLocator": "pkg:oci/ubi9@sha256:dee3c77221eab321e79ad2b0277b91856879a8f5b675a48ad83af26c7a774fb3?tag=9.4-947"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:enterprise_linux:9::appstream"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/o:redhat:enterprise_linux:9::baseos"
         }
       ],
       "checksums": [
