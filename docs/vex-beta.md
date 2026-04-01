@@ -1,8 +1,8 @@
-# CSAF VEX-Alpha Release
+# CSAF VEX-Beta Release
 
-## VEX-Alpha Announcement 
+## VEX-Beta Announcement 
 
-Red Hat Product Security is pleased to share that the Alpha version of our new VEX (Vulnerability Exploit eXchange) files is now available [here](https://security.access.redhat.com/data/csaf/v2/vex-alpha/).
+Red Hat Product Security is pleased to share that the Beta version of our new VEX (Vulnerability Exploit eXchange) files is now available [here](https://security.access.redhat.com/data/csaf/v2/vex-feed/).
 
 ### Current Update Overview
 
@@ -15,22 +15,19 @@ This update focuses on data precision and standardizing our CSAF VEX format. Key
 - **Streamlined Content**: We’ve removed unrequired fields (duplicate titles, redundant CVSS scores, unnecessary note objects) and ensured `fixed` product and components no longer appear in `workaround` remediation objects.
 - **Modernized Infrastructure**: We have migrated VEX publication to a completely new service that improves performance and supportability.
 
-More detailed information on the differences between legacy VEX files and Alpha VEX files will be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/vex-alpha-details/).
+More detailed information on the differences between legacy VEX files and Beta VEX files will be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/vex-beta-details/).
 
-### Alpha Limitations & Known Issues
+### Beta Limitations & Known Issues
 
 As we perform final data cleanup and address some remaining functionality, you may notice daily fluctuations in file content. Please be aware of the following known issues:
 
 - **Binary RPMs**: Currently unavailable for unfixed items. Product Security is working to address this as soon as possible.
-- **Data Accuracy**: Some products and components may be missing or product statuses may be temporarily incorrect during this transition.
 - **Legacy Data**: Some older CVEs may display inaccurate CPEs (e.g., RHEL 7 transitioning from mainstream to EUS CPEs).
-- **Data Deletion**: Removing files and handling rejected flaws is currently unsupported. 
-- **Scope**: Middleware remains out of scope for this project phase.
+- **Scope**: Middleware remains out of scope for this project phase. Some middleware products will be included in the GA phase as data becomes available.
 
 ### Short Term Adoption Timeline
 
-- **Beta VEX (End of March)**: Will address any outstanding known issues and initial vendor feedback. We will recommend that vendors begin the adoption process at this time. At this time, the VEX files will be moved into the final hosted location at https://security.access.redhat.com/data/csaf/v2/vex-feed/. The legacy VEX file location will remain unchanged.
-- **GA VEX (Red Hat Summit)**: Upon GA, legacy VEX files will be deprecated. No further enhancements will be made to legacy files, though they will remain published for a transition period based on vendor adoption.
+- **GA VEX (Red Hat Summit)**: Upon GA, legacy VEX files will be deprecated. No further enhancements will be made to legacy files, though they will remain published in the existing location for a transition period based on vendor adoption.
 
 ### Future Enhancements
 
