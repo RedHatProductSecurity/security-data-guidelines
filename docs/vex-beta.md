@@ -1,6 +1,6 @@
 # CSAF VEX-Beta Release
 
-## VEX-Beta Announcement 
+## VEX-Beta Announcement
 
 Red Hat Product Security is pleased to share that the Beta version of our new VEX (Vulnerability Exploit eXchange) files is now available [here](https://security.access.redhat.com/data/csaf/v2/vex-feed/).
 
@@ -17,17 +17,29 @@ This update focuses on data precision and standardizing our CSAF VEX format. Key
 
 More detailed information on the differences between legacy VEX files and Beta VEX files will be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/vex-beta-details/).
 
+### Bugs Fixed in Beta Release
+
+
+| Area                                 | Priority | Impact                                                                                                                              |
+| ------------------------------------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Product Tree Deduplication           | Blocker  | VEX files now contain cleaner, deduplicated product trees. Scanners see fewer ambiguous or repeated product entries per CVE         |
+| Identifier Fidelity (CPE, PURL, CWE) | Blocker  | More accurate CPEs, PURLs, and CWEs. Fewer edge cases where a scanner cannot match the VEX identifier to an installed component     |
+| Coverage and Reliability             | Critical | More CVEs generating valid VEX files. The current 98.9% success rate is primarily driven by these fixes                             |
+| Data Integrity and Confidentiality   | Blocker  | Partners can trust that no embargoed or pre-disclosure data leaks into the feed, and container VEX entries are correctly structured |
+| Data Quality Investigation           | Critical | Enabled resolution of multiple Blocker issues                                                                                       |
+
+
 ### Beta Limitations & Known Issues
 
 As we perform final data cleanup and address some remaining functionality, you may notice daily fluctuations in file content. Please be aware of the following known issues:
 
-- **Binary RPMs**: Currently unavailable for unfixed items. Product Security is working to address this as soon as possible.
+- **Binary RPMs**: Only availble for some vulnerabilities. Product Security is working to address this as soon as possible.
 - **Legacy Data**: Some older CVEs may display inaccurate CPEs (e.g., RHEL 7 transitioning from mainstream to EUS CPEs).
 - **Scope**: Middleware remains out of scope for this project phase. Some middleware products will be included in the GA phase as data becomes available.
 
 ### Short Term Adoption Timeline
 
-- **GA VEX (Red Hat Summit)**: Upon GA, legacy VEX files will be deprecated. No further enhancements will be made to legacy files, though they will remain published in the existing location for a transition period based on vendor adoption.
+- **GA VEX (Red Hat Summit)**: VEX files will officially be released as GA on May 8th, 2026. Upon GA, legacy VEX files will be deprecated. No further enhancements will be made to legacy files, though they will remain published in the existing location for a transition period based on vendor adoption.
 
 ### Future Enhancements
 
