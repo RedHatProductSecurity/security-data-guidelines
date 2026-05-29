@@ -139,17 +139,22 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-Bundled-11cdd6f19dc1",
-      "name": "libvterm (generic)",
-      "versionInfo": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
+      "SPDXID": "SPDXRef-Bundled-b33d2447bd15",
+      "name": "neovim/libvterm (github) 0.3.3",
+      "versionInfo": "0.3.3",
+      "downloadLocation": "git+https://github.com/neovim/libvterm",
       "filesAnalyzed": false,
       "primaryPackagePurpose": "LIBRARY",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:generic/libvterm"
+          "referenceLocator": "pkg:github/neovim/libvterm@0.3.3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/libvterm@0.3.3?download_url=http%3A%2F%2Fwww.leonerd.org.uk%2Fcode%2Flibvterm"
         }
       ]
     },
@@ -2282,7 +2287,7 @@
       "relatedSpdxElement": "SPDXRef-Source0"
     },
     {
-      "spdxElementId": "SPDXRef-Bundled-11cdd6f19dc1",
+      "spdxElementId": "SPDXRef-Bundled-b33d2447bd15",
       "relationshipType": "DEPENDENCY_OF",
       "relatedSpdxElement": "SPDXRef-SRPM"
     },

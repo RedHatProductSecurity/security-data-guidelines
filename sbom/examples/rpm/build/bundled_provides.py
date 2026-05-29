@@ -7,8 +7,10 @@ Lightweight SPDX 2 document fragments for manifests (packages + DEPENDENCY_OF).
 from __future__ import annotations
 
 import hashlib
+import re
 from dataclasses import dataclass
 from typing import Any
+from urllib.parse import quote
 
 LANG_TO_PURL_TYPE: dict[str, str] = {
     "golang": "golang",
@@ -19,6 +21,11 @@ LANG_TO_PURL_TYPE: dict[str, str] = {
     "java": "maven",
     "generic": "generic",
 }
+
+_GITHUB_OWNER_REPO_RE = re.compile(
+    r"(?:git\+)?https?://(?:www\.)?github\.com/([^/\s)>\"']+)/([^/\s)>\"'#]+)",
+    re.IGNORECASE,
+)
 
 
 @dataclass
@@ -37,12 +44,101 @@ class BundledDep:
     path: str
     version: str
     lang: str  # "generic", "golang", "python", ...
+    vcs_url: str = ""
+    download_url: str = ""
+
+
+def _github_owner_repo(url: str) -> tuple[str, str] | None:
+    """Parse ``(owner, repo)`` from a github.com URL, or return ``None``."""
+    if not url:
+        return None
+    match = _GITHUB_OWNER_REPO_RE.search(url)
+    if not match:
+        return None
+    owner = match.group(1).lower().rstrip(".")
+    repo = match.group(2).lower().rstrip(".")
+    if repo.endswith(".git"):
+        repo = repo[:-4]
+    return owner, repo
+
+
+def _bundled_purls(dep: BundledDep) -> list[str]:
+    """Return one or more purls for a bundled dependency."""
+    ver = f"@{dep.version}" if dep.version else ""
+    purl_type = LANG_TO_PURL_TYPE.get(dep.lang, "generic")
+
+    if purl_type != "generic":
+        base = f"pkg:{purl_type}/{dep.path}{ver}"
+        qualifiers: list[str] = []
+        if dep.vcs_url:
+            qualifiers.append(f"vcs_url={quote(dep.vcs_url, safe='')}")
+        if dep.download_url:
+            qualifiers.append(f"download_url={quote(dep.download_url, safe='')}")
+        if qualifiers:
+            return [f"{base}?{'&'.join(qualifiers)}"]
+        return [base]
+
+    github_coords = _github_owner_repo(dep.vcs_url) or _github_owner_repo(dep.download_url)
+    non_github_vcs = dep.vcs_url if dep.vcs_url and not _github_owner_repo(dep.vcs_url) else ""
+    non_github_download = (
+        dep.download_url if dep.download_url and not _github_owner_repo(dep.download_url) else ""
+    )
+
+    if github_coords:
+        owner, repo = github_coords
+        purls = [f"pkg:github/{owner}/{repo}{ver}"]
+        generic_quals: list[str] = []
+        if non_github_vcs:
+            generic_quals.append(f"vcs_url={quote(non_github_vcs, safe='')}")
+        if non_github_download:
+            generic_quals.append(f"download_url={quote(non_github_download, safe='')}")
+        if generic_quals:
+            purls.append(f"pkg:generic/{dep.path}{ver}?{'&'.join(generic_quals)}")
+        return purls
+
+    base = f"pkg:generic/{dep.path}{ver}"
+    qualifiers: list[str] = []
+    if dep.vcs_url:
+        qualifiers.append(f"vcs_url={quote(dep.vcs_url, safe='')}")
+    if dep.download_url:
+        qualifiers.append(f"download_url={quote(dep.download_url, safe='')}")
+    if qualifiers:
+        return [f"{base}?{'&'.join(qualifiers)}"]
+    return [base]
 
 
 def _bundled_purl(dep: BundledDep) -> str:
-    purl_type = LANG_TO_PURL_TYPE.get(dep.lang, "generic")
-    ver = f"@{dep.version}" if dep.version else ""
-    return f"pkg:{purl_type}/{dep.path}{ver}"
+    """Primary purl for a bundled dependency (first entry from ``_bundled_purls``)."""
+    return _bundled_purls(dep)[0]
+
+
+def _bundled_display_lang(dep: BundledDep) -> str:
+    if dep.lang != "generic":
+        return dep.lang
+    if _github_owner_repo(dep.vcs_url) or _github_owner_repo(dep.download_url):
+        return "github"
+    return dep.lang
+
+
+def _bundled_display_name(dep: BundledDep) -> str:
+    if _bundled_display_lang(dep) == "github":
+        coords = _github_owner_repo(dep.vcs_url) or _github_owner_repo(dep.download_url)
+        label = f"{coords[0]}/{coords[1]}" if coords else dep.path
+    else:
+        label = dep.path
+    lang = _bundled_display_lang(dep)
+    name = f"{label} ({lang})"
+    if dep.version:
+        name = f"{name} {dep.version}"
+    return name
+
+
+def _download_location(dep: BundledDep) -> str:
+    if dep.vcs_url:
+        return dep.vcs_url
+    if dep.download_url:
+        return dep.download_url
+    return "NOASSERTION"
 
 
 def _dep_lang_from_inner(name_inner: str) -> tuple[str, str]:
@@ -138,25 +234,26 @@ def bundled_provides_to_spdx_fragments(
     packages: list[dict[str, Any]] = []
     rels: list[dict[str, Any]] = []
     for b in bundled:
-        pid = _ref_id(f"{b.path}\0{b.version}\0{b.lang}")
-        name = f"{b.path} ({b.lang})"
-        if b.version:
-            name = f"{name} {b.version}"
+        purls = _bundled_purls(b)
+        purl = purls[0]
+        pid = _ref_id(purl)
+        external_refs = [
+            {
+                "referenceCategory": "PACKAGE-MANAGER",
+                "referenceType": "purl",
+                "referenceLocator": locator,
+            }
+            for locator in purls
+        ]
         packages.append(
             {
                 "SPDXID": pid,
-                "name": name,
+                "name": _bundled_display_name(b),
                 "versionInfo": b.version or "NOASSERTION",
-                "downloadLocation": "NOASSERTION",
+                "downloadLocation": _download_location(b),
                 "filesAnalyzed": False,
                 "primaryPackagePurpose": "LIBRARY",
-                "externalRefs": [
-                    {
-                        "referenceCategory": "PACKAGE-MANAGER",
-                        "referenceType": "purl",
-                        "referenceLocator": _bundled_purl(b),
-                    }
-                ],
+                "externalRefs": external_refs,
             }
         )
         rels.append(
@@ -174,14 +271,11 @@ def bundled_provides_to_cdx_components(bundled: list[BundledDep]) -> list[dict[s
     components: list[dict[str, Any]] = []
     for b in bundled:
         purl = _bundled_purl(b)
-        name = f"{b.path} ({b.lang})"
-        if b.version:
-            name = f"{name} {b.version}"
         components.append(
             {
                 "bom-ref": purl,
                 "type": "library",
-                "name": name,
+                "name": _bundled_display_name(b),
                 "version": b.version or None,
                 "purl": purl,
             }

@@ -659,6 +659,7 @@ Use a typed purl when the provide name indicates the ecosystem:
 | Language prefix in provide | purl type | Example provide | Example purl |
 |----------------------------|-----------|-----------------|--------------|
 | *(none)* / generic bundled | `generic` | `bundled(libvterm)` | `pkg:generic/libvterm` |
+| generic bundled + GitHub URL | `github` | `bundled(libvterm)` | `pkg:github/neovim/libvterm@0.3.3` |
 | `golang(...)` | `golang` | `golang(github.com/foo/bar)` | `pkg:golang/github.com/foo/bar@1.2.3` |
 | `bundled(python(...))` | `pypi` | `bundled(python(requests))` | `pkg:pypi/requests@2.31.0` |
 | `bundled(nodejs(...))` | `npm` | `bundled(nodejs(lodash))` | `pkg:npm/lodash@4.17.21` |
@@ -666,21 +667,33 @@ Use a typed purl when the provide name indicates the ecosystem:
 | `bundled(crate(...))` | `cargo` | `bundled(crate(serde))` | `pkg:cargo/serde@1.0.0` |
 | `bundled(mvn(...))` | `maven` | `bundled(mvn(org/foo))` | `pkg:maven/org/foo@1.0.0` |
 
+When upstream provenance is known (for example from the embedded copy in the build tree),
+use the [`github` purl type](https://github.com/package-url/purl-spec/blob/main/types-doc/github-definition.md)
+if `vcs_url` or `download_url` is a `github.com` URL. Parse `owner` and `repo` from the URL
+and emit `pkg:github/<owner>/<repo>@<version>`. When a non-GitHub upstream URL is also known,
+add a second purl on the same package: `pkg:generic/<bundled-name>@<version>?download_url=...`
+(or `vcs_url=...`). Do not attach non-GitHub URLs as qualifiers on the `github` purl.
+
 === "SPDX 2.3"
 
     ```json
     {
-      "SPDXID": "SPDXRef-Bundled-11cdd6f19dc1",
-      "name": "libvterm (generic)",
-      "versionInfo": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
+      "SPDXID": "SPDXRef-Bundled-b33d2447bd15",
+      "name": "neovim/libvterm (github) 0.3.3",
+      "versionInfo": "0.3.3",
+      "downloadLocation": "git+https://github.com/neovim/libvterm",
       "filesAnalyzed": false,
       "primaryPackagePurpose": "LIBRARY",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:generic/libvterm"
+          "referenceLocator": "pkg:github/neovim/libvterm@0.3.3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/libvterm@0.3.3?download_url=http%3A%2F%2Fwww.leonerd.org.uk%2Fcode%2Flibvterm"
         }
       ]
     }
@@ -690,7 +703,7 @@ Use a typed purl when the provide name indicates the ecosystem:
 
     ```json
     {
-      "spdxElementId": "SPDXRef-Bundled-11cdd6f19dc1",
+      "spdxElementId": "SPDXRef-Bundled-b33d2447bd15",
       "relationshipType": "DEPENDENCY_OF",
       "relatedSpdxElement": "SPDXRef-SRPM"
     }

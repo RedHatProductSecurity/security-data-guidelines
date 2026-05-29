@@ -31,8 +31,8 @@ Bundled dependencies
 
 Build-time SBOMs may include packages for `bundled()` / `golang()` Provides
 from the RPM spec (see [Understanding SBOMs — Bundled dependencies](../../../../docs/sbom.md#bundled-dependencies)).
-The `vim-9.1.083-5.el10` example includes `bundled(libvterm)` linked to the
-SRPM with `DEPENDENCY_OF`.
+The `vim-9.1.083-5.el10` example includes `bundled(libvterm)` enriched to
+`pkg:github/neovim/libvterm@0.3.3`, linked to the SRPM with `DEPENDENCY_OF`.
 
 When a container image is built including RPMs, the SBOM for the container
 image should refer to the RPMs using external references both with and without
