@@ -448,7 +448,7 @@ Container Images are also linked to one or more upstream sources that were used 
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:generic/kernel-model-management@d027509b6861d8a9f923cc99dd3e15d9b209e63e?download_url=https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e"
+          "referenceLocator": "pkg:github/rh-ecosystem-edge/kernel-module-management@d027509b6861d8a9f923cc99dd3e15d9b209e63e"
         }
       ]
     },
@@ -598,8 +598,25 @@ source can be represented by a package object using the following data:
 purl identifiers
 :   In cases where the upstream source is a package in a registry such as PyPI or NPM, the purl identifier will use
     the respective package type. For components that are distributed as standalone bundles (such as OpenSSL in the
-    example above), `generic` purls should be used with an exact download URL from where a specific bundle of source
-    code was fetched from, including a checksum (which should also be specified in the `checksums` field).
+    example above), use `generic` purls with an exact download URL from where a specific bundle of source code was
+    fetched from, including a checksum (which should also be specified in the `checksums` field). When the source
+    `downloadLocation` is a `github.com` URL, use the [`github` purl type](https://github.com/package-url/purl-spec/blob/main/types-doc/github-definition.md)
+    and emit `pkg:github/<owner>/<repo>@<version>` only — do not also emit a `generic` purl whose `download_url`
+    points at the same GitHub location. When a separate non-GitHub fetch URL is also known (for example an upstream
+    tarball mirror alongside a GitHub repository), add a second purl:
+    `pkg:generic/<source-name>@<version>?download_url=...` (and `checksum=...` when known).
+
+    Example for a GitHub-hosted source archive (`delve` `Source0`):
+
+    ```json
+    "externalRefs": [
+      {
+        "referenceCategory": "PACKAGE-MANAGER",
+        "referenceType": "purl",
+        "referenceLocator": "pkg:github/go-delve/delve@1.7.2"
+      }
+    ]
+    ```
 
 To associate a set of source archives with the SRPM that includes them, use:
 
@@ -659,6 +676,7 @@ Use a typed purl when the provide name indicates the ecosystem:
 | Language prefix in provide | purl type | Example provide | Example purl |
 |----------------------------|-----------|-----------------|--------------|
 | *(none)* / generic bundled | `generic` | `bundled(libvterm)` | `pkg:generic/libvterm` |
+| generic bundled + GitHub URL | `github` | `bundled(libvterm)` | `pkg:github/neovim/libvterm@0.3.3` |
 | `golang(...)` | `golang` | `golang(github.com/foo/bar)` | `pkg:golang/github.com/foo/bar@1.2.3` |
 | `bundled(python(...))` | `pypi` | `bundled(python(requests))` | `pkg:pypi/requests@2.31.0` |
 | `bundled(nodejs(...))` | `npm` | `bundled(nodejs(lodash))` | `pkg:npm/lodash@4.17.21` |
@@ -666,21 +684,33 @@ Use a typed purl when the provide name indicates the ecosystem:
 | `bundled(crate(...))` | `cargo` | `bundled(crate(serde))` | `pkg:cargo/serde@1.0.0` |
 | `bundled(mvn(...))` | `maven` | `bundled(mvn(org/foo))` | `pkg:maven/org/foo@1.0.0` |
 
+When upstream provenance is known (for example from the embedded copy in the build tree),
+use the [`github` purl type](https://github.com/package-url/purl-spec/blob/main/types-doc/github-definition.md)
+if `vcs_url` or `download_url` is a `github.com` URL. Parse `owner` and `repo` from the URL
+and emit `pkg:github/<owner>/<repo>@<version>`. When a non-GitHub upstream URL is also known,
+add a second purl on the same package: `pkg:generic/<bundled-name>@<version>?download_url=...`
+(or `vcs_url=...`). Do not attach non-GitHub URLs as qualifiers on the `github` purl.
+
 === "SPDX 2.3"
 
     ```json
     {
-      "SPDXID": "SPDXRef-Bundled-11cdd6f19dc1",
-      "name": "libvterm (generic)",
-      "versionInfo": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
+      "SPDXID": "SPDXRef-Bundled-b33d2447bd15",
+      "name": "neovim/libvterm (github) 0.3.3",
+      "versionInfo": "0.3.3",
+      "downloadLocation": "git+https://github.com/neovim/libvterm",
       "filesAnalyzed": false,
       "primaryPackagePurpose": "LIBRARY",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:generic/libvterm"
+          "referenceLocator": "pkg:github/neovim/libvterm@0.3.3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/libvterm@0.3.3?download_url=http%3A%2F%2Fwww.leonerd.org.uk%2Fcode%2Flibvterm"
         }
       ]
     }
@@ -690,7 +720,7 @@ Use a typed purl when the provide name indicates the ecosystem:
 
     ```json
     {
-      "spdxElementId": "SPDXRef-Bundled-11cdd6f19dc1",
+      "spdxElementId": "SPDXRef-Bundled-b33d2447bd15",
       "relationshipType": "DEPENDENCY_OF",
       "relatedSpdxElement": "SPDXRef-SRPM"
     }

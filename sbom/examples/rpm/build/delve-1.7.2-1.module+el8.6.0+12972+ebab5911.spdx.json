@@ -492,7 +492,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:generic/delve@1.7.2?download_url=https://github.com/go-delve/delve/archive/v1.7.2.tar.gz#/delve-1.7.2.tar.gz"
+          "referenceLocator": "pkg:github/go-delve/delve@1.7.2"
         }
       ]
     },

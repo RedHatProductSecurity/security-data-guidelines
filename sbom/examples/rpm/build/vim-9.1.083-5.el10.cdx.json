@@ -44,10 +44,11 @@
   },
   "components": [
     {
-      "bom-ref": "pkg:generic/libvterm",
+      "bom-ref": "pkg:github/neovim/libvterm@0.3.3",
       "type": "library",
-      "name": "libvterm (generic)",
-      "purl": "pkg:generic/libvterm"
+      "name": "neovim/libvterm (github) 0.3.3",
+      "version": "0.3.3",
+      "purl": "pkg:github/neovim/libvterm@0.3.3"
     },
     {
       "bom-ref": "pkg:rpm/redhat/vim-X11-debuginfo@9.1.083-5.el10?arch=aarch64&epoch=2",
@@ -1200,7 +1201,7 @@
         "pkg:rpm/redhat/xxd@9.1.083-5.el10?arch=x86_64&epoch=2"
       ],
       "dependsOn": [
-        "pkg:generic/libvterm"
+        "pkg:github/neovim/libvterm@0.3.3"
       ]
     }
   ]

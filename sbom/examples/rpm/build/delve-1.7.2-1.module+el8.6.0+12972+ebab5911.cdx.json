@@ -1508,11 +1508,11 @@
       "pedigree": {
         "ancestors": [
           {
-            "bom-ref": "pkg:generic/delve@1.7.2?download_url=https://github.com/go-delve/delve/archive/v1.7.2.tar.gz#/delve-1.7.2.tar.gz",
+            "bom-ref": "pkg:github/go-delve/delve@1.7.2",
             "type": "library",
             "name": "delve",
             "version": "1.7.2",
-            "purl": "pkg:generic/delve@1.7.2?download_url=https://github.com/go-delve/delve/archive/v1.7.2.tar.gz#/delve-1.7.2.tar.gz",
+            "purl": "pkg:github/go-delve/delve@1.7.2",
             "hashes": [
               {
                 "alg": "SHA-256",

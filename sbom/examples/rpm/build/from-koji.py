@@ -13,6 +13,8 @@ from bundled_provides import (
     bundled_golang_from_provides,
     bundled_provides_to_cdx_components,
     bundled_provides_to_spdx_fragments,
+    source_purl,
+    source_purls,
 )
 
 # Script requires these RPMs: brewkoji, rpmdevtools, rpm-build
@@ -220,12 +222,14 @@ class SBOMBuilder:
 
     @staticmethod
     def mock_midstream_cdx(digest, sname, sver, url):
+        checksum = f"sha256:{digest}" if digest else ""
+        purl = source_purl(sname, sver, url, checksum=checksum)
         return {
-            "bom-ref": f"pkg:generic/{sname}@{sver}?download_url={url}",
+            "bom-ref": purl,
             "type": "library",
             "name": sname,
             "version": sver,
-            "purl": f"pkg:generic/{sname}@{sver}?download_url={url}",
+            "purl": purl,
             "hashes": [{"alg": "SHA-256", "content": digest}],
         }
 
@@ -247,8 +251,14 @@ class SBOMBuilder:
                 {
                     "referenceCategory": "PACKAGE-MANAGER",
                     "referenceType": "purl",
-                    "referenceLocator": f"pkg:generic/{sname}@{sver}?download_url={url}",
+                    "referenceLocator": locator,
                 }
+                for locator in source_purls(
+                    sname,
+                    sver,
+                    url,
+                    checksum=f"{alg.lower()}:{digest}",
+                )
             ],
         }
         if ext:
@@ -415,13 +425,18 @@ class SBOMBuilder:
                     del spackage["versioninfo"]
 
                 if url != "NOASSERTION":
-                    purl = f"pkg:generic/{name}@{version}?download_url={url}"
                     spackage["externalRefs"] = [
                         {
                             "referenceCategory": "PACKAGE-MANAGER",
                             "referenceType": "purl",
-                            "referenceLocator": purl,
+                            "referenceLocator": locator,
                         }
+                        for locator in source_purls(
+                            sname,
+                            sver,
+                            url,
+                            checksum=f"sha256:{digest}",
+                        )
                     ]
 
                 cdx_pedigree = self.mock_midstream_cdx(digest, sname, sver, url)
