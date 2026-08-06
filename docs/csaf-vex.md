@@ -222,7 +222,7 @@ always include the name of the component, a product ID and a product identificat
 displayed unnested under an `architecture` object, the `name` attribute will not reference a specific version number
 because these components are unfixed. Again, these unfixed `product_version` components will only be found in VEX files
 since CSAF files always represent a released RHSA. The purl identifiers for unfixed content are only available for
-`rpm`, `oci` (container), and `rpmmod` (modular) purl content type.
+`rpm`, `oci` (container), and `rpmmod` (modular rpm) purl content type.
 
 In the example below, the unfixed kernel component's name is `kernel` and doesn't include a specific version number or
 an architecture format.
@@ -275,7 +275,7 @@ the specific version number `0:3.10.0-693.112.1.el7` and architecture format `.s
 
 #### Relationships
 
-Also included in the `product_tree` section is a `relationships` object which is used by Red Hat to help represent
+Also included in the `product_tree` section is a `relationships` object which is used by Red Hat to represent
 layered products. One or more relationship entries will be present for all `product_version` objects found in the
 `branches` object. All of these objects are of the `default_component_of` category and include the full product
 name and product ID (a combination of the `product_name` and the `product_version`), a reference to the component name
