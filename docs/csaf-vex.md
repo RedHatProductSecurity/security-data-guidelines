@@ -40,7 +40,7 @@ A Red Hat Security Advisory (RHSA) will always have a CSAF advisory file associa
 Bug Advisory (RHBA) or Red Hat Enhancement Advisory (RHEA) releases that contain security fixes will have a CSAF advisory
 file associated.
 
-Red Hat's CSAF files are publicly available per advisory [here](https://security.access.redhat.com/data/csaf/v2/advisories/).
+Red Hat's CSAF files are public, and published per advisory [here](https://security.access.redhat.com/data/csaf/v2/advisories/).
 
 
 ### CSAF VEX Overview
@@ -54,7 +54,9 @@ Taken together, the CSAF advisory informs of what vulnerabilities are fixed in e
 the portfolio-wide view of what is affected versus what is fixed.
 
 Red Hat's VEX files are always associated with one CVE and include fix status information for all vulnerable packages
-and Red Hat products. Red Hat's VEX files are publicly available per CVE
+and Red Hat products.
+
+Red Hat's VEX files are public, and published per CVE
 [here](https://security.access.redhat.com/data/csaf/v2/vex/).
 
 
