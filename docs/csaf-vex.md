@@ -337,6 +337,7 @@ The `vulnerabilities` section reports vulnerability metadata for the CVE and als
 #### General CVE Information
 
 Basic CVE information is represented using the following objects:
+
 * `cve`: The official CVE ID.
 * `cwe`: Information about the corresponding CWE, include the CWE ID and the name.
 * `discovery_date`: The first reported date of the vulnerability. Note: This date can differ from the previously
