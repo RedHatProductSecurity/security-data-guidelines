@@ -57,7 +57,8 @@ Red Hat's VEX files are always associated with one CVE and include fix status in
 and Red Hat products.
 
 Red Hat's VEX files are public, and published per CVE
-[here](https://security.access.redhat.com/data/csaf/v2/vex/).
+[here](https://security.access.redhat.com/data/csaf/v2/vex/) in the original format, and
+[here](https://security.access.redhat.com/data/csaf/v2/vex-feed/) in the binary RPM aware format.
 
 
 
