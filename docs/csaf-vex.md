@@ -496,7 +496,7 @@ Compressed down, a `product_status` object that included products of each catego
 ```
 
 Note: It's important to remember that with VEX files, not every product status will be included, only the categories
-that have products which fall into those statuses. For CSAF files, the only included status will be the `fixed` and
+that have products which fall into those statuses. For CSAF advisories, the only included status will be the `fixed` and
 optionally `known_not_affected` category if in the released RHSA there are more components and not all were
 vulnerable to the particular CVE id.
 
