@@ -188,6 +188,9 @@ The `product_family` category represents a general Red Hat product stream and in
 more nested objects of the `product_name` category that represents an individual release. The `product_name` object will
 always include the name of the product, a product ID and a product identification helper in the form of a CPE.
 
+CPE stands for Common Platform Enumeration, and refers to a centralised database (https://nvd.nist.gov/products/cpe) that
+stores unique identifiers that allow you to refer to specific versions of released products or components.
+
 In the example below, you can see that the `product_family` object is for Red Hat Enterprise Linux 6 and nested within
 is the `product_name` object Red Hat Enterprise Linux 6 with the CPE "cpe:/o:redhat:enterprise_linux:6".
 
