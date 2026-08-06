@@ -216,15 +216,23 @@ Red Hat uses CPEs to uniquely identify each product and version, following the C
 Red Hat CPEs can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/cpe/). 
 
 ### RPM Repositories
-Each Red Hat container images published after June 2020 include information about the repositories from which 
-the packages used in the container are sourced. Scanning vendors will use the repositories to identify CPEs that are 
-associated with the scanned image. The following sections explain different ways to identify repository information for 
-a container image. 
+
+Each Red Hat container image published after June 2020 include information
+about the repositories from which the packages used in the container are
+sourced. Scanning vendors should use these repositories to identify CPEs that
+are associated with the scanned image. The following sections explain different
+ways to identify repository information for a container image. 
 
 #### Content Manifest JSON files
-Previously, content manifest JSON files were included for each layer in the container image in the `root/buildinfo/` 
-directory. Inside each content manifest JSON file, you'll find a `content_sets` object, which specifies the
-repository names that provided the packages found in the container image. 
+
+Starting in June 2020, Content manifest JSON files were included for each layer
+in the container image in the `root/buildinfo/` directory.  In July 2025 this
+system was replaced (see below) with content-sets, and will be deprecated at
+some point in the future.
+
+Inside each content manifest JSON file, you'll find a `content_sets` object,
+which specifies the repository names that provided the packages found in the
+container image. 
 
 The following examples show how to get a list of the content manifest files from within a container image.
 ```
@@ -316,9 +324,14 @@ $ cat cat /usr/share/buildinfo/content-sets.json
 ```
 
 #### Querying Repositories for Binary RPMs 
-Although container images provide a list of repositories from which the packages in the image are sourced, vendors may also 
-be interested in determining the repository that provided a specific binary RPM. This can be done using the dnf database, but 
-dnf is not always shipped with container images. 
+
+Although container images provide a list of repositories from which the
+packages in the image are sourced, vendors may also be interested in
+determining the repository that provided a specific binary RPM. It is possible
+for multiple repositories to contain the same binary RPMs - this command lets
+you query the system to determine which repository was used at install time.
+Note that `dnf` is not always shipped with container images.
+
 ```
 # Example return of repository query 
 $ dnf repoquery --qf "%{repoid}" libgcc-11.3.1-4.3.el9.x86_64
