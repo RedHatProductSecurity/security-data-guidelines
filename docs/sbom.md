@@ -770,5 +770,5 @@ The guidelines highlighted in this document represent an ideal state across all 
 that we want to achieve in the long term. In some SBOMs, components may be missing their provenance data or their
 license expressions may not be accurate. Please
 [contact Red Hat Product Security](https://access.redhat.com/security/team/contact/) or file a Jira issue in the
-[SECDATA project](https://issues.redhat.com/projects/SECDATA) if you find any discrepancies in Red Hat's security data.
+[SECDATA project](https://redhat.atlassian.net/projects/SECDATA) if you find any discrepancies in Red Hat's security data.
 Feedback on our SBOM design and publishing is always welcome and appreciated.

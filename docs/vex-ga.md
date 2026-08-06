@@ -41,7 +41,7 @@ More detailed information on the differences between legacy VEX files and GA VEX
 
 For any issues or questions you have,  please file a jira issue with the following:
 
-- **Project**: [SECDATA](https://issues.redhat.com/projects/SECDATA/summary)
+- **Project**: [SECDATA](https://redhat.atlassian.net/projects/SECDATA/summary)
 - **Issue Type**: Ticket 
 - **Component**: ‘feedback-new-vex’ 
 - **Description**: The question or issue you wish to raise. Please provide a detailed explanation, the VEX file you are referencing and a specific example of the data.

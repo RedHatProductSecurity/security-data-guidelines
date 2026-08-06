@@ -178,7 +178,7 @@ The guidelines highlighted in this document represent an ideal state across all 
 that we want to achieve in the long term. In some cases, purl identifiers may be missing some of the metadata
 presented here or not specify it. Please
 [contact Red Hat Product Security](https://access.redhat.com/security/team/contact/) or file a Jira issue in the
-[SECDATA project](https://issues.redhat.com/projects/SECDATA) if you find any discrepancies in Red Hat's security data.
+[SECDATA project](https://redhat.atlassian.net/projects/SECDATA) if you find any discrepancies in Red Hat's security data.
 Feedback on our usage of purl is always welcome and appreciated.
 
 Also of note is the purpose of using purls as identifiers versus locators. Some purls may include certain qualifiers

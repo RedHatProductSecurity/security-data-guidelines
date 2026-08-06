@@ -706,30 +706,30 @@ A Low Red Hat severity should be reported for the rhel9/python-312 container and
 
 ## Frequently Asked Questions (FAQs)
 Vendors are encouraged to raise any questions regarding security data by opening a 'Ticket' issue type in the public
-[SECDATA Jira project](https://issues.redhat.com/projects/SECDATA/).
+[SECDATA Jira project](https://redhat.atlassian.net/projects/SECDATA/).
 
 Many scanning vendors face similar challenges when reading and parsing Red Hat's security data. To check if your question
-has already been asked, you can review the list of questions asked [here](https://issues.redhat.com/browse/SECDATA-862?filter=12444038).
+has already been asked, you can review the list of questions asked [here](https://redhat.atlassian.net/browse/?filter=114902).
 
 ### Python and VENV 
-[https://issues.redhat.com/browse/SECDATA-831](https://issues.redhat.com/browse/SECDATA-831)
+[https://redhat.atlassian.net/browse/SECDATA-831](https://redhat.atlassian.net/browse/SECDATA-831)
 
 ### Repository Relative URLs 
-[https://issues.redhat.com/browse/SECDATA-1089](https://issues.redhat.com/browse/SECDATA-1089)
-[https://issues.redhat.com/browse/SECDATA-797](https://issues.redhat.com/browse/SECDATA-797)
-[https://issues.redhat.com/browse/SECDATA-1020](https://issues.redhat.com/browse/SECDATA-1020)
+[https://redhat.atlassian.net/browse/SECDATA-1089](https://redhat.atlassian.net/browse/SECDATA-1089)
+[https://redhat.atlassian.net/browse/SECDATA-797](https://redhat.atlassian.net/browse/SECDATA-797)
+[https://redhat.atlassian.net/browse/SECDATA-1020](https://redhat.atlassian.net/browse/SECDATA-1020)
 
 ### Empty Content Sets
-[https://issues.redhat.com/browse/SECDATA-966](https://issues.redhat.com/browse/SECDATA-966)
+[https://redhat.atlassian.net/browse/SECDATA-966](https://redhat.atlassian.net/browse/SECDATA-966)
 
 ### Differences in OVAL and VEX CPEs
-[https://issues.redhat.com/browse/SECDATA-1141](https://issues.redhat.com/browse/SECDATA-1141)
+[https://redhat.atlassian.net/browse/SECDATA-1141](https://redhat.atlassian.net/browse/SECDATA-1141)
 
 ### Duplicate RHSAs
-[https://issues.redhat.com/browse/SECDATA-969](https://issues.redhat.com/browse/SECDATA-969)
+[https://redhat.atlassian.net/browse/SECDATA-969](https://redhat.atlassian.net/browse/SECDATA-969)
 
 ## Additional Questions or Concerns 
 Red Hat is committed to continually improving our security data; any future changes to the data itself or the format of 
 the files are tracked in the [Red Hat Security Data Changelog](https://access.redhat.com/articles/5554431).
 
-For any potential bugs identified regarding security data, please file a 'Bug' issue type in the public [SECDATA Jira project](https://issues.redhat.com/projects/SECDATA/).
+For any potential bugs identified regarding security data, please file a 'Bug' issue type in the public [SECDATA Jira project](https://redhat.atlassian.net/projects/SECDATA/).

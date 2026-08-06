@@ -598,4 +598,5 @@ Red Hat is committed to continually improving our security data; any future chan
 the files are tracked in the [Red Hat Security Data Changelog](https://access.redhat.com/articles/5554431).
 
 Please contact Red Hat Product Security with any questions regarding security data at [secalert@redhat.com](secalert@redhat.com) or file an
-issue in the public [SECDATA Jira project](https://issues.redhat.com/projects/SECDATA/issues/SECDATA-525?filter=allopenissues).
+issue in the public [SECDATA Jira project](https://redhat.atlassian.net/projects/SECDATA/issues/?filter=allopenissues).
+
