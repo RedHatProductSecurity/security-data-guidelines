@@ -116,8 +116,8 @@ Vendor information is represented in the `publisher` object:
 
 CVE ID, CVE publish date and CVE revision history:
 
-* `id`: Provides the official CVE ID.
-* `initial_release_date`: Represents the date that the Red Hat first published information on the CVE.
+* `id`: Provides the official CVE ID, as published by [NVD](https://nvd.nist.gov).
+* `initial_release_date`: Represents the date that Red Hat first published information on the CVE.
 * `revision_history`: Details any changes made to the CVE information published by Red Hat.
 
 ```json
