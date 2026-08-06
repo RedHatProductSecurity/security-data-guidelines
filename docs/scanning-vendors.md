@@ -32,23 +32,34 @@ CSAF advisory and VEX files as well as our SBOM files. Detailed information abou
 [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/).
 
 ### RPMs and RPM modules 
-An RPM package is a file format used by the Red Hat Package Manager (RPM) system for software distribution and management, 
-which package consists of an archive of files and metadata used to install and erase these files.
 
-There are two types of RPM packages: source RPMs, which contain source code and a spec file and binary RPMs, which are
-the files built from source packages and patches. 
+RPM is a file format used by the Red Hat Package Manager (RPM) system for software distribution and management, 
+in which packages consist of an archive of files and metadata used to manage the installation, upgrade and deinstallation of the associated software package.
 
-Additionally, an RPM module is a set of RPM packages that represent a component and are usually installed together. 
-Starting from RHEL 10, there will be no more RPM modules.
+There are two types of RPM packages: Source RPMs (also known as SRPMs) contain a spec file along with source code and patches from which the binary RPMs are built.  Binary RPMs (RPMs) contain the actual files for the package to be installed, and are separated by CPU architecture (arch) for compiled content.
 
-SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the `rpm` purl type. More detailed
-information about RPM purl usage can be found
+Packages commonly have a one-to-one mapping of SRPM to RPM, but more complex
+software may have subpackages defined in the RPM .spec file creating a
+one-to-many mapping.  For example, the `git` SRPM creates `git`, `git-core`,
+`git-gui` and `git-devel` binary RPMs.  In the context of mapping
+vulnerabilities in source code to affectedness in binary packages we can
+clearly see that a vulnerability in the graphical user interface is likely to
+be present in the git-gui binary RPM but might be absent from git-core.  By
+adding an extra level of granularity to the VEX data, scanners are able to 
+exclude non-affected binary packages from vulnerabilities that are present in
+the shared source.
+
+Additionally, an RPM module is a set of RPM packages that represent a higher level software component that is installed together.  AppStreams are a common example of RPM modules.  Note that RPM module support was removed in RHEL 10.
+
+SRPMs and RPMs are represented in CSAF advisories and VEX data using the `rpm` purl type.  RPM Modules are represented with the `rpm` purl type and also have a `rpmmod` modifier with additional data.  More detailed information about RPM purl usage can be found
 [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
 
 
+
 #### Binary RPMs
-Both binary RPMs and RPM modules installed in a container image can be discovered using the `rpm -qa` command from within 
-the container image.
+Both binary RPMs and RPM modules installed on a host (or in a container image) can be discovered using the `rpm -qa` command from within the system.  In this case the `-qa` refers to `q` (query) and `a` (all installed packages), and the `--qf` specifies
+the format to use for each installed package.
+
 ```
 # Example return of RPM query
 $ rpm -qa --qf '%{NAME} %{EPOCHNUM} %{VERSION} %{RELEASE} %{ARCH}\n'
@@ -68,7 +79,8 @@ pkg:rpm/redhat/libgcc@11.3.1-4.3.el9?arch=x86_64
 ```
 
 #### SRPMs
-Additionally, SRPMs can be discovered from a binary RPM by using the following command from within the container image.
+The metadata for every RPM contains information on the source from which it was build.  In this example, we can query a single
+package (`libgcc`) and use the `--qf` format option to return the name of the Source RPM from which it was created.
 
 ```
 # Example return of SRPM query
