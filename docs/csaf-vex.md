@@ -58,7 +58,7 @@ and Red Hat products.
 
 Red Hat's VEX files are public, and published per CVE
 [here](https://security.access.redhat.com/data/csaf/v2/vex/) in the original format, and
-[here](https://security.access.redhat.com/data/csaf/v2/vex-feed/) in the binary RPM aware format.
+[here](https://security.access.redhat.com/data/csaf/v2/vex-feed/) in the newer, binary RPM aware format.
 
 
 
@@ -328,6 +328,33 @@ For the fixed component `kernel-0:3.10.0-693.112.1.el7.src`, a relationship entr
   "relates_to_product_reference": "7Server-7.4.AUS"
 }
 ```
+
+#### Binary RPM Expansion
+
+RPMs can have either a one-to-one or one-to-many mapping between the Source RPM and Binary RPM(s).
+Binary expansion allows the VEX data to offer a more fine-grained level of detail to describe
+where vulnerabilities are present, and where they are fixed, 
+
+Expanding single SRPMs to multiple binary RPMs comes with a potential issue when data in different places
+refers to different levels.  As binary expansion is rolled out, there may be a case where a CSAF Advisory 
+mentions a fix being made to a Source RPM, but a corresponding VEX File for the CVE listing it as being
+fixed in the individual Binary RPMs.
+
+At the present time, End of Life (EOL) products have limited binary expansion available due to them
+pre-dating the current system and missing the level of data needed to perform the mapping.
+
+#### Modular RPM (rpmmod) Expansion
+
+Similar to Binary RPM Expansion, a similiar concept applies to `rpmmod` content.  In the event
+that a vulnerability affects the module (the rpmmod entity) it is unlikely to affect every RPM
+that the module consists of.
+
+Expanding rpmmod level information to rpm level allows for fine-grained detail to capture
+the affectedness of the specific packages.
+
+As with the above, there is the need to map `rpmmod` entities to their constituent parts, and to 
+map in the inverse to identify what rpmmod a given part may belong to.
+
 
 ### Vulnerability Metadata
 
