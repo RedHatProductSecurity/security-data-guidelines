@@ -343,6 +343,13 @@ $ dnf repoquery --qf "%{repoid}" libgcc-11.3.1-4.3.el9.x86_64
 rhel-9-for-x86_64-baseos-rpms
 ```
 
+You can also limit to installed packages to ensure what is printed correlates to what has been installed, versus is available to install.  For example,
+
+```
+$ dnf repoquery --installed --qf "%{name}: %{from_repo} %{repoid}" <packages>
+```
+
+
 ### RPM Repository to CPE mapping 
 Red Hat maintains a JSON file to map Red Hat RPM repositories to our CPEs. Once you have identified the repositories
 used for the product and version by following the previous steps, you search for the repository label and determine
