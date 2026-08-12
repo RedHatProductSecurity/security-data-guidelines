@@ -230,7 +230,7 @@ ways to identify repository information for a container image.
 #### Content Manifest JSON files
 
 Starting in June 2020, Content manifest JSON files were included for each layer
-in the container image in the `root/buildinfo/` directory.  In 2025 this
+in the container image in the `/root/buildinfo/` directory.  In 2025 this
 system was replaced (see below) with content-sets, and will be deprecated at
 some point in the future.
 
