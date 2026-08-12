@@ -232,7 +232,7 @@ always include the name of the component, a product ID and a product identificat
 displayed unnested under an `architecture` object, the `name` attribute will not reference a specific version number
 because these components are unfixed. Again, these unfixed `product_version` components will only be found in VEX files
 since CSAF files always represent a released RHSA. The purl identifiers for unfixed content are only available for
-`rpm`, `oci` (container), and `rpmmod` (modular rpm) purl content type.
+`rpm`, `oci` (container) purl content types.
 
 In the example below, the unfixed kernel component's name is `kernel` and doesn't include a specific version number or
 an architecture format.
