@@ -5,7 +5,7 @@ standard for identifying and locating software components throughout the open so
 supported by various tools and data formats and provides an easy way for representing package metadata across
 different contexts and ecosystems.
 
-Red Hat uses purl to identify software components in our CSAF advisory and VEX files as well as our SBOM files.  These files are all published [here](https://access.redhat.com/security/data).
+Red Hat uses purl to identify software components in our CSAF advisory and VEX files as well as our SBOM files.  These files are all published at <https://access.redhat.com/security/data>.
  
 To increase the interoperability of all tools processing purl strings, each purl generator must ensure that
 identical software components are identified with the same purls. Adopting a consistent purl convention across the

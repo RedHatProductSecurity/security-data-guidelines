@@ -40,7 +40,7 @@ A Red Hat Security Advisory (RHSA) will always have a CSAF advisory file associa
 Bug Advisory (RHBA) or Red Hat Enhancement Advisory (RHEA) releases that contain security fixes will have a CSAF advisory
 file associated.
 
-Red Hat's CSAF files are public, and published per advisory [here](https://security.access.redhat.com/data/csaf/v2/advisories/).
+Red Hat's CSAF files are public, and published per advisory, at <https://security.access.redhat.com/data/csaf/v2/advisories/>.
 
 
 ### CSAF VEX Overview
@@ -56,9 +56,7 @@ the portfolio-wide view of what is affected versus what is fixed.
 Red Hat's VEX files are always associated with one CVE and include fix status information for all vulnerable packages
 and Red Hat products.
 
-Red Hat's VEX files are public, and published per CVE
-[here](https://security.access.redhat.com/data/csaf/v2/vex/) in the original format, and
-[here](https://security.access.redhat.com/data/csaf/v2/vex-feed/) in the newer, binary RPM aware format.
+Red Hat's VEX files are public, and published per CVE at <https://security.access.redhat.com/data/csaf/v2/vex/> in the original format, and at <https://security.access.redhat.com/data/csaf/v2/vex-feed/> in the newer, binary RPM aware format.
 
 
 
@@ -67,8 +65,7 @@ Red Hat's VEX files are public, and published per CVE
 Although CSAF advisory and VEX files ultimately serve different purposes, both file types meet the
 CSAF machine-readable standard and use the VEX profile to convey security information. The CSAF standard includes
 three main sections: document metadata, a product tree and vulnerability metadata. The full document structure can
-be found
-[here](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/csaf-vex/csaf-vex.json).
+be found at <https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/csaf-vex/csaf-vex.json>.
 
 The following sections break down the information included in CSAF-VEX documents using the
 [VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2023/cve-2023-20593.json) as an example.
