@@ -49,7 +49,7 @@ adding an extra level of granularity to the VEX data, scanners are able to
 exclude non-affected binary packages from vulnerabilities that are present in
 the shared source.
 
-Additionally, an RPM module is a set of RPM packages that represent a higher level software component that is installed together.  AppStreams are a common example of RPM modules.  Note that RPM module support was removed in RHEL 10.
+Additionally, an RPM module is a set of RPM packages that represent a higher level software component that is installed together.  AppStreams are a common example of RPM modules.  Note that RPM module support was removed in RHEL 10, to the extent that it no longer distributes modular RPM content.  Although the actual functionality is scheduled for removal in a later release, `rpmmod` remains valid and is supported for prior versions.
 
 SRPMs and RPMs are represented in CSAF advisories and VEX data using the `rpm` purl type.  RPM Modules are represented with the `rpm` purl type and also have a `rpmmod` modifier with additional data.  More detailed information about RPM purl usage can be found
 [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
