@@ -78,6 +78,10 @@ Using this information, we can format a purl for the libgcc component.
 pkg:rpm/redhat/libgcc@11.3.1-4.3.el9?arch=x86_64
 ```
 
+Modular RPMs (`rpmmod`) can be queried using the `dnf module list` command (which requires the python3-dnf-plugin-modulesync package to be installed)
+
+
+
 #### SRPMs
 The metadata for every RPM contains information on the source from which it was build.  In this example, we can query a single
 package (`libgcc`) and use the `--qf` format option to return the name of the Source RPM from which it was created.
