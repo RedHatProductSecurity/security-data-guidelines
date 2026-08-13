@@ -80,6 +80,7 @@ pkg:rpm/redhat/libgcc@11.3.1-4.3.el9?arch=x86_64
 
 Modular RPMs (`rpmmod`) can be queried using the `dnf module list` command (which requires the python3-dnf-plugin-modulesync package to be installed)
 
+Due to changes in "binary expansion", meaning the mapping of a vulnerability in a Source RPM to identified binary RPMs that were created from it, it is possible that the list of RPMs included might change when a VEX file is regenerated.  Without fine-grained information, a vulnerability in a Source RPM will be reflected in every binary RPM that it creates.  If fine-grained information later becomes available, some of these binary RPMs may no longer be in scope for the CVE and so be removed from both the "products" list, as well as the "product_status" list.
 
 
 #### SRPMs
