@@ -24,6 +24,17 @@
           "name": "package:rpm:sha256header",
           "value": "31b5079268339cff7ba65a0aee77930560c5adef4b1b3f8f5927a43ee46a56d9"
         }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://www.openssl.org/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/(RH openssl midstream repo)",
+          "comment": "placeholder"
+        }
       ]
     },
     "timestamp": "2006-08-14T02:34:56Z",
@@ -1425,6 +1436,17 @@
           }
         ]
       },
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://www.openssl.org/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/(RH openssl midstream repo)",
+          "comment": "placeholder"
+        }
+      ],
       "evidence": {
         "identity": [
           {
