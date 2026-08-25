@@ -26,6 +26,90 @@ PROFILE = koji.get_profile_module(KOJI_PROFILE)
 SESSION = koji.ClientSession(PROFILE.config.server)
 
 
+def parse_spec_url(spec_path: str) -> str:
+    """Return the verbatim rpmspec URL tag value, or empty string."""
+    try:
+        result = subprocess.run(
+            ["rpmspec", "-P", spec_path],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            check=True,
+        )
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return ""
+    for line in result.stdout.decode("utf-8").splitlines():
+        if line.lower().startswith("url "):
+            return line[4:].strip()
+    return ""
+
+
+def parse_koji_source(build: dict) -> tuple[str, str]:
+    """Return (repo_url, commit) from a Koji build record."""
+    source = build.get("source") or ""
+    if "#" in source:
+        repo, commit = source.rsplit("#", 1)
+    else:
+        repo, commit = source, ""
+    return repo, commit
+
+
+def is_public_url(url: str) -> bool:
+    """True when url is a usable public upstream URL (not macro or internal host)."""
+    if not url or "%{" in url:
+        return False
+    lowered = url.lower()
+    if "redhat.com" in lowered:
+        return False
+    return True
+
+
+def midstream_vcs_placeholder_url(name: str) -> str:
+    return f"https://github.com/(RH {name} midstream repo)"
+
+
+def parse_source_repos(distgit_path: str) -> list[dict]:
+    """Parse dist-git source-repos for public upstream rows (not used by example mocks)."""
+    repos = []
+    path = os.path.join(distgit_path, "source-repos")
+    if not os.path.isfile(path):
+        return repos
+    with open(path) as fp:
+        for line in fp:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            parts = line.split()
+            if len(parts) >= 2:
+                repo, commit = parts[0], parts[1]
+                if is_public_url(repo):
+                    repos.append({"url": repo, "commit": commit})
+    return repos
+
+
+def build_srpm_provenance(spec_path: str, build: dict, name: str) -> dict:
+    spec_url = parse_spec_url(spec_path)
+    if not is_public_url(spec_url):
+        spec_url = ""
+    _, commit = parse_koji_source(build)
+    return {
+        "spec_url": spec_url,
+        "vcs_url": midstream_vcs_placeholder_url(name),
+        "vcs_commit": commit,
+    }
+
+
+def build_cdx_external_references(provenance: dict) -> list[dict]:
+    refs = []
+    if provenance.get("spec_url"):
+        refs.append({"type": "website", "url": provenance["spec_url"]})
+    if provenance.get("vcs_url"):
+        ref = {"type": "vcs", "url": provenance["vcs_url"]}
+        if provenance.get("vcs_commit"):
+            ref["comment"] = provenance["vcs_commit"]
+        refs.append(ref)
+    return refs
+
+
 class SBOMBuilder:
     def __init__(self):
         self.spdx_packages = []
@@ -269,7 +353,7 @@ class SBOMBuilder:
             url = f"{url}.{ext}"
         return url
 
-    def handle_srpm(self, filename, name, version):
+    def handle_srpm(self, filename, name, version, build):
         with TemporaryDirectory(dir=os.getcwd()) as srcdir:
             subprocess.run(
                 check=True,
@@ -333,14 +417,14 @@ class SBOMBuilder:
                 if not m:
                     continue
 
-                (source, url, _, sfn) = m.groups()
+                source, url, _, sfn = m.groups()
 
                 # Parse filename
                 tarball_match = TARBALL_RE.match(sfn)
                 if not tarball_match:
                     continue
 
-                (sname, sver) = TARBALL_RE.match(sfn).groups()
+                sname, sver = TARBALL_RE.match(sfn).groups()
 
                 cdx_upstream_ancestor = None
                 # See Component Registry for a full worked example of unpacking sources
@@ -438,7 +522,9 @@ class SBOMBuilder:
                     }
                 )
                 cdx_pedigrees.append(cdx_pedigree)
-            return cdx_pedigrees
+            spec_path = os.path.join(srcdir, "SPECS", f"{name}.spec")
+            provenance = build_srpm_provenance(spec_path, build, name)
+            return cdx_pedigrees, provenance
 
     @staticmethod
     def download_build(build_id):
@@ -463,7 +549,7 @@ class SBOMBuilder:
         cdx_root_component = None
         cdx_pedigrees = []
         for rpm in rpms:
-            (name, version, release, nvr, arch, epoch) = (
+            name, version, release, nvr, arch, epoch = (
                 rpm["name"],
                 rpm["version"],
                 rpm["release"],
@@ -528,7 +614,13 @@ class SBOMBuilder:
             }
             self.pkgs_by_arch.setdefault(arch, []).append(package)
             if arch == "src":
+                cdx_pedigrees, provenance = self.handle_srpm(filename, name, version, build)
+                if provenance.get("spec_url"):
+                    package["homepage"] = provenance["spec_url"]
                 cdx_root_component = create_cdx_from_spdx(package)
+                ext_refs = build_cdx_external_references(provenance)
+                if ext_refs:
+                    cdx_root_component["externalReferences"] = ext_refs
                 self.spdx_relationships.append(
                     {
                         "spdxElementId": "SPDXRef-DOCUMENT",
@@ -536,7 +628,6 @@ class SBOMBuilder:
                         "relatedSpdxElement": spdxid,
                     }
                 )
-                cdx_pedigrees = self.handle_srpm(filename, name, version)
             else:
                 self.spdx_relationships.append(
                     {

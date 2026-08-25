@@ -51,8 +51,9 @@ The two most widely used SBOM formats are [SPDX](https://spdx.dev/) and
 [CycloneDX](https://cyclonedx.org/). Both offer similar features and data fields, and can be used to represent
 complex inventories of components, their metadata (such as provenance or licensing), and additional document properties.
 
-Most of this document focuses on Red Hat's use of SPDX 2.3 in its published SBOMs. In the future, we may add similar
-guidelines for CycloneDX and SPDX 3.0.
+Most of this document focuses on Red Hat's use of SPDX 2.3 in its published SBOMs. CycloneDX 1.6 guidance for RPM
+builds is in the [RPM (CycloneDX 1.6)](#rpm-cyclonedx-16) section below; SPDX 3.0 guidelines may be added in the
+future.
 
 ## Types
 
@@ -532,8 +533,8 @@ the following data:
     ```
 
 [`downloadLocation`](https://spdx.github.io/spdx-spec/v2.3/package-information/#77-package-download-location-field)
-:   The `downloadlocation` will never be set; container images don't have their own VCS repos. The location from
-    where the image itself can be downloaded can be acquired from the purl identifier.
+:   For binary RPM packages, `downloadLocation` is `NOASSERTION`. The RPM file is identified by its purl and
+    checksum; repository download locations are represented via `repository_id` purl qualifiers in release-time SBOMs.
 
 purl identifiers
 :   A single RPM package may be available from multiple DNF/Yum repositories, in which case it will include a purl
@@ -641,6 +642,160 @@ graph TD
     B -->|GENERATED_FROM| A
     D -->|GENERATED_FROM| C
 ```
+
+##### RPM build provenance
+
+SBOM producers for RPM builds should record **upstream facts as observed** — not interpret or translate them. The RPM
+name (for example `automation-controller`) may differ from the upstream project name (`awx`); downstream tools
+resolve that mapping from provenance URLs and source refs. Do not emit synthetic upstream project packages solely to
+carry a translated name.
+
+Three complementary provenance layers apply to RPM build SBOMs:
+
+| Layer | What it answers | RPM-path source | SPDX (SRPM) | CycloneDX (SRPM) |
+|-------|-----------------|-----------------|-------------|------------------|
+| **1. Build context** | Where Red Hat packages this RPM | Koji `build.source` | *(omit `externalRefs` vcs on rpm SRPM in release examples — stripped during release regen)* | `externalReferences` `{type: "vcs", url, comment: commit}` (placeholder URL in examples) |
+| **2. Upstream project URL** | Where the upstream project lives | spec `%URL:`; public rows in `source-repos` | `homepage` on SRPM | `externalReferences` `{type: "website"}` |
+| **3. Source artifacts** | What tarballs/archives were consumed | `rpmdev-spectool`; SBOMer pedigree | SourceN packages + `CONTAINS` / `GENERATED_FROM` | `pedigree.ancestors[]` nested chain |
+
+**Producer guidance:**
+
+1. **Source artifact `name`** — use the observed tarball stem or archive filename (`openssl`, `delve`, and so on). Do
+   not rename to a canonical upstream project name.
+2. **Spec `%URL:`** — when present in the spec and available to the producer, record it verbatim on the SRPM as SPDX
+   `homepage` / CycloneDX `externalReferences.website`. This is especially useful when pedigree is missing.
+3. **Do not** put spec `%URL:` in Source0 `downloadLocation` — that field is for the actual fetched archive URL.
+4. **Do not** emit synthetic upstream project packages for name aliasing (for example, do not add a package named
+   `awx` for `automation-controller`). The spec URL on the SRPM is sufficient for downstream resolution.
+5. **Internal lookaside / dist-git hosts** — pedigree URLs on `*.redhat.com` hosts identify midstream packaging
+   sources, not upstream. Treat them as midstream per the diagram above. Do not introduce new `*.redhat.com`
+   hostnames into public docs or committed example SBOMs; use placeholders such as
+   `github.com/(RH openssl midstream repo)/...`.
+6. **`source-repos`** — record each upstream repo URL and commit as-is. Do not collapse multiple rows to a single
+   derived name.
+
+**Example URL policy:** committed examples and documentation snippets use public upstream URLs only
+(`openssl.org`, `github.com/...`). Midstream, dist-git, and Koji source refs use placeholders matching the openssl
+example pattern.
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-SRPM",
+      "name": "openssl",
+      "versionInfo": "3.0.7-18.el9_2",
+      "homepage": "http://www.openssl.org/",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&epoch=1"
+        }
+      ]
+    }
+    ```
+
+=== "CycloneDX 1.6"
+
+    ```json
+    {
+      "type": "library",
+      "name": "openssl",
+      "version": "3.0.7-18.el9_2",
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&epoch=1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://www.openssl.org/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/(RH openssl midstream repo)",
+          "comment": "abc123def456"
+        }
+      ],
+      "pedigree": {
+        "ancestors": [
+          {
+            "type": "library",
+            "name": "openssl",
+            "version": "3.0.7",
+            "purl": "pkg:generic/openssl@3.0.7?download_url=https://github.com/(RH openssl midstream repo)/archive/refs/tags/3.0.7.tar.gz"
+          }
+        ]
+      }
+    }
+    ```
+
+For `generic` source purls and `download_url` conventions, see [Upstream source purls for RPM builds](purl.md#upstream-source-purls-for-rpm-builds).
+
+**SPDX 2.3 encoding options**
+
+| Option | Mechanism | Pros | Cons |
+|--------|-----------|------|------|
+| **A. Tarball packages only** (current) | Source0-origin `name` + `downloadLocation` | Faithful to fetched artifacts | RPM name may not match upstream search terms |
+| **B. SRPM homepage** | `homepage` from spec URL (verbatim) | Simple; enables downstream URL→name mapping | No structured upstream name in SBOM |
+| **C. VCS externalRef** | `OTHER/vcs` on non-rpm source packages | Precise commit | SPDX rpm SRPM vcs refs lost on release regen |
+| ~~D. Upstream project package~~ | ~~Synthetic package with derived name~~ | — | **Rejected:** name translation belongs downstream |
+
+**Recommendation:** **A + B** for SPDX SRPM (`homepage` on rpm packages only).
+
+**CycloneDX 1.6 encoding options**
+
+| Option | Mechanism | Pros | Cons |
+|--------|-----------|------|------|
+| **A. pedigree.ancestors** (current SBOMer) | Nested ancestors on SRPM | Matches SBOMer output | `name` from tarball, not canonical upstream |
+| **B. externalReferences** | `website` + `vcs` on SRPM | Standard fields; carries spec URL verbatim | Not in all current SBOMer output |
+| ~~C. Separate upstream component~~ | ~~Extra component with derived name~~ | — | **Rejected:** name translation belongs downstream |
+| ~~D. properties~~ | e.g. `redhat:upstream-name` | — | **Avoid** (non-standard) |
+
+**Recommendation:** **A + B** as available.
+
+**SPDX ↔ CycloneDX equivalence**
+
+| Concept | SPDX | CycloneDX |
+|---------|------|-----------|
+| Upstream project URL (verbatim) | `homepage` on SRPM | `externalReferences[type=website]` |
+| Dist-git checkout | *(omit vcs on rpm SRPM in release examples)* | `externalReferences[type=vcs]` (placeholder) |
+| Upstream git (`source-repos`) | source package `downloadLocation` + vcs ref (URL as-is) | `externalReferences[type=vcs]` or pedigree leaf with literal URL |
+| Tarball archive | SourceN package + `downloadLocation` | `pedigree.ancestors` leaf `purl` with `download_url` |
+| SRPM → binary RPM | `GENERATED_FROM` | `dependencies` (`provides` / `dependsOn`) |
+| RPM name → upstream name | **Not in SBOM** | **Not in SBOM** |
+
+##### RPM (CycloneDX 1.6)
+
+CycloneDX 1.6 RPM build SBOMs follow the same component model as SPDX: one document per Koji build, with the SRPM as
+`metadata.component` and a matching entry in `components[]` that carries `pedigree.ancestors`.
+
+**SRPM component**
+
+- `metadata.component` — the SRPM without `bom-ref`; mirrors the top-level build subject.
+- `components[]` SRPM entry — same purl as `metadata.component`, includes `bom-ref`, `pedigree`, and any
+  `externalReferences` not duplicated on `metadata.component` (examples include both for clarity).
+- Binary subpackage RPMs — separate `components[]` entries with `pkg:rpm/redhat/...` purls.
+
+**Provenance**
+
+- `pedigree.ancestors[]` — nested chain of source archives consumed by the SRPM, equivalent to SPDX `CONTAINS` /
+  `GENERATED_FROM` between SourceN and midstream/upstream packages. Leaf `purl` values use `pkg:generic/...` with
+  `download_url` per [purl guidelines](purl.md#upstream-source-purls-for-rpm-builds).
+- `externalReferences` — `website` for spec `%URL:` (verbatim); `vcs` for dist-git/Koji build context (placeholder
+  URLs in committed examples).
+
+**Dependencies**
+
+- `dependencies[].ref` — SRPM `bom-ref`.
+- `dependencies[].provides` — purls of binary RPMs generated from the SRPM (`GENERATED_FROM` equivalent).
+- `dependencies[].dependsOn` — bundled provides (`bundled()` / `golang()`) linked to the SRPM.
+
+**Release-time additions**
+
+- `evidence.identity` on binary RPM components — alternate purls with `repository_id` qualifiers (see release examples).
+- `properties` — `package:rpm:sigmd5` and `package:rpm:sha256header` from RPM header annotations.
+
+Example: [openssl-3.0.7-18.el9_2.cdx.json](../sbom/examples/rpm/release/openssl-3.0.7-18.el9_2.cdx.json).
 
 ##### Bundled dependencies
 
