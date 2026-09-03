@@ -165,6 +165,28 @@ that corresponds to the artifact.
 
 The use of `generic` purls should be limited to components that are not available in any other purl type.
 
+## Upstream source purls for RPM builds
+
+RPM build SBOMs may include source artifacts that are not RPM packages themselves. Use `generic` purls (or a typed
+purl when the dependency is a known registry package) with the **observed** name from the fetched archive or
+source-repos row — not a translated upstream project name.
+
+Tarball archives from `SourceN` entries:
+
+```
+pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz&checksum=sha256:83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e
+```
+
+Git checkouts from dist-git `source-repos` (public upstream rows):
+
+```
+pkg:generic/delve@a1b2c3d4?download_url=https://github.com/go-delve/delve#a1b2c3d4
+```
+
+When a scanned build dependency is a known registry package, use the appropriate typed purl (`pkg:golang/...`,
+`pkg:npm/...`, and so on) instead of `generic`.
+
+
 ## Additional Notes
 
 The guidelines highlighted in this document represent an ideal state across all of Red Hat-published security data

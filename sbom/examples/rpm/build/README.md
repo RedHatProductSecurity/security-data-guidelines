@@ -26,6 +26,22 @@ When comparing two `pkg:rpm` purls, identical except that one has a
 `repository_id` qualifier and the other does not, many systems may treat
 these as distinct.
 
+Build provenance
+----------------
+
+Build-time RPM SBOMs can carry upstream provenance from the RPM manifest path:
+
+- spec `%URL:` → SPDX SRPM `homepage` / CycloneDX `externalReferences.website` (verbatim public URL)
+- Koji `build.source` → CycloneDX `externalReferences.vcs` on the SRPM (placeholder URL in committed examples)
+- `SourceN` tarballs / SBOMer pedigree → SPDX `CONTAINS` / `GENERATED_FROM` or CycloneDX `pedigree.ancestors`
+
+The example generator [`from-koji.py`](from-koji.py) implements this via `parse_spec_url()`, `parse_koji_source()`, and
+`build_srpm_provenance()`. Producers record observed facts only — they do not translate RPM names to upstream project
+names (for example `automation-controller` is not renamed to `awx` in the SBOM).
+
+See [Understanding SBOMs — RPM build provenance](../../../../docs/sbom.md#rpm-build-provenance) and
+[Upstream source purls for RPM builds](../../../../docs/purl.md#upstream-source-purls-for-rpm-builds).
+
 Bundled dependencies
 --------------------
 

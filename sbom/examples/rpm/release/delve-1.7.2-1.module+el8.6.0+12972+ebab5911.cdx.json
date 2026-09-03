@@ -24,6 +24,17 @@
           "name": "package:rpm:sha256header",
           "value": "8d1fbd62ebbb9006ed9866832c00a0273d166b6b5d1c71daf89c5fd708a4cbce"
         }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/go-delve/delve"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/(RH delve midstream repo)",
+          "comment": "placeholder"
+        }
       ]
     },
     "timestamp": "2006-08-14T02:34:56Z",
@@ -1570,6 +1581,17 @@
           }
         ]
       },
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/go-delve/delve"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/(RH delve midstream repo)",
+          "comment": "placeholder"
+        }
+      ],
       "evidence": {
         "identity": [
           {

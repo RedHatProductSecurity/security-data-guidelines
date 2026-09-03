@@ -474,7 +474,8 @@
           "annotationDate": "2006-08-14T02:34:56Z",
           "comment": "sha256header: 8d1fbd62ebbb9006ed9866832c00a0273d166b6b5d1c71daf89c5fd708a4cbce"
         }
-      ]
+      ],
+      "homepage": "https://github.com/go-delve/delve"
     },
     {
       "SPDXID": "SPDXRef-Source0",
