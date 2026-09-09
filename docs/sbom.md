@@ -814,12 +814,12 @@ Use a typed purl when the provide name indicates the ecosystem:
 | Language prefix in provide | purl type | Example provide | Example purl |
 |----------------------------|-----------|-----------------|--------------|
 | *(none)* / generic bundled | `generic` | `bundled(libvterm)` | `pkg:generic/libvterm` |
-| `golang(...)` | `golang` | `golang(github.com/foo/bar)` | `pkg:golang/github.com/foo/bar@1.2.3` |
-| `bundled(python(...))` | `pypi` | `bundled(python(requests))` | `pkg:pypi/requests@2.31.0` |
-| `bundled(nodejs(...))` | `npm` | `bundled(nodejs(lodash))` | `pkg:npm/lodash@4.17.21` |
-| `bundled(ruby(...))` | `gem` | `bundled(ruby(rake))` | `pkg:gem/rake@13.0.6` |
-| `bundled(crate(...))` | `cargo` | `bundled(crate(serde))` | `pkg:cargo/serde@1.0.0` |
-| `bundled(mvn(...))` | `maven` | `bundled(mvn(org/foo))` | `pkg:maven/org/foo@1.0.0` |
+| `golang(...)` | `golang` | `golang(github.com/foo/bar) = 1.2.3` | `pkg:golang/github.com/foo/bar@1.2.3` |
+| `bundled(python*(...))` <br> `bundled(python*-...)` | `pypi` | `bundled(python(requests)) = 2.31.0` <br> `bundled(python3dist(requests)) = 2.31.0` <br> `bundled(python3-requests) = 2.31.0` | `pkg:pypi/requests@2.31.0` |
+| `bundled(nodejs*(...))` <br> `bundled(npm*(...))` <br> `bundled(nodejs-...)` | `npm` | `bundled(nodejs(lodash)) = 4.17.21` <br> `bundled(npm(lodash)) = 4.17.21` <br> `bundled(nodejs-lodash) = 4.17.21` | `pkg:npm/lodash@4.17.21` |
+| `bundled(ruby*(...))` <br> `bundled(rubygem-...)` | `gem` | `bundled(ruby(rake)) = 13.0.6` <br> `bundled(rubygem-rake) = 13.0.6` | `pkg:gem/rake@13.0.6` |
+| `bundled(crate*(...))` | `cargo` | `bundled(crate(serde)) = 1.0.0` | `pkg:cargo/serde@1.0.0` |
+| `bundled(mvn*(...))` | `maven` | `bundled(mvn(org/foo)) = 1.0.0` | `pkg:maven/org/foo@1.0.0` |
 
 === "SPDX 2.3"
 
