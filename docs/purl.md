@@ -5,14 +5,8 @@ standard for identifying and locating software components throughout the open so
 supported by various tools and data formats and provides an easy way for representing package metadata across
 different contexts and ecosystems.
 
-Red Hat uses purl to identify software components in our
-[CSAF](https://www.redhat.com/en/blog/csaf-vex-documents-now-generally-available) advisory and
-[VEX](https://www.redhat.com/en/blog/red-hat-vex-files-cves-are-now-generally-available) files as
-well as our
-[SBOM](https://www.redhat.com/en/blog/future-red-hat-security-data?channel=/en/blog/channel/security) files. We will
-continue expanding our use of purl across additional security-related metadata files and software solutions in the
-future as well.
-
+Red Hat uses purl to identify software components in our CSAF advisory and VEX files as well as our SBOM files.  These files are all published at <https://access.redhat.com/security/data>.
+ 
 To increase the interoperability of all tools processing purl strings, each purl generator must ensure that
 identical software components are identified with the same purls. Adopting a consistent purl convention across the
 industry improves collaboration among organizations and simplifies the exchange of (not-just-) security-related
@@ -29,8 +23,7 @@ to refer to the same concept.
 
 ## Identifying RPM packages
 
-The [`rpm` purl type](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#rpm) identifies,
-unsurprisingly, an RPM package. When it comes to the naming conventions of a single RPM file, Red Hat uses the NEVRA
+As the name implies, the [`rpm` purl type](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#rpm) identifies an RPM package. When it comes to the naming conventions of a single RPM file, Red Hat uses the NEVRA
 convention that follows the `<name>-<epoch>:<version>-<release>.<architecture>.rpm` file name pattern, for example
 `emacs-27.2-9.el9.x86_64.rpm`. For more information about RPM packaging conventions, see the
 [RPM Packaging Guide](https://rpm-packaging-guide.github.io/)
@@ -200,7 +193,7 @@ The guidelines highlighted in this document represent an ideal state across all 
 that we want to achieve in the long term. In some cases, purl identifiers may be missing some of the metadata
 presented here or not specify it. Please
 [contact Red Hat Product Security](https://access.redhat.com/security/team/contact/) or file a Jira issue in the
-[SECDATA project](https://issues.redhat.com/projects/SECDATA) if you find any discrepancies in Red Hat's security data.
+[SECDATA project](https://redhat.atlassian.net/projects/SECDATA) if you find any discrepancies in Red Hat's security data.
 Feedback on our usage of purl is always welcome and appreciated.
 
 Also of note is the purpose of using purls as identifiers versus locators. Some purls may include certain qualifiers

@@ -32,23 +32,34 @@ CSAF advisory and VEX files as well as our SBOM files. Detailed information abou
 [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/).
 
 ### RPMs and RPM modules 
-An RPM package is a file format used by the Red Hat Package Manager (RPM) system for software distribution and management, 
-which package consists of an archive of files and metadata used to install and erase these files.
 
-There are two types of RPM packages: source RPMs, which contain source code and a spec file and binary RPMs, which are
-the files built from source packages and patches. 
+RPM is a file format used by the Red Hat Package Manager (RPM) system for software distribution and management, 
+in which packages consist of an archive of files and metadata used to manage the installation, upgrade and deinstallation of the associated software package.
 
-Additionally, an RPM module is a set of RPM packages that represent a component and are usually installed together. 
-Starting from RHEL 10, there will be no more RPM modules.
+There are two types of RPM packages: Source RPMs (also known as SRPMs) contain a spec file along with source code and patches from which the binary RPMs are built.  Binary RPMs (RPMs) contain the actual files for the package to be installed, and are separated by CPU architecture (arch) for compiled content.
 
-SRPMS, RPMs and RPM modules are represented in CSAF advisories and VEX data using the `rpm` purl type. More detailed
-information about RPM purl usage can be found
+Packages commonly have a one-to-one mapping of SRPM to RPM, but more complex
+software may have subpackages defined in the RPM .spec file creating a
+one-to-many mapping.  For example, the `git` SRPM creates `git`, `git-core`,
+`git-gui` and `git-devel` binary RPMs.  In the context of mapping
+vulnerabilities in source code to affectedness in binary packages we can
+clearly see that a vulnerability in the graphical user interface is likely to
+be present in the git-gui binary RPM but might be absent from git-core.  By
+adding an extra level of granularity to the VEX data, scanners are able to 
+exclude non-affected binary packages from vulnerabilities that are present in
+the shared source.
+
+Additionally, an RPM module is a set of RPM packages that represent a higher level software component that is installed together.  AppStreams are a common example of RPM modules.  Note that RPM module support was removed in RHEL 10, to the extent that it no longer distributes modular RPM content.  Although the actual functionality is scheduled for removal in a later release, `rpmmod` remains valid and is supported for prior versions.
+
+SRPMs and RPMs are represented in CSAF advisories and VEX data using the `rpm` purl type.  RPM Modules are represented with the `rpm` purl type and also have a `rpmmod` modifier with additional data.  More detailed information about RPM purl usage can be found
 [here](https://redhatproductsecurity.github.io/security-data-guidelines/purl/#identifying-rpm-packages).
 
 
+
 #### Binary RPMs
-Both binary RPMs and RPM modules installed in a container image can be discovered using the `rpm -qa` command from within 
-the container image.
+Both binary RPMs and RPM modules installed on a host (or in a container image) can be discovered using the `rpm -qa` command from within the system.  In this case the `-qa` refers to `q` (query) and `a` (all installed packages), and the `--qf` specifies
+the format to use for each installed package.
+
 ```
 # Example return of RPM query
 $ rpm -qa --qf '%{NAME} %{EPOCHNUM} %{VERSION} %{RELEASE} %{ARCH}\n'
@@ -67,8 +78,14 @@ Using this information, we can format a purl for the libgcc component.
 pkg:rpm/redhat/libgcc@11.3.1-4.3.el9?arch=x86_64
 ```
 
+Modular RPMs (`rpmmod`) can be queried using the `dnf module list` command (which requires the python3-dnf-plugin-modulesync package to be installed)
+
+Due to changes in "binary expansion", meaning the mapping of a vulnerability in a Source RPM to identified binary RPMs that were created from it, it is possible that the list of RPMs included might change when a VEX file is regenerated.  Without fine-grained information, a vulnerability in a Source RPM will be reflected in every binary RPM that it creates.  If fine-grained information later becomes available, some of these binary RPMs may no longer be in scope for the CVE and so be removed from both the "products" list, as well as the "product_status" list.
+
+
 #### SRPMs
-Additionally, SRPMs can be discovered from a binary RPM by using the following command from within the container image.
+The metadata for every RPM contains information on the source from which it was build.  In this example, we can query a single
+package (`libgcc`) and use the `--qf` format option to return the name of the Source RPM from which it was created.
 
 ```
 # Example return of SRPM query
@@ -204,15 +221,23 @@ Red Hat uses CPEs to uniquely identify each product and version, following the C
 Red Hat CPEs can be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/cpe/). 
 
 ### RPM Repositories
-Each Red Hat container images published after June 2020 include information about the repositories from which 
-the packages used in the container are sourced. Scanning vendors will use the repositories to identify CPEs that are 
-associated with the scanned image. The following sections explain different ways to identify repository information for 
-a container image. 
+
+Each Red Hat container image published after June 2020 include information
+about the repositories from which the packages used in the container are
+sourced. Scanning vendors should use these repositories to identify CPEs that
+are associated with the scanned image. The following sections explain different
+ways to identify repository information for a container image. 
 
 #### Content Manifest JSON files
-Previously, content manifest JSON files were included for each layer in the container image in the `root/buildinfo/` 
-directory. Inside each content manifest JSON file, you'll find a `content_sets` object, which specifies the
-repository names that provided the packages found in the container image. 
+
+Starting in June 2020, Content manifest JSON files were included for each layer
+in the container image in the `/root/buildinfo/` directory.  In 2025 this
+system was replaced (see below) with content-sets, and will be deprecated at
+some point in the future.
+
+Inside each content manifest JSON file, you'll find a `content_sets` object,
+which specifies the repository names that provided the packages found in the
+container image. 
 
 The following examples show how to get a list of the content manifest files from within a container image.
 ```
@@ -304,15 +329,27 @@ $ cat cat /usr/share/buildinfo/content-sets.json
 ```
 
 #### Querying Repositories for Binary RPMs 
-Although container images provide a list of repositories from which the packages in the image are sourced, vendors may also 
-be interested in determining the repository that provided a specific binary RPM. This can be done using the dnf database, but 
-dnf is not always shipped with container images. 
+
+Although container images provide a list of repositories from which the
+packages in the image are sourced, vendors may also be interested in
+determining the repository that provided a specific binary RPM. It is possible
+for multiple repositories to contain the same binary RPMs - this command lets
+you query the system to determine which repository was used at install time.
+Note that `dnf` is not always shipped with container images.
+
 ```
 # Example return of repository query 
 $ dnf repoquery --qf "%{repoid}" libgcc-11.3.1-4.3.el9.x86_64
 
 rhel-9-for-x86_64-baseos-rpms
 ```
+
+You can also limit to installed packages to ensure what is printed correlates to what has been installed, versus is available to install.  For example,
+
+```
+$ dnf repoquery --installed --qf "%{name}: %{from_repo} %{repoid}" <packages>
+```
+
 
 ### RPM Repository to CPE mapping 
 Red Hat maintains a JSON file to map Red Hat RPM repositories to our CPEs. Once you have identified the repositories
@@ -706,30 +743,30 @@ A Low Red Hat severity should be reported for the rhel9/python-312 container and
 
 ## Frequently Asked Questions (FAQs)
 Vendors are encouraged to raise any questions regarding security data by opening a 'Ticket' issue type in the public
-[SECDATA Jira project](https://issues.redhat.com/projects/SECDATA/).
+[SECDATA Jira project](https://redhat.atlassian.net/projects/SECDATA/).
 
 Many scanning vendors face similar challenges when reading and parsing Red Hat's security data. To check if your question
-has already been asked, you can review the list of questions asked [here](https://issues.redhat.com/browse/SECDATA-862?filter=12444038).
+has already been asked, you can review the list of questions asked [here](https://redhat.atlassian.net/browse/?filter=114902).
 
 ### Python and VENV 
-[https://issues.redhat.com/browse/SECDATA-831](https://issues.redhat.com/browse/SECDATA-831)
+[https://redhat.atlassian.net/browse/SECDATA-831](https://redhat.atlassian.net/browse/SECDATA-831)
 
 ### Repository Relative URLs 
-[https://issues.redhat.com/browse/SECDATA-1089](https://issues.redhat.com/browse/SECDATA-1089)
-[https://issues.redhat.com/browse/SECDATA-797](https://issues.redhat.com/browse/SECDATA-797)
-[https://issues.redhat.com/browse/SECDATA-1020](https://issues.redhat.com/browse/SECDATA-1020)
+[https://redhat.atlassian.net/browse/SECDATA-1089](https://redhat.atlassian.net/browse/SECDATA-1089)
+[https://redhat.atlassian.net/browse/SECDATA-797](https://redhat.atlassian.net/browse/SECDATA-797)
+[https://redhat.atlassian.net/browse/SECDATA-1020](https://redhat.atlassian.net/browse/SECDATA-1020)
 
 ### Empty Content Sets
-[https://issues.redhat.com/browse/SECDATA-966](https://issues.redhat.com/browse/SECDATA-966)
+[https://redhat.atlassian.net/browse/SECDATA-966](https://redhat.atlassian.net/browse/SECDATA-966)
 
 ### Differences in OVAL and VEX CPEs
-[https://issues.redhat.com/browse/SECDATA-1141](https://issues.redhat.com/browse/SECDATA-1141)
+[https://redhat.atlassian.net/browse/SECDATA-1141](https://redhat.atlassian.net/browse/SECDATA-1141)
 
 ### Duplicate RHSAs
-[https://issues.redhat.com/browse/SECDATA-969](https://issues.redhat.com/browse/SECDATA-969)
+[https://redhat.atlassian.net/browse/SECDATA-969](https://redhat.atlassian.net/browse/SECDATA-969)
 
 ## Additional Questions or Concerns 
 Red Hat is committed to continually improving our security data; any future changes to the data itself or the format of 
 the files are tracked in the [Red Hat Security Data Changelog](https://access.redhat.com/articles/5554431).
 
-For any potential bugs identified regarding security data, please file a 'Bug' issue type in the public [SECDATA Jira project](https://issues.redhat.com/projects/SECDATA/).
+For any potential bugs identified regarding security data, please file a 'Bug' issue type in the public [SECDATA Jira project](https://redhat.atlassian.net/projects/SECDATA/).

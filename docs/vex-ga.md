@@ -2,7 +2,7 @@
 
 ## VEX-GA Announcement
 
-Red Hat Product Security is pleased to share that the GA version of our new VEX (Vulnerability Exploit eXchange) files is now available [here](https://security.access.redhat.com/data/csaf/v2/vex-feed/).
+Red Hat Product Security is pleased to share that the GA version of our new VEX (Vulnerability Exploit eXchange) files is now available at <https://security.access.redhat.com/data/csaf/v2/vex-feed/>.
 
 ### GA Overview
 
@@ -15,7 +15,7 @@ This new release focuses on data precision and standardizing our CSAF VEX format
 - **Streamlined Content**: We’ve removed unrequired fields (duplicate titles, redundant CVSS scores, unnecessary note objects) and ensured `fixed` product and components no longer appear in `workaround` remediation objects.
 - **Modernized Infrastructure**: We have migrated VEX publication to a completely new service that improves performance and supportability.
 
-More detailed information on the differences between legacy VEX files and GA VEX files will be found [here](https://redhatproductsecurity.github.io/security-data-guidelines/vex-ga-details/).
+More detailed information on the differences between legacy VEX files and GA VEX files will be found at <https://redhatproductsecurity.github.io/security-data-guidelines/vex-ga-details/>.
 
 ### Bugs Fixed in GA Release
 
@@ -41,7 +41,7 @@ More detailed information on the differences between legacy VEX files and GA VEX
 
 For any issues or questions you have,  please file a jira issue with the following:
 
-- **Project**: [SECDATA](https://issues.redhat.com/projects/SECDATA/summary)
+- **Project**: [SECDATA](https://redhat.atlassian.net/projects/SECDATA/summary)
 - **Issue Type**: Ticket 
 - **Component**: ‘feedback-new-vex’ 
 - **Description**: The question or issue you wish to raise. Please provide a detailed explanation, the VEX file you are referencing and a specific example of the data.

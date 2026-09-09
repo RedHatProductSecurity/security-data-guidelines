@@ -2,60 +2,70 @@
 
 ## Security Data Overview
 
-In the past, Red Hat published security advisory information using Common Vulnerability Reporting Framework (CVRF) and
-CVE information using the Open Vulnerability and Assessment Language (OVAL) format. As of July 10th, 2024, Red Hat
-Product Security publishes CSAF files for every single Red Hat Security Advisory
-([RHSA](https://access.redhat.com/articles/explaining_redhat_errata)) and VEX files
-for every single CVE record that is associated with the Red Hat portfolio in any way.
+On July 10th, 2024, Red Hat Product Security started publishing CSAF advisory files for
+every Red Hat Security Advisory
+([RHSA](https://access.redhat.com/articles/explaining_redhat_errata)) published, as well
+as CSAF VEX files for every CVE record that is associated with the Red Hat portfolio
+in any way.
+
+This format is more capable than, and supercedes the prior data which was
+formatted as Common Vulnerability Reporting Framework (CVRF) files for
+advisories and Open Vulnerability and Assessment Language (OVAL) format files
+for CVE information.
+
+See the [OVAL v2 Announcement](https://access.redhat.com/security/oval-v2-deprecation-announcement) for the timeline
+of the OVAL deprecation.
+
+
+### CSAF File Format
 
 The [Common Security Advisory Framework (CSAF)](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html)
-was originally published as an open standard by OASIS Open in November 2022. CSAF files provide a structured,
+was originally published as an open standard by OASIS Open in November 2022.  CSAF provide a structured,
 machine-readable way of representing and sharing security advisory information across all software and hardware providers.
 
-### CSAF Security Advisories Overview
+Two types of file are published that each conform to this standard.  These are "CSAF advisory files" (commonly referred to
+as "CSAF files") which are created per advisory published, and "CSAF VEX files" (also referred to as "VEX files") which
+are created per CVE.
 
-Red Hat's CSAF security advisory files are always associated with an RHSA. A given security advisory may describe
-one or more product version(s) and one or more components, depending on the product type and update scope. The RHSA
-itself can also include updates to address one or more vulnerabilities. Red Hat's CSAF files are publicly available
-per RHSA [here](https://security.access.redhat.com/data/csaf/v2/advisories/).
 
-<!-- TOOD: add note about RHBAs/RHEAs that are also considered security advisories if they fix a CVE -->
+### CSAF Advisories Overview
+
+Red Hat's CSAF advisory files are created for every security fix published by Red Hat.  Depending on the fix, this might
+describe one or more product versions, or one or more components being updated, in addition to fixes for one or more
+vulnerabilities.
+
+These files contain the machine readable information that captures the fixes that the security update provided.
+
+A Red Hat Security Advisory (RHSA) will always have a CSAF advisory file associated with it.  Additionally, Red Hat
+Bug Advisory (RHBA) or Red Hat Enhancement Advisory (RHEA) releases that contain security fixes will have a CSAF advisory
+file associated.
+
+Red Hat's CSAF files are public, and published per advisory, at <https://security.access.redhat.com/data/csaf/v2/advisories/>.
+
 
 ### CSAF VEX Overview
 
-The CSAF standard acknowledges the need for different use cases and has therefore defined a variety of profiles.
-Each profile describes the necessary fields and information needed for that specific use case. Red Hat has adopted the
-Vulnerability Exploitability eXchange (VEX) profile, which is intended to provide the affected state of a vulnerability
-on a product or component.
+The CSAF standard acknowledges the need for different use cases and has therefore defined a variety of profiles, each one
+containing the necessary fields and information needed for that specific use case. Red Hat has adopted the
+Vulnerability Exploitability eXchange (VEX) profile, which captures the affected (affected, not affected, fixed, etc) state
+of a vulnerability across any products or components that it applies to.
+
+Taken together, the CSAF advisory informs of what vulnerabilities are fixed in every security update, and the VEX files give
+the portfolio-wide view of what is affected versus what is fixed.
 
 Red Hat's VEX files are always associated with one CVE and include fix status information for all vulnerable packages
-and Red Hat products. Red Hat's VEX files are publicly available per CVE
-[here](https://security.access.redhat.com/data/csaf/v2/vex/).
+and Red Hat products.
 
-### Differences from OVAL
+Red Hat's VEX files are public, and published per CVE at <https://security.access.redhat.com/data/csaf/v2/vex/> in the original format, and at <https://security.access.redhat.com/data/csaf/v2/vex-feed/> in the newer, binary RPM aware format.
 
-The data that is included in CSAF files differs from that included in OVAL in certain cases:
 
-- CSAF files identify a variety of software components, not just RPMs. The identification mechanism used is purl,
-  which itself contains a type for each identified software component.
-
-- CSAF files refer to SRPMs only when listed as affected but not yet fixed components. OVAL files contain a
-  listing of binary RPMs but this listing proved to be difficult to maintain. Until CSAF data is improved to include
-  consistent lists of binary RPMs, consumers of CSAF data can look up the related SRPM (to be matched with the one in
-  CSAF files) for a given binary RPM with:
-  ```bash
-  # Example lookup for the vim-minimal binary RPM:
-  $ rpm -q --qf "%{SOURCERPM}\n" vim-minimal-8.2.2637-21.el9.x86_64
-  vim-8.2.2637-21.el9.src.rpm
-  ```
 
 ## Document Structure
 
 Although CSAF advisory and VEX files ultimately serve different purposes, both file types meet the
 CSAF machine-readable standard and use the VEX profile to convey security information. The CSAF standard includes
 three main sections: document metadata, a product tree and vulnerability metadata. The full document structure can
-be found
-[here](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/csaf-vex/csaf-vex.json).
+be found at <https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/csaf-vex/csaf-vex.json>.
 
 The following sections break down the information included in CSAF-VEX documents using the
 [VEX file for CVE-2023-20593](https://access.redhat.com/security/data/csaf/v2/vex/2023/cve-2023-20593.json) as an example.
@@ -116,8 +126,8 @@ Vendor information is represented in the `publisher` object:
 
 CVE ID, CVE publish date and CVE revision history:
 
-* `id`: Provides the official CVE ID.
-* `initial_release_date`: Represents the date that the Red Hat first published information on the CVE.
+* `id`: Provides the official CVE ID, as published by [NVD](https://nvd.nist.gov).
+* `initial_release_date`: Represents the date that Red Hat first published information on the CVE.
 * `revision_history`: Details any changes made to the CVE information published by Red Hat.
 
 ```json
@@ -188,6 +198,9 @@ The `product_family` category represents a general Red Hat product stream and in
 more nested objects of the `product_name` category that represents an individual release. The `product_name` object will
 always include the name of the product, a product ID and a product identification helper in the form of a CPE.
 
+CPE stands for Common Platform Enumeration, and refers to a structured naming convention used to uniquely 
+identify specific versions of released products or components.  A centralised database exists at <https://nvd.nist.gov/products/cpe> that stores all published identifiers.
+
 In the example below, you can see that the `product_family` object is for Red Hat Enterprise Linux 6 and nested within
 is the `product_name` object Red Hat Enterprise Linux 6 with the CPE "cpe:/o:redhat:enterprise_linux:6".
 
@@ -219,7 +232,7 @@ always include the name of the component, a product ID and a product identificat
 displayed unnested under an `architecture` object, the `name` attribute will not reference a specific version number
 because these components are unfixed. Again, these unfixed `product_version` components will only be found in VEX files
 since CSAF files always represent a released RHSA. The purl identifiers for unfixed content are only available for
-`rpm`, `oci` (container), and `rpmmod` (modular) purl content type.
+`rpm`, `oci` (container) purl content types.
 
 In the example below, the unfixed kernel component's name is `kernel` and doesn't include a specific version number or
 an architecture format.
@@ -272,7 +285,7 @@ the specific version number `0:3.10.0-693.112.1.el7` and architecture format `.s
 
 #### Relationships
 
-Also included in the `product_tree` section is a `relationships` object which is used by Red Hat to help represent
+Also included in the `product_tree` section is a `relationships` object which is used by Red Hat to represent
 layered products. One or more relationship entries will be present for all `product_version` objects found in the
 `branches` object. All of these objects are of the `default_component_of` category and include the full product
 name and product ID (a combination of the `product_name` and the `product_version`), a reference to the component name
@@ -313,6 +326,33 @@ For the fixed component `kernel-0:3.10.0-693.112.1.el7.src`, a relationship entr
 }
 ```
 
+#### Binary RPM Expansion
+
+RPMs can have either a one-to-one or one-to-many mapping between the Source RPM and Binary RPM(s).
+Binary expansion allows the VEX data to offer a more fine-grained level of detail to describe
+where vulnerabilities are present, and where they are fixed, 
+
+Expanding single SRPMs to multiple binary RPMs comes with a potential issue when data in different places
+refers to different levels.  As binary expansion is rolled out, there may be a case where a CSAF Advisory 
+mentions a fix being made to a Source RPM, but a corresponding VEX File for the CVE listing it as being
+fixed in the individual Binary RPMs.
+
+At the present time, End of Life (EOL) products have limited binary expansion available due to them
+pre-dating the current system and missing the level of data needed to perform the mapping.
+
+#### Modular RPM (rpmmod) Expansion
+
+Similar to Binary RPM Expansion, a similiar concept applies to `rpmmod` content.  In the event
+that a vulnerability affects the module (the rpmmod entity) it is unlikely to affect every RPM
+that the module consists of.
+
+Expanding rpmmod level information to rpm level allows for fine-grained detail to capture
+the affectedness of the specific packages.
+
+As with the above, there is the need to map `rpmmod` entities to their constituent parts, and to 
+map in the inverse to identify what rpmmod a given part may belong to.
+
+
 ### Vulnerability Metadata
 
 The `vulnerabilities` section reports vulnerability metadata for the CVE and also contains a
@@ -322,6 +362,7 @@ The `vulnerabilities` section reports vulnerability metadata for the CVE and als
 #### General CVE Information
 
 Basic CVE information is represented using the following objects:
+
 * `cve`: The official CVE ID.
 * `cwe`: Information about the corresponding CWE, include the CWE ID and the name.
 * `discovery_date`: The first reported date of the vulnerability. Note: This date can differ from the previously
@@ -493,7 +534,7 @@ Compressed down, a `product_status` object that included products of each catego
 ```
 
 Note: It's important to remember that with VEX files, not every product status will be included, only the categories
-that have products which fall into those statuses. For CSAF files, the only included status will be the `fixed` and
+that have products which fall into those statuses. For CSAF advisories, the only included status will be the `fixed` and
 optionally `known_not_affected` category if in the released RHSA there are more components and not all were
 vulnerable to the particular CVE id.
 
@@ -598,4 +639,5 @@ Red Hat is committed to continually improving our security data; any future chan
 the files are tracked in the [Red Hat Security Data Changelog](https://access.redhat.com/articles/5554431).
 
 Please contact Red Hat Product Security with any questions regarding security data at [secalert@redhat.com](secalert@redhat.com) or file an
-issue in the public [SECDATA Jira project](https://issues.redhat.com/projects/SECDATA/issues/SECDATA-525?filter=allopenissues).
+issue in the public [SECDATA Jira project](https://redhat.atlassian.net/projects/SECDATA/issues/?filter=allopenissues).
+
