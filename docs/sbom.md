@@ -919,6 +919,13 @@ A relationship between a component and the product it is a part of can be repres
     }
     ```
 
+## Compliance Validation
+
+To validate an SBOM against the guidelines in this document, use
+[SBOM-Grader](https://github.com/BorekZnovustvoritel/SBOM-Grader), a tool developed by the Red Hat
+SBOM team in collaboration with Red Hat Product Security. It supports both SPDX and CycloneDX formats
+and checks compliance against the rules defined here.
+
 ## Additional Notes
 
 The guidelines highlighted in this document represent an ideal state across all of Red Hat-published security data
