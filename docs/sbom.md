@@ -861,6 +861,8 @@ Bundled components declared in the spec are distinct from:
 - **Components discovered by scanning** an unpacked source tree (for example with Syft), which
   are nested under the relevant source archive.
 
+For the latest advise on how to structure the provide section of your RPM spec file refer to the [Fedora Packaging Guidelines](https://docs.fedoraproject.org/en-US/packaging-guidelines/#bundling).
+
 #### Generic archive (zip / tar)
 
 Red Hat ships some deliverables as standalone archives (for example `.tar.gz` or `.zip` CLI
@@ -1084,7 +1086,6 @@ graph TD
     DEP -->|DEPENDENCY_OF| MAIN
     STDLIB -->|DEPENDENCY_OF| MAIN
 ```
-
 #### Product
 
 Individual components such as packages and container images are almost always provided as part of a specific product.
