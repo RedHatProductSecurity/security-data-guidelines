@@ -861,6 +861,230 @@ Bundled components declared in the spec are distinct from:
 - **Components discovered by scanning** an unpacked source tree (for example with Syft), which
   are nested under the relevant source archive.
 
+#### Generic archive (zip / tar)
+
+Red Hat ships some deliverables as standalone archives (for example `.tar.gz` or `.zip` CLI
+binaries built in Konflux). These are identified with `pkg:generic` purls. The same document-level
+rules as for other component SBOMs apply: `creationInfo.created` must be a UTC
+`YYYY-MM-DDThh:mm:ssZ` timestamp, and `creationInfo.creators` must include a `Tool: …` entry and
+`Organization: Red Hat`. Additional creators are allowed when a scanner discovered bundled
+dependencies (for example `Tool: syft-1.29.0` and `Organization: Anchore, Inc`); do not drop
+`Organization: Red Hat` when adding them.
+
+A Red Hat-distributed archive can be represented by a package object using the following data:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-helm-cli",
+      "name": "helm-cli",
+      "versionInfo": "4.1.4",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "helm-linux-amd64.tar.gz",
+      "licenseConcluded": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/helm-cli@4.1.4?download_url=https://mirror.openshift.com/pub/cgw/helm/4.1.4/helm-linux-amd64.tar.gz"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:helm_cli:4.1::el9"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6f953797650167509d767d5d7a2cd6dbdded66e433fe633d083fe412f7b0917e"
+        }
+      ]
+    }
+    ```
+
+The document must `DESCRIBES` this archive package, and the package must also appear in
+`packages[]`.
+
+[`name`](https://spdx.github.io/spdx-spec/v2.3/package-information/#71-package-name-field) / purl name
+:   A stable component identity for all builds of that deliverable (for example `helm-cli`). Never
+    embed the product version in the name (`helm-cli-4.1.4`, `helm-linux-amd64-4.1.4.tar.gz`).
+    Platform is not part of the name either.
+
+[`versionInfo`](https://spdx.github.io/spdx-spec/v2.3/package-information/#73-package-version-field) / purl version
+:   A consistent scheme analogous to RPM `version-release`: the advisory or product version
+    (`4.1.4`). Rebuilds of the same product version append a release suffix (`4.1.4-2`) so later
+    builds rank after earlier ones. Git commit SHAs belong on **source** packages, not the archive.
+
+[`packageFileName`](https://spdx.github.io/spdx-spec/v2.3/package-information/#76-package-file-name-field)
+:   The on-disk archive name (for example `helm-linux-amd64.tar.gz`). Do **not** put `filename=` or
+    `checksum=` on the SBOM purl; those belong on the SPDX package fields (same split as RPMs).
+
+purl identifiers
+:   Use `pkg:generic/<stable-name>@<version>?download_url=…`. The `download_url` must be the full
+    URL of the archive file (including the filename)—not a parent directory, product landing page,
+    or any path that omits segments between the host and the file. Optionally include `arch=` when
+    the platform must be part of the identifier. Type, name, and version must stay the same across
+    published locations; only `download_url` (and optional `arch=`) may differ. See
+    [Identifying Red Hat components using Package URL](./purl.md#red-hat-distributed-archives).
+
+    Good:
+
+    ```
+    pkg:generic/helm-cli@4.1.4?download_url=https://mirror.openshift.com/pub/cgw/helm/4.1.4/helm-linux-amd64.tar.gz
+    ```
+
+    Bad (truncated / non-file locator):
+
+    ```
+    pkg:generic/helm-cli@4.1.4?download_url=https://developers.redhat.com/products
+    pkg:generic/helm-cli@4.1.4?download_url=https://mirror.openshift.com/pub/cgw/helm/4.1.4/
+    ```
+
+    Bad (version in the name):
+
+    ```
+    pkg:generic/helm-cli-4.1.4
+    ```
+
+[`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)
+:   Minimally, the list of checksums must include the SHA-256 of the archive file itself. Other
+    algorithms may be additional.
+
+[`supplier`](https://spdx.github.io/spdx-spec/v2.3/package-information/#75-package-supplier-field)
+:   The value `Organization: Red Hat` must be used for archives distributed by Red Hat.
+
+Release-time SBOMs should include a `download_url` qualifier on the purl (and may set
+`downloadLocation` when there is a single canonical URL). Build-time SBOMs may omit the public
+URL, the same way container build SBOMs omit `repository_url` until release. Release-time SBOMs may
+also include `SECURITY` / `cpe22Type` externalRefs linking the archive to the product CPE(s) it
+ships under (for example `cpe:/a:redhat:helm_cli:4.1::el9`).
+
+One SPDX document per archive is enough when each platform is built separately. All platform SBOMs
+for the same release share the same purl **name** and **version**; they differ in
+`packageFileName`, `checksums[]`, and optionally purl `arch=` / `download_url`. Optionally, a
+version-level package with `VARIANT_OF` (analogous to a container image index) can appear if a
+single document covers all platforms.
+
+##### Upstream and midstream source
+
+Archives are linked to the sources used to build them, reusing the same relationship types as RPMs
+and containers:
+
+- An _upstream source_ is the original repository or release as published by the primary
+  maintainers.
+- A _midstream source_ is a Red Hat (or partner) copy of that code used as the Konflux or pipeline
+  build input, which may include distribution-specific changes. Midstream is optional when the
+  archive is built directly from upstream.
+
+When the upstream VCS is hosted on GitHub, use a
+[`pkg:github`](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#github) purl
+(for example `pkg:github/helm/helm@v4.1.4`). Midstream that is not on GitHub stays
+`pkg:generic/…?download_url=…` (or another matching purl type). SPDX `downloadLocation` can still
+be the git URL. See [purl.md](./purl.md#github-repositories).
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-Source-midstream",
+      "name": "helm-cli",
+      "versionInfo": "79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "downloadLocation": "https://git.example.com/helm-cli#79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/helm-cli@79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa?download_url=https://git.example.com/helm-cli#79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Source-upstream",
+      "name": "helm",
+      "versionInfo": "v4.1.4",
+      "downloadLocation": "https://github.com/helm/helm",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/helm/helm@v4.1.4"
+        }
+      ]
+    }
+    ```
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-helm-cli",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source-midstream"
+    },
+    {
+      "spdxElementId": "SPDXRef-Source-midstream",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source-upstream"
+    }
+    ```
+
+##### Bundled contents
+
+A complete archive SBOM lists cataloged libraries inside the deliverable. For a Go CLI binary,
+that includes every `pkg:golang/…` module discovered from the binary’s build information, including
+the Go standard library (`pkg:golang/stdlib@…`). Link each module to the archive with `CONTAINS`,
+and link modules that are dependencies of the main Go module with `DEPENDENCY_OF`:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-helm-cli",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-golang-stdlib"
+    },
+    {
+      "spdxElementId": "SPDXRef-golang-stdlib",
+      "relationshipType": "DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-golang-helm.sh-helm-v4"
+    }
+    ```
+
+Listing every file inside the tarball remains out of scope (`files` stays empty or omitted). Do
+not emit scanner `OTHER` “evident-by” edges that point back at the archive package (that would
+form a cycle with `CONTAINS`); record the discovery tool in `creationInfo.creators` instead.
+
+Every `relatedSpdxElement` (except SPDX `NONE` / `NOASSERTION`) must resolve to a `packages[]`
+`SPDXID` — no orphaned relationship targets.
+
+**Example:** a build-time SBOM for the Helm CLI linux/amd64 archive from RHSA-2026:26441, with a
+representative subset of cataloged Go modules:
+[build/helm-cli-4.1.4-linux-amd64](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/sbom/examples/generic_archive/build/helm-cli-4.1.4-linux-amd64.spdx.json).
+A production SBOM should include all cataloged golang packages; that example is abbreviated for
+readability.
+
+``` mermaid
+graph TD
+    DOC["SPDXRef-DOCUMENT"]
+    A["pkg:generic/helm-cli@4.1.4"]
+    M["Midstream Konflux git"]
+    U["pkg:github/helm/helm@v4.1.4"]
+    MAIN["pkg:golang/helm.sh/helm/v4"]
+    STDLIB["pkg:golang/stdlib"]
+    DEP["Other pkg:golang modules"]
+    DOC -->|DESCRIBES| A
+    A -->|GENERATED_FROM| M
+    M -->|GENERATED_FROM| U
+    A -->|CONTAINS| MAIN
+    A -->|CONTAINS| STDLIB
+    A -->|CONTAINS| DEP
+    DEP -->|DEPENDENCY_OF| MAIN
+    STDLIB -->|DEPENDENCY_OF| MAIN
+```
+
 #### Product
 
 Individual components such as packages and container images are almost always provided as part of a specific product.
