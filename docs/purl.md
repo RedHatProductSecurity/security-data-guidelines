@@ -134,13 +134,15 @@ Only tags that are unique to a particular container image should be specified in
 time the purl is used.
 
 A purl may also refer to the [Image Index](https://github.com/opencontainers/image-spec/blob/main/image-index.md),
-which is a higher-level representation of a set of image manifests. An image index has its own unique digest value:
+which is a higher-level representation of a set of image manifests, usually used to reference equivalent container
+images for each of a number of CPU architectures.  The digest is the unique digest of the index itself, and not the
+digest of any of the images within the index:
 
 ```
 pkg:oci/ubi@sha256:66233eebd72bb5baa25190d4f55e1dc3fff3a9b77186c1f91a0abdb274452072?repository_url=registry.redhat.io/ubi9/ubi&tag=9.3-1610
 ```
 
-The `arch` qualifier is simply omitted in this purl.
+The `arch` qualifier is omitted in this purl.
 
 ## Identifying Maven packages
 
