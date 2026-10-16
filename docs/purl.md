@@ -161,9 +161,36 @@ pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.
 ```
 
 Each `generic` purl must include an exact location from where the artifact can be downloaded, and ideally a checksum
-that corresponds to the artifact.
+that corresponds to the artifact. For downloadable files, `download_url` must be the full URL of the artifact itself
+(scheme, host, every path segment, and the filename). Do **not** use a parent directory, a product landing page, or
+any other truncated path that omits directories between the host and the file. VCS locators (a repository URL,
+optionally with a `#<commit>` fragment) are fine when the component is source in a git repo rather than a file
+archive.
 
 The use of `generic` purls should be limited to components that are not available in any other purl type.
+
+### Red Hat-distributed archives
+
+Standalone archives that Red Hat distributes (CLI `.tar.gz` / `.zip` deliverables and similar) are also identified
+with the `generic` type, but the filename and content hash live on the SPDX package
+([`packageFileName`](https://spdx.github.io/spdx-spec/v2.3/package-information/#76-package-file-name-field) and
+[`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)), not as purl
+qualifiers—even when an advisory `content.artifacts` row still carries them as locators:
+
+```
+pkg:generic/helm-cli@4.1.4?download_url=https://mirror.openshift.com/pub/cgw/helm/4.1.4/helm-linux-amd64.tar.gz
+```
+
+- The **name** must be a stable component identity across builds and platforms (`helm-cli`). Never embed the product
+  version in the name (`helm-cli-4.1.4`).
+- The **version** must not be omitted. Use a consistent scheme analogous to RPM `version-release` (for example
+  `4.1.4`, or `4.1.4-2` for a rebuild of the same product version).
+- Keep `download_url` on the purl as the locator, and point it at the **exact archive file** (as above). Directory
+  listings (`…/4.1.4/`) and truncated hosts or product pages (`https://developers.redhat.com/products`) are not
+  valid `download_url` values. Optionally add `arch=` when the platform must be part of the identifier. Type, name,
+  and version must not change across published locations.
+
+See [Generic archive (zip / tar)](./sbom.md#generic-archive-zip--tar) for the full SPDX package shape.
 
 ## Upstream source purls for RPM builds
 
@@ -186,6 +213,34 @@ pkg:generic/delve@a1b2c3d4?download_url=https://github.com/go-delve/delve#a1b2c3
 When a scanned build dependency is a known registry package, use the appropriate typed purl (`pkg:golang/...`,
 `pkg:npm/...`, and so on) instead of `generic`.
 
+## GitHub repositories
+
+When a source package in an SBOM is a GitHub repository, tag, or commit, use the
+[`github` purl type](https://packageurl.org/docs/purl-spec/types/definitions/github-definition):
+
+```
+pkg:github/helm/helm@v4.1.4
+```
+
+This is the preferred type for **new** archive-SBOM provenance that points at GitHub-hosted upstream. Older
+container and RPM examples in this repository that embed a GitHub URL in `pkg:generic/…?download_url=` are not
+updated by this guidance; leave them as-is. Non-GitHub VCS (GitLab, pkgs.devel, Konflux component git) remains
+`pkg:generic/…?download_url=…` unless a dedicated purl type applies.
+
+## Go modules
+
+Bundled libraries discovered inside a Go CLI binary (or similar) use the
+[`golang` purl type](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#golang) as emitted by the
+cataloger, for example:
+
+```
+pkg:golang/stdlib@1.26.3
+pkg:golang/k8s.io/client-go@v0.35.1
+pkg:golang/helm.sh/helm/v4@v0.0.0-20260616175324-79149b6d65f2
+```
+
+See [Bundled contents](./sbom.md#bundled-contents) under Generic archive. This does not change how RPM
+`bundled(golang(…))` Provides are represented.
 
 ## Additional Notes
 

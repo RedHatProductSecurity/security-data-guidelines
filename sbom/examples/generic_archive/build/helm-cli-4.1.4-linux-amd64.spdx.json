@@ -1,0 +1,233 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "creationInfo": {
+    "licenseListVersion": "3.25",
+    "created": "2006-08-14T02:34:56Z",
+    "creators": [
+      "Organization: Anchore, Inc",
+      "Tool: syft-1.29.0",
+      "Organization: Red Hat"
+    ]
+  },
+  "name": "helm-cli-4.1.4-linux-amd64",
+  "documentNamespace": "https://www.redhat.com/helm-cli-4.1.4-linux-amd64.spdx.json",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-helm-cli",
+      "name": "helm-cli",
+      "versionInfo": "4.1.4",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "helm-linux-amd64.tar.gz",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/helm-cli@4.1.4?download_url=https://mirror.openshift.com/pub/cgw/helm/4.1.4/helm-linux-amd64.tar.gz"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:helm_cli:4.1::el9"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6f953797650167509d767d5d7a2cd6dbdded66e433fe633d083fe412f7b0917e"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Source-midstream",
+      "name": "helm-cli",
+      "versionInfo": "79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "https://git.example.com/helm-cli#79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/helm-cli@79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa?download_url=https://git.example.com/helm-cli#79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Source-upstream",
+      "name": "helm",
+      "versionInfo": "v4.1.4",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://github.com/helm/helm",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/helm/helm@v4.1.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-golang-helm.sh-helm-v4",
+      "name": "helm.sh/helm/v4",
+      "versionInfo": "v0.0.0-20260616175324-79149b6d65f2",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /helm-linux-amd64",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/helm.sh/helm/v4@v0.0.0-20260616175324-79149b6d65f2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-golang-stdlib",
+      "name": "stdlib",
+      "versionInfo": "go1.26.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /helm-linux-amd64",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "BSD-3-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/stdlib@1.26.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-golang-dario.cat-mergo",
+      "name": "dario.cat/mergo",
+      "versionInfo": "v1.0.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /helm-linux-amd64",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/dario.cat/mergo@v1.0.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-golang-github.com-Masterminds-semver-v3",
+      "name": "github.com/Masterminds/semver/v3",
+      "versionInfo": "v3.4.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /helm-linux-amd64",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/Masterminds/semver@v3.4.0#v3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-golang-k8s.io-client-go",
+      "name": "k8s.io/client-go",
+      "versionInfo": "v0.35.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /helm-linux-amd64",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/k8s.io/client-go@v0.35.1"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-helm-cli"
+    },
+    {
+      "spdxElementId": "SPDXRef-helm-cli",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source-midstream"
+    },
+    {
+      "spdxElementId": "SPDXRef-Source-midstream",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source-upstream"
+    },
+    {
+      "spdxElementId": "SPDXRef-helm-cli",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-golang-helm.sh-helm-v4"
+    },
+    {
+      "spdxElementId": "SPDXRef-helm-cli",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-golang-stdlib"
+    },
+    {
+      "spdxElementId": "SPDXRef-helm-cli",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-golang-dario.cat-mergo"
+    },
+    {
+      "spdxElementId": "SPDXRef-helm-cli",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-golang-github.com-Masterminds-semver-v3"
+    },
+    {
+      "spdxElementId": "SPDXRef-helm-cli",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-golang-k8s.io-client-go"
+    },
+    {
+      "spdxElementId": "SPDXRef-golang-stdlib",
+      "relationshipType": "DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-golang-helm.sh-helm-v4"
+    },
+    {
+      "spdxElementId": "SPDXRef-golang-dario.cat-mergo",
+      "relationshipType": "DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-golang-helm.sh-helm-v4"
+    },
+    {
+      "spdxElementId": "SPDXRef-golang-github.com-Masterminds-semver-v3",
+      "relationshipType": "DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-golang-helm.sh-helm-v4"
+    },
+    {
+      "spdxElementId": "SPDXRef-golang-k8s.io-client-go",
+      "relationshipType": "DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-golang-helm.sh-helm-v4"
+    }
+  ]
+}
