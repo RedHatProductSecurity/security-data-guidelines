@@ -8,7 +8,7 @@ Red Hat uses CPEs to uniquely identify each product and version, following the C
 Starting with  RHEL 10, we will change the way CPEs are assigned to RHEL:
 
 * Minor versions will be used in CPEs for mainstream RHEL versions
-* The `cpe:/o` prefix will be used instead of mixed usage of `cpe:/o` and `cpe:/a` for all RHEL variants
+* The `cpe:/o` prefix will be used instead of mixed usage of `cpe:/o` (operating system) and `cpe:/a` (application) for all RHEL variants
 * The channel specifiers are being dropped
 
 
@@ -24,10 +24,10 @@ advisories they shipped. More granular minor versions also allow for the use of 
 used to sets of versions (without having to enumerate them all) where the security status such as "fixed" is applicable.
 
 ### CPE Type Standardization
-Previously, we used a mix of `cpe:/o` (operating system) and `cpe:/a` (application) for different variants of RHEL 
-(for example, base OS used o and Appstream used a). It is unclear why we decided on this different usage and we've 
-encountered various issues in our security data files where consumers have to account for both prefixes even though 
-they identify the same products.
+Previously, we used a mix of `cpe:/o` (operating system) and `cpe:/a` (application) for different components of RHEL 
+(for example, base OS used o and Appstream used a).  In actual usage, it became clear that any benefit provided by this
+additional layer of information was much less than the added complexity in processing when fundamentally they both were
+used to identify the same product.
 
 Starting with RHEL 10 and all following versions of RHEL, we will standardize on `cpe:/o` for all RHEL-related components
 (those shipped under the RHEL product in Errata Tool). EUS CPEs will also transition from `cpe:/a` to `cpe:/o`, for example:
