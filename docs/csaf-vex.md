@@ -20,7 +20,7 @@ of the OVAL deprecation.
 ### CSAF File Format
 
 The [Common Security Advisory Framework (CSAF)](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html)
-was originally published as an open standard by OASIS Open in November 2022.  CSAF provide a structured,
+was originally published as an open standard by OASIS Open in November 2022.  CSAF provides a structured,
 machine-readable way of representing and sharing security advisory information across all software and hardware providers.
 
 Two types of file are published that each conform to this standard.  These are "CSAF advisory files" (commonly referred to
