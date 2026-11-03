@@ -42,7 +42,7 @@ version, and repository name but were provided by a different vendor.
 
 If a purl identifies a Source RPM (SRPM, a package containing source code files that are used to build one or more
 RPMs containing binary artifacts), the `arch` qualifier must use the special value `src`. In the NEVRA file name
-pattern, SRPM packages use a `.src.rpm` suffix. Packages that are not architecture-specific must use the special
+pattern, SRPM packages use a `.src.rpm` suffix. Packages that are not architecture-specific will use the special
 `noarch` value in the arch qualifier. Binary RPM packages will include a specific architecture as shown in the
 example above, or will omit the `arch` qualifier entirely to signify that the identifier applies to all available
 architectures.
@@ -77,10 +77,9 @@ file maps repository IDs to both relative URL paths and CPE IDs that represent p
 security data files.
 
 Another qualifier defined for the `rpm` purl type is `distro`, which is an arbitrary value that describes the Linux
-distribution that the package is included in. The `distro` qualifier is not recommended to be used for Red Hat RPMs
-because its values are not standardized and may, depending on how the value is interpreted, inaccurately identify a
-package as being specific to a particular version of a distribution even though it may be available in multiple
-distribution versions.
+distribution that the package is included in. The `distro` qualifier will not be used Red Hat RPMs because its values
+are not standardized and may, depending on how the value is interpreted, inaccurately identify a package as being
+specific to a particular version of a distribution even though it may be available in multiple distribution versions.
 
 ## Identifying RPM modules
 
@@ -104,8 +103,7 @@ The `rpmmod` qualifier of the purl is a value that contains the Stream, Version,
 An Open Container Initiative (OCI) artifact is an arbitrary file that adheres to the OCI specification. Here we'll
 focus on the identification of container images (though similar purl rules should apply to arbitrary OCI artifacts).
 Container images published in the [Red Hat Ecosystem Catalog](https://catalog.redhat.com/software/containers/search)
-should be identified using the
-[`oci` purl type](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#oci).
+will be identified using the [`oci` purl type](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#oci).
 
 OCI image artifacts using the
 [Image Manifest specification](https://github.com/opencontainers/image-spec/blob/main/manifest.md)
@@ -135,9 +133,11 @@ pkg:oci/ubi@sha256:66233eebd72bb5baa25190d4f55e1dc3fff3a9b77186c1f91a0abdb274452
 
 The `arch` qualifier is simply omitted in this purl.
 
-## Identifying Maven packages
+## Identifying Middleware packages
 
-Maven packages distributed by Red Hat follow standard purl-spec rules of the
+### Maven packages
+
+For Red Hat Middleware components distributed as Maven packages, the purls follow the standard rules of the
 [`maven` purl type](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#maven):
 
 ```
@@ -146,13 +146,43 @@ pkg:maven/io.vertx/vertx-web@4.4.8.redhat-00001?type=jar&repository_url=https://
 
 The version string will contain a `redhat-NNNNN` suffix to indicate that the component was built from source by
 Red Hat. If the type qualifier is not set, it is assumed to be `jar` (as described in the
-[POM documentation](https://maven.apache.org/pom.html)). The value in the `repository_url` should be Red
-Hat's Maven repository at [https://maven.repository.redhat.com/ga/](https://maven.repository.redhat.com/ga/).
+[POM documentation](https://maven.apache.org/pom.html)). The value in the `repository_url` will most commonly be
+Red Hat's Maven repository at [https://maven.repository.redhat.com/ga/](https://maven.repository.redhat.com/ga/).
+
+### Generic packages
+
+For some Red Hat Middleware components that do not fit into the "maven" purl package type, they will be specified
+using the catchall "pkg:generic" purl type.
+
+### Middleware Versions
+
+All Red Hat Middleware content is versioned using a scheme corresponding to RPM packages.  Each purl type comes with
+a default version comparison scheme named the same as the package type which is used unless over-ridden.  For our
+Middleware content, when we specify a version we will also specify that `vers:rpm` is the versioning scheme that
+applies to it.
+
+The VERS types are documented at [https://www.packageurl.org/docs/vers/vers-types](https://www.packageurl.org/docs/vers/vers-types),
+and [https://github.com/package-url/vers-spec/blob/main/docs/types/vers-types.md](https://github.com/package-url/vers-spec/blob/main/docs/types/vers-types.md).
+
+Due to needing to perform URL encoding on the special characters in a `vers:(type)` definition, the actual PURL will
+be less readable to the human eye.
+
+For example, a purl using the default versioning scheme and single version specified by name@version:
+
+```
+pkg:maven/io.vertx/vertx-web@4.4.8.redhat-00001?type=jar&repository_url=https://maven.repository.redhat.com/ga/
+```
+
+For example, a purl using a custom versioning scheme, and also single version uses this form:
+
+```
+pkg:maven/io.vertx/vertx-web?type=jar&repository_url=https://maven.repository.redhat.com/ga/&vers=vers%3Arpm%2F4.4.8.redhat-00001
+```
 
 ## Generic components
 
 The purl specification allows for the use of a `generic` purl type that can be used to identify any software component
-that does not fit into a specific package ecosystem. Components identified using the `generic` type normally point to
+that does not fit into a specific package ecosystem. Components identified using the `generic` type frequently point to
 specific artifacts like upstream source code. For example, the purl for the OpenSSL upstream source code repository
 would be:
 
@@ -160,10 +190,10 @@ would be:
 pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz&checksum=sha256:83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e
 ```
 
-Each `generic` purl must include an exact location from where the artifact can be downloaded, and ideally a checksum
-that corresponds to the artifact. For downloadable files, `download_url` must be the full URL of the artifact itself
-(scheme, host, every path segment, and the filename). Do **not** use a parent directory, a product landing page, or
-any other truncated path that omits directories between the host and the file. VCS locators (a repository URL,
+Each `generic` purl of this form will include an exact location from where the artifact can be downloaded, and ideally
+a checksum that corresponds to the artifact. For downloadable files, `download_url` must be the full URL of the artifact
+itself (scheme, host, every path segment, and the filename). Do **not** use a parent directory, a product landing page,
+or any other truncated path that omits directories between the host and the file. VCS locators (a repository URL,
 optionally with a `#<commit>` fragment) are fine when the component is source in a git repo rather than a file
 archive.
 
