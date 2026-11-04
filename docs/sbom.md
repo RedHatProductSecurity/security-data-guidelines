@@ -158,6 +158,18 @@ Red Hat aims to publish Complete SBOMs at
 [https://security.access.redhat.com/data/sbom/](https://security.access.redhat.com/data/sbom/) while Shallow SBOMs
 may be published for individual components such as container images.
 
+## SBOM Generation Tools
+
+When choosing an SBOM generation tool, prefer stable, well-supported backends over experimental
+ones. Experimental backends — those still under active development or marked as non-production
+ready by the tool's maintainers — can produce low-quality or broken SBOMs: missing components,
+incorrect relationships, invalid purl identifiers, or incomplete provenance data.
+
+If your tooling supports multiple backends (for example, for different language ecosystems or
+build systems), verify that the backend for your use case is considered stable before relying on
+its output for published SBOMs. When a stable backend is not yet available for a given ecosystem,
+prefer generating a partial SBOM with known-good data over a complete SBOM with unreliable data.
+
 ## Document Structure
 
 The following snippet shows a minimal SBOM document:
