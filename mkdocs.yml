@@ -1,4 +1,4 @@
-site_name: Red Hat Security Data Guidelines
+site_name: Red Hat Security Data
 site_url: https://redhatproductsecurity.github.io/security-data-guidelines/
 edit_uri: "https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/docs"
 copyright: Copyright &copy; Red Hat, Inc. &nbsp;&centerdot;&nbsp; <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>
@@ -43,7 +43,9 @@ nav:
     - "VEX-GA Details": "vex-ga-details.md"
     - "Scanning Vendor Guidance": "scanning-vendors.md"
   - purl: "purl.md"
-  - SBOM: "sbom.md"
+  - SBOM:
+    - "SBOM Overview": "sbom.md"
+    - "SBOM Details": "sbom-details.md"
   
 plugins:
   - social

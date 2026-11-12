@@ -1,0 +1,1004 @@
+# SBOM Details
+The following document covers specific technical details for Red Hat SBOMs.  
+
+## SBOM Document Structure
+
+The following snippet shows a minimal SBOM document:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxVersion": "SPDX-2.3",// (1)!
+      "dataLicense": "CC0-1.0",// (2)!
+      "SPDXID": "SPDXRef-DOCUMENT",// (3)!
+      "creationInfo": {
+        "created": "2006-08-14T02:34:56Z",// (4)!
+        "creators": [
+          "Tool: example SPDX document only",
+          "Organization: Red Hat"// (5)!
+        ]
+      },
+      "name": "ubi9-micro-container-9.4-6.1716471860_amd64",
+      "documentNamespace": "https://www.redhat.com/ubi9-micro-container-9.4-6.1716471860_amd64.spdx.json",
+      "packages": [...],
+      "files": [],
+      "relationships": [...]
+    }
+    ```
+
+    1. SPDX version 2.3 as described at [https://spdx.github.io/spdx-spec/v2.3/](https://spdx.github.io/spdx-spec/v2.3/).
+
+    2. The CC0-1.0 license is required by the SPDX specification.
+
+    3. [`SPDXID`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#63-spdx-identifier-field)
+       must be set to `SPDXRef-DOCUMENT`.
+
+    4. UTC timestamps must use the `YYYY-MM-DDThh:mm:ssZ` format.
+
+    5. creationInfo / creators includes the "Organization: Red Hat" value.
+
+A more detailed breakdown of some of the fields:
+
+`creationInfo`
+:   This field must contain at least the
+    [`created`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#69-created-field) and
+    [`creators`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#68-creator-field)
+    fields. The timestamp in the `created` field must be set to an ISO 8601-formatted date and time string using
+    the UTC timezone. The `creators` field must identify the tool and its version that was used to generate the SBOM
+    file (for example, `Tool: SBOMer 1.2.3` or even `Tool: pkg:github/project-ncl/sbomer@1.0.0.M3`).
+    The value `Organization: Red Hat` included in a separate string. This is required by Red Hat Trusted Profiler Analyser 2 in order to trigger special handling.
+
+[`name`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#64-document-name-field)
+:   This is an arbitrary value that should describe the main artifact described by the SBOM document. This can be a
+    product, a container image, or a specific package. The name should contain a descriptive value for that given
+    artifact along with a version identifier. This field should only serve as a human-readable value and be shown in
+    user interfaces for informational purposes. The metadata of the main package (the one _DESCRIBED_ by
+    the SBOM document) should be used for any automation purposes. Note also that the `name` value may not be unique
+    to a single SBOM document.
+
+[`documentNamespace`](https://spdx.github.io/spdx-spec/v2.3/document-creation-information/#65-spdx-document-namespace-field)
+:   This field uniquely identifies the SPDX SBOM document and must be a valid URI, even though that URI does not
+    have to be accessible. Red Hat SBOMs can use one of two possible values:
+
+    - A URI that is namespaced to a generic Red Hat location: `https://www.redhat.com/[DocumentID].spdx.json`.
+      This URI is not accessible and only serves the purpose of identifying the document to its namespace (here,
+      Red Hat).
+
+    - A URI that is namespaced to `access.redhat.com/security/data`:
+     `https://security.access.redhat.com/data/sbom/spdx/[DocumentID].spdx.json`. This URI is assumed to be accessible
+      and the identified SBOM can be downloaded from the specified location.
+
+    The `documentNamespace` value has no direct relationship to the `name` value.
+
+The `packages` and `relationships` fields are described in depth in the sections below for each respective software
+content type. The `files` field is currently unused and will thus either not be present at all, or set to an empty
+list. All software components in an SBOM are described as packages; all files are assumed to be a part of _some_
+package and should thus not be listed on their own in the `files` field.
+
+### Packages and Relationships
+
+The purpose of listing out all components as separate package objects ensures we can define meaningful relationships
+between them. Some packages may for example embed other software components, and other packages may be used only
+during the build process of creating a set of packages. Differentiating between these different types of components
+allows us to narrow down the scope of responding to vulnerabilities to only the components that are truly affected
+by a given vulnerability.
+
+The following example shows the structure of a package object for a specific component:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-[UUID]",// (1)!
+      "name": "ubi9-micro-container",
+      "versionInfo": "9.4-6.1716471860",
+      "supplier": "Organization: Red Hat",// (2)!
+      "downloadLocation": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "externalRefs": [...],
+      "checksums": [...]
+    }
+    ```
+
+    1. A unique identifier of a given component within this document. This value should only be used to associate
+       relationships to other components described in an SBOM via their relationships.
+
+    2. The value `Organization: Red Hat` must be used for all components that are distributed by Red Hat.
+
+A more detailed breakdown of some of the fields:
+
+[`name`](https://spdx.github.io/spdx-spec/v2.3/package-information/#71-package-name-field)
+:   The name of the component. This value may differ for different types of package ecosystems. It is recommended to
+    use the `name` field of the associated purl string for consistent results.
+
+[`versionInfo`](https://spdx.github.io/spdx-spec/v2.3/package-information/#73-package-version-field)
+:   The version of the component. This value may differ for different types of package ecosystems. It is
+    recommended to use the `version` field of the associated purl string for consistent results.
+
+[`downloadLocation`](https://spdx.github.io/spdx-spec/v2.3/package-information/#77-package-download-location-field)
+:   This field is used to point to the VCS that holds the related source code for this component. In most cases,
+    this field will be set to `NOASSERTION` because the upstream equivalent of a downstream component is represented
+    with its own package object.
+
+[`licenseConcluded`](https://spdx.github.io/spdx-spec/v2.3/package-information/#713-concluded-license-field)
+:   The concluded license of the package, based on the information available during the build. If during the build,
+    this information cannot be determined, the value `NOASSERTION` should be used.
+
+[`externalRefs`](https://spdx.github.io/spdx-spec/v2.3/package-information/#722-external-reference-comment-field)
+:   At least one of the references must include a Package URL (purl) unless the object is describing a product.
+    [Identifying Red Hat components using Package URL](./purl.md) documents what purl strings for different types of
+    components should look like. Note that multiple purls may be used for a single package to identify multiple
+    locations from where the package can be accessed. For release-time component-level SBOMs, externalRefs may also
+    include `SECURITY` references with referenceType `cpe22Type` and the product CPE string(s) in `referenceLocator`, linking
+    the component to the Red Hat product(s) it is released as part of; one or more CPEs per package is allowed.
+
+[`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)
+:   The checksums of the component. The type of checksum used will depend on the type of the component. See below
+    sections for more information.
+
+
+#### Container Image
+
+A container image can be represented by a package object using the following data:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-image-index",
+      "name": "ubi9-micro-container",// (1)!
+      "versionInfo": "9.4-6.1716471860",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?repository_url=registry.access.redhat.com/ubi9&tag=9.4-6.1716471860"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/ubi9-micro@sha256%3A1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d?repository_url=registry.access.redhat.com&tag=9.4-6.1716471860"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1c8483e0fda0e990175eb9855a5f15e0910d2038dd397d9e2b357630f0321e6d"
+        }
+      ],
+    }
+    ```
+
+    1. The name does not necessarily have to reflect what the container image is named in the container registry;
+       the name component of the associated purl identifier should be used instead.
+
+[`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)
+:   The checksum value for a container image refers to the image digest value as defined in the
+    [OCI Image Format](https://github.com/opencontainers/image-spec/blob/v1.0.1/descriptor.md#digests).
+
+purl identifiers
+:   A container image may have one or more purls, depending on whether the same image is available in different
+    registries, or different repositories within the same registry. Note that if multiple purls are present,
+    they should only ever differ in their qualifier values, not the main components such as package type, name, or
+    version; multiple package objects should be used if those values differ.
+
+license information
+:   Licensing information should in most cases be set to `NOASSERTION` since licensing is set on the software
+    components provided by the container image, and not the image itself.
+
+[`downloadLocation`](https://spdx.github.io/spdx-spec/v2.3/package-information/#77-package-download-location-field)
+:   The `downloadlocation` will never be set; container images don't have their own VCS repos. The location from
+    where the image itself can be downloaded can be acquired from the purl identifier.
+
+An SBOM should contain representation of both an
+[Image Index](https://github.com/opencontainers/image-spec/blob/main/image-index.md) and an architecture-specific
+image itself. The following is an example of an SPDX relationship between the two:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "relationships": [
+        {
+          "spdxElementId": "SPDXRef-DOCUMENT",
+          "relationshipType": "DESCRIBES",
+          "relatedSpdxElement": "SPDXRef-image-index"
+        },
+        {
+          "spdxElementId": "SPDXRef-ubi9-micro-container-ppc64le",
+          "relationshipType": "VARIANT_OF",
+          "relatedSpdxElement": "SPDXRef-image-index"
+        }
+      ]
+    }
+    ```
+
+An SBOM that represent a container image must also list out all the components included in that image, and create
+relationships to the architecture-specific image that they are included in:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-ubi9-micro-container-amd64",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-x86_64-bash"
+    }
+    ```
+
+A container image SBOM must also list its parent container image and any container images that were used in the
+process of building the container image (that is, used in a multi-stage build). As an example, consider the following
+Dockerfile used to create an image (`example-container`) by building the `foo` and `bar` dependencies using separate
+images:
+
+```Dockerfile
+# Dockerfile of example-container
+FROM img-a AS stage1
+RUN make foo
+
+FROM img-b AS stage2
+RUN make bar
+
+FROM ubi9
+COPY --from=stage1 /work/foo /foo
+COPY --from=stage2 /work/bar /bar
+```
+
+The relationship of `example-container` image to the two container images (`stage1` and `stage2`) that were used to
+build `foo` and `bar` so they can be added to the final layers can be represented as:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-stage1-amd64",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-example-container-container-amd64"
+    },
+    {
+      "spdxElementId": "SPDXRef-stage2-amd64",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-example-container-container-amd64"
+    }
+    ```
+
+The parent image of `example-container` is `ubi9`. Its relationship to `example-container` can be represented as:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-example-container-amd64",
+      "relationshipType": "DESCENDANT_OF",
+      "relatedSpdxElement": "SPDXRef-ubi9-amd64"
+    }
+    ```
+
+Container Images are also linked to one or more upstream sources that were used to build them. An upstream source can be represented by a package object using the following data:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-image-index-Source-origin",
+      "name": "kernel-module-management",
+      "versionInfo": "d027509b6861d8a9f923cc99dd3e15d9b209e63e",
+      "downloadLocation": "https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/kernel-model-management@d027509b6861d8a9f923cc99dd3e15d9b209e63e?download_url=https://github.com/rh-ecosystem-edge/kernel-module-management#d027509b6861d8a9f923cc99dd3e15d9b209e63e"
+        }
+      ]
+    },
+    ```
+
+To associate a set of remote sources with the repository referencing them, use:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-image-index-Source",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-image-index-Source-origin"
+    },
+    ```
+
+<!-- TODO: add diagram that shows all the relationships -->
+
+#### RPM
+
+Before defining what RPM package objects look like, let's also define the specific types of sources that can be involved
+in the RPM build process:
+
+- An _upstream source_ is the original source code as released by the software's primary developers or maintainers.
+
+- A _midstream source_ is a copy of the upstream code, which may be modified or simply mirrored for distribution
+  purposes. Midstream sources are optional.
+
+- A _downstream source_ is a set of sources used to create a source RPM. These are the real build inputs that get
+  packaged into an SRPM, regardless of whether they originated directly from upstream or came through a midstream
+  archive. Downstream sources may include distribution-specific patches, build configuration changes, spec files,
+  and any other files needed to build the final RPM package.
+
+An architecture-specific (downstream) RPM built by Red Hat can be represented by a package object using
+the following data:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-aarch64-openssl-libs",
+      "name": "openssl-libs",
+      "versionInfo": "3.0.7-18.el9_2",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "openssl-libs-3.0.7-18.el9_2.aarch64.rpm",
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-eus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-aus-rpms"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl-libs@3.0.7-18.el9_2?arch=aarch64&repository_id=rhel-9-for-aarch64-baseos-e4s-rpms"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cae5941219fd64e75c2b29509c6fe712bef77181a586702275a46a5e812d4dd4"
+        }
+      ],
+      "annotations": [
+        {
+          "annotationType": "OTHER",
+          "annotator": "Tool: example SPDX document only",
+          "annotationDate": "2006-08-14T02:34:56+00:00",
+          "comment": "sigmd5: 4cc665dd3173c8952184293588f9ee46"
+        }
+      ]
+    }
+    ```
+
+[`downloadLocation`](https://spdx.github.io/spdx-spec/v2.3/package-information/#77-package-download-location-field)
+:   For binary RPM packages, `downloadLocation` is `NOASSERTION`. The RPM file is identified by its purl and
+    checksum; repository download locations are represented via `repository_id` purl qualifiers in release-time SBOMs.
+
+purl identifiers
+:   A single RPM package may be available from multiple DNF/Yum repositories, in which case it will include a purl
+    identifier for each repository it can be downloaded from. Note that if multiple purls are present,
+    they should only ever differ in their qualifier values, not the main components such as package type, name, or
+    version; multiple package objects should be used if those values differ.
+
+[`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)
+:   Minimally, the list of checksums must include the SHA256 checksum of the RPM file or source archive itself.
+    All other checksums should be specified as annotations (see below).
+
+[`annotations`](https://spdx.github.io/spdx-spec/v2.3/annotations/)
+:   A list of annotations may provide additional information that is specific to the RPM format. In the example
+    above, two checksum values are included:
+    - The MD5 checksum of the signed header of the RPM package is included.
+    - The SHA256 checksum of the RPM header (this value does not change when an RPM is signed; unlike the file SHA256 \
+      checksum used in `checksums`).
+
+Each set of architecture-specific RPMs also has an associated source RPM (SRPM) that bundles all the source code
+that was used to build those RPMs. SRPMs should be represented as a separate package object in an SBOM, and their
+relationship to architecture-specific RPMs can be represented with:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-ppc64le-openssl-libs",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    }
+    ```
+
+SRPMs are also linked to one or more upstream sources that were used to build the downstream RPMs. An upstream
+source can be represented by a package object using the following data:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-Source0-origin",
+      "name": "openssl",
+      "versionInfo": "3.0.7",
+      "downloadLocation": "https://openssl.org/source/openssl-3.0.7.tar.gz",
+      "homepage": "https://openssl-library.org/",
+      "packageFileName": "openssl-3.0.7.tar.gz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/openssl@3.0.7?download_url=https://openssl.org/source/openssl-3.0.7.tar.gz&checksum=sha256:83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e"
+        }
+      ]
+    }
+    ```
+
+purl identifiers
+:   In cases where the upstream source is a package in a registry such as PyPI or NPM, the purl identifier will use
+    the respective package type. For components that are distributed as standalone bundles (such as OpenSSL in the
+    example above), `generic` purls should be used with an exact download URL from where a specific bundle of source
+    code was fetched from, including a checksum (which should also be specified in the `checksums` field).
+
+To associate a set of source archives with the SRPM that includes them, use:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-SRPM",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Source0"
+    }
+    ```
+
+Optionally, an upstream source may be mirrored in a different repository where the source is modified in a way that
+makes it consumable by the downstream distributor. This is referred to as a midstream source. The package object for
+the midstream source looks identical to an upstream package, but with different download location and purl identifier.
+
+The relationship between an upstream source and a midstream source can be represented with:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-Midstream0",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source0"
+    }
+    ```
+
+The complete diagram of the relationships between the various types of sources in an SBOM might look like this:
+
+``` mermaid
+graph TD
+    A["https://openssl.org/source/openssl-3.0.7.tar.gz"]
+    B["https://github.com/(RH openssl midstream repo)/archive/refs/tags/3.0.7.tar.gz"]
+    C["SRPM: openssl 3.0.7-18.el9_2.src"]
+    D["RPM: openssl 3.0.7-18.el9_2.aarch64"]
+    C -->|CONTAINS| B
+    B -->|GENERATED_FROM| A
+    D -->|GENERATED_FROM| C
+```
+
+##### RPM build provenance
+
+SBOM producers for RPM builds should record **upstream facts as observed** — not interpret or translate them. The RPM
+name (for example `automation-controller`) may differ from the upstream project name (`awx`); downstream tools
+resolve that mapping from provenance URLs and source refs. Do not emit synthetic upstream project packages solely to
+carry a translated name.
+
+Three complementary provenance layers apply to RPM build SBOMs:
+
+| Layer | What it answers | RPM-path source | SPDX (SRPM) | CycloneDX (SRPM) |
+|-------|-----------------|-----------------|-------------|------------------|
+| **1. Build context** | Where Red Hat packages this RPM | Koji `build.source` | *(omit `externalRefs` vcs on rpm SRPM in release examples — stripped during release regen)* | `externalReferences` `{type: "vcs", url, comment: commit}` (placeholder URL in examples) |
+| **2. Upstream project URL** | Where the upstream project lives | spec `%URL:`; public rows in `source-repos` | `homepage` on SRPM | `externalReferences` `{type: "website"}` |
+| **3. Source artifacts** | What tarballs/archives were consumed | `rpmdev-spectool`; SBOMer pedigree | SourceN packages + `CONTAINS` / `GENERATED_FROM` | `pedigree.ancestors[]` nested chain |
+
+**Producer guidance:**
+
+1. **Source artifact `name`** — use the observed tarball stem or archive filename (`openssl`, `delve`, and so on). Do
+   not rename to a canonical upstream project name.
+2. **Spec `%URL:`** — when present in the spec and available to the producer, record it verbatim on the SRPM as SPDX
+   `homepage` / CycloneDX `externalReferences.website`. This is especially useful when pedigree is missing.
+3. **Do not** put spec `%URL:` in Source0 `downloadLocation` — that field is for the actual fetched archive URL.
+4. **Do not** emit synthetic upstream project packages for name aliasing (for example, do not add a package named
+   `awx` for `automation-controller`). The spec URL on the SRPM is sufficient for downstream resolution.
+5. **Internal lookaside / dist-git hosts** — pedigree URLs on `*.redhat.com` hosts identify midstream packaging
+   sources, not upstream. Treat them as midstream per the diagram above. Do not introduce new `*.redhat.com`
+   hostnames into public docs or committed example SBOMs; use placeholders such as
+   `github.com/(RH openssl midstream repo)/...`.
+6. **`source-repos`** — record each upstream repo URL and commit as-is. Do not collapse multiple rows to a single
+   derived name.
+
+**Example URL policy:** committed examples and documentation snippets use public upstream URLs only
+(`openssl.org`, `github.com/...`). Midstream, dist-git, and Koji source refs use placeholders matching the openssl
+example pattern.
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-SRPM",
+      "name": "openssl",
+      "versionInfo": "3.0.7-18.el9_2",
+      "homepage": "http://www.openssl.org/",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&epoch=1"
+        }
+      ]
+    }
+    ```
+
+=== "CycloneDX 1.6"
+
+    ```json
+    {
+      "type": "library",
+      "name": "openssl",
+      "version": "3.0.7-18.el9_2",
+      "purl": "pkg:rpm/redhat/openssl@3.0.7-18.el9_2?arch=src&epoch=1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://www.openssl.org/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/(RH openssl midstream repo)",
+          "comment": "abc123def456"
+        }
+      ],
+      "pedigree": {
+        "ancestors": [
+          {
+            "type": "library",
+            "name": "openssl",
+            "version": "3.0.7",
+            "purl": "pkg:generic/openssl@3.0.7?download_url=https://github.com/(RH openssl midstream repo)/archive/refs/tags/3.0.7.tar.gz"
+          }
+        ]
+      }
+    }
+    ```
+
+For `generic` source purls and `download_url` conventions, see [Upstream source purls for RPM builds](purl.md#upstream-source-purls-for-rpm-builds).
+
+**SPDX 2.3 encoding options**
+
+| Option | Mechanism | Pros | Cons |
+|--------|-----------|------|------|
+| **A. Tarball packages only** (current) | Source0-origin `name` + `downloadLocation` | Faithful to fetched artifacts | RPM name may not match upstream search terms |
+| **B. SRPM homepage** | `homepage` from spec URL (verbatim) | Simple; enables downstream URL→name mapping | No structured upstream name in SBOM |
+| **C. VCS externalRef** | `OTHER/vcs` on non-rpm source packages | Precise commit | SPDX rpm SRPM vcs refs lost on release regen |
+| ~~D. Upstream project package~~ | ~~Synthetic package with derived name~~ | — | **Rejected:** name translation belongs downstream |
+
+**Recommendation:** **A + B** for SPDX SRPM (`homepage` on rpm packages only).
+
+**CycloneDX 1.6 encoding options**
+
+| Option | Mechanism | Pros | Cons |
+|--------|-----------|------|------|
+| **A. pedigree.ancestors** (current SBOMer) | Nested ancestors on SRPM | Matches SBOMer output | `name` from tarball, not canonical upstream |
+| **B. externalReferences** | `website` + `vcs` on SRPM | Standard fields; carries spec URL verbatim | Not in all current SBOMer output |
+| ~~C. Separate upstream component~~ | ~~Extra component with derived name~~ | — | **Rejected:** name translation belongs downstream |
+| ~~D. properties~~ | e.g. `redhat:upstream-name` | — | **Avoid** (non-standard) |
+
+**Recommendation:** **A + B** as available.
+
+**SPDX ↔ CycloneDX equivalence**
+
+| Concept | SPDX | CycloneDX |
+|---------|------|-----------|
+| Upstream project URL (verbatim) | `homepage` on SRPM | `externalReferences[type=website]` |
+| Dist-git checkout | *(omit vcs on rpm SRPM in release examples)* | `externalReferences[type=vcs]` (placeholder) |
+| Upstream git (`source-repos`) | source package `downloadLocation` + vcs ref (URL as-is) | `externalReferences[type=vcs]` or pedigree leaf with literal URL |
+| Tarball archive | SourceN package + `downloadLocation` | `pedigree.ancestors` leaf `purl` with `download_url` |
+| SRPM → binary RPM | `GENERATED_FROM` | `dependencies` (`provides` / `dependsOn`) |
+| RPM name → upstream name | **Not in SBOM** | **Not in SBOM** |
+
+##### RPM (CycloneDX 1.6)
+
+CycloneDX 1.6 RPM build SBOMs follow the same component model as SPDX: one document per Koji build, with the SRPM as
+`metadata.component` and a matching entry in `components[]` that carries `pedigree.ancestors`.
+
+**SRPM component**
+
+- `metadata.component` — the SRPM without `bom-ref`; mirrors the top-level build subject.
+- `components[]` SRPM entry — same purl as `metadata.component`, includes `bom-ref`, `pedigree`, and any
+  `externalReferences` not duplicated on `metadata.component` (examples include both for clarity).
+- Binary subpackage RPMs — separate `components[]` entries with `pkg:rpm/redhat/...` purls.
+
+**Provenance**
+
+- `pedigree.ancestors[]` — nested chain of source archives consumed by the SRPM, equivalent to SPDX `CONTAINS` /
+  `GENERATED_FROM` between SourceN and midstream/upstream packages. Leaf `purl` values use `pkg:generic/...` with
+  `download_url` per [purl guidelines](purl.md#upstream-source-purls-for-rpm-builds).
+- `externalReferences` — `website` for spec `%URL:` (verbatim); `vcs` for dist-git/Koji build context (placeholder
+  URLs in committed examples).
+
+**Dependencies**
+
+- `dependencies[].ref` — SRPM `bom-ref`.
+- `dependencies[].provides` — purls of binary RPMs generated from the SRPM (`GENERATED_FROM` equivalent).
+- `dependencies[].dependsOn` — bundled provides (`bundled()` / `golang()`) linked to the SRPM.
+
+**Release-time additions**
+
+- `evidence.identity` on binary RPM components — alternate purls with `repository_id` qualifiers (see release examples).
+- `properties` — `package:rpm:sigmd5` and `package:rpm:sha256header` from RPM header annotations.
+
+Example: [openssl-3.0.7-18.el9_2.cdx.json](../sbom/examples/rpm/release/openssl-3.0.7-18.el9_2.cdx.json).
+
+##### Bundled dependencies
+
+Some RPM spec files declare copylib or vendored components using `Provides: bundled(...)` or
+`Provides: golang(...)`. These are recorded on binary subpackage RPM headers (for example
+`vim-enhanced` may provide `bundled(libvterm)`), not on the SRPM itself. Collect them from
+Koji `getRPMDeps` Provides (type `1`) across every RPM in the build.
+
+Each bundled component should be represented as its own package object, linked to the SRPM with
+a `DEPENDENCY_OF` relationship (the bundled package is a dependency of the SRPM build). Set
+`primaryPackagePurpose` to `LIBRARY`, `downloadLocation` to `NOASSERTION`, and `filesAnalyzed`
+to `false`.
+
+Use a typed purl when the provide name indicates the ecosystem:
+
+| Language prefix in provide | purl type | Example provide | Example purl |
+|----------------------------|-----------|-----------------|--------------|
+| *(none)* / generic bundled | `generic` | `bundled(libvterm)` | `pkg:generic/libvterm` |
+| `golang(...)` | `golang` | `golang(github.com/foo/bar) = 1.2.3` | `pkg:golang/github.com/foo/bar@1.2.3` |
+| `bundled(python*(...))` <br> `bundled(python*-...)` | `pypi` | `bundled(python(requests)) = 2.31.0` <br> `bundled(python3dist(requests)) = 2.31.0` <br> `bundled(python3-requests) = 2.31.0` | `pkg:pypi/requests@2.31.0` |
+| `bundled(nodejs*(...))` <br> `bundled(npm*(...))` <br> `bundled(nodejs-...)` | `npm` | `bundled(nodejs(lodash)) = 4.17.21` <br> `bundled(npm(lodash)) = 4.17.21` <br> `bundled(nodejs-lodash) = 4.17.21` | `pkg:npm/lodash@4.17.21` |
+| `bundled(ruby*(...))` <br> `bundled(rubygem-...)` | `gem` | `bundled(ruby(rake)) = 13.0.6` <br> `bundled(rubygem-rake) = 13.0.6` | `pkg:gem/rake@13.0.6` |
+| `bundled(crate*(...))` | `cargo` | `bundled(crate(serde)) = 1.0.0` | `pkg:cargo/serde@1.0.0` |
+| `bundled(mvn*(...))` | `maven` | `bundled(mvn(org/foo)) = 1.0.0` | `pkg:maven/org/foo@1.0.0` |
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-Bundled-11cdd6f19dc1",
+      "name": "libvterm (generic)",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/libvterm"
+        }
+      ]
+    }
+    ```
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-Bundled-11cdd6f19dc1",
+      "relationshipType": "DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-SRPM"
+    }
+    ```
+
+**Example:** the build-time SBOM for `vim-9.1.083-5.el10` includes `bundled(libvterm)` from
+the `vim-enhanced` subpackage:
+[build/vim-9.1.083-5.el10](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/sbom/examples/rpm/build/vim-9.1.083-5.el10.spdx.json).
+
+Bundled components declared in the spec are distinct from:
+
+- **Source archives** (`Source0`, `Source1`, …), which are linked with `CONTAINS` from the SRPM.
+- **Components discovered by scanning** an unpacked source tree (for example with Syft), which
+  are nested under the relevant source archive.
+
+For the latest advise on how to structure the provide section of your RPM spec file refer to the [Fedora Packaging Guidelines](https://docs.fedoraproject.org/en-US/packaging-guidelines/#bundling).
+
+#### Generic archive (zip / tar)
+
+Red Hat ships some deliverables as standalone archives (for example `.tar.gz` or `.zip` CLI
+binaries built in Konflux). These are identified with `pkg:generic` purls. The same document-level
+rules as for other component SBOMs apply: `creationInfo.created` must be a UTC
+`YYYY-MM-DDThh:mm:ssZ` timestamp, and `creationInfo.creators` must include a `Tool: …` entry and
+`Organization: Red Hat`. Additional creators are allowed when a scanner discovered bundled
+dependencies (for example `Tool: syft-1.29.0` and `Organization: Anchore, Inc`); do not drop
+`Organization: Red Hat` when adding them.
+
+A Red Hat-distributed archive can be represented by a package object using the following data:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-helm-cli",
+      "name": "helm-cli",
+      "versionInfo": "4.1.4",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "helm-linux-amd64.tar.gz",
+      "licenseConcluded": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/helm-cli@4.1.4?download_url=https://mirror.openshift.com/pub/cgw/helm/4.1.4/helm-linux-amd64.tar.gz"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe22Type",
+          "referenceLocator": "cpe:/a:redhat:helm_cli:4.1::el9"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6f953797650167509d767d5d7a2cd6dbdded66e433fe633d083fe412f7b0917e"
+        }
+      ]
+    }
+    ```
+
+The document must `DESCRIBES` this archive package, and the package must also appear in
+`packages[]`.
+
+[`name`](https://spdx.github.io/spdx-spec/v2.3/package-information/#71-package-name-field) / purl name
+:   A stable component identity for all builds of that deliverable (for example `helm-cli`). Never
+    embed the product version in the name (`helm-cli-4.1.4`, `helm-linux-amd64-4.1.4.tar.gz`).
+    Platform is not part of the name either.
+
+[`versionInfo`](https://spdx.github.io/spdx-spec/v2.3/package-information/#73-package-version-field) / purl version
+:   A consistent scheme analogous to RPM `version-release`: the advisory or product version
+    (`4.1.4`). Rebuilds of the same product version append a release suffix (`4.1.4-2`) so later
+    builds rank after earlier ones. Git commit SHAs belong on **source** packages, not the archive.
+
+[`packageFileName`](https://spdx.github.io/spdx-spec/v2.3/package-information/#76-package-file-name-field)
+:   The on-disk archive name (for example `helm-linux-amd64.tar.gz`). Do **not** put `filename=` or
+    `checksum=` on the SBOM purl; those belong on the SPDX package fields (same split as RPMs).
+
+purl identifiers
+:   Use `pkg:generic/<stable-name>@<version>?download_url=…`. The `download_url` must be the full
+    URL of the archive file (including the filename)—not a parent directory, product landing page,
+    or any path that omits segments between the host and the file. Optionally include `arch=` when
+    the platform must be part of the identifier. Type, name, and version must stay the same across
+    published locations; only `download_url` (and optional `arch=`) may differ. See
+    [Identifying Red Hat components using Package URL](./purl.md#red-hat-distributed-archives).
+
+    Good:
+
+    ```
+    pkg:generic/helm-cli@4.1.4?download_url=https://mirror.openshift.com/pub/cgw/helm/4.1.4/helm-linux-amd64.tar.gz
+    ```
+
+    Bad (truncated / non-file locator):
+
+    ```
+    pkg:generic/helm-cli@4.1.4?download_url=https://developers.redhat.com/products
+    pkg:generic/helm-cli@4.1.4?download_url=https://mirror.openshift.com/pub/cgw/helm/4.1.4/
+    ```
+
+    Bad (version in the name):
+
+    ```
+    pkg:generic/helm-cli-4.1.4
+    ```
+
+[`checksums`](https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field)
+:   Minimally, the list of checksums must include the SHA-256 of the archive file itself. Other
+    algorithms may be additional.
+
+[`supplier`](https://spdx.github.io/spdx-spec/v2.3/package-information/#75-package-supplier-field)
+:   The value `Organization: Red Hat` must be used for archives distributed by Red Hat.
+
+Release-time SBOMs should include a `download_url` qualifier on the purl (and may set
+`downloadLocation` when there is a single canonical URL). Build-time SBOMs may omit the public
+URL, the same way container build SBOMs omit `repository_url` until release. Release-time SBOMs may
+also include `SECURITY` / `cpe22Type` externalRefs linking the archive to the product CPE(s) it
+ships under (for example `cpe:/a:redhat:helm_cli:4.1::el9`).
+
+One SPDX document per archive is enough when each platform is built separately. All platform SBOMs
+for the same release share the same purl **name** and **version**; they differ in
+`packageFileName`, `checksums[]`, and optionally purl `arch=` / `download_url`. Optionally, a
+version-level package with `VARIANT_OF` (analogous to a container image index) can appear if a
+single document covers all platforms.
+
+##### Upstream and midstream source
+
+Archives are linked to the sources used to build them, reusing the same relationship types as RPMs
+and containers:
+
+- An _upstream source_ is the original repository or release as published by the primary
+  maintainers.
+- A _midstream source_ is a Red Hat (or partner) copy of that code used as the Konflux or pipeline
+  build input, which may include distribution-specific changes. Midstream is optional when the
+  archive is built directly from upstream.
+
+When the upstream VCS is hosted on GitHub, use a
+[`pkg:github`](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#github) purl
+(for example `pkg:github/helm/helm@v4.1.4`). Midstream that is not on GitHub stays
+`pkg:generic/…?download_url=…` (or another matching purl type). SPDX `downloadLocation` can still
+be the git URL. See [purl.md](./purl.md#github-repositories).
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-Source-midstream",
+      "name": "helm-cli",
+      "versionInfo": "79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "downloadLocation": "https://git.example.com/helm-cli#79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/helm-cli@79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa?download_url=https://git.example.com/helm-cli#79149b6d65f2aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Source-upstream",
+      "name": "helm",
+      "versionInfo": "v4.1.4",
+      "downloadLocation": "https://github.com/helm/helm",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/helm/helm@v4.1.4"
+        }
+      ]
+    }
+    ```
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-helm-cli",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source-midstream"
+    },
+    {
+      "spdxElementId": "SPDXRef-Source-midstream",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-Source-upstream"
+    }
+    ```
+
+##### Bundled contents
+
+A complete archive SBOM lists cataloged libraries inside the deliverable. For a Go CLI binary,
+that includes every `pkg:golang/…` module discovered from the binary’s build information, including
+the Go standard library (`pkg:golang/stdlib@…`). Link each module to the archive with `CONTAINS`,
+and link modules that are dependencies of the main Go module with `DEPENDENCY_OF`:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-helm-cli",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-golang-stdlib"
+    },
+    {
+      "spdxElementId": "SPDXRef-golang-stdlib",
+      "relationshipType": "DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-golang-helm.sh-helm-v4"
+    }
+    ```
+
+Listing every file inside the tarball remains out of scope (`files` stays empty or omitted). Do
+not emit scanner `OTHER` “evident-by” edges that point back at the archive package (that would
+form a cycle with `CONTAINS`); record the discovery tool in `creationInfo.creators` instead.
+
+Every `relatedSpdxElement` (except SPDX `NONE` / `NOASSERTION`) must resolve to a `packages[]`
+`SPDXID` — no orphaned relationship targets.
+
+**Example:** a build-time SBOM for the Helm CLI linux/amd64 archive from RHSA-2026:26441, with a
+representative subset of cataloged Go modules:
+[build/helm-cli-4.1.4-linux-amd64](https://github.com/RedHatProductSecurity/security-data-guidelines/blob/main/sbom/examples/generic_archive/build/helm-cli-4.1.4-linux-amd64.spdx.json).
+A production SBOM should include all cataloged golang packages; that example is abbreviated for
+readability.
+
+``` mermaid
+graph TD
+    DOC["SPDXRef-DOCUMENT"]
+    A["pkg:generic/helm-cli@4.1.4"]
+    M["Midstream Konflux git"]
+    U["pkg:github/helm/helm@v4.1.4"]
+    MAIN["pkg:golang/helm.sh/helm/v4"]
+    STDLIB["pkg:golang/stdlib"]
+    DEP["Other pkg:golang modules"]
+    DOC -->|DESCRIBES| A
+    A -->|GENERATED_FROM| M
+    M -->|GENERATED_FROM| U
+    A -->|CONTAINS| MAIN
+    A -->|CONTAINS| STDLIB
+    A -->|CONTAINS| DEP
+    DEP -->|DEPENDENCY_OF| MAIN
+    STDLIB -->|DEPENDENCY_OF| MAIN
+```
+#### Product
+
+Individual components such as packages and container images are almost always provided as part of a specific product.
+Products represent a bundle of components that can be purchased, has a life cycle
+([example](https://access.redhat.com/support/policy/updates/errata#RHEL8_and_9_Life_Cycle)) defined for it, and
+a support policy.
+
+If one or more components described in a given SBOM are being provided as part of a product, that product should
+be represented with its own package object:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "SPDXID": "SPDXRef-RHEL-9.2-EUS",
+      "name": "Red Hat Enterprise Linux",
+      "versionInfo": "9.2 EUS",
+      "supplier": "Organization: Red Hat",
+      "downloadLocation": "NOASSERTION",// (1)!
+      "licenseConcluded": "NOASSERTION",// (2)!
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceLocator": "cpe:/a:redhat:rhel_eus:9.2::baseos",
+          "referenceType": "cpe22Type"
+        }
+      ]
+    }
+    ```
+
+    1. Not used because this product component is not specific enough to an architecture or ISO variant (for example,
+       workstation vs server) for there to be an exact download location.
+
+    2. Not set, only components have licenses.
+
+`name`
+:   This field must contain a human-readable name of the product.
+
+`versionInfo`
+:   This field must contain the most granular version of the product, for which the SBOM was generated.
+
+`externalRefs`
+:   External references must contain a unique identifier of the product. Red Hat uses CPE IDs to identify products.
+    A given product may have one or more of these identifiers, covering all possible variants of a single product
+    version.
+
+A relationship between a component and the product it is a part of can be represented as:
+
+=== "SPDX 2.3"
+
+    ```json
+    {
+      "spdxElementId": "SPDXRef-SRPM-1",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-RHEL-9.2-EUS"
+    }
+    ```
+
+## Compliance Validation
+
+To validate an SBOM against the guidelines in this document, use
+[SBOM-Grader](https://github.com/BorekZnovustvoritel/SBOM-Grader), a tool developed by the Red Hat
+SBOM team in collaboration with Red Hat Product Security. It supports both SPDX and CycloneDX formats
+and checks compliance against the rules defined here.
+
+## Additional Notes
+
+The guidelines highlighted in this document represent an ideal state across all of Red Hat-published security data
+that we want to achieve in the long term. In some SBOMs, components may be missing their provenance data or their
+license expressions may not be accurate. Please
+[contact Red Hat Product Security](https://access.redhat.com/security/team/contact/) or file a Jira issue in the
+[SECDATA project](https://redhat.atlassian.net/projects/SECDATA) if you find any discrepancies in Red Hat's security data.
+Feedback on our SBOM design and publishing is always welcome and appreciated.
